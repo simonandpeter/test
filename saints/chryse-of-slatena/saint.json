@@ -4,7 +4,8 @@
   "sex": "female",
   "types": [
     "new-martyr",
-    "virgin"
+    "virgin",
+    "great-martyr"
   ],
   "names": [
     {
@@ -16,6 +17,11 @@
       "form": "Хриса (Хрисия, Злата) Могленская",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 2751, «Хриса (Хрисия, Злата) Могленская, мц.», with the rank word left off. It carries all three Russian forms of the name; its life heads her «Святая Злата (Хриса) Мегленская» with the other spelling of the epithet."
+    },
+    {
+      "form": "Злата Мегленска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. октобар ст. ст., „Св. великомуч. Злата Мегленска.“ — «Св.» is \"saint\" and not a rank and «великомуч.» is the great-martyr grade this corpus keeps in `types`, so both come off and the bare name with the epithet that distinguishes her is the whole of the form. The epithet is kept because it is what the heading gives and section 6 asks for the fullest form the calendar prints; «Злата» alone would be a bare forename beside a fuller one. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the form as stored and for the bare forename as well."
     }
   ],
   "attestations": [
@@ -58,17 +64,27 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.10.2026 (13. октобар ст. ст.) — „Св. великомуч. Злата Мегленска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and the only one of the three that is a single person. The heading is quoted whole, with the closing full stop the Prologue prints, which is BRIEF-SERBIAN section 4. THE PROLOGUE PUTS HER ON THE GREEK CALENDAR’S DAY AND NOT THE RUSSIAN’S: this folder’s greek row is 13 October and its russian row is 18 October, and the Serbian book keeps her on the Julian 13th with the Greek. ONE types_add, OFF THE HEADING’S RANK WORD: the heading opens «Св. великомуч.», which section 5 maps to `great-martyr`, and the folder held `new-martyr` and `virgin` only — the Greek calls her «η Νεομάρτυς». Both grades are now on the folder because both books are quoted on it; the rank is read off the heading and is not inferred from the body. THE YEAR IS WIDENED, AND THAT IS THE ONE DATA CHANGE ON THIS DAY BEYOND THE ROWS. The folder held `death` 1795 flat and `attested`, on saint.gr’s «στις 13 Οκτωβρίου 1795 μ.Χ.» and days.pravoslavie.ru’s «(+ 1795)», with a note that said in so many words that the year was not in dispute. This entry closes «1796. год.» — a third book and the first to differ — so the interval becomes 1795 to 1796 and holds both, because two books cannot both be right and a reader does not pick the winner. Width one year: not `wide` and not `loose-basis`, so `date-audit.mjs` does not move on it. WHAT THE BOOK ADDS. The village is «селу Слатини у Мегленској области» and the parents were poor villagers WITH THREE MORE DAUGHTERS, where saint.gr says four daughters in all and names no district of Meglen. Nikolai’s line on her name — golden not only in name but in her God-fearing heart — is the book’s own pun and is in the prose. She was seized AT THE WATER, where saint.gr has her gathering firewood in the fields with other women. The parents’ speech is given at length and in their own voice: deny Christ in appearance only, and Christ is merciful and will forgive a sin done under the need of life. THREE MONTHS IN PRISON, scourged every day; then HUNG HEAD DOWNWARDS OVER A FIRE to be choked by the smoke; then hung on a tree and cut all into small pieces — and CHRISTIANS CARRIED THE PIECES OF HER RELICS AWAY TO THEIR HOMES FOR A BLESSING, which no other book read for this folder says. No `office`, no `locations`: a village in a district is not a coordinate. No new `related`: the parents and the three sisters are unnamed in the entry and the corpus holds none of them. THE FORM: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Злата Мегленска» and for the bare «Злата», so no fold and no key. The Prologue prints no troparion and no kontakion — the day’s verse, which is Bishop Nikolai’s own and not a hymn, is about her, and it stays out of `hymns`."
     }
   ],
   "dates": {
     "death": {
       "earliest": 1795,
-      "latest": 1795,
-      "display": "1795",
+      "latest": 1796,
+      "display": "1795 or 1796",
       "basis": "attested",
-      "note": "saint.gr: «Τελικά στις 13 Οκτωβρίου 1795 μ.Χ., κατέκοψαν το σώμα της με μαχαίρια», and its page head gives her as «Αγια Χρυση η Νεομαρτυς (; - 1795)». days.pravoslavie.ru gives the same year and a different day for it: its life closes «(+ 1795)» and its 18 October line reads «Преставление вмц. Златы (Хрисы) (1795) (Болг.)», where saint.gr puts the death on 13 October 1795. The year is not in dispute and the day is recorded in the attestations."
+      "note": "saint.gr: «Τελικά στις 13 Οκτωβρίου 1795 μ.Χ., κατέκοψαν το σώμα της με μαχαίρια», and its page head gives her as «Αγια Χρυση η Νεομαρτυς (; - 1795)». days.pravoslavie.ru gives the same year and a different day for it: its life closes «(+ 1795)» and its 18 October line reads «Преставление вмц. Златы (Хрисы) (1795) (Болг.)», where saint.gr puts the death on 13 October 1795. The year is not in dispute and the day is recorded in the attestations. The Охридски пролог is the third book read for this folder and the first to print a different year: its entry for 13. октобар ст. ст. closes «И тако ова мужествена девица предаде дух свој Богу и пресели се у рајска насеља, 1796. год.» The year IS now in dispute — two books give 1795 and this one gives 1796 — so the interval is widened to hold both rather than one being preferred over the other, and the day is unchanged and stays in the attestations."
     }
   },
   "hymns": [

@@ -16,6 +16,11 @@
       "form": "Иларион Великий",
       "lang": "ru",
       "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 21 октября ст. ст., «Иларион Великий, прп.», with the rank word left off."
+    },
+    {
+      "form": "Иларион Велики",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 21. октобар ст. ст., „Преп. Иларион Велики.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off. «Велики» STAYS: section 5 is explicit that the Great is not a rank but the epithet, and it belongs in the name. It is also what keeps this form out of the fold on the bare «Иларион», which four folders already hold. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Иларион Велики»."
     }
   ],
   "sex": "male",
@@ -83,8 +88,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.11.2025 (21. октобар ст. ст.) — „Преп. Иларион Велики.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (section 4). The URL year is 2025, which is what `sr-civil.mjs` gives for the Julian 10-20 to 12-18; the Prologue is a fixed annual cycle and that is the page the host actually serves. «Преп.» is the `venerable` this folder holds, «неослабни подвижник» the `ascetic`, the flight from place to place the `hermit` and «диван чудотворац» the `wonderworker`, so `types` is untouched. `dates` UNTOUCHED, AND AN APPROXIMATE YEAR AND AN AGE BOTH REFUSED. The folder holds birth 333 and death «371 or 413». The entry says he ended «около 372. г. у 80. години свога живота» — AROUND 372, IN HIS EIGHTIETH YEAR. «около» is approximate and 372 is not either end of the interval on file, so it narrows nothing; and the eightieth year is AN AGE, refused. It is worth noting that 333 plus eighty is 413, which is the later of the two death readings this folder already carries — so this book’s two figures are in tension with each other as well as with the folder, and nothing was derived from either. WHAT THE BOOK ADDS. The opening image is the book’s own: AS A ROSE GROWS UP AMONG THORNS, so this great saint was born OF PAGAN PARENTS, in the village of ТАВАТА NEAR GAZA IN PALESTINE. His parents SENT HIM TO SCHOOL IN ALEXANDRIA, where he took in both worldly learning and spiritual wisdom quickly. Having come to know Christ and been baptised he VISITED SAINT ANTHONY IN THE DESERT AND BECAME HIS DISCIPLE — which is where this folder’s existing `related` row to Anthony comes from on this calendar too — then returned to his own country and struggled NEAR MAIUMA, BY GAZA. DEMONS FRIGHTENED HIM WITH ALL KINDS OF APPARITIONS and he always defeated and drove them off with prayer and the sign of the cross. A multitude of lovers of the spiritual life gathered round him, and HE BECAME FOR PALESTINE WHAT ANTHONY HAD BEEN FOR EGYPT. Honoured by pagans as well as Christians, HE FLED FROM PLACE TO PLACE FOR FEAR OF HUMAN PRAISE, saying through tears «Тешко мени, примих на земљи плату своју!» — woe is me, I have received my reward on earth. So he lived for a time in EGYPT, IN SICILY, IN DALMATIA and at last IN CYPRUS, where he died. HIS DISCIPLE ИСИХИЈЕ CARRIED HIS RELICS BACK TO PALESTINE and laid them in the monastery he had founded. ONE DISCIPLE NAMED AND NO FOLDER HOLDS HIM, WHICH IS RULING 3: Исихије, Hesychius, who brought the relics home. Nothing read identifies him with any Hesychius in this corpus, so he is named here and in the prose without a link. No `office`, no `locations`: Tavatha, Gaza, Alexandria, Maiuma, Egypt, Sicily, Dalmatia and Cyprus are named and none is a coordinate. THE FORM IS FREE AND KEEPS ITS EPITHET: «Иларион Велики» is held by no folder, while the bare «Иларион» is held by four and twenty-one Hilarion folders stand behind them. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

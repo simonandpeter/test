@@ -17,6 +17,11 @@
       "form": "Игнатий Константинопольский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 23 октября ст. ст., «Святитель Игнатий Константинопольский, патриарх», with the rank words left off."
+    },
+    {
+      "form": "Игњатије Цариградски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 23. октобар ст. ст., „Св. Игњатије патријарх Цариградски.“ — «Св.» is \"saint\" and not a rank and «патријарх» is the `patriarch` grade this corpus keeps in `types`, so both come off. «Цариградски» STAYS: a see is not a rank, section 6’s own model form is «Аврамије Смоленски», and keeping it is what holds this form out of the fold — the bare «Игњатије» became a read two-folder key only three days ago, on the Julian 20 October, and a third holder would have forced that key to be deleted and rewritten. The same see is in `office` as «Patriarch of Constantinople», which is the rank and the see together and is a different string from this one. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Игњатије Цариградски»."
     }
   ],
   "sex": "male",
@@ -28,7 +33,8 @@
   "related": [
     "basil-of-thessalonica",
     "basil-the-macedonian",
-    "photius-of-constantinople"
+    "photius-of-constantinople",
+    "methodius-of-constantinople"
   ],
   "attestations": [
     {
@@ -77,8 +83,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.11.2025 (23. октобар ст. ст.) — „Св. Игњатије патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-05&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (section 4), URL year 2025. «патријарх» is the `patriarch` this folder holds and the see is already in `office`; the monastery and the monastic life are the `monastic`. `types` untouched. SECTION 6 IS THE WHOLE POINT OF THIS DAY AND THE BY-NAME IS KEPT. The bare «Јаков» is held in sr by SIX folders already — `james-of-nisibis`, `james-of-samosata`, `james-of-studion`, `james-son-of-alphaeus`, `james-son-of-zebedee` and `james-the-confessor` — and the gate prints that six-folder fold as READ, with a key. The bare «Игњатије» became a read TWO-folder fold three days ago, on the Julian 20 October, when `ignatius-of-stara-zagora` took it beside `ignatius-of-rostov`. Storing a bare forename on either folder here would have widened a key that is already read and forced its deletion and replacement. Both of this day’s headings give a by-name — «брат Господњи» and «Цариградски» — and section 6 asks for the fullest form the calendar gives, so both are kept and the day writes no key and deletes none. That is not a convenience: it is the rule, and the fold it did not make is the measurement. `dates` UNTOUCHED AND THREE NUMBERS ARE EVENTS, NOT DATES. The folder holds birth 799 and death «877 or 878». This entry gives 846 (he came to the patriarchate after Saint Methodius), 858 (deposed and sent into exile) and an AGE, «у 89. години живота на земљи», in the eighty-ninth year of his life on earth. The first two are events in an office and not dates of a life; the third is an age and may not be added to 799 — and if it were, 799 plus eighty-nine is 888, which is a decade past the death the folder holds, so the arithmetic contradicts the book rather than confirming it. Nothing was derived. WHAT THE BOOK ADDS. He was THE SON OF THE EMPEROR МИХАИЛО РАНГАВЕ. He came to the patriarchate AFTER SAINT METHODIUS IN 846; was DEPOSED AND EXILED IN 858, AND ФОТИЈЕ, THE EMPEROR’S FIRST SECRETARY, WAS ENTHRONED IN HIS PLACE; and when BASIL THE MACEDONIAN came to the throne HE RESTORED IGNATIUS TO THE PATRIARCHATE, which he then governed with great zeal and wisdom. HE BUILT THE MONASTERY OF THE HOLY ARCHANGEL, AND REPOSED IN IT. The folder already related `photius-of-constantinople` and `basil-the-macedonian`, which is where this entry’s middle is; `methodius-of-constantinople`, his predecessor, is a new `related` row, reciprocated in this same commit. ONE PERSON NAMED AND NO FOLDER HOLDS HIM, WHICH IS RULING 3: the emperor Михаило Рангаве, his father. No `locations`: a monastery is not a coordinate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

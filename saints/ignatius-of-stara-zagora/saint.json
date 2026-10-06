@@ -11,6 +11,11 @@
       "form": "Ιγνάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Οκτωβρίου, «Άγιος Ιγνάτιος ο νέος Οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Игњатије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. октобар ст. ст., „Преп. новомуч. Игњатије.“ — «Преп.» and «новомуч.» are the grades this corpus keeps in `types` and come off, leaving the bare forename; the heading gives him no epithet and Eski-Zagora is in the body. `foldchk.py` measured the string as held in sr by `ignatius-of-rostov`, the bishop and wonderworker dead in 1288 and kept on 28 May, so this form takes it to two folders and a two-folder key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.11.2025 (20. октобар ст. ст.) — „Преп. новомуч. Игњатије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, quoted whole with its closing full stop (section 4). «новомуч.» is the `new-martyr` this folder holds and «Подвизавао се» in the Skete the `monk`, so `types` is untouched. The URL year is 2025 and not 2026, because `sr-civil.mjs` knows that pravoslavno.rs serves the Julian 10-20 to 12-18 only on the previous civil year — the Prologue is a fixed annual cycle and a day in the past serves as well as one ahead. This is the first day of this range to need it. THE PROLOGUE KEEPS HIM ON THE JULIAN 20 OCTOBER AND DATES HIS DEATH TO 8 OCTOBER, WHICH IS THE DAY THE OTHER TWO BOOKS KEEP HIM ON. doxologia and saint.gr both have him on 8 October, and this folder’s `death` already reads «8 October 1814». This book says «Обешен у Цариграду 8. окт. 1814. год.» and then prints him on the twentieth — so the Serbian calendar’s day is not the day of his death and the book itself supplies the proof. Each row is on its own church; nothing was moved, and no second-day note is owed because this folder had no venerated serbian row at all. `dates` UNTOUCHED: the day and the year the entry gives are the day and the year already on file, to the day. WHAT THE BOOK ADDS. He was FROM ESKI-ZAGORA IN BULGARIA, and the entry stops to say what that place is — «из оне славне Загоре, која је дала цркви Божјој много светих подвижника и мученика», that famous Zagora which has given the Church of God many holy ascetics and martyrs. He struggled IN THE SKETE OF SAINT JOHN THE FORERUNNER ON ATHOS. HE GAVE HIMSELF UP TO THE TURKS VOLUNTARILY, to be tortured for Christ. He was HANGED AT CONSTANTINOPLE. His relics are wonderworking, AND HIS HEAD IS KEPT WITH HONOUR IN THE MONASTERY OF SAINT PANTELEIMON — which no other book read for this folder says. NO `related`, AND TWO DEDICATIONS DELIBERATELY NOT LINKED: the Skete of St John the Forerunner and the monastery of St Panteleimon are both houses named after saints, and a dedication the prose names is a `related` row this corpus does take — but the prose here names neither in a form the linker matches, and the row would be the house’s and not the man’s. Said so that the next reader of this folder knows it was a decision. No `office`, no `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [

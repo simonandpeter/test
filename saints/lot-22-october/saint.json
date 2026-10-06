@@ -11,6 +11,11 @@
       "form": "Λωτ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Όσιος Λωτ», with the rank word left off."
+    },
+    {
+      "form": "Лот",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 22. октобар ст. ст., „Преп. Лот. Велики подвижник Мисирски.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off, and «Велики подвижник Мисирски» is the book’s description of him and not part of his name, so the bare forename is the whole of the form. `foldchk.py` measured the string as held by the folder `lot`, the nephew of Abraham, in both ru and sr, so this form takes it to two folders and the key is in `scripts/corpus-gate.mjs`. This is also this folder’s FIRST name form outside Greek."
     }
   ],
   "attestations": [
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.11.2025 (22. октобар ст. ст.) — „Преп. Лот. Велики подвижник Мисирски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-04&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with BOTH of its full stops and in the order the Prologue sets them: „Преп. Лот. Велики подвижник Мисирски.“ The heading is one `<strong>` element and reads as two sentences — the rank and the name, then the description — and section 4 asks for the line as the book prints it, so it is quoted entire rather than cut at the first stop. That cut is precisely what the `day-candidates.mjs` adapter does and why `sr-cand.mjs` exists. The URL year is 2025, which is what `sr-civil.mjs` gives for the Julian 10-20 to 12-18. «Преп.» is the `venerable` this folder holds and «Велики подвижник» the `ascetic`; `types` untouched. ONE DATE ADDED, AND THE FOLDER HAD NONE AT ALL. `death` is now 401 to 500, «5th century», traditional, off «упокоји се св. Лот мирно у V столећу». Before this the folder was `undated`: its only other book, saint.gr, gives «Όσιος Λωτ» and no year. A century is not a year and is recorded as the century it is. THE PROLOGUE IS THE SECOND BOOK THIS FOLDER HAS, AND IT TRIPLES WHAT IS IN IT. He was THE CONTEMPORARY OF ARSENIUS THE GREAT AND OF AGATHON — two folders this corpus holds, and `agathon-of-the-desert` was already related; `arsenius-the-great` is a new `related` row, reciprocated in this same commit. He struggled IN HIS OWN MONASTERY BESIDE A LAKE NEAR THE CITY OF ARSINOE, and set many brethren on the way of salvation. AND THE ENTRY IS THE APOPHTHEGM OF THE TEN FLAMING FINGERS, TOLD FROM LOT’S SIDE. His close friend and counsellor was АВВА ЈОСИФ. Lot said to him once: «авво, ја постим колико могу, држим молитву и безмолвије и размишљам, и још по сили чувам се од скверних помисли. Шта, дакле, још да чиним?» — father, I fast as much as I can, I keep prayer and silence and meditation, and I guard myself from unclean thoughts as far as I am able; what more should I do? Then THE ELDER STOOD UP, RAISED HIS HANDS TO HEAVEN, AND HIS TEN FINGERS SHONE LIKE TEN FLAMING CANDLES, and he answered: «ако желиш, то буди сав огњем!» — if you will, then become all fire. ONE PERSON NAMED AND NO FOLDER HOLDS HIM, WHICH IS RULING 3: авва Јосиф, who is Abba Joseph of Panephysis in the Apophthegmata and whose saying this is. The corpus keeps more than thirty Joseph folders and NOT ONE of them is he — there is no Panephysis and nothing read identifies any other Joseph with him — so he is named here and in the prose without a link, and no folder was created for a man who is the other half of this entry’s one story. No `office`, no `locations`: Arsinoe and a lake are named and neither is a coordinate. THE FORM IS SHARED AND THERE IS STILL NO FOLD, AND THE DIFFERENCE MATTERS. `foldchk.py` measured «Лот» as held by the folder `lot` — «Lot, nephew of Abraham», the righteous one of Genesis, kept on 9 October in the Russian, Greek and Serbian — in BOTH ru and sr, so two folders now hold the identical string. But THE GATE PRINTS NO ROW FOR IT AND NO READ_FOLDS KEY IS OWED, because `nameKeys` in `scripts/corpus-index.mjs` discards any folded key shorter than four characters (`if (k.length >= 4)`) and «лот» is three. The fold index never sees it. This was MEASURED and not assumed: the gate was run with the form in place and its `? \"` set came back identical to the run before, and `grep` for the string in the gate output returns nothing. A shared name form that is invisible to the gate is worth saying out loud, because it is the one case where two folders share a string and no reading is ever demanded of anybody. THE DAY’S THIRD ENTRY IS REFUSED WHOLE AND NO FOLDER GETS ANYTHING FROM IT. It is „Спомен чудотворног избављења Москве од Литванаца помоћу Пресвете Богородице.“ — the commemoration of the wonderful deliverance of Moscow from the Lithuanians by the help of the most holy Theotokos. A «Спомен» of an event is a feast and not a person, and section 5 puts it with «Пренос моштију» and «Обретење моштију»: the heading enumerates nobody, so it gets no row. Its body does name three people — св. Сергије Радоњежски, who appeared to a captive bishop Арсеније and promised that Moscow would be cleansed the next day, and кнез Василије Јованович, in whose time it happened — and section 4 and section 5 refuse all three: named in a body, absent from the heading. Nothing was written on `sergius-of-radonezh`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -50,6 +65,16 @@
   },
   "related": [
     "nicodemus-the-hagiorite",
-    "agathon-of-the-desert"
-  ]
+    "agathon-of-the-desert",
+    "arsenius-the-great"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "Охридски пролог: «Угодивши Богу и наставивши многе на пут спасења упокоји се св. Лот мирно у V столећу.» The folder was undated before this reading — saint.gr, its only other book, prints «Όσιος Λωτ» and no year — so this century is the whole of what it has. A century is not a year and is recorded as a century."
+    }
+  }
 }

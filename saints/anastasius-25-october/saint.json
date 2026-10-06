@@ -15,6 +15,11 @@
       "form": "Анастасий Аквилейский, Салонский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 25 октября ст. ст., «Анастасий Аквилейский, Салонский, мч.», with the rank word left off; the two epithets are both the calendar's and are kept as it gives them."
+    },
+    {
+      "form": "Анастасије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 25. октобар ст. ст., „Св. муч. Анастасије.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare forename is the whole of the form; the heading gives him no epithet and Salona is in the body. `foldchk.py` measured the string as held in sr by `anastasius-the-persian`, so this form takes it to two folders and the key is in `scripts/corpus-gate.mjs`. This is also this folder’s third name form and its first outside Greek and Russian."
     }
   ],
   "attestations": [
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.11.2025 (25. октобар ст. ст.) — „Св. муч. Анастасије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-07&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (section 4), URL year 2025. «муч.» is the `martyr` this folder holds; `types` untouched. `dates` UNTOUCHED AND A REIGN REFUSED. The folder holds `death` 201 to 300, «3rd century». The entry says «У време Диоклецијанова гоњења хришћана», in the time of Diocletian’s persecution — AN EMPEROR IS NOT A SOURCE FOR A YEAR, and a reign that straddles the end of the interval on file is no reason to move either end of it. WHAT THE BOOK ADDS, AND IT NAMES THE CITY THIS FOLDER IS HALF-NAMED FOR. He was A FULLER OF CLOTH — «ваљар сукна» — and a zealous Christian, which no other book read for this folder gives. HE PRESENTED HIMSELF TO THE JUDGE OF HIS OWN ACCORD, in the Dalmatian city of СОЛИН — Salona — and confessed his faith in Christ; and the folder’s Russian form already reads «Анастасий Аквилейский, Салонский», so the city is confirmed from the other side. He was inhumanly tortured and killed, HIS BODY THROWN INTO THE SEA, AND AFTERWARDS TAKEN OUT AND HONOURABLY BURIED. No `related`, no `office`, no `locations`: Salona and Dalmatia are named and neither is a coordinate. THE FOLD THIS FORM MAKES: `foldchk.py` measured «Анастасије» as held in sr by `anastasius-the-persian` alone — the venerable-martyr of 22 January 628 — so the gate printed no row for it at all; this form makes it two folders and a two-folder key is in `scripts/corpus-gate.mjs` in the same commit, with nothing narrower to delete. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

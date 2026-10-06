@@ -16,6 +16,11 @@
       "form": "Уар Египетский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 октября ст. ст., «Уар Египетский, мч.», with the rank word left off. The day's own line gives the name without the epithet."
+    },
+    {
+      "form": "Вар",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. октобар ст. ст., „Св. муч. Вар.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form; the heading gives him no epithet and «римски официр у Мисиру» is in the body. Three letters, which is below `nameKeys`’s four-letter minimum, so the form is not indexed for folds at all; `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the exact string as well."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.11.2026 (19. октобар ст. ст.) — „Св. муч. Вар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-11-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, one person, quoted whole with its closing full stop (section 4). «муч.» is the `martyr` this folder holds and the body’s «римски официр» the `soldier`, so `types` is untouched. NO `dates`, AND THE ENTRY GIVES NO YEAR AT ALL. This folder held none and holds none; there is nothing in the entry to date it by — no emperor, no consul, no number. Said here because an absence is worth recording once. THE PROLOGUE SAYS SEVEN WHERE THIS CORPUS HAS SIX, AND THAT IS THE READING OF THE DAY. Varus is already related to `six-hermit-martyrs`. This entry has SEVEN Christian teachers thrown into prison, whom Varus visited, supplied and served eagerly, wishing he could be a martyr himself and ashamed that fear prevented him. ONE OF THE SEVEN DIED IN THE PRISON. So when the prince had the martyrs brought out he counted SIX and asked where the seventh was — and Varus answered «Ја сам седми!», I am the seventh. That is how a company of six and a seventh man who is not one of them come to be one feast, and it explains the corpus’s own count rather than contradicting it. No new `related` row is owed: the row is already there, both ways. WHAT THE BOOK ADDS. He was A ROMAN OFFICER IN EGYPT AND A SECRET CHRISTIAN. The manner of his death is given in full: stripped and beaten with DRY STAVES, then tied to a tree while they CUT THE FLESH OFF HIM PIECE BY PIECE WITH KNIVES until he gave up his soul, and HIS BODY THROWN ON A DUNGHILL. And then the whole of the Cleopatra story, which is why this folder relates her and her son already: a woman of Palestine, the WIDOW OF AN OFFICER, who took the relics off the dunghill in secret and buried them IN HER OWN LODGING; who then asked the prince’s leave to carry her dead husband’s body home from Egypt to Palestine and WAS GRANTED IT AT ONCE BECAUSE SHE WAS AN OFFICER’S WIFE; AND WHO CARRIED THE MARTYR’S RELICS INSTEAD OF HER HUSBAND’S. She brought them to her native village of ЕДРА NEAR TABOR, buried them honourably, and afterwards RAISED A CHURCH TO HIM; and Varus appeared to her often from the other world, bright as an angel of God. No `office`, no `locations`: Egypt, Palestine, Tabor and a village are named and none is a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Вар», which is three letters and therefore BELOW `nameKeys`’s four-letter minimum — it will not enter the fold index at all, which is a different thing from folding onto nothing and is worth saying once. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

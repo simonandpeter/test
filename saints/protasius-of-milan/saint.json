@@ -16,6 +16,11 @@
       "form": "Протасий Медиоланский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 1851, «Протасий Медиоланский, мч.», with the rank word left off. «Медиоланский» is of Mediolanum, Milan; the day line gives «Протасия» alone."
+    },
+    {
+      "form": "Протасије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. октобар ст. ст., „Св. муч. Назарије, Гервасије и Протасије.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare personal name, the third of the heading’s three, is the whole of the form; the heading gives none of the three an epithet. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Протасије», so this folder is its only holder and there is no fold to record."
     }
   ],
   "sex": "male",
@@ -31,7 +36,8 @@
   "related": [
     "gervasius-of-milan",
     "nazarius-of-milan",
-    "celsus-disciple-of-nazarius"
+    "celsus-disciple-of-nazarius",
+    "ambrose-of-milan"
   ],
   "attestations": [
     {
@@ -82,8 +88,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.10.2026 (14. октобар ст. ст.) — „Св. муч. Назарије, Гервасије и Протасије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and the heading is an ENUMERATED COMPANY OF THREE — Назарије, Гервасије and Протасије — so BRIEF-SERBIAN section 5 counts three names, three folders are owed a row, and the corpus holds all three. The heading is quoted whole, with the closing full stop the Prologue prints, which is section 4. The quoted line is the one heading, whole, on all three rows, and the three folders already relate one another. A FOURTH MARTYR IS IN THE BODY AND GETS NO ROW. Келсије — `celsus-disciple-of-nazarius`, a folder this corpus holds and one venerated on this same menologion day in the Russian, Romanian and Greek calendars, and named in the Greek line this folder already quotes — is the young man Nazarius baptised in Gaul, brought back to Milan with him and beheaded beside him. HE IS NOT NAMED IN THIS HEADING, and section 4 and section 5 make the heading the test and not the body, so the Prologue owes him no row. WHAT THE BOOK ADDS, AND IT IS MOSTLY NAZARIUS’S SIDE. He was born at Rome OF A JEWISH FATHER AND A CHRISTIAN MOTHER, and his mother Перпетуа WAS BAPTISED BY THE APOSTLE PETER HIMSELF; he took his mother’s faith. Preaching, he came to Mediolanum, FOUND GERVASIUS AND PROTASIUS ALREADY IN PRISON THERE AND SERVED THEM WITH GREAT LOVE — which is how the three of them come to be one company — and when the local prince learnt of it he had Nazarius beaten and driven out of the city. HIS MOTHER APPEARED TO HIM IN A VISION and told him to go to Gaul and preach the Gospel there, and he did. Years later he came back to Mediolanum with Celsus, whom he had baptised in Gaul, found the two brothers still in prison, and was thrown in with them by a prince the book names Анулин; and the martyrs REJOICED AT THE NEW MEETING BY GOD’S PROVIDENCE. The emperor Нерон ordered Nazarius killed, and he and Celsus were beheaded. GERVASIUS AND PROTASIUS WERE TWINS, and the sons of blessed parents who were disciples of the faith as well, Виталије and Валерија. They were beheaded soon afterwards by a voivode named Астазије who was passing through Mediolanum on his way to a war against the Moravians, and who, hearing that the two brothers would not sacrifice to the idols, FEARED HE WOULD LOSE HIS BATTLE ON THAT ACCOUNT and had them cut down at once. FOUR PEOPLE NAMED AND NONE OF THEM GETS A FOLDER, WHICH IS RULING 3. Перпетуа, Nazarius’s mother: the corpus holds `perpetua-of-carthage`, who is the Carthaginian martyr of 203, and nothing read makes her this Roman woman. Анулин the prince and Астазије the voivode: no folder holds either. Виталије and Валерија, the twins’ parents: the corpus holds `vitalis-the-martyr-23-july`, whose life — READ, not assumed — makes him the armourer of Ravenna who died in 62 encouraging the physician Ursicinus, and `valeria-the-martyr-23-july`, whose folder says in so many words that nothing beyond her Romanian calendar line was read. Neither is identified with these two by anything read here, so no row and no folder, and both are named here instead. `dates` UNTOUCHED ON ALL THREE AND ONE NUMBER REFUSED. The folders hold `death` between 54 and 68, which is Nero’s reign; this entry names «Цар Нерон» and no year at all, and AN EMPEROR IS NOT A SOURCE FOR A YEAR. `types` untouched — «муч.» is the `martyr` all three hold. No `office`, no `locations`: Rome, Mediolanum, Gaul and Ravenna are named and none of them is a coordinate. ONE NEW RECIPROCAL `related` ROW PER FOLDER, AND THE FOLDER IT POINTS AT GETS NO ROW OF ITS OWN. The entry closes on Ambrose: he translated Nazarius’s relics from a garden outside the city into the church of the Holy Apostles, and the relics of Gervasius and Protasius were revealed to him in a wondrous vision. That is read, and it is these martyrs’ story, so `ambrose-of-milan` is a `related` row on each of the three and they are three rows on him — and nothing else is written on his folder, because he is not named in this heading. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and it is on Петка."
     }
   ],
   "hymns": [

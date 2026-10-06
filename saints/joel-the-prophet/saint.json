@@ -16,6 +16,11 @@
       "form": "Иоиль",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 октября ст. ст., «Пророк Иоиль», with the rank word left off. The calendar gives the name alone, with no epithet."
+    },
+    {
+      "form": "Јоил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. октобар ст. ст., „Св. пророк Јоил.“ — «Св.» is \"saint\" and not a rank and «пророк» is the `prophet` grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form; the heading gives him no epithet, and the patronymic «син Ватуилов» is in the body and is not part of the name the calendar prints. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -77,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.11.2026 (19. октобар ст. ст.) — „Св. пророк Јоил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-11-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, one person, quoted whole with the closing full stop the Prologue prints (BRIEF-SERBIAN section 4). «пророк» is the `prophet` this folder already holds, so `types` is untouched. `dates` UNTOUCHED AND THE BOOK AGREES WITH THEM. The folder holds `death` -850 to -750, «c. 800 BC»; this entry says «Живео на 800 година пре Христа», he lived 800 years before Christ, which is the midpoint of the interval already recorded and narrows nothing. WHAT THE BOOK ADDS. He is THE SECOND IN ORDER OF THE MINOR PROPHETS; he was THE SON OF ВАТУИЛ and OF THE TRIBE OF REUBEN — neither of which the other three books read for this folder gives, and the patronymic is the book’s own spelling and is left as it is printed. He prophesied THE AFFLICTION OF ISRAEL AND THE BABYLONIAN CAPTIVITY for the sins the people had committed before the Lord; he called the people TO A FAST and the priests TO WEEPING PRAYERS OF REPENTANCE, and the entry quotes him for it — «Наредите пост и вапијте ка Господу. Између тријема и олтара нека плачу свештеници.» And it names four more things he foretold: THE DESCENT OF THE HOLY SPIRIT ON THE APOSTLES, the pouring out of the grace of God’s Spirit ON ALL CHRISTIANS, THE DREAD JUDGEMENT OF GOD, which he described, and THE GLORY OF THE HOLY CHURCH OF GOD. No `office`, no `locations`, no `related` — the tribe and the father are named and no folder read here is either. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јоил». The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own."
     }
   ],
   "hymns": [

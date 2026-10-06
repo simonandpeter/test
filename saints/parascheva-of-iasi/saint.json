@@ -16,6 +16,11 @@
       "form": "Параскева-Петка Сербская",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's day line, «Прп. Параскевы-Петки Сербской», with the rank word left off; one of its lives heads her «Преподобная Параскева-Петка Сербская, Болгарская» and the index page «Преподобная Параскева Сербская». The Russian calls her Serbian where the Romanian calls her of Iași and the Greek of Epivates, and the three mean the same woman."
+    },
+    {
+      "form": "Петка",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. октобар ст. ст., „Преп. Петка – Параскева.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off. The heading then gives TWO bare forms for the one woman, joined by the book’s own dash, and section 6 allows one: «Петка», the Serbian vernacular half, is stored, because «Параскева» is already in this folder in Greek, in Romanian and inside the Russian form «Параскева-Петка Сербская», and because «Петка» is the form the day’s verse uses throughout. The whole heading is quoted in the attestation, so the half not stored is on the folder. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for both halves."
     }
   ],
   "sex": "female",
@@ -23,7 +28,8 @@
     "venerable"
   ],
   "related": [
-    "varlaam-of-moldavia"
+    "varlaam-of-moldavia",
+    "euthymius-of-madytos"
   ],
   "dates": {
     "death": {
@@ -84,8 +90,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.10.2026 (14. октобар ст. ст.) — „Преп. Петка – Параскева.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, ONE WOMAN UNDER TWO NAMES. The heading is quoted whole, with the closing full stop the Prologue prints, which is BRIEF-SERBIAN section 4; the dash in it is the book’s own apposition and not a company. THE NAME FORM STORED IS THE FIRST HALF AND THAT IS A READING, NOT A RULE. Section 6 asks for one sr form, the fullest the calendar gives, and bare; this heading gives two bare forms and neither carries an epithet. «Параскева» is the name this folder already holds in Greek (Παρασκευή), in Romanian (Parascheva de la Iași) and inside its Russian form (Параскева-Петка Сербская), so storing it would add nothing; «Петка» is the Serbian vernacular half, the half the Russian form itself records as the Serbian one, and the form Bishop Nikolai’s verse uses throughout — «О предивна светитељко, света Петко!» — so that is what is stored. The heading is quoted whole in this row, so the other half is on the folder and visible. THE BOOK CALLS HER SERBIAN. «Ова славна светитељка беше српскога порекла» — of Serbian descent — where the folder’s display name is of Iași, which is where her relics now are, and its Russian form already reads «Сербская». NOTHING IS CHANGED on that: a display name is reserved by section 10 and a reader names a sourced correction rather than making one. `dates` UNTOUCHED, AND THIS BOOK IS THE WIDER READING. The folder holds `death` 1000 to 1050, «first half of the 11th century»; this entry says «Упокојила се у XI столећу», the eleventh century whole, which is WIDER than what the folder already holds. A century that contains the recorded interval neither contradicts it nor narrows it, and widening a folder to a less precise reading would be a loss, so nothing moved. `types` untouched: «Преп.» is the `venerable` this folder holds. WHAT THE BOOK ADDS. The birthplace is given three ways — «у граду Епивату (Пиват, по турски Бојадос, између Силимврије и Цариграда» — between Selymbria and Constantinople. Her parents were WELL-OFF and devout Christians. SHE HAD A BROTHER, Јевтимије, who was tonsured while their parents were still alive and later became the renowned BISHOP OF MADYTOS: that is `euthymius-of-madytos`, whose own folder is named by the Romanian calendar as «Eftimie, fratele Cuvioasei Parascheva de la Iași», so the identification is read on both sides and the two folders now relate one another. He gets no row of his own — he is not named in this heading — only the reciprocal row the prose owes him. After her parents died she went first to Constantinople and then TO THE WILDERNESS OF JORDAN, where she struggled into old age. IN OLD AGE AN ANGEL OF GOD APPEARED TO HER with the order that sent her home — «Остави пустињу, и врати се у твоје отечество: потребно је да тамо предаш своје тело земљи, а душом да се преселиш Господу» — and she obeyed the voice from heaven, left the wilderness she loved, lived two more years at Epivates in unceasing fast and prayer, and died there. THE ROUTE OF HER RELICS IS GIVEN IN FULL and no other book read for this folder gives it: Constantinople, then Trnovo, then Constantinople again, then Belgrade, and now Iași in Romania. AND THERE IS AN AGIASMA: a holy spring of hers in the city of Belgrade which heals the sick who come to it with faith in God and love for her. No `locations` all the same: a city named in four translations is not a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Петка» and for «Параскева» alike. The Prologue prints no troparion and no kontakion — the day’s verse is about her and is Bishop Nikolai’s own, and section 3 keeps it out of `hymns`."
     }
   ],
   "text": {

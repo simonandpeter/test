@@ -16,6 +16,11 @@
       "form": "Тавифа Иоппийская",
       "lang": "ru",
       "note": "Read out of the title on the name link behind her line for 25 октября ст. ст., «Тавифа Иоппийская»; the link carries no rank word to leave off."
+    },
+    {
+      "form": "Тавита",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 25. октобар ст. ст., „Св. Тавита.“ — «Св.» is \"saint\" and not a rank, and the heading gives no rank word and no epithet at all, so the bare name is the whole of the form. The book’s own gloss on it, «што значи срна» — which means a doe — is a translation and no part of the name. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "female",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.11.2025 (25. октобар ст. ст.) — „Св. Тавита.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-07&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop (section 4), URL year 2025. THE HEADING GIVES NO RANK AT ALL — «Св. Тавита.» — so nothing was read off it; the folder’s `venerable` comes from its other books and is untouched. `dates` UNTOUCHED: the folder holds `floruit` 1st century and the entry gives no year, dating her only by the apostle who raised her. WHAT THE BOOK ADDS. IT TRANSLATES HER NAME — «Тавита (што значи срна)», Tabitha, which means a doe — and names the place twice over, «живљаше у Јопи, садашњој Јафи», she lived at Joppa, the present Jaffa. It CITES ACTS 9:36 for her being full of good works and almsgiving, and then tells the raising in full: SHE FELL ILL SUDDENLY AND DIED; THE APOSTLE PETER WAS AT LYDDA AT THE TIME and the grieving disciples sent for him, begging him to come and comfort the family; he ORDERED EVERYONE OUT OF THE ROOM WHERE THE DEAD WOMAN LAY, KNELT TO PRAY, AND WHEN HE HAD FINISHED CALLED OUT TO THE DEAD BODY — «Тавито, устани!», Tabitha, arise — AND SHE OPENED HER EYES AND STOOD UP; and on the occasion of that wonderful miracle MANY BELIEVED IN CHRIST THE LORD. No new `related`: `peter-the-apostle` is already on this folder and is the whole of the entry’s action. No `office`, no `locations`: Joppa, Jaffa and Lydda are named and none is a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Тавита». The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

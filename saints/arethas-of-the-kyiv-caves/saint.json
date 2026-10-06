@@ -11,6 +11,11 @@
       "form": "Арефа Печерский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 24 октября ст. ст., «Арефа Печерский, затворник», with the state of life left off. The line itself declines it, as «Прпп. Арефы (XII) ... затворников Печерских»."
+    },
+    {
+      "form": "Арета Печерски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 24. октобар ст. ст., „Преп. Арета Печерски.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off; «Печерски» STAYS as the by-name the calendar gives, which section 6 asks for and which is also what keeps this form apart from the bare «Арета» the same day puts on `aretas-of-nagran`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for both. This is the folder’s second name form of any kind."
     }
   ],
   "attestations": [
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.11.2025 (24. октобар ст. ст.) — „Преп. Арета Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-06&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, quoted whole with its closing full stop (section 4), URL year 2025. THIS IS THE SHORTEST ENTRY IN THE WHOLE OF THIS RANGE AND IT IS ONE SENTENCE: «Представио се 1190. год.» He reposed in 1190. That is the entire body — no place, no deed, no company, nothing but a heading and a year. The row says so, because a folder whose life claims more than its source gave is the failure this project cannot afford. «Преп.» is the `venerable` this folder already holds and `Recluse` is already in `office`; `types` untouched. `dates` UNTOUCHED, AND THIS IS THE ONE REFUSAL ON THIS DAY WORTH ARGUING WITH. The folder holds `death` with earliest NULL and latest 1190, display «before 1190» — an OPEN interval, one of the twenty-six date-audit counts. This entry gives 1190 FLAT. Closing an open interval on a second book’s flat figure would make the folder read «1190» exactly, and that is narrowing on one book, which this range has refused three times — for Martin of Tours, for Artemius and for Elesbaan on this same day. It is also, strictly, a DISAGREEMENT and not a confirmation: «before 1190» excludes 1190. So nothing was moved, `open` stays at 26, and the question is in the report. No `related`: the folder’s `sisoes-of-the-kyiv-caves` and `theophilus-of-the-kyiv-caves` come from another book and this entry names nobody at all. No `office`, no `locations`. THE FORM IS FREE AND KEEPS ITS BY-NAME: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Арета Печерски», and the by-name is what keeps it apart from the bare «Арета» this same day puts on `aretas-of-nagran` — two Aretases on one day, told apart by the book itself. This is also this folder’s SECOND name form; it had only the Russian one. THE DAY’S THIRD ENTRY IS REFUSED WHOLE. It is „Свих жалосних радост.“ — the Joy of All Who Sorrow — and the entry’s own first line says what it is: «Тако се назива једна чудотворна икона Пресвете Богородице», that is the name of a wonderworking icon of the Theotokos. AN ICON IS NOT A PERSON, and section 5 refuses it as it refuses «Пренос моштију» and a «Празник»; the heading enumerates nobody. Its body names ЕФИМИЈА, sister of the patriarch ЈОАКИМ, healed at Moscow in 1688 of a grievous wound in her side after a voice told her to go to the church of the Transfiguration and have the priest pray before that icon — and both of them are refused with the entry, being in a body and not in a heading. No folder was created and nothing was written anywhere for this entry. Note that the heading’s own quotation marks are the Serbian low-9 pair the Prologue prints, and the row quoting it nests them inside the same pair, which is what section 4 asks for. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {

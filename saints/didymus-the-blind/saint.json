@@ -1,0 +1,62 @@
+{
+  "slug": "didymus-the-blind",
+  "display_name": "Didymus the Blind",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Дидим Слепац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. октобар ст. ст., „Св. Јулијан и Дидим Слепац.“ — «Св.» is \"saint\" and not a rank, and the heading gives no rank word at all, so the form is the bare name with the epithet the heading prints, «Слепац», the Blind. The epithet is kept because section 6 asks for the fullest form the calendar gives and because the bare «Дидим» is held in the corpus already — `didymus-companion-of-theodora` in sr and `didymus-of-laodicea` in both ru and sr — so a bare form here would have folded three folders on a forename. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Дидим Слепац»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 362,
+      "latest": null,
+      "display": "after 362",
+      "basis": "traditional",
+      "note": "Охридски пролог: «И св. Јулијан и св. Дидим, дивне слуге Божје, упокојили су се после 362. год.» A floor and no ceiling. The year is the year of Julian the Apostate’s death, which is the event the whole entry turns on, and the book says both men outlived it. The interval is left open rather than closed at the end of the century: `julian-of-the-euphrates` carries «4th century» from another book, and borrowing that ceiling for this man would be an inference and not a reading."
+    }
+  },
+  "related": [
+    "julian-of-the-euphrates",
+    "anthony-the-great",
+    "athanasius-of-alexandria",
+    "cyril-of-alexandria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Οκτωβρίου (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.10.2026 (18. октобар ст. ст.) — „Св. Јулијан и Дидим Слепац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and the heading is an ENUMERATED COMPANY OF TWO — Јулијан and Дидим Слепац — so BRIEF-SERBIAN section 5 counts two names and two folders are owed a row. The corpus holds the first, `julian-of-the-euphrates`, and held nothing for the second. The heading is quoted whole, with the closing full stop the Prologue prints, which is section 4, and the same line is on both rows. WHY THIS IS A FOLDER AND NOT A LINE IN A REPORT. Ruling 3 creates one where the entry is substantial enough, and the four sentences this entry gives him are a life: he was blind, he was at Alexandria, he foresaw in the spirit the death of Julian the Apostate while at prayer in the night and heard a voice from heaven — «Данас је нестало цара Јулијана, извести о томе патријарха Атанасија» — Anthony the Great held this wonderful blind man in great esteem and called on him and prayed with him whenever he came in from the desert to Alexandria, and he reposed after 362. A place, a dated event, two named contemporaries and a distinguishing epithet. HE IS NONE OF THE FOUR DIDYMI THIS CORPUS ALREADY HOLDS, and all four were opened rather than guessed at: `didymus-of-laodicea` is one of the three martyrs of Laodicea in Syria scourged to death and kept on 11 September — the Ohrid Prologue itself keeps that company, so the same book holds the two men apart; `didymus-of-cyprus` is a martyr of Cyprus on the Greek 20 February; `didymus-companion-of-theodora` is the soldier-martyr of 304 who changed clothes with Theodora; `didymus-of-the-twelve-tribunes` is a soldier-martyr of the 220s. This man is a blind ascetic of Alexandria who outlived Julian the Apostate, and none of the four is that. NO `types`, AND THAT IS THE READING. The heading gives him «Св.» and an epithet and no rank word at all; the body gives him blindness, the gift of foresight and the esteem of Anthony the Great, none of which is a rank in section 5’s table. BRIEF.md section 4 says that where nothing fits, nothing is used and the report says so, and 125 folders in this corpus already carry no types. `office` likewise: he held none that this entry names. `dates` ARE OPEN ON PURPOSE. «упокојили су се после 362. год.» gives a FLOOR AND NO CEILING, so `death` is recorded as earliest 362 and latest null, display «after 362» — the corpus’s own established shape for exactly this, and twenty-four folders already carry an open interval, five of them with this same «after <year>» display. Closing it at the end of the century because the other half of this heading is dated to the 4th century elsewhere would be an inference, and an invented ceiling is worse than an honest open end. This moves date-audit’s `open` count from 24 to 25 and its `no-birth` count by one, and that is reported rather than avoided. NO `locations`: Alexandria is named and is not a coordinate. THREE `related` ROWS, ALL READ IN THIS ENTRY AND ALL RECIPROCATED IN THE SAME COMMIT: `julian-of-the-euphrates`, who shares the heading and the foresight of the same death; `anthony-the-great`, who visited him and prayed with him; and `athanasius-of-alexandria`, the patriarch the voice from heaven told him to inform. AND A FOURTH ROW THE CORPUS ITSELF ASKED FOR, WHICH IS THE BEST CONFIRMATION THIS FOLDER COULD HAVE HAD. `tests/related-floor.test.mjs` went red the moment the folder existed: `cyril-of-alexandria`’s life, written long before this wave and off other books entirely, already reads «the catechetical school of Alexandria under the famous exegete Didymus the Blind». So a second, independent source inside this corpus names this man, in this city, as a teacher — and the page was already linking a name that pointed at nothing. The reciprocal rows are written both ways in this same commit. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

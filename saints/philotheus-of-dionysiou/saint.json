@@ -11,6 +11,11 @@
       "form": "Φιλόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Όσιος Φιλόθεος ο Αγιορείτης», with the rank word left off."
+    },
+    {
+      "form": "Филотеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 21. октобар ст. ст., „Преп Филотеј.“ — the heading is «Преп Филотеј.», with the abbreviation’s own full stop missing in the source; «Преп» is the `venerable` grade this corpus keeps in `types` and comes off either way, and the bare forename is the whole of the form, the heading giving him no epithet and Dionysiou being in the body. `foldchk.py` measured the string as held in sr by `philotheus-of-samosata` and `philotheus-the-presbyter`, so this form takes that fold to three folders and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.11.2025 (21. октобар ст. ст.) — „Преп Филотеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry. THE HEADING IS QUOTED WITH THE PUNCTUATION THE BOOK ACTUALLY PRINTS, WHICH IS WRONG AND IS NOT MINE TO MEND: „Преп Филотеј.“ — «Преп» with NO full stop after the abbreviation, and the closing stop present. The raw cached page reads `3. <strong>Преп Филотеј. </strong>`, so this is the book’s own slip and not the parser’s; section 4 asks for the heading as the Prologue sets it, so the missing stop is left missing and the present one is kept. The URL year is 2025, which is what `sr-civil.mjs` gives for the Julian 10-20 to 12-18; the Prologue is a fixed annual cycle and that is the page the host actually serves. «Преп.» is the `venerable` this folder holds; «Чудесан подвижник» is the `ascetic` and the desert the `hermit`, both already held. `types` untouched. `dates` UNTOUCHED AND AN AGE REFUSED — BUT IT CONFIRMS WHAT IS THERE. The folder holds birth 1526 and death 1610, which is a span of eighty-four years, and this entry says «Упокојио се мирно у 84. год. живота». An age is not a year and nothing was derived from it; it is recorded here because it agrees exactly with the interval already on file, which is the opposite of the usual case. WHAT THE BOOK ADDS, AND ALMOST ALL OF IT IS NEW TO THIS FOLDER. He was born AT CHRYSOPOLIS IN MACEDONIA. THE TURKS TOOK HIM FROM HIS WIDOWED MOTHER and threw him and A BROTHER OF HIS into prison. THE MOST HOLY THEOTOKOS SAVED THEM OUT OF THE PRISON MIRACULOUSLY and carried them to a monastery AT NEAPOLIS IN ASIA MINOR. HIS MOTHER LATER FOUND HER SONS AS MONKS, AND WAS TONSURED HERSELF. Philotheus crossed to the Holy Mountain, where he struggled first in the MONASTERY OF DIONYSIOU — which is this folder’s display name, confirmed from a second book — and then in the desert, a wonderful ascetic and a great conqueror of the power of the demons. AND HE GAVE ORDERS THAT HE SHOULD NOT BE BURIED, BUT THAT HIS BODY SHOULD BE THROWN INTO THE FOREST FOR THE BIRDS AND THE BEASTS. Later a fisherman saw a great light in that forest at night and, being cold, went towards it to warm himself, THINKING IT WAS A FIRE — and the light was not from a fire but from the wonderworking relics of Saint Philotheus. TWO PEOPLE NAMED AND NEITHER GETS A FOLDER OR A ROW, WHICH IS RULING 3: his widowed mother, who ends the story a nun, and the brother imprisoned with him. The book names neither, and an unnamed person cannot be identified with anything. No `related`, no `office`, no `locations`: Chrysopolis, Neapolis, Dionysiou and the Holy Mountain are named and none is a coordinate. THE FOLD THIS FORM MAKES: `foldchk.py` measured «Филотеј» as held in sr by `philotheus-of-samosata` and `philotheus-the-presbyter`, a pair the gate was printing as UNREAD with no key; this form makes it three folders, so a three-folder key is in `scripts/corpus-gate.mjs` in the same commit and there was nothing narrower to delete. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

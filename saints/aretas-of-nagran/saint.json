@@ -17,6 +17,11 @@
       "form": "Арефа Негранский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Арефа Негранский, градоправитель, мч.», with the rank word and the office left off."
+    },
+    {
+      "form": "Арета",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 24. октобар ст. ст., „Св. муч. Арета.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare forename is the whole of the form; the governorship is in the body and this folder keeps it in `office`. The day’s fourth entry names another Aretas, «Преп. Арета Печерски.», and that form keeps its by-name, so the two forms are distinct and no fold is made. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.11.2025 (24. октобар ст. ст.) — „Св. муч. Арета.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-06&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (section 4), URL year 2025 as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. «муч.» is the `great-martyr` this folder holds — the Greek and Romanian both grade him great — and «градоуправитељ у граду Неграну» is the `office` it already carries, «Governor of the city of Nagran», confirmed word for word from a fourth book. `types` untouched. `dates` UNTOUCHED AND AN AGE REFUSED. The folder holds `death` 523 and the entry closes «Пострадаше и венац мученички од Господа примише 523. год.» — the same year exactly. «беше му 95 година када пострада», ninety-five years old when he suffered, is AN AGE and may not be subtracted from the death year to make a birth. WHAT THE BOOK ADDS, AND THE COMPANY IS COUNTED. He suffered WITH MORE THAN FOUR THOUSAND CHRISTIANS — priests, monks and nuns, citizens, women and children. The land is ОМИРИТСКА, southern Arabia, ruled then by a Jew ДУНААН, a wicked persecutor of Christians. AND THE CITY FELL BY AN OATH: Dunaan besieged Nagran, the citizens shut the gates and his attacks on the walls failed for a long time, SO HE SWORE TO THEM THAT HE WOULD DO THEM NO HARM IF THEY WOULD ONLY OPEN AND LET HIM TAKE THE TRIBUTE THEY OWED HIM, AND WOULD THEN WITHDRAW AT ONCE. The Christians believed him and opened the gates; and the perjured man called the elder Aretas to him with all the clergy and the other notable citizens AND CUT THEM ALL DOWN WITH THE SWORD, and then made a terrible slaughter through the city. THE BYZANTINE EMPEROR JUSTIN, hearing of it, grieved and WROTE TO ELESBAAN THE EMPEROR OF ETHIOPIA to march on Dunaan and avenge the innocent blood; Elesbaan obeyed, beat him, destroyed his whole army and put him to the sword. AFTERWARDS, BY DIVINE REVELATION, A PIOUS MAN АВРАМИЈЕ WAS MADE PRINCE OF THE HOMERITES AND, AGAIN BY DIVINE REVELATION, ST ГРИГОРИЈЕ ARCHBISHOP — the entry even cross-references its own book, «в. 19. децембар». AND AT NAGRAN THE CHRISTIANS REBUILT THE CHURCH OF THE HOLY TRINITY WHICH DUNAAN HAD BURNED, AND RAISED A CHURCH TO ST ARETAS AND THE OTHER MARTYRS OF NAGRAN. FOUR PEOPLE NAMED AND NONE GETS A FOLDER, WHICH IS RULING 3. Дунаан the persecutor and the emperor Јустин are named and neither is a saint of this corpus. Аврамије, made prince of the Homerites: no folder holds him. Св. Григорије, made archbishop of the Homerites and referred to his own day: THE CORPUS HOLDS NO GREGORY ON 19 DECEMBER AT ALL — every Gregory folder’s attestations were walked and none has a feast on that day — so the one person this entry points the reader at by date is a person this corpus does not keep, and he is named here instead. No new `related`: `elesbaan-of-ethiopia`, `syncletica-of-nagran` and `holy-woman-and-her-infant` are already on this folder both ways, and the four thousand are a number and not an enumeration. No `locations`: Nagran, the land of the Homerites and southern Arabia are named and none is a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Арета», and the day’s FOURTH entry gives the same forename with a by-name, «Арета Печерски», so the two do not collide. THE DAY’S THIRD ENTRY IS REFUSED WHOLE. It is „Свих жалосних радост.“ — the Joy of All Who Sorrow — and the entry’s own first line says what it is: «Тако се назива једна чудотворна икона Пресвете Богородице», that is the name of a wonderworking icon of the Theotokos. AN ICON IS NOT A PERSON, and section 5 refuses it as it refuses «Пренос моштију» and a «Празник»; the heading enumerates nobody. Its body names ЕФИМИЈА, sister of the patriarch ЈОАКИМ, healed at Moscow in 1688 of a grievous wound in her side after a voice told her to go to the church of the Transfiguration and have the priest pray before that icon — and both of them are refused with the entry, being in a body and not in a heading. No folder was created and nothing was written anywhere for this entry. Note that the heading’s own quotation marks are the Serbian low-9 pair the Prologue prints, and the row quoting it nests them inside the same pair, which is what section 4 asks for. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
