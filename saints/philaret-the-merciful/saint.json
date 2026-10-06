@@ -16,6 +16,11 @@
       "form": "Филарет Милостиви",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 1. децембар ст. ст., „Свети Филарет Милостиви.“ — «Свети» is “saint” and not a rank, and «Милостиви» is the epithet “the Merciful” and not a grade, so it stays in the form. Section 6 wants the fullest form the calendar gives: the bare «Филарет» would have folded this man onto five other Philarets, and `foldchk.py` measured the fuller string on no folder at all."
+    },
+    {
+      "form": "Филарет Милостивый, Пафлагонянин",
+      "lang": "ru",
+      "note": "Read whole out of the `name:` link behind days.pravoslavie.ru’s line for 1 декабря ст. ст., «Филарет Милостивый, Пафлагонянин», with only the rank word «Праведный» of the life page’s title left off. BRIEF-RUSSIAN section 2 wants the fullest form the calendar gives, and both «Милостивый» and the appositive «Пафлагонянин» — the Paphlagonian — are epithets and not grades this corpus keeps in `types`, so both stay. The bare «Филарет» would have folded this man onto five other Philarets."
     }
   ],
   "sex": "male",
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 декабря ст. ст. — «Прав. Филарета Милостивого (792)»",
+        "url": "https://days.pravoslavie.ru/Days/20261201.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -130,6 +144,38 @@
       },
       "tone": "Ἤχος γ’.",
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Аврааму в вере подражая,/ Иову же в терпении последуя,/ отче Филарете,/ благая земли разделял еси неимущим/ и лишение сих терпел еси мужественне./ Сего ради светлым тя венцем увенча Подвигоположник,Христос Бог наш,/ Егоже моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 декабря ст. ст. — «Тропарь праведного Филарета Милостивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261201.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating Abraham in faith and following Job in patience, father Philaret, you divided the good things of the earth among the destitute and bore the lack of them manfully. Therefore the Author of the contest, Christ our God, crowned you with a shining crown; pray to him that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Истинно всеизрядная твоя купля зрится/ и мудрою быти судится всеми благомудрствующими:/ отдал бо еси дольняя и кратковременная, взыскуя Горних и вечных./ Темже и достойно стяжал еси вечную славу, милостиве Филарете.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 декабря ст. ст. — «Кондак праведного Филарета Милостивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261201.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Truly your bargain is seen to be the most excellent of all, and is judged wise by all who think rightly: for you gave away what is below and short-lived, seeking the things above and eternal. Therefore you have worthily gained everlasting glory, merciful Philaret.",
+        "rendered": "site"
+      }
     }
   ]
 }
