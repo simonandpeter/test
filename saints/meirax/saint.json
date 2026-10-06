@@ -6,6 +6,11 @@
       "form": "Μείραξ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιος Μείραξ και διήγησις πάνυ ωφέλιμος», with the rank word and the words «and a most profitable narrative» left off."
+    },
+    {
+      "form": "Миракс",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Свети мученик Миракс.“ — with «Свети» (“saint”) and «мученик» (the `martyr` grade, of which the folder holds the fuller `new-martyr`) left off, which leaves the bare forename; the heading offers nothing else. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -40,11 +45,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.12.2025 (11. децембар ст. ст.) — „Свети мученик Миракс.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth and last entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: this book calls him the plain «мученик» where the folder holds `new-martyr`, and the fuller grade is saint.gr’s and is exactly what this entry’s story describes — a Christian who accepted Islam and then repented of it and confessed Christ. Nothing was downgraded on a shorter rank word. `dates` ADDED, and it is the first date of any kind this folder has carried: «Мучен и посечен око 640. године» — tortured and beheaded ABOUT 640. The book says «око», about, and not a year, so the bounds are set as an approximation of five years either side and the display keeps the «c.»; nothing narrower is claimed. saint.gr prints him with no year. WHAT THE BOOK ADDS, where the Greek line was a name and the words “and a most profitable narrative”: that he was an Egyptian; that he was misled by a Muslim emir and accepted Islam; and that he then repented, WENT INTO THE MOSQUE WITH A CROSS, declared himself a Christian and called on the Muslims to leave the lie and receive the truth, for which he was tortured and beheaded. NO `locations`: Egypt is a country and the folder has never held a coordinate. NO `related` row: the entry names nobody, the emir included. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 635,
+      "latest": 645,
+      "display": "c. 640",
+      "basis": "traditional",
+      "note": "Охридски пролог за 11. децембар ст. ст.: „Мучен и посечен око 640. године.“ — tortured and beheaded about 640. The first date of any kind this folder has carried: saint.gr prints him as «Άγιος Μείραξ και διήγησις πάνυ ωφέλιμος» and gives no year. THE BOOK SAYS «око», ABOUT, AND NOT A YEAR, so the bounds are set as an approximation of five years either side of it, on the reading `hermogenes-of-moscow`'s «c. 1530» already stands on, and the display keeps the «c.» rather than claiming the year flat."
+    }
   }
 }

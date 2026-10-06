@@ -11,6 +11,11 @@
       "form": "Δανιήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Όσιος Δανιήλ ο Στυλίτης», with the rank word and the by-name left off."
+    },
+    {
+      "form": "Данило Столпник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Преподобни Данило Столпник.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Столпник» IS in §5’s table as `stylite` and would ordinarily come off with it, AND IT IS KEPT HERE for one reason: it is this folder’s own display epithet, the Romanian form already stored is «Daniil Stâlpnicul» with exactly the same word in it, and §6 asks for the fullest form the calendar gives. The Greek form stored here is the bare «Δανιήλ» with the by-name off, so the two readings stand side by side in this folder as they already did. `sr-foldpred.mjs` measured the folded string at 0 other holders; the bare «Данило» was not measured because it was not written."
     }
   ],
   "sex": "male",
@@ -67,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.12.2025 (11. децембар ст. ст.) — „Преподобни Данило Столпник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Преподобни» is the `venerable` held, «Столпник» the `stylite`, and `wonderworker` is the many wonders and the foretelling. `dates` WIDENED on the death from a flat 490 to 489–490, TWO BOOKS ONE YEAR APART AND BOTH GIVING THE SAME AGE OF EIGHTY: saint.gr heads him «(410 - 490)» and says «Πέθανε 80 χρονών»; this book closes «Пожививши осамдесет година упокоји се овај ангелски човек 489. године». Nothing is chosen. `birth` UNTOUCHED AND NOT RECOMPUTED: eighty years back from 489 is a year this book does not print. ONE PLACE IN DISPUTE AND NOTHING RENAMED: both books put his birth in the district of Samosata, and they do not agree on the village — this one says «у селу Витари», Vitari, where saint.gr says «στο χωριό Μαρουθά», Maroutha. No `locations` key was made and the folder has never held one. `related_add`: nothing on this folder, `symeon-the-stylite` being already here — but the row is written the other way in this same file, because the entry says he visited that saint and was blessed by him and the life names him. NO OTHER `related` ROW: his parents Илија and Марта are no folders this corpus holds, and the emperor who brought his foreign guests to see him is named in the life without the by-name the corpus gives to a `leo-the-great` of its own, because `related-floor.test.mjs` matches a display name exactly and that row has not been read. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -148,14 +163,14 @@
       "latest": 410,
       "display": "410",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Δανιήλ ο Στυλίτης, λοιπόν, γεννήθηκε το 410 μ.Χ., στο χωριό Μαρουθά της περιφερείας Σαμοσάτων», with the page's own head «(410 - 490)»."
+      "note": "saint.gr: «Ο Όσιος Δανιήλ ο Στυλίτης, λοιπόν, γεννήθηκε το 410 μ.Χ., στο χωριό Μαρουθά της περιφερείας Σαμοσάτων», with the page's own head «(410 - 490)». The Охридски пролог за 11. децембар ст. ст. gives no year of birth and only the same age at death, eighty years, and that age is deliberately NOT subtracted from its year of death to make a second birth year here."
     },
     "death": {
-      "earliest": 490,
+      "earliest": 489,
       "latest": 490,
-      "display": "490",
+      "display": "489–490",
       "basis": "traditional",
-      "note": "saint.gr's head line, «(410 - 490)», read with the same page's «Πέθανε 80 χρονών»."
+      "note": "**Two books one year apart, both giving the same age of eighty; it was a flat 490 before this reading.** saint.gr's head line reads «(410 - 490)» and the same page says «Πέθανε 80 χρονών», he died at eighty. The Охридски пролог за 11. децембар ст. ст. closes „Пожививши осамдесет година упокоји се овај ангелски човек 489. године и пређе у Царство Христово.“ — having lived eighty years, this angelic man reposed in 489. Nothing is chosen and the basis stays traditional."
     }
   }
 }
