@@ -1,0 +1,61 @@
+{
+  "slug": "basil-malakhov",
+  "display_name": "Basil (Malakhov)",
+  "names": [
+    {
+      "form": "Василий (Малахов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 марта ст. ст., «Василий (Малахов), иерей, исповедник», with the rank words left off. The day's own line declines the forename and gives the name without the surname. The calendar sets the surname in brackets and it is kept so."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru's line for 11 марта ст. ст. closes with: «Св. Василия исп., пресвитера (1937).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст. — «Св. Василия исп., пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "note": "The line is five words and a year, and it heads him «Св.» and not «Сщмч.»: the calendar calls him a confessor and a presbyter and not a martyr, which is why `new-martyr` and `hieromartyr` are both absent from this folder's types. Neither the day page nor name page 14235 carries a life, and the day page prints no hymn under his name. The name page lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it. azbyka.ru was not read for him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 24 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 24 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 24 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "satorin-of-caesarea",
+  "display_name": "Satorin of Caesarea",
+  "names": [
+    {
+      "form": "Саторин Кесарийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 марта ст. ст., «Саторин Кесарийский, мч.», with the rank abbreviation left off. «Кесарийский» is kept: it is the city the life page has the martyrs brought to, and it is the only epithet the calendar gives him."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 259,
+      "display": "249–259",
+      "basis": "traditional",
+      "note": "The life page opens «пострадали во время гонения императора Деция (249–251) и его преемника Валериана (253–259)» and gives no year; the day's line says only «(III)». The interval is the two reigns the page names."
+    }
+  },
+  "related": [
+    "quadratus-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 марта ст. ст. — «Мчч. Кодрата Никомидийского, Саторина, Руфина, и прочих (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260310.html",
+        "year": 2026
+      },
+      "note": "The line's «и прочих» leaves the company open and the calendar gives only these three names; he is the first of the two beside Quadratus. Name page 1927 carries no life and lists no second day; the life is the day's own life605.htm, which is Quadratus's and names the two of them in one sentence. The day page prints no hymn at all."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 23 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 23 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

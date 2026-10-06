@@ -17,6 +17,11 @@
       "form": "Софроније",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 11 March on pravoslavno.rs, „Свети Софроније, патријарх јерусалимски.“, with Свети left off, which is not a rank, and the see патријарх јерусалимски left off as well. What remains is the bare forename, which is all the heading gives him; `Софроније` is held by no other folder."
+    },
+    {
+      "form": "Софроний Иерусалимский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 марта ст. ст., «Святитель Софроний Иерусалимский, патриарх», with «Святитель» and the rank «патриарх» left off. «Иерусалимский» stands before the rank word and not after it, so it is part of the form the calendar gives and is kept."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст. — «Свт. Софрония, патриарха Иерусалимского (638-644)»",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "note": "The line heads him «(638-644)» and the life page behind it closes his patriarchate «(634 - 644)», which is the same page disagreeing with itself about the beginning. The death interval on this folder was widened to 638-644 for the end, which saint.gr had as 638; the note on that interval has all three readings."
     },
     {
       "church": "romanian",
@@ -153,6 +168,22 @@
         "text": "Made bright by the breathing of the Spirit, you served as a holy hierarch in Sion, an imitator of the Apostles, all-blessed father, all-wise Sophronius.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Иже Божественною ревностию подвигся/ и истинных повелений устне распростер,/ церковная основания благоузаконив/ и тамо сущим монашеским составом предав,/ премудрый в Патриарсех Иерусалимский Софроние,/ всемудрая словеса во свет извел еси,/ имиже наставляемы, зовем ти:/ радуйся, светлая православных похвало.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Кондак святителя Софрония, патриарха Иерусалимского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Moved by divine zeal, you opened your lips upon the true commandments, laid down good law for the foundations of the Church and handed them to the monastic order there, O Sophronius of Jerusalem, most wise among patriarchs; you brought all-wise words into the light, and taught by them we cry to you: rejoice, bright praise of the Orthodox.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -168,10 +199,10 @@
     },
     "death": {
       "earliest": 638,
-      "latest": 638,
-      "display": "638",
+      "latest": 644,
+      "display": "638–644",
       "basis": "traditional",
-      "note": "saint.gr heads him «Αγιος Σωφρονιος Πατριαρχης Ιεροσολυμων (; - 638)»."
+      "note": "The two sources read disagree and the page read second disagrees with itself. saint.gr heads him «Αγιος Σωφρονιος Πατριαρχης Ιεροσολυμων (; - 638)». days.pravoslavie.ru's life closes his patriarchate «(634 - 644)» and its own line for 11 марта ст. ст. heads him «(638-644)»; both of its readings end at 644. The interval holds the earliest and the latest year any of the three gives and nothing is chosen."
     }
   }
 }

@@ -11,6 +11,11 @@
       "form": "Αλέξιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Όσιος Αλέξιος εκ Ρωσίας», with the rank words left off."
+    },
+    {
+      "form": "Алексий Голосеевский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 марта ст. ст., «Алексий Голосеевский, Киевский, прп.», with the rank abbreviation left off and «Киевский» with it: the Goloseevo hermitage the first epithet names is itself at Kyiv, so the calendar's second epithet repeats the place rather than adding to the name. That is this reader's judgement and it is in the report."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст. — «Прп. Алексия Голосеевского, Киевского (1917)»",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "note": "The calendar carries no life page for him and the day page prints no hymn under his name. The year 1917 is the one this folder already held."
     },
     {
       "church": "romanian",

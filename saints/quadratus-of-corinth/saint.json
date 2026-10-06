@@ -16,6 +16,11 @@
       "form": "Кодрат Коринтски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 10 March on pravoslavno.rs, „Свети мученик Кодрат Коринтски и други с њим.“, with the rank word мученик left off and Свети, which is not a rank. Коринтски is kept: it is the epithet of his city and it is what the Prologue uses to tell him from the Quadratus of the next entry."
+    },
+    {
+      "form": "Кодрат Коринфский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 марта ст. ст., «Кодрат Коринфский, мч.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,7 +40,8 @@
     "dionysius-companion-of-quadratus",
     "anectus-companion-of-quadratus",
     "paul-companion-of-quadratus",
-    "crescens-companion-of-quadratus"
+    "crescens-companion-of-quadratus",
+    "dionysius-other-companion-of-quadratus"
   ],
   "dates": {
     "floruit": {
@@ -56,8 +62,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 марта ст. ст. — «Мчч. Кодрата и иже с ним: … Кодрата … и иных многих (258)»",
+        "url": "https://days.pravoslavie.ru/Days/20260310.html",
+        "year": 2026
+      },
+      "note": "The line enumerates twenty-two names and closes «и иных многих»; the quotation is elided to its head, this man's name as the line declines it, and the line's own year. The line's 258 and the life page's reign of Decius (249-251) disagree, and the interval this folder already holds, 249-259, contains both; nothing was narrowed."
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Ουρπασιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιος Ουρπασιανός», with the rank word left off. The body of the page writes it «O Ούρπασιανός», with the article."
+    },
+    {
+      "form": "Урпасиан Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 марта ст. ст., «Урпасиан Никомидийский, мч.», with the rank abbreviation left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 марта ст. ст. — «Мч. Урпасиана (ок. 295)»",
+        "url": "https://days.pravoslavie.ru/Days/20260309.html",
+        "year": 2026
+      },
+      "note": "The line dates him «ок. 295» and the life page behind it has him suffer under «Император Максимиан Галерий (305 - 311)», so the page disagrees with itself by a decade; the Greek calendar reads «στις αρχές του 4ου αιώνα», which agrees with the life and not with the line. This folder's interval is the early fourth century and was NOT widened to take in 295, because no display string the site can parse states both readings, and a death year is not a thing to average. The disagreement is recorded here and left to the author."
     },
     {
       "church": "romanian",

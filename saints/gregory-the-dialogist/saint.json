@@ -17,6 +17,11 @@
       "form": "Григорије Двојеслов",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 12 March on pravoslavno.rs, „Свети Григорије Двојеслов, папа римски.“, with Свети left off, which is not a rank, and the see папа римски left off as well. Двојеслов is kept: the body explains the by-name — he is called Двојеслов, or Сабеседник, the Dialogist, because of the book he wrote under that name — and it is what this folder's English name already carries."
+    },
+    {
+      "form": "Григорий Двоеслов",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 марта ст. ст., «Святитель Григорий Двоеслов, папа Римский», with «Святитель» and the rank «папа Римский» left off; the see is in this folder's `office`. «Двоеслов» is kept: it is the Slavonic by-name for the author of the Dialogues and is what the calendar uses to name him, as the Serbian form «Григорије Двојеслов» on this folder already does."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст. — «Свт. Григория Двоеслова, папы Римского (604)»",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "note": "The line's 604 falls inside the 602-610 interval this folder already carries from a Romanian page that dated his repose by the reign of Phocas, so nothing was narrowed on it. The calendar's own life page for him, id536.htm, was not read: the identity is not in question and what this upgrade takes from the calendar is the name form and the two hymns. The day page prints a troparion and a kontakion for him."
     },
     {
       "church": "romanian",
@@ -103,6 +118,38 @@
       },
       "english": {
         "text": "Having grown rich in a wakeful mouth, you were shown to be the best shepherd of the divine word, hierarch Gregory; for becoming a revealer of the virtues you make plain the shining of righteousness, venerable father. Entreat Christ our God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Иже от Бога свыше Божественную благодать восприем,/ славне Григорие,/ и Того силою укрепляема/ евангельски шествовати изволил еси./ Отонудуже у Христа возмездие трудов приял еси, всеблаженне,/ Егоже моли,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Тропарь святителя Григория Двоеслова, папы Римского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received divine grace from God on high, glorious Gregory, and being strengthened by his power, you chose to walk according to the Gospel; and from him you received the reward of your labours, all-blessed one. Pray to him, that he save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Подобоначальник показался еси Начальника пастырем Христа,/ иноков чреды, отче Григорие,/ ко ограде Небесней наставляя,/ и оттуду научил еси стадо Христово заповедем Его,/ ныне же с ними радуешися и ликуеши в Небесных кровех.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Кондак святителя Григория Двоеслова, папы Римского», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You showed yourself a follower of Christ, the chief of shepherds, father Gregory, leading the ranks of monks towards the fold of heaven; and from there you taught the flock of Christ his commandments, and now you rejoice and keep festival with them in the dwellings of heaven.",
         "rendered": "site"
       }
     }

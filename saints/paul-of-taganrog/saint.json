@@ -1,0 +1,59 @@
+{
+  "slug": "paul-of-taganrog",
+  "display_name": "Paul of Taganrog",
+  "names": [
+    {
+      "form": "Павел Таганрогский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 марта ст. ст., «Павел Таганрогский, прп.», with the rank abbreviation left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru's line for 10 марта ст. ст. closes with: «Прп. Павла Таганрогского (1879).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 марта ст. ст. — «Прп. Павла Таганрогского (1879).»",
+        "url": "https://days.pravoslavie.ru/Days/20260310.html",
+        "year": 2026
+      },
+      "note": "Neither the day page nor name page 14807 carries a life. The name page lists a second day, «7 июня (прославление)», the day of his glorification; it is recorded here and the folder does not render on it. The name page also links an article on the portal, which is magazine writing and not the calendar, and was not read. The day page prints no hymn at all."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 23 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 23 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

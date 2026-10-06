@@ -6,6 +6,11 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Ευθύμιος ο Θαυματουργός Αρχιεπίσκοπος Νόβγκοροντ», with the rank words left off."
+    },
+    {
+      "form": "Евфимий Новгородский",
+      "lang": "ru",
+      "note": "Read out of the heading of the first of the two lives days.pravoslavie.ru serves behind its line for 11 марта ст. ст., «Преподобный Евфимий Новгородский, архиепископ», where «Новгородский» stands before the rank word and is therefore part of the form. The name link behind the day's line sets it after the rank instead, «Святитель Евфимий, архиепископ Новгородский», where it governs the see this folder already carries in `office`."
     }
   ],
   "sex": "male",
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст. — «Свт. Евфимия, архиеп. Новгородского, чудотворца (1458)»",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "note": "The day page prints a troparion and a kontakion for him; both are copied here."
     },
     {
       "church": "romanian",
@@ -64,5 +79,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Избран быв Богови от юности,/ святителю Евфимие,/ и, сего ради архиерейства саном почтен быв,/ упасл еси люди, иже тебе Богом врученный;/ темже и по преставлении чудес дарования от Господа приял еси/ исцеляти различный недуги./ Того моли о нас,/ совершающих честную память твою,/ да тебе вси непрестанно ублажаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Тропарь святителя Евфимия, архиепископа Новгородского, чудотворца», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chosen by God from your youth, O hierarch Euthymius, and honoured for that cause with the rank of the high priesthood, you shepherded the people entrusted to you by God; and so after your repose you received from the Lord the gift of wonders, to heal every kind of sickness. Pray to him for us who keep your honoured memory, that we may all bless you without ceasing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко архиереем сопрестольник/ и святителем изрядный поборник был еси, святителю Евфимие,/ не престай сохраняя отечество твое,/ град же и люди, иже тебе верою почитающия/ и честным мощем твоим покланяющияся,/ да велегласно тебе вси вопием:/ радуйся, святителю Богомудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Кондак святителя Евфимия, архиепископа Новгородского, чудотворца», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one sharing the throne of the bishops and an excellent champion among the hierarchs, O hierarch Euthymius, do not cease to keep your homeland, your city and the people who honour you in faith and venerate your precious relics, that we may all cry aloud to you: rejoice, hierarch wise in God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

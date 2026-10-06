@@ -5,6 +5,11 @@
     {
       "form": "Δίκαιοι Ελεάζαρ και Φινεές",
       "lang": "el"
+    },
+    {
+      "form": "Финеес",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 марта ст. ст., «Финеес первосвященник Израильский», with «первосвященник Израильский», high priest of Israel, left off: it is the office and not the name, and the day's own line prints the name bare. The form is the bare one the calendar gives and is held by no other folder."
     }
   ],
   "sex": "male",
@@ -14,8 +19,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not on the Moscow Patriarchate’s list for 2 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст. — «Прав. Финееса (ок. 1500 до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar keeps him on 12 марта ст. ст. and the Greek keeps him on 2 Σεπτεμβρίου; two churches on two of their own days is one row each and nothing is owed, and this folder's existing life already said «His memory is kept also on 12 March», which is the day read here. The line gives this folder its first date of any kind. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
@@ -47,5 +62,14 @@
   },
   "related": [
     "eleazar-the-priest"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": -1500,
+      "latest": -1500,
+      "display": "about 1500 BC",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 12 марта ст. ст. heads him «(ок. 1500 до Р.Х.)» and its life page closes «Святой Финеес скончался в глубокой старости (+ ок. 1500 до Р. X.)». The page's «ок.», about, is why the display says about. No source read before this one gave him a year."
+    }
+  }
 }

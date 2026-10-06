@@ -6,6 +6,11 @@
       "form": "Σωφρόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Όσιος Σωφρόνιος ο Έγκλειστος», with the rank words left off."
+    },
+    {
+      "form": "Софроний Печерский",
+      "lang": "ru",
+      "note": "Read out of the heading of the lives days.pravoslavie.ru serves behind its line for 11 марта ст. ст., «Преподобный Софроний Печерский». The name link behind the day's line reads «Преподобный Софроний, затворник Печерский», where «Печерский» governs the rank word «затворник», recluse, which this folder carries in `types`; the life page's own heading puts the epithet on the name."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст. — «Прп. Софрония, затворника Печерского (XIII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "note": "The life page lists two further days, «11 мая» and «28 августа (Печер.(Д))», the synaxis of the fathers of the Far Caves; the day recorded is the day page read, and he renders on neither of the others. The day page prints a troparion and two kontakia for him, the second of the kontakia headed «Ин кондак»; all three are copied here."
     },
     {
       "church": "romanian",
@@ -58,5 +73,55 @@
   "related": [],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Пространна пути, ведуща в пагубу,/ блаженне Софроние, угонзая,/ затворился еси в темне месте пещернем,/ идеже день и нощь в молитвах и слезах/ и в ручном деле подвизаяся,/ обрел еси вечный живот и наслаждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Тропарь преподобного Софрония, затворника Печерского, в Дальних Пещерах», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fleeing the broad way that leads to destruction, blessed Sophronius, you shut yourself in a dark place of the caves, and labouring there day and night in prayers and tears and in the work of your hands you found eternal life and delight.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Явился еси древним отцем ревнитель,/ в темней пещере светлым житием ясно просияв,/ и озарил еси сердца поющих тя,/ Богомудре отче Софроние.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Кондак преподобного Софрония, затворника Печерского, в Дальних Пещерах», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You showed yourself an imitator of the ancient fathers, shining out clearly in a dark cave by the brightness of your life, and you lit up the hearts of those who sing of you, father Sophronius, wise in God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В тесней и темней клети затворився,/ власяницею и поясом железным умерщвляя тело твое,/ псалмопении непрестанно благославословил еси,/ тем Света вечнаго и обители Небесныя сподоблься,/ и, ангельскими пении наслаждался,/ молися Господеви, да не лишит и нас вечных красот.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Ин кондак преподобного Софрония, затворника Печерского, в Дальних Пещерах», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shut in a narrow and dark cell, putting your body to death with a hair shirt and an iron belt, you blessed God unceasingly with the singing of psalms; and having been counted worthy of the eternal Light and of the dwelling in heaven, and delighting in the songs of angels, pray to the Lord that he deprive us too of nothing of that everlasting beauty.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -11,6 +11,11 @@
       "form": "Павле",
       "lang": "sr",
       "note": "Read out of the body of the Ohrid Prologue's first entry for the Julian 10 March on pravoslavno.rs, „То беху Кипријан, Дионисије, Анект, Павле и Крискент.“, which names the five companions; this man's own name is taken out of it. The clause carries no rank word and no epithet, so the bare forename is all it gives him."
+    },
+    {
+      "form": "Павел Коринфский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 марта ст. ст., «Павел Коринфский, мч.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 марта ст. ст. — «Мчч. Кодрата и иже с ним: … Павла … и иных многих (258)»",
+        "url": "https://days.pravoslavie.ru/Days/20260310.html",
+        "year": 2026
+      },
+      "note": "The line enumerates twenty-two names and closes «и иных многих»; the quotation is elided to its head, this man's name as the line declines it, and the line's own year. The line's 258 and the life page's reign of Decius (249-251) disagree, and the interval this folder already holds, 249-259, contains both; nothing was narrowed."
     },
     {
       "church": "romanian",
