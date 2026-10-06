@@ -16,6 +16,11 @@
       "form": "Артемон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 13 April on pravoslavno.rs, „Свешт. муч. Артемон.“, with Свешт. муч. left off — the rank words this source uses for a hieromartyr, which this folder already carries in `types`. The heading leaves no epithet and does not name Laodicea, which is in the body. The bare form is shared with `artemon-of-seleucia` and that fold is deliberate and recorded."
+    },
+    {
+      "form": "Артемон Лаодикийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 13 апреля ст. ст., name page 276, «Артемон Лаодикийский, пресвитер, сщмч.», with the grade and the rank word left off; the day's own line gives the name in the genitive and the city as an adjective after it. `.tmp/foldchk.py` reports no folder holding this form. The bare «Артемон» this folder already stores as its Serbian form folds with `artemon-of-seleucia`, which is deliberate and recorded; the Russian form with the see in it joins no fold."
     }
   ],
   "sex": "male",
@@ -26,8 +31,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 апреля ст. ст. — «Сщмч. Артемона, пресвитера Лаодикийского (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260413.html",
+        "year": 2026,
+        "note": "The line is the day's second entry and carries the typikon icon whose alt reads «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. Its year, 303, is the one the Ohrid Prologue already gave this folder, so nothing was widened: two sources now print it flat and the folder's `dates` note is unchanged. The see in the line — «пресвитера Лаодикийского» — is this folder's own rank and city, and the name page behind it (276) gives «День памяти: 13 апреля» and no other day. **The day page's only hymn is not his**: it prints one troparion under «Молитвы», a proper of the two sisters of Bethany in the third tone, which belongs to the moveable Sunday the day page is headed for and names two other saints, so no hymn was taken. The head of the page reads «Неделя 3-я по Пасхе, свв. жен-мироносиц» and the «Службы» list under it names only «13 апреля: Священномученика Артемона» — which is the test that his is the fixed-day commemoration of this number and the myrrh-bearers' is not."
+      }
     },
     {
       "church": "romanian",

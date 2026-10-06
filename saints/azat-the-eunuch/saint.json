@@ -10,13 +10,28 @@
       "form": "Αζάτ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Αζάτ ο Ευνούχος», with the rank word left off; the epithet is kept because it is the whole of what distinguishes him."
+    },
+    {
+      "form": "Азат Персидский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 14 апреля ст. ст., name page 84, «Мученик Азат Персидский», with the rank word left off; the day's own line declines him as «Азата скопца», giving the grade of eunuch where the link gives the country. `.tmp/foldchk.py` reports no folder holding this form, and the «Азат Гадиабский (Персидский)» that `geithazat-the-eunuch` stores is a different string and a different man."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Мчч. 1000 Персидских и Азата скопца (341).»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "The day's fourth entry, one line naming a company of a thousand and this one man, and it carries no typikon icon, so no `rank` is recorded. **The identification is the page's own and not the name's**: a eunuch of the Persian king, killed together with a thousand martyrs, after whose death the king stopped the persecution — which is, sentence for sentence, the four-sentence notice saint.gr gives this folder for 17 Απριλίου. The name page (84) puts the agreement beyond doubt: «Дни памяти: 14 апреля , 17 апреля», so this calendar keeps him on the Greek calendar's number as well as this one. **One row per church is the schema, so the 17 апреля is recorded here as a note and he does not render on it.** The line's year, 341, is not the year either of this calendar's own two lives for him gives, and the `dates` note sets the readings side by side. He is not `geithazat-the-eunuch`, whom this same calendar keeps on 20 ноября ст. ст. in the company of the bishop Nirsa and whose stored Russian form is «Азат Гадиабский (Персидский)»: another eunuch, another company, another day, and nothing read links them."
+      }
     },
     {
       "church": "romanian",
@@ -48,6 +63,16 @@
     "life": "life.md"
   },
   "related": [
-    "simeon-of-persia"
-  ]
+    "simeon-of-persia",
+    "thousand-persian-martyrs"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 341,
+      "latest": 344,
+      "display": "341–344",
+      "basis": "traditional",
+      "note": "**One source disagreeing with itself, read the way this corpus reads two sources disagreeing.** days.pravoslavie.ru's line for 14 апреля ст. ст. closes «Мчч. 1000 Персидских и Азата скопца (341).», while the life behind that line says «св. мученик Азат вместе с 1000 мучениками был казнен в 344 г.», and the second life the same index serves — the company of the bishop of Seleucia-Ctesiphon — puts the edict and the persecution in 344 as well and runs the executions through Pascha week to 23 April. The interval carries both readings and neither is chosen. This folder had no date at all before: saint.gr's notice gives none. `node .tmp/dd.mjs '341–344'` reads in Russian and Greek. Read 7 October 2026."
+    }
+  }
 }

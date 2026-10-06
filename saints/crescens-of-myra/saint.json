@@ -16,6 +16,11 @@
       "form": "Крискент",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 13 April on pravoslavno.rs, „Св. муч. Крискент.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet and does not name Myra, which is the first thing the body says. The bare form is shared with `crescens-companion-of-quadratus` and that fold is deliberate and recorded."
+    },
+    {
+      "form": "Крискент Мирликийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 13 апреля ст. ст., name page 1304, «Крискент Мирликийский, мч.», with the rank word left off; the day's own line gives the name in the genitive and the city as a phrase after it. `.tmp/foldchk.py` reports no folder holding this form. The bare «Крискент» this folder already stores as its Serbian form folds with `crescens-companion-of-quadratus`, which is deliberate and recorded; the Russian form with the city in it joins no fold."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 апреля ст. ст. — «Мч. Крискента, из Мир Ликийских (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260413.html",
+        "year": 2026,
+        "note": "The day's third entry and it carries no typikon icon, so no `rank` is recorded. **It keeps him on the same Julian 13 April as the Ohrid Prologue and not the 15 April of the other two calendars**, and the city in the line — «из Мир Ликийских», out of Myra in Lycia — is this folder's own display name. The name page behind the line (1304) gives «День памяти: 13 апреля» and no other day. **It is also the first source read for this folder to print anything of a date**, «(III)», and that century is now the folder's `dates`; the tension with saint.gr's account is set out in the `dates` note. The day page prints one troparion under «Молитвы», a proper of the two sisters of Bethany, which belongs to the moveable Sunday the page is headed for and names other saints, so no hymn was taken from it; this folder's hymns stand as the Romanian and Greek calendars gave them."
+      }
     },
     {
       "church": "romanian",
@@ -147,5 +162,14 @@
   },
   "related": [
     "crescens-companion-of-quadratus"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for the Julian 13 April closes «Мч. Крискента, из Мир Ликийских (III).» — the third century, printed as the calendar prints a year. It is the only statement of a date any source read for this folder makes: doxologia.ro's notice gives none, the Ohrid Prologue gives none, and saint.gr sets him only «την εποχή της παντοδυναμίας της ειδωλολατρίας». **One reading pulls earlier and is recorded here rather than averaged in.** saint.gr's page makes him a disciple of the Apostle Paul and already old, which would be the first century; it states no year, so no year of its own stands against this one, and the corpus keeps the Crescens of the Second Letter to Timothy as a separate folder which nothing read here identifies with this man. The century is therefore the Russian calendar's own and the Greek page's reading is left standing beside it, unchosen. `node .tmp/dd.mjs '3rd century'` reads in Russian and Greek. Read 7 October 2026."
+    }
+  }
 }

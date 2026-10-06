@@ -1,0 +1,59 @@
+{
+  "slug": "martha-testova",
+  "display_name": "Martha (Testova)",
+  "names": [
+    {
+      "form": "Марфа (Тестова)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 13 апреля ст. ст., name page 13714, «Марфа (Тестова), прмц.», with the rank word left off; the day's own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar's link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` finds the surname Тестова on no folder in the corpus."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 апреля ст. ст. — «Прмц. Марфы (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20260413.html",
+        "year": 2026,
+        "note": "The last of the day's entries, standing on a line of its own, and the whole of it. It carries no typikon icon, so no `rank` is recorded, and the day page prints no life under her name and no hymn for her — its one troparion under «Молитвы» is a proper of the two sisters of Bethany belonging to the moveable Sunday the page is headed for. The name page behind the line (13714) gives «Дни памяти: 26 января (Новомуч.) , 13 апреля»: the January day is the synaxis of the new martyrs and confessors of Russia, a commemoration of a company and not a second day of her own, so no second row and no note of a second feast is written. The same page prints a «Сайт прихода» line naming a women's monastery of the Vladivostok diocese, and links an article on Православие.Ru about the sisters of a convent and the clergy around it; neither is a life and nothing was taken from either."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 13 апреля ст. ст. with «(1941)», which is this calendar's way of printing the year of death. It is the only year any source read for this folder gives her, and the page says nothing about where or how. No day is recorded because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

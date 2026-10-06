@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-orlov-14-april",
+  "display_name": "Alexander (Orlov) (14 April)",
+  "names": [
+    {
+      "form": "Александр (Орлов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 14 апреля ст. ст., name page 9439, «Александр (Орлов), иерей, исп.», with the grade and the rank word left off; the day's own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar's link gives and is kept. **The same string is already held by two other folders**, `alexander-orlov` and `alexander-orlov-20-october`, and `.tmp/foldchk.py` names both; the three are three men on three Julian days with three readings, and the fold is keyed in the gate with all three in it."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Св. Александра исп., пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "The day's fifth entry, on a line of its own, and the whole of it. It carries no typikon icon, so no `rank` is recorded, and the day page prints no life under his name — its four hymns are the Vilnius company's and Pope Martin's. The name page (9439) gives «Дни памяти: 26 января (Новомуч.) , 14 апреля»: the January day is the synaxis of the new martyrs and confessors of Russia, a commemoration of a company and not a second day of his own, so no second row and no second-day note is written. **He is neither of the two Alexanders Orlov the corpus already keeps**: `alexander-orlov` is an archpriest of 1937 on 30 сентября ст. ст., named there in a company of six presbyters, and `alexander-orlov-20-october` a priest of 1937 on 20 октября ст. ст. This man is of 1941 and the calendar's rank word for him is «исп.», confessor, not священномученик; three years, two ranks and three days, and nothing read links any two of them."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 14 апреля ст. ст. with «(1941)», which is this calendar's way of printing the year of death. It is the only year any source read for this folder gives him, and the page says nothing about where or how. No day is recorded because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

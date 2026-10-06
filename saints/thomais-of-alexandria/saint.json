@@ -16,6 +16,11 @@
       "form": "Томаида",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 April on pravoslavno.rs, „Св. муч. Томаида.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet and does not name Alexandria, which is the first word of the body; the city is what distinguishes her from `thomais-of-lesbos`, and this corpus keeps such a thing in the display name. No other folder holds a Serbian Томаида."
+    },
+    {
+      "form": "Фомаида Александрийская (Египетская)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 13 апреля ст. ст., name page 2739, «Фомаида Александрийская (Египетская), мц.», with the rank word left off. Both epithets are kept because the calendar's own link gives both and the day's line gives only the second: the line declines her as «Фомаиды Египетской», and a bare «Фомаида» would be something reconstructed from the link with less of it in. `.tmp/foldchk.py` reports no folder holding this form, with or without the brackets, and the Greek Θωμαΐς fold with `thomais-of-lesbos` is untouched by it."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 апреля ст. ст. — «Мц. Фомаиды Египетской (476).»",
+        "url": "https://days.pravoslavie.ru/Days/20260413.html",
+        "year": 2026,
+        "note": "The day's fourth entry and it carries no typikon icon, so no `rank` is recorded. **It keeps her on the same Julian 13 April as the Ohrid Prologue and not the 14 April of the other two calendars**, and its year, 476, is the one the Prologue already gave this folder, so nothing was widened: two sources now print it flat. The line calls her «Египетской», of Egypt, where the name page behind it (2739) heads her «Фомаида Александрийская (Египетская), мц.», of Alexandria and of Egypt both — the city that tells her from `thomais-of-lesbos`. That page gives «День памяти: 13 апреля» and no other day. The day page prints one troparion under «Молитвы», a proper of the two sisters of Bethany which belongs to the moveable Sunday the page is headed for, so no hymn was taken and this folder still has none from any source."
+      }
     },
     {
       "church": "romanian",
