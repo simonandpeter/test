@@ -17,6 +17,11 @@
       "form": "Амфилохий Иконийский",
       "lang": "ru",
       "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 153, «Святитель Амфилохий Иконийский, епископ», with the grade words left off; the day line itself declines the forename and abbreviates the see, «Свт. Амфилохия, еп. Иконийского». `.tmp/sr-foldpred.mjs` predicts «new key, other holders: 0 (none)» for this form."
+    },
+    {
+      "form": "Амфилохије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 23. новембар ст. ст., „Св. Амфилохије еп. Иконијски.“ — «Св.» is “saint” and not a rank, «еп.» is the `bishop` grade `types` keeps, and «Иконијски» is the see this folder carries in `office` as Bishop of Iconium; §6 strips a rank and a see, so the bare forename is what is left. Measured: no other folder in the corpus holds this string and it joins no fold."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.12.2025 (23. новембар ст. ст.) — „Св. Амфилохије еп. Иконијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-06&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry, the longest of the four, and the fourth and last of this folder's rows to leave `undocumented`. THE `[~]` HINT MARKED THIS LINE AS A POSSIBLE FEAST ON THE WORDS ALONE AND IT IS A PERSON. `dates` UNTOUCHED AND A YEAR REFUSED: the book says «Упокојио се 395. год. у дубокој старости» where this folder holds 394 off saint.gr. ONE YEAR APART, and a single year is not an interval the corpus widens on a third book's say-so without the author; the year is in the life and is a line for the author. ONE `related` ROW ADDED, both ways: the emperor Theodosius the Great, whom the entry brings on twice and who is given the line the whole entry turns on. Basil the Great and Gregory of Akragas are already related both ways, and the other people the entry names are Macedonius, the Arians, Eunomius, the emperor Theodosius the Great and his son Arcadius — of whom the corpus keeps Arcadius but not as part of this story, and the rest not at all; GREGORY THE THEOLOGIAN IS ALREADY A `related` ROW TOO and the entry's «других великих светитеља из IV столећа» names nobody. WHAT THE ENTRY ADDS: that he was the countryman, companion and friend of Basil the Great; the forty years as an anchorite in a cave before the see of Iconium fell vacant and he was chosen and consecrated by a wonderful means; the Second Ecumenical Council of 381; the fight against Macedonius, the Arians and Eunomius; and THE SCENE AT COURT — his petition that the emperor expel the Arians from every city, refused; his second audience, at which he bowed to Theodosius on the throne and took no notice at all of Arcadius seated at his right hand as co-emperor; the emperor's anger and the order to drive him out of the palace; and his answer, that as the emperor cannot bear dishonour to his son, so God the Father does not endure dishonour to his Son, and turns away in hatred from those who blaspheme him and is angry with all the partisans of that accursed heresy. Measured: no other folder holds «Амфилохије»."
     }
   ],
   "images": [
@@ -84,7 +99,8 @@
   "related": [
     "basil-the-great",
     "gregory-the-theologian",
-    "gregory-of-akragas"
+    "gregory-of-akragas",
+    "theodosius-the-great"
   ],
   "hymns": [
     {

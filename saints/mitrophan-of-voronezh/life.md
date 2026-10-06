@@ -70,6 +70,8 @@ troparion and kontakion.
 
 The Greek calendar keeps him on 23 November, where the Russian keeps him on 4 September, and has almost nothing to add. saint.gr's whole notice is two sentences: that the holy Metrophanes — «που μετονομάστηκε Μακάτιος», who was renamed Makatios, as the page spells it — was the first bishop of Voronezh; that he was born on 8 November 1623 and fell asleep in 1703. The day of birth is the one fact in it the Romanian life does not give. The same listing keeps the translation of his relics as a separate entry of the same day.
 
+The Охридски пролог gives him four sentences. He was a famous Russian hierarch, an ascetic and a lover of his country. He was the friend of Peter the Great, and the man who reproved him. He reposed on the twenty-third of November 1703 — the same year this folder already holds from the Russian calendar, which now rests on two books. And his wonderworking relics were uncovered in 1832, which is a date of the relics and not of the man, and is written here and not into his dates.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life3213.htm), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway; and saint.gr's calendar for 23 Νοεμβρίου — [the day](https://www.saint.gr/11/23/index.aspx) and [his page](https://www.saint.gr/3082/saint.aspx), read 2 October 2026.*
+time whole; the earlier reading had stopped partway; and saint.gr's calendar for 23 Νοεμβρίου — [the day](https://www.saint.gr/11/23/index.aspx) and [his page](https://www.saint.gr/3082/saint.aspx), read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 23. новембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-06&prolog=1), read 7 October 2026.*

@@ -17,6 +17,11 @@
       "form": "Григорий Акрагантийский",
       "lang": "ru",
       "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 530, «Святитель Григорий Акрагантийский, епископ», with the grade words left off; the day line itself declines the forename and abbreviates the see. `.tmp/sr-foldpred.mjs` predicts «new key, other holders: 0 (none)» for this form."
+    },
+    {
+      "form": "Григорије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 23. новембар ст. ст., „Св. Григорије еп. Акрагантски.“ — «Св.» is “saint” and not a rank, «еп.» is the `bishop` grade `types` keeps, and «Акрагантски» is the see this folder carries in `office` as Bishop of Akragas; §6 strips a rank and a see, so the bare forename is what is left, exactly as it was for `gregory-the-wonderworker-of-neocaesarea` six days ago. It widens that fold from four to five, and the four-member key is removed and its reading carried forward whole inside the five-member one in the same commit."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.12.2025 (23. новембар ст. ст.) — „Св. Григорије еп. Акрагантски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-06&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's second entry, and the fourth and last of this folder's rows to leave `undocumented`. `dates` UNTOUCHED AND A CENTURY REFUSED: the book has him end peacefully «почетком VII века (или крајем VI)», at the beginning of the seventh century or the end of the sixth, where this folder holds 690 off saint.gr — WHICH IS THE END OF THE SEVENTH CENTURY AND OUTSIDE BOTH OF THE BOOK'S ALTERNATIVES. The book's own council is the same problem: it puts him at the FIFTH Ecumenical Council at Constantinople, of 553, which no man who died in 690 can have sat in as a bishop with any ease. The year is not moved, the century is not written, and the clash is a line for the author. No `related` row: Chariton and Theodotia his parents are not saints of this corpus, and Amphilochius of Iconium is already related both ways. WHAT THE ENTRY ADDS: Sicily near the city of Akragas as his birthplace and the place of his later see; the names of his devout parents; that his whole life is shot through with wonders — a wonderful going to Jerusalem, a wonderful election as bishop, a wonderful deliverance from slander; that he was himself a great wonderworker, a great pleaser of God, a great spiritual father and ascetic; the Fifth Ecumenical Council; and heavy trials before a peaceful end. The Serbian form „Григорије“ WIDENS THE FOUR-FOLDER FOLD THIS BRANCH READ ON 17 NOVEMBER TO FIVE, and the narrower key is deleted and its whole reading carried forward in the same commit."
     }
   ],
   "hymns": [
