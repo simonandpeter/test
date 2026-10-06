@@ -10,13 +10,28 @@
       "form": "Кодрат Никомидијски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 March on pravoslavno.rs, „Свети мученик Кодрат Никомидијски.“, with the rank word мученик left off and Свети, which is not a rank. Никомидијски is kept: it is the epithet of his city and it is what the Prologue uses to tell him from the Quadratus of the entry before."
+    },
+    {
+      "form": "Кодрат Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 марта ст. ст., «Кодрат Никомидийский, мч.», with the rank abbreviation left off. Никомидийский is kept for the same reason the Serbian form keeps Никомидијски: it is what the calendar uses to tell him from the Quadratus of the line before."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 10 марта ст. ст., which is the page for this menologion number."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 марта ст. ст. — «Мчч. Кодрата Никомидийского, Саторина, Руфина, и прочих (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260310.html",
+        "year": 2026
+      },
+      "note": "The line names three and closes «и прочих», leaving the company open. The life page behind it is his. The day page prints no hymn at all."
     },
     {
       "church": "romanian",
@@ -46,5 +61,18 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 259,
+      "display": "249–259",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life page opens «Святые мученики Кодрат Никомидийский, Саторин, Руфин и прочие пострадали во время гонения императора Деция (249–251) и его преемника Валериана (253–259)» and gives no year; the day's line says only «(III)». The interval is the two reigns the page names. This folder held no date before."
+    }
+  },
+  "related": [
+    "satorin-of-caesarea",
+    "rufinus-of-caesarea"
+  ]
 }

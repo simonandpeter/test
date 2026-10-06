@@ -1,0 +1,62 @@
+{
+  "slug": "dionysius-other-companion-of-quadratus",
+  "display_name": "Dionysius, the other companion of Quadratus of Corinth",
+  "names": [
+    {
+      "form": "Дионисий Коринфский (другой)",
+      "lang": "ru",
+      "note": "Read whole out of the name link behind the second «Дионисия» of days.pravoslavie.ru's line for 10 марта ст. ст., «Дионисий Коринфский (другой), мч.», with the rank word left off. The parenthesis is the calendar's own and is what tells him from the first Dionysius of the same line, so it is kept."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 258,
+      "display": "249–258",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru does not reconcile its own two readings. Its line for 10 марта ст. ст. closes «(258)», and the life page behind it opens the persecution in the reign of Decius, «нечестивого Деция (249–251)». The interval holds both and nothing is chosen."
+    }
+  },
+  "related": [
+    "quadratus-of-corinth"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 марта ст. ст. — «Мчч. Кодрата и иже с ним: … Дионисия … и иных многих (258)»",
+        "url": "https://days.pravoslavie.ru/Days/20260310.html",
+        "year": 2026
+      },
+      "note": "The line enumerates twenty-two names and prints «Дионисия» twice. The first stands on name page 624, «Дионисий Коринфский, мч.», who is the corpus's `dionysius-companion-of-quadratus`; the second stands on name page 625, «Дионисий Коринфский (другой), мч.», and is this folder. Two name pages and two names in one line are two men by this source's own reckoning, and the life page keeps them apart by the manner of death: the five named friends were beheaded with their teacher, and this Dionysius was stabbed with a knife among those killed afterwards. The day page prints no hymn at all."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 23 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 23 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

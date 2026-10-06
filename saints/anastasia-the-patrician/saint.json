@@ -11,6 +11,11 @@
       "form": "Анастасија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 10 March on pravoslavno.rs, „Преподобна матер Анастасија.“, with the rank word Преподобна left off and матер, which is a form of address and not part of the name. The heading gives no epithet; the patrician rank, which this folder's English name carries, is in the body's first sentence. `Анастасија` is held by no other folder."
+    },
+    {
+      "form": "Анастасия Патрикия",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 марта ст. ст., «Анастасия Патрикия, Александрийская, пустынница», with «Александрийская» and «пустынница» left off: the second is the hermit's grade this folder already carries in `types`, and the first is a see-like epithet the line itself does not use. Патрикия is kept, as the Greek and the English both keep the patrician rank in the name."
     }
   ],
   "sex": "female",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 марта ст. ст. — «Прп. Анастасии Патрикии (567-568)»",
+        "url": "https://days.pravoslavie.ru/Days/20260310.html",
+        "year": 2026
+      },
+      "note": "The line is the first source read for this folder to give a year for her repose. The day page prints no hymn at all."
     },
     {
       "church": "romanian",
@@ -67,14 +82,14 @@
       "latest": 565,
       "display": "under Justinian the Great (527–565)",
       "basis": "traditional",
-      "note": "saint.gr: «ήταν μια από τις πιο θεοφοβούμενες κόρες του Βυζαντίου, στα χρόνια του Ιουστινιανού του μεγάλου (527 - 565 μ.Χ.)». The page gives no year of her own, so the interval is the reign it prints."
+      "note": "saint.gr: «ήταν μια από τις πιο θεοφοβούμενες κόρες του Βυζαντίου, στα χρόνια του Ιουστινιανού του Μεγάλου (527-565 μ.Χ.)». days.pravoslavie.ru gives the same reign, «императора Юстиниана (527 - 565)», and adds that she was in his esteem at Constantinople before she left it."
     },
     "death": {
-      "earliest": 563,
-      "latest": 563,
-      "display": "563",
+      "earliest": 567,
+      "latest": 568,
+      "display": "about 567–568",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 10 March: „И затвори се Анастасија у тесну келију где проведе двадесетосам година, и где се упокоји 563. године.“ The folder carried no death at all before this reading, only the reign saint.gr gives for her life, and 563 falls inside it."
+      "note": "days.pravoslavie.ru closes its life «святая тихо скончалась (+ ок. 567 - 568)» and its line for 10 марта ст. ст. reads «Прп. Анастасии Патрикии (567-568)». No source read before this one gave a year for her repose."
     }
   },
   "related": [

@@ -1,0 +1,7 @@
+# Rufinus of Caesarea
+
+He comes into the calendar's account at one moment and leaves it in the same sentence. The Православный церковный календарь of the Сретенский monastery names him in the line «Мчч. Кодрата Никомидийского, Саторина, Руфина, и прочих (III).» for 10 марта ст. ст., and the life page behind that line belongs to [Quadratus of Nicomedia](/saints/quadratus-of-nicomedia), whose sufferings under the proconsul Perennius it follows from Nicomedia to Nicaea and then to Apamea, Caesarea, Apollonia and the Hellespont.
+
+At Caesarea, the page says, Quadratus was tied into a sack filled with venomous creeping things and thrown for the night into a deep pit, and in the morning everyone was astonished to see the martyr whole and unhurt; and when they began to beat him without mercy, two men of noble birth, Саторин and Руфин, were filled with pity for him. This was noticed, and Саторин and Руфин were beheaded. That is the whole of what the calendar says of either of them. It gives them no year — the line says only «(III)», and the page's own opening sets the persecution in the reigns of Decius and his successor Valerian — and it prints no hymn.
+
+*After the Православный церковный календарь of the Сретенский monastery for 10 марта ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260310.html) and [the life](https://days.pravoslavie.ru/Life/life605.htm); read 7 October 2026.*
