@@ -1,0 +1,74 @@
+{
+  "slug": "abenir-sinitsyn",
+  "display_name": "Abenir (Sinitsyn)",
+  "office": "Monk",
+  "names": [
+    {
+      "form": "Авенир (Синицын)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 14487, «Авенир (Синицын), инок, прмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Синицын returned nothing at all, and no key of the proposed record has another holder; the corpus holds no other Авенир."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. azbyka.ru adds «31 июля – Собор Калужских святых» and «24 октября – Собор всех святых, в Оптиной пустыни просиявших», which were seen and not read. It also hangs the one shared article behind all five pages of this company, and gives four of them one page between them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Преподобномученик Авенир родился в 1879 году в семье мещанина города Болхова Орловской губернии Матвея Синицына и в крещении наречен был Андреем»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». **The shared article gives this company a day one later than the ten other names of the same line**, and the day it gives is the day the calendar keeps them on: «Господу угодно было, чтобы в самый день праздника Введения Пресвятой Богородицы, 4 декабря, они пробыли в молитве, хотя и в тюрьме, но на земле ... были расстреляны на следующий день, 5 декабря 1937 года, и погребены в общей безвестной могиле». 5 December 1937 is this Julian 22 ноября. No day is recorded in this field because this corpus’s `dates` are years."
+    }
+  },
+  "related": [
+    "eutychius-didenko",
+    "savva-suslov",
+    "mark-makhrov",
+    "boris-kozlov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

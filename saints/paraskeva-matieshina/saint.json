@@ -1,0 +1,73 @@
+{
+  "slug": "paraskeva-matieshina",
+  "display_name": "Paraskeva (Matieshina)",
+  "office": "Nun",
+  "names": [
+    {
+      "form": "Параскева (Матиешина)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9903, «Параскева (Матиешина), инокиня, исп.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Матиешина returned nothing at all, and no key of the proposed record has another holder. **`office` is the bare `Nun`**: both sources call her an инокиня, a rassophore, and neither `Rassophore nun` nor `Deaconess` is an office in the four locale packs; the rassophore tonsure and the diaconate are in the life."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "confessor",
+    "nun",
+    "deaconess"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Прп. Параскевы исп (1952).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. **She is the one name on this day that is not a martyr and the one with a year of its own at the far end of the line**: the calendar closes the day with a sentence to itself, «Прп. Параскевы исп (1952).», after the company of sixteen it closes with 1937. azbyka.ru adds «5 сентября (переходящая) – Собор Московских святых», which was seen and not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Преподобноисповедница Параскева родилась 28 октября 1888 года в селе Песчаное Каменец-Подольского уезда Подольской губернии в крестьянской семье Федора и Матроны Матиешиных»."
+    },
+    "death": {
+      "earliest": 1952,
+      "latest": 1953,
+      "display": "1952 or 1953",
+      "basis": "traditional",
+      "note": "**The two sources give two years and neither is chosen.** days.pravoslavie.ru closes her line on 22 ноября ст. ст. with «(1952)»; azbyka.ru’s life, out of fond.ru, closes «Инокиня Параскева скончалась в день праздника Введения во храм Пресвятой Богородицы 4 декабря 1953 года и была погребена на кладбище города Дмитрова» — 4 December 1953. The interval carries both. She is the only one of the eighteen twentieth-century names of this day whose year is an interval, and the only one who died in her bed."
+    }
+  },
+  "related": [
+    "seraphim-of-dmitrov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
