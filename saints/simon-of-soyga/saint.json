@@ -1,0 +1,70 @@
+{
+  "slug": "simon-of-soyga",
+  "display_name": "Simon of Soyga",
+  "names": [
+    {
+      "form": "Симон Сойгинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 24 ноября ст. ст., name page 2017, «Преподобный Симон Сойгинский», with the rank word left off the head. It is also the title of both of the two life pages the name page hangs behind him."
+    }
+  ],
+  "sex": "male",
+  "office": "Abbot",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Прп. Симона Сойгинского (1562).»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 7 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1562,
+      "latest": 1562,
+      "display": "1562",
+      "basis": "traditional",
+      "note": "The day line closes «(1562)» and both life pages give the day and the year flat and agree: «мирно скончался 24 ноября 1562 г.» on the first and «Скончался преподобный Симон 24 ноября 1562 года» on the second. Neither page gives a year of birth."
+    }
+  },
+  "related": [
+    "cornelius-of-komel",
+    "sergius-of-radonezh",
+    "longinus-of-koryazhemka",
+    "gennadius-of-kostroma",
+    "cyril-of-the-white-lake",
+    "herodion-of-iloezersk",
+    "adrian-of-poshekhonye",
+    "catherine-of-alexandria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

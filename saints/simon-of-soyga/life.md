@@ -1,0 +1,11 @@
+# Simon of Soyga
+
+The Сретенский monastery's calendar names him «Прп. Симона Сойгинского (1562)» and hangs two lives behind his name. Both begin at Сольвычегодск, where he was born, and both have him leave his parents' house to be tonsured by [Cornelius of Komel](/saints/cornelius-of-komel) in the Komel monastery, where he stayed many years without going out of it. The second of the two places him in the Komel branch of the disciples of [Sergius of Radonezh](/saints/sergius-of-radonezh).
+
+That page also names the ascetics among whom he served his obediences there, all of them disciples of Cornelius: [Gennadius of Kostroma](/saints/gennadius-of-kostroma), whom it calls Любимоградский; [Cyril of the White Lake](/saints/cyril-of-the-white-lake), whom it names Кирилл Новоезерский; [Herodion of Iloezersk](/saints/herodion-of-iloezersk); [Adrian of Poshekhonye](/saints/adrian-of-poshekhonye); and a Лаврентий Комельский for whom this corpus has no folder.
+
+Cornelius died in 1537, and after his death Simon went with [Longinus of Koryazhemka](/saints/longinus-of-koryazhemka) into the deep forests of Вологда looking for a place where silence was possible. Longinus settled by the river Коряжемка. Simon helped him build the cells and the chapel there, then went up the Вычегда and settled at the mouth of the river Сойга, sixty versts from Коряжма. Lovers of silence began to gather to him, and a monastery formed around him by degrees.
+
+At that place he founded a church of the Transfiguration of the Lord, consecrated on 17 May 1541, set a hermitage about it, and was chosen abbot by the brethren. He laboured twenty years in his own house and died on 24 November 1562. He was buried in the monastery he had founded, in a church of the great-martyr [Catherine of Alexandria](/saints/catherine-of-alexandria), whose memory, the page adds, is kept on that same 24 ноября.
+
+*After the Православный церковный календарь of the Сретенский monastery for 24 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261124.html), [the first of the two lives behind his name](https://days.pravoslavie.ru/Life/life6848.htm) and [the second](https://days.pravoslavie.ru/Life/life3222.htm); read 7 October 2026.*
