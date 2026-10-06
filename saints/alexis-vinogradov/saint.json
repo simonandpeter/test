@@ -1,0 +1,62 @@
+{
+  "slug": "alexis-vinogradov",
+  "display_name": "Alexis (Vinogradov)",
+  "names": [
+    {
+      "form": "Алексий (Виноградов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 марта ст. ст., «Алексий (Виноградов), протоиерей, сщмч.», with the rank words left off. The day's own line declines the forename to «Алексия» and gives the name without the surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with for 15 марта ст. ст.: «Сщмчч. Алексия пресвитера (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 марта ст. ст. — «Сщмчч. Алексия пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260315.html",
+        "year": 2026
+      },
+      "note": "The line's rank abbreviation is the plural «Сщмчч.» although it governs one name only, which is the page's own inconsistency and is recorded here rather than corrected. Neither the day page nor name page 9271 carries a life, and the name page gives the fuller grade, протоиерей, where the line says пресвитера. The name page lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 28 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 March 2026 (7 October 2026)."
+    }
+  ],
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}
