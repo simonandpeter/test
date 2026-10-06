@@ -11,6 +11,11 @@
       "form": "Φιλάρετος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Δεκεμβρίου, «Άγιος Φιλάρετος ο Ελεήμων», with the rank word left off."
+    },
+    {
+      "form": "Филарет Милостиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. децембар ст. ст., „Свети Филарет Милостиви.“ — «Свети» is “saint” and not a rank, and «Милостиви» is the epithet “the Merciful” and not a grade, so it stays in the form. Section 6 wants the fullest form the calendar gives: the bare «Филарет» would have folded this man onto five other Philarets, and `foldchk.py` measured the fuller string on no folder at all."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.12.2025 (1. децембар ст. ст.) — „Свети Филарет Милостиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-14&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, and the second of two upgrades. The Romanian and Greek calendars already keep him on their own 1 December and the menologion scan found the folder. Quoted whole with its closing full stop (section 4); URL year 2025. `types` UNTOUCHED: «Милостиви» is “the Merciful”, an epithet and not a rank, and the folder’s `venerable` and `righteous` are what the other two books gave it; this book calls him «праведник» in the body, which is the `righteous` it already holds. `office` UNTOUCHED — none, and this book gives him none. `dates` REPLACED, for the same reason as the prophet above: the folder held `death` 792 off saint.gr’s heading «Άγιος Φιλάρετος ο Ελεήμων (; - 792)», and this book closes «Упокоји се овај праведник Божји 797. године». Five years apart, two books, nothing to choose between them: the interval is 792 to 797 and the note quotes both. Unlocated, so `map-span.test.mjs` is not in play. WHAT THE BOOK ADDS. The ox given to the ploughman and the horse given to the man called up with his horse to the war are already in the folder; the calf and the cow are not, nor is the detail that Maria was the daughter of his daughter Ипатија, nor the monastery of Родолфија where he lay down, nor the face shining like the sun, the fragrance after death and the wonders from the relics, nor the ninetieth-year blessing in which he foretold to each child how it would live out this age. FOUR PEOPLE NAMED AND NONE GETS A NEW ROW. Ирина the empress and her son Константин are already in the folder’s own prose from the other two books and are not saints the corpus holds; Марија the granddaughter and Теозва the wife likewise, both already in the prose. The forefather Јаков is named by this book as the comparison for the deathbed blessing AND IS DELIBERATELY NOT NAMED IN THE PARAGRAPH, because `related-floor.test.mjs` matches a display name in prose whether it is linked or not and a patriarch of Israel is not this man’s companion — the paragraph says “as the forefather of Israel once did to his sons” instead. No `locations`: Амнија, Paphlagonia and Родолфија are named and none is a coordinate the reader may set. The Prologue prints no troparion and no kontakion. THE FOLD THIS FORM MAKES: none. `foldchk.py` measured «Филарет Милостиви» on no folder at all, and the bare «Филарет» — which six Philarets would have shared — was refused for exactly that reason: section 6 wants the fullest form the calendar gives, and the calendar gives the epithet."
     }
   ],
   "text": {
@@ -65,10 +80,10 @@
   "dates": {
     "death": {
       "earliest": 792,
-      "latest": 792,
-      "display": "792",
+      "latest": 797,
+      "display": "792 or 797",
       "basis": "traditional",
-      "note": "saint.gr's heading for him reads «Αγιος Φιλαρετος ο Ελεημων (; - 792)», and it places his life «στους χρόνους του Κωνσταντίνου Πορφυρογέννητου και της μητέρας αυτού Ειρήνης της Αττικής (780 - 797 μ.Χ.)»."
+      "note": "Two books disagree and neither is chosen (CORPUS.md section 3). saint.gr’s heading reads «Άγιος Φιλάρετος ο Ελεήμων (; - 792)» and places his life «στους χρόνους του Κωνσταντίνου Πορφυρογέννητου και της μητρός αυτού Ειρήνης της Αττικής (780 - 797 μ.Χ.)»; the Охридски пролог for 1. децембар ст. ст. closes „Упокоји се овај праведник Божји 797. године.“"
     }
   },
   "images": [
