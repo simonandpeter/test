@@ -16,6 +16,11 @@
       "form": "Капитон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first entry for the Julian 7 March on pravoslavno.rs, whose heading is „Светих седам свештеномученика Херсонских.“ and whose first sentence names the seven: „Василије, Јефрем, Евгеније, Елпидије, Агатодор, Етерије и Капитон.“ This man's own name is taken out of that list; the rank word свештеномученика and Светих are left off, and Херсонских describes the seven together and is not part of any one name, so the bare forename is all the entry gives him."
+    },
+    {
+      "form": "Капитон Херсонесский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his name on the line for 7 марта ст. ст., name page 1172, «Капитон Херсонесский», with the rank and grade words left off; the day's own line declines the forename and carries the see once for all seven. **The by-name is kept rather than the bare forename for the usual reason and a sharper one**: every one of these seven forenames is already a fold in this corpus in one language or another, and nine such folds went fresh when this batch touched the seven folders. `.tmp/foldchk.py` reports no folder holding this form and `.tmp/sr-foldpred.mjs` reports 0 other holders of the key it folds to, so none of the nine is widened by it."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Священномучеников, в Херсонесе епископствовавших: Василия , Ефрема , Капитона , Евгения , Еферия , Елпидия и Агафодора (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "One line for all seven, and **the fullest life of the company any of the four calendars read has given**: the seven are named in order on the line and the single life behind it tells each of their stories separately, with a year for four of them and a day for five. The last of the seven to come and the only one whose own day of death the page prints — 21 December, which is not the day it keeps him on, and it says so."
     },
     {
       "church": "romanian",
@@ -129,6 +144,22 @@
         "text": "Like stars that never set, stars of the light the mind perceives, you showed those asleep in the night of deceit to be sons of light, O Eugene and Capito, Agathodorus, Basileus and Aetherius, Ephraim with Elpidius, having contended as men unconquered.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Светоносный день наста/ пастырей, епископствовавших светло в Херсоне,/ ихже воспеваем праздник,/ пострадавших за Христовы овцы./ Священномученицы, молите Пастыреначальника Христа/ и нас причести деснаго овец стояния,/ да вопием вам:/ радуйтеся, священнии отцы,/ за Христа кровь свою излиявшии.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Кондак священномучеников в Херсонесе епископствовавших». days.pravoslavie.ru prints it among the «Молитвы» at the foot of the day page for 7 марта ст. ст., under «Кондак священномучеников в Херсонесе епископствовавших». It is the company's proper and names the company and not any one of them, so it is copied whole onto each of the seven folders, which is what the earlier Greek and Romanian waves did with this company's troparion and kontakion. The day page prints no troparion for them and three further hymns that are the icon «Споручница грешных»'s.",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The day of light has come, the day of the shepherds who were bishops in splendour at Cherson, whose feast we sing, who suffered for the sheep of Christ. O hieromartyrs, pray to Christ the chief Shepherd that we also may be counted in the standing of the sheep on his right hand, that we may cry to you: rejoice, O holy fathers, who poured out your blood for Christ.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -136,11 +167,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 301,
-      "latest": 325,
-      "display": "the beginning of the 4th century",
+      "earliest": 325,
+      "latest": 337,
+      "display": "after 325",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 7 March closes the entry for the seven „Сви пострадаше почетком IV века.“ — all of them suffered at the beginning of the fourth century. It gives the century's beginning and no year, which is why the bounds are a quarter-century and not a year, and the folder carried no dates at all before this reading."
+      "note": "**The one date of the seven the folders' existing bounds could not hold.** All seven carried «the beginning of the 4th century», 301 to 325, from the company's Greek and Romanian pages; days.pravoslavie.ru's life for 7 марта ст. ст. has the miracle of the fire reported to the fathers at Nicaea, which it dates 325, and then «через несколько лет» — some years later — the voyage on which he was drowned at the mouth of the Dnieper. So he died after 325 and the previous `latest` is the earliest he can have died. The display is the bound the page states; **the `latest` of 337 is the end of the reign of Константин, who had sent him and to whom the miracle was reported, and is a bound on the reading rather than a year the page gives**. His own day of death is printed and is not this day: «Это произошло 21 декабря», and the same sentence says the Church appointed 7 March for him with the company, which is the day the attestation keeps."
     }
   }
 }
