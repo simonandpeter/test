@@ -1,0 +1,70 @@
+{
+  "slug": "matrona-grosheva",
+  "display_name": "Matrona (Grosheva)",
+  "names": [
+    {
+      "form": "Матрона (Грошева)",
+      "lang": "ru",
+      "note": "The nominative behind the «Матроны» of days.pravoslavie.ru's line for 7 марта ст. ст., name page 9901, «Матрона (Грошева), инокиня, прмц.», with the grade and the rank word left off; the day's own line declines the forename and gives no surname. Грошева is a family surname and not a monastic name, and her sister Мария carries it too. azbyka.ru writes it without brackets, «Матрона Грошева»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "azbyka.ru, in the one life it gives the two sisters: «Преподобномученица Мария родилась в 1876 году, а преподобномученица Матрона — в 1882 году в селе Варюковка Егорьевского уезда Рязанской губернии в семье крестьян Наума и Платониды Грошевых»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the nine for 7 марта ст. ст. with «(1938)», and azbyka.ru gives the day: «Послушницы Мария и Матрона Грошевы были расстреляны 20 марта 1938 года и погребены в безвестной общей могиле на полигоне Бутово под Москвой». The civil 20 March 1938 is that Julian 7 March, so the day of her death and her feast are the same day."
+    }
+  },
+  "related": [
+    "maria-grosheva"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Прмч. Нила , прмцц. Матроны , Марии , Евдокии , Екатерины , Антонины , Надежды , Ксении и Анны (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "The line is one line for nine people and this folder is one of them. The day page carries no life for her and her name page 9901 carries none; the life in this folder is azbyka.ru's, which is one life for her and her sister together. The calendar calls her «инокиня» and azbyka.ru «послушница», a novice. Name page 9901 adds «26 января (Новомуч.)», and azbyka.ru adds the synaxis of the new martyrs who suffered at Butovo and the synaxis of the saints of Moscow; the second days are recorded here and she renders on none of them. **Two folders of this batch carry the surname Грошева and they are sisters, not one woman twice**: the forename, the year of birth and the obedience differ in the one life both pages hang on them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
