@@ -17,6 +17,11 @@
       "form": "Викентий Августопольский (Сарагосский), Валенсийский",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Викентий Августопольский (Сарагосский), Валенсийский, диакон, сщмч.», with the rank and grade words left off. The line itself declines the name and gives the forename alone, «Викентия». azbyka.ru keeps only the last of the three places, «Викентия, диакона, Валенсийского»."
+    },
+    {
+      "form": "Викентије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. новембар ст. ст., „Св. муч. Викентије ђакон.“ — «Св.» is “saint”, «муч.» is the `martyr` grade and «ђакон» the `deacon` grade, both of which `types` keeps, so all three come off and nothing is left but the bare forename. The Russian form already stored is «Викентий Августопольский (Сарагосский), Валенсийский» with three cities in it; this book gives the diocese in the body and not in the heading, so the form is bare."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.11.2025 (11. новембар ст. ст.) — „Св. муч. Викентије ђакон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, and THREE SENTENCES OF WHICH TWO THIS FOLDER ALREADY HAD. `dates` UNTOUCHED: «Предао дух свој Богу 304. год.» is the 304 the folder holds from its other three calendars. `types` untouched: «ђакон» is the `deacon` grade it holds and the `office` «Deacon» is already there. The one thing the entry adds is where the body rests — at Rome, in a church of his own name. The life says plainly that the rest of the entry is what the folder already had, rather than padding it out."
     }
   ],
   "hymns": [

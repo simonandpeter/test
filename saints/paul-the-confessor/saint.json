@@ -17,6 +17,11 @@
       "form": "Павел I Константинопольский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Святитель Павел I Константинопольский, патриарх, сщмч.», with the rank words and the grade left off; the see is recorded as the office. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Павле",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. новембар ст. ст., „Св. Павле Исповедник патријарх Цариградски.“ — and this is the BARE FORENAME because everything else in the heading is a rank or a see: «Св.» is “saint” and not a rank, «Исповедник» is the `confessor` grade `types` keeps, «патријарх» the `patriarch` grade, and «Цариградски» is the complement of «патријарх», the see it governs, so it comes off with the rank as it did for «Јона архиепископ Новгородски» on the day before this one. The see is already in this folder’s `office`. A bare forename this book hands out freely is a fold and section 6 says so; the fold it widens is keyed in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -37,7 +42,8 @@
     "constantine-the-great",
     "theodosius-the-great",
     "marcian-companion-of-martyrius",
-    "martyrius-companion-of-marcian"
+    "martyrius-companion-of-marcian",
+    "alexander-patriarch-of-constantinople"
   ],
   "attestations": [
     {
@@ -85,8 +91,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.11.2025 (6. новембар ст. ст.) — „Св. Павле Исповедник патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-19&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry. Quoted whole with its closing full stop; the URL year is 2025 because that is the page pravoslavno.rs serves for this Julian day. The entry prints 351 for his death, which is ONE SIDE of the interval this folder already holds — saint.gr gives 351 and days.pravoslavie.ru 350 — and a third book agreeing with one of two readings is not a reason to close the interval, so `dates` is UNTOUCHED. It also prints two translations of the relics, to Constantinople in 381 and to Venice in 1236, which are translations and not feasts and are recorded in the life only. `types` untouched: «Исповедник» is the `confessor` grade the folder already holds and «патријарх» the `patriarch` grade."
     }
   ],
   "hymns": [

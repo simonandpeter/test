@@ -16,6 +16,11 @@
       "form": "Епистимия Емесская (Финикийская)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Епистимия Емесская (Финикийская), мц.», with the rank words left off. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Епистима",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. новембар ст. ст., „Преп. муч. Галактион и Епистима.“ — «Преп. муч.» is the `venerable-martyr` grade `types` keeps, and the heading gives the pair nothing but their two bare names, so the second of them is the whole of the form (section 6). It is two letters shorter than the Russian «Епистимия» already stored and does not fold with it; `sr-foldpred.mjs` measured 0 other holders. «of Emesa» in the display name is this corpus’s own and is not this book’s city, which is Едеса."
     }
   ],
   "sex": "female",
@@ -80,8 +85,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.11.2025 (5. новембар ст. ст.) — „Преп. муч. Галактион и Епистима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name of the day’s first entry, an ENUMERATED PAIR, so both folders take the same one heading, whole, with its closing full stop. URL year 2025. `types` UNTOUCHED: «Преп. муч.» is the `venerable-martyr` she holds, and `virgin` and `monastic` are the maiden betrothed to him and the tonsure the body gives her. `dates` WIDENED with his from a flat «c. 250» to 250–253 off «венце на небу примише 253. год.» AND THE BOOK’S CITY IS NOT THE ONE HER DISPLAY NAME CARRIES, exactly as on his folder: «Родом из града Едесе у Финикији», Edessa, against the Russian «Епистимия Емесская (Финикийская)», Emesa. Nothing renamed; the disagreement is in both lives. WHAT IT ADDS ABOUT HER: she was the maiden his father betrothed him to; he refused the marriage and counselled her FIRST TO BE BAPTISED, THEN TO BE TONSURED AT THE SAME HOUR AS HIMSELF; she went to a women’s monastery on Mount Публион and was first at labour, prayer, humility, obedience and love in it; she never saw him again until before their death; AND SHE WAS SCOURGED FOR WEEPING — «И када Галактиона немилосрдно шибаху, Епистима плакаше. Тада и њу шибаше.» Then their hands, their feet and their heads were cut off. NO `related` ROW ADDED: he is `related` here both ways already; her parents are named only as the owners of the slave «Евтолије», who buried the two and wrote their life and is no folder this corpus holds. NO `locations`. NO FOLD: `sr-foldpred.mjs` measured «Епистима» at 0 other holders, and the string is not the Russian «Епистимия» this folder already stores. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -174,10 +189,10 @@
   "dates": {
     "death": {
       "earliest": 250,
-      "latest": 250,
-      "display": "c. 250",
+      "latest": 253,
+      "display": "250–253",
       "basis": "traditional",
-      "note": "saint.gr: «Οι Άγιοι Γαλακτίων και Επιστήμη έζησαν τον 3ο αιώνα μ.Χ., όταν αυτοκράτορας ήταν ο Δέκιος», and of the beheading «(περί το 250 μ.Χ.)»."
+      "note": "**Two books three years apart, and the interval holds both; it was a flat «c. 250» before this reading.** saint.gr: «Οι Άγιοι Γαλακτίων και Επιστήμη έζησαν τον 3ο αιώνα μ.Χ., όταν αυτοκράτορας ήταν ο Δέκιος» — the third century, under Decius, whose reign is where the 250 came from, the page printing no year of its own. The Охридски пролог for 5. новембар ст. ст. closes «који пострадаше и венце на небу примише 253. год.» — they suffered and received their crowns in heaven in 253, a year three past the end of Decius. Nothing is chosen and the basis stays traditional."
     }
   }
 }

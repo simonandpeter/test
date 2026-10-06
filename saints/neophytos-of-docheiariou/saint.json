@@ -11,6 +11,11 @@
       "form": "Νεόφυτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Όσιοι Ευθύμιος και Νεόφυτος κτήτορες της Μονής Δοχειαρίου Αγίου Όρους», with the rank word left off."
+    },
+    {
+      "form": "Неофит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. новембар ст. ст., „Преп. Јевтимије Дохијарски и ученик му Неофит.“ — the heading gives him nothing but the bare forename after «и ученик му», and his disciple; the monastery in this folder’s English name is not in the heading and was not put into the form. A bare forename is a fold and the brief says so; what this one folds with is keyed in `scripts/corpus-gate.mjs` in the same commit if it folds with anything."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.11.2025 (9. новембар ст. ст.) — „Преп. Јевтимије Дохијарски и ученик му Неофит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, in which the heading names him as the disciple of the man it heads. `dates` GAINS A DEATH it did not have: the folder held a floruit of 963–976 off saint.gr and no death, and the entry says «Упокојио се почетком XI столећа», he reposed at the beginning of the eleventh century, which is recorded as 1001–1033 in the form this corpus already uses for an early century. The two readings do not contradict one another. The entry also makes the tie to his teacher a FAMILY one — «Његов синовац Неофит», his nephew — where the folders had only abbot and founder, and says both men were Serbs by origin."
     }
   ],
   "text": {
@@ -73,7 +88,14 @@
       "latest": 976,
       "display": "963–976",
       "basis": "traditional",
-      "note": "saint.gr: «ήταν γιος δούκα στα χρόνια των βασιλέων Νικηφόρου Φωκά και Ιωάννη Τσιμισκή (963 - 976 μ.Χ.)» — the reigns the page names; it gives him no year of his own."
+      "note": "saint.gr: «ήταν γιος δούκα στα χρόνια των βασιλέων Νικηφόρου Φωκά και Ιωάννου Τσιμισκή» — the son of a duke in the years of the emperors Nicephorus Phocas and John Tzimiskes, whose reigns are the interval. Carried forward unchanged from the reading that made this folder; the death beside it is a separate reading and the two do not contradict each other."
+    },
+    "death": {
+      "earliest": 1001,
+      "latest": 1033,
+      "display": "early 11th century",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 9. новембар ст. ст.: «Упокојио се почетком XI столећа» — he reposed at the beginning of the eleventh century. The only reading of his death any source read gives; neither doxologia.ro nor saint.gr gave this folder one, and the bounds are this corpus’s own for an early century."
     }
   }
 }

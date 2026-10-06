@@ -11,6 +11,11 @@
       "form": "Филолог",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Святитель Филолог, епископ Синопский, апостол от 70-ти», with the rank words and the see left off; the see is recorded as the office. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Филолог",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. новембар ст. ст., „Св. апостоли: Патров, Ерма, Лин, Гај и Филолог.“ — «Св. апостоли» left off, and the heading gives the five nothing but five bare names in the nominative, so the fifth of them is the whole of the form (section 6). It is the IDENTICAL STRING this folder already stores for `ru`, which is two calendars agreeing and not a duplicate; `sr-foldpred.mjs` reports it adds no new fold key. «of Sinope» in the display name is the see both books give him."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.11.2025 (5. новембар ст. ст.) — „Св. апостоли: Патров, Ерма, Лин, Гај и Филолог.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The fifth name of the day’s second entry, an ENUMERATED COMPANY OF FIVE with no «и други» at the end, so all five folders take the same one heading, whole, with its closing full stop. URL year 2025. `types` AND `office` UNTOUCHED AND THE TWO BOOKS AGREE ON HIS SEE: «Филолог у Синопи (Рим. 15, 16)», bishop in Sinope, which is the Bishop of Sinope already in `office`. «Св. апостоли» is the `apostle` and «Беху из седамдесет апостола» the Seventy. `dates` UNTOUCHED at the first century: no year at all. THE REFERENCE IS COPIED AS PRINTED AND NOT CORRECTED: «(Рим. 15, 16)», where the name stands at Romans 16, 15 and the two numbers read as transposed, which is the same shape as the Hermas reference in the same sentence and is the source’s and not the scrape’s. NO `locations`, NO `related` ROW: the other four are `related` here in both directions already. NO FOLD: the `sr` form is the identical string this folder already stores in `ru`, so it adds no key of its own. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

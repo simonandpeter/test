@@ -17,6 +17,11 @@
       "form": "Иоанн Милостивый, Александрийский",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Святитель Иоанн Милостивый, Александрийский, патриарх», with the rank and the grade words left off; the see itself is in `office`. The line declines the name, «Иоанна Милостивого, патриарха Александрийского». azbyka.ru's line for the same day gives the same words, «Свт. Иоанна Милостивого, патриарха Александрийского (620)»."
+    },
+    {
+      "form": "Јован Милостиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. новембар ст. ст., „Св. Јован Милостиви.“ — «Св.» is “saint” and not a rank, and «Милостиви», the Merciful, is NOT a rank either: it is in none of §5’s rank rows and it is the epithet every calendar names him by, so it stays and makes the form the fullest the heading gives. Without it the form would be a bare «Јован», which ten folders of this corpus already share. The see is in the body and not in the heading, and is already this folder’s `office`."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.11.2025 (12. новембар ст. ст.) — „Св. Јован Милостиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-25&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and its longest. `dates` UNTOUCHED: «умре у своме месту рођења, 620. год.» falls inside the 616–620 this folder already holds, and a year inside an interval is no reason to close it. `office` and `types` untouched: the body’s «Патријарх Александријски» is exactly the office recorded. WHAT THE ENTRY ADDS: a princely family on Cyprus and a named father; a wife and children who died before him; the reign he was chosen under; ten years of government; two scenes, the holy gifts left at the altar to go and ask a cleric’s forgiveness and the widow heard out in the street; one saying of his own; and FOUR CITIES FOR THE RELICS none of the pages this folder cites gives — Constantinople, then Buda and Pest, then Pressburg. NO `locations` key was made from any of them, and the father and the emperor are named in the book, have no folder, and are not in the life."
     }
   ],
   "hymns": [

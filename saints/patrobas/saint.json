@@ -11,6 +11,11 @@
       "form": "Патров",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Святитель Патров, епископ Неапольский и Путеольский, апостол от 70-ти», with the rank words and the see left off; the see is recorded as the office. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Патров",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. новембар ст. ст., „Св. апостоли: Патров, Ерма, Лин, Гај и Филолог.“ — «Св. апостоли» is \"holy apostles\", of which «Св.» is not a rank and «апостоли» is the `apostle` grade `types` keeps, and the heading gives the five nothing but five bare names in the nominative, so the first of them is the whole of the form (section 6). It is the IDENTICAL STRING this folder already stores for `ru` off days.pravoslavie.ru, which is a fact about two calendars agreeing and not a duplicate: it is stored under its own language and `sr-foldpred.mjs` reports that it adds no new fold key."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.11.2025 (5. новембар ст. ст.) — „Св. апостоли: Патров, Ерма, Лин, Гај и Филолог.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, and the heading is AN ENUMERATED COMPANY OF FIVE with no «и други» at the end of it — so section 5 counts five names, five folders are owed a row, and the corpus holds all five. Four sentences for the five of them. Quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Св. апостоли» is the `apostle` all five hold and «Беху из седамдесет апостола», they were of the Seventy, is the enumeration this corpus already records; `bishop` is the see the body gives each man. `dates` UNTOUCHED at the first century on all five: the entry gives no year at all. **AND THE SEE THIS BOOK GIVES HIM IS NOT THE ONE IN HIS `office`.** «Патров био епископом у Неапољу» — bishop in NEAPOLIS, where this folder’s `office` reads Bishop of Puteoli, which came off days.pravoslavie.ru. Two cities of Campania a few miles apart and two books; `office` holds one string and NOTHING WAS CHANGED, the disagreement being recorded here and in the life. NO `locations`. NO `related` ROW ADDED: the other four are `related` here in both directions already. THE ENTRY’S SCRIPTURE REFERENCES ARE COPIED AS PRINTED AND NOT CORRECTED: it gives «(Рим. 14, 16)» for Hermas and «(Рим. 15, 16)» for Philologus, where the names stand at Romans 16, 14 and 16, 15 — the two numbers of each pair read as transposed, and a reading that looks wrong is the source’s and not the scrape’s. NO FOLD: the `sr` form is the identical string this folder already stores in `ru`, so it adds no key of its own. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

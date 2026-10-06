@@ -16,6 +16,11 @@
       "form": "Виктор Дамасский",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Виктор Дамасский, мч.», with the rank and grade words left off. The line itself declines the name and gives the forename alone, «Виктора»."
+    },
+    {
+      "form": "Виктор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. новембар ст. ст., „Св. муч. Виктор и Стефанида.“ — «Св. муч.» off, and the first of the two bare names is the whole of this form. «of Damascus» in the display name is inside the Russian form already stored and is NOT in this entry, which makes him a Roman by birth instead; both stand and nothing was renamed."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.11.2025 (11. новембар ст. ст.) — „Св. муч. Виктор и Стефанида.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, and the heading is AN ENUMERATED PAIR, so two folders take a row off the one quoted line. `dates` UNTOUCHED: the entry names the reign of the emperor Antoninus, which is exactly the floruit 160–180 both folders already carry, and prints no year of its own. What it adds is his birth — a Roman — and the manner of her death, tied by one foot to the top of one palm and by the other to another and so torn apart. The two already relate to each other in both directions, so no `related` row is owed."
     }
   ],
   "hymns": [

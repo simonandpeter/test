@@ -16,6 +16,11 @@
       "form": "Матрона Константинопольская",
       "lang": "ru",
       "note": "The heading of the calendar's name page for her, «Матрона Константинопольская, прп.», with the rank word left off; the day's line gives the forename alone and in the genitive, «Прп. Матроны». The day page's hymns call her «Матроны Царьградской»."
+    },
+    {
+      "form": "Матрона Цариградска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. новембар ст. ст., „Преп. Матрона Цариградска.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Цариградска» stays: there is no rank noun in this heading for it to be the complement of, so it is an epithet on the name itself, which is the reading §6’s own example «Аврамије Смоленски» governs. That is also what tells her from the ten other Matronas this corpus keeps."
     }
   ],
   "sex": "female",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.11.2025 (9. новембар ст. ст.) — „Преп. Матрона Цариградска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry. `dates` UNTOUCHED: the entry gives 492 for her repose, which is the year this folder already records as “about 492”, and it agrees with its own arithmetic — tonsured at twenty-five, seventy-five years of struggle, a hundred years lived — so there is nothing to widen and nothing to close. What it adds is a birthplace in Perge of Pamphylia, a husband who was a grandee of Constantinople and hunted her from city to city, and the man’s dress and man’s name she took to enter a monastery. BOTH NAMES IN THAT SENTENCE — the husband’s and the one she took, and the founder the monastery is named for — are in the book and are NOT in the life: two of them have no folder, and the third is a house carrying a saint’s name, which the brief rules is not a relation between two men."
     }
   ],
   "hymns": [

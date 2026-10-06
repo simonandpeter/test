@@ -16,6 +16,11 @@
       "form": "Нил Мироточивый, Афонский",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Нил Мироточивый, Афонский, прп.», with the rank abbreviation left off. azbyka.ru's line for the same day gives the same two by-names, «прп. Нила Мироточивого, Афонского (1651)»."
+    },
+    {
+      "form": "Нил Мироточиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. новембар ст. ст., „Преп. Нил Мироточиви.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Мироточиви», the myrrh-streaming, STAYS: it is in none of §5’s rank rows — «Чудотворац», wonderworker, is the nearest and is a different word — and it is the epithet every calendar names him by. Without it this form and the other Nilus’s on the same day would be one string. The Russian form already stored is «Нил Мироточивый, Афонский»."
     }
   ],
   "sex": "male",
@@ -79,8 +84,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.11.2025 (12. новембар ст. ст.) — „Преп. Нил Мироточиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-25&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, and the SECOND NILUS OF THE SAME DAY — the reason both forms here carry their epithet. `dates` UNTOUCHED: «Упокојио се у 17. столећу» is the century the 1651 this folder already holds sits in, so nothing is widened and nothing closed. WHAT THE ENTRY ADDS: the Morea for his origin, an uncle he came to the Holy Mountain with, the desert place called the Holy Rocks, and the wonder in both directions — myrrh in such abundance that it ran from the top of the mountain into the sea, and then CUT OFF when his own disciple complained in prayer against him for the crowds it drew. `types` untouched: «Преп.» is the `venerable` grade and the body’s «јеромонах» and «отшелник» are the `hieromonk` and `hermit` the folder already holds. The uncle and the disciple are unnamed in the book."
     }
   ],
   "text": {

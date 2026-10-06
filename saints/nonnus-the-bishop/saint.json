@@ -6,6 +6,11 @@
       "form": "Νόννος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Άγιος Νόννος ο κατηχητής της Οσίας Πελαγίας», with the rank word left off."
+    },
+    {
+      "form": "Нон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. новембар ст. ст., „Св. Нон епископ Илиопољски.“ — «Св.» is “saint” and not a rank, «епископ» is the `bishop` grade `types` keeps, and «Илиопољски» is the complement of «епископ», the see it governs, so it comes off with the rank — the same reading «Јона архиепископ Новгородски» and «Павле ... патријарх Цариградски» got earlier this month. What is left is the bare forename, and it is this folder’s FIRST name form in any Cyrillic script: it held only the Greek «Νόννος»."
     }
   ],
   "sex": "male",
@@ -44,11 +49,37 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.11.2025 (10. новембар ст. ст.) — „Св. Нон епископ Илиопољски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry. `dates` ADDED where there were none: this folder carried NO dates object at all, its one venerated row being the Greek, and the entry gives two years — «би изабран за епископа 448. год.» and «остане до смрти, наиме до 471. год., када се и упокоји». They are recorded as a floruit of 448–471 and a death of 471, traditional, one source for each. The entry also gives a SEE BEFORE THE ONE THE FOLDER NAMES HIM FOR — Edessa first, then Heliopolis, then Edessa again until his death — and thirty thousand Arabs turned to the faith of Christ. NO `office` was written, for the reason given on `quartus` the same day: the locale packs would owe four translations of it. `related` UNTOUCHED: the Pelagia the entry closes on is already related to this folder in both directions."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 448,
+      "latest": 471,
+      "display": "448–471",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 10. новембар ст. ст.: «због чега би изабран за епископа 448. год., на епархију Едеску» — for which he was chosen bishop in 448, for the diocese of Edessa — and he stayed in that diocese «до смрти, наиме до 471. год.» The interval is his episcopate as this entry gives it, and it is the first date of any kind this folder has carried: saint.gr, whose is the only other venerated row here, gives no year."
+    },
+    "death": {
+      "earliest": 471,
+      "latest": 471,
+      "display": "471",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 10. новембар ст. ст.: «По смрти еп. Ива св. Нон поново се врати у Едесу, где остане до смрти, наиме до 471. год., када се и упокоји» — he returned to Edessa and stayed there until his death, namely until the year 471, when he reposed. The only year any source read gives his death; the basis is traditional rather than attested, one book being all there is for it."
+    }
   }
 }

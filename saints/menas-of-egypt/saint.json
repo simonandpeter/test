@@ -16,6 +16,11 @@
       "form": "Мина Котуанский (Фригийский)",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Мина Котуанский (Фригийский), вмч.», with the rank and grade words left off. The line itself declines the name and gives the forename alone, «Мины». azbyka.ru prints the same two by-names on its own line, «Вмч. Мины Котуанского (Фригийского) (304)»."
+    },
+    {
+      "form": "Мина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. новембар ст. ст., „Св. вел. мученик Мина.“ — «Св.» is “saint” and not a rank and «вел. мученик» is the `great-martyr` grade `types` keeps, so both come off and nothing is left but the bare forename. «of Egypt» in the display name is the country the entry gives in its first clause and in his own speech, and is this corpus’s own; the Russian form already stored carries the city instead."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.11.2025 (11. новембар ст. ст.) — „Св. вел. мученик Мина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and its longest. `dates` UNTOUCHED: «Пострада св. Мина око 304. године» is the 304 this folder already holds from its other three calendars, and «око», about, is not a narrowing of anything. `types` untouched: «вел. мученик» is the `great-martyr` grade the folder holds and «војник по занимању», a soldier by trade, is its `soldier`. The city is the one inside the Russian name form already stored, «Мина Котуанский (Фригийский)» — Cotyaeum — and the entry names it in words; NO `locations` key was made from it, nor from the translation of the remains to Alexandria. The prince who condemned him is named in the book and has no folder."
     }
   ],
   "hymns": [

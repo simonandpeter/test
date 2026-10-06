@@ -12,6 +12,11 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Όσιος Συμεών ο Μεταφραστής», with the rank word left off. The page gives his earlier name as Νικήτας Παφλαγών."
+    },
+    {
+      "form": "Симеон Метафраст",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. новембар ст. ст., „Св. Симеон Метафраст.“ — «Св.» is “saint” and not a rank, and nothing else in the heading is one: «Метафраст» is the by-name his work gave him, it stands on the name with no rank noun to govern it, and it is the whole of what keeps him apart from the corpus’s many Simeons. The fullest bare form the heading gives."
     }
   ],
   "sex": "male",
@@ -28,7 +33,14 @@
       "latest": 886,
       "display": "886",
       "basis": "attested",
-      "note": "doxologia.ro: «Sfântul Simeon Metafrast s-a născut în Constantinopol pe timpul împăratului Leon înțeleptul, anul 886» — born at Constantinople in the time of the emperor Leo the Wise, the year 886. The year is recorded as the page states it; it stands beside the emperor's name in the same clause, and it may be the year that reign began rather than the year of the birth, which the page does not distinguish."
+      "note": "doxologia.ro: «Sfântul Simeon Metafrast s-a născut în Constantinopol pe timpul împăratului Leon înțeleptul, anul 886» — born at Constantinople in the time of the emperor Leo the Wise, the year 886. The year is recorded as the page states it; it stands beside the emperor’s name in the same clause, and it may be the year that reign began rather than the year of the birth, which the page does not distinguish."
+    },
+    "death": {
+      "earliest": 960,
+      "latest": 960,
+      "display": "c. 960",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 9. новембар ст. ст.: «Упокојио се око 960. год.» — he reposed about the year 960. The only reading of his death any source read gives this folder, which held the year of his birth alone until now; the book’s own «око», about, is kept in the display."
     }
   },
   "attestations": [
@@ -68,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.11.2025 (9. новембар ст. ст.) — „Св. Симеон Метафраст.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fifth entry. `dates` GAINS A DEATH it did not have: the folder held only the year of his birth, 886, off doxologia.ro, and the entry closes «Упокојио се око 960. год.», he reposed about the year 960, which is recorded as it is stated. The entry also prints the book’s own count of his work — a hundred and twenty-two new lives composed and five hundred and thirty-nine corrected — and a career before it: imperial Logothete and first grandee at court, sent by the emperor to Crete to treat with the Arabs who held the island. `office` UNTOUCHED, the folder already carrying Magistros and Logothete, and the emperor is named in the life and has no folder."
     }
   ],
   "text": {

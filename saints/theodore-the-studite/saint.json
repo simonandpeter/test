@@ -16,6 +16,11 @@
       "form": "Феодор Студит",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 26 января ст. ст., «Преподобный Феодор Студит», with the rank word left off. That day's line is the translation of his relics and not a commemoration of him, so no attestation row is taken from it."
+    },
+    {
+      "form": "Теодор Студит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. новембар ст. ст., „Преп. Теодор Студит.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Студит» stays: it is the by-name of his monastery standing on the name itself with no rank noun to govern it, it is what keeps him apart from the corpus’s many Theodores, and the Russian form already stored is the same two words, «Феодор Студит»."
     }
   ],
   "sex": "male",
@@ -88,8 +93,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.11.2025 (11. новембар ст. ст.) — „Преп. Теодор Студит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fifth entry, two sentences, and both agree with this folder. `dates` UNTOUCHED: «Упокојио се у Цариграду 826. год. у 68. год. старости своје» gives the year the folder already holds and an age consistent with the 758-or-759 it holds for the birth, so there is nothing to widen and nothing to close. `types` untouched: the entry’s one sentence of titles names the four grades the folder already carries — abbot, a sufferer for the icons, a teacher of Orthodoxy, an ascetic — and no fifth. The entry names no other saint, so none of this folder’s fourteen `related` rows is touched."
     }
   ],
   "hymns": [

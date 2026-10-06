@@ -14,6 +14,11 @@
       "form": "Grigorie Palama",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 noiembrie, «Sfântul Ierarh Grigorie Palama, Arhiepiscopul Tesalonicului»."
+    },
+    {
+      "form": "Григорије Палама",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. новембар ст. ст., „Св. Григорије Палама архиепископ Солунски.“ — «Св.» is “saint” and not a rank, «архиепископ» is the `archbishop` grade `types` keeps and «Солунски» is the see it governs, so both come off together as a see does. «Палама» stays: it is the family name every calendar names him by, it stands on the forename with no rank noun to govern it, and without it the form would be a bare «Григорије» which this corpus shares many times over. The Russian form already stored is the same two words."
     }
   ],
   "sex": "male",
@@ -87,8 +92,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.11.2025 (14. новембар ст. ст.) — „Св. Григорије Палама архиепископ Солунски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. `dates` UNTOUCHED AND CONSISTENT: consecration in 1347 and thirteen years of government reach the «c. 1360» this folder records for the death, which the entry states outright, and the folder’s 1296 birth is not touched by anything here. THE HEADING AND THE BODY DISAGREE ON HIS RANK — «архиепископ Солунски» in the heading, «посвећен за митрополита Солунског» in the body — and `types` is UNCHANGED, keeping the `archbishop` the other three calendars gave it; the disagreement is recorded in the life and nothing is chosen. ONE `related` ROW ADDED, forward, for an apparition: the entry lists who appeared to him by turns, and John the Theologian was the one of them this folder had no row to. The father, Demetrius and the rest were already related both ways. The heretic he fought is named in the book and is NOT named in the life: the corpus keeps a `barlaam-the-anchorite` who is a different man, and naming the Calabrian would have read as him."
     }
   ],
   "historicity": "attested",
@@ -123,7 +138,8 @@
     "symeon-of-thessalonica",
     "theodosius-brother-of-gregory-palamas",
     "theodota-sister-of-gregory-palamas",
-    "nicephorus-4-may"
+    "nicephorus-4-may",
+    "john-the-theologian"
   ],
   "hymns": [
     {

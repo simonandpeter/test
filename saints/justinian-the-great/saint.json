@@ -12,6 +12,11 @@
       "form": "Иустиниан I Управда",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 14 ноября ст. ст., name page 1153, «Иустиниан I Управда, император Византийский», with the office left off. The day's own line declines it, «Правоверного царя Иустиниана (565)», and the page's own photograph caption spells the forename «Юстиниан»; the name page's «Иустиниан» is the calendar's nominative and is what is stored. No other folder holds this form."
+    },
+    {
+      "form": "Јустинијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. новембар ст. ст., „Св. Јустинијан цар Византијски.“ — «Св.» is “saint” and not a rank, and «цар Византијски» is the `king` grade `types` keeps with the realm it governs, so it comes off entire as a see does; nothing else is in the heading, so the form is the bare name. «the Great» in the display name is this corpus’s own and is not in this heading, and the Slavonic «Управда» the body gives is a second name and not this one, so it was not folded in."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.11.2025 (14. новембар ст. ст.) — „Св. Јустинијан цар Византијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, and it makes a claim about him no other calendar this folder cites makes: «Пореклом Словенин, вероватно Србин, из околине Скопља» — a Slav by descent, PROBABLY A SERB, from the neighbourhood of Skopje. The book’s own hedge is kept in the life and NO `locations` key was made from it; it is a claim about his origin in a Serbian book about a Serbian calendar and it is recorded as what the book says rather than as a finding. His Slavonic name «Управда» is already inside the Russian form «Иустиниан I Управда». `dates` UNTOUCHED: «Скончао мирно 14. нов. 565. год. у 80. години свога живота» gives the year the folder records and adds the day of the month, which is the day it is kept on; the eightieth year of his life is consistent with the 483 the folder holds for the birth to within two years and is no reason to move it. WHAT THE ENTRY ADDS: the uncle he succeeded, the fast kept on herbs and water and only by day, a war begun because the enemy castrated its captives, Holy Wisdom, the gathering and publishing of the Roman laws, his own laws against immorality, the hymn he composed and the year it began to be sung, and the council he called in 553. The emperors and the empress are named in the book; his wife has a folder and is already related both ways, and she is not in this entry at all."
     }
   ],
   "text": {

@@ -1,0 +1,52 @@
+{
+  "slug": "urosica",
+  "display_name": "Urošica",
+  "types": [
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Урошица",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. новембар ст. ст., „Св. Урошица кнез Српски.“ — «Св.» is “saint” and not a rank and «кнез Српски» is the `prince` grade `types` keeps with the nation it governs, so it comes off entire and nothing is left but the name the book gives him. It is a diminutive of Урош and the book uses no other form for him; it is NOT folded towards «Урош», which the corpus already keeps for `uros-of-serbia`, a different man — a king who died in 1367 and whom this same book keeps on the Julian 2 December."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.11.2025 (11. новембар ст. ст.) — „Св. Урошица кнез Српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s sixth and last entry, THREE SENTENCES LONG, and the only one of them that is not already in some other folder is the myrrh. No `dates`: the entry gives no year of birth, no year of death and no reign, and none is inferred. No `locations`: it names no place at all, Serbia being in the rank phrase and not in the story. `types` is `prince` alone, off «кнез», and nothing else in the heading is a rank. The one `related` row is his father, whom the entry names and whom this corpus keeps under his monastic name."
+    }
+  ],
+  "related": [
+    "theoctistus-brother-of-stephen-milutin"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
