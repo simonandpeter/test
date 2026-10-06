@@ -15,11 +15,17 @@
       "form": "Никодим Печерский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the pair's line for 31 октября ст. ст., «Преподобный Никодим Печерский», with the rank word left off. The line declines the name and gives the by-name in the plural for the two of them, «Спиридона и Никодима , просфорников Печерских»; his link, unlike his companion's, does not carry the grade «просфорник»."
+    },
+    {
+      "form": "Никодим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Преп. Спиридон и Никодим.“ — the heading’s one rank word, «Преп.», is the `venerable` grade this corpus keeps in `types` and governs both men, and «Спиридон и» is the other person it enumerates. So the bare personal name is the whole of the form; «у Печерском манастиру» is the body’s and is what the display name and the Russian form «Никодим Печерский» are built on. `foldchk.py` finds the string on `nicodemus-of-elbasan` and `nicodemus-of-serbia`, so the form joins a fold of three, keyed in `READ_FOLDS` in the same commit."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "monk"
   ],
   "related": [
     "spyridon-of-the-cave"
@@ -63,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Преп. Спиридон и Никодим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, the second of the two people it enumerates: «Преп. Спиридон и Никодим». The heading NAMES him, which is what earns him a row of his own; the row quotes the whole heading, the same string the `spyridon-of-the-cave` row carries. ONE `types` ROW ADDED: `monk`, off the plural «Монаси и просфорници у Печерском манастиру», which covers both men of the heading. «Просфорник» has no type and is in the life only. `dates` UNTOUCHED, AND THAT IS THE POINT OF THIS ROW. The folder holds `floruit` 1101 to 1200, «12th century», and no death — and it STILL holds no death, although the entry prints a year. «Упокојио се 1148. год.» closes a sentence whose subject is Spyridon by name and whose verb is singular, so the year is HIS and was written on HIS folder only. A joint heading does not make a joint date; this book says nothing at all about when Nicodemus died. WHAT THE BOOK ADDS ABOUT HIM, AND IT IS ONLY THE HALF HE SHARES. The monastery, the rank and the office of prosphora-baker. Everything else in the entry — the unletteredness, the Psalter by heart, the wonders in his lifetime, the year — is said of Spyridon in the singular. The life says so, which is the honest shape of a folder whose source names it only in a pair. NO NEW `related`: `spyridon-of-the-cave` is already related both ways and is linked in the new paragraph. No `office`, no `locations`. THE FORM FOLDS AND THE FOLD IS KEYED: «Никодим» is already held by `nicodemus-of-elbasan` and `nicodemus-of-serbia`, so this takes the key from two folders to three. It is the only fold this day owes an act for. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

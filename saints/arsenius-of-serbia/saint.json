@@ -11,6 +11,11 @@
       "form": "Арсений I Сербский",
       "lang": "ru",
       "note": "Read out of the heading both of his life pages carry, «Святитель Арсений I Сербский», with the rank word left off. The day line declines it and abbreviates the see — «Свт. Арсения I, архиеп. Сербского» — and the name link's title, «Святитель Арсений, архиепископ Сербский», drops the numeral; the heading is the fullest form the calendar gives."
+    },
+    {
+      "form": "Арсеније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. октобар ст. ст., „Св. Арсеније архиепископ Пећски.“ — «Св.» is \"saint\" and not a rank, «архиепископ» is the `archbishop` grade this corpus keeps in `types`, and «Пећски» is the SEE that rank governs, which the folder already carries in `office`. All three come off and the bare personal name is what is left, which is the same reading made for `andrew-of-crete`’s «Критски» and for `stephen-pope-of-rome`’s «папа Римски». It is not a by-name: the body calls Peć the place he chose for the archbishopric, not a nickname he was given. «Велики», in «Велики јерарх» in the body, is the epithet \"great\" and no part of a name. `foldchk.py` finds the string on `arsenius-of-corfu` and `arsenius-the-great`, so the form joins a fold of three, keyed in `READ_FOLDS` in the same commit."
     }
   ],
   "sex": "male",
@@ -60,15 +65,27 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026). The Serbian calendar is the one that would say most about this entry and it has not been read here."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.11.2025 (28. октобар ст. ст.) — „Св. Арсеније архиепископ Пећски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry and the longest on it, one person, quoted whole with its closing full stop (section 4). «архиепископ» is the `archbishop` this folder holds and the body’s «Велики јерарх» the `hierarch` beside it, so `types` is untouched; «игуман» would map to `abbot`, and it is NOT added, because the abbacy of Žiča is a post he held on the way and not a grade the calendar gives him — the heading ranks him archbishop. `dates` UNTOUCHED AND THE BOOK CONFIRMS THE YEAR AND ADDS THE DAY. The folder holds `death` 1266, basis `attested`, off the Russian calendar’s «(1266)» and its two lives’ «в 1266 г.» This entry says «упокојио се у Господу 28. окт. 1266. год.» — the same year, with the day of the month added, which is the day of the row itself. Nothing to change; the confirmation is recorded because three books now agree on a thirteenth-century Serbian year, which is unusual in this corpus. THE THIRTY YEARS WERE NOT TURNED INTO A DATE. «Мудро управљао црквом 30 година» would put the start of his archiepiscopate at 1236, which is also the year this corpus records for Sava’s death at Trnovo. The subtraction is not in the book and no `floruit` was written from it. WHAT THE BOOK ADDS, AND IT IS THE WHOLE SHAPE OF HIS LIFE. He was BORN IN SREM and was TONSURED WHILE STILL YOUNG, giving himself sincerely to the struggle for the salvation of his soul; hearing of Sava he WENT TO HIM AT ŽIČA, where Sava received him kindly and ENROLLED HIM IN THE BROTHERHOOD, and SOON MADE HIM ABBOT of it for the rare virtues he saw in him. WHEN THE HUNGARIANS ATTACKED THE SERBIAN LANDS SAVA SENT HIM SOUTH to find the archbishopric a place more sheltered than Žiča, AND HE CHOSE PEĆ, where he built a monastery and a church to the holy apostles, LATER CALLED THE CHURCH OF THE LORD’S ASCENSION. Before his second departure for Jerusalem SAVA APPOINTED HIM HIS SUCCESSOR on the archiepiscopal throne. And when Sava died at Trnovo on the way back, ARSENIUS PRESSED KING VLADISLAV TO BRING SAVA’S BODY HOME to the Serbian land. The entry closes with the inscription that stands on the altar wall of the church at Peć, printed in this book’s own Church Slavonic orthography: „Господи Боже нашъ вонми, посяти и благослови храмъ сей… помените же и мене гряшнаго Арсенија“ — and says he is buried there. TWO `related` ROWS, BOTH RECIPROCATED IN THIS COMMIT, AND BOTH EARNED BY AN ACT THE ENTRY NARRATES. `sava-of-serbia` received him, made him abbot, sent him to Peć and named him successor; `vladislav-of-serbia` is the king he pressed over Sava’s body. Neither is a dedication and neither is a shared day. The folder’s existing row to `sava-the-second` is untouched. Srem, Žiča, Peć, Trnovo and Jerusalem are named and none is proposed as a coordinate; no `locations`. The `office` «Archbishop of Serbia» already on the folder is untouched — this book says Пећски, of Peć, which is the see’s seat and not a different see, and an office is not a reader’s to rewrite. THE FORM FOLDS AND THE FOLD IS KEYED: «Арсеније» is already held by `arsenius-of-corfu` and `arsenius-the-great`, so this takes the key from two folders to three. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Arsenius."
     }
   ],
   "text": {
     "life": "life.md"
   },
   "related": [
-    "sava-the-second"
+    "sava-the-second",
+    "sava-of-serbia",
+    "vladislav-of-serbia"
   ],
   "dates": {
     "death": {

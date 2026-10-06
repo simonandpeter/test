@@ -16,6 +16,11 @@
       "form": "Зиновия Егейская (Киликийская)",
       "lang": "ru",
       "note": "Read out of the title on her name link behind the line for 30 октября ст. ст., «Зиновия Егейская (Киликийская), мц.», with the rank word left off. The line itself declines the name and gives her no by-name at all; the two forms of the see are the link's."
+    },
+    {
+      "form": "Зиновија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. октобар ст. ст., „Свешт. муч. Зиновије и сестра му Зиновија.“ — the heading’s rank words, «Свешт. муч.», govern her brother, and what it gives her is «сестра му», his sister, which is a relationship and not part of her name. So the bare name is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, and it is also a different string from her brother’s «Зиновије», which the gate folds to a different key, so the pair do not collide with each other."
     }
   ],
   "sex": "female",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.11.2025 (30. октобар ст. ст.) — „Свешт. муч. Зиновије и сестра му Зиновија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, the second of the two people it enumerates: «Свешт. муч. Зиновије и сестра му Зиновија» — and his sister Zenobia. The heading NAMES her, which is what earns her a row of her own; the row quotes the whole heading, the same string the `zenobius-of-aegae` row carries. `types` UNTOUCHED, AND THE RANK WORD DOES NOT REACH HER. «Свешт. муч.» is `hieromartyr` and governs her brother, who was the bishop; what the heading gives her is a relationship, «сестра му». She keeps the `martyr` and `virgin` she already held and gains nothing, and NO `hieromartyr` was written on a woman the book does not ordain. `dates` UNTOUCHED: `death` 285 flat on the folder, «око 285. год.» in the book, applied to both of them in one sentence — the same number more loosely stated, which changes nothing. WHAT THE BOOK ADDS, AND IT IS HER ONE SPEECH. She shares the inheritance, the almsgiving and the covering hand of God with her brother in the entry’s first sentences. Then, WHEN ZENOBIUS WAS ALREADY UNDER THE BITTER TORMENTS, SHE CAME FORWARD TO THE JUDGE OF HER OWN ACCORD and said „Ту чашу страдања и ја хоћу да испијем, и венцем тим да се венчам“ — that cup of suffering I too wish to drink, and with that crown to be crowned. She was not arrested with him; she presented herself. After torments in fire and in boiling pitch both were beheaded. NO NEW `related`: `zenobius-of-aegae` is already related both ways and is linked in the new paragraph. No `office`, no `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Зиновија», and the brother’s «Зиновије» is a different string, so the two do not fold onto one another either. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about king Milutin."
     }
   ],
   "related": [

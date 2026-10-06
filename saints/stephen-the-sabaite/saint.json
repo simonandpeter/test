@@ -11,13 +11,19 @@
       "form": "Стефан Савваит",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 28 октября ст. ст., «Стефан Савваит, прп.», with the rank word left off; his life page is headed «Преподобный Стефан Савваит», which gives the same form. The line itself declines the name."
+    },
+    {
+      "form": "Стефан Саваит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. октобар ст. ст., „Св. Стефан Саваит.“ — «Св.» is \"saint\" and not a rank, so nothing comes off but that, and «Саваит» is a by-name section 6 keeps. It is kept with a reason on both sides: a bare «Стефан» is held by thirteen folders in this corpus and is the widest fold this wave has keyed, so dropping the by-name would have been the worse of the two. `foldchk.py` finds this exact string on `stephen-the-sabbaite`, which took it off this same book’s heading for the Julian 13 July, „Преп. Стефан Саваит.“ — the same three words. The fold is therefore keyed in `READ_FOLDS` in the same commit, and whether the two folders are two men is a question for the author and not a thing this form decides."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
     "monk",
-    "hymnographer"
+    "hymnographer",
+    "bishop"
   ],
   "attestations": [
     {
@@ -57,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.11.2025 (28. октобар ст. ст.) — „Св. Стефан Саваит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, four sentences, one person. «Св.» is \"saint\" and not a rank, so the heading ranks him only by the by-name; `venerable`, `monk` and `hymnographer` were all already on the folder and the body confirms all three — «Подвизавао се» for the first two and «Писац многих красних канона» for the third. ONE `types` ROW ADDED, READ AND NOT ASSUMED: `bishop`, off «Доцније био епископом», later he was a bishop. The brief’s rank table maps «епископ» to `bishop`. NO `office` goes with it, because the book names NO SEE — an office string with no see in the source would be invention, and the three offices this wave has already reported missing from the locale packs are a standing reason not to reach for one. A `death` ADDED WHERE THE FOLDER HAD NONE, AND THE FLORUIT KEPT. The folder held `floruit` 801 to 900, «9th century», off the Russian calendar’s «(IX)» and its one-sentence life, and NO `death` at all. This entry says «мирно се упокојио 807. год.» — he reposed peacefully in 807. That is a year under an open end rather than a century inside a closed one, which is the distinction the Julian 18 and 19 October drew, so it goes in: `death` 807, basis `traditional`, with the floruit left standing because the book gives no span. Thirty-nine folders in this corpus already carry both a floruit and a death. AND THE YEAR IS WHERE THE IDENTITY QUESTION LIVES. The corpus ALSO keeps `stephen-the-sabbaite` — one letter apart in the slug and in the display name — the nephew of John of Damascus, born 725, kept by the Romanian and Greek calendars on 13 July, and that folder’s Greek note records a variant year of repose in its own words: «πέθανε ειρηνικά το 794 μ.Χ. (κατά άλλους το 807 μ.Χ.)», 794, or according to others 807. THIS BOOK’S 807 IS THAT VARIANT. The two folders are NOT merged, NOT claimed to be one man and NOT altered beyond this row: they stand on two days in four calendars, one as a nephew of John of Damascus and one as a writer of canons, and merging two folders is not a reading a reader may make. FOR THE AUTHOR. THE FORM FOLDS ONTO THAT VERY FOLDER AND THE FOLD IS KEYED. «Стефан Саваит» is already held by `stephen-the-sabbaite`, read off this same book’s heading for the Julian 13 July, „Преп. Стефан Саваит.“ — the same three words this day’s heading gives. The by-name is kept all the same, because a bare «Стефан» folds onto thirteen folders and is the widest key this wave has written. NO `related`: Sabbas the Sanctified is named in the body as the monastery he struggled in, which is a dedication and not a relation, and the new paragraph was measured with `proseprobe.mjs` before it was written. No `locations`. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Arsenius."
     }
   ],
   "hymns": [
@@ -121,7 +137,14 @@
       "latest": 900,
       "display": "9th century",
       "basis": "traditional",
-      "note": "days.pravoslavie.ru's line for 28 октября ст. ст. gives «(IX)», and his life page — which is one sentence long — says the same: «подвизался в лавре святого Саввы в Палестине в IХ веке». Neither page gives a year, so this is the century and not a death."
+      "note": "days.pravoslavie.ru’s line for 28 октября ст. ст. gives «(IX)», and his life page — which is one sentence long — says the same: «подвизался в лавре святого Саввы в Палестине в IХ веке». Neither page gives a year. Kept as the span because the Ohrid Prologue’s 807, now recorded as a `death` beside it, is a single year and not a span, and 807 lies inside this century."
+    },
+    "death": {
+      "earliest": 807,
+      "latest": 807,
+      "display": "807",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 28 October: «мирно се упокојио 807. год.» — he reposed peacefully in 807. The folder held no death at all, only the Russian calendar’s century, so this is a year under an open end and not a century inside a closed one. **The same year appears on another folder as a variant**: `stephen-the-sabbaite`, the nephew of John of Damascus kept on 13 July, carries saint.gr’s «πέθανε ειρηνικά το 794 μ.Χ. (κατά άλλους το 807 μ.Χ.)». Whether the two folders are one man is an open question recorded for the author; this year is recorded as what this book says of the saint it keeps on this day, and nothing was merged on the strength of it."
     }
   }
 }

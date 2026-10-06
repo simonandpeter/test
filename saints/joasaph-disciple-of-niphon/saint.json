@@ -10,6 +10,11 @@
       "form": "Ιωάσαφ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Οκτωβρίου, «Άγιος Ιωάσαφ ο νέος οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Јоасаф",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. октобар ст. ст., „Преп. муч. Јоасаф.“ — «Преп. муч.» is the `venerable-martyr` grade this corpus keeps in `types` and comes off, and the heading leaves nothing else: no epithet, no see, no monastery, no company. The one thing that would have distinguished him, «ученик св. Нифонта патријарха Цариградског», is the body’s first sentence and not part of the name the calendar prints, so the form stays bare. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`. This is the folder’s first name form outside Greek."
     }
   ],
   "dates": {
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.11.2025 (26. октобар ст. ст.) — „Преп. муч. Јоасаф.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-08&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, one person, quoted whole with its closing full stop (section 4). «Преп. муч.» is the `venerable-martyr` this folder already holds, so `types` is untouched. THE IDENTIFICATION IS THE ENTRY’S OWN FIRST SENTENCE AND NOT A NAME MATCH. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јоасаф», and the corpus keeps several men of that name; what settles it is that this entry opens «Ученик св. Нифонта патријарха Цариградског» — disciple of Niphon, patriarch of Constantinople — which is the whole of what names this folder, and then adds Athos, Constantinople, the confession before the Turks and the beheading, every one of which the folder already carries off saint.gr. `dates` UNTOUCHED, AND THIS IS THE DISAGREEMENT WORTH RECORDING. The folder holds `death` 1516, and its `note` carries saint.gr’s own sentence that the martyrdom «στις 26 Οκτωβρίου 1516 μ.Χ. και όχι το 1536 μ.Χ., όπως αναγράφεται λανθασμένα, πιθανώς κατά ανακριβή αντιγραφή» — 1516 and not 1536, as is wrongly written, probably through an inaccurate copying. THIS BOOK PRINTS 1536. So the Prologue is on the side saint.gr names as the mis-copy, and the year was NOT changed and NOT widened: a book repeating a reading another book diagnoses is not new evidence for it. The disagreement is in the life and in the report. The day itself agrees: 26 October in both. WHAT THE BOOK ADDS. HE PRACTISED ASCETICISM ON THE HOLY MOUNTAIN, which saint.gr says only by way of Vatopedi and Dionysiou; and the reason for the journey, put as a motive rather than a prophecy — HE HAD SO GREAT A LOVE FOR CHRIST THAT ALL HIS LABOURS SEEMED TO HIM TOO LITTLE, so that he longed to suffer out of love for his Lord. What he confessed at Constantinople is given as the faith in THE HOLY TRINITY AND IN THE SON OF GOD, which is saint.gr’s two mysteries in a shorter form. NO NEW `related`: Niphon is already related both ways and is linked in the new paragraph; no other person is named in the entry at all. No `office`, no `locations` — the Holy Mountain and Constantinople are named and neither is a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јоасаф» and `sr-foldpred.mjs` predicts no other holder, so no fold and no `READ_FOLDS` key is owed. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [

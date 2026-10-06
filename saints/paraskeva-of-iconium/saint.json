@@ -11,6 +11,11 @@
       "form": "Параскева Пятница",
       "lang": "ru",
       "note": "Read out of the title on the name link behind her line for 28 октября ст. ст., «Параскева Пятница, вмц.», with the rank word left off. The line itself declines the name and splits the byname away from it — «Вмц. Параскевы, нареченной Пятница» — so the nominative pair is the link's."
+    },
+    {
+      "form": "Параскева – Петка",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. октобар ст. ст., „Св. муч. Параскева – Петка.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and what is left is the whole of what the book calls her: the Greek name and its Serbian equivalent, joined by the book’s own spaced en dash. SECTION 6 ASKS FOR THE FULLEST FORM THE CALENDAR GIVES AND FOR A BY-NAME THE HEADING GIVES TO BE KEPT, and this is both. The two narrower readings were measured and refused: a bare «Параскева» would throw away half of the heading, and a bare «Петка» would take a string that `parascheva-of-iasi` is the corpus’s only holder of — a different woman, a `venerable` of the eleventh century on 14 October — and so would manufacture a two-folder fold where the book itself gives a form that has none. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the stored form and for «Параскева», and names `parascheva-of-iasi` for «Петка»; `sr-foldpred.mjs` predicts 0 other holders for the stored form. The dash is the page’s, not this corpus’s."
     }
   ],
   "dates": {
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 November 2026 (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.11.2025 (28. октобар ст. ст.) — „Св. муч. Параскева – Петка.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, one person, quoted whole with the closing full stop the Prologue prints (BRIEF-SERBIAN section 4). «муч.» is `martyr`, which this folder carries as `great-martyr`, and the body’s «девојка» is the `virgin` beside it, so `types` is untouched — the book does not say «Великомученица», and a narrower rank word in a second book is no reason to narrow a folder. THE WOMAN THIS IS NOT. `parascheva-of-iasi` is the `venerable` of the first half of the eleventh century whom all four calendars keep on 14 October, and she is the corpus’s ONLY holder of the bare Serbian «Петка». This entry is a `martyr` born at Iconium who was beheaded under Diocletian: a different woman, a different rank, a different millennium and a different day. The Russian row this folder already carries is on this same Julian 28 October, and its stored Russian form is «Параскева Пятница» — Friday, which is what Петка also means. `dates` UNTOUCHED AND THE BOOK NAMES NO YEAR. The folder holds `death` 201 to 300, «3rd century», off the Russian calendar, whose own life page puts the general’s arrival at Iconium in the year 300 under Diocletian. This entry says «Кад наста гоњење у време Диоклецијана» — when the persecution arose in the time of Diocletian — and gives no year, no consul and no number at all, so there is nothing to record and nothing to move. The two books agree on the emperor. WHAT THE BOOK ADDS, AND THE BEST OF IT IS A SENTENCE. Her parents were RICH AND CHRIST-LOVING, and it was AFTER THEIR DEATH that she began giving her property away to the poor and the wretched, all of it in the name of Christ the Lord. Asked her name before the prince of that land, SHE ANSWERED THAT SHE WAS CALLED A CHRISTIAN; the prince rebuked her for not giving her ordinary name, and she answered „требаше прво да ти кажем име вечнога живота па онда име временог живота“ — I had first to tell thee the name of eternal life, and then the name of the temporal one. After the scourging AN ANGEL OF GOD APPEARED IN THE PRISON, HEALED HER WOUNDS AND COMFORTED HER. AND BY HER PRAYER SHE THREW DOWN EVERY IDOL IN THE HEATHEN TEMPLE. NO `related`: the prince of the land is unnamed and no folder read here holds him; the entry names nobody else. No `office`. No `locations` — Iconium is named and is not proposed as a coordinate on this folder. THE FORM IS FREE BECAUSE IT KEEPS THE WHOLE OF WHAT THE HEADING CALLS HER. See the name note. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Arsenius."
     }
   ],
   "hymns": [

@@ -17,6 +17,11 @@
       "form": "Зиновий Егейский (Киликийский)",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 30 октября ст. ст., «Святитель Зиновий Егейский (Киликийский), епископ, сщмч.», with the rank words and the grade left off. The link gives the see twice over, as of Aegae and in brackets as Cilician; the day's line gives «еп. Егейского» alone."
+    },
+    {
+      "form": "Зиновије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. октобар ст. ст., „Свешт. муч. Зиновије и сестра му Зиновија.“ — «Свешт. муч.» is the `hieromartyr` grade this corpus keeps in `types` and comes off, and «и сестра му Зиновија» is the second person the heading enumerates and no part of his name. The heading gives him no see: «епископа Егејског» is the body’s, and the folder carries it in `office`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.11.2025 (30. октобар ст. ст.) — „Свешт. муч. Зиновије и сестра му Зиновија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, which ENUMERATES TWO PEOPLE in one heading — «Свешт. муч. Зиновије и сестра му Зиновија» — so it is two folders and two rows, this one and `zenobia-sister-of-zenobius`. Both already existed and already related one another in both directions, so no `related` row is owed either way, and both rows quote the whole heading (BRIEF-SERBIAN section 4). `types` UNTOUCHED: «Свешт. муч.» is the `hieromartyr` this folder holds, the body’s «би Зиновије постављен за епископа Егејског» the `bishop`, and its «даром чудотворства» the `wonderworker` — all three were already there, and the `office` «Bishop of Aegae in Cilicia» matches the body’s «епископа Егејског» and the entry’s own «Из града Егеја у Киликији». `dates` UNTOUCHED AND THE BOOK HEDGES WHERE THE FOLDER DOES NOT. The folder holds `death` 285 flat, off saint.gr’s heading «Αγιος Ζηνοβιος (; - 285)». This entry says «бише обоје мачем посечени око 285. год.» — both beheaded ABOUT 285. Same number, with an «око» in front of it, which is a weaker statement than the folder already carries and so changes nothing; a second book agreeing less precisely is not a reason to loosen an interval. WHAT THE BOOK ADDS. BROTHER AND SISTER INHERITED BOTH THE TRUE FAITH AND A GREAT MATERIAL FORTUNE FROM THEIR PARENTS, AND GAVE THE FORTUNE AWAY TO THE POOR; and this book draws the causal line itself — because their hands were merciful, THE HAND OF GOD COVERED THEM from every evil design of men and of demons, and ZENOBIUS’S MERCIFUL HANDS, THE ONES THAT GAVE TO THE POOR, WERE THE HANDS GOD GAVE THE GIFT OF WONDERWORKING TO, so that he healed every sickness BY THE TOUCH OF HIS HANDS ALONE. The judge is named: ЛИСИЈЕ, Lysias, who put it to him „Предлажем ти двоје – живот и смрт; живот ако се поклониш боговима, смрт ако се не поклониш“ — I offer thee two things, life and death; life if thou wilt bow to the gods, death if thou wilt not. And Zenobius answered „Живот без Христа није живот но смрт, а смрт Христа ради није смрт но живот“ — life without Christ is not life but death, and death for Christ’s sake is not death but life. THE TORMENTS ARE NAMED: fire, and boiling pitch, and then the sword. NO NEW `related`, no `locations` — Aegae and Cilicia are named and are already in the `office` rather than in a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Зиновије» and `sr-foldpred.mjs` predicts 0 other holders, which is worth saying because the corpus does keep a `zenobius-mazhuga` and this folder relates him. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about king Milutin."
     }
   ],
   "images": [

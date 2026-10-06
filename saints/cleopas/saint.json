@@ -11,6 +11,11 @@
       "form": "Κλεόπας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Κλεόπας ο Απόστολος και Ιωσήφ Πατριάρχης Κωνσταντινούπολης», with the rank word left off."
+    },
+    {
+      "form": "Клеопа",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. октобар ст. ст., „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“ — «Св. ап.» is \"saint\" plus the `apostle` grade this corpus keeps in `types`, and the four names after his are the other members the heading enumerates. So the bare personal name is the whole of the form; the heading gives him no see and the body gives him none either. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.11.2025 (30. октобар ст. ст.) — „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, first of the five apostles it enumerates. THE HEADING ENUMERATES FIVE APOSTLES — «Клеопа, Терције, Марко, Јуст и Артем» — so the brief’s enumeration ruling makes it one folder per named member, and all five rows quote the whole heading. FOUR of the five take a row here. THE FIFTH, Марко, TAKES NOTHING: `mark-of-byblos` already carries a venerated serbian row out of this same book’s Julian 27 September, where it identifies him in the same words this entry does, and section 1 makes a saint already venerated on another day report-only. The reading is in the commit message. «ап.» is the `apostle` this folder holds, and the body’s «Од Седамдесеторице» — of the Seventy — is the same claim, so `types` is untouched. NO `dates`, AND THERE IS STILL NOTHING TO DATE HIM BY. This folder’s `dates` is null, and the Russian calendar’s «(I)» for the day’s apostles is not on it because the Russian row is `undocumented` here. THIS ENTRY GIVES HIM NO YEAR AND NO CENTURY EITHER — its whole sentence about him is that THE RISEN LORD APPEARED TO HIM ON THE ROAD TO EMMAUS. So no `dates` object was created, which is the brief’s rule exactly: if the page gives no year there is no `dates`. WHAT THE BOOK ADDS: the Emmaus appearance, which is the whole of it, and which is also the whole of why he is remembered. The folder already relates `mary-of-cleopas`; this book does not mention her, so that row is untouched and unmentioned in the new paragraph. NO `related`, no `office`, no `locations` — Emmaus is a road in a Gospel narrative and not a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Клеопа». This is also the folder’s FIRST Serbian form and its first row outside the Romanian and Greek calendars. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about king Milutin."
     }
   ],
   "related": [

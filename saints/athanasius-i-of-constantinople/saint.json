@@ -11,12 +11,18 @@
       "form": "Афанасий I Константинопольский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Святитель Афанасий I Константинопольский, патриарх», with the rank words left off. The day's own line declines the name and gives the see in its older Russian form, as «Свт. Афанасия , патриарха Цареградского»."
+    },
+    {
+      "form": "Атанасије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. октобар ст. ст., „Св. Атанасије патријарх Цариградски.“ — «Св.» is \"saint\" and not a rank, «патријарх» is the `patriarch` grade this corpus keeps in `types`, and «Цариградски» is the SEE that rank governs, which the folder already carries in `office` as «Patriarch of Constantinople». All three come off and the bare personal name is what is left, the same reading made for `arsenius-of-serbia` on this same day. The folder’s own Russian form carries the toponymic, «Афанасий I Константинопольский», and the ordinal in the display name is the corpus’s way of telling him from the other Athanasii; neither is in this heading. `foldchk.py` finds the string on three folders, so the form joins a fold of four, keyed in `READ_FOLDS` in the same commit."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "patriarch"
+    "patriarch",
+    "wonderworker"
   ],
   "office": "Patriarch of Constantinople",
   "dates": {
@@ -73,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.11.2025 (28. октобар ст. ст.) — „Св. Атанасије патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fifth entry, one person, quoted whole with its closing full stop (section 4). «патријарх» is the `patriarch` this folder holds and the body’s «Од детињства аскет» the `venerable` beside it, so neither is new. ONE `types` ROW ADDED, READ AND NOT ASSUMED: `wonderworker`, off the entry’s closing words «Чудотворац и прозорљивац.» — a wonderworker and a seer. The brief’s rank table maps «Чудотворац» to `wonderworker`. «Прозорљивац», the clairvoyant or discerning one, has NO type in the vocabulary and none was invented for it; it is in the life instead. `dates` UNTOUCHED AND THE BOOK AGREES WITH THE HALF THE FOLDER WAS SURE OF. The folder holds `birth` c. 1235 off saint.gr and `death` 1311 to 1323, an interval built out of the Russian calendar’s lower bound «(после 1311)» and the Greek page’s «περί το 1323». The Russian note already records that he died at the age of a hundred, and this entry says the same: «Упокојио се у својој 100. години живота». NO ARITHMETIC WAS DONE ON IT. 1235 plus a hundred would give about 1335, which is outside the interval the two calendars bound, and a birth year the Greek page itself hedges with «περί» is not a base to add to. The agreement is recorded; the sum is not. WHAT THE BOOK ADDS, AND MOST OF IT IS NEW TO THIS FOLDER. He was AN OPPONENT OF THE UNION WITH ROME, against his own predecessor JOHN BECCUS, whose years the entry prints as 1275 to 1282. He was AN ASCETIC AND A MAN OF PRAYER FROM CHILDHOOD. LOVED BY THE PEOPLE, HE PROVOKED THE RESENTMENT OF SOME OF THE CLERGY BY HIS MORAL STRICTNESS, and WITHDREW TO HIS OWN MONASTERY ON MOUNT GANOS, where he struggled more strictly than before. THE LORD CHRIST HIMSELF APPEARED TO HIM AND GENTLY REPROACHED HIM FOR LEAVING THE FLOCK TO THE WOLVES. WHEN HE FORETOLD THE DAY OF AN EARTHQUAKE AT CONSTANTINOPLE THE EMPEROR ANDRONICUS PUT HIM BACK ON THE PATRIARCHAL THRONE AGAINST HIS WILL — and afterwards HE WITHDREW SECRETLY A SECOND TIME to his ascetic life. TWO THINGS DELIBERATELY NOT WRITTEN. No `related`: John Beccus is a patriarch this corpus does not keep and the emperor Andronicus is narrated and in no heading, so Ruling 3 and section 5 give both of them nothing; the folder’s existing row to `gregory-palamas` is untouched. No `locations`: Mount Ganos and Constantinople are named and neither is proposed as a coordinate. The `office` «Patriarch of Constantinople» is already there and matches the heading’s «Цариградски». A SECOND EARTHQUAKE IN ONE BLOCK, AND IT IS NOT THE OTHER ONE. The Julian 26 October’s refused third entry is the great earthquake of 740 under Leo the Isaurian; this is an earthquake of about 1300 under Andronicus, foretold rather than commemorated, and it is inside a person’s life rather than a heading of its own. THE FORM FOLDS AND THE FOLD IS KEYED: «Атанасије» is already held by `athanasius-of-attaleia`, `athanasius-once-a-magician` and `athanasius-the-reader`, so this takes the key from three folders to four. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Arsenius."
     }
   ],
   "text": {

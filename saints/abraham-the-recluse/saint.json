@@ -16,6 +16,11 @@
       "form": "Аврамий Затворник, Хиданский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 29 октября ст. ст., «Аврамий Затворник, Хиданский, пресвитер, прп.», with the rank word and the grade left off. «Затворник», the recluse, is kept because it is the by-name the calendar uses for him throughout and not a rank in the list this corpus reads ranks from; the village of Hidana is the second by-name. The line itself declines the name and gives neither."
+    },
+    {
+      "form": "Аврамије Затворник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. октобар ст. ст., „Преп. Аврамије Затворник и синовица му Марија.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off, and «и синовица му Марија» is the second person the heading enumerates and no part of his name. «Затворник», the recluse, is KEPT: it is not in the brief’s rank table at all, this folder’s own Russian form keeps it («Аврамий Затворник, Хиданский»), and section 6 asks for the fullest form the calendar gives. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the stored form and for the bare «Аврамије» alike, so nothing here depends on the by-name."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.11.2025 (29. октобар ст. ст.) — „Преп. Аврамије Затворник и синовица му Марија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, which ENUMERATES TWO PEOPLE in one heading — «Преп. Аврамије Затворник и синовица му Марија» — so it is two folders and two rows, this one and `mary-niece-of-abraham`. Both already existed and already related one another in both directions, so no `related` row is owed either way. Quoted whole with the closing full stop; the same heading stands on both rows, which is what the brief’s enumeration ruling produces. `types` UNTOUCHED: «Преп.» is the `venerable` this folder holds and «Затворник», the recluse, the `hermit` beside it; the body’s «по заповести дотичног епископа» is an order he received and not a rank he held, and `presbyter` was already there from another book. `dates` UNTOUCHED AND A BIRTH DELIBERATELY NOT INFERRED. The folder holds `death` 360, displayed «about 360» off the Russian calendar’s «(ок. 360)», and NO birth. This entry says «Упокојио се мирно 360. год. у 70. години живота на земљи» — the same year, FLAT where the Russian hedges it, AND an age: in the seventieth year of his life. SUBTRACTING THE AGE FROM THE YEAR WOULD GIVE A BIRTH OF ABOUT 291 AND IT WAS REFUSED. The arithmetic is not in the book, the age is \"in his seventieth year\" rather than \"aged seventy\", and a `birth` is one of the nine things a machine may not decide. The display was also left as «about 360» rather than hardened to «360» on the strength of one flat statement, because the interval is already a point and only the hedge in the wording would change. WHAT THE BOOK ADDS, AND IT IS THE WHOLE SHAPE OF FIFTY YEARS. HE WAS FORCED BY HIS PARENTS TO MARRY AND ON THE VERY DAY OF THE WEDDING LEFT BRIDE, PARENTS, HOUSE AND EVERYTHING and withdrew into solitude for a great ascetic struggle. HE STRUGGLED FIFTY YEARS AND WENT OUT OF HIS CELL ONLY TWICE IN THE WHOLE OF THAT TIME: the first time at the command of his bishop, TO BRING A HEATHEN VILLAGE TO THE FAITH OF CHRIST; the second time TO SAVE HIS STRAYED NIECE MARY. That pair of exceptions is the entry’s whole architecture, and it is why the niece is in the heading at all. The bishop who gave the order is unnamed; the village is unnamed. No `locations`, no `office`. THE FORM IS FREE AND KEEPS ITS BY-NAME: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Аврамије Затворник» AND for the bare «Аврамије», so the by-name was not needed to break a fold and is kept because section 6 asks for the fullest form the calendar gives — and because this folder’s own Russian form keeps the same word, «Аврамий Затворник, Хиданский». The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Abraham."
     }
   ],
   "related": [

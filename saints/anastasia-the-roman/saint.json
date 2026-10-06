@@ -16,6 +16,11 @@
       "form": "Анастасия Римляныня",
       "lang": "ru",
       "note": "Read out of the heading both of her life pages carry, «Преподобномученица Анастасия Римляныня», with the rank word left off. The name link's title adds «, Солунская», of Thessalonica, which nothing else read repeats; the form stored is the heading's."
+    },
+    {
+      "form": "Анастасија Римљанка",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. октобар ст. ст., „Преп. муч. Анастасија Римљанка.“ — «Преп. муч.» is the `venerable-martyr` grade this corpus keeps in `types` and comes off, leaving the bare name with the by-name the heading prints. «Римљанка» is kept under section 6: it is a by-name and not a see — the woman of Rome, which is what the display name and the Russian form «Анастасия Римляныня» both say — and it is load-bearing, because the bare «Анастасија» is held by `anastasia-of-rome-15-april`, `anastasia-of-serbia` and `anastasia-the-patrician`, and one of those three is ALSO a woman of Rome. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the stored form and `sr-foldpred.mjs` predicts 0 other holders."
     }
   ],
   "sex": "female",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.11.2025 (29. октобар ст. ст.) — „Преп. муч. Анастасија Римљанка.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and the longest on it, one person, quoted whole with the closing full stop the Prologue prints (BRIEF-SERBIAN section 4). `types` UNTOUCHED, AND THE RANK WORD IS WHY THAT NEEDS SAYING. The heading ranks her «Преп. муч.», which the brief’s table maps to `venerable-martyr` — a type this folder does NOT hold. It holds `great-martyr`, `virgin` and `monastic`, and those three together already carry everything «Преп. муч.» says: the martyrdom at a higher grade than the Prologue gives it, and the monastic life the «Преп.» stands for. Adding `venerable-martyr` beside `great-martyr` would make the folder claim two martyr grades for one woman on the word of the newer book, and a narrower rank word in a second book is no reason to re-rank a folder — the same reading made for `paraskeva-of-iconium` on the Julian 28 October. `dates` UNTOUCHED, AND THIS BOOK PUSHES AT THEM WITHOUT SETTLING ANYTHING. The folder holds `death` 249 to 259, «about 249 to 259», and its own note says the interval is two calendars and two readings with neither preferred: saint.gr has the governor Probus take her «περί το 256 μ.Χ.» and the Russian calendar prints «(ок. 249-259)». THIS ENTRY NAMES AN EMPEROR INSTEAD OF A YEAR: «Увенча се Анастасија венцем мученичким при цару Декију» — she was crowned with the martyr’s crown under the emperor Decius, whose reign this corpus elsewhere brackets 249 to 251. That agrees with the Russian floor and sits OUTSIDE the Greek year, so it is evidence for one of the two books the interval was built from — and narrowing on it would be preferring a calendar, which is not a reading of a page. Nothing moved; it is in the life and in the report. The entry also gives the governor’s name as Проб, which is saint.gr’s Πρόβος, and SEVENTEEN YEARS in the monastery before she became known, which is a span of her life and not a date. WHAT THE BOOK ADDS, AND IT IS MOSTLY HER OWN VOICE. She was ORPHANED AT THREE and taken into a women’s monastery near Rome whose abbess was SOPHIA, a nun at a high degree of perfection; AFTER SEVENTEEN YEARS she was spoken of all round about, among Christians as a great ascetic and AMONG THE HEATHEN AS A RARE BEAUTY, which is what brought the governor’s soldiers. THE ABBESS COUNSELLED HER FOR TWO HOURS on how to hold the faith, how to withstand flattering deceits and how to endure torture, and Anastasia answered „готово је срце моје за Христа страдати, готова је душа моја за сладчајшега Исуса умрети.“. Before the prince, turned first with promises and then with threats, she said „готова сам за Господа мога умрети не једанпут но – о кад би то могуће било – и сто пута!“. STRIPPED FOR MOCKERY SHE SHOUTED AT THE SERVANTS „бијте ме, и сеците, и трзајте, покрите ранама моје наго тело, и крвљу сакрите срам мој!“ — beat me, and cut, and tear, cover my naked body with wounds and hide my shame with blood. She thirsted twice and asked for water, and A CHRISTIAN NAMED CYRIL GAVE HER DRINK, FOR WHICH THE MARTYR BLESSED HIM AND THE HEATHEN BEHEADED HIM. HER BREASTS AND HER TONGUE WERE CUT OFF. AN ANGEL OF GOD KEPT APPEARING AND HOLDING HER UP. And AT THE LAST THE BLESSED SOPHIA FOUND HER BODY AND BURIED IT HONOURABLY. NO NEW `related`. `cyril-martyr-29-october` is already related both ways and is linked in the new paragraph — this book is the first of the four to say what he did and what it cost him. SOPHIA THE ABBESS GETS NOTHING: she is narrated and in no heading, which is Ruling 3 and section 5, and no folder in this corpus is her — the five Sophias it keeps are of Aenus, of Kleisoura, the mother of Faith, Hope and Love, and the martyrs of 18 September and 18 December. The governor Probus and the emperor Decius are narrated and in no heading either. No `locations`: Rome and a monastery near it are named and neither is proposed as a coordinate on this folder. THE FORM IS FREE BECAUSE IT KEEPS THE BY-NAME: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Анастасија Римљанка», and names three folders for the bare «Анастасија». The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Abraham."
     }
   ],
   "hymns": [

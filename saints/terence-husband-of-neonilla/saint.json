@@ -16,6 +16,11 @@
       "form": "Терентий Сирийский",
       "lang": "ru",
       "note": "Read out of the title on this one's name link behind the household's line for 28 октября ст. ст., «Терентий Сирийский, мч.», with the rank word left off. The line itself gives the name in the genitive and without the province."
+    },
+    {
+      "form": "Теренције",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. октобар ст. ст., „Св. муч. Теренције.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form. The heading gives no by-name and no company: «Из Сирије», which the folder’s Russian form carries as a toponymic, is the body’s first sentence, and the wife and seven children who distinguish him are the body’s second. `foldchk.py` finds this exact string on `terentius-of-africa`, who is kept by this same book on the Julian 10 April and by the Russian calendar on this very day — so the form joins a fold of two, keyed in `READ_FOLDS` in the same commit, and the fold is the sharpest kind: the two men the day itself could have confused."
     }
   ],
   "sex": "male",
@@ -80,8 +85,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.11.2025 (28. октобар ст. ст.) — „Св. муч. Теренције.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, three sentences long, one person in the heading. «муч.» is the `martyr` this folder already holds, so `types` is untouched. THE IDENTIFICATION IS THE HARDEST ON THIS DAY AND THE NAME AND THE DAY BOTH POINT THE WRONG WAY. The corpus keeps two Terences. `terentius-of-africa` is one of a company of men martyred at Carthage in 250 — and he stands on the RUSSIAN 28 OCTOBER, the very day of this entry, AND he already holds the Serbian form «Теренције» off this same book’s Julian 10 April. So a match on the name, or on the name and the day together, lands on him. WHAT SETTLES IT IS THE HOUSEHOLD: this entry says «Из Сирије» and «Пострадао за веру Христову заједно са женом и седморо деце своје» — from Syria, suffered together with his wife and his seven children. That is `terence-husband-of-neonilla`, whose own Russian stored form is «Терентий Сирийский», Terence the Syrian, and whose eight `related` rows are Neonilla and the seven sons. THE WIFE AND THE SEVEN CHILDREN GET NOTHING, AND THAT IS SECTION 5. The heading enumerates one person; the household is narrated and not one of its nine members is named. All eight exist as folders — `neonilla-wife-of-terence` and the seven — and every one of them already relates this folder both ways, so nothing is owed and nothing was added. A company this book declines to name is a company this book gives no rows for. `dates` UNTOUCHED AND THE ENTRY GIVES NO YEAR. The folder holds `death` 249 to 250 off the Russian calendar’s «(ок. 249-250)», recorded there as the household’s interval and not this man’s alone. This entry gives no year, no emperor and no consul, so there is nothing to narrow it with. WHAT THE BOOK ADDS. Almost nothing, and the almost is worth the line: AFTER MANY TORMENTS, DURING WHICH THE POWER OF GOD WAS MANIFESTED, ALL OF THEM WERE BEHEADED WITH THE SWORD. The manifestation of God’s power under torture is this book’s own; the common death by the sword agrees with what the folder had. NO NEW `related`, NO `office`, NO `locations` — Syria is named and is not a coordinate. THE FORM FOLDS AND THE FOLD IS KEYED: «Теренције» is already held by `terentius-of-africa`, so this takes the key from one holder to two, and the two folders it joins are precisely the two this day could have confused. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Arsenius."
     }
   ],
   "hymns": [

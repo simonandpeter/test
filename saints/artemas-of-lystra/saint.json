@@ -11,6 +11,11 @@
       "form": "Артема",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 30 октября ст. ст., «Святитель Артема, епископ Листрийский, апостол от 70-ти», with the rank words and the see left off. The line itself declines the name, «Артемы»."
+    },
+    {
+      "form": "Артем",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. октобар ст. ст., „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“ — «Св. ап.» is \"saint\" plus the `apostle` grade, and the other four names are the heading’s other members, so the bare personal name is the whole of the form. The heading gives him no see: «епископ у Листри Ликаонској» is the body’s, and the folder carries «Bishop of Lystra» in `office`. `foldchk.py` finds the string on `artemas-of-cyzicus`, so the form joins a fold of two, keyed in `READ_FOLDS` in the same commit. This is also the folder’s FIRST name form outside Greek and Russian."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.11.2025 (30. октобар ст. ст.) — „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, fifth and last of the five apostles it enumerates. THE HEADING ENUMERATES FIVE APOSTLES — «Клеопа, Терције, Марко, Јуст и Артем» — so the brief’s enumeration ruling makes it one folder per named member, and all five rows quote the whole heading. FOUR of the five take a row here. THE FIFTH, Марко, TAKES NOTHING: `mark-of-byblos` already carries a venerated serbian row out of this same book’s Julian 27 September, where it identifies him in the same words this entry does, and section 1 makes a saint already venerated on another day report-only. The reading is in the commit message. `types` UNTOUCHED, AND THAT IS THE POINT OF THIS ROW. «ап.» is the `apostle` the folder holds; the body says «Св. Артем био епископ у Листри Ликаонској, и мирно скончао» — he was bishop in Lystra of Lycaonia AND ENDED PEACEFULLY. So NO `martyr` was added to him, where `martyr` WAS added to `tertius` and to `justus-of-eleutheropolis` in this same commit off this same heading. ONE HEADING, FIVE APOSTLES, AND THE BODY GIVES THEM FOUR DIFFERENT ENDS: Cleopas nothing at all, Tertius martyred at Iconium, Mark nothing, Justus suffering at Eleutheropolis, Artemas asleep in peace at Lystra. A rank word in a heading governs a company; a death in a body belongs to one man. `dates` UNTOUCHED: `death` 1 to 100 off the Russian «(I)», and this entry gives no year. WHAT THE BOOK ADDS: the peaceful end, which is the only statement about his death this folder has from any source, and «Ликаонској» — of Lycaonia — beside the see the `office` already carries as «Bishop of Lystra». NO `related` — this folder has none and this entry names nobody with him. No `locations`. THE FORM FOLDS AND THE FOLD IS KEYED: «Артем» is already held by `artemas-of-cyzicus`, a `martyr` of the third century, so this takes the key from one holder to two. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about king Milutin."
     }
   ],
   "text": {

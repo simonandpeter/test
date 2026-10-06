@@ -17,6 +17,11 @@
       "form": "Стефан Милютин",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the family's line for 30 октября ст. ст., «Стефан Милютин, Сербский, король», with the rank word and the people left off. The line itself declines the name, «Стефана Милютина»."
+    },
+    {
+      "form": "Милутин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. октобар ст. ст., „Св. краљ Милутин.“ — «Св.» is \"saint\" and not a rank and «краљ» is the `king` grade this corpus keeps in `types`, so both come off and what is left is the one name the heading prints. IT IS NOT THE FORM THE DISPLAY NAME WOULD SUGGEST: the folder reads «Stephen Milutin» and its Russian form is «Стефан Милютин», but THIS BOOK DOES NOT PRINT «Стефан» AT ALL, in the heading or in the body — it calls him Милутин and nothing else, and names his father Uroš I, his mother Helen and his brother Dragutin without a Стефан among them. So the stored form is what the calendar gives and not what the folder already says. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Милутин» and for «Стефан Милутин» alike."
     }
   ],
   "sex": "male",
@@ -82,8 +87,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.11.2025 (30. октобар ст. ст.) — „Св. краљ Милутин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, one person, quoted whole with its closing full stop (section 4). «краљ» is the `king` this folder holds and the `office` «King of the Serbs» matches it, so `types` and `office` are untouched. NO `wonderworker` WAS ADDED, AND THE REASON IS A DISTINCTION THIS BLOCK HAS NOW MADE TWICE. The entry says «Тело његово показало се ускоро нетљеним и чудотворним» — his BODY showed itself incorrupt and wonderworking. That is a statement about the relics and not a title the calendar gives the man, exactly as with `andrew-of-smolensk` on the Julian 27 October, whose relics this same book calls «чудотворне» and who took no `wonderworker` either. Where the book means the title it prints it as one, as it does for Athanasius of Constantinople on the Julian 28 October: «Чудотворац и прозорљивац». `dates` UNTOUCHED AND THE TWO BOOKS AGREE EXACTLY, INCLUDING ON THE ODDITY. The folder holds `death` 1320, basis `attested`, and its note records that doxologia gives the day as the twenty-ninth of October. This entry says «Упокојио се у Господу 29. октобра 1320. год.» — the same year and the SAME 29 OCTOBER. AND THE FEAST IS ON THE 30TH, in all four calendars now. So three books put his death on the 29th and four calendars keep him on the 30th; the row carries the calendar’s day, as the schema requires, and the discrepancy is the book’s own and is recorded here and in the life rather than resolved. WHAT THE BOOK ADDS, AND IT IS THE WHOLE POLITICAL SHAPE OF A REIGN. He was THE SON OF UROŠ I AND QUEEN HELEN AND THE BROTHER OF DRAGUTIN. HE FOUGHT MANY WARS DEFENDING HIS FAITH AND HIS PEOPLE, and the entry names three enemies and gives a reason for the first: AGAINST MICHAEL PALAIOLOGOS BECAUSE HE HAD ACCEPTED THE UNION AND WAS FORCING ALL THE BALKAN PEOPLES AND THE MONKS OF ATHOS TO ACKNOWLEDGE THE POPE; and against ŠIŠMAN, tsar of the Bulgarians, and NOGAI, khan of the Tatars, to defend his lands. ALL HIS WARS SUCCEEDED, the book says, BECAUSE HE PRAYED TO GOD WITHOUT CEASING AND TRUSTED IN GOD. HE BUILT MORE THAN FORTY CHURCHES, and it names them: in his own country Treskavac, Gračanica, Saint George at Nagoričane, the Holy Mother of God at Skopje, Banjska and others; and OUTSIDE HIS OWN COUNTRY at Thessalonica, Sofia, Constantinople, Jerusalem and on the Holy Mountain. And HIS BODY RESTS TO THIS DAY AT SOFIA IN THE CHURCH OF „Светога Краља“, the Holy King. NO NEW `related`, AND THE TWO THE ENTRY NAMES ARE ALREADY THERE. `helen-mother-of-stephen-milutin` is queen Helen and `theoctistus-brother-of-stephen-milutin` is Dragutin — the folder’s own Russian form says so, «Драгутин (в иночестве Феоктист)» — and both are related in both directions. UROŠ I HAS NO FOLDER in this corpus. Michael Palaiologos, Šišman and Nogai are narrated, in no heading, and none of them is a saint this corpus keeps. No `locations`: eleven places are named in this entry and not one of them is proposed as a coordinate; a builder of churches in five countries is the clearest case in the block for leaving `locations` empty. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Милутин» AND for «Стефан Милутин», so the bare «Милутин» the heading gives folds onto nothing even though thirteen folders in this corpus share a bare «Стефан». The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about king Milutin."
     }
   ],
   "text": {
@@ -94,7 +109,8 @@
     "helen-mother-of-stephen-milutin",
     "stefan-the-first-crowned",
     "stephen-of-decani",
-    "nicodemus-of-serbia"  ],
+    "nicodemus-of-serbia"
+  ],
   "hymns": [
     {
       "church": "russian",

@@ -17,6 +17,11 @@
       "form": "Амплий",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 31 октября ст. ст., «Святитель Амплий, епископ Лиддский, апостол от 70-ти, сщмч.», with the rank words and the see left off. **The link's see is Lydda where the life's is Diospolis**, which are two names of one city; the folder keeps the Diospolis the other two calendars gave it. The line itself declines the name, «Амплия»."
+    },
+    {
+      "form": "Амплије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“ — «Св. апостоли» is \"holy\" plus the `apostle` grade, and the other five names are the heading’s other members, so the bare personal name is the whole of the form. The two names of his see, «у Лиди, или Диоспољу Јудејском», are in the body and one of them is already the folder’s `office`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, second of the six apostles it enumerates. THE HEADING ENUMERATES SIX APOSTLES — «Стахије, Амплије, Урван, Наркис, Апелије и Аристовул» — the largest company in this six-day block, so the brief’s enumeration ruling makes it one folder per named member and all the rows quote the whole heading. FIVE of the six take a row here. THE SIXTH, Аристовул, TAKES NOTHING: `aristobulus-of-britain` already carries a venerated serbian row on the Julian 16 March out of this same book AND already holds the Serbian form «Аристовул», so section 1 makes him report-only. «Св. апостоли» is the `apostle` grade all six folders already hold and the body’s «Од Седамдесеторице» is the same claim. `types` UNTOUCHED: `apostle` from the heading, and `hieromartyr` from the body’s two facts together — he was made a bishop and «Обојица мученички скончаше за Христа Господа», both of them ended in martyrdom for Christ the Lord. The folder already held the compound grade off another source, so nothing was added; note that this is the SAME shape as `tertius` on the Julian 30 October, where the compound grade was REFUSED — the difference is that there the folder did not already hold it and the compound would have been mine to compose, while here it is the folder’s own and this book grounds it. `dates` UNTOUCHED: `death` 1 to 100, «1st century», off the Russian calendar’s «(I)» for the day’s apostles, and this entry gives no year. WHAT THE BOOK ADDS. HE TOO WORKED WITH ANDREW THE FIRST-CALLED AND WAS SET BISHOP BY HIM, and the see is given twice over: «у Лиди, или Диоспољу Јудејском» — at Lydda, or Diospolis of Judaea, which is the same city under its two names and which the folder carries as «Bishop of Diospolis». AND HE ENDED IN MARTYRDOM FOR CHRIST, together with Urban, in one sentence that covers the two of them. The folder already relates Andrew both ways. NO NEW `related`, no `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Амплије». The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

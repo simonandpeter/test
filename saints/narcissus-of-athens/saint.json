@@ -17,6 +17,11 @@
       "form": "Наркисс",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 31 октября ст. ст., «Святитель Наркисс, епископ Афинский, апостол от 70-ти», with the rank words and the see left off. The line itself declines the name, «Наркисса»."
+    },
+    {
+      "form": "Наркис",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“ — «Св. апостоли» is \"holy\" plus the `apostle` grade, and the other five names are the heading’s other members, so the bare personal name is the whole of the form; «у Атини» is the body’s and is already the folder’s `office`. The Serbian form is shorter than the Russian «Наркисс» and the Greek «Νάρκισσος» by a letter, and it is stored as this book prints it and not normalised to either. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, fourth of the six apostles it enumerates. THE HEADING ENUMERATES SIX APOSTLES — «Стахије, Амплије, Урван, Наркис, Апелије и Аристовул» — the largest company in this six-day block, so the brief’s enumeration ruling makes it one folder per named member and all the rows quote the whole heading. FIVE of the six take a row here. THE SIXTH, Аристовул, TAKES NOTHING: `aristobulus-of-britain` already carries a venerated serbian row on the Julian 16 March out of this same book AND already holds the Serbian form «Аристовул», so section 1 makes him report-only. «Св. апостоли» is the `apostle` grade all six folders already hold and the body’s «Од Седамдесеторице» is the same claim. `types` UNTOUCHED: `apostle` and `bishop`, and NO `hieromartyr` — the sentence that martyrs Ampliatus and Urban is explicitly about those two («Обојица», both of them) and this man’s own sentence says only that he was made a bishop. One heading, six apostles, and the body gives them four different ends: two martyred, one asleep in peace after sixteen years, one asleep in peace in Britain, and two — this man and Apelles — with no death stated at all. `dates` UNTOUCHED: `death` 1 to 100 off the Russian «(I)», no year here. WHAT THE BOOK ADDS, AND IT IS AN APPOINTMENT BY A DIFFERENT APOSTLE. «Наркис би постављен од апостола Филипа за епископа у Атини» — he was set bishop IN ATHENS BY THE APOSTLE PHILIP, and not by Andrew, who appointed the three men before him in the same paragraph. The folder already relates `philip-the-apostle` both ways and NOT Andrew, which this book independently confirms. The `office` «Bishop in Athens» matches. NO NEW `related`, no `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Наркис». The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

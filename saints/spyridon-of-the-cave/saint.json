@@ -15,11 +15,17 @@
       "form": "Спиридон Печерский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the pair's line for 31 октября ст. ст., «Спиридон Печерский, просфорник», with the grade left off. The line declines the name and gives the by-name in the plural for the two of them, «Спиридона и Никодима , просфорников Печерских»."
+    },
+    {
+      "form": "Спиридон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Преп. Спиридон и Никодим.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off, and «и Никодим» is the second person the heading enumerates. The heading gives him no by-name and no monastery: «у Печерском манастиру» is the body’s, and it is what the display name «Spyridon of the Cave» and the Russian form «Спиридон Печерский» are built on. So the form is bare. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "monk"
   ],
   "related": [
     "nicodemus-of-the-cave",
@@ -64,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Преп. Спиридон и Никодим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, which ENUMERATES TWO PEOPLE — «Преп. Спиридон и Никодим» — so it is two folders and two rows, this one and `nicodemus-of-the-cave`. Both already existed and already related one another in both directions, so no `related` row is owed either way, and both rows quote the whole heading. ONE `types` ROW ADDED, READ AND NOT ASSUMED: `monk`, off «Монаси и просфорници у Печерском манастиру» — monks and prosphora-bakers in the Caves monastery. The brief’s rank table maps «Монах» to `monk`, and the plural «Монаси» covers both men of this heading, so the same row goes on both folders. «Просфорник», the prosphora-baker, HAS NO TYPE in the vocabulary and none was invented; it is in the life, and it is the one concrete thing either calendar says about what they did. A `death` ADDED WHERE THE FOLDER HAD NONE, AND THE FLORUIT KEPT. The folder held `floruit` 1101 to 1200, «12th century», off the Russian calendar, and NO `death`. This entry closes him «Упокојио се 1148. год.» — he reposed in 1148, which lies inside that century. A year under an open end goes in where a century inside a closed span does not, which is the distinction the Julian 18 and 19 October drew and the Julian 28 October applied to `stephen-the-sabaite`; the floruit is kept beside it because this book gives no span of its own. AND THE YEAR IS HIS ALONE, WHICH IS THE CAREFUL PART. The sentence before it is about Spyridon and nobody else — «Спиридон некњижан но знао цео Псалтир на изуст, и чинио чудеса и за живота» — and «Упокојио се» is singular. So 1148 was written on THIS folder and NOT on `nicodemus-of-the-cave`, although the two share the heading, the rank, the monastery, the office of prosphora-baker and the century. A year inside a joint entry belongs to the man the sentence is about. WHAT THE BOOK ADDS, AND IT IS THE BEST LINE OF THE DAY. HE WAS UNLETTERED — «некњижан» — BUT KNEW THE WHOLE PSALTER BY HEART; and HE WORKED WONDERS EVEN DURING HIS LIFETIME, which is said of him and not of his relics. No `office`: «просфорник» is in none of the four locale packs. No `locations` — the Caves monastery is named and is not a coordinate on this folder. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Спиридон», which is worth saying because the corpus keeps Spyridon of Trimythous and others; none of them holds the Serbian string. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -77,7 +93,14 @@
       "latest": 1200,
       "display": "12th century",
       "basis": "traditional",
-      "note": "days.pravoslavie.ru's line for 31 октября ст. ст. closes the pair with «(XII)», the twelfth century, and its life for them sets his arrival at the monastery under the abbot Pimen, «при игумене Пимене (1132-1141)», which falls inside it. No year of birth or of death is given, and the folder held no `dates` before this: saint.gr said in so many words that it had no details of their lives."
+      "note": "days.pravoslavie.ru’s line for 31 октября ст. ст. closes the pair with «(XII)», the twelfth century, and gives no year for either of them. Kept as the span because the Ohrid Prologue’s 1148, now recorded as a `death` beside it, is a single year and not a span, and 1148 lies inside this century."
+    },
+    "death": {
+      "earliest": 1148,
+      "latest": 1148,
+      "display": "1148",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 31 October: «Упокојио се 1148. год.» — he reposed in 1148. The folder held no death at all, only the Russian calendar’s century, so this is a year under an open end. **The year is his and not the pair’s**: the entry’s heading enumerates him with Nicodemus, but the sentence before this one is about Spyridon alone — unlettered, knowing the whole Psalter by heart, working wonders in his lifetime — and «Упокојио се» is singular, so no death was written on `nicodemus-of-the-cave`."
     }
   },
   "hymns": [

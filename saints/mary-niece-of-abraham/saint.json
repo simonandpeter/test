@@ -16,6 +16,11 @@
       "form": "Мария Хиданская",
       "lang": "ru",
       "note": "Read out of the title on her name link behind the line for 29 октября ст. ст., «Мария Хиданская, прп.», with the rank word left off. The line itself declines the name and gives no village."
+    },
+    {
+      "form": "Марија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. октобар ст. ст., „Преп. Аврамије Затворник и синовица му Марија.“ — the heading’s only rank word, «Преп.», governs her uncle, and what it gives her is «синовица му», his niece, which is a DESCRIPTION of her and not part of her name; it also names another saint, which section 6 keeps out of a stored form in any case. So the bare forename is the whole of what is left and there is nothing in the heading to break a fold with. `foldchk.py` finds the string on five folders, so the form joins a fold of six, keyed in `READ_FOLDS` in the same commit. The corpus’s own precedent for this exact shape is `anastasia-of-serbia`, whose heading read «Преподобна Анастасија, мајка Светог Саве»."
     }
   ],
   "sex": "female",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.11.2025 (29. октобар ст. ст.) — „Преп. Аврамије Затворник и синовица му Марија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, the second of the two people it enumerates: «Преп. Аврамије Затворник и синовица му Марија» — and his niece Mary. The heading NAMES her, which is what earns her a row of her own under the brief’s enumeration ruling; the row quotes the whole heading, the same string the `abraham-the-recluse` row carries. `types` UNTOUCHED, AND THE RANK WORD DOES NOT REACH HER. «Преп.» governs Аврамије, and what the heading gives her instead is a relationship, «синовица му» — his niece. So no `venerable` was added, and the `ascetic` this folder already holds is left as it is. `dates` UNTOUCHED AND THE BOOK SAYS NOTHING ABOUT HER DEATH. The folder holds `death` 360 to 370, «about 365», basis `inferred`, because no page prints a year for her and the Russian calendar gives the pair her uncle’s «(ок. 360)». THIS ENTRY GIVES HER NO YEAR EITHER — its one date, 360, is explicitly Abraham’s repose — so the inference stands exactly as it was and nothing here strengthens or weakens it. WHAT THE BOOK ADDS, AND IT IS ONE CLAUSE. She is the reason for the SECOND of the only two occasions on which her uncle left his cell in fifty years: he came out «да спасе своју заблуделу синовицу Марију», to save his strayed niece Mary. That is the whole of what this book says of her, and it is said about him; the straying itself, the inn, the disguise and the rescue are in the other three books and not in this one. The life says so. NO NEW `related`: `abraham-the-recluse` is already related both ways and is linked in the new paragraph. No `office`, no `locations`. THE FORM FOLDS WIDE AND THE FOLD IS KEYED. The bare «Марија» is already held by five folders — `maria-of-caesarea`, `mary-called-marinos`, `mary-of-tarsus`, `mary-sister-of-lazarus` and `mary-wife-of-xenophon` — so this form takes the key to SIX, the widest fold of this six-day block. There is nothing in the heading to break it with: «синовица му» is a description of her and not part of her name, and it names another saint besides, which section 6 keeps out of a stored form in any case. That is the identical shape as `anastasia-of-serbia`’s «Преподобна Анастасија, мајка Светог Саве», whose key this corpus already carries. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Abraham."
     }
   ],
   "related": [

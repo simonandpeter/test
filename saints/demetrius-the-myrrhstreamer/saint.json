@@ -16,6 +16,11 @@
       "form": "Димитрий Солунский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 26 октября ст. ст., «Великомученик Димитрий Солунский», with the rank word left off. The line on the day page itself declines the name."
+    },
+    {
+      "form": "Димитрије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. октобар ст. ст., „Св. вел. муч. Димитрије.“ — «Св.» is \"saint\" and not a rank and «вел. муч.» is the `great-martyr` grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form. The heading gives him no epithet and no see: «Солунски», which the Russian form on this folder carries, is nowhere in this book’s heading, and «војвода», which the day’s verse repeats in every refrain, is an office in the body and not part of the name the calendar prints. `foldchk.py` finds the string on `demetrius-of-moscow` and `demetrius-of-rostov`, so the form joins a fold of three, which is keyed in `READ_FOLDS` in the same commit."
     }
   ],
   "sex": "male",
@@ -85,8 +90,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.11.2025 (26. октобар ст. ст.) — „Св. вел. муч. Димитрије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-08&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, one person, quoted whole with the closing full stop the Prologue prints (BRIEF-SERBIAN section 4). «вел. муч.» is the `great-martyr` this folder already holds and the body’s «чудотворни светитељ» the `wonderworker` beside it, so `types` is untouched. «ВОЈВОДА» IS NOT IN THE TYPES VOCABULARY AND NOTHING WAS ADDED FOR IT. This book makes him воjвода of Thessalonica in his father’s place, a civil and military governor; the Serbian brief’s rank table maps «Војник» to `soldier` and says nothing about «војвода», and the corpus has no office string for it either, so no `types` row and no `office` was written. The three other books on this folder call him a chiliarch, a proconsul’s son and a duke respectively and the folder took no rank from any of them. `dates` UNTOUCHED AND THE ENTRY GIVES NONE OF ITS OWN. The folder holds `birth` 280 to 284 and `death` 303 to 306, both off saint.gr; this entry names Maximian, Sarmatia and Justinian and gives no year for the martyrdom at all. The one year it does print — 1581, for the conquest of Siberia — is thirteen centuries after him and is no part of any date on this folder. WHAT THE BOOK ADDS, AND THREE OF THEM ARE NEW TO THIS FOLDER. He was PRAYED OUT OF GOD BY CHILDLESS PARENTS and was their ONLY SON; MAXIMIAN TURNED ASIDE INTO THESSALONICA ON HIS WAY BACK FROM THE WAR AGAINST THE SARMATIANS, expressly to look into the matter — no other book here carries the Sarmatian war; LEONTIUS, THE NOBLEMAN OF ILLYRICUM, SAW HIM TWICE («јави се у два маха»), which the Romanian life does not say; JUSTINIAN’S ATTEMPT TO CARRY THE RELICS TO CONSTANTINOPLE WAS STOPPED BY FLAMING SPARKS OUT OF THE GRAVE AND A VOICE, «Станите, и не дирајте!», so that the relics stayed in Thessalonica for ever — this story is on none of the other three pages; and THE RUSSIANS RECKON HIM THE PATRON OF SIBERIA, which was conquered and joined to Russia on 26 October 1581, his own day. The angel in the prison is in the Romanian life already and this book gives its words shorter: «Мир ти, страдалче Христов, мужај се и крепи се!» NO NEW `related`. Лупо the servant and Нестор are already related both ways; Леонтије, Максимијан and Јустинијан are named in the body and not in the heading, so Ruling 3 and section 5 give them nothing, and the life’s new paragraph was measured with `proseprobe.mjs` before it was written. No `locations`: Thessalonica, Illyricum, Constantinople, Sarmatia and Siberia are named and none of them is a coordinate. THE FORM FOLDS AND THE FOLD IS KEYED. «Димитрије» is already held by `demetrius-of-moscow` and `demetrius-of-rostov`, so this form takes the key from two folders to three; `sr-foldpred.mjs` predicted both holders and a `READ_FOLDS` key goes in with this commit. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and the folder’s four hymns are untouched."
     }
   ],
   "text": {
