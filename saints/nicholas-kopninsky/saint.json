@@ -1,0 +1,71 @@
+{
+  "slug": "nicholas-kopninsky",
+  "display_name": "Nicholas (Kopninsky)",
+  "names": [
+    {
+      "form": "Николай (Копнинский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13086, «Николай (Копнинский), мч.», with the grade left off. The calendar calls him a martyr with no grade and no office, and gives him a line of his own, «Мч. Николая (1938)», apart from the clause of fifteen that holds the other two men of his parish."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "**The day is not the day of his death and the calendar says so by its own year**: he is kept with his priest and his fellow layman, who were shot on this day in 1937, while the line that carries him closes «(1938)» and the life gives his death as 15 March 1938 in a camp. His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church; azbyka.ru lists three beside this one — the moveable 7 февраля for that same synaxis, the moveable 29 августа for the Собор Кузбасских святых, where he died, and the moveable 5 сентября for the Собор Московских святых. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Мч. Николая (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Мученик Николай родился 20 ноября 1876 года в селе Ивантеевка Московской губернии в семье рабочего Ивана Копнинского»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "azbyka.ru: «Мирянин Николай Копнинский был заключен в Мариинские лагеря в Кемеровской области и здесь 15 марта 1938 года скончался»; the Сретенский day line for him closes «(1938)», a year later than the clause of the men he is kept with."
+    }
+  },
+  "related": [
+    "alexander-vershinsky",
+    "paul-kuzovkov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

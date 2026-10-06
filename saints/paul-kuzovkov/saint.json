@@ -1,0 +1,71 @@
+{
+  "slug": "paul-kuzovkov",
+  "display_name": "Paul (Kuzovkov)",
+  "names": [
+    {
+      "form": "Павел (Кузовков)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 10012, «Павел (Кузовков), мч.», with the grade left off. The calendar calls him neither priest nor hieromartyr but a martyr, and gives him no office; the day line closes its clause «и мч. Павла (1937)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists two beside this one: the moveable 29 мая for the Собор новомучеников, в Бутове пострадавших, and the moveable 5 сентября for the Собор Московских святых. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Сщмчч. Серафима , архиеп. Смоленского, Григория , Иоанна , Василия , Космы , Иоанна , Симеона , Илариона , Ярослава , Александра , Иоанна , Виктора , Андрея , Варлаама пресвитеров и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Павел родился 15 июня 1875 года в селе Ивантеевка Московской губернии в семье рабочего Василия Кузовкова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Протоиерей Александр Вершинский и мирянин Павел Кузовков были расстреляны 8 декабря 1937 года»; the Сретенский day line closes its clause «и мч. Павла (1937)»."
+    }
+  },
+  "related": [
+    "alexander-vershinsky",
+    "nicholas-kopninsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

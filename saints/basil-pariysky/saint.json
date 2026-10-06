@@ -1,0 +1,69 @@
+{
+  "slug": "basil-pariysky",
+  "display_name": "Basil (Pariysky)",
+  "names": [
+    {
+      "form": "Василий (Парийский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9504, «Василий (Парийский), иерей, сщмч.», with the rank words left off. The day line gives the name in the genitive and without the surname. The surname is not the see of the corpus's `theagenes-of-parion`, whose Russian form «Феоген Парийский» is a place-name and not a family one."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists three beside this one: the moveable 29 мая for the Собор новомучеников, в Бутове пострадавших, the moveable 5 сентября for the Собор Московских святых, and 10 декабря for the new martyrs and confessors of Radonezh. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Сщмчч. Серафима , архиеп. Смоленского, Григория , Иоанна , Василия , Космы , Иоанна , Симеона , Илариона , Ярослава , Александра , Иоанна , Виктора , Андрея , Варлаама пресвитеров и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1894,
+      "latest": 1894,
+      "display": "1894",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «родился 28 июля 1894 года, в день, когда Церковь празднует память равноапостольного великого князя Владимира, во святом крещении Василия, в одном из сел Александровского уезда Владимирской губернии в семье псаломщика Василия Парийского»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священник Василий Парийский был казнен 8 декабря 1937 года»; the Сретенский day line closes the clause of fifteen «(1937)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

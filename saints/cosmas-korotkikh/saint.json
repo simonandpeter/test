@@ -1,0 +1,73 @@
+{
+  "slug": "cosmas-korotkikh",
+  "display_name": "Cosmas (Korotkikh)",
+  "names": [
+    {
+      "form": "Косма (Коротких)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9665, «Косма (Коротких), иерей, сщмч.», with the rank words left off. The day line gives the name in the genitive and without the surname."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists three beside this one: the moveable 29 мая for the Собор новомучеников, в Бутове пострадавших, the moveable 11 июля for the Собор святых Удмуртской земли, and the moveable 5 сентября for the Собор Московских святых. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Сщмчч. Серафима , архиеп. Смоленского, Григория , Иоанна , Василия , Космы , Иоанна , Симеона , Илариона , Ярослава , Александра , Иоанна , Виктора , Андрея , Варлаама пресвитеров и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «родился 25 октября 1886 года в день памяти преподобного Космы епископа Маиумского в селе Большая Уса Осинского уезда Пермской губернии в семье крестьянина Родиона Коротких»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Казнь священника состоялась 8 декабря 1937 года на полигоне Бутово под Москвой»; the Сретенский day line closes the clause of fifteen «(1937)»."
+    }
+  },
+  "related": [
+    "cosmas-of-maiuma",
+    "onesimus-pylaev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
