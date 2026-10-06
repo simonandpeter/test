@@ -16,6 +16,11 @@
       "form": "Варлаам Хутынский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Преподобный Варлаам Хутынский», with the rank word left off. The line itself gives the name in the genitive. One of his two life pages is headed «Преподобный Варлаам Хутынский, Новгородский чудотворец» and adds that second epithet."
+    },
+    {
+      "form": "Варлам Хутински",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. новембар ст. ст., „Преп. Варлам Хутински чудотворац.“ — «Преп.» is the `venerable` grade `types` keeps and «чудотворац» the `wonderworker` grade, so both come off, while «Хутински» is the by-name of the monastery he founded on the Volkhov and is what distinguishes him, so it stays: the fullest bare form the heading gives. The book writes «Варлам» where the Russian form this folder already stores writes «Варлаам Хутынский» with two a’s and the Russian adjective; copied as printed and never bent towards the other book."
     }
   ],
   "sex": "male",
@@ -71,8 +76,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The entry closes «У спомен овога чуда празнује се св. Варлам поново у петак после Недеље Свих Светих» — for the memory of the wonder of the flame he is kept a second time on the Friday after the Sunday of All Saints. That is reckoned from Pascha and is not a fixed day; one attestation row per church is the schema, so it is recorded here and this folder renders on the Julian 6 November only."
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.11.2025 (6. новембар ст. ст.) — „Преп. Варлам Хутински чудотворац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-19&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. Quoted whole with its closing full stop; URL year 2025. `dates` UNTOUCHED and no year taken: the entry gives no year for his death, and the year it does print — 1471, for the opening of the grave, in the same sentence as Ivan the Terrible — could not be made to agree with that tsar out of this book alone, so neither half of it is used. `types` untouched: «Преп.» is the `venerable` grade and «чудотворац» the `wonderworker` grade, both of which the folder already holds, and the body gives the tonsure that is its `monk`."
     }
   ],
   "text": {
