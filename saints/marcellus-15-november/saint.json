@@ -15,6 +15,11 @@
       "form": "Маркелл",
       "lang": "ru",
       "note": "Read out of the title on the name link behind the line for 15 ноября ст. ст., «Маркелл, мч.», with the rank word left off. The calendar gives the three no toponymic and no surname, so the stored form is the bare forename the link carries; the line itself has it in the genitive."
+    },
+    {
+      "form": "Маркел",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. новембар ст. ст., „Св. муч. Елпидије, Маркел и Евстохије.“ — «Св.» is “saint”, «муч.» is the `martyr` grade, and the names beside his are the company; the heading prints nothing else, so the form is the bare forename as the book spells it, with one «л», and it is not bent towards the Russian «Маркелл» this folder also holds."
     }
   ],
   "attestations": [
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.11.2025 (15. новембар ст. ст.) — „Св. муч. Елпидије, Маркел и Евстохије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name in the day's second entry. The book says nothing of him apart from his name in that company and the reign; `dates` UNTOUCHED, no `types` and no `office`. The form joins no fold: measured, no other folder in the corpus holds the bare «Маркел». The nearest strings are a different key each — the bare «Маркелл» with two л, which this folder itself holds in `ru` beside `marcellus-the-martyr-1-march`; «Маркел Апамејски» on `marcellus-of-apamea`, two words; «Маркелин» on `marcellinus-of-rome`; and «Маркела» on `marcella-of-chios`."
     }
   ],
   "related": [

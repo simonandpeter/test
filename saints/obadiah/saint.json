@@ -16,6 +16,11 @@
       "form": "Авдий",
       "lang": "ru",
       "note": "Read off his own name page, 9, which heads him «Авдий, пророк, из 12 малых пророков» — everything beside the forename is the rank `prophet` this folder already carries and the enumeration of the Twelve, so the bare form is the whole of what the calendar gives. The day line for him is broken markup and carries no readable name. `.tmp/foldchk.py` reports **one folder already holding this exact form**, `abda-bishop-of-persia`, which stores both «Авдий» and «Авид» for a bishop in Persia of the fifth century kept on 5 сентября ст. ст. A prophet of the ninth century before Christ and a Persian bishop of the fifth after it; two men, one string, and no fuller form on either page to tell them apart by."
+    },
+    {
+      "form": "Авдија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 19. новембар ст. ст., „Св. Пророк Авдија.“ — «Св.» is “saint” and not a rank and «Пророк» is the `prophet` grade `types` already keeps, so both come off and the heading prints nothing else. Measured: no other folder holds this string, and in particular `abda-bishop-of-persia`, which shares his Russian «Авдий» and is the gate's first read fold, holds the Serbian «Авда» and not this."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.12.2025 (19. новембар ст. ст.) — „Св. Пророк Авдија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry, the fourth and last of this folder's rows to leave `undocumented`. `dates` UNTOUCHED: the book says «Живео на 900 година пре Христа», lived nine hundred years before Christ, and 900 BC is the earliest edge of the «9th century BC» interval this folder already holds from the Russian calendar, so nothing is narrowed or widened. No `related` row added: the men the entry names are Ahab and Jezebel, neither of them a saint of this corpus, and Elijah, who is already related both ways. WHAT THE ENTRY ADDS: the village of Bethacharam in the region of Shechem, service at Ahab's court and the refusal to follow the king into idolatry, the hundred prophets gathered and hidden in two caves and fed to the end when Jezebel raised the hunt for the prophets on Elijah's account — the entry cites 1 Kings 18:4 for it — that he honoured Elijah greatly and obeyed him in everything as his follower and disciple, and that he reposed in peace. Measured: no other folder in the corpus holds «Авдија», so it folds with nothing — which is worth saying on this folder, because the gate's first read fold is the Russian «Авдий» he shares with `abda-bishop-of-persia`."
     }
   ],
   "images": [

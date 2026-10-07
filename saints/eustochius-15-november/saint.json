@@ -15,6 +15,11 @@
       "form": "Евстохий",
       "lang": "ru",
       "note": "Read out of the title on the name link behind the line for 15 ноября ст. ст., «Евстохий, мч.», with the rank word left off. The calendar gives the three no toponymic and no surname, so the stored form is the bare forename the link carries; the line itself has it in the genitive."
+    },
+    {
+      "form": "Евстохије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. новембар ст. ст., „Св. муч. Елпидије, Маркел и Евстохије.“ — «Св.» is “saint”, «муч.» is the `martyr` grade, and the names beside his are the company; the heading prints nothing that distinguishes him, so the form is the bare forename. It joins a fold of two, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "attestations": [
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.11.2025 (15. новембар ст. ст.) — „Св. муч. Елпидије, Маркел и Евстохије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name in the day's second entry. The book says nothing of him apart from his name in that company and the reign of Julian the Apostate; `dates` UNTOUCHED, no `types` and no `office`. The Serbian form widens a fold to two — the other holder is `eustochius-the-presbyter`, whom this same book keeps on the Julian 23 June — and the key is written in the same commit."
     }
   ],
   "related": [

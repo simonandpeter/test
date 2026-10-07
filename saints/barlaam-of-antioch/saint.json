@@ -16,6 +16,11 @@
       "form": "Варлаам Антиохиец, Кесарийский (Каппадокийский)",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 19 ноября ст. ст., name page 352, «Варлаам Антиохиец, Кесарийский (Каппадокийский), мч.», with the rank word left off; the line itself gives the bare declined forename and nothing else. Both epithets are kept because the calendar prints both, although its own life page names only Antioch. `.tmp/foldchk.py` reports no folder holding this form, and the two other Barlaams of this same day stand on name pages 353 and 355 with different strings."
+    },
+    {
+      "form": "Варлам",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 19. новембар ст. ст., „Св. муч. Варлам.“ — «Св.» is “saint” and «муч.» is the `martyr` grade `types` already keeps, so both come off and the heading prints nothing else; Antioch is in the body. NOTE THE SPELLING: this book writes Варлам where the Russian calendar writes «Варлаам» with two а, and §6 stores a copied form as the book prints it rather than bending it towards another calendar. The same day gives the same string to `barlaam-of-india`, so the two make a fold of two, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.12.2025 (19. новембар ст. ст.) — „Св. муч. Варлам.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's second entry. `dates` CONFIRMED AND UNCHANGED: «Пострада овај преславни старац јунак 304. год.» is the same 304 the folder already holds off saint.gr, so the year now rests on two books and the interval is a point. No `related` row added: the two men the entry names are Basil the Great and John Chrysostom, both quoted on him and both already related both ways. WHAT THE ENTRY ADDS: that he was of Antioch, that the judge thought to mock him and to make the circumstances force the sacrifice, the coal set on his open palm with incense on the coal so that pain should make him throw it down before the idols and censer them unwillingly, and that he held it until his fingers burned through and fell off with the fire still on them and the palm burned through, and his whole body then fell dead; Basil's words that the right hand was stronger than the fire, for though the flame scorched the hand the hand held the fire as if it were ash; and Chrysostom's, that angels watched from on high and archangels looked on at a scene surpassing human nature, a man who contended and did not feel what is proper to men, who was himself at once the altar, the sacrifice and the priest. THE SERBIAN FORM «Варлам» IS GIVEN TO TWO FOLDERS BY THIS ONE DAY — this man and `barlaam-of-india`, the third entry's elder — so the day makes a fold of two by itself, and the key is written in the same commit."
     }
   ],
   "hymns": [

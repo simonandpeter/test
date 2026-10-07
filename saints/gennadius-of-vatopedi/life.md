@@ -4,4 +4,6 @@ saint.gr's calendar for 17 November keeps «Όσιος Γεννάδιος ο Β�
 
 The verse over the entry says the same thing in two lines: Gennadius saw a strange wonder, an empty jar gushing — the grace of the Pure One. The calendar gives him no century, no abbot, no companion and no hymn, and does not say in whose days the oil ran. This folder keeps the office, the miracle and the peaceful death, which is all the source has.
 
-*After saint.gr's calendar for 17 Νοεμβρίου — [the day](https://www.saint.gr/11/17/index.aspx) and [the life](https://www.saint.gr/3029/saint.aspx); read 2 October 2026.*
+The Охридски пролог gives him the same three sentences and one detail more. He was a monk of Vatopedi in the дохијарска duty, which the book glosses as the steward's — the charge of the monastery's stores. In his time an emptied cask was filled with oil by a wonderful means. That wonder, it says, was ascribed to the Most Holy Theotokos, to whom the monastery is dedicated, and particularly to an icon of hers which stood there; the icon is not named, and the entry gives him no century, no abbot and no companion, so this folder still holds no year at all.
+
+*After saint.gr's calendar for 17 Νοεμβρίου — [the day](https://www.saint.gr/11/17/index.aspx) and [the life](https://www.saint.gr/3029/saint.aspx); read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 17. новембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-30&prolog=1), read 7 October 2026.*

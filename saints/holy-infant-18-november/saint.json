@@ -15,6 +15,11 @@
       "form": "Варул Антиохийский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 18 ноября ст. ст., «Варул Антиохийский, отрок, мч.», with the rank word and «отрок» — which is his age and not his name — left off; the line declines it. This is the only one of the four calendars that gives this child a name at all. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Варул",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 18. новембар ст. ст., „Св. муч. Роман и Варул.“, and confirmed in its body, «једно дете, по имену Варул» — «Св.» is “saint”, «муч.» is the `martyr` grade, and the name beside his is the other member of the pair, so the bare forename is the form. IT IS THE FIRST NAME THIS FOLDER HAS IN ANY SOUTH SLAVONIC OR GREEK SOURCE: the Greek line gives only «Άγιο Νήπιο», the Holy Infant, which is a description and is what the display name was built on. Measured: no other folder holds this string."
     }
   ],
   "attestations": [
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.12.2025 (18. новембар ст. ст.) — „Св. муч. Роман и Варул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-01&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name in the day's second entry. THIS BOOK NAMES HIM, where the Greek calendar that gave this folder its display name and its only other form prints only «Άγιο Νήπιο», the Holy Infant: the heading is „Св. муч. Роман и Варул.“ and the body says «виде св. Роман једно дете, по имену Варул», a child by the name of Barulas. The name agrees with the Russian calendar's «Варул Антиохийский», which is the identification this folder already rests on. THE DISPLAY NAME IS NOT CHANGED: a display name is the author's and this reader only records that a second calendar names him. `dates` UNTOUCHED: the book gives 303 for Romanus strangled in prison and dates the child's beheading only by putting it in the same hour, where this folder holds «303 or 304» from two calendars; the interval stands. No `related` row: Romanus is already there both ways and the governor is not a saint of this corpus. Measured: no other folder holds the form «Варул», so it folds with nothing."
     }
   ],
   "dates": {

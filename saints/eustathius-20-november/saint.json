@@ -16,6 +16,11 @@
       "form": "Евстафий Никейский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 20 ноября ст. ст., name page 712, «Евстафий Никейский, мч.», with the rank word left off; the line itself declines the bare forename. The epithet is Nicaea, where the life page has the three of them die, and not Gangra, where it has them born. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Јевстатије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. новембар ст. ст., „Св. муч. Јевстатије, Теспесије и Анатолије.“ — «Св.» is “saint”, «муч.» is the `martyr` grade `types` keeps, and the two names beside his are the company; his deaconry and Nicomedia are both in the body, so the bare forename is the form. It joins a fold of two with `eustathius-i-archbishop-of-serbia`, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "related": [
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.12.2025 (20. новембар ст. ст.) — „Св. муч. Јевстатије, Теспесије и Анатолије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's third entry, an enumerated company of three, and all three folders exist. `dates` UNTOUCHED: the book says «Пострадаше за Христа Господа око 313. године», about 313, where this folder holds «300 or 312», an interval already widened to hold two calendars' readings. ABOUT 313 IS OUTSIDE IT, by a year at the near end, and writing it in would make the folder claim 300–313 on three books' disagreement; the interval stands and the year is in the life. No `related` row added: the three brothers already relate one another, and the bishop of Nicomedia the entry names is already a `related` row on this folder — his name is deliberately left out of the new paragraph, because that folder carries `related: null` and a name in prose costs a row in BOTH directions. WHAT THE ENTRY ADDS: that the three were brothers by birth, of Nicomedia, of the heathen parents Philotheus and Eusebia who afterwards received the true faith from the bishop of Nicomedia together with their sons; that Philotheus was ordained presbyter; that the persecution under Maximian broke out after the parents reposed; the angels who appeared to them in prison more than once, gave them manna for food and filled their young hearts with strength and courage in endurance; the two friends who came up and talked with them at the place of execution, during which conversation the martyrs gave up their souls; and the soldiers cutting off their dead heads to show the judge."
     }
   ],
   "text": {

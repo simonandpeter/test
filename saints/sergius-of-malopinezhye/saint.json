@@ -1,0 +1,60 @@
+{
+  "slug": "sergius-of-malopinezhye",
+  "display_name": "Sergius of Malopinezhye",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Сергије Малопинежски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 16. новембар ст. ст., „Преп. Сергије Малопинежски.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, and what is left is the forename with the toponymic that distinguishes him, which is the fullest form the book gives and the whole of it. The second word is the place he is named for and not a see, so it stays in the form: without it the name would be a bare «Сергије», which the corpus already holds for `sergius-companion-of-bacchus` and which would fold two men the book keeps four months and thirteen centuries apart. The English display name is this corpus’s own; the book prints no Latin form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1585,
+      "latest": 1585,
+      "display": "1585",
+      "basis": "attested",
+      "note": "Охридски пролог за 16. новембар ст. ст.: «Упокојио се мирно у Господу 16. новембра 1585. год. у старости од 92 године.» The day is the day of the feast and the year is the book’s own. The age gives a birth about 1493 and NO BIRTH IS WRITTEN: no book read prints that year, and an age is not a date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (7 October 2026). He is a Russian priest and the Russian calendar is the one most likely to keep him, which makes this the gap most worth closing on this folder."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.11.2025 (16. новембар ст. ст.) — „Преп. Сергије Малопинежски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-29&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second and last entry, FOUR SENTENCES LONG, and the whole of what this folder has. No `locations`: the book places his service «у Вологодској губернији», a nineteenth-century province and not a settlement, and the toponymic in his name points elsewhere, so no coordinate was invented for either. `types` is `venerable` off «Преп.» and `presbyter` off «парохијски свештеник», a parish priest; no `office`, the sees and cures `i18n.test.mjs` can serve being fewer than the ones a reader would want. No `related`: the entry names nobody at all. The forty-seven other Sergius folders in the corpus were checked against him and none has his year, his province or his toponymic."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

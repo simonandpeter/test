@@ -1,0 +1,61 @@
+{
+  "slug": "isaac-of-armenia",
+  "display_name": "Isaac of Armenia",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop",
+  "names": [
+    {
+      "form": "Исак",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. новембар ст. ст., „Св. Исак архиеп. Јерменски.“ — «Св.» is “saint” and not a rank, «архиеп.» is the `archbishop` grade `types` keeps, and «Јерменски» is the church he governed, which §6 strips as a see and which this folder keeps in the display name and in `office`. The bare forename is what is left. Measured: no other folder in the corpus holds «Исак» — the two that hold a Serbian form of the name hold «Исакије», which is a different key — so it joins no fold. The book prints no Latin or Armenian form of the name and none is invented here."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 440,
+      "latest": 440,
+      "display": "440",
+      "basis": "traditional",
+      "note": "Охридски пролог за 20. новембар ст. ст.: «Овај знаменити јерарх упокојио се мирно 440. године и предстао ка Господу.» NO BIRTH IS WRITTEN: the entry says he was born at Constantinople while his father was the Armenian king’s envoy at the Byzantine court and that he governed the church fifty years, which would put the start of his episcopate about 390 — but neither a birth nor an accession is stated anywhere read, and fifty years before a death is not a date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (7 October 2026). Its line for 20 ноября ст. ст. is a long company of Persian martyrs; whether it also keeps this Armenian archbishop was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.12.2025 (20. новембар ст. ст.) — „Св. Исак архиеп. Јерменски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, FIVE SENTENCES, and the whole of what this folder has. THE CORPUS WAS SEARCHED FOR HIM AND HAS NOBODY: the day’s two Isaac folders, `isaacius-20-november` and `isacius-20-november`, are both Persian martyrs of a company of six under Shapur and neither is a bishop; `isaac-of-theodosiopolis` is a martyr of 808 kept on 16 September; and no folder in the corpus joins the word Armenia to an archbishop or to the year 440. `office` is the bare `Archbishop`, which the locale packs carry — `Catholicos of Armenia` and the like they do not, and a reader may not invent four translations, so the see is in the display name and in the life instead. No `locations`: Constantinople is where the entry puts his birth and not his work, and his see it gives only as the nation. No `related`: the entry names nobody but his father, unnamed, and the Armenians as a people."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -16,6 +16,11 @@
       "form": "Авив Едесский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind the line for 15 ноября ст. ст., «Мученик Авив Едесский», with the rank word left off. The line itself gives the name in the genitive and without the toponymic."
+    },
+    {
+      "form": "Авив",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. новембар ст. ст., „Св. муч. Гурије, Самон и Авив.“ — «Св.» is “saint”, «муч.» is the `martyr` grade, and the other two names are the company; the deaconry is in the body and is the `deacon` grade `types` keeps, so the bare forename is the form. It joins a fold of three, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.11.2025 (15. новембар ст. ст.) — „Св. муч. Гурије, Самон и Авив.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name in the day's first entry. `dates` UNTOUCHED: this book gives no year for him at all and puts its only year, 322, on the beheading of the other two, where this folder holds 322 for him and 299–306 for them off days.pravoslavie.ru. The two books therefore disagree about whose year 322 is, and nothing is moved on that account. No `related` row added; the three mutual rows are already on the folder. WHAT THE ENTRY ADDS: that he suffered after the other two and gave up his spirit in the flame, that his mother drew his body whole out of the fire and buried it with them in one grave, the church the Christians raised over the three and the single coffer, and the wonder of the Edessene girl buried alive in the Gothic land. The Serbian form „Авив“ widens a fold to three and the key is written in the same commit."
     }
   ],
   "images": [

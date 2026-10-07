@@ -16,6 +16,11 @@
       "form": "Кикилия (Цецилия) Римская",
       "lang": "ru",
       "note": "Read out of the title on the name link behind her clause for 22 ноября ст. ст., name page 2551, «Кикилия (Цецилия) Римская, мц.», with the rank word left off. The parenthesis is the source’s own: the day line prints the same pair, «Мц. Кикилии (Цецилии)», and the calendar offers no third reading to settle which of the two is the lemma. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Кикилија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 22. новембар ст. ст., „Св. мученица Кикилија (Цицилија).“ — «Св.» is “saint” and «мученица» is the `martyr` grade `types` already keeps, so both come off. THE HEADING PRINTS TWO SPELLINGS AND ONLY ONE IS STORED: «Кикилија» is the heading's own form and «(Цицилија)» is an alternative beside it, not a second word of the name, and §6 allows one form per folder — storing the pair would key as the two-word string «кикилија цицилија», which is neither spelling. The variant is recorded here instead. Measured: no other folder in the corpus holds either string."
     }
   ],
   "sex": "female",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.12.2025 (22. новембар ст. ст.) — „Св. мученица Кикилија (Цицилија).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-05&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry. `dates` UNTOUCHED: the book says «Пострада св. Кикилија са осталима око 230. год.», about 230, which is the earlier of the two readings this folder already holds as «230 or under Diocletian (284–305)» — a year inside an interval the corpus deliberately refused to choose between, so a third book agreeing with one side of it does not close it. No `related` row added: Valerian, Tiburtius and Maximus the guard are all three related both ways already, and the bishop Urban the entry names is identified with none of the five Urbans the corpus keeps, none of whom is a bishop of Rome. WHAT THE ENTRY ADDS: rich and notable parents at Rome, the lifelong vow of virginity and the rough hair shirt worn under the costly clothes her parents gave her, the counsel to the bridegroom on the first night to go to bishop Urban and be baptised and then live a virgin life himself, Valerian converting his own brother, the two brothers winning the captain of the guard on the way to execution and all three suffering together, Cecilia burying their bodies together, FOUR HUNDRED SOULS WON IN ONE EVENING, her answer to the judge that her boldness came «од чисте савести и од вере несумњиве» — of a clean conscience and a faith without doubt — the executioner striking her neck three times without killing her, the faithful gathering the blood from the wound in kerchiefs, sponges and vessels for healing, the three days before she gave up her spirit, her relics resting in the church of her name at Rome, and that the western church counts her the patroness of church singing and music. Measured: no other folder holds «Кикилија»."
     }
   ],
   "hymns": [

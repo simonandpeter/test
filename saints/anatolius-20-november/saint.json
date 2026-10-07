@@ -15,6 +15,11 @@
       "form": "Анатолий Никейский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 20 ноября ст. ст., name page 170, «Анатолий Никейский, мч.», with the rank word left off; the line itself declines the bare forename. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Анатолије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. новембар ст. ст., „Св. муч. Јевстатије, Теспесије и Анатолије.“ — «Св.» is “saint”, «муч.» is the `martyr` grade, and the names beside his are the company; the heading prints nothing that distinguishes him, so the form is the bare forename. It joins a fold of two, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "related": [
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.12.2025 (20. новембар ст. ст.) — „Св. муч. Јевстатије, Теспесије и Анатолије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name in the day's third entry. `dates` UNTOUCHED for the same reason as on his brothers. No `related` row added. The Serbian form widens a fold to two — the other holder is `anatolius-patriarch-of-constantinople`, whose own Serbian form came out of this same book for the Julian 3 July — and the key is written in the same commit."
     }
   ],
   "text": {

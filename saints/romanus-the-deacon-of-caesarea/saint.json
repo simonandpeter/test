@@ -16,6 +16,11 @@
       "form": "Роман Кесарийский, Антиохийский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 18 ноября ст. ст., «Роман Кесарийский, Антиохийский, диакон, сщмч.», with the grade and rank words left off. Both sees are kept because the calendar prints both and its life page explains them: a deacon of Caesarea in Palestine who moved to Antioch. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Роман",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 18. новембар ст. ст., „Св. муч. Роман и Варул.“ — «Св.» is “saint”, «муч.» is the `martyr` grade, and the name beside his is the other member of the pair; his deaconry and his see are both in the body, so the bare forename is the whole of the form. It joins a fold of six, declared in `scripts/corpus-gate.mjs` in the same commit; the string was already five wide and unread."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.12.2025 (18. новембар ст. ст.) — „Св. муч. Роман и Варул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-01&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's second entry, an enumerated pair, and both folders exist. `dates` UNTOUCHED: the book strangles him in prison in 303, which is one side of the «303 or 304» this folder already holds from two calendars a year apart, and a third book choosing between the two does not close the interval. No `related` row added: the child is already related both ways, and the governor Asclepiades is not a saint of this corpus. WHAT THE ENTRY ADDS: that he was a deacon of the church of Caesarea preaching zealously at Antioch, the words spoken in the governor's path to the heathen temple — you sin, governor, the idols are not gods, Christ alone is the true God — the beating and the raking without mercy, and that it was ROMANUS who pointed the child out to the governor, saying that this little child is more sensible than you in your age, for it knows the true God and you do not. The Serbian form „Роман“ widens a fold to six and the key is written in the same commit."
     }
   ],
   "related": [

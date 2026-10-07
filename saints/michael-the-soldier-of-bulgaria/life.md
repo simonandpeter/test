@@ -8,4 +8,8 @@ Going home after the war he delivered the people of a city in the wilderness of 
 
 The day line closes his clause «(866)» and the life page gives no year at all for his death, only the reign. He is not the Bulgarian ruler baptised Michael whom the Greek and Serbian calendars keep on 2 May and whom this corpus already holds: that one is a prince and the baptiser of his people, and this one a soldier of Potuka under a Byzantine emperor of the same name. The corpus keeps them as two folders.
 
-*After the Православный церковный календарь of the Сретенский monastery for 22 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261122.html) and [the life](https://days.pravoslavie.ru/Life/life2585.htm); read 6 October 2026.*
+The Охридски пролог makes him a Bulgarian by birth, who fought with his own company in the Greek army against the Agarenes and the Ethiopians and showed wonders of fearlessness. He killed a dreadful serpent, it says, and freed a maiden. Soon after that this righteous man passed over into eternal life. He lived and died in the ninth century — a century which contains the 866 this folder already holds from another calendar and does not narrow it.
+
+He was buried first somewhere in Thrace, and in the year 1206 the tsar Kalo-Joan had his relics carried to Tarnovo. That year is the translation of the relics and not his death, and nothing in this folder's dates is written from it.
+
+*After the Православный церковный календарь of the Сретенский monastery for 22 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261122.html) and [the life](https://days.pravoslavie.ru/Life/life2585.htm); read 6 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 22. новембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-05&prolog=1), read 7 October 2026.*

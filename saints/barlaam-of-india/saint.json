@@ -6,6 +6,11 @@
       "form": "Варлаам Индийский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 19 ноября ст. ст., name page 353, «Варлаам Индийский, иерей, пустынник», with the two grade words left off; the line itself declines the bare forename. The same day carries a second Barlaam on name page 352 and a third on 355, and all three strings differ. `.tmp/foldchk.py` reports no folder holding this form. He is not the `barlaam-the-anchorite` the Greek calendar keeps near Antioch on 18 July: a different place, a different day, and nothing read joins them."
+    },
+    {
+      "form": "Варлам",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 19. новембар ст. ст., „Преп. Варлам и Јоасаф царевић.“ — «Преп.» is the `venerable` grade `types` already keeps and comes off, and the name beside his is the other member of the pair; India is in the body. The book writes Варлам with one а where the Russian calendar writes «Варлаам Индийский», and §6 stores the form as this book prints it. The same string goes to `barlaam-of-antioch` on this same day, so the two make a fold of two declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 December 2026 (5 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.12.2025 (19. новембар ст. ст.) — „Преп. Варлам и Јоасаф царевић.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's third entry, an enumerated pair. `dates` UNTOUCHED: the book gives him no year at all, only ages — seventy years of ascetic labour in the desert and a hundred years of life in all — and an age is not a date, so the «4th century» this folder holds off the Russian calendar's «(IV)» stands and no birth or death is computed from the ages. No `related` row added: Joasaph is already related both ways, and the other people the entry names — king Abenner and Joasaph's friend Barachias — belong to Joasaph's half of the story. WHAT THE ENTRY ADDS: that the two are ascetics of India, that the elder visited Joasaph by God's providence, taught him the faith of Christ and baptised him, that he then withdrew into the mountain to his labour, that Joasaph came at last and stood before his cave and called out «Bless, father!», the seventy years and the hundred, and that both of them had great love for the Lord Jesus, brought many over to the true faith and passed to the eternal joy of their Lord. THE SERBIAN FORM «Варлам» IS THE SAME STRING THIS DAY GIVES `barlaam-of-antioch`: the fold is made by one day and the key is written in the same commit."
     }
   ],
   "dates": {

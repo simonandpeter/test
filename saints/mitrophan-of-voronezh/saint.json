@@ -11,6 +11,11 @@
       "form": "Μητροφάνης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Μητροφάνης πρώτος επίσκοπος Βορονεζίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Митрофан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 23. новембар ст. ст., „Св. Митрофан еп. Воронежски.“ — «Св.» is “saint” and not a rank, «еп.» is the `bishop` grade `types` keeps, and «Воронежски» is the see this folder carries in `office` as Bishop of Voronezh; §6 strips a rank and a see, so the bare forename is what is left. It joins a fold of two with `mitrophan-of-constantinople`, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.12.2025 (23. новембар ст. ст.) — „Св. Митрофан еп. Воронежски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-06&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's fourth and last entry, four sentences. HIS FIRST SERBIAN DAY AND NOT A SECOND ONE: the row's own note recorded that pravoslavno.rs was checked for 4 септембар ст. ст., the Russian day, and does not name him there, so no second-day note is owed; the Greek keeps him on 23 November as this book does. `dates` CONFIRMED AND UNCHANGED: «Упокојио се 23. нов. 1703. год.» is the same 1703 this folder holds from the Russian calendar, so the year now rests on two books. THE 1832 IT GIVES IS NOT A DATE OF HIS AND IS NOT IN `dates`: it is the year his wonderworking relics were uncovered. No `related`: Peter the Great is not a saint of this corpus. WHAT THE ENTRY ADDS, in four sentences and no more: that he was a famous Russian hierarch, an ascetic and a patriot; THAT HE WAS THE FRIEND AND THE REPROVER OF PETER THE GREAT; the day and year of his repose; and the uncovering of the relics in 1832. The Serbian form „Митрофан“ widens a fold to two and the key is written in the same commit."
     }
   ],
   "locations": [

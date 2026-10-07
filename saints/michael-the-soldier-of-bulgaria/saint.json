@@ -6,6 +6,11 @@
       "form": "Михаил Болгарский, воин",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 1549, «Михаил Болгарский, воин», which carries no rank word to leave off; «воин» is the soldier the day line also calls him. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Михаил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 22. новембар ст. ст., „Св. праведни Михаил војник.“ — «Св.» is “saint” and not a rank, «праведни» is the `righteous` grade and «војник» the `soldier` grade, both of which `types` already keeps, so all three come off and nothing else is printed; Bulgaria is in the body. The bare forename is therefore the only form the heading leaves, and it joins a fold of THIRTEEN — twelve of them held it before this row, unread — declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.12.2025 (22. новембар ст. ст.) — „Св. праведни Михаил војник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-05&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's fourth entry, seven sentences. `dates` UNTOUCHED: the book says «Живео и умро у IX столећу», lived and died in the ninth century, which contains the 866 this folder holds off the Russian day line, so a century does not narrow a year. THE 1206 IT GIVES IS NOT HIS DATE AND IS NOT IN `dates`: it is the year the tsar Kalo-Joan moved his relics to Tarnovo, and a translation of relics is not a death. No `related`: the tsar is not a saint of this corpus and the maiden he freed is not named. WHAT THE ENTRY ADDS: that he was a Bulgarian by birth; that he fought with his company in the Greek army against the Agarenes and the Ethiopians; that he showed wonders of fearlessness; THAT HE KILLED A DREADFUL SERPENT AND FREED A MAIDEN; that he passed to eternal life soon afterwards; that he was buried first somewhere in Thrace; and the translation of 1206. The Serbian form „Михаил“ widens a fold to THIRTEEN, the widest of this block, and the key is written in the same commit."
     }
   ],
   "dates": {

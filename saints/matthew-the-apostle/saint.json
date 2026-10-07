@@ -16,6 +16,11 @@
       "form": "Матфей",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 16 ноября ст. ст., name page 1500, «Апостол Матфей», with the rank word left off. The calendar gives him no toponymic and no second name, so the bare forename is the fullest form it has; `matthew-monk-martyr-1918` already holds the same form, and the two are the apostle and a monk martyred in 1918."
+    },
+    {
+      "form": "Матеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 16. новембар ст. ст., „Св. апостол Матеј Јеванђелист.“ — «Св.» is “saint” and not a rank, «апостол» is the `apostle` grade and «Јеванђелист» the `evangelist` grade, both of which `types` already keeps, so all three come off and the bare forename is the whole of the form. It joins a fold of two, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -86,8 +91,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.11.2025 (16. новембар ст. ст.) — „Св. апостол Матеј Јеванђелист.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-29&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry and much the longer of the two. `dates` UNTOUCHED: the entry gives no year of any kind, not even a reign, where this folder holds the death at 60 off days.pravoslavie.ru. No `related` row added: the two people the entry names are the prince of Ethiopia, whom it does not name at all and whom the Russian calendar names Fulvian — already related both ways on this folder — and the bishop Plato he set over Ethiopia, whom nothing read identifies with any of the three Platos the corpus keeps, none of them Ethiopian and none of them of the first century. WHAT THE ENTRY ADDS: the call at Capernaum out of Matthew 9:9 and the dinner in his own house, Parthia and Media beside Ethiopia, Plato left as bishop while the apostle withdrew to a mountain, the baptism of the prince's WIFE AND SON, the two guards who heard his voice and could not see him and who threw down their weapons before the light, the prince blinded and healed and seeing with bodily eyes only, the fire laid twice on his breast, the leaden chest thrown into the sea and shown to Plato in a vision, the prince baptised with the apostle's own name and made presbyter and then bishop after Plato, the Gospel written in Hebrew and lost in Hebrew, and that he never ate meat. The Serbian form „Матеј“ widens a fold to two and the key is written in the same commit."
     }
   ],
   "hymns": [

@@ -16,6 +16,11 @@
       "form": "Гурий Едесский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind the line for 15 ноября ст. ст., «Мученик Гурий Едесский», with the rank word left off. The line itself gives the name in the genitive and without the toponymic."
+    },
+    {
+      "form": "Гурије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. новембар ст. ст., „Св. муч. Гурије, Самон и Авив.“ — «Св.» is “saint” and not a rank, «муч.» is the `martyr` grade `types` already keeps, and the two names beside his are the heading's other members; nothing else is printed, so the bare forename is the whole of the form. It joins no fold: no other folder in the corpus holds this string."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.11.2025 (15. новембар ст. ст.) — „Св. муч. Гурије, Самон и Авив.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry, an enumerated company of three, and all three folders exist. `dates` UNTOUCHED AND A CONFLICT RECORDED: the book beheads him and Samonas «322. године при опаком цару Ликинију», where this folder holds 299–306 attested off days.pravoslavie.ru, and 322 is the year the same Russian calendar gives to Abibus alone. Two books disagree by sixteen years or more; the interval already recorded stands and the book's year is written into the life as a disagreement, not into `dates`. No `related` row added: the only people the entry names besides the three are Licinius, Abibus's mother, an Edessene widow, her daughter and the Gothic soldier who swore falsely at the grave, and the three mutual rows are already on the folder. WHAT THE ENTRY ADDS: the withdrawal out of the city into fasting and prayer, the counsel given to the faithful who came out to them, the answer to the judge that obedience to the emperor would destroy them whether he killed them or not, the prison from 1 August to 10 November, the second torture, the church raised over the three when the persecution ceased, the single coffer, and the wonder of the girl buried alive in the Gothic land and set down by their tomb in Edessa."
     }
   ],
   "images": [

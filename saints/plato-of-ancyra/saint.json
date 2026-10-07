@@ -16,6 +16,11 @@
       "form": "Платон Анкирский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 18 ноября ст. ст., «Платон Анкирский, мч.», with the rank word left off; the line itself declines the forename and gives no see at all. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Платон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 18. новембар ст. ст., „Св. муч. Платон.“ — «Св.» is “saint” and not a rank and «муч.» is the `martyr` grade `types` already keeps, so both come off and the heading prints nothing else at all; Ancyra is in the body. The form is therefore the bare forename, which is also what the Romanian calendar prints for him. Measured: no other folder holds this string and it joins no fold."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.12.2025 (18. новембар ст. ст.) — „Св. муч. Платон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-01&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry. `dates` UNTOUCHED AND A LARGE CONFLICT RECORDED: this book beheads him «око 266. год.» where the folder holds «302 or 306», an interval already widened to hold two other calendars' readings of the Diocletianic persecution. ABOUT 266 IS THIRTY-SIX TO FORTY YEARS EARLIER AND FALLS OUTSIDE IT ENTIRELY, so it is not a narrowing and not a widening but a third reading, and writing it in would make the folder claim an interval 266–306 that no source states. Nothing moved; the year is written into the life as the book's own and is a line for the author. No `related` row: the men the entry names are the governor Agrippinus and Plato the philosopher, and neither is a saint of this corpus. WHAT THE ENTRY ADDS: Ancyra of Galatia named as today's Ankara, a Christian by birth and upbringing, the open preaching against the worship of dead creatures, the two deaths and two lives answered to the governor, red-hot iron balls laid on his bared body and strips cut from his skin, the cry to torture him harder so that the inhumanity and the endurance should both be plain, THE EXCHANGE ABOUT HIS NAMESAKE — that he is no more like Plato the philosopher than in the name, one teaching the wisdom which is Christ's and the other that which is folly before God — and the eighteen days in prison without food or water, with the answer to the astonished guards that they are filled with meat and he with holy prayers, they gladdened by wine and he by Christ the true vine. Measured: no other folder in the corpus holds the form «Платон», so it folds with nothing."
     }
   ],
   "hymns": [

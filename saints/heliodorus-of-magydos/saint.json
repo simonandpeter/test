@@ -15,6 +15,11 @@
       "form": "Илиодор Магидский (Памфилийский)",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 19 ноября ст. ст., «Илиодор Магидский (Памфилийский), мч.», with the rank word left off; the line itself gives the bare declined forename. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Илиодор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 19. новембар ст. ст., „Св. муч. Илиодор.“ — «Св.» is “saint” and «муч.» is the `martyr` grade `types` already keeps, so both come off and the heading prints nothing else; Magydos is in the body. Measured: no other folder holds this string and it joins no fold."
     }
   ],
   "dates": {
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.12.2025 (19. новембар ст. ст.) — „Св. муч. Илиодор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's fourth and last entry, six sentences. `dates` UNTOUCHED: the book dates him only by the reign — «у време цара Аврелијана» — and Aurelian's years contain the «272 or 273» this folder already holds from two calendars a year apart, so a reign is not a narrowing. No `related`: the entry names nobody but the judge, who is not named. WHAT THE ENTRY ADDS: Magydos in Pamphylia, which the folder's Greek form already carried; the voice from heaven under the heavy torments, «Fear not, I am with you»; the red-hot bronze ox he was thrown into, his diligent prayer inside it, the ox cooling all at once and Heliodorus coming out alive; the judge's charge that he worked some magic, and the answer that is the best line of the day — «My magic is Christ!» — and the beheading. Measured: no other folder in the corpus holds «Илиодор», so it folds with nothing."
     }
   ],
   "text": {

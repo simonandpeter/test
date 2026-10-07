@@ -11,6 +11,11 @@
       "form": "Иоасаф Индийский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 19 ноября ст. ст., name page 1032, «Иоасаф Индийский, царевич, прп.», with the grade and rank words left off; the line itself declines the forename and keeps the epithet in a separate clause. `.tmp/foldchk.py` reports no folder holding this form. The Greek calendar keeps him on 26 August and this one on 19 November; the Greek row is untouched, since the schema holds one feast per church."
+    },
+    {
+      "form": "Јоасаф",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 19. новембар ст. ст., „Преп. Варлам и Јоасаф царевић.“ — «Преп.» is the `venerable` grade `types` keeps, «царевић» is a king's son and is a rank word and not part of the name, and the name beside his is the other member of the pair; so the bare forename is the form. It joins a fold of two with `joasaph-disciple-of-niphon`, whose own Serbian form came out of this same book for the Julian 26 October, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -62,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.12.2025 (19. новембар ст. ст.) — „Преп. Варлам и Јоасаф царевић.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name in the day's third entry. THE GREEK KEEPS HIM ON 26 AUGUST AND THIS BOOK ON THE JULIAN 19 NOVEMBER, with the Russian; the serbian row was `undocumented` and its own note records that pravoslavno.rs was read for the August week and does not name him there, so this is his first Serbian day and not a second one — no second-day note is owed. `dates` UNTOUCHED: the book gives him ages and not years — the kingdom left in his twenty-fifth year and thirty-five years lived in the desert — and the four years of repentance it gives his father are his father's; the floruit of 306 to 337 this folder holds off saint.gr stands. `types` NOT TOUCHED EITHER: «царевић» in the heading is a king's son, and whether that is the `prince` grade beside the `venerable` he carries, on a folder whose `office` is already King of India because he reigned, is a reading of the sources together and not of the newest one — it is a question for the author. No `related` row added: Barlaam and Abenner are both related both ways already. WHAT THE ENTRY ADDS: that he brought his own father to Christ, that Abenner lived four years in great repentance after baptism for the great sins he had committed persecuting Christians, that Joasaph handed the kingdom to his friend Barachias and went to the desert, and the cry at the cave mouth. The Serbian form widens a fold to two and the key is written in the same commit."
     }
   ],
   "text": {
