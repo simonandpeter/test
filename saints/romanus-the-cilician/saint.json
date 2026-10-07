@@ -11,6 +11,11 @@
       "form": "Роман Антиохийский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 1873, «Роман Антиохийский (Сирийский), отшельник», with the trailing grade and the alternative by-name left off; its life page 3236 is titled «Преподобный Роман Антиохийский». The day line gives only «Романа чудотворца», the wonderworker, with no by-name at all."
+    },
+    {
+      "form": "Роман",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. новембар ст. ст., „Преп. Роман чудотворац.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, and «чудотворац» is Чудотворац, the `wonderworker` grade it also keeps, so both rank words come off and the heading prints nothing else at all: Antioch is in the body, so there was no «Роман Антиохијски» on the page to copy and none was constructed. The bare forename therefore stands, and it was measured before it was written: it joins the SIX-MEMBER fold the Serbian wave keyed on 7 October 2026, which is widened to seven in this commit with the whole of its earlier reading carried forward and the narrower key deleted in the same pass."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.12.2025 (27. новембар ст. ст.) — „Преп. Роман чудотворац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, FIVE SHORT SENTENCES. HE IS THE ANTIOCHENE AND NOT ANOTHER ROMAN: the entry puts him «у околини Антиохије», in the country round Antioch, which is the see the folder’s own Russian form carries — «Роман Антиохийский» — on the same menologion number the Russian calendar keeps him on, and the cell without fire and the help given to barren women are this folder’s dossier and no other’s. `dates` UNTOUCHED: the book gives no year, no reign and no century, so the «5th century» this folder reads off the Russian calendar’s Roman numeral stands untouched and unconfirmed. No `related` row: the entry names nobody. No `locations`: the folder has none and Antioch is given as the country round a city and not as a place he was fixed at for a bounded span. WHAT THE ENTRY ADDS: the asceticism in the country round Antioch; THE CELL IN WHICH HE NEVER ONCE LIT A FIRE OR A CANDLE; the peaceful end; and that he was a wonderworker in his life and after it and helps barren women who pray to him. NOTE FOR THE AUTHOR: this folder’s Greek row stands on 9 February and its Russian on 27 November, and this book agrees with the Russian."
     }
   ],
   "text": {

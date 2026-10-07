@@ -72,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Свт. Мардария (1935) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      },
+      "note": "THIS ROW IS SECOND-HAND AND SAYS SO. No Serbian-church page was read for him and none is cited: the source above is the RUSSIAN calendar’s own line, which marks the commemoration «(Серб.)» — of the Serbian church — and sets it on the Julian 29 ноября, and that marker is the whole of the documentary basis for the day and the calendar. The page was read again for this row on 8 October 2026, in the cached copy the corpus already holds, and the marker is there in the day’s list between the bishop of Nekresi and a venerable, with his name page 14981 titled «Святитель Мардарий (Ускокович), епископ». Beside it stands doxologia.ro’s statement, which this folder’s life already carries, that the Serbian Church canonised him in 2015. THE ОХРИДСКИ ПРОЛОГ FOR THIS DAY DOES NOT NAME HIM, AND THAT IS NOT AN ABSENCE OF VENERATION: that day page was read whole on 8 October 2026 and its five entries are Paramon with the three hundred and seventy, Acacius of Sinai, Dionysius of Corinth, Tiridates of Armenia and the senator Apollonius. The book is Bishop Nikolai’s and predates the 2015 glorification by eighty years, so it could not print him, and the whole Serbian wave of this corpus is read out of that book. THE PAGE STILL TO READ, and it is the one that would make this row first-hand, is the Serbian Patriarchate’s own calendar for 29. новембар ст. ст.; it has NOT been read, here or anywhere in this corpus. NO SERBIAN NAME FORM IS WRITTEN: neither page read prints one. The Russian calendar gives «Мардарий (Ускокович)», which this folder already holds as its `ru` form, and the Prologue gives nothing, so there was no Serbian string to copy and none was transliterated. `dates`, `types`, `office` and `related` are all untouched."
     }
   ],
   "text": {

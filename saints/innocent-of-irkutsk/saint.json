@@ -17,6 +17,11 @@
       "form": "Иннокентий (Кульчицкий)",
       "lang": "ru",
       "note": "days.pravoslavie.ru's name page 951 heads him «Святитель Иннокентий, епископ Иркутский», which leaves nothing but the forename once the rank and the see are off it; its life page 6608 heads him «Святитель Иннокентий (Кульчицкий), первый епископ Иркутский», and the surname is read from there. The form is kept with the surname because the corpus already holds nine other folders on the bare «Иннокентий»."
+    },
+    {
+      "form": "Инокентије Иркутски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. новембар ст. ст., „Св. Инокентије Иркутски, чудотворац.“ — «Св.» is “saint” and not a rank, and «чудотворац» is Чудотворац, the `wonderworker` grade this folder already keeps, so it comes off with the comma before it. «Иркутски» is KEPT: it is the see adjective, the folder’s `office` is already Bishop of Irkutsk, and it is what the heading gives beyond the forename. Measured before it was written: neither this form nor the bare «Инокентије» stands on any other folder, so either would have joined no fold, and the fuller one is written because BRIEF-SERBIAN §6 asks for the fullest the calendar gives."
     }
   ],
   "office": "Bishop of Irkutsk",
@@ -67,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.12.2025 (26. новембар ст. ст.) — „Св. Инокентије Иркутски, чудотворац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fifth and last entry, TWO SENTENCES — a year of repose and a year the relics were uncovered, and nothing else whatever. `dates` UNTOUCHED: the book’s «Скончао 1731. год.» is exactly the 1731 this folder already holds from saint.gr, which has no narrative either. THE UNCOVERING OF THE RELICS IN 1804 IS NEW TO THE CORPUS and is NOT a date for `dates`, which holds the man’s own years and not his relics’; it is recorded in the life and in this note. No `related` row: the entry names nobody. No `locations`: Irkutsk is in the heading as the see this folder already carries in `office`, and the entry does not place him anywhere for any span."
     }
   ],
   "text": {

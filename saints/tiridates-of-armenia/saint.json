@@ -1,0 +1,61 @@
+{
+  "slug": "tiridates-of-armenia",
+  "display_name": "Tiridates",
+  "types": [
+    "king"
+  ],
+  "names": [
+    {
+      "form": "Тиридат",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 29. новембар ст. ст., „Св. Тиридат цар Јерменски.“ — «Св.» is “saint” and not a rank, and «цар Јерменски» is Цар with the nation he reigned over, which BRIEF-SERBIAN §5 reads as `king` or `empress` according to what the person was: he was the king of the Armenians, so the type is `king` and the whole phrase comes off the form. The heading prints nothing else, so the bare forename is the whole of it. Measured before it was written: no other folder in the corpus holds this string and it joins no fold."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 29. новембар ст. ст.: «Скончао мирно у IV веку» — he ended peacefully in the fourth century. The same entry calls him «Савременик Диоклецијанов», a contemporary of Diocletian, whose reign ended in 305 and which agrees with the opening of that century without narrowing it. The book gives no year of birth and no year of death, and none is inferred; this is the only source read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day. Its page for 29 ноября ст. ст. was read on this day for another folder on this same list and does not name him, but it was read for that folder and not scanned entry by entry for this one, so this is a gap in the reading and not a finding that the Russian church does not keep him (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.12.2025 (29. новембар ст. ст.) — „Св. Тиридат цар Јерменски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, SIX SHORT SENTENCES, and the whole of the dossier. `types` is `king` alone. `dates` holds only the century the book states for his end. No `locations`: Armenia is in the rank phrase as the nation he reigned over and the entry fixes him at no place. ONE `related` row, both halves, and THE IDENTIFICATION IS MADE ON THE BOOK’S OWN CROSS-REFERENCE AND NOT ON THE NAME: the healer is «св. Григорије (в. 30. септембар)», and 30 September is the day all four of `gregory-the-illuminator`’s venerated rows carry — the corpus holds many Gregories and that folder is the enlightener of the Armenians, whose own `related` rows are Rhipsime, Gaiane and the thirty-two virgin martyrs of that same persecution. NOT A FOLDER AND NOT LINKED: Nebuchadnezzar, to whom the book likens his madness, and Diocletian. WHAT THE ENTRY GIVES: that he was a contemporary of Diocletian; that he first persecuted the Christians horribly; THAT THE JUDGEMENT OF GOD OVERTOOK HIM AND HE WENT MAD AND BECAME LIKE A BEAST, as Nebuchadnezzar once did; that Gregory healed him of the madness by a wonder; and that from then until his death he passed his life in repentance and piety, and ended peacefully in the fourth century."
+    }
+  ],
+  "related": [
+    "gregory-the-illuminator"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

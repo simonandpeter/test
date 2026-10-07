@@ -1,0 +1,58 @@
+{
+  "slug": "maurice-the-emperor",
+  "display_name": "Maurice, slain with his five sons",
+  "types": [
+    "king"
+  ],
+  "names": [
+    {
+      "form": "Маврикије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 28. новембар ст. ст., „Св. благоверни цар Маврикије.“ — «Св.» is “saint” and not a rank; «цар» is Цар, which BRIEF-SERBIAN §5 says is read as `king` or `empress` according to what the man was, and he was an emperor, so the type is `king` and the word comes off the form; «благоверни», right-believing, is a piety word and not a rank, and it comes off with it because it ranks nothing and names nothing. The heading prints nothing else at all, so the bare forename is the whole of the form. MEASURED BEFORE IT WAS WRITTEN AND IT IS NOT FREE: the string already stands on `maurice-of-apamea`, who holds it as his own Serbian form off this same book’s Julian 22 February, and the two-member fold it makes is declared in `scripts/corpus-gate.mjs` in this commit."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 602,
+      "latest": 602,
+      "display": "602",
+      "basis": "traditional",
+      "note": "Охридски пролог за 28. новембар ст. ст., which is the whole of the entry: «Погубљен са пет синова својих од цара Фоке 602. год.» — put to death with his own five sons by the emperor Phocas in the year 602. It is the only source read for him and the only year it gives; there is no year of birth anywhere in the entry."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.12.2025 (28. новембар ст. ст.) — „Св. благоверни цар Маврикије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth and last entry and ONE SENTENCE LONG — the shortest entry this reader has met in the book. It is the whole dossier: put to death with his five sons by the emperor Phocas in 602. `types` is `king` alone, off «цар», read as `king` and not `empress` because he was a man; the corpus has no `emperor` type and BRIEF.md §9’s list is the only one a folder may use. `dates` holds the one year the entry gives and there is no year of birth. No `locations`: the entry names no place at all. NO `related` ROW AND NO LINK: the five sons are not named, Phocas is not a saint of this corpus, and nothing else is in the sentence. HE IS NOT `maurice-of-apamea`, who shares his Serbian form: that man is a `martyr` and `soldier` of about 305 who died at Apamea with seventy soldiers and whom this same book keeps on the Julian 22 February. An emperor killed by his successor in 602 and a soldier martyred under Diocletian are two men, and nothing read joins them. NO OTHER CALENDAR WAS READ FOR HIM, so whether the Russian, Romanian or Greek keeps him is unknown here and is NOT claimed either way."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

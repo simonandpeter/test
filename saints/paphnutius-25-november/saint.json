@@ -1,0 +1,49 @@
+{
+  "slug": "paphnutius-25-november",
+  "display_name": "Paphnutius (25 November)",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Пафнутије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 25. новембар ст. ст., „Преп. Пафнутије.“ — «Преп.» is Преподобни, the `venerable` grade `types` keeps, so it comes off, and the heading prints nothing else at all: no see, no country, no monastery and no by-name, so the bare forename is the whole of the form and there was nothing fuller to reach for. Measured with the corpus’s own fold key before it was written: the string stands on one other folder, `paphnutius-of-the-thebaid`, which is a different man of a different dossier on a different day of this same book, and the two-member fold is declared in `scripts/corpus-gate.mjs` in this commit."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.12.2025 (25. новембар ст. ст.) — „Преп. Пафнутије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-08&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third and last entry, FOUR SENTENCES LONG, and the whole of the dossier is that he never drank wine, that brigands once caught him and their chief made him drink a cup, and that the chief repented at his good nature and left off robbery. No `dates`: the entry gives no year, no reign and no century, and none is inferred. No `locations`: it names no place whatever. `types` is `venerable` alone, off «Преп.», and there is no other rank word in the heading. No `related` row: the only other person in the entry is the brigand chief, who is not named and is not a saint of this corpus. WHY THIS IS A NEW FOLDER AND NOT A ROW ON ONE OF THE NINE PAPHNUTII THE CORPUS ALREADY HOLDS: not one of the nine dossiers has wine, brigands or a converted robber in it, and the nearest claim on the name is `paphnutius-of-the-thebaid`, who already carries a venerated serbian row OUT OF THIS SAME BOOK for the Julian 11 September, where he is the one-eyed confessor bishop of the Thebaid who spoke at the First Ecumenical Council against forbidding married priests. The Prologue therefore keeps two men of this name on two days with two accounts that share nothing, which is the ground for a second folder; the other eight are the father of Euphrosyne, the abbot of Borovsk, one of the Three Hundred Alamanoi, the painter Pârvu, the Egyptian of 25 September, the recluse of the Kyiv Caves, the hieromartyr of 19 April and the new venerable-martyr Kostin, and no reading was found joining any of them to a teetotaller caught by robbers."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

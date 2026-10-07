@@ -16,6 +16,11 @@
       "form": "Алипий Столпник, Адрианопольский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 137, «Преподобный Алипий Столпник, Адрианопольский», with the rank word left off. The day line itself declines the name and gives only «Алипия столпника», so the by-name of Adrianople is read from the name page and not from the line."
+    },
+    {
+      "form": "Алимпије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. новембар ст. ст., „Преп. Алимпије Столпник.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, and «Столпник» is Столпник, the `stylite` grade it also keeps, so both rank words come off and the heading prints nothing else; Adrianople and Paphlagonia are in the body. Measured before it was written: no other folder in the corpus holds this string and it joins no fold. It is the Serbian vernacular form of the name the Russian calendar writes «Алипий» and the Greek «Αλύπιος», and it is not folded towards either, both of which this folder already carries."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.12.2025 (26. новембар ст. ст.) — „Преп. Алимпије Столпник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the longest of the five. `dates` UNTOUCHED, and the reason is the whole of this note’s difficulty: the book says «Преживевши 100 година упокоји се 640. год. у време цара Ираклија» — a hundred years lived and the repose in 640 — where this folder holds a birth of 522 from the Russian calendar and a death of «608 or 640», the two years two calendars give. THE BOOK AGREES WITH THE LATER END, 640, AND IT WOULD CLOSE THE INTERVAL; it is NOT closed, because an interval that records a disagreement between two books is not settled by a third agreeing with one of them, and the folder’s own note says so. THE AGE DISAGREES BESIDES: a hundred years against the folder’s birth of 522 would put the repose about 622, and the Russian life this folder quotes makes him 118 at his death in 640. A hundred, a hundred and eighteen, and saint.gr’s «100 χρόνια, κατ’ άλλους 120» — three ages, and no reader may pick among them. ONE `related` row added, the reverse half of the third entry’s: the book makes `stelian-the-paphlagonian` his countryman and his contemporary. WHAT THE ENTRY ADDS: his birth at Adrianople in Paphlagonia and his being given to God’s service from childhood; his deaconate in the church of that city under its bishop; THE HEATHEN GRAVEYARD OUTSIDE THE WALLS THAT PEOPLE FLED AS A HAUNTED PLACE, where he planted a cross and built a church to the great martyr who had appeared to him in a dream; FIFTY-THREE FULL YEARS ON THE PILLAR beside it; the demons who threw stones at him and gave him no peace day or night, and who at the last were beaten and fled; the two monasteries that rose round the pillar, a men’s on one side and a women’s on the other, with his own mother and sister in the women’s; his guiding of both from the pillar by word and example; THE COLUMN OF HEAVENLY LIGHT THAT WOULD RISE FROM HIM TO THE SKY; and his head, kept at the monastery of Koutloumousiou on the Holy Mountain. NOT IDENTIFIED and no row written: the bishop under whom he served as deacon is named in the book, and the corpus holds no folder this reader could join to him."
     }
   ],
   "images": [
@@ -82,7 +97,8 @@
     }
   ],
   "related": [
-    "euphemia-the-great-martyr"
+    "euphemia-the-great-martyr",
+    "stelian-the-paphlagonian"
   ],
   "hymns": [
     {

@@ -14,6 +14,11 @@
       "form": "Ecaterina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 noiembrie, «Sfânta Mare Muceniță Ecaterina», with the rank words left off."
+    },
+    {
+      "form": "Екатерина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. новембар ст. ст., „Св. вел. мученица Екатерина.“ — «Св.» is “saint” and not a rank and «вел. мученица» is the `great-martyr` grade `types` already keeps, so both come off and the heading prints nothing else; Alexandria is in the body. Measured: no other folder in the corpus holds this string and it joins no fold."
     }
   ],
   "sex": "female",
@@ -86,8 +91,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.12.2025 (24. новембар ст. ст.) — „Св. вел. мученица Екатерина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-07&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry, and the row's own note said pravoslavno.rs had not been read for this saint at all. `dates` UNTOUCHED: the book beheads her «24. новембра 310. године», and 310 is INSIDE the «304–313» this folder already holds as the disagreement between saint.gr's 304 and the Russian calendar's reign 305–313, so nothing is narrowed and nothing widened. A SMALL INCONSISTENCY RECORDED AND NOT RESOLVED: the same sentence puts her death «у својој 18. години», in her eighteenth year, which with the 282 birth this folder holds from saint.gr would give about 300 and not 310 — two of the three figures are this book's and the third is another's, and no reader may pick among them. No `related` row added: the empress Augusta-Basilissa, the stratelates Porphyrius with his two hundred soldiers and the company of philosophers are all three already related both ways. A COUNT THAT DISAGREES, recorded: this book says FIFTY wise men were called to dispute with her and fifty were burned, where the folder's companion is `hundred-and-fifty-rhetors`, a hundred and fifty; no folder was touched and neither number was changed. WHAT THE ENTRY ADDS: her father the emperor Costus and her life at Alexandria with her mother after his death; the mother a secret Christian who brought her to the faith through her own spiritual father; THE RING RECEIVED FROM THE LORD JESUS IN A VISION AS A TOKEN OF BETROTHAL, WHICH THE BOOK SAYS IS ON HER HAND TO THIS DAY; her learning in Greek philosophy, medicine, rhetoric and logic and her unusual bodily beauty; the confession of Christ by the philosophers before their burning; the angel who stopped and broke the wheel; the Lord himself appearing afterwards to comfort her; MILK FLOWING FROM HER BODY INSTEAD OF BLOOD; and her wonderworking relics resting on Sinai. Measured: no other folder holds «Екатерина»."
     }
   ],
   "historicity": "traditional",

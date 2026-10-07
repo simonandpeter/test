@@ -12,6 +12,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Πέτρος Ιερομάρτυρας Αρχιεπίσκοπος Αλεξανδρείας», with the rank words and the see left off."
+    },
+    {
+      "form": "Петар Александријски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 25. новембар ст. ст., „Свешт. муч. Петар архиепископ Александријски.“ — «Свешт. муч.» is Свештеномученик, the `hieromartyr` grade this folder already keeps, and «архиепископ» is the `archbishop` grade it also keeps, so both rank words come off. «Александријски» is KEPT: it is the see adjective, the folder’s `office` is already Archbishop of Alexandria, and the bare «Петар» is the form BRIEF-SERBIAN §6 names as the worst fold in this calendar, standing on eleven folders already — five of which carry the bare display name «Peter». The fuller form was measured before it was written and stands on no other folder, so it joins no fold."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.12.2025 (25. новембар ст. ст.) — „Свешт. муч. Петар архиепископ Александријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-08&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, and the same one-day difference as the first: the Romanian and the Greek keep him on 24 November, this book on the Julian 25 November, and nothing was moved to reconcile them. `dates` WIDENED BY AN ADDITION AND NOT BY A CHANGE: the death year 311 is untouched and is the Greek calendar’s, and the book agrees with it; what the book adds is an accession, «На престо архиепископски ступио 299. године», which is recorded as a floruit of 299 to 311 beside the death. The two figures are consistent with the twelve years’ pastorate saint.gr states and neither is preferred over the other. NOT WRITTEN, deliberately: the entry says that six hundred and seventy Christians suffered at Alexandria in his time, and the corpus keeps that company as a folder on this same menologion number; the sentence is about the years of his episcopate and not about a company he belonged to, so the company was left unlinked and took no `related` row and no serbian row — it is not a heading on this day. NOT IN THE CORPUS AT ALL, and a line for the author: the book makes him the disciple and follower of «светог Теоне, архиепископа Александријског», Theonas archbishop of Alexandria, and no folder of this corpus holds that man — the four Theonases it keeps are of 20 April, of Thessalonica, the one called Synesius, and the one kept with Symeon and Pherbinus. WHAT THE ENTRY ADDS: the discipleship under Theonas; his time teaching in the famous philosophical school of Origen; the accession of 299 and the martyrdom AT THE TOMB OF THE APOSTLE MARK in 311; the violence done to the faithful from outside by unbelievers and from inside by heretics; whole families led out to execution together; his cutting Arius off from the Church and cursing him in this world and the next; and the Lord himself appearing to him in prison."
     }
   ],
   "images": [
@@ -130,12 +145,19 @@
     "life": "life.md"
   },
   "dates": {
+    "floruit": {
+      "earliest": 299,
+      "latest": 311,
+      "display": "299–311",
+      "basis": "traditional",
+      "note": "Охридски пролог за 25. новембар ст. ст.: «На престо архиепископски ступио 299. године, а мученички скончао при гробу св. ап. Марка 311. год.» The interval is his episcopate as that book states its two ends, and it agrees with the twelve years saint.gr gives him. It is recorded beside the death and not instead of it, and neither book is preferred."
+    },
     "death": {
       "earliest": 311,
       "latest": 311,
       "display": "311",
       "basis": "traditional",
-      "note": "saint.gr heads the page «Αγιος Πετρος Ιερομαρτυρας Αρχιεπισκοπος Αλεξανδρειας (; - 311)» and the narrative gives the month with it: «όπου τον αποκεφάλισαν τον Νοέμβριο του 311 μ.Χ. αφού ποίμανε την Εκκλησία της Αλεξάνδρειας 12 χρόνια». The page gives no year of birth."
+      "note": "saint.gr heads the page «Αγιος Πετρος Ιερομαρτυρας Αρχιεπισκοπος Αλεξανδρειας (; - 311)» and the narrative gives the month with it: «όπου τον αποκεφάλισαν τον Νοέμβριο του 311 μ.Χ. αφού ποίμανε την Εκκλησία της Αλεξάνδρειας 12 χρόνια». The page gives no year of birth. The Охридски пролог за 25. новембар ст. ст. agrees on the year: «а мученички скончао при гробу св. ап. Марка 311. год.»"
     }
   }
 }

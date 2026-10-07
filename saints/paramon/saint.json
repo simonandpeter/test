@@ -16,6 +16,11 @@
       "form": "Парамон Вифинский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 1735, «Парамон Вифинский, мч.», with the trailing grade left off. The day line gives only «Мч. Парамона», without the by-name, and Bithynia is read from the name page."
+    },
+    {
+      "form": "Парамон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. новембар ст. ст., „Св. муч. Парамон и других 370.“ — «Св.» is “saint” and not a rank and «муч.» is Мученик, the `martyr` grade this folder already keeps, so both come off. «и других 370», and three hundred and seventy others, is the company the heading joins to him and not part of his name, so it comes off too. Measured before it was written: no other folder in the corpus holds this string and it joins no fold."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.12.2025 (29. новембар ст. ст.) — „Св. муч. Парамон и других 370.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry. THE THREE HUNDRED AND SEVENTY ARE NOT A SECOND FOLDER, and the reason is in this folder’s own Greek row: saint.gr heads him «Άγιος Παράμονος και οι Τριακόσιοι Εβδομήντα Μάρτυρες», Paramon AND the three hundred and seventy martyrs, so the corpus already keeps the company inside this folder and the Prologue’s «и других 370» is the same commemoration. The company enumerates NOBODY — the entry does not name one of the three hundred and seventy — which is BRIEF.md §4’s ruling for a heading that names nobody, so it would have been one folder even had there been none. `dates` UNTOUCHED: the book’s «Пострадаше 250. године» is exactly the 250 this folder already holds from saint.gr. No `related` row: the prince Aquilinus is not a saint here and nobody else is named. WHAT THE ENTRY ADDS: the setting in Bithynia in Asia and the prince Aquilinus who persecuted the Christians dreadfully; the three hundred and seventy taken at once and led bound to a place where there was a temple of the idol Poseidon; the prince forcing them to bow to the idol and sacrifice, ON PAIN OF DEATH, AND NOT ONE OF THEM OBEYING; PARAMON HIMSELF PASSING ALONG THE ROAD BY THE TEMPLE AS A PRIVATE MAN, stopping at the crowd of bound people, learning what was happening, and crying out „О колико невиних праведника хоће скверни кнез да закоље зато што се не клањају мртвим и немим идолима његовим!“ before going on his way; the servants sent after him who first pierced his tongue with a thorn, then stripped him and pricked his whole body through, and his giving up his soul with prayer in his heart; and the three hundred and seventy beheaded with the sword after him, great as sons of God and innocent as lambs."
     }
   ],
   "hymns": [

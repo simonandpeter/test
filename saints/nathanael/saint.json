@@ -11,6 +11,11 @@
       "form": "Ναθαναήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Όσιος Ναθαναήλ», with the rank word left off."
+    },
+    {
+      "form": "Натанаил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. новембар ст. ст., „Преп. Натанаил.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, so it comes off and the heading prints nothing else; Nitria is in the body. Measured before it was written: no other folder in the corpus holds this string and it joins no fold, and it is not folded towards the Romanian «Natanail» or the Greek «Ναθαναήλ» this folder already carries."
     }
   ],
   "sex": "male",
@@ -56,11 +61,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.12.2025 (27. новембар ст. ст.) — „Преп. Натанаил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fifth and last entry, FOUR SHORT SENTENCES. `dates` WRITTEN WHERE THE FOLDER HAD NONE AT ALL: «Упокојио се у Господу у другој половини VI столећа» is a half-century the book states for his repose, so it is recorded as a death of 551 to 600 displayed «late 6th century», which is the form `lib/date-display.js` parses; it is the corpus’s first year of any kind for him, the Romanian and Greek rows he already carries giving none. THE DISPLAY IS NOT THE BOOK’S OWN WORDS: the book says «the second half of the sixth century», and the test requires a form the reader’s parser knows, so «late» stands for «the second half of» and the book’s own phrase is quoted whole in the note. No `related` row: the entry names nobody. No `locations`: Nitria is named as the desert he was a monk of and the entry does not fix him at a place for a bounded span. WHAT THE ENTRY ADDS, which is all of it: that he was a monk of Nitria; that he prayed to God day and night and enlightened himself by thinking on divine things; AND THAT HE DID NOT GO OUT OF HIS CELL, NOT EVEN OVER ITS THRESHOLD, FOR THIRTY-EIGHT FULL YEARS."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 551,
+      "latest": 600,
+      "display": "late 6th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 27. новембар ст. ст.: «Упокојио се у Господу у другој половини VI столећа» — he fell asleep in the Lord in the second half of the sixth century. The display reads «late 6th century» and not the book’s own phrase because `tests/date-display.test.mjs` requires a form `lib/date-display.js` parses whole; the phrase itself is quoted here. It is the corpus’s first year of any kind for him: the folder held no `dates` object, and the Romanian and Greek calendars it is otherwise built on give him none."
+    }
   }
 }
