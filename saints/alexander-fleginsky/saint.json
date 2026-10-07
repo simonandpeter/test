@@ -1,0 +1,62 @@
+{
+  "slug": "alexander-fleginsky",
+  "display_name": "Alexander (Fleginsky)",
+  "names": [
+    {
+      "form": "Александр (Флегинский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14995, «Александр (Флегинский), сщмч.», with the rank abbreviation left off. That page gives no grade at all; the grade is the day line’s «пресвитера», and the line gives no surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The first of the two years the calendar closes the two halves of one line with for 24 марта ст. ст. It is the only year either page gives him, and neither carries a place or a year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст. — «Сщмч. Александра пресвитера (1918) Сщмч. Владимира пресвитера (1920).»",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life on the day page, none on the name page, and no place, diocese, parish or manner of death anywhere on either. **The page prints two men in one line and leaves out the full stop between them** — «Сщмч. Александра пресвитера (1918) Сщмч. Владимира пресвитера (1920).», with no period after the first year — so the line is quoted whole on both folders and neither is a partial quotation. The name page lists one further day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church; one row per church is the schema, so that day is recorded here and he does not render on it. «Сщмч.» is read as `hieromartyr`, the line’s «пресвитера» as `presbyter` with `office` Priest, and «Новомуч.» on the name page is what `new-martyr` stands on. azbyka.ru was not read. The day page carries four hymns and all four are under the names of saints of other centuries; none is his."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 6 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 6 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

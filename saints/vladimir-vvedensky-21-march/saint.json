@@ -1,0 +1,62 @@
+{
+  "slug": "vladimir-vvedensky-21-march",
+  "display_name": "Vladimir (Vvedensky, 21 March)",
+  "names": [
+    {
+      "form": "Владимир (Введенский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13706, «Владимир (Введенский), иерей, сщмч.», with the rank and grade words left off. The day's own line declines the forename and prints no surname at all, «Сщмч. Владимира пресвитера», so the surname is read off the name page. **One other folder already holds this identical string**: `vladimir-vvedensky` is name page 9526, «Владимир (Введенский), иерей, сщмч.», a priest on 21 октября ст. ст., born 14 July 1881 at Pogost-Arkhangelsky in the Kalyazin uyezd of Tver province and shot on 3 November 1937, with a life out of this same calendar. This man is a second name page, on a second day, with a second year and no life at all. The day in the display name is what tells him from the other, and the fold is read in the gate's own entry for the string."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with for 21 марта ст. ст.: «Сщмч. Владимира пресвитера (1931).» It is the only year the calendar gives him, and it is not the year of the other folder of this name, which the same calendar puts in 1937. Neither the day page nor name page 13706 carries a life, a place or a year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст. — «Сщмч. Владимира пресвитера (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "note": "The calendar's line is all there is: no life on the day page, none on name page 13706, and no place, diocese, parish or manner of death anywhere on either. The name page lists one further day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church; one row per church is the schema, so that day is recorded here and he does not render on it. «Сщмч.» is read as `hieromartyr`, the line's «пресвитера» and the name page's «иерей» as `presbyter` with `office` `Priest`, and «Новомуч.» on the name page is what `new-martyr` stands on. azbyka.ru was not read. The day page carries seven hymns and every one of them is under another saint's name; none is his."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "macarius-kvitkin",
+  "display_name": "Macarius (Kvitkin)",
+  "names": [
+    {
+      "form": "Макарий (Квиткин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9349, «Макарий (Квиткин), протоиерей, сщмч.», with the rank and grade words left off. The day’s own line declines the forename and prints no surname at all, «Макария пресвитера»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes the line with for 23 марта ст. ст. It is the only year either page gives, and neither carries a place or a year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст. — «Сщмч. Макария пресвитера (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life on the day page, none on name page 9349, and no place, diocese, parish or manner of death anywhere on either. The name page lists one further day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church; one row per church is the schema, so that day is recorded here and he does not render on it. The rank abbreviations are read as the types this folder carries and the name page’s grade as its `office`, reduced where needed to a word the four locale packs already hold. «Новомуч.» on the name page is what `new-martyr` stands on. azbyka.ru was not read. The day page carries ten hymns and every one of them is under the name of one of the day’s two wonderworkers; none is his."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 5 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 5 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 April 2026 (8 October 2026)."
+    }
+  ],
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}

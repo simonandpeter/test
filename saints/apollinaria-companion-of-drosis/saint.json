@@ -1,0 +1,67 @@
+{
+  "slug": "apollinaria-companion-of-drosis",
+  "display_name": "Apollinaria, companion of Drosis",
+  "names": [
+    {
+      "form": "Аполлинария",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13980, «Аполлинария, мц.», with the rank abbreviation left off. The day’s line declines it, «дев ... » in the genitive plural, and gives no surname and no by-name; the name page gives none either."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 104,
+      "latest": 117,
+      "display": "104–117",
+      "basis": "traditional",
+      "note": "The interval the calendar closes the line with for 22 марта ст. ст., «ок. 104-117» — about 104 to 117, which the life explains as the stretch from Trajan’s law against the Christians to the end of his reign. It is the only chronology either page gives, it is given as approximate, and it is the same interval for all five of the company."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 марта ст. ст. — «Мц. Дросиды, дщери царя Траяна, и с нею дев Аглаиды, Аполлинарии, Дарии, Мамфусы, Таисии (ок. 104-117).»",
+        "url": "https://days.pravoslavie.ru/Days/20260322.html",
+        "year": 2026
+      },
+      "note": "The line enumerates all five virgins by name and each of them has a name page of her own — 13979 Аглаида, 13980 Аполлинария, 13981 Дария, 13982 Мамфуса, 13983 Таисия — so the company is written one folder per member, which is the standing ruling for a synaxis that enumerates. Not one of the five pages carries a life, a place or a year: everything the calendar says of them it says in the life it hangs under «Дросида Римская», name page 2459, and each of the five pages gives this one day and no other. «Мц.» is read as `martyr` and the line’s «дев» as `virgin`; «ок. 104-117» is the whole of the chronology and the «ок.» is why the basis is traditional. The day page carries one hymn, a kondak under the name of the day’s presbyter of Ancyra, and nothing under any of these names. azbyka.ru was not read. Three of the five forenames already have a holder in the corpus and the collisions are read in the gate’s own entries for the strings: this calendar keeps «Дария Римская» on 19 марта as name page 2449, «Аполлинария» on 5 января and «Таисия» on 8 октября, and its own separate name pages for those are what makes them different women from these."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 4 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 4 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 April 2026 (8 October 2026)."
+    }
+  ],
+  "related": [
+    "drosis-daughter-of-trajan",
+    "aglaida-companion-of-drosis",
+    "daria-companion-of-drosis",
+    "mamphusa-companion-of-drosis",
+    "thais-companion-of-drosis"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

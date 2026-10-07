@@ -11,6 +11,11 @@
       "form": "Σεραφείμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαρτίου, «Όσιος Σεραφείμ», with the rank word left off."
+    },
+    {
+      "form": "Серафим Вырицкий",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 21 марта ст. ст., «Серафим Вырицкий, прп.», with the rank abbreviation left off. The calendar gives no surname beside it; his name in the world, Муравьев, it prints only inside the life."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "The Romanian life says the Church of Russia canonised him in August 2000, but no Russian calendar was read for him: days.pravoslavie.ru was not checked (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст. — «Прп. Серафима Вырицкого (1949)»",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "note": "«Дни памяти: 21 марта» on the life page and nothing else, so no second day is owed. The calendar's own reading contradicts the birth year the folder holds: it puts his birth at «31 марта 1866 года в деревне Вахромеево Арефинской волости Рыбинского уезда Ярославской губернии» and his baptism at «1 апреля 1866 года», where doxologia and saint.gr both head him 1865; doxologia's village is wrong by this reading and saint.gr's is right. The year was left at 1865 and not widened, because two of the three sources read agree on it and the third is alone; the contradiction is recorded here and is the author's to settle. It also answers plainly what the folder's life says is not known: he was tonsured in the Lavra of Alexander Nevsky on 29 October 1920 with the name Varnava, not on Mount Athos."
     },
     {
       "church": "romanian",
@@ -81,9 +96,124 @@
     "gregory-of-shlisselburg",
     "mary-of-egypt",
     "paul-of-thebes",
-    "seraphim-of-sarov"
+    "seraphim-of-sarov",
+    "barnabas-of-gethsemane"
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко великаго молитвенника за землю нашу / и утешителя теплаго притекающих к тебе, / ублажаем тя, вторый русский отче Серафиме, / вся бо яже в мире красная оставил еси, / всем сердцем устремился еси к чертогам сладчайшаго Христа / и в годину лютых гонений образ кротости и смирения всем был еси: / не престай и ныне молитися за ны, / да в терпении обрящем путь покаяния / и с тобою выну славим Пресвятую Троицу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст., «Тропарь преподобного Серафима Вырицкого», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a great man of prayer for our land and a warm comforter of those who run to thee, we call thee blessed, Seraphim, our second Russian father; for thou didst leave behind all that is fair in the world and with thy whole heart didst press on toward the halls of the most sweet Christ, and in the season of fierce persecutions thou wast to all a pattern of gentleness and humility. Cease not now also to pray for us, that in patience we may find the way of repentance and with thee may ever glorify the Most Holy Trinity.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Крест приим свой, преподобне, радуяся, / нераздельным помыслом последовал еси Христу, / был купец еси воистину преславный, / яко не земное, но небесное сокровище стяжа / сего ради спасеся тобою мнози чада твоя, ихже возлюбил еси. / И ныне, отче наш Серафиме, молися / покаяние нам даровати и в разум истины приити.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст., «Ин тропарь преподобного Серафима Вырицкого», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking up thy cross with joy, O venerable one, thou didst follow Christ with an undivided mind. A merchant thou wast indeed, and truly a glorious one, for thou didst gain not an earthly treasure but a heavenly; and therefore many of thy children, whom thou didst love, were saved through thee. And now, Seraphim our father, pray that repentance be granted us and that we come to the knowledge of the truth.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Купец велик соделался еси, / преподобне отче Серафиме, / сый в мире, к многому богатству тленному / ты николиже сердца прилагал еси, / послушник истинен / и добродетелей подвижник, / егда же, вся оставль, / на крест монашества восшел еси, / дары Святаго Духа многи тебе дашася / и яко единаго от древних тя явиша / пророка, старца, / чудотворца и молитвенника, / столпа подвижником, спасения вождя. / Сего ради молим тя: / и нас премудро ко спасению управи.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст., «Ин тропарь преподобного Серафима Вырицкого», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A great merchant thou becamest, venerable father Seraphim; yet while thou wast in the world thou didst never set thy heart upon thy much and perishable wealth, being a true novice in obedience and a labourer in the virtues. And when, leaving all behind, thou didst go up upon the cross of monasticism, many gifts of the Holy Spirit were given thee and showed thee forth as one of the ancients: a prophet, an elder, a wonderworker and a man of prayer, a pillar to ascetics and a leader unto salvation. Therefore we beseech thee: guide us also wisely unto salvation.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко пресветлая звезда Российския земли, / возсиял еси в веси Вырицстей, преподобне Серафиме, / и, силою Святаго Духа наставляем, / светом чудес твоих страну нашу озарил еси духовно. / Темже и мы, притекающе ко гробу твоему, / умильно глаголем: / моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст., «Ин тропарь преподобного Серафима Вырицкого», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most radiant star of the Russian land thou didst shine forth in the village of Vyritsa, venerable Seraphim, and, taught by the power of the Holy Spirit, thou didst enlighten our country spiritually with the light of thy wonders. Wherefore we also, coming to thy tomb, say with compunction: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Подражая богоносному угоднику Саровскому, / Духа Святаго благодать обильно стяжал еси: / Александро-Невския лавры крине благоуханный, / Вырицкия веси похвало, / сего ради и мы тебе зовем: / радуйся, преподобне Серафиме, / милостивый наш предстателю пред Господем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст., «Кондак преподобного Серафима Вырицкого», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating the God-bearing saint of Sarov, thou didst gain the grace of the Holy Spirit in abundance, O sweet-smelling lily of the Lavra of Alexander Nevsky, O boast of the village of Vyritsa. Therefore we also cry to thee: rejoice, venerable Seraphim, our merciful intercessor before the Lord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Уподобился еси древним отцем / и подвигом добрым подвизался еси, / благодатию Христовою просветився, / от Негоже прием дарования чудес, / недугующих исцеляти, / печальных и скорбящих утешати, / обидимых и гонимых защищати / и всем в нуждах сущим отраду / и скорое избавление подавати. / Сего ради, яко великаго чудотворца чтуще, / молим тя, чада твоя, преподобне Серафиме: / от всех бед избави нас молитвами твоими.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст., «Ин кондак преподобного Серафима Вырицкого», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou becamest like the fathers of old and didst fight the good fight, enlightened by the grace of Christ, from whom thou didst receive the gifts of wonders: to heal the sick, to comfort the sorrowful and the grieving, to defend the wronged and the persecuted, and to give to all who are in need consolation and swift deliverance. Therefore, honouring thee as a great wonderworker, we thy children beseech thee, venerable Seraphim: deliver us from all afflictions by thy prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Возрадуйся паки, граде святаго Петра, / и малая весе Вырица, возвеличися, / се бо светильник веры в тебе просиявает, / всеисцеляющий бальзам нам источается, / новоявленный бо великий чудотворец, / любве и покаяния наставник, / пророк и старец, / новый преподобный Серафим в тебе является.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст., «Ин кондак преподобного Серафима Вырицкого», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rejoice again, O city of Saint Peter, and be thou magnified, little village of Vyritsa; for a lamp of the faith shines out in thee and a balm that heals all things is poured forth for us, since a newly revealed great wonderworker, a teacher of love and of repentance, a prophet and an elder, a new venerable Seraphim, is made manifest in thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

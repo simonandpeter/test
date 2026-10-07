@@ -1,0 +1,62 @@
+{
+  "slug": "irenaeus-of-backa",
+  "display_name": "Irenaeus of Bačka",
+  "names": [
+    {
+      "form": "Ириней",
+      "lang": "ru",
+      "note": "The forename out of the heading of days.pravoslavie.ru’s name page 15098, «Святитель Ириней, епископ Бачский, исповедник». The form is bare because the by-name in that heading qualifies «епископ» and not the name: the calendar gives him no surname and no by-name of his own. **One other folder already holds this identical string**, `irenaeus-of-rome`, a martyr of 258 whom this same calendar keeps on 13 августа ст. ст.; the fold is read in the gate’s own entry for the string."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 1955,
+      "latest": 1955,
+      "display": "1955",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with for 24 марта ст. ст. It is the only year either page gives, and neither carries a year of birth or a place beyond the see."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст. — «Свт. Иринея исп., еп. Бачского (1955) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life on the day page, none on name page 15098, and no place beyond the see, no year of birth and no manner of death. **The line marks him a saint of another church — «(Серб.)» — and his is the only one of this day’s name pages that does NOT list «26 января (Новомуч.)»**: it gives 24 марта and nothing else, which fits a confessor who was not a martyr and who is not of the Russian new martyrs. So the serbian row of this folder is the one that most wants checking and it is `undocumented` here because pravoslavno.rs was not read; nothing has been assumed from the marker. «Свт.» is read as `hierarch`, «исп.» as `confessor` and «еп.» as `bishop`; `office` is reduced to Bishop, which the four locale packs carry, rather than coining an office for the see, and the see is in the display name. 1955 is the only year the calendar gives. azbyka.ru was not read. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 6 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 6 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

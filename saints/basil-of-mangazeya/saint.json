@@ -13,6 +13,11 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Μαρτίου, «Άγιος Βασίλειος ο Ιερομάρτυρας και Θαυματουργός Επίσκοπος Μανγκαζίας Σιβηρίας», with the rank words and the see left off."
+    },
+    {
+      "form": "Василий Мангазейский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 378, «Праведный Василий Мангазейский», with the rank word left off. The folder held only a Greek form before this. The calendar gives no surname; his father’s name, Theodore, it prints only inside the life."
     }
   ],
   "related": [],
@@ -22,21 +27,31 @@
       "latest": 1583,
       "display": "1583",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Βασίλειος γεννήθηκε στην πόλη του Γιαροσλάβ της Ρωσίας το έτος 1583 μ.Χ.», and the page heads him «(1583 - 1602)»."
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Βασίλειος γεννήθηκε στην πόλη του Γιαροσλάβ της Ρωσίας το έτος 1583 μ.Χ.», and the page heads him «(1583 - 1602)». Unchanged. days.pravoslavie.ru gives no year of birth, but its reading that he was nineteen when he died on 4 April 1602 agrees with it."
     },
     "death": {
       "earliest": 1602,
       "latest": 1602,
-      "display": "1602",
+      "display": "4 April 1602",
       "basis": "traditional",
-      "note": "saint.gr: «Εξελέγη Επίσκοπος Μανγκαζίας της Σιβηρίας και μαρτύρησε το έτος 1602 μ.Χ.», and the page heads him «(1583 - 1602)»."
+      "note": "The year is saint.gr’s and is unchanged; the day is added from days.pravoslavie.ru, all three of whose readings for 23 марта ст. ст. say «принял мученическую кончину 4 апреля 1602 года». The day line of that same calendar closes «(1600)» instead, which no reading on the site supports and which was not taken."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him a Russian of Yaroslavl and a Siberian bishop, so a Russian row is likely and has not been read — and it is the calendar that would test the page's own claim about his rank."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст. — «Мч. Василия Мангазейского (1600).»",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "note": "**This calendar contradicts the rank the folder holds, and it is the better-placed source.** The folder reads `hieromartyr`, `bishop`, with `office` «Bishop of Mangazeya in Siberia», off saint.gr’s «Εξελέγη Επίσκοπος Μανγκαζίας». The Russian calendar, whose saint he is, heads him «Праведный Василий Мангазейский» on name page 378, «Мч.» in the day line, and makes him a layman of nineteen: the son of a poor but devout man of Yaroslavl named Theodore, taken by a rich merchant to Mangazeya to keep his shop, beaten by that merchant and then tortured by the town governor over a theft he had no part in, and killed by a blow from a bundle of warehouse keys. Its three readings say so and none of them mentions a see. **No `types`, `office` or `display_name` was changed** — those are the author’s — and the contradiction is set out here. The same source also disagrees with its own line about the year: the line closes «(1600)» and all three readings say «4 апреля 1602 года», which is the year the folder already holds off saint.gr, so `dates` keeps 1583–1602 and only the death `display` is made exact. The name page prints «Дни памяти: 23 марта , 10 мая , 23 мая (Ростов.) , 10 июня (Сибир.)»; one attestation holds one feast, so **10 мая — which the shortest reading names as the translation of his relics from Mangazeya to Turukhansk — and the two synaxes, of Rostov and of Siberia, are recorded here as notes and he does not render on them**. The shortest reading adds a fifth day that is NOT a feast of his: «22 марта празднуется его тезоименитство», his name-day with the presbyter of Ancyra whom this same calendar keeps on 22 марта — **and the folder’s greek row stands on 22 March, which is that name-day and not this day**, a reading for the author and not changed here. Six hymns under his name on the day page, three troparia and three kontakia, all added with their English. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -66,5 +81,103 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Богатство видев чистыя души твоей, Василие,/ украсти тщашеся праведных враг,/ подусти господина твоего,/ иже покраденнаго ради богатства своего предав тя судии,/ и от того неповинне многия претерпел еси муки,/ непобедим пребыв до смерти./ Тем, яко приемый венец страдания от всех Владыки,/ моли всем от напастей свободным быти,/ чтущим любовию святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Тропарь праведного Василия, мученика и страстотерпца, Мангазейского чудотворца», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeing the riches of thy pure soul, Basil, the enemy of the righteous was eager to steal them, and stirred up thy master, who for the sake of his own stolen goods gave thee over to the judge; and from him thou didst endure many torments, guiltless, and remainedst unconquered unto death. Therefore, as one who has received the crown of suffering from the Master of all, pray that all who honour thy holy memory with love may be set free from misfortunes.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко пресветлое солнце,/ возсиял еси чудесы своими в Сибирстей стране,/ в Мангазейских пределех,/ новый мучениче, неповинный страдальче, святе Василие!/ За чистоту душевную и телесную пострадал еси от лютаго врага/ распадением и немилосердием господина своего/ и от начальствующаго бо ту градскаго неправеднаго судии,/ и муки неповинно претерпел еси,/ и кровь свою святую пролиял еси,/ желая вечнаго Царствия Небеснаго./ Сего ради Христос Бог венча тя мученическими венцы на Небеси/, и на земли прослави,/ и Своим Божиим промыслом повеле земли самой от недр своих/ гроб, и тело твое, и срачицу, обагренную кровию твоею, израсти нетленно./ И ныне притекающим к тебе с верою и везде призывающим святое имя твое/ полезная вся, и грехов оставление, и телесем здравие подавай,/ чтущим верою святую память твою,/ и моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Ин тропарь праведного Василия Мангазейского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a most radiant sun thou hast shone forth with thy wonders in the land of Siberia, in the borders of Mangazeya, O new martyr, O guiltless sufferer, holy Basil. For purity of soul and of body thou didst suffer from the cruel enemy, through the fury and the mercilessness of thine own master and through the unjust judge who governed the town; guiltless thou didst endure the torments and didst pour out thy holy blood, longing for the eternal Kingdom of heaven. Therefore Christ God crowned thee with the crowns of martyrdom in heaven and glorified thee on earth, and by his own providence commanded the earth itself to put forth out of its depths thy coffin, and thy body, and the shirt reddened with thy blood, incorrupt. And now give to those who come to thee in faith and call upon thy holy name in every place all things profitable, and the remission of sins, and health of body, to those who honour thy holy memory in faith; and pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "От града Ярославля Божиим смотрением/ в страну Сибирскую пришедшаго/ и за целомудрие от господина своего/ в Мангазеи пострадавшаго,/ блаженнаго Василия почтим,/ егоже Христос Бог мученическим венцем венча на Небеси,/ нетлением и чудесы прослави на земли./ Ты же, честный страдальче,/ предстательством своим страну нашу в мире сохрани/ и молися о спасении душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Ин тропарь праведного Василия Мангазейского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour blessed Basil, who by God’s providence came out of the city of Yaroslavl into the land of Siberia and suffered at Mangazeya from his own master for chastity’s sake, whom Christ God crowned with the martyr’s crown in heaven and glorified on earth with incorruption and with wonders. And do thou, honourable sufferer, keep our land in peace by thine intercession, and pray for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Страдание совершив, святе,/ погребения же честнаго не сподобився,/ в тинное место ввержен/ и попираемь был еси от мимоходящих,/ но Бог прослави мощи твоя чудесным явлением, Василие,/ прославляяйся во святых Своих,/ даяй страдальцем венец нетленный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Кондак праведного Василия Мангазейского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having finished thy suffering, O holy one, and not been counted worthy even of an honourable burial, thou wast cast into a miry place and wast trodden upon by those who passed by; but God glorified thy relics by a wondrous appearing, O Basil — he who is glorified in his saints and gives the incorruptible crown to those who suffer.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Просветися Божественною благодатию, Боголюбче,/ целомудрием и терпением течение свое мученически скончал еси,/ темже и по смерти яви тя светлость жития твоего,/ источаеши бо чудесы,/ с верою приходящим к честному гробу твоему и вопиющим:/ радуйся, святый Василие,/ Мангазейский и всея Сибири чудотворче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Ин кондак праведного Василия Мангазейского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine grace, O lover of God, thou didst finish thy course as a martyr in chastity and in patience; and therefore after thy death also the brightness of thy life was shown forth, for thou pourest out wonders upon those who come in faith to thine honourable tomb and cry out: rejoice, holy Basil, wonderworker of Mangazeya and of all Siberia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Иже новый в мученицех неповинный страдальче,/ святе Василие, преревновал еси Иосифу Прекрасному и Моисею Угрину во искушениих,/ за чистоту душевную и телесную/ муки неповинно претерпел если./ Сих ради прослави тя Бог,/ и святыя твоя мощи, по явлению твоему,/ от Мангазеи к Енисею во обитель Святыя Троицы/ ту сущим настоятелем принесошася/ и подают исцеления с верою приходящим/ и везде призывающим святое имя твое./ Страстотерпче святый,/ моли Христа Бога/ о православном народе нашем/ и о всех воех наших,/ победу и одоление нам на всех/ непросвещенных иноязычных людех даровати, споборствуя/, и от междоусобныя брани спастися всем моли.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Ин кондак праведного Василия Мангазейского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O new and guiltless sufferer among the martyrs, holy Basil, thou didst rival Joseph the Comely and Moses the Hungarian in temptations, and for purity of soul and of body didst endure torments guiltless. For this God glorified thee; and thy holy relics, at thine own appearing, were carried from Mangazeya to the Yenisei, to the monastery of the Holy Trinity, by the superiors who were there, and they give healings to those who come in faith and who call upon thy holy name in every place. Holy passion-bearer, pray to Christ God for our Orthodox people and for all our soldiers, fighting on our side that victory and the upper hand be given us, and pray that all may be saved from civil strife.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -1,0 +1,72 @@
+{
+  "slug": "sergius-srebryansky",
+  "display_name": "Sergius (Srebryansky)",
+  "names": [
+    {
+      "form": "Сергий (Сребрянский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9182 and of its life, «Сергий (Сребрянский), архимандрит, исп.», with the grade and rank words left off. The day’s line gives neither the surname nor the grade, «Сергия исповедника». His name in the world, Митрофан Васильевич Сребрянский, the calendar prints only inside the life."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk"
+  ],
+  "office": "Archimandrite",
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1 August 1870",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life for him: «родился 1 августа 1870 года в селе Трехсвятском Воронежского уезда Воронежской губернии в семье священника»."
+    },
+    "death": {
+      "earliest": 1948,
+      "latest": 1948,
+      "display": "23 March 1948",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1948)», and the day off the inscription the life quotes from his grave cross, «Скончался 1948 г. 23 марта». That is the same day the calendar keeps him on, old style, so nothing was converted."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст. — «Прп. Сергия исповедника (1948).»",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "note": "The only one of the day’s nine new martyrs and confessors with a life on the site, life4910, and it is long. Name page 9182 prints «Дни памяти: 26 января (Новомуч.) , 23 марта , 28 ноября (обретение мощей)»; one row per church is the schema, so the synaxis of the new martyrs and the finding of his relics are recorded here and he does not render on either. The day line calls him «Прп. Сергия исповедника» and the life’s own title «Преподобноисповедник», which is `venerable` and `confessor` together; the name page’s grade is «архимандрит», which the four locale packs carry, so `office` is Archimandrite. The death year is the line’s «(1948)» and the day is the inscription the life quotes from his grave cross, «Скончался 1948 г. 23 марта» — the same day the calendar keeps him on, so no conversion is involved. The life is credited to Hieromonk Damaskin (Orlovsky)’s third book of the martyrs, confessors and ascetics of the twentieth century. azbyka.ru was not read. The day page carries no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 5 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 5 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 April 2026 (8 October 2026)."
+    }
+  ],
+  "related": [
+    "elizabeth-of-russia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
