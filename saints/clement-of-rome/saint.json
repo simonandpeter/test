@@ -12,6 +12,11 @@
       "form": "Κλήμης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Κλήμης Ιερομάρτυρας, επίσκοπος Ρώμης», with the rank words and the see left off."
+    },
+    {
+      "form": "Климент Римски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 25. новембар ст. ст., „Свешт. муч. Климент еп. Римски.“ — «Свешт. муч.» is Свештеномученик, the `hieromartyr` grade this folder already keeps, and «еп.» is епископ, the `bishop` grade it also keeps, so both rank words come off. «Римски» is KEPT, and the keeping is a reading and not a rule: it is the see adjective, the folder’s `office` is already Bishop of Rome, and the bare «Климент» measured before this was written stands on three other folders — `clement-apostle-of-sardis`, `clement-of-ancyra` and `clement-of-ohrid` — so the bare forename would have made a four-member fold out of a form the book itself does not oblige. The fuller form stands on no other folder and joins no fold. This is the practice the corpus already carries in «Пафнутије Боровски» and «Матрона Цариградска»."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.12.2025 (25. новембар ст. ст.) — „Свешт. муч. Климент еп. Римски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-08&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry. THE DAY IS NOT THE ONE THE OTHER TWO CALENDARS KEEP: the Romanian and the Greek both hold him on 24 November and this book holds him on the Julian 25 November, one menologion number later, and the two days are recorded as they stand because the Serbian row is this folder’s first and nothing was moved to reach it. `dates` UNTOUCHED: the book drowns him «101. године», which is exactly the 101 this folder already holds from saint.gr. TWO `related` ROWS ADDED, both halves of one: the book makes the apostle Barnabas the first man he found at Alexandria on the search for his family, and this folder had no row to him. NOT ADDED, and a line for the author: the book sets out the Roman succession as Peter, then Linus, then Cletus, then Clement, and the corpus keeps a `linus-of-rome`; a see held one after another is not plainly a relation between two men in this corpus’s sense and no row was written either way. WHAT THE ENTRY ADDS: his birth at Rome of the imperial house and his being a contemporary of the apostles; the storm that carried his mother and his two brothers to different lands and the father lost looking for them; his own setting out east at twenty-four to find them; his two brothers Faustinus and Faustinianus, already following the apostle, whom the corpus does not keep; the mother found as an old beggar woman and the father after her, and the whole house reunited and returned to Rome Christian; the seven swift writers he appointed to write the lives of the martyrs; Trajan’s sentence of exile to Cherson and the two thousand Christians he found there hewing stone in a waterless place; the water brought out of the earth by his prayer and the seventy-five churches raised there in one year; the stone about his neck; AND THE RELICS BROUGHT UP OUT OF THE SEA ONLY IN THE TIME OF CYRIL AND METHODIUS, to both of whom this folder is already related both ways."
     }
   ],
   "related": [
@@ -67,7 +82,8 @@
     "methodius-of-moravia",
     "peter-of-alexandria",
     "peter-the-apostle",
-    "rusticus-disciple-of-dionysius"
+    "rusticus-disciple-of-dionysius",
+    "barnabas-the-apostle"
   ],
   "hymns": [
     {
