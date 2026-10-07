@@ -16,6 +16,11 @@
       "form": "Исакије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 30. мај ст. ст., „Преподобни Исакије исповедник“ — Преподобни is the `venerable` this corpus puts in `types` and исповедник the `confessor` it puts there too; strip the two and the bare personal name is the whole of what the heading gives. **A SECOND HOLDER, ENTERED ON PURPOSE AND MEASURED**: `foldchk.py` returns `[('isaac-the-recluse-of-the-kyiv-caves', 'sr')]` for «Исакије». **There is nothing fuller to prefer** — the heading prints no see and no monastery, and „Dalmatou“ is the Greek page’s and the house’s name rather than his. The two men are told apart by their days and their places, the recluse of the Kyiv Caves having nothing in common with this abbot but the name. The Greek form on this folder, «Ισαάκιος», and the Romanian «Isaachie» are the same bare name."
+    },
+    {
+      "form": "Исаакий Далматский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1101 and of the longer of its two lives, «Преподобный Исаакий Далматский», with the rank word left off. The by-name is the monastery’s, which took its name from his successor; the day’s line declines the same two words."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 марта ст. ст. — «Прп. Исаакия Далматского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260322.html",
+        "year": 2026
+      },
+      "note": "The day page that prints him is the 22 марта one and that is what this row stands on. His name page, 1101, and the longer of its two lives both print «Дни памяти: 22 марта , 30 мая , 3 августа». One attestation holds one feast, so **30 мая and 3 августа are recorded here as notes and he does not render on them**. Worth saying plainly: 30 мая is the day the folder’s other three rows already keep him on, and 3 августа is the day the corpus keeps `dalmatus-of-constantinople` and `faustus-son-of-dalmatus` on — so this Russian 22 March is a day no other church in the corpus keeps him, and none of the three differs from another by thirteen, so no style conversion is involved. The index behind the line serves two readings: life1175, his own, and life4370, which is the 3 августа company of the three abbots and whose year for his appointing of Dalmatus is 383. That 383 sits inside the folder’s existing death interval of 383–396 and narrows nothing, so `dates` is untouched; the line gives only «(IV)». `types` and `office` untouched. The day page carries no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -151,6 +166,7 @@
   ],
   "related": [
     "constantine-the-great",
-    "dalmatus-of-constantinople"
+    "dalmatus-of-constantinople",
+    "theodosius-the-great"
   ]
 }

@@ -16,6 +16,11 @@
       "form": "Дросида",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 22 March on pravoslavno.rs, „Света Дросида.“, with Света left off, which is not a rank. The heading carries nothing else — her father's name is the body's first clause and not part of her name — so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Дросида."
+    },
+    {
+      "form": "Дросида Римская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2459, «Дросида Римская, мц.», with the rank abbreviation left off. The day’s line declines the forename and names her by her father instead of by the city, «Дросиды , дщери царя Траяна», so the by-name is read off the name page."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 марта ст. ст. — «Мц. Дросиды , дщери царя Траяна, и с нею дев Аглаиды , Аполлинарии , Дарии , Мамфусы , Таисии (ок. 104-117).»",
+        "url": "https://days.pravoslavie.ru/Days/20260322.html",
+        "year": 2026
+      },
+      "note": "The line enumerates her five companions by name and each of them now has a folder, written in batch ru-03-22-1 off their own name pages 13979 to 13983; this folder had no `related` row at all before and gains the five. Name page 2459 gives this one day and carries the one life, life690, which is where everything the calendar says of the five is said. «Мц.» is the rank word and `martyr` was already the folder’s type; `types` and `dates` are untouched, and the line’s «ок. 104-117» sits inside the folder’s floruit of 98–117. The stored form is the name page’s own nominative with the by-name it gives her, «Дросида Римская», which the day’s line does not print. The day page carries no hymn under her name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -84,5 +99,12 @@
       "basis": "traditional",
       "note": "saint.gr: «Η Αγία Δροσίδα, ήταν κόρη του αυτοκράτορα Τραϊανού (98-117), ο οποίος βασάνιζε και θανάτωνε πολλούς χριστιανούς» — the reign is the interval the page prints, and it gives no year for her own death. doxologia.ro gave no year at all."
     }
-  }
+  },
+  "related": [
+    "aglaida-companion-of-drosis",
+    "apollinaria-companion-of-drosis",
+    "daria-companion-of-drosis",
+    "mamphusa-companion-of-drosis",
+    "thais-companion-of-drosis"
+  ]
 }

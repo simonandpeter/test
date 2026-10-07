@@ -17,6 +17,11 @@
       "form": "Василије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 22 March on pravoslavno.rs, „Свештеномученик Василије, презвитер анкирски.“, with the rank word Свештеномученик left off and with презвитер анкирски left off as well — a rank and a see this folder already keeps in `types` and `office`. The heading gives no epithet, so the bare forename is what the source gives, and it folds with `basil-the-confessor` and `basileus-of-cherson`."
+    },
+    {
+      "form": "Василий Анкирский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 371, «Василий Анкирский, пресвитер, сщмч.», with the grade and rank words left off. The day’s line declines it and keeps the see as a separate word, «Василия , пресвитера Анкирского»; the calendar gives no surname."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 марта ст. ст. — «Сщмч. Василия , пресвитера Анкирского (363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260322.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line closes with «(363)» and its OWN life for him contradicts that in its last sentence: «Священномученик Василий скончался 29 июня 362 года.» The folder’s 362 off saint.gr agrees with the life and not with the line, so `dates` was left untouched and the disagreement is recorded here. The same sentence says WHY the day is 22 March: «Память его ради праздника святых апостолов Петра и Павла была перенесена на 22 марта.» — his memory was moved to 22 March on account of the feast of the apostles. That is a transfer the source itself made and keeps, not a moveable feast and not a style conversion: the day page that prints him is the 22 марта one, three other churches keep him on the same menologion day, and 29 June is recorded here and is not a second feast. Name page 371 gives this one day. The day page’s single hymn is his and is added with its English. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -106,6 +121,22 @@
       },
       "english": {
         "text": "By the inclining of the divine Spirit thou didst worthily receive the holy chrism of priesthood, O Basil; whence as a royal victim thou didst offer thy contests to the King of the ages. O venerable father, entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Законно течение совершив/ и веру соблюл еси, священномучениче Василие,/ сего ради мучения венцев сподобился еси/ и Церкве столп непоколебим явился еси,/ Сына, Отцу Собезначальна и Духу исповедав,/ Троицу Нераздельную,/ Юже моли избавитися от бед чтущим Тя,/ да зовем ти:/ радуйся, Василие Богомудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 марта ст. ст., «Кондак священномученика Василия, пресвитера Анкирского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260322.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having finished thy course lawfully and kept the faith, O hieromartyr Basil, thou wast therefore counted worthy of the crowns of martyrdom and wast shown to be an unshaken pillar of the Church, confessing the Son as co-unoriginate with the Father and with the Spirit, the undivided Trinity. Pray to it that those who honour thee may be delivered from afflictions, so that we may cry to thee: rejoice, Basil, wise in God.",
         "rendered": "site"
       }
     }
