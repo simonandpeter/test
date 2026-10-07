@@ -16,6 +16,11 @@
       "form": "Дарија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first entry for the Julian 19 March on pravoslavno.rs, whose heading is „Свети мученици Хрисант и Дарија, и други с њима.“, where the form is the second of the two names the heading prints. The rank words Свети мученици stand at the head of the whole company and are left off, and nothing on the page gives this man an epithet or a city, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Дария Римская",
+      "lang": "ru",
+      "note": "Read out of the name link behind this saint's place in days.pravoslavie.ru's line for 19 марта ст. ст., «Дария Римская, мц.», with the rank word left off. The day's own line declines the name and gives no city."
     }
   ],
   "sex": "female",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст. — «Мчч. Хрисанфа и Дарии и с ними мчч. Клавдия трибуна, Иларии, жены его, Иасона и Мавра, сынов их, Диодора пресвитера и Мариана диакона (283).»",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "note": "The line heads her second, «и Дарии». The line enumerates all eight of the company by name and closes «(283)», the year this folder already held, and the life page behind it puts the executions under Numerian, «(283 - 284)», which is the interval the corpus already records for the companions. The eight name links are the only place this calendar gives the by-name Римский, which the day's own declined line does not. The day page prints no hymn for any of the eight."
     },
     {
       "church": "romanian",
