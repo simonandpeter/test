@@ -17,6 +17,11 @@
       "form": "Артемон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 24 March on pravoslavno.rs, „Свети Артемон, епископ селевкијски.“, with Свети left off, which is not a rank, and with the see епископ селевкијски left off as well. The heading gives no epithet, so the bare forename is what the source gives. The corpus keeps a second Artemon, of Laodicea, on this same menologion day; he holds no Serbian form, and this one is distinguished from him in the corpus by `display_name` and by slug."
+    },
+    {
+      "form": "Артемон Селевкийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 6673, «Святитель Артемон, епископ Селевкийский», with the rank and the office word left off; the see’s adjective is kept because it is what distinguishes him. The folder already held a bare «Артемон» and both are kept. The day’s line prints the other forename and the other by-name as well, «Артемия (Артемона) ... Солунского (Селевкийского)», and those are the two readings the same page says were wrongly split in the seventeenth century, not two more name forms."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст. — «Свт. Артемия (Артемона) еп. Солунского (Селевкийского) (I-II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "note": "**The source itself resolves a two-into-one that could have made a second folder here, and the corpus is already on the right side of it.** The line carries two names and two sees — «Свт. Артемия (Артемона) еп. Солунского (Селевкийского) (I-II).» — and the second of the two readings behind name page 6673 explains why: in the old Slavonic calendars «Селевкийский» was written «Селеоукинский», out of which came «Солоунский», and some Greek books call him of Thessalonica too; the menologia gave him one by-name or the other, and «во 2-й половине XVII века эти два наименования ошибочно отнесли к разным лицам» — in the second half of the seventeenth century the two by-names were wrongly assigned to two different people. The corpus holds one folder and no Artemon or Artemius of Thessalonica, so nothing is owed and nothing was merged; the reading is recorded here because it is the source saying plainly that a duplicate of this folder would be a seventeenth-century mistake repeated. The folder held no date; the line’s «(I-II)» is added as a century. Both readings make him the first bishop of Seleucia in Pisidia, set there by the apostle whom the folder already relates to, and both end him in deep old age. `types` and `office` untouched. The day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -99,5 +114,14 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 200,
+      "display": "1st or 2nd century",
+      "basis": "traditional",
+      "note": "The centuries days.pravoslavie.ru closes the line with for 24 марта ст. ст., «(I-II)». The folder held no date at all. Both readings make him a disciple of the apostle who ordained him and have him die in deep old age, which is consistent with the second century and does not narrow it."
+    }
+  }
 }

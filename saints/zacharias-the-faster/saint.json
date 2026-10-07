@@ -11,6 +11,11 @@
       "form": "Ζαχαρίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Ζαχαρίας ο εν τη Λαύρα του Κιέβου ασκήσας», with the rank word and the clause of place left off."
+    },
+    {
+      "form": "Захария Постник, Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 822 and of the second of its two readings, «Преподобный Захария Постник, Печерский», with the rank word left off. The first reading inverts the two by-names, «Захария Печерский, постник»; both hymns title him of the Far Caves."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст. — «Прп. Захарии , постника Печерского (XIII-XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "note": "Name page 822 and both of its readings print «Дни памяти: 24 марта , 28 августа (Печер.(Д))». One attestation holds one feast, so **28 августа, the synaxis of the fathers of the Far Caves, is recorded here as a note and he does not render on it**; it is five months away and no style conversion. The line’s «(XIII-XIV)» is the floruit the folder already holds, so `dates` is untouched. Two hymns under his name on the day page, a troparion and a kondak, both of which title him «в Дальних пещерах» and both added here with their English. The reading is short: the Far Caves, grass once a day after sunset, and the gift of driving out demons, which is what both hymns are about. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -76,6 +91,40 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Постническаго ради твоего жития, блаженне Захарие,/ яко приемый велию на бесы крепость,/ моли и нам техже козней избыти,/ получити грехов прощение/ и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст., «Тропарь преподобного Захарии, постника Печерского, в Дальних пещерах», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For thy life of fasting, blessed Zacharias, as one who received great strength against the demons, pray that we also may escape those same snares, and obtain the forgiveness of sins and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "В постничестве светло яко просиявый/ и бесом страшен яко явивыйся,/ всечестне Захарие,/ укрепи и нас твоими молитвами/ постническое житие имети/ и бесовскаго избавитися злодейства,/ яко да ублажаем тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст., «Кондак преподобного Захарии, постника Печерского, в Дальних пещерах», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining brightly in fasting and showing thyself terrible to the demons, all-honoured Zacharias, strengthen us also by thy prayers to keep a fasting life and to be delivered from the malice of the demons, that we may call thee blessed.",
+        "rendered": "site"
+      }
     }
   ]
 }

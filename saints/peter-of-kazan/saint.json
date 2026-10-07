@@ -10,6 +10,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαρτίου, «Άγιοι Πέτρος και Στέφανος οι Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Петр Казанский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1774, «Петр Казанский, мч.», with the rank abbreviation left off. The folder held only a Greek form. **The calendar says plainly that this was not his first name**: his family went on calling him by the Muslim name he had before baptism, and the life quotes his answer that the name Peter was given him at holy baptism and not the one they called him by. That earlier name the calendar does not print."
     }
   ],
   "related": [
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page puts the martyrdom in the district of Kazan, so a Russian row is likely and has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст. — «Мчч. Стефана и Петра Казанских (1552).»",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "note": "The two are one line and one year, «Мчч. Стефана и Петра Казанских (1552).», and each has a name page of its own, 2055 and 1774, each giving this single day, so no second day is owed. The folders already relate to each other both ways and the relation is what these readings are about. **Both were Tatars of Kazan and converts from Islam, which neither folder said**: the one had been twenty years palsied in the legs, believed and was healed when the city was taken in 1552, and was baptised by the archpriest of the Moscow cathedral who had carried the metropolitan’s letter to the army; the other was taken home by force by his own family after the Russian troops withdrew and called by his old Muslim name, and answered that his father and mother were God glorified in Trinity. Both were killed by their own people for holding to the faith once the army had gone. The year 1552 is the one the folders already hold. Two hymns on the day page, a troparion and a kondak, and **both name the two of them together**, so both are added to both folders whole, as the calendar prints them. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -58,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мучеников двоица единонравная,/ Стефане и Петре славнии,/ неверие соплеменников обличивше,/ Христу последовали есте,/ во Святую Троицу веровати всех научающе,/ Еяже ради великия страдания приемше,/ молитеся о нас ко Господу,/ да, избавившеся тьмы греховныя,/ Света явимся общницы невечерняго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст., «Тропарь мучеников Стефана и Петра Казанских», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O pair of martyrs of one mind, glorious Stephen and Peter, having rebuked the unbelief of your own countrymen you followed Christ and taught all men to believe in the Holy Trinity, and for her sake you received great sufferings. Pray to the Lord for us, that being delivered from the darkness of sin we may be shown to be partakers of the light that knows no evening.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Святии страстотерпцы Стефане и Петре,/ Троицы поборницы преизряднейшии,/ мук треволнения и страшную смерть на вечную жизнь пременившии/ во граде Казани страдальчествовавшии,/ ныне же в Небесных чертозех Всецарю предстоящии,/ от всяких нас грехопадений избавити Христа Бога молите,/ Той бо есть верных утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст., «Кондак мучеников Стефана и Петра Казанских», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy passion-bearers Stephen and Peter, most excellent champions of the Trinity, who exchanged the storm of torments and a dreadful death for life eternal and bore your suffering in the city of Kazan, and who now stand before the King of all in the halls of heaven: pray to Christ God to deliver us from all our falls into sin, for he is the confirmation of the faithful.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

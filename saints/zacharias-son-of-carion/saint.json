@@ -16,6 +16,11 @@
       "form": "Захарија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fifth heading for the Julian 24 March on pravoslavno.rs, „Преподобни Захарија.“, with the rank word Преподобни left off. The heading gives no epithet and no parentage — his father Carion is the body's first word — so the bare forename is what the source gives. The corpus keeps a second Zacharias on this same menologion day, the Faster of the Kyiv Caves, who holds no Serbian form, and this one is distinguished from him by `display_name` and by slug."
+    },
+    {
+      "form": "Захария Отверстый",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 821, «Захария Отверстый, затворник», with the grade word left off. The by-name is the one its reading explains, the opened one, given him for his care of the poor and of strangers; this calendar does not call him the son of Carion and the day’s line gives him no by-name at all."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст. — «Прп. Захарии монаха (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "note": "**This identification rests on the day, the century and the rank, and not on the name, and it is the one reading of this day that does.** The line is «Прп. Захарии монаха (IV).», name page 821 heads him «Захария Отверстый, затворник», and the reading, life700, is two sentences: he was called «отверстый», the opened one, for his particular care of the poor and of strangers; and the printed Menaion’s «преподобного отца нашего Захарии» is where **an erroneous split in the menologion between a Захария and a преподобный Захария монах came from** — the page says so itself. It names no Carion and no Egypt. The folder it is put on is the venerable monk Zacharias whom the Romanian, Greek and Serbian calendars all keep on this same menologion day and nowhere else, in the fourth century, with the same rank word; the line’s «(IV)» is the same century. One venerable monk of this name on this day in each of four calendars, and this source warning that the name has been split once already, is why this is a row and not a second folder. **If the author reads it otherwise the row belongs on a new folder and nowhere else, and nothing but this row would have to be undone.** The folder held no date; the century is added. The day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -81,5 +96,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru closes the line with for 24 марта ст. ст., «(IV)». The folder held no date at all: neither doxologia nor saint.gr nor the Prologue gave one."
+    }
   }
 }
