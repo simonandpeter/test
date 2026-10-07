@@ -1,0 +1,53 @@
+{
+  "slug": "demetrius-rozanov-18-march",
+  "display_name": "Demetrius (Rozanov) (18 March)",
+  "names": [
+    {
+      "form": "Димитрий (Розанов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 марта ст. ст., name page 12315, «Димитрий (Розанов), иерей, сщмч.», with the rank word and the grade left off. The day's own line declines the name and gives the forename alone, «Сщмч. Димитрия пресвитера». The same calendar keeps two other priests of this name and surname, on 26 сентября ст. ст. (name page 14333, an archpriest) and on 12 ноября ст. ст. (name page 13704, a priest), and both are already in the corpus and strip to this same bare form; the three are told apart by day, by name page and by slug, and the three-holder fold is deliberate."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 марта ст. ст. — «Сщмч. Димитрия пресвитера, прмц. Наталии.»",
+        "url": "https://days.pravoslavie.ru/Days/20260318.html",
+        "year": 2026
+      },
+      "note": "Neither the day page nor name page 12315 carries a life, and the line closes with no year at all, which is unusual for this calendar's new-martyr lines. The name page gives the grade иерей and the surname the line leaves out, and lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it. The corpus already holds two other priests of this name and surname from this same calendar, on name pages 14333 (26 сентября, an archpriest) and 13704 (12 ноября, a priest); page 12315 is a third, with a third day, and that is the whole of the evidence for reading him as a third man. The woman named in the same line has a folder of her own; sharing a line is not a relation and no `related` row joins them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 31 martie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Μαρτίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 31 March 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

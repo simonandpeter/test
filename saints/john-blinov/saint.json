@@ -1,0 +1,59 @@
+{
+  "slug": "john-blinov",
+  "display_name": "John (Blinov)",
+  "names": [
+    {
+      "form": "Иоанн (Блинов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 марта ст. ст., name page 9973, «Иоанн (Блинов), псаломщик, исп.», with the rank word and the grade left off. The day's own line declines the name and gives the forename alone, «Исп. Иоанна»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with for 19 марта ст. ст.: «Исп. Иоанна (1932).» It is the only year the calendar gives him, and neither the day page nor name page 9973 carries a life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст. — «Исп. Иоанна (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "note": "Neither the day page nor name page 9973 carries a life. The name page gives the surname the line leaves out and the grade псаломщик, a psalm-reader — a layman's office in the Russian church, for which the corpus's locale packs carry no `office` string, so none is written and the grade is recorded here and in the life. The rank is «Исп.», confessor, and not martyr, so no martyr type is written. The name page lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it. The corpus was searched for the surname Блинов and holds no folder of it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Ευκαρπίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαρτίου, «Άγιοι Τρόφιμος και Ευκαρπίων», with the rank word left off."
+    },
+    {
+      "form": "Евкарпий Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 марта ст. ст., «Евкарпий Никомидийский, мч.», with the rank word left off. The day's own line declines the name and gives no city, «Мчч. Трофима и Евкарпия». The Russian form is a syllable shorter than the Greek Ευκαρπίων this folder already holds."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 марта ст. ст. — «Мчч. Трофима и Евкарпия (ок. 300).»",
+        "url": "https://days.pravoslavie.ru/Days/20260318.html",
+        "year": 2026
+      },
+      "note": "The line names the two of them together and closes «(ок. 300)», which is the only year any of this folder's calendars gives; its life page puts the suffering at Nicomedia under Diocletian, a reign the page itself dates «(284 - 305)». The name link adds the city the day's line leaves out, and the calendar spells him Евкарпий where the Greek page has Ευκαρπίων. The life page lists this day and no other, and the day page prints no hymn for either of them."
     },
     {
       "church": "romanian",
@@ -64,5 +79,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 300,
+      "latest": 300,
+      "display": "c. 300",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 18 марта ст. ст. closes «(ок. 300)», about 300, and its life page puts the suffering under Diocletian, whose reign that page dates «(284 - 305)». Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first it holds."
+    }
   }
 }

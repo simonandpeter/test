@@ -15,23 +15,38 @@
       "form": "Панхарије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 19 March on pravoslavno.rs, „Свети мученик Панхарије.“, with the rank words Свети мученик left off. The heading gives no epithet and no city — Villapate is in the body — so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Панхарије."
+    },
+    {
+      "form": "Панхарий Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 марта ст. ст., «Панхарий Римский, мч.», with the rank word left off. The day's own line declines the name and gives no city, «Мч. Панхария». The by-name Римский stands on the city of the torture; the same page has him beheaded at Nicomedia."
     }
   ],
   "related": [],
   "dates": {
     "death": {
-      "earliest": 305,
+      "earliest": 302,
       "latest": 305,
-      "display": "305",
+      "display": "302–305",
       "basis": "traditional",
-      "note": "saint.gr: «Αλλά όταν πείστηκε για την σοβαρότητα του πράγματος, εξοργισμένος, διέταξε και αποκεφάλισαν τον Παγχάριο. Ήταν το έτος 305 μ.Χ.»"
+      "note": "Two readings and the interval holds both, choosing neither. days.pravoslavie.ru's line for 19 марта ст. ст. closes «(ок. 302)» and its life page the same, «(+ ок. 302)»; the folder already held 305 from saint.gr. The same Russian page makes him a dignitary of «императора Максимиана (305 - 311)», which cannot stand with its own 302, and that contradiction is on the attestation rather than in these bounds."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст. — «Мч. Панхария (ок. 302).»",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "note": "**The page disagrees with itself about the reign and the year, and the slip is recorded rather than averaged.** Its life page opens «Святой мученик Панхарий был сановником императора Максимиана (305 - 311)» and closes «(+ ок. 302)», which is before the reign it has just dated; the day's own line gives the «(ок. 302)» alone. The folder's existing 305 came from the other calendars, so the interval now runs 302 to 305 and chooses neither. The life page adds what no other source for this folder gave: the rank of a court dignitary, the apostasy, the letter from his mother and sister, the confession before the emperor, the torture at Rome and the beheading at Nicomedia. The life page lists this day and no other, and the day page prints no hymn for him."
     },
     {
       "church": "romanian",

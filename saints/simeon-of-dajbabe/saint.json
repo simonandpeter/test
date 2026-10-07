@@ -1,0 +1,59 @@
+{
+  "slug": "simeon-of-dajbabe",
+  "display_name": "Simeon of Dajbabe",
+  "names": [
+    {
+      "form": "Симеон Дайбабский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 марта ст. ст., name page 14691, «Симеон Дайбабский, прп.», with the rank word left off. The day's own line declines it the same way. The form is the Russian calendar's own spelling of the Serbian Дајбабе; no Serbian source was read for this folder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with for 19 марта ст. ст.: «Прп. Симеона Дайбабского (1941) (Серб.).» It is the only year the calendar gives him, and neither the day page nor name page 14691 carries a life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст. — «Прп. Симеона Дайбабского (1941) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "note": "Neither the day page nor name page 14691 carries a life, and the day page prints no hymn for him. The line marks him «(Серб.)», a saint of the Serbian church whom this Russian calendar keeps; the name page lists a second day, «30 августа (Серб.)», which is presumably the Serbian church's own, and it is recorded here — one row per church is the schema and he does not render on it. **The serbian row of this folder is `undocumented` and the Serbian calendar was not read**, so a Serbian reader coming to 30 August will meet him already here and should put the Serbian row on whichever day pravoslavno.rs prints."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs, neither for 1 April 2026 nor for the 30 августа this calendar's name page gives him (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

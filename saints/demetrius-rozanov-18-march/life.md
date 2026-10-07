@@ -1,0 +1,9 @@
+# Demetrius (Rozanov) (18 March)
+
+The Православный церковный календарь of the Сретенский monastery names him in half a line for 18 марта ст. ст.: «Сщмч. Димитрия пресвитера, прмц. Наталии.» The line declines the forename to «Димитрия», gives no surname, no place, no year of birth and — unusually for this calendar's lines of the new martyrs — no year of death either, not even in brackets. The rank word «Сщмч.» that governs the name is the only rank, and the grade word «пресвитера» the only grade.
+
+Behind that «Димитрия» stands the calendar's own name page 12315, which carries the fuller form «Димитрий (Розанов), иерей, сщмч.» — the surname the day's line leaves out, and the grade иерей, priest. That page lists two days: this 18 марта and «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, which is the only thing in the calendar that places him in the twentieth century at all. It carries no life, and neither does the day page.
+
+This calendar keeps three priests of the name and the surname, each on a name page of its own and each on a different day: an archpriest on 26 сентября, a priest on 12 ноября, and this priest on 18 марта. The first two are already in the corpus, and the three are told apart by the day, by the name page and by the grade, and by nothing else the calendar prints. azbyka.ru, which has lives for many of the martyrs of these years, was not read for him. So what the calendar prints is the whole of what this folder says: a priest of the Russian church of that name, who died a martyr, and whom this calendar keeps on this day and in the synaxis of the new martyrs.
+
+*After the Православный церковный календарь of the Сретенский monastery for 18 марта ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260318.html) and [the name page](https://days.pravoslavie.ru/name/12315.html), which carries no life; read 8 October 2026.*

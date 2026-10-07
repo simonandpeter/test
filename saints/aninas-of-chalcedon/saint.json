@@ -16,6 +16,11 @@
       "form": "Анин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 18 March on pravoslavno.rs, „Анин чудотворац.“, with the rank word чудотворац left off, which this folder's `types` already carry. The heading is unusual on this source in opening on the name with no Свети or Преподобни before it, and it gives no city — Chalcedon is the body's first word — so the bare forename is what the source gives."
+    },
+    {
+      "form": "Анин Халкидонский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 марта ст. ст., «Анин Халкидонский, иеромонах», with the grade left off. The day's own line declines the name and gives no city, «Прп. Анина монаха»."
     }
   ],
   "sex": "male",
@@ -23,13 +28,24 @@
     "venerable",
     "hermit",
     "presbyter",
-    "wonderworker"
+    "wonderworker",
+    "hieromonk"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 марта ст. ст. — «Прп. Анина монаха.»",
+        "url": "https://days.pravoslavie.ru/Days/20260318.html",
+        "year": 2026
+      },
+      "note": "This calendar prints him twice, on 13 марта and again on this 18 марта, and his life page lists both: «Дни памяти: 13 марта, 18 марта». One row per church is the schema, so the row stands on 18/3 — the day this folder's Romanian and Serbian rows already use — and the 13 марта is recorded here; he does not render on it. The name link ranks him иеромонах where the day's line says монаха, and the life page has the bishop of Neocaesarea ordain him presbyter against his own will. The line gives no year and the day page prints no hymn for him."
     },
     {
       "church": "romanian",
