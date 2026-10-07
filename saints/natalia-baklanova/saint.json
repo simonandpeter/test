@@ -1,0 +1,51 @@
+{
+  "slug": "natalia-baklanova",
+  "display_name": "Natalia (Baklanova)",
+  "names": [
+    {
+      "form": "Наталия (Бакланова)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 марта ст. ст., name page 14238, «Наталия (Бакланова), прмц.», with the rank word left off. The day's own line declines the name and gives the forename alone, «прмц. Наталии»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 марта ст. ст. — «Сщмч. Димитрия пресвитера, прмц. Наталии.»",
+        "url": "https://days.pravoslavie.ru/Days/20260318.html",
+        "year": 2026
+      },
+      "note": "Neither the day page nor name page 14238 carries a life, and the line closes with no year at all. The name page gives the surname the line leaves out and lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here, the folder does not render on it, and it is the only thing in the calendar that places her in the twentieth century. The rank «прмц.», преподобномученица, is read as `venerable-martyr`: on this calendar it is the word for a woman under monastic vows who died a martyr, and no office is written because the calendar names no monastery, no grade and no house. The corpus was searched for the surname Бакланова and holds no folder of it. The priest named in the same line has a folder of his own; sharing a line is not a relation and no `related` row joins them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 31 martie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Μαρτίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 31 March 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
