@@ -17,6 +17,11 @@
       "form": "Никон Печерски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 23 March on pravoslavno.rs, „Преподобни Никон Печерски.“, with the rank word Преподобни left off. Печерски is kept: it is not a rank but the by-name the heading gives him, of the Caves, and it is what this folder's English name already carries. A bare Никон would fold with `nikon-of-sicily`, whose entry stands first on the same day."
+    },
+    {
+      "form": "Никон Печерский",
+      "lang": "ru",
+      "note": "The heading of the first of the two lives behind days.pravoslavie.ru’s name page 1643, «Преподобный Никон Печерский, игумен», with the rank and the office left off. The name page and the second life head him «Никон, игумен Киево-Печерский», where the house’s name is a two-word qualifier of the office and not of him; the shorter by-name is the one stored. The folder’s existing «Никон Печерски» is Serbian and this is the Russian."
     }
   ],
   "related": [
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him abbot of the Kyiv Caves, so a Russian row is likely and has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст. — «Прп. Никона , игумена Киево-Печерского (1088).»",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "note": "His name page, 1643, and both of its lives print «Дни памяти: 23 марта , 28 сентября (Печер.(Б))». One attestation holds one feast, so **28 сентября, the synaxis of the fathers of the Near Caves, is recorded here as a note and he does not render on it**; it is five months away and no style conversion. The Greek and Serbian rows already keep him on this same menologion day. The index serves two readings, life6769 and life695, and the second is much the fuller: it makes him a priest already when he came to the founder, the tonsurer of everyone who entered the house, and the man who tonsured the prince’s favourites and would not tell them to leave. The day page carries four hymns under his name — two troparia and two kontakia — and all four are added here with their English. `dates` untouched: the line’s «(1088)» is the year the folder already holds. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -79,5 +94,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Христова винограда лоза явился еси, Богоблаженне Никоне,/ гроздие принося Ему - добродетели твоя,/ и прочиих, к темже наставляя,/ приводил еси Христу Богу,/ Емуже, молим тя, молися за души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Тропарь преподобного Никона, игумена Киево-Печерского», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a vine of the vineyard of Christ, O Nikon blessed of God, bearing him clusters — thy virtues — and, guiding others to the same, thou didst bring them to Christ God; to whom, we beseech thee, pray for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Послушания добрый рачитель быв,/ преподобне Никоне приснопамятне,/ церковь бо пречудну Пресвятыя Богородицы/ прекрасно украсил еси./ Темже и мы, чада твоя, любовию вопием ти:/ слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Ин тропарь преподобного Никона, игумена Киево-Печерского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a good lover of obedience, ever-remembered father Nikon, for thou didst adorn most beautifully the wondrous church of the most holy Theotokos. Wherefore we also, thy children, cry out to thee with love: glory to him who gave thee strength, glory to him who crowned thee, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Третье светило пещерное,/ прогоняющее тьму бесовскую,/ восхваляем тя, мудре,/ и по долгу чтим труды и подвиги твоя,/ яже подъят о стаде своем/ и о украшении церковнем,/ воззывающе ти усердие сице:/ радуйся, отче Никоне, красото церковная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Кондак преподобного Никона, игумена Киево-Печерского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Third lamp of the caves, driving away the darkness of the demons, we praise thee, O wise one, and as is due we honour thy labours and thy struggles, which thou didst take upon thyself for thy flock and for the adorning of the church, calling out to thee thus with fervour: rejoice, father Nikon, beauty of the church.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Духовному твоему наставнику, отче Никоне, всячески прилепився/ и от него наставляемь,/ во всем Христови поработився,/ монахов был еси чиноначальник и преподобных сожитель,/ с нимиже Христа Бога моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст., «Ин кондак преподобного Никона, игумена Киево-Печерского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Cleaving in all things to thy spiritual guide, father Nikon, and taught by him, thou wast made a servant of Christ in everything, and becamest a chief over the orders of monks and a fellow-dweller with the venerable; with whom pray unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

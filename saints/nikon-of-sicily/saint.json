@@ -11,6 +11,11 @@
       "form": "Никон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 23 March on pravoslavno.rs, „Свештеномученик Никон.“, with the rank word Свештеномученик left off. The heading gives no epithet and no city — Neapolis and Sicily are both in the body — so the bare forename is what the source gives. It does not fold with `nikon-of-the-kyiv-caves`, whose own heading on this same day carries the by-name Печерски."
+    },
+    {
+      "form": "Никон Сицилийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1645, «Святитель Никон Сицилийский, епископ, сщмч.», with the rank and office words left off. The folder already held a bare «Никон» with no by-name; this is the same calendar’s fuller form and both are kept."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст. — «Прмч. Никона еп. и 199-ти учеников его (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "note": "Name page 1645 gives this one day, so no second day is owed. The entry is «Прмч. Никона еп. и 199-ти учеников его (251).» and its reading, life694, **enumerates none of the 199**: it says only that all 199 monks were seized and beheaded while the bishop was kept alive for torture. The standing ruling makes that one entry and not 199 folders, and no folder was made for any of them; they are named in the life as a company. The folder’s death is «under Decius», 249–251, off the Prologue; the line’s «(251)» is inside that and narrows it to a single year, which one line is not enough to do against a reading that gives a reign, so `dates` is untouched. `types` untouched: this page heads him «Преподобномученик» in the line and in the life’s title but «Святитель ... сщмч.» on the name page, which is the same disagreement the folder’s own types already hold both sides of. The day page carries ten hymns and not one is under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
