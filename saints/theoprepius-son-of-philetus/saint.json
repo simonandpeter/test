@@ -6,6 +6,11 @@
       "form": "Θεοπρέπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Феопрепий (Боголеп) Иллирийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2245, «Феопрепий (Боголеп) Иллирийский, мч.», with the rank abbreviation left off. The day’s line declines the forename and gives no by-name at all; the province is read off the name page."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 марта ст. ст. — «Мчч. Филита , Лидии , супруги его, Македона , Феопрепия , Кронида и Амфилохия , чад их (117-138).»",
+        "url": "https://days.pravoslavie.ru/Days/20260323.html",
+        "year": 2026
+      },
+      "note": "The corpus kept this company on the menologion’s 27 March, off saint.gr and doxologia, and this calendar keeps it on 23 марта ст. ст. — a difference of four days, so neither a style conversion nor the same number, and `day-candidates.mjs`, which matches on the menologion number, could not see any of the six. They were found by the name sweep and by grepping the Latin stems. Each of the six has a name page of its own, 2297, 2571, 1416, 2245, 1308 and 154, every one read here, and every one gives this single day, so no second-day note is owed. **The day’s line and the page’s own life disagree about who two of the six are.** The line reads «Мчч. Филита , Лидии , супруги его, Македона , Феопрепия , Кронида и Амфилохия , чад их (117-138).», whose «чад их» sits after all four names and reads as though Cronides and Amphilochius were children of Philetus and Lydia too. The life’s own title has it otherwise — «Мученики Филит, Лидия, жена его, чада их Македон и Феопрепий, Кронид и Амфилохий», the children being Macedon and Theoprepius and the other two standing apart — and the life itself says why: Amphilochius was the «военачальник» of Illyria to whom the family was sent to be tortured, and Cronides the «начальник тюрем» who had come to believe. That is the corpus’s own reading off the Greek, so nothing in any `display_name`, `types` or relation was changed and the line is recorded here as the looser of the two. The day page carries ten hymns and not one of them is under any of these six names. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -53,5 +68,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "117–138",
+      "basis": "traditional",
+      "note": "The interval the calendar gives, in the line as «(117-138)» and at the end of the life as «(+ ок. 117 - 138)». It is the reign of Hadrian and not a year of death: the life opens «императора Адриана (117 - 138)» and gives the bounds nowhere else. The folder held no date at all before this; the two folders of the company that do hold one, the senator and his wife, are at 125, which is inside this interval, and neither was touched."
+    }
   }
 }
