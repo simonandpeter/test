@@ -12,13 +12,28 @@
       "form": "Кирил",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 21 March on pravoslavno.rs, „Преподобни Кирил, епископ катански, у Сицилији.“, with the rank word Преподобни left off and with the see епископ катански, у Сицилији left off as well. The heading gives no epithet beyond the see, so the bare forename is what the source gives; it folds with `cyril-of-jerusalem`, which took the same bare form off its own Julian 18 March heading, and the fold is recorded as deliberate."
+    },
+    {
+      "form": "Кирилл Катанский (Сицилийский)",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name page 1228, «Святитель Кирилл Катанский (Сицилийский), епископ», with the rank and grade words left off. The day's own line declines the forename and abbreviates the see, «Свт. Кирилла, еп. Катанского». Both brackets are the calendar's own and are kept. The corpus holds twenty-one folders in the fold of the bare Greek «Κύριλλος» and eight in the Romanian one, and the fold-key probe reports no folder holding this string; before this row the folder's only name form was the Serbian «Кирил»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст. — «Свт. Кирилла, еп. Катанского (I-II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "note": "**The folder had one calendar, one name form and no dates, and this row gives it a life, a century and a second calendar.** It was built from the Охридски пролог's heading alone; days.pravoslavie.ru carries a reading, and the reading is what the century rests on — he was born at Antioch, was a disciple of the chief of the apostles, who set him as bishop of Catania in Sicily, was granted the gift of wonders, turned the bitter water of a spring sweet and many of the heathen with it, and died in deep old age and was buried in Sicily. The day's line closes «(I-II)», the first and only interval either calendar states. **The rank is left as it stands**: this calendar says «Свт.», hierarch, and heads him «епископ» on name page 1228, where the folder's `types` are `venerable` and `bishop` off the Serbian book; `hierarch` is not added, because no instrument here writes `types` and it is the author's call. The `office` already reads `Bishop of Catania` and agrees with both. Name page 1228 and the life page both list 21 марта and no other day, and the day page prints no hymn for him."
     },
     {
       "church": "romanian",
@@ -52,5 +67,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 200,
+      "display": "1st or 2nd century",
+      "basis": "traditional",
+      "note": "The first dates this folder has held. days.pravoslavie.ru closes its line for 21 марта ст. ст. «(I-II)», which is the whole of what it states, and its life makes him a disciple of the chief of the apostles, set by him as bishop of Catania, who died in deep old age — which agrees with the first century without naming a year. The Охридски пролог, from which the folder was built, gave no year at all."
+    }
   }
 }

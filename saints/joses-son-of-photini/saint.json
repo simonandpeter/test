@@ -10,6 +10,11 @@
       "form": "Ιωσής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Άγιος Ιωσής», with the rank word left off."
+    },
+    {
+      "form": "Иосия Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1066, «Иосия Римский, мч.», with the rank word left off. The day's own line declines the name and gives no city, «и Иосии»."
     }
   ],
   "related": [
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Мц. Фотины (Светланы) самаряныни, ее сыновей мчч. Виктора, нареченного Фотином, и Иосии; мцц. Анатолии, Фото, Фотиды, Параскевы, Кириакии, Домнины и мч. Севастиана (ок. 66).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "The reading behind the line makes him the younger son, who lived with his mother at Carthage and preached the Gospel there without fear; he was blinded with Sebastian and his brother, healed in prison, crucified head downwards for three days, and flayed with his shins struck off and thrown to dogs. Name page 1066 lists 20 марта and no other day. The day page prints no hymn for this company, and the year «(ок. 66)» the line gives for all eleven is recorded without changing the folder's bounds, which this calendar's life repeats as the reign of Nero «(54 - 68)»."
     },
     {
       "church": "romanian",

@@ -12,6 +12,11 @@
       "form": "Ευφρόσυνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαρτίου, «Άγιος Ευφρόσυνος ο Ιερομάρτυρας εκ Ρωσίας», with the rank word and the country left off. Its life page adds the surname and the name in the world: «Ο Ιερομάρτυρας Ευφρόσυνος (Σινοζέρσκιυ), κατά κόσμο Εφραίμ»."
+    },
+    {
+      "form": "Евфросин Синозерский, Новгородский",
+      "lang": "ru",
+      "note": "Read out of the day's own line for 20 марта ст. ст., «Прп. Евфросина Синозерского, Новгородского», with the rank word left off and the genitive put back into the nominative that name page 748 itself prints, «Преподобный Евфросин Синозерский». The line carries the second by-name, Новгородский, which the name page does not, and it is the fuller of the two forms; the second of the two life pages spells the first by-name Синеозерский. Before this row the folder held one name form only, the Greek «Ευφρόσυνος»."
     }
   ],
   "related": [],
@@ -19,16 +24,26 @@
     "death": {
       "earliest": 1612,
       "latest": 1612,
-      "display": "1612",
-      "basis": "traditional",
-      "note": "saint.gr sets the Polish raid in which he was killed in 1612 — «Το έτος 1612 μ.Χ. τα Πολωνικά στρατεύματα λεηλατούσαν την Ρωσία» — and puts the attack on his hermitage on «Την επόμενη ημέρα, 20 Μαρτίου». It gives no year of birth, only «κατά το δεύτερο ήμισυ του 16ου αιώνα μ.Χ.»"
+      "display": "20 March 1612",
+      "basis": "attested",
+      "note": "Two calendars agree on the day and the year, so the day is taken into the display. days.pravoslavie.ru closes its line for 20 марта ст. ст. «(1612)», and both life pages behind index 748 put the killing in 1612 — «убит поляками при разорении обители в 1612 г.» — one of them naming the day, «На следующий день, 20 марта, на обитель напали поляки», and adding that the body was buried on 28 марта. saint.gr, from which the folder's 1612 came, set the Polish raid in that year and the attack on the hermitage on «Την επόμενη ημέρα, 20 Μαρτίου». Neither calendar gives a year of birth; the Greek says only «κατά το δεύτερο ήμισυ του 16ου αιώνα» and the Russian only that he was born in Karelia near Lake Ladoga."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Прп. Евфросина Синозерского, Новгородского (1612).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "**This is a Russian saint whose folder was written off a Greek page, and the Russian calendar carries three hymns for him and two readings of his life**, which is the largest thing any day of this block has added to one folder. The two life pages behind index 748 agree with each other and with the folder's year: the raid was in 1612 and the killing on 20 March, and the day with the year is taken into `dates` as the other calendar's day and year already agreed. **The rank is a disagreement left on this row: the day's line says «Прп.», venerable, and name page 748 the same, while the second of the two life pages titles him «Преподобномученик Евфросин Синеозерский, Новгородский», a venerable-martyr; the folder's `types` are `hieromartyr`, `presbyter` and `hermit` off saint.gr, and this calendar supports none of the first two — it makes him a причетник, a sacristan, before his tonsure and never a priest.** Nothing in `types` is changed, because no instrument here does it and it is the author's call. The by-name is confirmed from this side: the calendar spells it Синозерский on the day and Синеозерский on one life page, both for Lake Sinichye. Name page 748 lists 20 марта and no other day."
     },
     {
       "church": "romanian",
@@ -58,5 +73,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От юности твоей вперив ум твой к Богу,/ блаженне Евфросине,/ мира же отвергся,/ вселился еси в пустыню непроходимую,/ и тамо, от Господа укрепляемь,/ в молитвах и пощениих доблественне пожил еси,/ и жизнь твою страдальчески/ убиением от сынов противления скончал еси,/ сего ради со преподобными и мученики венчался еси,/ с нимиже и ныне предстоиши Престолу Пресвятыя Троицы./ Сию моли, молим тя,/ оставление подати согрешений наших/ и даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст., «Тропарь преподобного Евфросина Синозерского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having set thy mind upon God from thy youth, blessed Euphrosynus, and having renounced the world, thou didst settle in a trackless wilderness; and there, strengthened by the Lord, thou didst live valiantly in prayer and in fasting, and didst end thy life in suffering, slain by the sons of disobedience. Therefore wast thou crowned together with the venerable and with the martyrs, and with them thou standest now before the Throne of the Most Holy Trinity. Pray to it, we beseech thee, to grant us the remission of our sins and to give us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "От юности вперив ум свой к Богу,/ блаженне Евфросине,/ и бегая суеты мира сего,/ достигл еси в пустыню непроходимую,/ идеже Богу, тя укрепляющу,/ ангельское житие стяжав,/ поработал еси довольно Владыце своему Христу/ в пощении, и в молитвах, и во всенощных бдениях/ и сподобился еси дара Духа Пресвятаго,/ еже прорицати будущая,/ наставляя на стезю покаяния/ притекающих к тебе и послушающих тя./ Темже Всеблагий Бог, видя великую твою к Себе веру,/ нелицемерную любовь и несумненную надежду,/ дарова тебе не точию еже веровати в Него,/ но еже и страдати по Нем,/ егда от противных сынов в тойже пустыни кровь твоя нещадно излияся./ И доселе, яко Авелева, вопиет к Богу,/ свидетельствующу о сем нетлением мощей твоих./ На няже взирающе, умильно вопием:/ слава Христу, даровавшему тебе благодать толику,/ Егоже и моли о нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст., «Ин тропарь преподобного Евфросина Синозерского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having set thy mind upon God from thy youth, blessed Euphrosynus, and fleeing the vanity of this world, thou didst reach a trackless wilderness, where, God strengthening thee, thou didst gain the life of angels and didst serve thy Master Christ abundantly in fasting and in prayers and in vigils through the night; and thou wast granted the gift of the Most Holy Spirit, to foretell things to come, guiding into the path of repentance those who came to thee and gave thee hearing. Therefore the all-gracious God, seeing thy great faith toward him, thy love without pretence and thy hope without doubt, gave thee not only to believe in him but to suffer for him also, when in that same wilderness thy blood was poured out without mercy by the sons of the adversary. And to this day it cries out to God as Abel's did, the incorruption of thy relics bearing witness to it. Looking upon them we cry out with compunction: glory to Christ, who gave thee so great a grace; and do thou pray to him for us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Подражая житию древних отцев,/ Богомудре отче Евфросине,/ красоту мира сего возненавидел еси,/ и, в пустыню вселився,/ веру Христову, якоже щит, в сердце твое приял еси,/ с неюже изшел еси, яко добр воин Царя Небеснаго,/ не на брань противу плоти и крове,/ но на брань противу козней невидимаго врага,/ и сего вознесенную гордыню,/ по данней тебе от Духа Святаго благодати,/ глубоким смирением твоим низложил еси,/ и от Небеснаго Мздовоздателя неувядаемым венцем победы венчался еси./ Сего ради, сошедшеся любовию, вопием ти:/ радуйся, отче Евфросине, пустынное украшение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст., «Кондак преподобного Евфросина Синозерского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating the life of the fathers of old, God-wise father Euphrosynus, thou didst hate the beauty of this world, and settling in the wilderness thou didst take the faith of Christ into thy heart as a shield; and with it thou wentest out as a good soldier of the heavenly King, not to a war against flesh and blood but to a war against the devices of the unseen enemy, whose lifted-up pride thou didst cast down by thy deep humility, through the grace given thee of the Holy Spirit; and from the heavenly Rewarder thou wast crowned with the unfading crown of victory. Therefore, gathered together in love, we cry to thee: rejoice, father Euphrosynus, adornment of the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

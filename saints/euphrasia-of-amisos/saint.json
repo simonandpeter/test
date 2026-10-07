@@ -11,6 +11,11 @@
       "form": "Ευφρασία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαρτίου, «Αγίες Αλεξανδρία, Κλαυδία, Ευφρασία, Ματρώνα, Ιουλιανή, Ευφημία και Θεοδώρα που μαρτύρησαν στην Αμινσό», with the rank word and the clause of martyrdom left off. Her own heading on the life page is «Αγια Ευφρασια Που Μαρτυρησε Στην Αμινσο»."
+    },
+    {
+      "form": "Евфрасия Амисийская (Понтийская)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2480, «Евфрасия Амисийская (Понтийская), мц.», with the rank word left off. The day's own line declines the name and gives no by-name at all, «Мцц. Александры, Клавдии, Евфрасии, Матроны, Иулиании, Евфимии и Феодосии». Both brackets are the calendar's own — Pontus set beside Amisos — and are kept, as this wave keeps a bracketed surname; parentheses are not part of a fold key and `.tmp/fk.mjs` reports no folder holding this string."
     }
   ],
   "related": [
@@ -24,17 +29,27 @@
   "dates": {
     "death": {
       "earliest": 303,
-      "latest": 305,
-      "display": "303–305",
+      "latest": 310,
+      "display": "303–310",
       "basis": "traditional",
-      "note": "saint.gr: «Το μαρτύριό τους έγινε μεταξύ των ετών 303 - 305 μ.Χ.» — the page gives the interval itself and does not choose a year within it. It also names the reign, «του ασεβούς αυτοκράτορα Μαξιμιανού (286 - 305 μ.Χ.)», which is wider than the interval it states."
+      "note": "Two readings and the interval holds both, choosing neither. days.pravoslavie.ru closes its line for 20 марта ст. ст. «(310)» and its life page closes «(+ 310)», and it sets the seizure under «императоре Максимиане Галерии (305 - 311)»; saint.gr, from which the folder's 303–305 came, gave «Το μαρτύριό τους έγινε μεταξύ των ετών 303 - 305 μ.Χ.» and the reign of «του ασεβούς αυτοκράτορα Μαξιμιανού (286 - 305 μ.Χ.)». The two pages name two different Maximians and two incompatible years — 310 lies outside 303–305 — so the bounds are widened to hold both and nothing is chosen."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Мцц. Александры, Клавдии, Евфрасии, Матроны, Иулиании, Евфимии и Феодосии (310).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "The calendar prints all seven virgins on one line and closes it «(310)»; its life page sets the seizure «в городе Амисе (на берегу Черного моря)» in the persecution under «императоре Максимиане Галерии (305 - 311)». **That year is outside the bounds this folder held**, saint.gr's 303–305, so the interval is widened to hold both readings and chooses neither; the disagreement is set out under `dates`. The reading adds the manner of the death, which the folder did not hold: they confessed under questioning, were stripped and beaten with rods, their breasts cut off, then hung up and scraped over the body with sharpened hooks, and at the last burnt alive in a heated furnace. Life page life681 lists this day and no other, and the day page prints no hymn for them."
     },
     {
       "church": "romanian",

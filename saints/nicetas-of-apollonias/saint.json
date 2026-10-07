@@ -12,6 +12,11 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαρτίου, «Όσιος Νικήτας ο Ομολογητής επίσκοπος Απολλωνιάδος», with the rank word, the epithet and the see left off."
+    },
+    {
+      "form": "Никита Аполлониадский",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name page 1612, «Святитель Никита Аполлониадский, архиепископ, исповедник», with the rank and grade words left off. The day's own line declines the name and abbreviates the see, «Свт. Никиты, исп., архиеп. Аполлониадского». The corpus keeps a great many folders of this forename and none of them holds this form."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Свт. Никиты, исп., архиеп. Аполлониадского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "**The folder held no dates at all before this row and now holds a century**, which is the only interval either page states: the line closes «(IX)» and the life sets his confession in the reign of «императора-иконоборца Льва Армянина (813 - 820)» and closes «был сослан и скончался в заточении» with no year. The reign would put the death after 813, and that narrowing is not taken into the bounds, which are the century the page prints. **This calendar calls him архиепископ, as its name page 1612 does, where the folder's `office` is `Bishop` off the Romanian and Greek rows; the office is not changed here and the difference is a question for the author.** The rank «Свт.» is read as `hierarch` and «исп.» as `confessor`, both of which the folder already holds. Name page 1612 and the life page both list 20 марта and no other day, and the day page prints no hymn for him."
     },
     {
       "church": "romanian",
@@ -63,5 +78,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "The first dates this folder has held. days.pravoslavie.ru closes its line for 20 марта ст. ст. «(IX)», which is the century and the whole of what it states; its life adds the reign he confessed under, «императора-иконоборца Льва Армянина (813 - 820)», and says he was exiled and died in confinement without a year. The reign would make the earliest 813, and the bounds are left at the century rather than at a reading the page does not itself draw. Neither the Romanian nor the Greek row gave any year."
+    }
   }
 }

@@ -16,6 +16,11 @@
       "form": "Фотина",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 20 March on pravoslavno.rs, „Света мученица Фотина.“, with Света left off, which is not a rank, and with the rank word мученица left off. The heading gives no epithet — the Samaritan woman is the body's first clause and not part of the name — so the bare forename is what the source gives. Note the spelling: the Prologue has Фотина where the Greek form already in this folder is Φωτεινή."
+    },
+    {
+      "form": "Фотина (Светлана) Самаряныня, Римская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2742, «Мученица Фотина (Светлана) Самаряныня, Римская», with the rank word left off. The day's own line declines it and drops the city, «Мц. Фотины (Светланы) самаряныни». The bracketed «Светлана» is the calendar's own and is part of what it prints, as the brackets of a surname are elsewhere in this wave."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Мц. Фотины (Светланы) самаряныни, ее сыновей мчч. Виктора, нареченного Фотином, и Иосии; мцц. Анатолии, Фото, Фотиды, Параскевы, Кириакии, Домнины и мч. Севастиана (ок. 66).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "The calendar prints the whole company of eleven on one line and closes it «(ок. 66)», which is the only year it gives any of them; its life repeats the folder's existing bounds word for word — «Во времена императора Нерона (54 - 68)» — so the dates are left as they stand and the «ок. 66» is recorded here rather than chosen. The russian form adds «Светлана», the Russian rendering of her name that the calendar prints in brackets beside it. The reading behind the line adds what this folder did not hold: that she lived at Carthage with her younger son and preached there, that her elder son was a commander in the Roman armies, that the hands of the confessors were broken on an anvil and hers alone were left whole, that the skin was flayed from her and she was thrown into a well, drawn out, kept twenty days in prison, and thrown back into it to die. One arrival comes off this line, the daughter of Nero set to guard her in the palace and converted by her, and a `related` row is added for her. The day page prints no hymn for this company. The name page, 2742, lists this day and no other; the Romanian and Greek rows keep her on 26 February and the Serbian already on this same Julian 20 March."
     },
     {
       "church": "romanian",
@@ -91,7 +106,8 @@
     "paraskeve-sister-of-photini",
     "kyriake-sister-of-photini",
     "photinos-son-of-photini",
-    "joses-son-of-photini"
+    "joses-son-of-photini",
+    "domnina-daughter-of-nero"
   ],
   "hymns": [
     {

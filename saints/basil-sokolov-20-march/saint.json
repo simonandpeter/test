@@ -1,0 +1,62 @@
+{
+  "slug": "basil-sokolov-20-march",
+  "display_name": "Basil (Sokolov, 20 March)",
+  "names": [
+    {
+      "form": "Василий (Соколов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13705, «Василий (Соколов), протодиакон, сщмч.», with the rank and grade words left off. The day's own line declines the forename and prints no surname at all, «Сщмч. Василия диакона», so the surname is read off the name page. **Two other folders already hold this identical string**: `basil-sokolov` is name page 9509, «Василий (Соколов), иерей, сщмч.», a priest on 16 ноября ст. ст. with a life out of azbyka.ru and a birth year of 1880, and `basil-sokolov-27-november` is name page 9287, «Василий (Соколов), протоиерей, сщмч.», an archpriest on 27 ноября ст. ст. with no life at all. This man is a third name page, a protodeacon, on a third day, with a third year. The day in the display name is what tells him from them, and the fold is read in the gate's own entry for the string."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "office": "Deacon",
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with for 20 марта ст. ст.: «Сщмч. Василия диакона (1938).» It is the only year the calendar gives him, and it is a year neither of the two other folders of this name holds, both of which the same calendar puts in 1937. Neither the day page nor name page 13705 carries a life, a place or a year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Сщмч. Василия диакона (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "The calendar's line is all there is: no life on the day page, none on name page 13705, and no place, diocese, parish or manner of death anywhere on either. The name page lists one further day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church; one row per church is the schema, so that day is recorded here and he does not render on it. **The grade the name page gives him is протодиакон, protodeacon, and `office` is reduced to `Deacon`**, which the four locale packs carry, rather than coining an office that would cost four translations a reader should not invent; the protodeaconate is said in the life and in this note. «Сщмч.» is read as `hieromartyr`, the line's «диакона» as `deacon`, and «Новомуч.» on the name page is what `new-martyr` stands on. azbyka.ru was not read. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

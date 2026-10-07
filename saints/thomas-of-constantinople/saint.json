@@ -17,6 +17,11 @@
       "form": "Тома",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 21 March on pravoslavno.rs, „Свети Тома патријарх цариградски.“, with Свети left off, which is not a rank, and with the see патријарх цариградски left off as well. The heading gives no epithet, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Фома Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name page 2324, «Святитель Фома Константинопольский, патриарх», with the rank and grade words left off. The day's own line declines it, «Свт. Фомы, патриарха Константинопольского». The corpus's `thomas-the-apostle` holds the bare Russian «Фома»; this form carries the see and the fold-key probe reports no folder holding it."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст. — «Свт. Фомы, патриарха Константинопольского (610).»",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "note": "The year agrees with the folder's own 610 and nothing is changed. The reading adds his service before the throne and the one story the calendar remembers him by: he was a deacon and then sakellarios, keeper of the sacristy, of the Great Church under the patriarch John the Fourth (582–595); he was chosen to the throne in 607 after the death of the patriarch Cyriacus (595–606); and in his patriarchate the processional crosses of Galatia began to sway, strike one another and break, a sign the clairvoyant elder of Sykeon read as discord coming on the Church and ruin on the state, upon which the patriarch asked him to pray that God take his soul first. The reading closes with all of it coming true — the successor falling into the monothelite heresy, the Persian war, Asia Minor laid waste, Jerusalem fallen and the Cross carried into Persia. **A `related` row is added in both directions for the elder of Sykeon**, who is in this folder's story and whose own folder gains the matching row in this batch. Name page 2324 and the life page both list 21 марта and no other day, and the day page prints no hymn for him."
     },
     {
       "church": "romanian",

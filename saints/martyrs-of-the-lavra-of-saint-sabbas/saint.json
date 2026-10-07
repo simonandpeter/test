@@ -11,6 +11,11 @@
       "form": "Αββάδες",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαρτίου, «Άγιοι Αββάδες εν τη μονή του Αγίου Σάββα αναιρεθέντες, των λεγομένων Μαύρων», with the rank word left off — the company's own name on the Greek calendar, the Abbades, those called the Black."
+    },
+    {
+      "form": "Иоанн, Сергий, Патрикий и прочие в обители святого Саввы убиенные",
+      "lang": "ru",
+      "note": "The title of the life page behind the day's three name links, which is the only form this calendar gives the company as a company; the day's own line declines all of it, «Прпп. Иоанна, Сергия, Патрикия и прочих, во обители св. Саввы убиенных». The three name pages — 1012, 1976 and 1748 — give three individual nominatives instead, «Иоанн Савваит», «Сергий Савваит» and «Патрикий Савваит», and none of those is stored here, because this folder is not any one of the three men. Each of the three name pages lists 20 марта and no other day."
     }
   ],
   "sex": "male",
@@ -20,18 +25,28 @@
   ],
   "dates": {
     "death": {
-      "earliest": 780,
-      "latest": 797,
-      "display": "780–797",
+      "earliest": 796,
+      "latest": 796,
+      "display": "796",
       "basis": "traditional",
-      "note": "doxologia.ro's life for the day: «În zilele preasfințitului patriarh al Ierusalimului, Ilie, care era al doilea cu același nume … iar în Constantinopol împărățind Constantin și Irina (780-797)». The reign is the interval the page prints; it gives no year for the killing, only that it fell on 20 March, Great Thursday."
+      "note": "The year days.pravoslavie.ru closes its line for 20 марта ст. ст. with, «(796)», and the only year any page read for this folder gives the killing. The folder previously held 780–797, which was not a year of death at all but the reign doxologia.ro's life prints — «iar în Constantinopol împărățind Constantin și Irina (780-797)» — that page explicitly giving no year for the killing, only that it fell on 20 March, Great Thursday. 796 lies inside that reign and the two readings do not conflict. This calendar's own life gives no year in its text either, only the two days 13 and 20 марта and the Great Thursday."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Прпп. Иоанна, Сергия, Патрикия и прочих, во обители св. Саввы убиенных (796).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "**The corpus holds this company as one folder and this row keeps it one.** The line names three of the dead and then «и прочих», the rest, and its three name links go to three nominatives of the calendar's own making, «Иоанн Савваит», «Сергий Савваит» and «Патрикий Савваит». The standing ruling is that a synaxis which enumerates its members is one folder per member and one that names nobody is one entry; this line is neither — it names three out of a company its own reading counts as thirteen shot in the first raid and eighteen suffocated in the cave, so it is a heading with three names in it and not an enumeration. The romanian, greek and serbian rows already on this folder read the same day the same way. No folder is therefore made for any of the three, and the three names are said in the life, which is where the reading puts them. The year is narrowed: the line closes «(796)», which is the first year any page read for this folder has given the killing, and it falls inside the reign the folder already held. The reading adds the two raids a week apart, the ransom of four thousand gold pieces, the fire of dung before the cave and the end of the raiders. The day page prints a kondak for the company, which is copied here."
     },
     {
       "church": "romanian",
@@ -126,6 +141,22 @@
       },
       "english": {
         "text": "Let us all crown with songs the God-possessed company of the venerable, shining with the rays of the martyrs, who were offered up to Christ as divine victims; for the Word himself received them.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Земных и тленных наслаждение/ презревше яве, преблаженнии,/ пустынное житие изволивше,/ мира же краснейшее, и пищи временный возненавидевше,/ отонудуже сподобистеся Небеснаго Царствия,/ с лики мученик и постник веселящеся./ Темже, чтуще память вашу,/ вопием вам прилежно:/ от бед нас, отцы, избавите.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст., «Кондак преподобных отец, во обители святаго Саввы убиенных», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having plainly despised the enjoyment of earthly and corruptible things, most blessed ones, and having chosen the life of the wilderness, and hated the fairest things of the world and its passing food, thereby were you counted worthy of the heavenly Kingdom, rejoicing with the choirs of martyrs and of ascetics. Therefore, honouring your memory, we cry to you earnestly: deliver us from troubles, O fathers.",
         "rendered": "site"
       }
     }
