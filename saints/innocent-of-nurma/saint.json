@@ -12,6 +12,11 @@
       "form": "Ιννοκέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαρτίου, «Όσιος Ιννοκέντιος ο Θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Иннокентий Комельский, Вологодский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 марта ст. ст., «Преподобный Иннокентий Комельский, Вологодский», with the rank word left off. The day's own line declines it the same way. Neither of this calendar's two by-names is the Нурма of the Greek page this folder's display name came from, though the Russian life gives that river as well."
     }
   ],
   "related": [
@@ -22,16 +27,26 @@
     "death": {
       "earliest": 1521,
       "latest": 1521,
-      "display": "1521",
-      "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Ιννοκέντιος κοιμήθηκε στις 19 Μαρτίου του 1521 μ.Χ.», and the page heads him «(; - 1521)». It adds that a carved stone on his grave gives the year, the month and the day of his repose."
+      "display": "19 March 1521",
+      "basis": "attested",
+      "note": "Both calendars give the day as well as the year and they agree. days.pravoslavie.ru's second reading of his life: «Скончался преподобный Иннокентий 19 марта 1521 года», and its first «Преподобный мирно почил о Господе 19 марта 1521 г.»; saint.gr: «Ο Άγιος Ιννοκέντιος κοιμήθηκε στις 19 Μαρτίου του 1521 μ.Χ.», with the page heading «(; - 1521)». Both add that a stone laid on his grave carried the year, the month and the day. The Russian day line's «(1511-1522)» is repeated by neither and is recorded on the attestation instead."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him a Muscovite and a Russian abbot, so a Russian row is likely and has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст. — «Прп. Иннокентия Комельского, Вологодского (1511-1522).»",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar names him for the Komel forest and for Vologda where saint.gr named him for the river Nurma, and the two are the same man: both lives have him a monk of the White Lake under the hermit of the river Sora, both send him to the Komel wood in the Vologda country, and both end on 19 March 1521 with a carved stone on the grave. The Russian life says in so many words that his teacher sent him «на реку Нурму» and that he built his cell on the Eda, which falls into the Nurma, so the by-name this folder was built under is in this source too. **The line closes «(1511-1522)», which is neither a death year nor a reign and which neither of the two life pages behind it repeats**; both of them give 19 марта 1521, and the span is recorded here unexplained rather than taken. The calendar hangs two readings of his life on one index, 952, and they agree. Four hymns were copied from the day page."
     },
     {
       "church": "romanian",
@@ -61,5 +76,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От юности сосуд избранен был еси/ и в житии Богу послужил еси,/ иноков наставниче Иннокентие,/ потщался еси хуждшее покорити лучшему,/ темже и страсти умертвив,/ возвысился еси к зрению красоты несозданныя,/ в Бозе Емуже предстоиши,/ моли, отче, Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст., «Тропарь преподобного Иннокентия Комельского, Вологодского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou wast a chosen vessel, and in thy life thou didst serve God, O Innocent, teacher of monks. Thou didst strive to bring the worse under the better, and so, putting the passions to death, thou wast raised to the sight of the uncreated beauty. Pray, father, to Christ God, in whom thou standest, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От юности своей весь Богу поработился еси, блаженне,/ Того ради любве отечество и род оставил еси,/ и, в пустыню вселився,/ в ней жестокое житие показал еси,/ и чудес дарования от Господа приял еси,/ преподобне Иннокентие,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст., «Ин тропарь преподобного Иннокентия Комельского, Вологодского», глас 4 — the second of two the page prints",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou gavest thyself wholly into God's service, O blessed one, and for love of him didst leave thy country and thy kindred; and dwelling in the wilderness thou didst show forth a hard life there and didst receive from the Lord the gift of wonders, O venerable Innocent. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Мира и сродник удалився,/ в пустыни неустанною молитвою Богу угодил еси/ и в подвизе жития, отче, просиял еси,/ поминай нас, чтущих усердно память твою, да зовем ти:/ радуйся, Иннокентие преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст., «Кондак преподобного Иннокентия Комельского, Вологодского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having withdrawn from the world and from thy kindred, thou didst please God in the wilderness by unceasing prayer and didst shine in the labour of thy life, O father. Remember us who keep thy memory with eagerness, that we may cry to thee: rejoice, venerable Innocent.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Отечества, преподобне, удалився/ и вселився в пустыню,/ тамо жестокое житие показал еси и многих людей житием своим удивил еси./ Помилуй нас, чтущих память твою, да зовем ти:/ радуйся, преподобне Иннокентие, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст., «Ин кондак преподобного Иннокентия Комельского, Вологодского», глас 4 — the second of two the page prints",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Withdrawing from thy country, O venerable one, and dwelling in the wilderness, thou didst show forth there a hard life and didst astonish many by the manner of it. Have mercy on us who keep thy memory, that we may cry to thee: rejoice, venerable Innocent, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
