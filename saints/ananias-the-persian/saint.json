@@ -6,6 +6,11 @@
       "form": "Ανανίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Δεκεμβρίου, «Άγιος Ανανίας ο Πέρσης», with the rank word left off."
+    },
+    {
+      "form": "Анания Персиянин",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 1 декабря ст. ст., «Анания Персиянин, мч.», with the rank abbreviation left off. The line itself declines him as «Анании Персянина» and spells the epithet with я where the link spells it with и; the link’s nominative is the form taken."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 декабря ст. ст. — «Мч. Анании Персянина»",
+        "url": "https://days.pravoslavie.ru/Days/20261201.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

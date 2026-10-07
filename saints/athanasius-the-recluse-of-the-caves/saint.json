@@ -11,6 +11,11 @@
       "form": "Атанасије, затворник печерски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s fourth heading for 2. децембар ст. ст., „Преподобни Атанасије, затворник печерски.“ — «Преподобни» is the `venerable` grade and comes off, and everything after the comma is what the book prints to tell this Athanasius from the others, with its own comma and its own lower case kept rather than tidied. Section 6 wants the fullest form the calendar gives and a bare forename beside a fuller one is a fold the gate stops on: the bare «Атанасије» is already on four folders, and затворник is not a rank this corpus keeps in `types`, so it belongs in the form. `sr-foldpred.mjs` measures this form at 0 other holders."
+    },
+    {
+      "form": "Афанасий, затворник Печерский",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 2 декабря ст. ст., name page 303, «Преподобный Афанасий, затворник Печерский», with the rank word left off. The comma and the word order are the page’s own and are load-bearing here: the same day’s second name page, 304, reads «Преподобный Афанасий Печерский, затворник» and belongs to a different man, the recluse of the Far Caves of the thirteenth century, who now has his own folder. «затворник» is not a grade this corpus keeps in `types` and «Печерский» is the monastery, so both stay in the form, on the same reading the `sr` form already on this folder stands on."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His two life pages list «28 сентября (Печер.(Б)), 2 декабря» — the second being the synaxis of the saints of the Near Caves — and one of them adds the second Sunday of Great Lent. The day page that names him is the 2 декабря one, so that is the day recorded here; the synaxis and the moveable Sunday are recorded and he does not render on either."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Прп. Афанасия, затворника Печерского, в Ближних пещерах (ок. 1176)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -72,5 +87,39 @@
       "basis": "traditional",
       "note": "The Охридски пролог for 2. децембар ст. ст. closes „Упокоји се у Господу 1176. године.“ — the only year any source has given this folder; it held no `dates` at all before. The entry gives no year of birth and no age (7 October 2026)."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Блаженство плачущих получити желая,/ день и нощь непрестанно плакал еси,/ имея во уме час Судный,/ тем по кончине твоей обрел еси утешение на Небеси,/ преподобне Афанасие./ Подаждь и нам плакатися зде грехов наших выну,/ яко да плача безконечнаго избывше,/ тамо приимем вечное утешение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Тропарь преподобного Афанасия, затворника Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring to obtain the blessedness of those who mourn, you wept without ceasing day and night, holding the hour of judgement in your mind; and so after your end you found comfort in heaven, venerable Athanasius. Grant us also to weep here for our sins always, that escaping unending weeping we may receive eternal comfort there.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Яко безсмертия тезоименит, по умертвии своем востал еси жив;/ показуя же, яко зело люта есть смерть, плакался еси горько./ Ныне, обретши некончаемую радость,/ молися о нас, яко да плача вечнаго избудем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Кондак преподобного Афанасия, затворника Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Named for immortality, you rose up alive after your own death; and showing how very bitter death is, you wept bitterly. Now that you have found unending joy, pray for us, that we may escape eternal weeping.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

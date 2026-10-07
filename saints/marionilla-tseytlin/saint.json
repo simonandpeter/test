@@ -1,0 +1,61 @@
+{
+  "slug": "marionilla-tseytlin",
+  "display_name": "Marionilla (Tseytlin)",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Прмц. Мариониллы (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 15 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 15 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 15 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year the day line closes with, and the only year this calendar gives her. She is the only saint on this day dated 1938."
+    }
+  },
+  "names": [
+    {
+      "form": "Марионилла (Цейтлин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14365, «Марионилла (Цейтлин), прмц.», with the grade word left off. The day line declines the forename and prints no surname. No other folder in this corpus holds either the forename or the surname."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

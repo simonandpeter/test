@@ -16,6 +16,11 @@
       "form": "Наум",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 1. децембар ст. ст., „Свети пророк Наум.“ — «Свети» is “saint” and not a rank and «пророк» is the `prophet` grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form; the heading gives him no epithet, where the Greek life calls him the Elkesite. `foldchk.py` measured the string as held in ru by `naum-of-aglomazovo`, a martyr of 1918, so this form makes a two-folder fold and the key is in `scripts/corpus-gate.mjs`."
+    },
+    {
+      "form": "Наум",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 1 декабря ст. ст., «Наум, пророк, из 12 малых пророков», with the rank word and the descriptive clause left off. The string is the same as the `sr` form already on this folder, so it adds no member to the «наум» fold key already in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 декабря ст. ст. — «Прор. Наума (VII до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20261201.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -131,6 +145,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ἐπεφάνης σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Пророка Твоего Наума память, Господи, празднующе,/ тем Тя молим:// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 декабря ст. ст. — «Тропарь пророка Наума»",
+        "url": "https://days.pravoslavie.ru/Days/20261201.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of your prophet Nahum, O Lord, we pray you through him: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Просветившееся Духом чистое твое сердце/ пророчества бысть светлейшаго приятелище:/ зриши бо, яко настоящая, далече сущая,/ сего ради тя почитаем,// пророче блаженне, Науме славне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 декабря ст. ст. — «Кондак пророка Наума»",
+        "url": "https://days.pravoslavie.ru/Days/20261201.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your pure heart, enlightened by the Spirit, became the vessel of the brightest prophecy, for you behold things far off as though they stood present; and for this we honour you, blessed prophet, glorious Nahum.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

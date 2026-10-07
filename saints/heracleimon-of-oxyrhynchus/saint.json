@@ -6,6 +6,11 @@
       "form": "Ηρακλείμων",
       "lang": "el",
       "note": "Read out of saint.gr's own heading «Αγιος Ηρακλείμων ο Ερημιτης» in the «Άγιοι που εορτάζουν» block of the page of «Άγιοι Ιωάννης, Ηρακλείμων, Ανδρέας και Θεόφιλος οι Ερημίτες» for 2 Δεκεμβρίου, with the rank words left off. The epithet in this folder's name is the city the page gives the four of them."
+    },
+    {
+      "form": "Ираклемон (Ираклеон) Оксиринфский (Египетский)",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind his place in days.pravoslavie.ru’s line for 2 декабря ст. ст., name page 1079, «Ираклемон (Ираклеон) Оксиринфский (Египетский), прп.», with the grade word left off. The day’s own line declines all four forenames together and gives none of them an epithet; the link adds the city and, in brackets, the country — Oxyrhynchite, the Egyptian — and BRIEF-ADDENDUM section 2 notes that brackets are not part of a name key, so the bracketed alternative is kept as the page prints it rather than dropped. The first bracket here holds an alternative forename, «Ираклеон», and not a second epithet."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Прпп. Иоанна, Ираклемона, Андрея и Феофила (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

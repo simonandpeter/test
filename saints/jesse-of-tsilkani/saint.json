@@ -16,6 +16,11 @@
       "form": "Иса",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's naming clause in the entry headed „Преподобни оци грузијски.“ for 7. мај ст. ст. — „А имена су њихова: Авид, Антоније, Давид, Зинон, Тадеј, Иса, Издериос, Јосиф, Михаил, Пир, Стефан и Шијо.“ The list carries no rank word and no epithet on any of the twelve; Преподобни heads the whole company in the heading and belongs to no one name, and the see or monastery each folder's English name keeps is nowhere on this page. So the bare forename is the whole of the form. The form meets no other folder in any language, which was measured rather than assumed; it is three letters long and the gate's noise on a short skeleton is to be expected rather than read as a fold."
+    },
+    {
+      "form": "Исе (Иессей) Цилканский",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 2 декабря ст. ст., name page 1113, «Святитель Исе (Иессей) Цилканский, епископ», with the rank word «Святитель» and the trailing grade «, епископ» left off. The bracket holds the fuller Biblical form of the same forename, which the life page uses interchangeably with the short one, and it is kept as the page prints it. The existing `sr` form on this folder is the bare «Иса» from a naming clause that listed thirteen men without epithets; this fuller form is what BRIEF-RUSSIAN section 2 asks for where the calendar gives it."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His life page lists two days, «7 мая, 2 декабря», and the day page that names him is the 2 декабря one, so that is the day recorded here. The 7 мая is the common commemoration of the thirteen Syrian fathers, which the Greek and Romanian rows on this folder already keep; one row per church is the schema, so it is recorded here and he does not render on it. The life says besides that the exact day of his repose is known and is 18 августа, and that the Church set his memory on 2 декабря."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Прп. Исе (Иессея), еп. Цилканского (VI) (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -86,7 +101,14 @@
       "latest": 600,
       "display": "6th century",
       "basis": "traditional",
-      "note": "Охридски пролог за 7. мај ст. ст.: „У VI веку, а на двесто година после тога како је света Нина проповедала Јеванђеље у Грузији, јави се Пресвета Богоматер Јовану, подвижнику Антиохијском, и нареди му да избере дванаест својих ученика и оде у Грузију“ — the century the book gives for the mission itself, which is this man's only dating anywhere in this corpus. The same interval stands on `anthony-of-martkopi` from doxologia's identical statement. `node .tmp/dd.mjs \"6th century\"` reads it as «VI в.» and «6ος αι.» The book prints no year of birth and none of death for any of the thirteen."
+      "note": "Охридски пролог за 7. мај ст. ст.: „У VI веку, а на двесто година после тога како је света Нина проповедала Јеванђеље у Грузији, јави се Пресвета Богоматер Јовану, подвижнику Антиохијском, и нареди му да избере дванаест својих ученика и оде у Грузију“ — the century the book gives for the mission itself. The same interval stands on `anthony-of-martkopi` from doxologia’s identical statement. days.pravoslavie.ru’s life agrees and narrows the end: «Это произошло в конце VI века.» Carried forward unchanged, with the death below added beside it (7 October 2026)."
+    },
+    "death": {
+      "earliest": 567,
+      "latest": 600,
+      "display": "late 6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life for 2 декабря ст. ст. closes his repose «Это произошло в конце VI века.» — the first statement of his death any source has given this folder, which held a floruit only. The bounds are the last third of that century; the page gives no year and no age, and the one calendar date it does fix is the day, 18 августа, and not the year."
     }
   }
 }

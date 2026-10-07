@@ -1,0 +1,62 @@
+{
+  "slug": "andrew-kosovsky",
+  "display_name": "Andrew (Kosovsky)",
+  "names": [
+    {
+      "form": "Андрей (Косовский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9281, «Андрей (Косовский), протоиерей, сщмч.», with the rank and grade words left off. The day line declines the forename and prints no surname. No other folder in this corpus holds this surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Сщмч. Андрея пресвитера (1920)»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 16 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 16 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "traditional",
+      "note": "The year the day line closes with, and the only year this calendar gives him."
+    }
+  },
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -16,6 +16,11 @@
       "form": "Миропија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 2. децембар ст. ст., „Света мученица Миропија.“ — «Света» is “saint” and not a rank and «мученица» is the `martyr` grade, so both come off and the bare personal name is the whole of the form; the heading gives her no epithet and no island. `sr-foldpred.mjs` measures the form at 0 other holders."
+    },
+    {
+      "form": "Миропия Хиосская",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 2 декабря ст. ст., name page 2619, «Миропия Хиосская, мц.», with the grade word left off. The day’s own line declines her and gives no epithet; «Хиосская», of Chios, is the island the link adds and is not a grade this corpus keeps in `types`, so it stays in the form."
     }
   ],
   "sex": "female",
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Мц. Миропии (ок. 251)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -132,6 +146,38 @@
       },
       "tone": "Ήχος γ`.",
       "model": "Η Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Добромученице Миропие и Христа невесто нетленная,/ ныне Емуже предстоиши, прекрасная,/ раны носящи плоти,/ яко камни светлы и светообразны,/и в кровавую порфиру, яко царица, облеченная, преславная,/ умоли Его за ны,/; яже с любовию восхваляющия/ хвалы победными; и песньми твою Божественную страсть.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Тропарь мученицы Миропии»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Good martyr Myrope and incorrupt bride of Christ, before whom you now stand, most beautiful, bearing the wounds of your flesh like bright and shining stones, and clothed as a queen in a purple of blood, most glorious: entreat him for us who with love praise your divine passion with songs of victory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "По имени, о страстотерпице Миропие,/ миро источаеши благодати чудес/ и пасеши всех, подобающих и взыскающих/ и верою и добродетелию прибегающих к раке твоей пречестней,/ яже держит прах твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Кондак мученицы Миропии»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "True to your name, O passion-bearer Myrope, you pour out the myrrh of the grace of wonders, and you shepherd all who come and seek, and who with faith and virtue run to your most honoured shrine, which holds your dust.",
+        "rendered": "site"
+      }
     }
   ]
 }

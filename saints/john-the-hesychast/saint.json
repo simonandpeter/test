@@ -11,6 +11,11 @@
       "form": "Јован Ћутљиви (Молчалник)",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 3. децембар ст. ст., „Свети Јован Ћутљиви (Молчалник).“ — with only «Свети» left off, that being “saint” and not a rank. «Ћутљиви» is the Silent and «Молчалник» the Slavonic word for the same thing, which the heading itself sets in the parenthesis; neither is a rank in BRIEF-SERBIAN §5’s table, both distinguish him from every other Јован, and §6 asks for the fullest form the calendar gives, so the parenthesis is kept exactly as printed. `sr-foldpred.mjs` measured the folded string at 0 other holders — the gate folds the parentheses away, so this is read as one string and is not the bare «јован» key that eleven folders share."
+    },
+    {
+      "form": "Иоанн Безмолвник, Савваит",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 3 декабря ст. ст., name page 960, «Иоанн Безмолвник, Савваит». Neither word is a rank: «Безмолвник» is the silent one, which is the same epithet as the Greek «ὁ ἡσυχαστής» this folder is named for, and «Савваит» is the Lavra of Sabbas he spent sixty-six years in. The day’s own line calls him instead «Иоанна молчальника, бывшего еп. Колонийского», the silent one, formerly bishop of Colonia, and declines it; the bare «Иоанн» would have folded onto ninety-seven other folders."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «30 марта», which this calendar keeps him on as well. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Прп. Иоанна молчальника, бывшего еп. Колонийского (558)»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

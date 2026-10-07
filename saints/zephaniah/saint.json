@@ -16,6 +16,11 @@
       "form": "Софоније",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 3. децембар ст. ст., „Свети пророк Софоније.“ — with «Свети» (not a rank, simply “saint”) and «пророк» (the `prophet` grade `types` keeps) left off, which leaves the bare forename as the whole of the form; the heading offers nothing else to distinguish him by. `sr-foldpred.mjs` measured the folded string at 0 other holders, so no READ_FOLDS key is owed."
+    },
+    {
+      "form": "Софония",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 3 декабря ст. ст., name page 2040, «Софония, пророк, из 12 малых пророков», with the rank word and the descriptive clause left off. The day’s own line declines the name."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Прор. Софонии (635-605 до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -106,6 +121,38 @@
       },
       "tone": "Ήχος α'.",
       "model": "Της ερήμου πολίτης."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Пророка Твоего Софонии память, Господи, празднующе,/ тем Тя молим:// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Тропарь пророка Софонии»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of your prophet Zephaniah, O Lord, we pray you through him: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явился еси светозарен Божественным Духом,/ пророче Софоние,/ Божие явление возгласив:/ радуйся зело, дщи Сионя Иерусалимова, проповеждь:// се Царь Твой грядет, спасаяй.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Кондак пророка Софонии»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown radiant with the divine Spirit, prophet Zephaniah, proclaiming the appearing of God: rejoice greatly, daughter of Zion of Jerusalem, proclaim — behold, your King comes, who saves.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

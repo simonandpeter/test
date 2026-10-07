@@ -1,0 +1,60 @@
+{
+  "slug": "athanasius-the-recluse-of-the-far-caves",
+  "display_name": "Athanasius the Recluse of the Far Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Прп. Афанасия, затворника Печерского, в Ближних пещерах (ок. 1176) и другого Афанасия, затворника Печерского, в Дальних пещерах (XIII)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 15 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 15 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 15 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life for 2 декабря ст. ст.: «Подвизался в Киево-Печерской обители в ХIII веке.» The page gives no year of birth, no year of death and no age, and the other three calendars print nothing about him at all."
+    }
+  },
+  "names": [
+    {
+      "form": "Афанасий Печерский, затворник",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind his place in days.pravoslavie.ru’s line for 2 декабря ст. ст., name page 304, «Преподобный Афанасий Печерский, затворник», with the rank word left off. The word order is the whole of what distinguishes this form from name page 303’s «Преподобный Афанасий, затворник Печерский», which is the other recluse of this day and has his own folder, `athanasius-the-recluse-of-the-caves`; the comma and the order are therefore kept exactly as printed. «затворник» is not a grade this corpus keeps in `types` and «Печерский» is the monastery, so both stay in the form."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
