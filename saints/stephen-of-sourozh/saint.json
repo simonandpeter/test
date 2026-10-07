@@ -6,13 +6,19 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Στέφανος Αρχιεπίσκοπος Σουρόζας», with the rank word and the see left off. The page glosses the name itself, «(από το στέφανος) = ο αθλοφόρος, ο άξιος στεφάνου νίκης»."
+    },
+    {
+      "form": "Стефан Сурожски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 15. децембар ст. ст., „Свети Стефан, исповедник сурожски.“ — with «Свети» left off, which §5 says is not a rank, and «исповедник» left off, that being the `confessor` grade §5 maps and which this upgrade puts into `types`. What is left is the forename and the see’s adjective, and that is the fullest form the calendar gives. TWO READINGS ARE IN THIS FORM AND BOTH ARE STATED. First, the toponymic adjective is CAPITALISED here, where the Prologue prints it lower case because it stands mid-sentence after the rank word; that is the habit this corpus’s own Serbian forms already keep — «Стефан Дечански», «Сава Сторожевски», «Тихон Задонски», «Серафим Саровски» — and the adjective is kept rather than dropped because dropping it would leave a bare «Стефан», which `fk.mjs` measures at a very large fold. Second, the adjective is a see and §6 says a see is stripped; it is kept because it is the whole of what tells this Stephen from the corpus’s other hundred and sixty, and because the alternative is that bare fold. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `стефан сурожски` at NO other holder."
     }
   ],
   "sex": "male",
   "office": "Archbishop of Sourozh",
   "types": [
     "hierarch",
-    "archbishop"
+    "archbishop",
+    "confessor"
   ],
   "attestations": [
     {
@@ -42,11 +48,33 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.12.2025 (15. децембар ст. ст.) — „Свети Стефан, исповедник сурожски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. **This row is the reason the folder now has a life at all.** saint.gr’s whole entry for him was «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — we have no details of the life of the Russian saint — and the folder said so and stopped. This book gives: Cappadocia for his birth; his upbringing at Constantinople with the patriarch Saint Germanus; a withdrawal into solitude and a life hidden from the world; an ANGEL who made him known to Germanus and commanded that he be set bishop of the city of Sourozh, which the book glosses «(садашњи Судак на Криму)», the present Sudak in the Crimea; many turned to Christianity; bitter suffering under Leo the Isaurian FOR THE ICONS; a prophecy to that emperor of his swift ruin; a return to his own diocese after the emperor’s evil death; and a peaceful end at the close of the eighth century. `types_add`: `confessor`, from the heading’s own «исповедник», which §5 maps to that word and which is the ground of the whole entry — the iconoclast persecution he survived. `dates` ADDED: a death in the late eighth century, the folder having carried none. `related_add`: `germanus-of-constantinople`, who is this saint’s teacher and his consecrator in this book’s own telling, and whose folder takes the answering row in this same commit. NO `locations`: Cappadocia, Constantinople and Sudak are three places and the folder has never held a coordinate. The emperor Leo the Isaurian is no folder this corpus holds. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 776,
+      "latest": 800,
+      "display": "late 8th century",
+      "basis": "traditional",
+      "note": "The first date this folder has carried, and the Ohrid Prologue is the only source in it that gives one. Охридски пролог за 15. децембар ст. ст.: „По злој смрти овога злог цара Стефан би враћен на своју епархију, где пасе стадо своје богоугодно и сконча мирно, крајем VIII века.“ — after the evil death of that evil emperor Stephen was given back to his own diocese, where he shepherded his flock in a way pleasing to God and died in peace at the END of the eighth century. The bounds are the last quarter of that century, which is what «крајем» says and no more; saint.gr gave no year at all, having nothing of his life. The book’s own Leo the Isaurian, who reigned to 741, is consistent with it and was not used to narrow it, an emperor’s reign not being a year of death."
+    }
+  },
+  "related": [
+    "germanus-of-constantinople"
+  ]
 }

@@ -54,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.12.2025 (18. децембар ст. ст.) — „Свети мученик Севастијан и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-31&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. A ROW UNDER A COMPANY TAIL — «и други с њим» — the ruling being set out in full in the `sebastian-of-rome` row of this same reading; it is an author question. The body names her and the corpus already keeps her on this same menologion 18/12 from the Greek and the Romanian. NO `sr` NAME FORM: the heading holds one personal name and it is Sebastian’s; «Зоа» is a body name. `types`, `dates`, `locations` and `related` all UNTOUCHED. SHE IS NEITHER OF THE OTHER TWO ZOE FOLDERS: `zoe-of-bethlehem` and `zoe-wife-of-hesperus` both already carry venerated Serbian rows, on the Julian 13 February and the Julian 2 May, and neither is a jailer’s wife at Rome. WHAT THE BOOK SAYS OF HER, and it is the fullest thing it says of any of the companions: that she was the wife of NICOSTRATUS THE JAILER and had been DUMB SIX YEARS; that Sebastian healed her of it and brought her and the whole house of Nicostratus to baptism; that SHE SUFFERED FIRST OF THEM ALL — «Од њих прво пострада света Зоа» — being taken AT THE TOMB OF THE APOSTLE PETER where she was praying to God, and after torture thrown into the river Tiber. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -11,6 +11,11 @@
       "form": "Σεβαστιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιος Σεβαστιανός», with the rank word left off. The page glosses the name itself, «(από την λέξη σεβαστός) = ο αξιοσέβαστος»."
+    },
+    {
+      "form": "Севастијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 18. децембар ст. ст., „Свети мученик Севастијан и други с њим.“ — with «Свети» left off, which §5 says is not a rank, «мученик» left off, that being the `martyr` grade §5 maps and `types` keeps, and «и други с њим» left off, that being a company tail and not part of anybody’s name. The bare forename is what is left. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `севастијан` at NO other holder, so no READ_FOLDS key is written — and that is in spite of the corpus holding four other Sebastian folders, of Cartagena, of Posesone, of Karaganda and Sebastian Dabovic, none of which carries a Serbian form."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.12.2025 (18. децембар ст. ст.) — „Свети мученик Севастијан и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-31&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. The third calendar to keep him on this menologion day. **THE HEADING’S TAIL, «и други с њим», IS WHY SEVEN OTHER FOLDERS TAKE A ROW IN THIS SAME COMMIT, and the ruling is written out in full here.** It names and counts nobody, which on the Julian 12-14 made a previous reader write nothing for the others; but its words DESCRIBE a class — others who suffered with him — and the body then names them one by one, and the corpus already keeps every one of them on this same menologion 18/12 from the Greek and the Romanian. That is the 12-08 case, where „Свети мученици у Африци.“ gave rows to the three groups its body counted, and not the 12-04 case, where Barbara’s heading named Barbara alone and described Juliana not at all. The seven given rows are `marcus-son-of-tranquillinus`, `marcellinus-son-of-tranquillinus`, `zoe-18-december`, `nicostratus-18-december`, `claudius-18-december`, `tranquillinus` and `tiburtius-18-december`; they are all ten of this folder’s existing `related` rows less `marcia-wife-of-tranquillinus`, `castor-18-december` and `castulus-18-december`, whom THIS BOOK DOES NOT NAME. AUTHOR QUESTION. `types` UNTOUCHED: `martyr` and `soldier` are held and both are this book’s words — «преда се служби војничкој», he gave himself to military service, and the martyrdom is the whole entry. `dates` UNTOUCHED AND THE DEATH NOW AGREED BY A THIRD BOOK: the folder’s 287 came from saint.gr’s page head, and this book states it in a sentence — «пресели се у Царство небеско 287. године у време Диоклецијана цара, и Гаја, епископа римског». **A THIRD READING OF HIS BIRTHPLACE, recorded and not resolved**: saint.gr has him born at Mediolanum, doxologia.ro at Narbonne with only his schooling at Milan, and this book says «роди се у Италији и би васпитан у граду Милану» — born in Italy and brought up in the city of Milan, which keeps doxologia’s shape and names no town for the birth. The `birth` bounds of 250 to 256 are saint.gr’s and were not moved, this book giving no year for it. NO `locations`: Italy, Milan and Rome are three places and the folder has never held a coordinate. NO NEW `related` ROW: all ten companions were here already, and «Гај, епископ римског», whom the book names only to date the death, is `gaius-pope-of-rome` — a DATING REFERENCE and not a companion, which is why his name is in this row and NOT in the life: that folder’s whole display name is the bare «Gaius», and writing it unlinked in prose would demand a reverse `related` row this entry does not justify. Chromatius the eparch of Rome, whom this book has healed of gout and baptised with his son Tiburtius, IS NAMED IN THE BODY AND HAS NO FOLDER; he was left out and is in the report. WHAT THE BOOK ADDS: the secrecy of his faith while he commanded Diocletian’s palace guard; that he saved Christians from torture and death where he could and strengthened them to die where he could not; THE FACE SHINING LIKE AN ANGEL’S as he was confirming Marcus and Marcellinus, which all present saw; the five healings and the households they brought to baptism; the order of the deaths; and his own answer to the emperor’s charge of treason — „Ја се свагда молим Христу моме за здравље твоје и за мир царства Римског“, I pray always to my Christ for your health and for the peace of the Roman empire. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -12,6 +12,11 @@
       "form": "Ελευθέριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Ελευθέριος ο Ιερομάρτυρας», with the rank words left off. The page glosses the name itself, «Ο εραστής, κήρυκας και πρόμαχος της ελευθερίας»."
+    },
+    {
+      "form": "Елевтерије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 15. децембар ст. ст., „Свештеномученик Елевтерије.“ — with «Свештеномученик» left off, that being the `hieromartyr` grade §5 maps and `types` keeps, which leaves the bare forename. The heading offers nothing else at all: the see, Illyria and Valona are in the body, and no epithet is printed anywhere that could be stored instead. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN. `fk.mjs`, which imports the real `fold` from `scripts/corpus-index.mjs` and therefore sees bracket-hidden folds as well, puts the key `елевтерије` at NO other holder, so no READ_FOLDS key is written and the gate’s collision count does not move. THE HAZARD IS NAMED HERE FOR WHOEVER COMES NEXT: the corpus holds three other Eleutherius folders — `eleutherius-the-cubicularius`, who stands on this very menologion day from the Greek calendar, `eleutherius-disciple-of-dionysius` and `eleutherius-monk-martyr-1937` — and none of them has a Serbian form. A second reader writing the same bare «Елевтерије» onto any of them makes a two-member fold that neither commit will have keyed."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.12.2025 (15. децембар ст. ст.) — „Свештеномученик Елевтерије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. It is the third calendar to keep him on this menologion day, the Romanian and Greek rows both already carrying it. `types` UNTOUCHED: «Свештеномученик» is the `hieromartyr` held and «епископа Илирије» the `bishop`. `dates` ADDED, AND THIS BOOK IS THE ONLY SOURCE IN THE FOLDER THAT STATES A YEAR — «Пострада у време Адријана, 120. године». The disagreement that makes it is recorded in the `death` note and is NOT resolved here: doxologia.ro puts him under Hadrian and gives no year, this book puts him under Hadrian and gives 120, and saint.gr puts him under Commodus and Septimius Severus, which is three generations later. NO `locations`: Rome, Illyria and Valona are three places and the folder has never held a coordinate. NO `related` ROW ADDED: Anthia, Anicetus and Coremmon were all here already, and the «војвода Феликс» whom this book has beheaded with Coremmon is no folder this corpus holds — six Felix folders and not one of them Hadrian’s commander. WHAT THE BOOK ADDS, where two calendars had the life at length: that his father was an imperial ANTIPATE at Rome; that his see was at ВАЛОНА, which it glosses «(Авлони) Албанској», Aulon in Albania, where saint.gr had Aulona and doxologia Avlona; that Felix was changed at the moment he entered the church and saw and heard the hierarch, and was baptised before they left for Rome, not at a stream on the road; that Felix was beheaded as Coremmon was; and that the bodies of mother and son were CARRIED TO VALONA, where he glorifies the name of Christ by many wonders to this day. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -161,5 +176,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 120,
+      "latest": 120,
+      "display": "120",
+      "basis": "traditional",
+      "note": "**The first and only year any source in this folder states, and it is stated against a disagreement that is recorded and not resolved.** Охридски пролог за 15. децембар ст. ст.: „Пострада у време Адријана, 120. године.“ — he suffered in the time of Hadrian, in the year 120, which falls inside that emperor’s reign of 117 to 138. doxologia.ro tells the same life, with the same emperor Hadrian sending the same commander Felix, and says in as many words that it gives no year for any of it. saint.gr tells the life otherwise: it has him born in the second century under Commodus and Septimius Severus and beheaded when Septimius Severus learnt of his work, which is 193 to 211 and three generations after this book’s year. Two of the three books have Hadrian and only one of them counts; the bounds here are that one book’s stated year and nothing is inferred from the Greek page’s emperors. The basis is traditional, no document being cited by anybody."
+    }
   }
 }

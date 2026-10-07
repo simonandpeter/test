@@ -6,6 +6,11 @@
       "form": "Φλώρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Όσιος Φλώρος επίσκοπος Αμινσού ή Αμισού», with the rank word and the see left off. The page glosses the name itself, «(από το λατινικό flos - floris = άνθος) = ο ωραίος σαν το λουλούδι», and gives the see's name two forms, «Αμινσού ή Αμισού»."
+    },
+    {
+      "form": "Флор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 18. децембар ст. ст., „Свети Флор, епископ амински.“ — with «Свети» left off, which §5 says is not a rank, and «епископ амински» left off, that being the `bishop` grade §5 maps, `types` keeps and `office` carries. The bare forename is what is left; the heading gives no epithet. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN AND IT IS A REAL ONE: `fk.mjs` puts the key `флор` at ONE other holder, `florus-of-illyricum`, whose Serbian form came off this same book for the Julian 18 August — so this form takes the fold from one member to two and a new READ_FOLDS key goes into `scripts/corpus-gate.mjs` in this same commit."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.12.2025 (18. децембар ст. ст.) — „Свети Флор, епископ амински.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-31&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. The second calendar to keep him, saint.gr being the first and only. `types` UNTOUCHED: `venerable` for the monastery and the ascetic struggle, which this book states — «повуче се у манастир на подвиг» — and `bishop` for the see, which it states too; the `office` already carries it. `dates` UNTOUCHED AND AGREED TO THE YEAR AT BOTH BOUNDS: the folder’s floruit of 565 to 602 came from saint.gr’s reigns, Justin II, Tiberius and Maurice, and this book prints the SAME TWO FIGURES in its own parenthesis — «Живео у време цара Јустина II и Маврикија (565-602)». It names Justin II and Maurice and not the Tiberius between them, which does not move either bound. **ONE DISAGREEMENT, RECORDED AND NOT RESOLVED: THE PROVINCE.** This book puts Amisos «у области Кападокијској», in the region of Cappadocia; saint.gr gives the see only its two name forms, «Αμινσού ή Αμισού», and names no province. Nothing was renamed and no `locations` row was made — the folder has never held a coordinate — and the book’s own words are in the life. NO `related` ROW: the entry names no person at all beyond the two emperors, who are no folders this corpus holds under those names. WHAT THE BOOK ADDS: that he was OF NOBLE FAMILY AND A NOBLE HIMSELF — «Беше од племића и племић»; that he left the turmoil and vanity of the world and withdrew into a monastery for the ascetic struggle, FOR THE SALVATION OF HIS SOUL, before he was chosen bishop; and that he pleased God both as an ascetic and as a hierarch and passed over peacefully into the Kingdom of God. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

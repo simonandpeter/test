@@ -11,6 +11,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Όσιος Παύλος ο νέος που ασκήτευε στο Λάτριο όρος», with the rank word, the by-name and the clause naming the mountain left off."
+    },
+    {
+      "form": "Павле у Латри",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 15. децембар ст. ст., „Преподобни Павле у Латри.“ — with «Преподобни» left off, that being the `venerable` grade §5 maps and `types` keeps. What is left is «Павле у Латри», Paul in Latra, and it is kept WHOLE, with the preposition, because it is what the calendar prints and because the alternative is fatal: `fk.mjs` measures the bare «Павле» at EIGHT other holders — `paul-28-june`, `paul-companion-of-andrew`, `paul-companion-of-lucillian`, `paul-companion-of-quadratus`, `paul-of-jamnia`, `paul-of-ptolemais`, `paul-the-apostle`, `paul-the-confessor` — and this folder would be the ninth. A prepositional phrase inside a stored form has precedent in this corpus’s own Serbian forms, «6000 мученика у Грузији» and «Непозната девојка из богате куће у Александрији». NOTHING IS DECLINED OR NORMALISED: «Латри» is the locative the book itself prints, and the mountain’s nominative «Латра» appears in the body. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `латри павле у` at NO other holder."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.12.2025 (15. децембар ст. ст.) — „Преподобни Павле у Латри.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop; URL year 2025. It is the third calendar to keep him on this menologion day. `types` UNTOUCHED: «Преподобни» is the `venerable` held, and the book gives him no other grade. `dates` WIDENED, and this is the one substantive change: the folder carried a flat 896 off saint.gr, which attributed it to «μερικοί Συναξαριστές», some synaxaristes, rather than stating it; this book states 950 flatly — «У старости упокојио се мирно и преселио ка Господу 950. године». The two years are now the bounds of one interval and neither is preferred. NO `locations`: Pergamum and Mount Latros are two places and the folder has never held a coordinate. NO `related` ROW ADDED: this entry names nobody — not the brother Basil, not the elder Peter, not Joannicius — so the three rows the folder already holds are untouched and no fourth is made. WHAT THE BOOK ADDS beyond the year: nothing but its brevity, four lines where the other two calendars print the childhood, the stones on the rope, the translation and the wonders. Its «Родом од Пергама», from Pergamum by birth, agrees with saint.gr’s Elea near Pergamum and with doxologia’s district of Elea near the city of Pergamum. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -82,10 +97,10 @@
   "dates": {
     "death": {
       "earliest": 896,
-      "latest": 896,
-      "display": "896",
+      "latest": 950,
+      "display": "896 to 950",
       "basis": "traditional",
-      "note": "saint.gr: «Μερικοί Συναξαριστές αναφέρουν ότι πέθανε σε βαθιά γεράματα το 896 μ.Χ.», with the page head «(; - 896)». The page attributes the year to some synaxaristes rather than stating it itself, so the basis is traditional. No year of birth is given."
+      "note": "**Two books, two years, fifty-four years apart, and the interval is widened to hold both rather than choose.** The folder carried 896 flat: saint.gr’s last line, «Μερικοί Συναξαριστές αναφέρουν ότι πέθανε σε βαθιά γεράματα το 896 μ.Χ.», which attributes the year to some synaxaristes and does not state it as the page’s own, with the page head «(; - 896)». The Охридски пролог за 15. децембар ст. ст. states its year flatly: „У старости упокојио се мирно и преселио ка Господу 950. године.“ — in old age he reposed in peace and passed over to the Lord in the year 950. Both agree he died in deep old age and neither gives a year of birth. Nothing between the bounds is claimed; the basis stays traditional, no document being cited by either book."
     }
   },
   "related": [

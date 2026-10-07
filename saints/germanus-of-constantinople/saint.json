@@ -27,19 +27,12 @@
   ],
   "office": "Patriarch of Constantinople",
   "dates": {
-    "birth": {
-      "earliest": 640,
-      "latest": 640,
-      "display": "640",
-      "basis": "traditional",
-      "note": "saint.gr, as the folder's own life has it: «saint.gr has him born at Constantinople in 640, the son of the patrician Justinian»."
-    },
     "death": {
       "earliest": 740,
       "latest": 740,
-      "display": "12 May 740",
+      "display": "740",
       "basis": "traditional",
-      "note": "saint.gr, as the folder's own life has it: he withdrew to Platania and «died there at the age of a hundred on 12 May 740»."
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 12 May: „отера у манастир, где овај светитељ проживе још десет година, док га Господ не позва к Себи у Царство небеско 740. године.“ — and the folder's own Greek attestation note records saint.gr giving the same year, a death at Platania at the age of a hundred on 12 May 740, so the two books agree and nothing is widened. **No birth is recorded**: the Prologue gives none, and saint.gr's 640 was not lifted because that page was not opened by this reader. The ten years in the monastery after his deposition are the book's own and are consistent with the 740; they were not turned into a second number."
     }
   },
   "attestations": [
@@ -139,15 +132,7 @@
   ],
   "related": [
     "andrew-of-crete",
-    "epiphanius-of-cyprus"
-  ],
-  "dates": {
-    "death": {
-      "earliest": 740,
-      "latest": 740,
-      "display": "740",
-      "basis": "traditional",
-      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 12 May: „отера у манастир, где овај светитељ проживе још десет година, док га Господ не позва к Себи у Царство небеско 740. године.“ — and the folder's own Greek attestation note records saint.gr giving the same year, a death at Platania at the age of a hundred on 12 May 740, so the two books agree and nothing is widened. **No birth is recorded**: the Prologue gives none, and saint.gr's 640 was not lifted because that page was not opened by this reader. The ten years in the monastery after his deposition are the book's own and are consistent with the 740; they were not turned into a second number."
-    }
-  }
+    "epiphanius-of-cyprus",
+    "stephen-of-sourozh"
+  ]
 }

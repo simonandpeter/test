@@ -1,0 +1,64 @@
+{
+  "slug": "paisius-of-trnava",
+  "display_name": "Paisius of Trnava",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "new-martyr",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Пајсије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 17. децембар ст. ст., „Преподобни новомученици: Пајсије и Авакум.“ — a heading that names two men and gives them one grade each, «Преподобни» and «новомученици», which §5 maps to `venerable` and `new-martyr` and which `types` keeps; what is left for this man is the bare forename, the abbacy and the monastery being in the body. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs`, which imports the real `fold` from `scripts/corpus-index.mjs`, puts the key `пајсије` at NO other holder, so no READ_FOLDS key is written. That is in spite of the corpus holding TEN Paisius folders — Paisie of Sihăstria, Paisios the Athonite, the Paisius of 8 January, Paisius of Kyiv, Paisius (Moskot), Paisius of Galich, Paisius of Neamț, Paisius of Sihăstria Putnei, Paisius of the Caves Lavra and Paisius the Great — not one of which carries a Serbian name form. The book prints no Latin form of his name."
+    }
+  ],
+  "related": [
+    "avacum-the-deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1814,
+      "latest": 1814,
+      "display": "1814",
+      "basis": "traditional",
+      "note": "Охридски пролог за 17. децембар ст. ст.: „Обојица као хришћани набијени од Турака на колац, у Београду на Калемегдану 17. децембра 1814. године.“ — both of them, as Christians, impaled on the stake by the Turks, at Belgrade on the Kalemegdan, on 17 December 1814. **The book gives the full date, and it is the same as the menologion day this entry stands on**, which is why the day keeps them. No year of birth is given, and no age to reckon one from. The basis is traditional: the book cites no document, and this corpus writes a Prologue-stated year that way."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 17 декабря ст. ст. (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (7 October 2026). The corpus does hold his companion from that calendar — `avacum-the-deacon`, off doxologia.ro’s line for 17 decembrie «Sfântul Mucenic Avacum, diaconul» — and doxologia names no Paisius beside him, which is what made this an arrival and not an upgrade."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Δεκεμβρίου (7 October 2026). The corpus holds sixteen folders on the menologion 17/12 from the other three calendars and no Paisius is among them; it holds ten other Paisius folders and not one of them is an abbot of Trnava or a new-martyr of 1814."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.12.2025 (17. децембар ст. ст.) — „Преподобни новомученици: Пајсије и Авакум.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third and last entry, quoted whole with its closing full stop; URL year 2025. **It is a heading that names its two members, so it is two folders and not one** — BRIEF.md §4’s ruling on an enumerated company — and the second of the two, `avacum-the-deacon`, the corpus already held from doxologia.ro. This man it did not, and he is the day’s one arrival. The dossier is four lines: «Пајсије беше игуман ман. Трнаве код Чачка, а Авакум његов сабрат и ђакон. Обојица као хришћани набијени од Турака на колац, у Београду на Калемегдану 17. децембра 1814. године.» — Paisius was abbot of the monastery of Trnava near Čačak, and Avacum his fellow-brother and deacon; both of them, as Christians, impaled on the stake by the Turks, at Belgrade on the Kalemegdan, on 17 December 1814. `types`: `venerable` from «Преподобни» and `new-martyr` from «новомученици», both in the heading, and `abbot` from «игуман», §5’s word for it, which the body states of this man and not of the other. NO `office`: `i18n.test.mjs` wants every office string in all four locale packs, and the abbacy is in `types` already. NO `locations`: Trnava, Čačak, Belgrade and the Kalemegdan are four places and this folder has no coordinate to hang on any of them. `related`: `avacum-the-deacon`, his fellow-brother and his deacon in the book’s own words and impaled beside him; the row is written both ways in this same commit. **THE ENTRY IS CUT OFF IN THE SOURCE AND IT IS CUT OFF ON PURPOSE**: its last words are that Avacum’s mother begged him weeping to turn Turk and save his life, and that „одговори јој овај дивни Христов војник:“ — this wonderful soldier of Christ answered her — and there the prose stops at a colon, the answer standing as the opening lines of the day’s ПЕСМА. That is Avacum’s word and not this man’s, and it is recorded on Avacum’s folder. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

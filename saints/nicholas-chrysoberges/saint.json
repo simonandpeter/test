@@ -11,6 +11,11 @@
       "form": "Χρυσοβέργης",
       "lang": "el",
       "note": "The surname saint.gr prints with him on the same line for 16 Δεκεμβρίου, «Άγιος Νικόλαος Β' Χρυσοβέργης». The page is explicit that it is the right one: «ο Χρυσοβέργης (και όχι Γραμματικός, όπως τον αναφέρει ο Άγιος Νικόδημος)»."
+    },
+    {
+      "form": "Никола Хрисоверг",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 16. децембар ст. ст., „Свети Никола Хрисоверг, патријарх цариградски.“ — with «Свети» left off, which §5 says is not a rank, and «патријарх цариградски» left off, that being the `patriarch` grade §5 maps, `types` keeps and `office` carries. What is left is the forename and the surname, which is the fullest form the calendar gives and is stored whole. The surname is the one saint.gr is explicit about — «ο Χρυσοβέργης (και όχι Γραμματικός, όπως τον αναφέρει ο Άγιος Νικόδημος)» — and this book prints it too, which is a second witness to it. THE REGNAL NUMBER IS NOT IN THE FORM: this book gives none, and the folder’s display name carries it from the Greek page. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `никола хрисоверг` at NO other holder. The bare «Никола» was NOT WRITTEN: `fk.mjs` puts it at two other holders, `nicholas-of-magnesia` and `nicholas-the-grocer-of-karpenisi`, and the surname tells him apart from both."
     }
   ],
   "sex": "male",
@@ -20,12 +25,19 @@
     "patriarch"
   ],
   "dates": {
+    "floruit": {
+      "earliest": 980,
+      "latest": 995,
+      "display": "980 to 995",
+      "basis": "traditional",
+      "note": "The patriarchate, which this book dates and the Greek page did not. Охридски пролог за 16. децембар ст. ст.: „Управљао црквом од 980. до 995. године.“ — he governed the church from 980 to 995. **The start year is disputed and nothing here resolves it**: saint.gr prints «(984 - 995 μ.Χ.)» immediately after naming the patriarch Antony III whom he succeeded, in a position that could belong to either man’s reign, which is why this folder never recorded it. The later bound agrees with the year of death both books give. Neither book cites a document, so the basis is traditional."
+    },
     "death": {
       "earliest": 995,
       "latest": 995,
       "display": "995",
       "basis": "attested",
-      "note": "saint.gr's page head, «Αγιος Νικολαος Β' Χρυσοβεργης (; - 995)». Its text carries «(984 - 995 μ.Χ.)» in a position that could belong either to his own patriarchate or to the Antony III he succeeded — «διαδέχτηκε στον Πατριαρχικό θρόνο τον παραιτηθέντα Πατριάρχη Αντώνιο τον Γ’ (984 - 995 μ.Χ.)» — so only the year from the head is recorded, and no year of birth."
+      "note": "UNCHANGED, and now carried by two books. saint.gr’s page head, «Αγιος Νικολαος Β' Χρυσοβεργης (; - 995)». The Охридски пролог за 16. децембар ст. ст. ends his rule in the same year — „Управљао црквом од 980. до 995. године“ — and says of the end itself only that he reposed in peace and passed into the Kingdom of God. No year of birth is given by either."
     }
   },
   "attestations": [
@@ -56,11 +68,24 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.12.2025 (16. децембар ст. ст.) — „Свети Никола Хрисоверг, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-29&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. The second calendar to keep him, saint.gr being the first and only. `types` UNTOUCHED: «патријарх цариградски» is the `patriarch` held and the `office` already carries the see. `dates`: the `death` of 995 UNTOUCHED AND AGREED — saint.gr’s head gave «(; - 995)» and this book’s «Управљао црквом од 980. до 995. године» ends in the same year — and a `floruit` ADDED whose bounds are that sentence, the patriarchate this book dates and saint.gr did not. THEY DISAGREE ON ITS START AND THE DISAGREEMENT IS RECORDED, NOT RESOLVED: saint.gr prints «(984 - 995 μ.Χ.)» in a position that could belong to the Antony III he succeeded or to himself, which is why the folder never used it; this book says 980. NO `locations`: Constantinople, the monastery of Saint Mamas and Karyes are three places and the folder has never held a coordinate. `related_add`: `symeon-the-new-theologian`, whom this book says he ORDAINED PRESBYTER on his election as abbot of the monastery of the holy martyr Mamas at Constantinople — an act of this patriarch’s own, not a shared day — and whose folder takes the answering row in this same commit. WHAT THE BOOK ADDS, where saint.gr had the surname and the succession: that ordination, and the wonder at KARYES in his time, where the Archangel Gabriel appeared and taught the monks to praise the Most Holy Theotokos with the hymn «Достојно јест», writing it on a tablet in the church of a cell which has been called the cell „Достојно“ ever since. ITS CROSS-REFERENCE «в. 13. јули» IS RECORDED AND NOT ACTED ON, being outside this range. The verse written on the tablet is a hymn of the day’s own entry and NOT this saint’s: nothing was put in `hymns`, which §3 forbids absolutely from this source. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "symeon-the-new-theologian"
+  ]
 }

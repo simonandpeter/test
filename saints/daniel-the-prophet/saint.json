@@ -11,6 +11,11 @@
       "form": "Δανιήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ», with the rank word left off. The page glosses the name itself, «(εβραϊκή λέξη) = η θεία δίκη»."
+    },
+    {
+      "form": "Данил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 17. децембар ст. ст., „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“ — with «Свети» left off, which §5 says is not a rank, and «пророк» left off, that being the `prophet` grade §5 maps and `types` keeps. The bare forename is the whole of what the heading gives him. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN AND IT IS A REAL ONE: `fk.mjs` puts the key `данил` at ONE other holder, `daniel-of-thasos`, so this form takes the fold from one member to two and a new READ_FOLDS key goes into `scripts/corpus-gate.mjs` in this same commit. It is NOT the «Данил (Донале)» of this same day’s second entry: that string keys as `данил донале` and folds with nothing."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.12.2025 (17. децембар ст. ст.) — „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. **It is a heading that names its three companions, so it is four folders and not one** — BRIEF.md §4’s ruling — and the corpus already held all four from the Romanian and Greek calendars, which print the same four names in the same order. The third calendar to keep him. `types` UNTOUCHED: «пророк» is the `prophet` held. **A SECOND GRADE WAS DECLINED AND IS AN AUTHOR QUESTION**: this book has Daniel himself beheaded with the sword for the true faith, on the authority of Saint Cyril of Alexandria, which would make him a `martyr` as the three youths already are; it is one clause of one book against two calendars that rank him prophet only, and the predecessor’s refusal of a grade written on one word of one book is followed here. `dates` ADDED, the folder having carried NONE: a floruit of about 500 BC. **THE THREE YOUTHS GET NO DATES FROM THIS READING**, and the reason is grammatical — the sentence that carries the figure, «Живео и пророковао на пола хиљаде година пре Христа», is singular and stands after the sentence that reckons Daniel among the four great prophets, so it is his. NO `locations`: Jerusalem, Babylon and Mount Gebal are three places and the folder has never held a coordinate. NO `related` ROW ADDED: the three youths and `cyril-of-alexandria` were all four here already; Nebuchadnezzar, the Jewish king Joakim, Belshazzar, Susanna and the two elders are no folders this corpus holds, and the four great prophets this book lists beside him — Isaiah, Jeremiah, Ezekiel and Daniel — are a list of the book’s own and not his companions, which is why that list is HERE and not in the life: `isaiah-the-prophet`, `jeremiah-the-prophet` and `ezekiel-the-prophet` all carry those three words as their whole display name, and writing them unlinked in prose would demand three reverse `related` rows that nothing in this entry justifies. WHAT THE BOOK ADDS: that all four were OF THE ROYAL TRIBE OF JUDAH; that Daniel was carried off as a boy with the Jewish king Joakim and a multitude of other Israelites when Nebuchadnezzar destroyed and plundered Jerusalem; that his fame among the Jews of Babylon began with the two lustful and unjust elders and the saving of the chaste Susanna, and his fame among the Babylonians on the day he guessed and interpreted the king’s dream, for which he was made a prince at court; the three words on the wall at Belshazzar’s feast, «мани, текел, фарес», which nobody but Daniel could read, and the king’s killing THAT NIGHT; that he was thrown into the lions’ pit TWICE and saved both times; that he saw God on his throne with the angelic powers; and the order of the beheadings and the angel who carried the four bodies to Mount Gebal. ITS LAST TRADITION IS RECORDED AND NOT RANKED: that these four rose at the time of the death of the Lord Christ, appeared to many, and then slept again. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -117,5 +132,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -500,
+      "latest": -500,
+      "display": "c. 500 BC",
+      "basis": "traditional",
+      "note": "The first date this folder has carried. Охридски пролог за 17. децембар ст. ст.: „Живео и пророковао на пола хиљаде година пре Христа.“ — he lived and prophesied about half a thousand years before Christ. **The bounds are that round figure and nothing was invented around it**: the book’s «на пола хиљаде година» is an approximation and the display carries it as «c.», but no century bracket was put on either side of 500, because the book gives none and a bracket would be this reader’s and not its. doxologia.ro and saint.gr both gave this folder no year at all. The captivity under Nebuchadnezzar and the reign of Belshazzar are both in the entry and neither was turned into a bound, a king’s reign not being a year. The basis is traditional, no document being cited."
+    }
   }
 }

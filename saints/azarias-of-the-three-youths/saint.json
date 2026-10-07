@@ -11,6 +11,11 @@
       "form": "Αζαρίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ», with the rank word left off. The page gives this name no gloss."
+    },
+    {
+      "form": "Азарије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 17. децембар ст. ст., „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“ — the second of the three names the heading prints after the colon, bare as it prints them. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `азарије` at NO other holder, so no READ_FOLDS key is written."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.12.2025 (17. децембар ст. ст.) — „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. The heading NAMES HIM, second of the three youths. The third calendar to keep him on this menologion day. `types` UNTOUCHED: `martyr` is held and this book’s beheading is a second witness to it. NO `dates`, for the reason given in the `daniel-the-prophet` entry: the figure of about five hundred years before Christ stands in a singular sentence about Daniel. NO `locations`, NO `related` ROW ADDED — the other two youths, Daniel and `cyril-of-alexandria` were all here. WHAT THE BOOK ADDS: the royal tribe of Judah; the golden idol in the plain of Dura and the refusal to bow; the fiery furnace, the angel who cooled it, the walking unhurt and the singing of „Благословен јеси Господе отаца наших“; the king’s horror and the honours that followed; and HIS OWN ACT, which is the one thing in the entry that is his alone — when Ananias was beheaded, AZARIAS SPREAD OUT HIS OWN GARMENT AND CAUGHT HIS HEAD, and was then beheaded himself, his head being caught by Misael. The sung words are the youths’ canticle in the book’s narrative and NOTHING was put in `hymns`, which §3 forbids. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
