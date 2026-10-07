@@ -17,6 +17,11 @@
       "form": "Фрументий Индийский (Эфиопский)",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 2339, «Святитель Фрументий Индийский (Эфиопский), архиепископ», with the rank and the trailing grade left off. The calendar gives him two countries, India first and Ethiopia in brackets after it, and the day line keeps both: «Свт. Фрументия , архиеп. Индийского (Ефиопского)»."
+    },
+    {
+      "form": "Фрументије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. новембар ст. ст., „Св. Фрументије просветитељ Абисиније.“ — «Св.» is “saint” and not a rank. «просветитељ Абисиније», enlightener of Abyssinia, is LEFT OFF, and that is a reading rather than a rule: it is not one of the grades BRIEF.md §9’s vocabulary holds, so it could not go into `types`, but it reads as a title of office and not as a by-name — the corpus keeps the same word as a display-name epithet on `gregory-the-illuminator` and not as a form — and this folder already carries the office itself, Bishop of Ethiopia. The bare forename was measured before it was written and stands on no other folder, so nothing is lost by dropping the title: it joins no fold either way, and the title is in the life. It is not folded towards the Romanian «Frumențiu», the Greek «Φρουμέντιος» or the Russian «Фрументий Индийский (Эфиопский)» this folder already carries."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.12.2025 (30. новембар ст. ст.) — „Св. Фрументије просветитељ Абисиније.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second and last entry. `dates` ADDED TO, NOT CHANGED: the folder held a floruit of «330–341» off saint.gr’s «Στα χρόνια του μεγάλου Κωνσταντίνου (330 μ.Χ.)» and the episcopate that page describes, and NO year of death at all; this book gives the death — «скончао је мирно 370. године» — so a death of 370 is written beside the floruit, which is untouched. The two agree: a man consecrated in the years of Constantine and dead in 370 is one life, and 370 is outside the floruit because the floruit was never his whole life. No `related` row added: the folder already relates to `athanasius-of-alexandria`, who consecrated him, and to `constantine-the-great`, in whose reign the voyage falls, and both are in the entry. `types` NOT touched: the folder carries `hierarch`, `bishop`, `archbishop` and `preacher`, and «просветитељ», enlightener, is not a grade BRIEF.md §9’s vocabulary holds. NOT IN THE CORPUS, and a line for the author: HIS BROTHER EDESIJE, who was shipwrecked and enslaved with him and who went home to Tyre while Frumentius went to Alexandria, HAS NO FOLDER — the corpus’s `aedesius-brother-of-amphianus` is a different man, a Lycian drowned after striking a judge in the face, and nothing was linked; and Meropius, the learned man of Tyre who took the two boys with him, has none either. WHAT THE ENTRY ADDS: Meropius of Tyre travelling to India in the time of Constantine the Great with the two young Christian brothers; THE SHIPWRECK IN A STORM ON THE COAST OF ABYSSINIA and the killing of everyone from the ship except the two brothers; their years in Abyssinia and their rise into the court service of the Abyssinian king; FRUMENTIUS PREACHING CAUTIOUSLY AT FIRST AND SATISFYING HIMSELF THAT THE GROUND WAS FIT AND FRUITFUL; the two brothers taking ship, one for Tyre and his parents, the other for Alexandria; his laying the state of Abyssinia before the patriarch and asking for pastors for the newly converted; his consecration as bishop; and his return, and the zeal and the wonders by which he brought the whole of Abyssinia to the Christian faith WITHIN HIS OWN LIFETIME."
     }
   ],
   "text": {
@@ -86,14 +101,14 @@
       "latest": 341,
       "display": "330–341",
       "basis": "traditional",
-      "note": "saint.gr: «Στα χρόνια του μεγάλου Κωνσταντίνου (330 μ.Χ.)», and the consecration that page describes falls inside the episcopate it names; the interval is the one that folder was first written with and is kept."
+      "note": "saint.gr: «Στα χρόνια του μεγάλου Κωνσταντίνου (330 μ.Χ.)», and the consecration that page describes falls inside the episcopate it names; the interval is the one that folder was first written with and it is NOT his whole life. UNCHANGED by the Serbian reading of 8 October 2026, which added a year of death beside it."
     },
     "death": {
-      "earliest": 380,
-      "latest": 380,
-      "display": "c. 380",
+      "earliest": 370,
+      "latest": 370,
+      "display": "370",
       "basis": "traditional",
-      "note": "days.pravoslavie.ru closes his line with «ок. 380», about 380, where it would otherwise print a year. Neither doxologia.ro nor saint.gr gave him a year of death at all, so this is the folder's first, and the display keeps the calendar's own «ок.»"
+      "note": "Охридски пролог за 30. новембар ст. ст., closing the entry: «Овај велики пастир стада Христовог и просветитељ Абисиније скончао је мирно 370. године и преселио се у царство Господа свога.» — this great pastor of Christ’s flock and enlightener of Abyssinia ended peacefully in the year 370. It is the corpus’s first year of death for him: the folder held a floruit alone and no death of any kind, and the Greek page it came from gives none. The two agree rather than compete, because the floruit is an episcopate and not a life."
     }
   },
   "related": [

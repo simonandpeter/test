@@ -16,6 +16,11 @@
       "form": "Андрей Первозванный",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 186, «Апостол Андрей Первозванный», with the rank word left off. The day line declines it, «Апостола Андрея Первозванного». Первозванный, the first-called, is the by-name this folder's display name already carries."
+    },
+    {
+      "form": "Андреја Првозвани",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. новембар ст. ст., „Св. апостол Андреја Првозвани.“ — «Св.» is “saint” and not a rank and «апостол» is the `apostle` grade this folder already keeps, so both come off. «Првозвани», the First-Called, is KEPT: it is not a rank but the by-name the whole Church knows him by, it is already in this folder’s display name and in its Russian form «Андрей Первозванный», and the corpus keeps another folder whose display name is the bare «Andrew». Measured before it was written: neither this form nor the bare «Андреја» stands on any other folder, so either would have joined no fold, and the fuller one is written because BRIEF-SERBIAN §6 asks for the fullest the calendar gives."
     }
   ],
   "sex": "male",
@@ -105,8 +110,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.12.2025 (30. новембар ст. ст.) — „Св. апостол Андреја Првозвани.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry. `dates` UNTOUCHED: the book says «Пострада св. Андреја за свога Господа 62. године», a flat 62, where this folder holds «c. 62» — the Russian calendar’s 62 with the word about from one of its own two life pages. A flat year does not remove another book’s about, and the about is not this reader’s to strike. No `related` row added: the folder already relates to eleven, and every person the entry names who has a folder is among them — the Forerunner whose disciple he first was, his brother whom he brought to the Lord, and the first bishop he set over Byzantium. AN ODDITY IN THIS FOLDER THAT IS NOT MINE AND IS NOT TOUCHED, recorded for the author: it carries TWO romanian rows, one on 30 June and one on 30 November, where the schema is one row per church; `upgrade.py` asserts only on the church it is changing, so the serbian row went in cleanly beside them. WHAT THE ENTRY ADDS: that he was the son of Jonas and the brother of Peter, from Bethsaida, a fisherman by trade; that he was first a disciple of the Baptist and left his first teacher when that teacher pointed at the Lord Jesus with the words «гле, јагње Божје!», citing John 1:36, and that HE THEN BROUGHT HIS OWN BROTHER TO THE LORD; the lot that fell to him after the descent of the Holy Spirit — Byzantium and Thrace, then the Danube lands, then Russia and about the Black Sea, and last Epirus, Greece and the Peloponnese; the first bishop he set in Byzantium; THE CROSS HE PLANTED ON A HEIGHT AT KIEV AND THE BRIGHT CHRISTIAN FUTURE HE FORETOLD FOR THE RUSSIAN PEOPLE; the bishops and priests he appointed through Thrace, Epirus, Greece and the Peloponnese; the wonders at Patras and the brother and the wife of the imperial deputy Aegeates whom he won, which is what enraged Aegeates; the torture and the crucifixion; the useful teaching he kept giving from the cross to the Christians gathered round it, and HIS OWN REFUSAL to let the people take him down; and the unusual light that shone all over him as he prayed at the last, WHICH LASTED HALF AN HOUR, and his giving up his soul when it vanished. The relics to Constantinople, the head later to Rome and one hand to Moscow. Aegeates is not a saint of this corpus and the brother and wife he won are not named."
     }
   ],
   "hymns": [
