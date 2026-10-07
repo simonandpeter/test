@@ -1,0 +1,62 @@
+{
+  "slug": "gregory-pospelov",
+  "display_name": "Gregory (Pospelov)",
+  "names": [
+    {
+      "form": "Григорий (Поспелов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 марта ст. ст., «Григорий (Поспелов), протоиерей, сщмч.», with the rank words left off. The day's own line declines the forename to «Григория» and gives the name without the surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with for 13 марта ст. ст.: «Сщмч. Григория пресвитера (1921).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 марта ст. ст. — «Сщмч. Григория пресвитера (1921).»",
+        "url": "https://days.pravoslavie.ru/Days/20260313.html",
+        "year": 2026
+      },
+      "note": "Neither the day page nor name page 14237 carries a life. The name page lists two further days, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «8 июня (Петерб.)», a local synaxis of the saints of Saint Petersburg; both are recorded here and the folder renders on neither."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 March 2026 (7 October 2026)."
+    }
+  ],
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}

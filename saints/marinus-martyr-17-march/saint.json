@@ -16,6 +16,11 @@
       "form": "Марин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 17 March on pravoslavno.rs, „Свети мученик Марин.“, with the rank words Свети мученик left off. The heading gives no epithet and no city, so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Марин."
+    },
+    {
+      "form": "Марин Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 марта ст. ст., «Марин Кесарийский (Палестинский), мч.», with the rank word left off. The link gives the city and the province, which none of this folder's other three forms has; the day's own line gives the name alone, declined to «Марина»."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст. — «Мч. Марина (260).»",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "note": "The julian 17/3 is the same menologion day the other three calendars keep him on. The line closes with a year, 260, where the Ohrid Prologue gave only the third century; 260 falls inside that century, so the year is taken and the century stays in the note beside it. His life page lists a second day, «7 августа», which this calendar's 17 марта page does not repeat; it is recorded here and the folder does not render on it. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
@@ -79,11 +94,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 201,
-      "latest": 300,
-      "display": "3rd century",
+      "earliest": 260,
+      "latest": 260,
+      "display": "260",
       "basis": "traditional",
-      "note": "The Ohrid Prologue for the Julian 17 March: „Због тога беше мучен и посечен, у III веку.“ The entry gives no year within the century. Neither doxologia nor saint.gr gave this folder a date at all — both print his name in a bare calendar line — so this is the first it has held."
+      "note": "Two calendars, and the Russian one is the more exact without contradicting the other. The Ohrid Prologue for the Julian 17 March: „Због тога беше мучен и посечен, у III веку.“ days.pravoslavie.ru closes its line for 17 марта ст. ст. with «(260)», which falls inside that century, so the year is taken and the century is not contradicted. The Russian life page gives no year of its own."
     }
   },
   "related": [

@@ -21,6 +21,11 @@
       "form": "Савин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 16 March on pravoslavno.rs, „Свети мученик Савин.“, with the rank words Свети мученик left off. The heading gives no city and no by-name — Hermopolis and his being an Egyptian are both in the body — so the bare forename is what the source gives."
+    },
+    {
+      "form": "Савин Ермопольский (Египетский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 марта ст. ст., «Савин Ермопольский (Египетский), мч.», with the rank word left off. The same link stands behind the 13 марта line. The day's own line declines the name to «Савина» and gives no epithet."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст. — «Мч. Савина (287).»",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "note": "This calendar prints him on two of its own days, 13 марта and 16 марта, and his life page lists both: «Дни памяти: 13 марта, 16 марта». One row per church is the schema, and the row is put on 16/3 for two reasons read off the pages themselves: it is the julian day the Serbian row on this folder already uses, and it is the day whose page carries his service — the kondak copied here is printed on the 16 марта page and the 13 марта page prints no hymn for him. The 13 марта is recorded here and the folder does not render on it. The year the line closes with, 287, is the year his life page ends with, «их всех утопили в Ниле (+ 287)», and it falls inside the reign of Diocletian this folder already records; the interval is unchanged and the year is not written over it."
     },
     {
       "church": "romanian",
@@ -150,6 +165,22 @@
       },
       "english": {
         "text": "Cast into the waters of a river, you were steered plainly to the water of life and the sea of kindness by the sail of the Spirit, all-praised Sabinus; and so you rain down on us without ceasing the loosing of sins by your prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Божественная прозябения,/ цвет неувядающий,/ розга многоплодная, богоносе Савине,/ иже верою чтущих память твою/ веселия твоего исполни// и молися непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст., «Кондак мученика Савина», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Divine shoot, unfading flower, branch of many fruits, God-bearing Sabinus: fill with your own gladness those who honour your memory in faith, and pray without ceasing for us all.",
         "rendered": "site"
       }
     }

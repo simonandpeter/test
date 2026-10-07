@@ -16,11 +16,17 @@
       "form": "Тал",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 16 March on pravoslavno.rs, „Свештеномученик Трофин и Тал.“, with the rank word Свештеномученик left off, which stands at the head of the pair. The heading gives no city, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Фал Лаодикийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 марта ст. ст., «Фал Лаодикийский, пресвитер, сщмч.», with the rank words left off. The day's own line declines the name to «Фала» and puts the city in a phrase governing both brothers, «пресвитеров Лаодикийских»."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "presbyter"
   ],
   "related": [
     "trophimus-of-laodicea"
@@ -28,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст. — «Сщмчч. Трофима и Фала, пресвитеров Лаодикийских (ок. 300).»",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "note": "The julian 16/3 is the same julian day the Serbian keeps the two brothers on; the Romanian and Greek keep them five days earlier, on their revised-julian 11/3. The line and the life both make them presbyters, which this folder did not carry, so presbyter is added to types and the office is set; the line's rank abbreviation is «Сщмчч.», hieromartyrs, which the folder's martyr does not say, and that rank was not written because the Greek and Romanian rows that built the folder give only martyr. The about 300 the line closes with falls inside the reign of Diocletian this folder already records, and the life page names that reign and Maximian's beside it, so the interval is unchanged. The day page prints no hymn under either name."
     },
     {
       "church": "romanian",
@@ -87,5 +103,6 @@
       "basis": "traditional",
       "note": "saint.gr: «Οι Άγιοι αυτοί μαρτύρησαν στα χρόνια του Διοκλητιανού (284 - 305 μ.Χ.)». The page gives no year, so the interval is the reign it prints."
     }
-  }
+  },
+  "office": "Presbyter"
 }

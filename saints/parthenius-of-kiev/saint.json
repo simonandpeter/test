@@ -6,6 +6,11 @@
       "form": "Παρθένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Μαρτίου, «Όσιος Παρθένιος του Κιέβου», with the rank word left off."
+    },
+    {
+      "form": "Парфений (Краснопевцев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 марта ст. ст., «Парфений (Краснопевцев), иеросхимонах Киево-Печерской лавры, прп.», with the rank words left off. The house is left off with them: the day's own line carries the city instead, «Парфения Киевского», and the Lavra is named on the attestation."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст. — «Прп. Парфения Киевского (1855).»",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "note": "The Russian julian 17/3 is not the Greek revised-julian 25/3 this folder already carried, and the difference is neither one day nor the thirteen of the style conversion, so the two calendars simply keep him on two days and each row carries its own. The year the line closes with, 1855, is the year this folder already holds from saint.gr, and the surname the name page gives, «Парфений (Краснопевцев), иеросхимонах Киево-Печерской лавры», matches the hieroschemamonk of the Kyiv Caves saint.gr describes and is what identifies him. Neither the day page nor name page 13454 carries a life, and the name page lists this one day only. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

@@ -1,0 +1,11 @@
+# Serapion of Novgorod
+
+The Православный церковный календарь of the Сретенский monastery keeps him on 16 марта ст. ст., the day of his death, and gives his life at more length than it gives most. He was born in the village of Pekhorka outside Moscow and wanted the monastic habit from his youth, but at his parents' will he married instead and took the grade of priest; a year later he was a widower, and he was tonsured at the Dormition monastery on the Dubna. For the virtue of his life the house chose him its abbot, and he laboured so much for it that afterwards it was called by his own name, the Serapion hermitage.
+
+Wanting harder labours he laid the superiorship down and moved to the Trinity Lavra, «Троице-Сергиева лавра», and in 1495 became its abbot. He stood high with the great prince Ioann Vasilievich, and it is known that at his asking the prince pardoned three noblewomen who had been condemned to death. At the Council of 1504 he argued hotly for the keeping of the church and monastery estates, on the ground that they were the means of charity.
+
+In 1506 he was consecrated archbishop of Novgorod. During the great fire in the city in 1508 he begged the Lord with tears to stop it, and it stopped. Much trouble came to him after that: in 1509 he was deprived of his see and sent away to the Andronikov monastery at Moscow, and in 1511 he moved back to the Lavra, where he spent his last years in unbroken thought on God and in prayer and was granted the gifts of foresight and of wonderworking.
+
+He took the great schema and died in peace on 16 марта 1516. His relics were found whole on 7 апреля 1517 and rest to this day under the floor of the Serapion chamber, beside the cathedral of the Holy Trinity. The page gives two of his wonders: once at the feast of the Dormition he healed a lame man who had crawled for many years on his hands and feet, leaning on blocks of wood; and in 1608, during the Polish siege of the Lavra, many monks and lay people saw him come into the church in a hierarch's vestments to pray for his own house. The day page prints a troparion and a kondak for him, both copied here.
+
+*After the Православный церковный календарь of the Сретенский monastery for 16 марта ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260316.html) and [the life](https://days.pravoslavie.ru/Life/life6825.htm); read 7 October 2026.*

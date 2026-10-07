@@ -6,6 +6,11 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαρτίου, «Άγιος Αλέξανδρος ο Ιερομάρτυρας πάπας Ρώμης», with the rank words left off. The page adds that the Synaxarist of Nikodemos and the Menaia call him «Αλεξανδρίων», a form it rejects as the name of no pope of Rome."
+    },
+    {
+      "form": "Александр I Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 марта ст. ст., «Святитель Александр I Римский, папа, сщмч.», with the rank words left off. The regnal numeral is part of the name the link gives; «папа» is the office and is left to the folder's own office field. The day's own line declines the name to «Александра» and puts the see in a phrase, «папы Римского»."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст. — «Сщмч. Александра, папы Римского (119).»",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "note": "The julian 16/3 is the same menologion day the Greek keeps him on. The line closes with a year, 119, where saint.gr gave only the reign of Hadrian, and the life page behind the line gives the day as well: «Он был заживо сожжен 3 мая 119 года по повелению императора Адриана (117 - 138)». The death is therefore recorded as 119, a year inside the reign the folder already held, and the note on the interval names both readings. The 3 мая of that sentence is the day of the burning as this page gives it and not a feast; no calendar read keeps him on it. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
@@ -48,11 +63,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 117,
-      "latest": 138,
-      "display": "under Hadrian (117–138)",
+      "earliest": 119,
+      "latest": 119,
+      "display": "119",
       "basis": "traditional",
-      "note": "saint.gr: «Μαρτύρησε επί αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)». The same page brackets the pope it identifies him with as «Αλέξανδρο τον Α' (105 - 115 μ.Χ.)», which ends before that reign begins; the interval taken is the reign the page gives for the martyrdom, and the disagreement is left in the note as the page's own."
+      "note": "Two calendars, and the Russian one is the more exact without contradicting the other. saint.gr gave only the reign: «Μαρτύρησε επί αυτοκράτορα Αδριανού (117 - 138)». days.pravoslavie.ru closes its line for 16 марта ст. ст. with «(119)» and its life page says «Священномученик Александр, папа Римский, занимал папский престол в течение 10 лет. Он был заживо сожжен 3 мая 119 года по повелению императора Адриана (117 - 138)». 119 falls inside the reign saint.gr names, so the year is taken and the reign is not contradicted."
     }
   },
   "related": [

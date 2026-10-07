@@ -11,6 +11,11 @@
       "form": "Евсхимон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 14 March on pravoslavno.rs, „Свети Евсхимон, епископ лампсакијски.“, with Свети left off, which is not a rank, and with the see епископ лампсакијски left off as well. The heading gives no epithet, so the bare forename is what the source gives. saint.gr prints the Greek form two ways, «Εύσχημος ή Ευσχήμων»; the Serbian spelling is the second of those and is copied as the Prologue prints it."
+    },
+    {
+      "form": "Евсхимон (Евсхим) Лампсакийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 марта ст. ст., «Святитель Евсхимон (Евсхим) Лампсакийский, епископ, исповедник», with the rank words left off. The second form in the brackets is the link's own shorter variant and is kept with it."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 марта ст. ст. — «Свт. Евсхимона исп., еп. Лампсакийского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260314.html",
+        "year": 2026
+      },
+      "note": "The ninth century the line closes with agrees with the reign of Theophilus, 829 to 842, that this folder already held from the Ohrid Prologue, and the life page behind the line names that same reign, so the interval is unchanged. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

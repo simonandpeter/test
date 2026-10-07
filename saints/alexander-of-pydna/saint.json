@@ -6,17 +6,33 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Αλέξανδρος, ο εν Πύδνη», with the rank words left off."
+    },
+    {
+      "form": "Александр Пиднский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 марта ст. ст., «Александр Пиднский, пресвитер, сщмч.», with the rank words left off. The day's own line declines the name to «Александра» and gives no epithet."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "presbyter"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 марта ст. ст. — «Мч. Александра (305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260313.html",
+        "year": 2026
+      },
+      "note": "The day's line ranks him «Мч.», a martyr, while the name link behind it ranks him «Александр Пиднский, пресвитер, сщмч.», a presbyter and hieromartyr, and the reading behind the line opens «Святой мученик Александр был пресвитером в городе Пидне, недалеко от Солуни». The presbyter's grade is taken into types on the strength of that sentence; the hieromartyr rank the name link gives is recorded here and not written, because the day's own line does not give it. The Russian julian 13/3 is the day before the Greek revised-julian 14/3 this folder already carried, which is a difference of one day in two calendars and not a second feast."
     },
     {
       "church": "romanian",
@@ -47,5 +63,15 @@
   "related": [],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line for 13 марта ст. ст. with «(305-311)», and the reading behind it names the reign: «Во время гонений на христиан при императоре Максимиане Галерии(305 - 311) святой Александр был подвергнут жестоким истязаниям, а затем обезглавлен». The reign is the interval the page prints; it gives no year of death."
+    }
+  },
+  "office": "Presbyter"
 }

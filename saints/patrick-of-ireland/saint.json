@@ -11,6 +11,11 @@
       "form": "Πατρίκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαρτίου, «Άγιος Πατρίκιος», with the rank word left off."
+    },
+    {
+      "form": "Патрикий просветитель Ирландии",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 марта ст. ст., «Святитель Патрикий просветитель Ирландии, епископ, свт.», with the rank words left off. The link writes the by-name without a comma and the day's own line with one, «Патрикия, просветителя Ирландии»; the link's form is kept, as the link is where this corpus reads a Russian form."
     }
   ],
   "sex": "male",
@@ -29,21 +34,31 @@
       "latest": 381,
       "display": "c. 381",
       "basis": "traditional",
-      "note": "doxologia.ro's life for the day: «Sfântul Patrick, luminătorul Irlandei, s-a născut în jurul anului 381 d.Hr., într-un sat numit Bannaven Taberniae»."
+      "note": "doxologia.ro's life for the day: «Sfântul Patrick, luminătorul Irlandei, s-a născut în jurul anului 381 d.Hr., într-un sat numit Bannaven Taberniae». days.pravoslavie.ru gives no year of birth."
     },
     "death": {
-      "earliest": 480,
+      "earliest": 451,
       "latest": 480,
-      "display": "c. 480",
+      "display": "451–480",
       "basis": "traditional",
-      "note": "doxologia.ro's life for the day: «Sfântul Patrick a trecut la cele veșnice pe 17 martie în jurul anului 480»."
+      "note": "The two calendars disagree by twenty-nine years and the interval holds both. doxologia.ro's life for the day: «Sfântul Patrick a trecut la cele veșnice pe 17 martie în jurul anului 480». days.pravoslavie.ru closes its line for 17 марта ст. ст. with «(451)» and carries no life for him at all, so there is nothing on that side to weigh against the Romanian reading. Nothing is chosen."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст. — «Свт. Патрикия, просветителя Ирландии (451).»",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "note": "The julian 17/3 is the same menologion day the Romanian and Greek keep him on. Neither the day page nor name page 14843 carries a life, and the name page lists this one day only. The line closes with 451 where doxologia gave about 480, and the two cannot both be right, so the death interval is now 451 to 480 and chooses neither. The day page prints no hymn under his name; the two hymns this folder already holds come from elsewhere."
     },
     {
       "church": "romanian",

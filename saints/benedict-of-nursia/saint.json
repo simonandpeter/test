@@ -16,6 +16,11 @@
       "form": "Бенедикт",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 14 March on pravoslavno.rs, „Преподобни Бенедикт.“, with the rank word Преподобни left off. The heading gives no epithet and no place — Nursia is in the body's first sentence and not in the name — so the bare forename is what the source gives."
+    },
+    {
+      "form": "Венидикт Нурсийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 марта ст. ст., «Венидикт Нурсийский, игумен», with the rank word left off. The link spells the forename «Венидикт» with an i where the day's own line, the life page and both kontakia spell it «Венедикт»; the link's spelling is kept because the link is where this corpus reads the form, and the variation is recorded here."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 марта ст. ст. — «Прп. Венедикта Нурсийского (543).»",
+        "url": "https://days.pravoslavie.ru/Days/20260314.html",
+        "year": 2026
+      },
+      "note": "The Russian julian 14/3 is the same menologion day the other three calendars keep him on, and his name page lists no other. The line's year, 543, is the year this folder already held. Its life page puts his birth in 480, a year earlier than the 481 the folder held from saint.gr, so the birth interval is now 480 to 481 and chooses neither. The day page prints two kontakia for him and both are copied here."
     },
     {
       "church": "romanian",
@@ -126,6 +141,38 @@
         "text": "Having become a luminary of the noetic East, you were seen as the teacher of the monks of the West, instructing them by your life and by your word. By the sweat of your bright achievements cleanse away the filth of our passions as we cry to you: hail, father Benedict.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Благодатию Божиею обогатился еси,/ делы же известил еси звание,/ и явился еси, Венедикте, угодниче Христа Бога,/ в молитвах и постех дарований Божия Духа исполнен,/ и был еси недужным исцелитель,/ и прогонитель врагом,// и заступник скорый душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 марта ст. ст., «Кондак преподобного Венедикта», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260314.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were enriched with the grace of God, and by your deeds you made your calling sure; and you were shown forth, Benedict, servant of Christ God, filled through prayer and fasting with the gifts of the Spirit of God. You became a healer of the sick, a driver-away of enemies, and a swift defender of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Возгоревся рачением Горним и Святым Духом,/ вся просветил еси, отче преподобне Венедикте священне,/ непрестанно моли Христа Бога, преблаженне, о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 марта ст. ст., «Ин кондак преподобного Венедикта Нурсийского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260314.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled with longing for the things above and with the Holy Spirit, you gave light to all, venerable and holy father Benedict. Pray without ceasing to Christ God, most blessed one, for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -133,18 +180,18 @@
   },
   "dates": {
     "birth": {
-      "earliest": 481,
+      "earliest": 480,
       "latest": 481,
-      "display": "481",
+      "display": "480–481",
       "basis": "traditional",
-      "note": "saint.gr heads him «Οσιος Βενεδικτος ο Εκ Νουρσιας (481 - 543)» and says he died in 543 at the age of sixty-two, which is the same reckoning. The corpus held no year for him before this."
+      "note": "The two calendars disagree by a year and the interval holds both. saint.gr heads him «Οσιος Βενεδικτος ο Εκ Νουρσιας (481 - 543)» and says he died in 543 at the age of sixty-two. days.pravoslavie.ru's life page for 14 марта ст. ст. opens «Преподобный Венедикт, основатель западного монашеского ордена бенедиктинцев, родился в итальянском городе Нурсии в 480 году». Nothing is chosen."
     },
     "death": {
       "earliest": 543,
       "latest": 543,
       "display": "543",
       "basis": "traditional",
-      "note": "saint.gr: «Ο όσιος Βενέδικτος πέθανε ειρηνικά το έτος 543, σε ηλικία 62 χρονών», and the page heads him «(481 - 543)»."
+      "note": "saint.gr heads him «Οσιος Βενεδικτος ο Εκ Νουρσιας (481 - 543)» and says he died that year at the age of sixty-two; days.pravoslavie.ru closes its line for 14 марта ст. ст. with the same «(543)». The two agree."
     }
   },
   "images": [

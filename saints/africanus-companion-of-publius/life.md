@@ -6,4 +6,8 @@ At that he was angered and put them to dreadful tortures and scourgings; he boun
 
 Their synaxis, the page adds, was kept at the monastery of Paulopetreion, near Panteichion in Asia Minor; and as Theodore the Reader relates, the translation of the holy relics of these martyrs was made under Theodosius I the Great, on 21 September, and they were laid in St Euphemia of Petra. According to the Lavriotic codex, Sabinus and those with him are numbered with them. [Publius](/saints/publius-companion-of-africanus) and [Terentius](/saints/terentius-companion-of-publius) are kept with him in the same line, and the two lines of verse the page prints call the three of them fellow martyrs whose end was by the sword.
 
-*After saint.gr's calendar for 13 Μαρτίου — [the day](https://www.saint.gr/03/13/index.aspx) and [the life](https://www.saint.gr/36/saint.aspx); read 30 September 2026.*
+The Russian church keeps the three of them on this same menologion day. The Православный церковный календарь of the Сретенский monastery names them together in one line for 13 марта ст. ст., closes it with the third century, and the short reading behind that line puts their suffering at Petria in that century and adds nothing further — no governor, no emperor, no year, and no hymn.
+
+That calendar's name page for him also hangs a second and much longer reading on his name, of a company of forty who suffered in Africa under the emperor Decius. It is a different company on a different day, and nothing in this folder is taken from it.
+
+*After saint.gr's calendar for 13 Μαρτίου — [the day](https://www.saint.gr/03/13/index.aspx) and [the life](https://www.saint.gr/36/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 13 марта ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260313.html) and [its reading](https://days.pravoslavie.ru/Life/life633.htm), read 7 October 2026.*

@@ -11,6 +11,11 @@
       "form": "Никандар Мисирац",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 15 March on pravoslavno.rs, „Свети мученик Никандар Мисирац.“, with the rank words Свети мученик left off. Мисирац is kept: it is not a rank but the epithet the heading gives him — Misir is Egypt — and it is what this folder's English name already carries."
+    },
+    {
+      "form": "Никандр Египтянин",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 марта ст. ст., «Никандр Египтянин, врач, мч.», with the rank word left off. «врач», physician, is left off with it: it is the calling the life gives him and this folder already holds it in types, and the day's own line prints the forename alone."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 марта ст. ст. — «Мч. Никандра (ок. 302).»",
+        "url": "https://days.pravoslavie.ru/Days/20260315.html",
+        "year": 2026
+      },
+      "note": "The julian 15/3 agrees with the Serbian julian 15/3 this folder already carried. The line closes with «ок. 302» where the folder held 305 from saint.gr, so the death interval is now 302 to 305 and chooses neither. The life page behind the line calls him a physician, which this folder already carries in types, and dates the persecution to the reign of Diocletian, 284 to 305. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
@@ -62,11 +77,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 305,
+      "earliest": 302,
       "latest": 305,
-      "display": "305",
+      "display": "302–305",
       "basis": "traditional",
-      "note": "saint.gr: «Στην εκτέλεση του ιερού αυτού έργου, το έτος 305 μ.Χ., συνελήφθη και δικάστηκε», and the page heads him «(; - 305)» and puts his life «στα χρόνια του Διοκλητιανου (284 - 305 μ.Χ.)»."
+      "note": "The two calendars disagree and the interval holds both. saint.gr puts the execution of this work in 305: «Στην εκτέλεση του ιερού αυτού έργου, το έτος 305 μ.Χ.». days.pravoslavie.ru closes its line for 15 марта ст. ст. with «(ок. 302)» and ends its life page «а затем обезглавили (+ ок. 302)», and dates the persecution to the reign of Diocletian, 284 to 305. Nothing is chosen."
     }
   },
   "related": [],

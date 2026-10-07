@@ -11,6 +11,11 @@
       "form": "Публије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 15 March on pravoslavno.rs, „Свети мученик Агапије и седморица с њим: Публије, Тимолај, Ромил, два Александра и два Дионисија.“, where it is the second name the heading prints, standing where the Greek line's Πλήσιος and doxologia's Plisie stand. The rank words Свети мученик stand at the head of the whole company and are left off, and the heading gives this man no epithet and no city, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Пуплий Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 марта ст. ст., «Пуплий Кесарийский (Палестинский), мч.», with the rank word left off. The day line itself declines the name and gives no epithet."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 марта ст. ст. — «Мч. Агапия и с ним семи мучеников: Пуплия, Тимолая, Ромила, двух Александров и двух Дионисиев (I, II) (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260315.html",
+        "year": 2026
+      },
+      "note": "The line is one line for the eight and this folder is one of them; it enumerates them, so it is eight rows and not one. The year it closes with, 303, is the year the Ohrid Prologue also gives and which this folder already records as falling inside the reign of Diocletian; it is not written over the interval. The life page behind the line, life646, puts the suffering at Caesarea in Palestine under that reign, which it dates 284 to 305. The day page prints no hymn for any of the eight."
     },
     {
       "church": "romanian",
