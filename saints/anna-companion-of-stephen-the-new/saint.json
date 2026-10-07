@@ -6,6 +6,11 @@
       "form": "Άννα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Αγία Άννα η Οσιομάρτυς», with the rank words left off."
+    },
+    {
+      "form": "Ана",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. новембар ст. ст., „Преподобна Ана.“ — «Преподобна» is the Преподобни grade, which this folder keeps compounded as `venerable-martyr`, so it comes off, and the heading prints nothing else whatever: no see, no city, no by-name and no mention of Stephen, whose companion the Greek calendar makes her. The bare forename is therefore the whole of the form and there was nothing fuller to reach for. Measured before it was written: no other folder in the corpus holds this string. NOTE FOR A LATER READER: the key this string folds to is three characters long, below the four `corpus-gate.mjs` indexes, so this form will NEVER appear in the gate’s collision list however many folders come to carry it — the gate cannot protect this name, and a second «Ана» written onto another Anna by another wave would pass unseen."
     }
   ],
   "sex": "female",
@@ -43,8 +48,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.12.2025 (28. новембар ст. ст.) — „Преподобна Ана.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry. SHE IS NOT STEPHEN’S MOTHER, who is also an Ана and who appears in this same day’s FIRST entry praying for a son like Hannah the mother of Samuel: this woman is the noblewoman whom Stephen himself tonsured after her husband’s death, and the two are kept carefully apart in both lives. The identification is the Greek calendar’s own, which keeps her on this menologion number as the companion of Stephen the New, and the entry’s story is that folder’s dossier and no other’s. `dates` NOT WRITTEN: the folder holds none and the entry gives no year, no reign and no century — only that she died in prison under Copronymus, which is not a date. No `related` row added: the folder already relates to `stephen-the-new` and he to her, both ways. No `locations`. WHAT THE ENTRY ADDS, which is the whole of her dossier here: that she was a well-born woman tonsured a nun by Stephen the New after her husband’s death; THAT THE EMPEROR COPRONYMUS PUT HER UP TO SAYING SHE HAD HAD UNLAWFUL BODILY RELATIONS WITH STEPHEN, so as to lower him before the people; that she would have no part in the emperor’s plot against a man she honoured as her spiritual father; and that she was scourged for it and then thrown into prison, where she gave her holy soul up to God."
     }
   ],
   "text": {

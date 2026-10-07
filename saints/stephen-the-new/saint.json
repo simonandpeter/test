@@ -16,6 +16,11 @@
       "form": "Стефан Новый, Константинопольский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 2062, «Стефан Новый, Константинопольский, прмч.», with the trailing grade left off. The day line gives «Стефана Нового» without the city."
+    },
+    {
+      "form": "Стефан Нови",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. новембар ст. ст., „Преп. муч. Стефан Нови.“ — «Преп. муч.» is Преподобномученик, the `venerable-martyr` grade this folder already keeps, so it comes off. «Нови», the New, is KEPT: it is not a rank but the by-name that tells him from every other Stephen, and the bare «Стефан» would have been a fold of its own in a corpus that keeps two folders whose display name is the bare «Stephen». Measured before it was written: this form stands on no other folder and joins no fold."
     }
   ],
   "sex": "male",
@@ -87,8 +92,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.12.2025 (28. новембар ст. ст.) — „Преп. муч. Стефан Нови.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and the longest of the four. `dates` UNTOUCHED AND CONFIRMED FROM BOTH ENDS AT ONCE, which has not happened before in this block: the book says «Пострада овај славни Христов војник 767. године у 53. години свога земнога живота» — suffered in 767 in the fifty-third year of his earthly life — and this folder holds a birth of 714 off doxologia.ro and a death of 767 off saint.gr, from two calendars that each gave only one of the two. 714 and 53 give 767, so a third book agrees with both at once and NOTHING needed changing. No `related` row added: the folder already relates to ten, including the mountain’s Auxentius and the Anna of this day’s third entry. WHAT THE ENTRY ADDS: HIS MOTHER’S PRAYER FOR A SON, likened to Hannah the mother of Samuel, and the light sleep that took her before the icon of the Mother of God in the church at Blachernae, in which she saw the Virgin bright as the sun and heard her say „Иди, жено, с миром, према молитви твојој имаш сина у утроби твојој.“; the monastic habit taken in his sixteenth year on the mountain of Auxentius facing Constantinople, from an elder the book names Јован, who taught him divine wisdom and the ascetic life, and his staying on that mountain after that elder’s repose; the disciples his holiness drew; Constantine Copronymus persecuting the icons more fiercely than his father Leo the Isaurian, and Stephen standing out as a zealous defender of their veneration; the slanders the emperor accepted and the plots he laid himself; THE EXILE TO THE ISLAND OF PROCONNESUS and the return in chains to a Constantinople prison, WHERE THREE HUNDRED AND FORTY-TWO MONKS WERE ALREADY HELD for the same cause, keeping the whole church rule in that prison as in a monastery; the death foreseen forty days ahead and the farewell to the brethren; the dragging through the streets while the emperor’s partisans were called to stone «the emperor’s adversary»; and the blow of a piece of wood on the head, from one of the heretics, at which he gave up his spirit. NOT LINKED AND NO ROW: the book compares his death at the hands of the iconoclasts with the first martyr’s at the hands of the Jews, which is a comparison and not a relation, and the corpus’s `stephen-the-first-martyr` is deliberately neither named nor linked. HIS MOTHER, Ана, HAS NO FOLDER AND IS NOT THE ANA OF THIS DAY’S THIRD ENTRY, who is a noblewoman he himself tonsured; the two are carefully kept apart in the life."
     }
   ],
   "related": [

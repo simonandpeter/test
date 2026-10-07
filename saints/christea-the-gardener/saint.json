@@ -11,6 +11,11 @@
       "form": "Χρήστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Χρήστος ο Κηπουρός», with the rank word left off."
+    },
+    {
+      "form": "Христо",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. новембар ст. ст., „Св. новомуч. Христо.“ — «Св.» is “saint” and not a rank and «новомуч.» is Новомученик, the `new-martyr` grade, so both come off; the heading prints nothing else, and the trade, the nation and the city are all in the body. Measured before it was written: no other folder in the corpus holds this string and it joins no fold. It is NOT folded towards the Greek «Χρήστος» or the Romanian «Hristea» this folder already carries, and it is not the same string as any of the corpus’s Christophers or Christodouloi."
     }
   ],
   "sex": "male",
@@ -80,8 +85,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.12.2025 (28. новембар ст. ст.) — „Св. новомуч. Христо.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. THE IDENTIFICATION, WHICH IS THE READING ON THIS DAY: the Romanian and Greek calendars keep this man on 12 FEBRUARY and this book keeps him on the Julian 28 NOVEMBER, which is not that day in either style and is not thirteen days from it either, so no conversion explains the gap and the two days stand as read. He is the same man on five points the folder’s own life already carries from saint.gr: an ALBANIAN, settled at CONSTANTINOPLE, a GARDENER by trade, slandered before the court by a TURK he had quarrelled with while selling his produce — saint.gr says over the price of apples, the Prologue says over his vegetables — on the charge that he had promised to turn Turk and then gone back on it, and BEHEADED IN 1748. `dates` UNTOUCHED: the book’s 1748 is exactly the year this folder holds, which is the one year all three calendars give him. `types` NOT TOUCHED EITHER, and it is a question for the author: the folder carries `martyr` alone where this book heads him «новомуч.», новомученик, which BRIEF-SERBIAN §5 reads as `new-martyr`, and the folder’s own life already calls him a neomartyr in saint.gr’s words. A `types` row is a reading of the sources together and not of the newest one, so nothing was added. WHAT THE ENTRY ADDS, and all of it is new to the corpus: that the quarrel was over his VEGETABLES and not apples; that he was tortured and then thrown into prison in irons; THE FOOD HE REFUSED IN PRISON, saying „Боље да се гладан јавим пред Христом мојим.“ — better that I appear before my Christ hungry; and THE PURSE OF MONEY FROM UNDER HIS BELT WHICH HE GAVE TO A FELLOW PRISONER, asking that a few memorial liturgies be served for him with it."
     }
   ],
   "text": {
