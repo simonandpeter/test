@@ -16,6 +16,11 @@
       "form": "Јаков",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 21 March on pravoslavno.rs, „Свети Јаков, епископ и исповедник.“, with Свети left off, which is not a rank, and with both rank words епископ and исповедник left off as well. The heading gives no epithet and no see, and the entry says plainly that the see is not known, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Иаков Катанский (Сицилийский)",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name page 874, «Святитель Иаков Катанский (Сицилийский), епископ, исповедник», with the rank and grade words left off. The day's own line declines the forename and gives no see at all, «Прп. Иакова еп., исп». Both brackets are the calendar's own, Sicily set beside Catania, and are kept; the fold-key probe reports no folder holding this string. Before this row the folder held a Romanian, a Greek and a Serbian form and no Russian one."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 марта ст. ст. — «Прп. Иакова еп., исп (VIII-IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260321.html",
+        "year": 2026
+      },
+      "note": "**The calendar keeps a second day for him and the row does not move**: name page 874 and the life page both print «Дни памяти: 21 марта, 24 марта», and the day page that lists him is the 21 марта one, so 24 марта is recorded here and he does not render on it. The two days are three apart and neither is a style conversion of the other. **The rank is a disagreement inside one page**: the day's line abbreviates him «Прп.», venerable, while name page 874 heads him «Святитель Иаков Катанский (Сицилийский), епископ, исповедник» and the life is titled «Преподобный Иаков, епископ и исповедник» — the hierarch's title on the name page and the venerable's on the other two. The folder's existing `hierarch`, `bishop`, `confessor` and `monk` hold all of it and nothing is changed. The reading adds the house he came out of, the Studion monastery, and the manner of the pressure: he was repeatedly required to give up the veneration of the icons under «императора-иконоборца Константина V Копронима (741 - 775)», was held in prison, starved and tortured, and died in exile. The folder's bounds, 740–775, already hold that reign; the calendar's first year is 741 and nothing is changed for one year. The day's line gives the century as «(VIII-IX)», which is wider than the folder's interval and than its own life's reign, and is recorded here rather than taken. The day page prints no hymn for him."
     },
     {
       "church": "romanian",
