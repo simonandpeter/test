@@ -11,6 +11,11 @@
       "form": "Πινούφριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Όσιος Πινούφριος», with the rank word left off."
+    },
+    {
+      "form": "Пинуфрије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. новембар ст. ст., „Преп. Пинуфрије.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, so it comes off and the heading prints nothing else; Egypt and the century are in the body. Measured before it was written: no other folder in the corpus holds this string and it joins no fold, and it is not folded towards the Romanian «Pinufrie» or the Greek «Πινούφριος» this folder already carries."
     }
   ],
   "sex": "male",
@@ -57,11 +62,33 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.12.2025 (27. новембар ст. ст.) — „Преп. Пинуфрије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, FOUR SHORT SENTENCES. `dates` WRITTEN WHERE THE FOLDER HAD NONE AT ALL: «Живео у IV столећу» is a century the book states for his life, so it is recorded as a floruit of 301 to 400 displayed «4th century», and it is the corpus’s first year of any kind for him — the Romanian and Greek rows he already carries gave none. It is NOT a death: the book says he lived in that century and does not say when he died. ONE `related` row added, both halves, and the identification is made on the book’s own cross-reference and not on the name: it calls him the contemporary of «св. Касијана (29. фебр.)», and 29 February is the day the corpus’s `john-cassian` carries in his venerated Romanian row — the corpus holds seven other Cassians and not one of them stands on that day. This folder had no `related` key at all before. WHAT THE ENTRY ADDS: that he was a great Egyptian ascetic and a contemporary of Cassian; the fourth century; THE MOVING FROM PLACE TO PLACE ALWAYS TO ESCAPE THE PRAISE OF MEN; and the many disciples who laboured to imitate their teacher’s lofty example. No `locations`: Egypt is named as a country and the entry says outright that he did not stay in one place."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 27. новембар ст. ст.: «Живео у IV столећу и подвизавао се на разним местима све бежећи од похвала људских.» The century is the book’s own and it is stated of his LIFE and not of his death, so it is recorded as a floruit. It is the corpus’s first year of any kind for him: the folder held no `dates` object, and the Romanian and Greek calendars it is otherwise built on give him none. The same entry makes him a contemporary of Cassian, which agrees with the century without adding to it."
+    }
+  },
+  "related": [
+    "john-cassian"
+  ]
 }

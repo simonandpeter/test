@@ -16,6 +16,11 @@
       "form": "Иаков Персиянин",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 881, «Иаков Персиянин, вмч.», with the rank word left off; its life page 3234 adds the by-name «(Рассеченный)», the cut-apart, which the heading does not carry and which is not stored here."
+    },
+    {
+      "form": "Јаков Персијанац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. новембар ст. ст., „Св. муч. Јаков Персијанац.“ — «Св.» is “saint” and not a rank and «муч.» is Мученик, the martyr grade (this folder carries the `great-martyr` the Russian calendar gives him, which the heading does not), so both come off. «Персијанац», the Persian, is KEPT: it is what the heading gives beyond the forename, and the bare «Јаков» is the nine-member fold this branch widened on the Julian 26 November. Measured before it was written: this form stands on no other folder and joins no fold."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.12.2025 (27. новембар ст. ст.) — „Св. муч. Јаков Персијанац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and the longest of the five. `dates` UNTOUCHED AND A DISAGREEMENT REFUSED: the book closes «Пострада око 400. године», about the year 400, where this folder holds a flat 421 off the Russian calendar. The two are not an interval and nothing read breaks the tie, so NEITHER was moved and the folder was not widened to «400–421»: «око» is the book’s own word for an approximation, 421 is a stated year, and a reader may not average them. The book itself names the emperor as «Издигерд», Yazdegerd, whose reign brackets both readings, and the folder’s own note already places him by the reigns he served at court. THE AUTHOR MAY WANT THE INTERVAL; this reader would not write it. A SECOND CELEBRATION NAMED, which is NOT a feast row: the book says the head is at Rome and part of the relics in Portugal, «где се празнује 22. маја» — kept there on 22 May. That is a local celebration where the relics lie and not one of the four churches this corpus records, so no row and no second-day note was taken for it; it is in the life. No `related` row: his mother and his wife, who wrote him the letter that turned him, are not named in the book, and the emperor is not a saint here. WHAT THE ENTRY ADDS: his birth at the Persian city of Клапа or Вилат of Christian parents, his Christian upbringing and his Christian wife; the emperor’s liking for his gifts and his quickness and the nobility given him at court; HIS FALL — flattered by the emperor, he sacrificed to the idols; THE LETTER his mother and his wife wrote him, mourning him as an apostate and a dead soul and begging him at its end to repent and return to Christ; his bitter repentance and his bold confession before the emperor; the sentence that he be cut away piece by piece until he died, and the executioners doing it to the letter — fingers, toes, feet, hands, shoulders, and at the last the head — with a thanksgiving to God at every cut; and THE FRAGRANCE LIKE CYPRESS that came out of his wounds."
     }
   ],
   "hymns": [

@@ -6,6 +6,11 @@
       "form": "17 монахов в Индии",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 6936, «Преподобномученики 17 монахов в Индии», with the rank word left off. The calendar gives the company no names of its own, only the count and the country."
+    },
+    {
+      "form": "Седамнаест Индијских мученика",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. новембар ст. ст., „Седамнаест Индијских преп. мученика.“ — «преп.» is Преподобних, the Преподобномученик grade this folder already keeps as `venerable-martyr`, so it comes off. «мученика» is KEPT and the keeping is a reading: a company heading made of a number, a nationality and two rank nouns leaves NO NAME AT ALL if both nouns come off — «Седамнаест Индијских» is an adjective phrase and not a name — and the shape kept here is the shape the folder’s Russian form already has, «17 монахов в Индии», which likewise keeps its noun with `monk` in `types` beside it. Measured before it was written: the form stands on no other folder and joins no fold."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 December 2026 (7 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.12.2025 (27. новембар ст. ст.) — „Седамнаест Индијских преп. мученика.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-10&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. A COMPANY THAT ENUMERATES NOBODY, so it is one folder and not seventeen: the entry gives a number and a nationality and does not name one of the seventeen, which is BRIEF.md §4’s ruling on a heading that names nobody, and it is in any case the folder the Russian calendar already keeps as «Прмчч. 17-ти монахов в Индии (IV)». `dates` UNTOUCHED: the book gives no year, no reign and no century for them; the folder’s «4th century» is the Russian calendar’s Roman numeral and stands. THREE `related` ROWS ADDED, both halves of each, and this folder had no `related` key at all before, although its whole story is three people the corpus already holds: the elder `barlaam-of-india`, whom the king hunted and never caught; the king’s son `joasaph-of-india`, whose baptism is the cause of the hunt; and the king himself, `abenner-king-of-india`, whom the corpus keeps under the display name «Abenner, father of Joasaph» and whom the book names «Индијског цара Авенира». WHAT THE ENTRY ADDS, which is the whole of their dossier here: that they were Christian monks who suffered under the Indian king Abenner; that the king, enraged at the elder Barlaam for baptising his son Joasaph, sent parties out after Barlaam; THAT THE PARTIES NEVER CAUGHT BARLAAM BUT TOOK THESE SEVENTEEN OTHER MONKS INSTEAD and brought them before the king; that he condemned them to death, and that their eyes were first put out, their tongues cut out and their legs and arms broken before they were beheaded with the sword; and that the faith of Christ was established the more firmly in the Indian kingdom by their blood."
     }
   ],
   "dates": {
@@ -56,5 +71,10 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "barlaam-of-india",
+    "joasaph-of-india",
+    "abenner-king-of-india"
+  ]
 }
