@@ -16,6 +16,11 @@
       "form": "Меркурий Кесарийский (Каппадокийский)",
       "lang": "ru",
       "note": "The heading of the name link behind days.pravoslavie.ru's line for 24 ноября ст. ст., name page 1519, «Меркурий Кесарийский (Каппадокийский), военачальник, вмч.», with the rank and the grade left off the head. The parenthesis is the page's own. `.tmp/ru-foldnew.mjs` reports no folder holding this form; the bare «Меркурий» was refused, because four folders of this corpus would answer to it."
+    },
+    {
+      "form": "Меркурије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. новембар ст. ст., „Св. вел. мученик Меркурије.“ — «Св.» is “saint” and not a rank and «вел. мученик» is the `great-martyr` grade `types` already keeps, so both come off and the heading prints nothing else; the regiment, the rank of commander and Cappadocia are all in the body. Measured: no other folder in the corpus holds this string — `mercurius-of-smolensk`, who stands on the same menologion number, does not — so it joins no fold."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.12.2025 (24. новембар ст. ст.) — „Св. вел. мученик Меркурије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-07&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's second entry. HE IS NOT `mercurius-of-smolensk`, the other Mercurius the corpus keeps on this same menologion number: this is the soldier of Decius beheaded in Cappadocia, whose folder is the bare «Mercurius», a `great-martyr` and `soldier`. `dates` WIDENED, which is this day's one field change: the book says «Пострада за веру овај прекрасни војник Христов између 251- 259. год.», between 251 and 259, where the folder held saint.gr's «between 253 and 259»; the interval is widened at the early end to hold both readings and neither is preferred, which is the practice the folder's own note already follows. No `related` row: Basil the Great and Eupsychius are already there, and the men this entry names — Decius, the envious accusers, the angel — are not folders of this corpus. WHAT THE ENTRY ADDS: that he was a commander over the Armenian regiment called the Martenses in Decius's war against the barbarians; THE ANGEL WHO PUT A SWORD INTO HIS HANDS IN THE BATTLE and told him he would conquer, and the enemies cut down like grass with it; his promotion to first commander of the whole army after the victory; the envious men who denounced him as a Christian and his open confession of it before the emperor; the knives that cut him into strips and the fire that scorched him; the angel who healed him in prison; the sentence to be beheaded in Cappadocia; HIS BODY TURNING WHITE AS SNOW AFTER THE BEHEADING with a wonderful scent of incense coming out of it; and the many sick healed at his relics. Measured: no other folder holds «Меркурије»."
     }
   ],
   "related": [
@@ -150,11 +165,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 253,
+      "earliest": 251,
       "latest": 259,
-      "display": "between 253 and 259",
+      "display": "between 251 and 259",
       "basis": "traditional",
-      "note": "saint.gr: «τον αποκεφάλισαν στην Καισαρεία της Καππαδοκίας, μεταξύ των ετών 253 και 259 μ.Χ.» — the page's own interval, and it is the interval for the beheading and not a reign. It gives no year of birth."
+      "note": "Two books and two intervals, widened to hold both rather than choosing. saint.gr: «τον αποκεφάλισαν στην Καισαρεία της Καππαδοκίας, μεταξύ των ετών 253 και 259 μ.Χ.» — the page's own interval for the beheading and not a reign. Охридски пролог за 24. новембар ст. ст.: «Пострада за веру овај прекрасни војник Христов између 251- 259. год.» The later end agrees; the earlier end differs by two years and the wider reading is kept. Neither book gives a year of birth."
     }
   }
 }
