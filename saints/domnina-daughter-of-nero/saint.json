@@ -1,0 +1,62 @@
+{
+  "slug": "domnina-daughter-of-nero",
+  "display_name": "Domnina, daughter of Nero",
+  "names": [
+    {
+      "form": "Домнина Римская",
+      "lang": "ru",
+      "note": "Read out of the heading of the name page behind her place in days.pravoslavie.ru's line for 20 марта ст. ст., name page 2456, «Домнина Римская, мц.», with the rank word left off. The day's own line declines the name and gives no by-name, «мцц. Анатолии, Фото, Фотиды, Параскевы, Кириакии, Домнины». That page lists «День памяти: 20 марта» and no other day. `.tmp/fk.mjs` reports no folder holding this form; the corpus keeps five other folders of the bare name Domnina — `domnina-5-january`, `domnina-12-october`, `domnina-martyr-2-november`, `domnina-of-antioch` and `domnina-the-ascetic` — and not one of them is kept on this day or in this company."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 54,
+      "latest": 68,
+      "display": "in the reign of Nero (54–68)",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru gives no year of her own. Its life for this company sets the whole of it under Nero — «Во времена императора Нерона (54 - 68), проявившего чрезвычайную жестокость в борьбе с христианством» — and the day's line closes «(ок. 66)» for all eleven persons at once; the reign is the interval the pages state and the bounds choose no year inside it. The seven folders of this company that the corpus already held carry these same bounds off saint.gr."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Мц. Фотины (Светланы) самаряныни, ее сыновей мчч. Виктора, нареченного Фотином, и Иосии; мцц. Анатолии, Фото, Фотиды, Параскевы, Кириакии, Домнины и мч. Севастиана (ок. 66).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "Her place in the line is among the women the calendar calls «мцц.», sisters of the Samaritan woman in the same clause, but the life page behind the line makes her something else: «святую Фотину с пятью ее сестрами ... отправить в императорский дворец под надзор дочери Нерона Домнины», the daughter of Nero set to guard the confessors, who was converted with all her serving-women and baptised. saint.gr says the same of her from the other side, in the sentence the folder `photini-the-samaritan` already quotes: «όταν αυτός έμαθε ότι η Αγία Φωτεινή έκανε Χριστιανές τη θυγατέρα του Δομνίνα και μερικές δούλες της». She is therefore not one of the sisters and the display name says whose daughter she is. `martyr` is the calendar's own rank word for her and the only one it gives; the reading it prints does not narrate her death, and that is said in the life. The day page prints no hymn for this company. The corpus held the other ten persons of this line already, nine of them off saint.gr's 26 February; she is the only arrival."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Απριλίου, the corresponding civil day (8 October 2026). saint.gr's reading of this company, quoted on `photini-the-samaritan`, names her but the Greek wave made her no folder."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 April 2026 (8 October 2026)."
+    }
+  ],
+  "related": [
+    "photini-the-samaritan"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

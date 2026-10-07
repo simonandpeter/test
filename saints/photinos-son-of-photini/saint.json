@@ -10,6 +10,11 @@
       "form": "Φωτεινός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Άγιος Φωτεινός», with the rank word left off."
+    },
+    {
+      "form": "Виктор (Фотин) Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 418, «Мученик Виктор (Фотин) Римский», with the rank word left off. The day's line declines it and spells the second name out, «Виктора, нареченного Фотином». The calendar's primary name for him is Victor and Photinos is the name given him afterwards, which is the reverse of this folder's display name; the display name is not changed."
     }
   ],
   "related": [
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Мц. Фотины (Светланы) самаряныни, ее сыновей мчч. Виктора, нареченного Фотином, и Иосии; мцц. Анатолии, Фото, Фотиды, Параскевы, Кириакии, Домнины и мч. Севастиана (ок. 66).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "**The Russian calendar makes Victor and Photinos one man, and says so twice.** Its line reads «ее сыновей мчч. Виктора, нареченного Фотином, и Иосии» — her sons Victor, named Photinos, and Joses, two sons and not three — and there is one name page for him, 418, headed «Мученик Виктор (Фотин) Римский», with 20 марта and no other day. Its life gives the renaming as the Lord's own word in the prison: «С этого дня имя тебе будет Фотин — Светозарный, ибо многие, просвещенные тобой, обратятся ко Мне». The reading makes him her elder son, who fought the barbarians in the Roman armies and was made commander in Attalia in Asia Minor, was blinded with Sebastian and his brother, healed in prison by an angel, crucified head downwards and beaten three days, and flayed with his shins struck off. **The corpus also keeps `victor-26-february`, a martyr with no dates, no relations and no life, whom the Greek wave read off saint.gr's 26 February — the same day it read this folder from — and on this Russian reading the two folders may well be one man kept twice.** Nothing is merged here and no row is put on that folder: the question is the author's, and the row goes on the folder whose name the calendar's own page gives her son. The day page prints no hymn for this company; the year «(ок. 66)» the line gives for all eleven is recorded without changing the folder's bounds, which this calendar's life repeats as «(54 - 68)»."
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Σεβαστιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Άγιος Σεβαστιανός ο δούκας», with the rank word and the title left off."
+    },
+    {
+      "form": "Севастиан Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1941, «Севастиан Римский, военачальник, мч.», with the rank word and the grade word военачальник left off. The day's own line declines the name and gives no city, «и мч. Севастиана»."
     }
   ],
   "related": [
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Мц. Фотины (Светланы) самаряныни, ее сыновей мчч. Виктора, нареченного Фотином, и Иосии; мцц. Анатолии, Фото, Фотиды, Параскевы, Кириакии, Домнины и мч. Севастиана (ок. 66).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "The folder's two existing `related` rows, to the Samaritan woman and to her elder son, are what identify him as this company's Sebastian rather than either of the other Sebastians the Greek wave read off the same 26 February. The reading this calendar prints is the fullest account the folder has had: he was the governor of Attalia in Asia Minor, who told the elder son he knew all three of them for Christians and advised him to serve the emperor and confess in secret, was struck blind and dumb in the middle of the conversation, lay three days without a word, cried out on the fourth that the Christians' faith alone is true, was baptised and saw at once, and was blinded again with the two brothers by Nero's order, healed in prison by an angel and flayed. His servants were baptised after the miracle. **The folder's display name is `Sebastian of Cartagena`, and this reading puts Carthage with the Samaritan woman and her younger son and puts Sebastian at Attalia; the by-name is a question for the author and nothing here changes it.** Name page 1941 lists 20 марта and no other day. The day page prints no hymn for this company, and the «(ок. 66)» the line gives for all eleven is recorded without changing the folder's bounds, which this calendar's life repeats as the reign of Nero «(54 - 68)»."
     },
     {
       "church": "romanian",
