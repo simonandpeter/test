@@ -16,6 +16,11 @@
       "form": "Акакий Синайский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 92, «Акакий Синайский, прп.», with the trailing grade left off. The day line declines it, «Акакия Синайского». The calendar calls him of Sinai where saint.gr calls him «ὁ ἐν τῇ Κλίμακι», the one in the Ladder, and both mean the same thing: the obedient novice of the fourth step."
+    },
+    {
+      "form": "Акакије Синајски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. новембар ст. ст., „Преп. Акакије Синајски.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, so it comes off. «Синајски», of Sinai, is KEPT: it is not a rank but the place that tells him apart, the monastery is in the body, and the bare «Акакије» measured before this was written stands on four other folders — `acacius-companion-of-patrick`, `acacius-of-melitene`, `acacius-the-centurion` and `acacius-the-kausokalyvite` — so the bare forename would have made a five-member fold out of a form the heading does not oblige. This fuller form stands on no other folder and joins no fold."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.12.2025 (29. новембар ст. ст.) — „Преп. Акакије Синајски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. THREE DAYS AND NOW FOUR, and this row adds no new one: the folder’s Russian row stands on the Julian 29 ноября and notes a second Russian day on 7 июля; its Romanian row stands on 7 iulie and notes a second Romanian day on 29 noiembrie; its Greek row stands on 26 November. This book agrees with the Russian feast exactly, so the serbian row is 29/11 julian and nothing is noted on another day. `dates` UNTOUCHED: the book gives no year, no reign and no century, so the «6th century» this folder reads off the Russian calendar’s Roman numeral stands untouched and unconfirmed — and the nine years of obedience it does give are a span of service and not a date. No `related` row added: the folder already relates to `john-of-the-ladder` and he to it, both ways, which is right, because THE ENTRY’S FIRST SENTENCE IS THAT THE LIFE IS TOLD BY JOHN OF THE LADDER IN HIS OWN BOOK. WHAT THE ENTRY ADDS: that the account comes out of the Лествица itself; that the young Acacius was a novice under a WICKED elder in a Sinai monastery, who rebuked and abused him daily, often beat him and tormented him every way; that he never complained but bore it patiently, holding it useful for his salvation; HIS ANSWER WHENEVER ANYONE ASKED HOW HE LIVED — „Добро, као пред Господом Богом!“, well, as in the sight of the Lord God; his death after NINE YEARS of that obedience; the elder burying him and then telling another, holy elder that his disciple had died; THE HOLY ELDER REFUSING TO BELIEVE IT, the two going to the grave, the call „Брате Акакије, јеси ли умро?“ and the answer out of the grave, „Нисам умро оче, немогуће је умрети послушноме“ — I have not died, father; it is not possible for an obedient man to die; and the wicked elder’s repentance, and the cell he shut himself in beside the grave for the rest of his life."
     }
   ],
   "text": {

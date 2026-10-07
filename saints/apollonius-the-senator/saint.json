@@ -1,0 +1,58 @@
+{
+  "slug": "apollonius-the-senator",
+  "display_name": "Apollonius, senator of Rome",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Аполоније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fifth heading for 29. новембар ст. ст., „Св. муч. Аполоније.“ — «Св.» is “saint” and not a rank and «муч.» is Мученик, the `martyr` grade, so both come off; the heading prints nothing else, and the senate, Rome and the year are all in the body. MEASURED BEFORE IT WAS WRITTEN AND IT IS NOT FREE: the string already stands on `apollonius-the-reader`, who holds it as his own Serbian form, and the two-member fold it makes is declared in `scripts/corpus-gate.mjs` in this commit."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 186,
+      "latest": 186,
+      "display": "186",
+      "basis": "traditional",
+      "note": "Охридски пролог за 29. новембар ст. ст.: «...због чега би посечен мачем, у Риму 186. год.» — beheaded with the sword at Rome in the year 186. It is the only year the entry gives and the only source read for him; there is no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.12.2025 (29. новембар ст. ст.) — „Св. муч. Аполоније.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fifth and last entry, THREE SENTENCES: a Roman senator, accused for his faith in Christ, who confessed that faith before the whole Senate and was beheaded with the sword at Rome in 186. `types` is `martyr` alone, off «муч.»; senator is not a grade `types` keeps and it is in the display name instead. `dates` holds the one year the entry gives. No `locations`: Rome is named as the place of the beheading and not as a place he is fixed at for a bounded span, and BRIEF.md §4 prefers the field left out. No `related` row: the entry names nobody. WHY THIS IS A NEW FOLDER: the corpus holds NINE other folders of this name and not one of them is a senator, is at Rome, or carries the year 186 — `apollonius-23-july` and `apollonius-martyr-6-july` are bare Greek lines with no dates at all, `apollonius-companion-of-proclus` stands with Proclus on 14 February, `apollonius-of-brescia` is a bishop of the second century at Brescia on 7 July, `apollonius-of-sardis` is of Sardis on 10 July, `apollonius-of-the-twenty-four-martyrs` died in 301, `apollonius-the-anchorite` is a fourth-century hermit on 21 January, `apollonius-the-reader` is a reader of the company of Diocletian’s years with a floruit of 290 on 14 December, and `apollon-babichev` is a Russian new martyr of the twentieth century. A senator of Rome beheaded in 186 under Commodus matches none of them, and nothing read joins him to any."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

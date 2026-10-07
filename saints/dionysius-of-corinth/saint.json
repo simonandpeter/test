@@ -6,6 +6,11 @@
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Νοεμβρίου, «Άγιος Διονύσιος επίσκοπος Κορίνθου», with the rank word and the see left off."
+    },
+    {
+      "form": "Дионисије Коринтски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. новембар ст. ст., „Св. муч. Дионисије еп. Коринтски.“ — «Св.» is “saint” and not a rank, «муч.» is Мученик and «еп.» is епископ, both grades inside the `hieromartyr` and `bishop` this folder already keeps, so all three come off. «Коринтски» is KEPT: it is the see adjective, the folder’s `office` is already Bishop of Corinth, and the bare «Дионисије» measured before this was written stands on SIX other folders — the companions of Lucillian, of Quadratus and of Socrates, Dionysius of Athos, of Lampsacus, and the monk of Kastoria — so the bare forename would have made a seven-member fold out of a form the heading does not oblige. This fuller form stands on no other folder and joins no fold."
     }
   ],
   "sex": "male",
@@ -20,7 +25,14 @@
       "latest": 160,
       "display": "c. 160",
       "basis": "traditional",
-      "note": "saint.gr: «έζησε το δεύτερο αιώνα μ.Χ. (περί το 160 μ.Χ.) στην εποχή του αυτοκράτορα Μάρκου Αυρηλίου». The page gives no year for the martyrdom and no year of birth."
+      "note": "saint.gr: «έζησε το δεύτερο αιώνα μ.Χ. (περί το 160 μ.Χ.) στην εποχή του αυτοκράτορα Μάρκου Αυρηλίου». The page gives no year for the martyrdom. UNCHANGED by the Serbian reading of 8 October 2026, which added the death year beside it."
+    },
+    "death": {
+      "earliest": 182,
+      "latest": 182,
+      "display": "182",
+      "basis": "traditional",
+      "note": "Охридски пролог за 29. новембар ст. ст., which is half of a two-sentence entry: «Посечен за Христа 182. год.» — beheaded for Christ in the year 182. It is the corpus’s first year of death for him; saint.gr, which gave the floruit, says outright that it has none. The two agree rather than compete: a pastor flourishing about 160 in the time of Marcus Aurelius and beheaded in 182, two years after that emperor’s death, is one life, and neither figure has been moved to fit the other."
     }
   },
   "attestations": [
@@ -51,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.12.2025 (29. новембар ст. ст.) — „Св. муч. Дионисије еп. Коринтски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, TWO SENTENCES. `dates` ADDED TO, NOT CHANGED: the folder held a floruit of «c. 160» off saint.gr, which says he lived in the second century about 160 in the time of Marcus Aurelius and gives NO year for the martyrdom; this book gives the martyrdom — «Посечен за Христа 182. год.», beheaded for Christ in 182 — so a death of 182 is written BESIDE the floruit, which is untouched. The two agree: a man flourishing about 160 under Marcus Aurelius and beheaded in 182 is one life, and 182 is two years after that emperor’s death. The `basis` is `traditional`, as the floruit’s is. No `related` row: the entry names nobody. `types` NOT touched: the folder carries `hieromartyr` and `bishop` and the heading gives «муч.» and «еп.», both of which are inside what it already holds. WHAT THE ENTRY ADDS, which is all of it: that he was a notable pastor and teacher, and the year."
     }
   ],
   "text": {
