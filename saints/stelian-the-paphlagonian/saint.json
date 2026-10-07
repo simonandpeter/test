@@ -16,6 +16,11 @@
       "form": "Стилиан Пафлагонянин",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 13102, «Стилиан Пафлагонянин, прп.», with the trailing grade left off. The day line declines the name and makes the by-name an adjective of its own, «Стилиана Пафлагонского»."
+    },
+    {
+      "form": "Стилијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. новембар ст. ст., „Преп. Стилијан.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, so it comes off and the heading prints nothing else; Paphlagonia is in the body, so there was no «Стилијан Пафлагонац» on the page to copy. Measured before it was written: no other folder in the corpus holds this string and it joins no fold. It is not folded towards the Russian «Стилиан Пафлагонянин» or the Romanian «Stelian Paflagonul» this folder already carries."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.12.2025 (26. новембар ст. ст.) — „Преп. Стилијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, SEVEN SENTENCES. `dates` UNTOUCHED, AND THE ENTRY GIVES A TENSION THAT CANNOT BE WRITTEN AS A DATE: it makes him «земљак и савременик св. Алимпија», the countryman and contemporary of the first entry’s Alypius, whose own years this corpus holds as a birth of 522 and a death of 608 or 640, while this folder holds «5th–6th century» off the Russian calendar’s Roman figures. A contemporary of a man of the sixth and seventh centuries is not plainly a man of the fifth and sixth. THE BOOK GIVES HIM NO YEAR, NO REIGN AND NO CENTURY OF HIS OWN, so there is nothing here to write into `dates` and nothing was written; the contemporaneity is recorded in the life and in this note and is a line for the author. ONE `related` row added, both halves: the countryman and contemporary the entry names. WHAT THE ENTRY ADDS: that he was a Paphlagonian; the exceeding love of the Lord Jesus that drove him to great ascetic labours; the renouncing of everything so that his love should be undivided; THE ANGELS WHO CAME BEFORE HIS DEATH TO TAKE HIS SOUL AND HIS FACE SHINING LIKE THE SUN; and that he helps sick children above all, and parents who have none."
     }
   ],
   "text": {
@@ -100,7 +115,8 @@
   "related": [
     "basil-the-great",
     "gregory-the-theologian",
-    "john-chrysostom"
+    "john-chrysostom",
+    "alypius-the-stylite"
   ],
   "dates": {
     "death": {

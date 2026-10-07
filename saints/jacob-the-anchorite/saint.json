@@ -17,6 +17,11 @@
       "form": "Иаков Сирийский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 886, «Иаков Сирийский, отшельник», with the trailing grade left off; its life page 3230 is titled «Преподобный Иаков Сирийский» and agrees. The day line declines the name and adds the epithet separately, «Иакова отшельника Сирийского»."
+    },
+    {
+      "form": "Јаков",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. новембар ст. ст., „Преп. Јаков Отшелник.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, and «Отшелник» is the `hermit` grade it also keeps, so both rank words come off and the heading prints nothing else at all. SYRIA IS IN THE BODY AND NOT IN THE HEADING, so there was no «Јаков Сиријски» to copy and none was constructed: a form this page does not print may not be assembled out of one it does. The bare forename therefore stands, and it was measured before it was written: it joins the EIGHT-MEMBER fold the Serbian wave keyed on 5 and 7 October 2026, which is widened to nine in this commit with the whole of its earlier reading carried forward and the narrower key deleted in the same pass."
     }
   ],
   "attestations": [
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.12.2025 (26. новембар ст. ст.) — „Преп. Јаков Отшелник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, EIGHT SHORT SENTENCES. `dates` UNTOUCHED and for once untroubled: the book’s «Упокојио се мирно 457. год.» is exactly the 457 this folder already holds, and the folder’s note says that year is the only one any calendar read gives him. TWO `related` ROWS ADDED, both halves of each, and the entry states both outright: he is the disciple of «св. Марона (14. фебр.)», which is the corpus’s `maron-the-hermit` — the book’s own cross-reference to 14 February is the day all three of that folder’s venerated rows carry, which is what makes the identification and not the name — and he is the contemporary of `symeon-the-stylite`. This folder had no `related` key at all before. WHAT THE ENTRY ADDS: that he was from Syria; the asceticism under the open sky; THE SOAKED PULSE THAT WAS ALL HE ATE; great wonders, and the dead raised in the name of Christ; and the emperor Leo asking his opinion of the Council of Chalcedon. NOT LINKED: that emperor is not `leo-the-great`, who is a pope in this corpus, and no row was written to any Leo."
     }
   ],
   "text": {
@@ -72,5 +87,9 @@
       "basis": "traditional",
       "note": "days.pravoslavie.ru closes its line for him with the year — «Прп. Иакова отшельника Сирийского (457).» — and it is the only year any calendar read has given him: saint.gr says in so many words that its page gives him no year and no century. The life page behind the line gives no year either; it says only that he reposed in advanced age."
     }
-  }
+  },
+  "related": [
+    "maron-the-hermit",
+    "symeon-the-stylite"
+  ]
 }

@@ -13,6 +13,11 @@
       "form": "Νίκων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Νίκων ο «Μετανοεῖτε»», with the rank words left off."
+    },
+    {
+      "form": "Никон „Покајаније“",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. новембар ст. ст., „Преп. Никон „Покајаније“.“ — «Преп.» is Преподобни, the `venerable` grade this folder already keeps, so it comes off; «Покајаније» is NOT a rank but the by-name the book explains in the body, Repentance, from the Repent! he never stopped crying, and it is kept with the book’s own quotation marks around it exactly as the heading prints them, because a form is copied and not edited. Measured before it was written, with and without the quotation marks, which the fold strips as it strips parentheses: the string stands on no other folder. THE BARE «Никон» WAS DELIBERATELY NOT WRITTEN — it already stands on `nikon-disciple-of-kuksha` and `nikon-of-sicily`, and this heading gave a fuller form, which BRIEF-SERBIAN §6 asks for."
     }
   ],
   "dates": {
@@ -95,8 +100,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.12.2025 (26. новембар ст. ст.) — „Преп. Никон „Покајаније“.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry. THE `[~]` HINT MARKED THIS LINE AND IS WRONG ABOUT IT: the quoted word in the heading made the adapter read the line as a feast or a title rather than a person, and the body is a man’s life from his birth in Armenia to his repose at Sparta. `dates` UNTOUCHED: the book’s «Скончао у Спарти 998. год.» is exactly the 998 this folder already holds from saint.gr, and it gives no year of birth to set against the «between 920 and 925» the folder holds. No `locations`: the folder has none and the entry names Armenia, Anatolia, the Peloponnese and Sparta without placing him at any of them for a span this reader could bound, and a located saint with no bounded span is work for `map-span.test.mjs`’s UNDATED list. No `related` row: the entry names no other person at all. WHAT THE ENTRY ADDS: his Armenian birth; THE WORDS OF THE LORD THAT MOVED HIM — that everyone who leaves father or mother will receive a hundredfold and inherit eternal life — and his leaving everything for Christ for a monastery and the tonsure; his going out of the monastery once perfected in every virtue, to preach the Gospel to men; THE UNCEASING CRY «ПОКАЈТЕ СЕ!», Repent, which is what got him the by-name the heading puts in quotation marks; his circuit of the whole of Anatolia and the Peloponnese; the wonders worked by prayer in the name of Christ; and the peaceful passing to his beloved Lord at Sparta."
     }
   ],
   "text": {
