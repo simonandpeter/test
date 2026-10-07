@@ -1,0 +1,78 @@
+{
+  "slug": "sophia-of-slutsk",
+  "display_name": "Sophia of Slutsk",
+  "names": [
+    {
+      "form": "София Слуцкая",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 марта ст. ст., name page 2678, «София Слуцкая, княжна», with the rank word княжна left off. The day's own line declines the name and abbreviates the rank, «Прав. Софии, кн. Слуцкой»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous",
+    "princess"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1612,
+      "latest": 1612,
+      "display": "1612",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes her line with for 19 марта ст. ст.: «Прав. Софии, кн. Слуцкой (1612).» It is the only year the calendar gives her, and neither the day page nor name page 2678 carries a life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст. — «Прав. Софии, кн. Слуцкой (1612).»",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "note": "Neither the day page nor name page 2678 carries a life; what the calendar gives her besides the line is a troparion, which is copied here. The name page lists two further days, «8 июня» and «8 июня (Белорус.)», the second marked as the Belarusian church's; one row per church is the schema, so they are recorded here and she does not render on them. The rank «Прав.» is read as `righteous` and «кн.»/«княжна» as `princess`; the calendar gives no see, no monastery and no office."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 April 2026 (8 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Блаженная мати Софие,/ нетлением мощей и чудес сиянием почти тя Бог;/ поминающе твое праведное житие,/ тя молим испросити/ телесем нашим здравие и душам спасение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 марта ст. ст., «Тропарь праведной Софии, княжне Слуцкой», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260319.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Blessed mother Sophia, God has honoured thee with the incorruption of thy relics and the shining of wonders. Remembering thy righteous life, we pray thee to ask health for our bodies and salvation for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
