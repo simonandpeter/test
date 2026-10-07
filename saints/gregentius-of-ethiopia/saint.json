@@ -12,6 +12,11 @@
       "form": "Γρηγέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Όσιος Γρηγέντιος επίσκοπος Αιθιοπίας», with the rank word and the see left off. The page gives this name no gloss."
+    },
+    {
+      "form": "Григорије (Григентије)",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 19. децембар ст. ст., „Свети Григорије (Григентије), епископ омиритски.“ — «Свети» is “saint” and not a rank, and «епископ омиритски» is the rank with the see, both of which BRIEF-SERBIAN §6 keeps out of a stored form. The book prints the second name in a parenthesis of its own and it is kept, because the parenthesis is the book’s and the fold reads it as one string either way (BRIEF-ADDENDUM §2). Measured before it was written: no other folder holds this key. The bare «Григорије» alone was NOT written: five folders already hold it — gregory-of-akragas, gregory-of-antioch, gregory-of-moesia, gregory-of-nyssa and gregory-the-wonderworker-of-neocaesarea — and the second name is what tells this man from them."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.01.2026 (19. децембар ст. ст.) — „Свети Григорије (Григентије), епископ омиритски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. Identified on four points this folder’s own life already carries from doxologia and saint.gr: a deacon of the church of Milan, brought by the providence of God to Alexandria, where the patriarch Протерије ordained him bishop of the Homerite land in southern Arabia on a heavenly revelation; the land freed from the tyrant Дунаан the Jew by the king «Елезвој (в. 24. октобар)», whose own folder carries a venerated serbian row for the Julian 24 October and the Serbian name form «Елезвој», so the book’s cross-reference lands on the corpus’s own holder; the baptism of a multitude of Jews; and thirty years’ rule of that church with a peaceful end in 552, WHICH AGREES EXACTLY with the 552 this folder already holds, so `dates` is untouched. ONE TENSION WORTH THE AUTHOR’S EYE AND NOT RESOLVED HERE: the Prologue heads him «епископ омиритски», bishop of the Homerites, where this folder’s `display_name` and `office` both say Ethiopia; the life inside the folder already describes the Homerite mission, so the two are the same see under two names, and NOTHING was changed — an `office` string costs four locale translations a reader may not invent. NO `related` ROW WAS ADDED to Елезвој although the book’s cross-reference and this folder’s own prose would both carry one: that folder holds no row to him either, the gap predates this reading, and it is reported rather than written. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

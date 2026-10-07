@@ -11,6 +11,11 @@
       "form": "Ιουλιανή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Δεκεμβρίου, «Αγία Ιουλιανή», with the rank word left off."
+    },
+    {
+      "form": "Јулијана",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 21. децембар ст. ст., „Света мученица Јулијана и шест стотина тридесет мученика с њом.“ — «Света» is “saint” and not a rank, «мученица» is the rank `martyr` the folder already carries, and the rest of the heading is the company that believed at her wonder and not any part of her name, so the bare forename is what is left. The book gives her no by-name: Nicomedia is in the body as her birthplace and not in the heading, and a form was not assembled out of it. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON ANOTHER FOLDER: `juliana-of-ptolemais` already carries the identical Serbian string, so the fold key «јулијана» is declared in the same commit with both holders read. That other woman is the martyr of Ptolemais, dated about 273, kept by this same book on the Julian 4 March with Paul of Ptolemais and the three executioners who were converted at her suffering — thirty years and a different province and a different company."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.01.2026 (21. децембар ст. ст.) — „Света мученица Јулијана и шест стотина тридесет мученика с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the fullest of the three. Identified on the whole dossier and on the same menologion day the Romanian and Greek already keep her: the virgin of Nicomedia born of pagan parents, betrothed to the senator Елевсије whom she put off by asking that he first be made eparch of the city, who was made eparch by flattery and bribes, and to whom she then said „Шта нам вреди бити телесно уједињени а духом раздељени?“ — what good is it to us to be joined in body and parted in spirit. Her own father mocked and beat her and handed her to the eparch; she was scourged, thrown bloodied into prison, healed there by the Lord and shown whole before him, then cast into a heated furnace that did not burn her. THE HEADING’S «шест стотина тридесет мученика с њом» IS THE 630 WHO BELIEVED AT THAT WONDER, and the body divides them exactly as the corpus already does — «пет стотина мушких и стотину тридесет женских» — so `five-hundred-martyrs-of-nicomedia` and `hundred-and-thirty-women-martyrs` take rows of their own off this same heading and the `related` rows the three already carry stand. THE YEAR IS NEW TO THE CORPUS: «304. године», and this folder had NO `dates` object at all, so a death of 304 is written where there was nothing. WHAT ELSE THE ENTRY GIVES, and goes into the life: that she heard the gospel preaching from somebody and turned to Christ with her whole heart; that she went to the block joyful, prayed on her knees and laid her own head on it; and that Елевсије was soon overtaken by the judgement of God, his ship broken at sea, who did not drown but swam to an island where dogs tore him and ate him. The Serbian form is the heading’s bare forename; it lands on `juliana-of-ptolemais`, which already holds the identical string, so the two-member fold key «јулијана» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
@@ -90,5 +105,14 @@
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "Охридски пролог за 21. децембар ст. ст.: «душа оде у царство вечне Христове светлости, 304. године». This folder held no `dates` object of any kind before, neither doxologia nor saint.gr having given a year; one book, one year, nothing to reconcile and nothing inferred. The book gives no year of birth. THE SAME YEAR WAS DELIBERATELY NOT WRITTEN ONTO THE TWO COMPANIES of the same entry: the sentence attaches it to her beheading, and that they died in the same hour is the narrative’s order and not a year the page states for them."
+    }
+  }
 }

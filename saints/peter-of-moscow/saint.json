@@ -15,6 +15,11 @@
       "form": "Petru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 decembrie, «Sfântul Ierarh Petru, Mitropolitul Moscovei»."
+    },
+    {
+      "form": "Петар Чудотворац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 21. децембар ст. ст., „Свети Петар Чудотворац, митрополит руски.“ — «Свети» is “saint” and not a rank, and «митрополит руски» is the rank with the see, both of which BRIEF-SERBIAN §6 keeps out of a stored form; «Чудотворац», the wonderworker, is an epithet and not a rank in that table, so it stays. Measured before it was written: the whole string has no other holder. The bare «Петар» alone was NOT written — peter-of-bulgaria, peter-of-lampsacus and peter-the-apostle already hold it, and the corpus’s standing eleven-folder «Петар» fold is exactly the thing BRIEF-SERBIAN §6 names as a reason to keep what distinguishes a man."
     }
   ],
   "sex": "male",
@@ -85,8 +90,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.01.2026 (21. децембар ст. ст.) — „Свети Петар Чудотворац, митрополит руски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. Identified on the year and the whole dossier together: born in the region of Volhynia, a monk at twelve, a wonderful ascetic AND AN ICONOGRAPHER, founder and abbot of a monastery on the river Рата, made metropolitan of Kiev against his own will and consecrated at Constantinople by the patriarch Атанасије, eighteen years at the head of that church, who built his own tomb in the Dormition church in his lifetime and whose relics rest there still — and «Упокојио се 1326. године», WHICH AGREES EXACTLY with the 1326 this folder already holds, so `dates` is untouched. The twelfth year and the eighteen years of rule are spans of age and of service and NOT dates, and were not written as such. `types` was NOT touched although the book calls him «иконописац», an iconographer, and the corpus has that type: the 11-05 reader’s `stephen-of-decani` ruling is that a `types` row is a reading of the sources together and not of the newest one, and it is an author question in the report — SO IS `wonderworker`, which the heading’s «Чудотворац» would give him. A SECOND-DAY NOTE WAS NOT WRITTEN AND IS NOT OWED: this folder’s Russian and Greek rows keep him on 24 August, but its serbian row was `undocumented`, so nothing of this church’s was moved or replaced; the Romanian keeps him on the same 21 December. The Serbian form keeps «Чудотворац» because the bare «Петар» is already held by peter-of-bulgaria, peter-of-lampsacus and peter-the-apostle. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "related": [

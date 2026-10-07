@@ -43,8 +43,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.01.2026 (21. децембар ст. ст.) — „Света мученица Јулијана и шест стотина тридесет мученика с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The company is in the day’s first heading as «шест стотина тридесет мученика с њом», the six hundred and thirty martyrs with her, and the body divides that number EXACTLY as the corpus already holds it: «Беше таквих обраћених пет стотина мушких и стотину тридесет женских» — five hundred men and a hundred and thirty women. This folder is the five hundred, and `hundred-and-thirty-women-martyrs` the rest; the `related` rows both already carry to `juliana-of-nicomedia` stand and the quoted heading is the same for all three, because the heading is what the book prints. THE HEADING ENUMERATES NOBODY and the body names no member, so this stays ONE folder and not five hundred — BRIEF.md §4’s ruling for a company heading that names nobody. WHAT THE ENTRY GIVES THEM: that they were converted on the spot by the sight of the heated furnace that did not scorch her; that the eparch condemned the whole number and had them put to the sword; and that their souls passed over into Paradise. NO `dates`: the book’s «304. године» is attached to HER beheading in a later sentence, and that they died in the same hour is the narrative’s order and not a year the page states for them, so the folder keeps the empty `dates` it had. NO SERBIAN NAME FORM: the heading gives the company a count and not a name, and a form assembled out of «пет стотина мушких» would be a phrase of my making — the Serbian is carried in the quoted heading instead. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

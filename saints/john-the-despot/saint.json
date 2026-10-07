@@ -1,0 +1,46 @@
+{
+  "slug": "john-the-despot",
+  "display_name": "John the Despot",
+  "types": [
+    "prince"
+  ],
+  "names": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.12.2025 (10. децембар ст. ст.) — „Преподобна Ангелина и свети Јован деспот.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The second half of the day’s second heading, which names two people and whose body tells only the first one’s life; the other folder is `angelina-of-serbia` and both quote this same heading, because neither name has a heading of its own. EVERYTHING THE BOOK SAYS OF HIM IS SAID INSIDE HIS MOTHER’S STORY: that he and Максим were her two sons by Стефан, despot of the Serbs; that she brought them up in a true Christian spirit; that they are «посвећених синова», her consecrated sons; and that her relics rest with her husband’s and with theirs in the monastery of Крушедол, «уколико нису од Турака уништене». THE HEADING’S ONE WORD FOR HIM IS «деспот», which BRIEF-SERBIAN §5 reads as `prince`, and that is the whole of `types`. NO `dates`: the book gives him no year of birth, no year of death and no century of his own, and his mother’s «почетком XVI века» is hers and not his. NO `locations`. NO `sr` NAME FORM, AND THAT IS A DELIBERATE REFUSAL, NOT AN OVERSIGHT: stripping the rank «деспот» as BRIEF-SERBIAN §6 requires leaves the bare «Јован», which was measured with the fold probe before anything was written and which ELEVEN OTHER FOLDERS ALREADY HOLD (john-companion-of-simeon, john-disciple-of-gregory-the-decapolite, john-of-edessa, john-of-gothia, john-of-konitsa, john-of-novgorod, john-of-sfakia-new-martyr, john-of-vilnius, john-son-of-anna-of-larissa, john-son-of-xenophon, john-the-confessor-of-kathara), so writing it would make a twelve-member fold out of a name that distinguishes nobody; the Serbian is recorded in the quoted heading above instead. THE BOOK’S CROSS-REFERENCE «в. 30. јул» closes the entry; the Julian 30 July is a day this corpus holds nobody on, that page was not read, and nothing here rests on it. ONE `related` row, both halves, to his mother `angelina-of-serbia`. NOT A FOLDER AND NOT LINKED: Максим his brother, whom the heading does not name; Стефан his father; Ђурађ and Ђорђе Скендербег his grandfathers."
+    }
+  ],
+  "related": [
+    "angelina-of-serbia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
