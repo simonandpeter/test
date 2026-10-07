@@ -6,6 +6,11 @@
       "form": "Ευάρεστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Δεκεμβρίου, «Όσιος Ευάρεστος», with the rank word left off. The by-name in the English form is the page's own monastery and not a form the page prints."
+    },
+    {
+      "form": "Еварест",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 26. децембар ст. ст., „Преподобни Еварест.“ — «Преподобни» is the rank `venerable` the folder carries, so the bare forename is the whole of what is left; the book gives him no by-name, and Stoudios, Galatia and Skopelos are all in the other book and not in this heading. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON A FOLDER THIS SAME BRANCH WROTE: `evaristus-of-the-ten-of-crete` took the identical Serbian string three days earlier, out of this same book’s enumeration of the Ten of Crete on 23. децембар ст. ст. So the two-member fold key «еварест» is declared in the same commit as this form, with both holders read. That other man is a martyr of Crete beheaded under Decius, whom the Romanian life gives to Iracleea on the island, and the two accounts share nothing but the string."
     }
   ],
   "sex": "male",
@@ -42,11 +47,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.01.2026 (26. децембар ст. ст.) — „Преподобни Еварест.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and FOUR SENTENCES is the whole of it. Identified on the same menologion day the Greek already keeps him and on the one thing both books put at the centre of him, a man of affairs who became a monk and then a famously hard ascetic: «Читајући дела светог Јефрема Сирина од дипломате постао монах» — reading the works of Saint Ephrem the Syrian he went from a diplomat to a monk. The folder’s own life, written off saint.gr, has him taken along by his kinsman the patrician Bryennios on an embassy to the Bulgarians and tonsured on that journey at Skopelos, then sent on to the Monastery of Stoudios where he shone out as a strict ascetic; this book reaches the same man from the other end, naming the reading that turned him and the austerity that followed. `dates` WRITTEN WHERE THERE WAS NONE AT ALL, and it is the first year this folder has ever had: death «about 825», off «преселио се ка Господу око 825. године». THE REASON THE FOLDER HAD NOTHING IS WORTH SAYING, because it is why this year is worth having: saint.gr gives no year anywhere and its own two datings cannot both be right — it brings him to Constantinople under a Leo whose years it gives as 813 to 820 and then makes Bryennios the ambassador of the empress Theodora, of the next generation — and the folder’s life says so in words. This book’s «око 825» contradicts neither and is the only year read. It is written as the corpus writes an approximate year, `earliest` and `latest` both 825 with the display «about 825», which is the form `lib/date-display.js` parses and which some seventy older folders already use. AND ONE FIGURE WAS REFUSED: «Проживео седамдесет пет година» — he lived seventy-five years — against saint.gr’s «died in peace at the age of seventy-nine». Two books, two flat ages; a flat figure does not strike out another book’s flat figure, and no `birth` was derived by subtracting either of them from 825, which would be arithmetic of my making and not a year any page states. Both ages are in the life and neither is in a field. `types` untouched: «Преподобни» is the `venerable` the folder carries, and `ascetic` and `monk` are there already. WHAT THE ENTRY ADDS: that he was very harsh with himself, wore chains on his body and ate dry bread once a week. No `related`: Ephrem the Syrian is named as the author he read and not as a companion, which is a book and not a relation, and no row or link was made to any folder of that name. No `locations`. The Serbian form is the heading’s bare forename «Еварест», which THIS SAME BOOK gives three days earlier to one of the Ten of Crete, so the two-member fold key «еварест» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 825,
+      "latest": 825,
+      "display": "about 825",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading. The Охридски пролог for 26. децембар ст. ст. closes the entry «Проживео седамдесет пет година и преселио се ка Господу око 825. године». The year is written and the age is not: saint.gr, which made the folder, gives no year at all and sets his death at the age of seventy-nine against this book’s seventy-five, so no `birth` was derived by subtracting either age from 825. Read 8 October 2026."
+    }
   }
 }

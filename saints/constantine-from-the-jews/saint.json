@@ -6,6 +6,11 @@
       "form": "Κωνσταντίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Δεκεμβρίου, «Όσιος Κωνσταντίνος «ὁ ἐξ Ἰουδαίων»», with the rank word left off; the epithet «ὁ ἐξ Ἰουδαίων» is the page's own. The page says the name was given him at his baptism — «του έδωσαν το άγιο βάπτισμα και τον ονόμασαν Κωνσταντίνο» — and does not say what he was called before it."
+    },
+    {
+      "form": "Константин Синадски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fifth heading for 26. децембар ст. ст., „Преподобни Константин Синадски.“ — «Преподобни» is the rank `venerable` the folder carries, and «Синадски», of Synada, is a by-name and not a rank, so it is kept. MEASURED BEFORE IT WAS WRITTEN AND THAT IS WHY IT WAS KEPT: the bare «Константин» lands on five folders — `constantine-brancoveanu`, `constantine-of-georgia`, `constantine-presbyter-martyr-1918`, `constantine-the-great` and `constantine-the-hagarene` — where the full string has no other holder at all. Synada of Phrygia is the place the folder’s own life gives him in its first line, so the by-name is the page’s and the folder’s agreement and not an assembly of mine."
     }
   ],
   "sex": "male",
@@ -41,11 +46,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.01.2026 (26. децембар ст. ст.) — „Преподобни Константин Синадски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and five short sentences is the whole of it. Identified on the same menologion day the Greek already keeps him and on the two things that tell this man apart anywhere: he was a Jew who turned to Christianity, and he was of Synada. The heading’s «Синадски» is the Synada of Phrygia the folder’s own life names in its first line, and the folder’s display name, «Constantine from the Jews», is saint.gr’s «ὁ ἐξ Ἰουδαίων» — the one out of the Jews — which is the same identification from the other side. `dates` WRITTEN WHERE THERE WAS NONE AT ALL, and it is the first date this folder has ever had: death the seventh century, 601 to 700, off «Скончао у Цариграду у VII веку». The century is written and nothing narrower, because the book gives no year. THE PLACE OF DEATH DIFFERS AND WAS NOT RESOLVED: this book has him end «у Цариграду», at Constantinople, where saint.gr has him die in peace at Atroa, after preaching through Olympus, Myra of Lycia, Cyprus and Attaleia. Both readings are in the life, neither is claimed, and the folder holds no `locations` and gets none. WHAT THE ENTRY ADDS, and all of it goes into the life: that at his baptism he set a cross upon his own head, and a wonderworking imprint of the cross stayed on his head until his death; that he was famous for his fasting and for many wonders; and that SEVEN YEARS BEFOREHAND HE FORETOLD THE DAY OF HIS OWN DEATH. `types` untouched, AND ONE GRADE THE BODY GIVES WAS NOT ADDED: the folder carries `venerable` and `monk`, which is what «Преподобни» reads to; the body’s «Славан због испосништва» would read to `ascetic`, which the corpus has and this folder does not carry, but that is a reading of the body and not of the heading, and a `types` row is a reading of the sources together and not of the newest one — the 11-05 reader’s `stephen-of-decani` precedent. Reported, not written. No `related`: the entry names no saint. The Serbian form is the heading’s name with the rank stripped and the by-name kept, and it has no other holder; the bare «Константин» was measured first and lands on five folders. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading. The Охридски пролог for 26. децембар ст. ст.: «Скончао у Цариграду у VII веку» — he ended at Constantinople in the seventh century. The interval is that century and nothing narrower, the book giving no year. The place in that same sentence is not recorded anywhere as a fact: saint.gr, which made the folder, has him die in peace at Atroa, and the two are left standing side by side in the life. Read 8 October 2026."
+    }
   }
 }
