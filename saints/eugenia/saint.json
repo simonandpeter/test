@@ -11,6 +11,11 @@
       "form": "Ευγενία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Αγία Ευγενία η Οσιοπαρθενομάρτυς», with the rank word left off."
+    },
+    {
+      "form": "Евгенија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 24. децембар ст. ст., „Преподобна мученица Евгенија и други с њом.“ — «Преподобна» is the rank `venerable` and «мученица» the rank `martyr` the folder carries, and «и други с њом» is the company and no part of her name, so the bare forename is what is left. The book gives her no by-name. Measured before it was written and it has no other holder in the corpus."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.01.2026 (24. децембар ст. ст.) — „Преподобна мученица Евгенија и други с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry and the fuller of the two. Identified on the whole dossier and on the same menologion day the Romanian and the Greek already keep her: the daughter of Филип, eparch of all Egypt, born at Rome, who visited the Christians driven out of Alexandria and received their faith with her whole heart, fled her parents with her two faithful eunuchs, was baptised by the bishop Елије, entered a MEN’S monastery in man’s clothing and took the monastic habit there, and was accused by the rich woman Мелантија whom she had healed and who then tried to draw her into bodily sin not suspecting she was a woman — which the book itself compares to Potiphar’s wife and the chaste Joseph. THE YEAR AND THE DAY BOTH NEED SAYING. The entry closes «Мачем је посекоше 25. децембра 262. године у Риму», and the Lord had appeared to her in prison and told her she would suffer on the very day of His Nativity. SO THE BOOK GIVES HER DEATH-DAY AS 25 DECEMBER AND KEEPS HER ON THE 24TH, and the row goes on 24 December, the day of the page read, because that is where this book prints her and a death-date in a body is not a feast. The 25th is recorded here and in the life and is written in no feast field. THE YEAR WAS NOT WRITTEN: 262 is a flat year where this folder holds «second half of the 3rd century», 251 to 300, read off saint.gr as `traditional`, and the two do not contradict — 262 lies inside that half-century. Narrowing an interval to the newest book’s flat year is a reading of the sources together and not of the newest one, so `dates` is UNTOUCHED, the 262 is recorded, and it is an author question. `types` untouched: «Преподобна» is `venerable` and the folder carries `martyr` and `virgin` — a grade not added, for the same reason, and reported. WHAT THE ENTRY ADDS: that she so cleansed her heart by a self-chosen struggle that she received from God the grace of healing the sick; that the eparch had all the monks chained and thrown into prison with her; that she revealed herself to her own father at the trial as his daughter; that she brought pagans and girls in particular to the true faith at Rome and foretold Василија’s beheading; that the temple of Diana fell down and was destroyed by her nearness; that they threw her first into water and then into fire and God saved her from both; and that after her death she appeared to her mother in great glory and comforted her. THE HEADING’S «и други с њом» IS FILLED IN BY THE BODY and makes three rows in this same commit, on `basilla-martyr-24-december`, `protas-companion-of-eugenia` and `hyacinth-companion-of-eugenia`; `philip-father-of-eugenia` is named in the body, dies for the faith in Alexandria before she goes to Rome, and was DELIBERATELY LEFT WITHOUT A ROW because «с њом» does not reach him — this day’s one open question. Мелантија, Елије and Теренције hold no folder and take nothing. The four `related` rows the folder already carries stand and nothing was added. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
