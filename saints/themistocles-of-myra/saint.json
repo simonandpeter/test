@@ -11,6 +11,11 @@
       "form": "Θεμιστοκλής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Δεκεμβρίου, «Άγιος Θεμιστοκλής», with the rank word left off."
+    },
+    {
+      "form": "Темистокле",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 21. децембар ст. ст., „Свети мученик Темистокле.“ — «Свети» is “saint” and not a rank and «мученик» is the rank `martyr` the folder already carries, so BRIEF-SERBIAN §6 strips both and the bare forename is the whole of what the heading gives him; Myra is in the body and not in the heading. Measured before it was written: ten characters, above the width the gate indexes, and no other folder in the corpus holds this string."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.01.2026 (21. децембар ст. ст.) — „Свети мученик Темистокле.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, FOUR SENTENCES, and the identification is exact on three points at once: the shepherd boy minding sheep in a field near Myra in Lycia, which is this folder’s own city; the year «251. године»; and the reign, «у време Декија», Decius. The 251 AGREES EXACTLY with the 251 this folder already holds from doxologia and saint.gr, so `dates` is untouched. WHAT THE ENTRY GIVES: that the persecutors of the Christians were hunting a saint whom the book names Диоскорид and came on Themistocles in the field, asking whether he had seen the hunted man and where he was hiding; that he knew and would not inform on him, and declared himself a Christian instead; and that he was tortured and beheaded. NO `related` ROW TO THE HUNTED MAN, AND THAT IS AN OPEN IDENTITY QUESTION FOR THE AUTHOR, NOT AN OVERSIGHT: the corpus holds a `dioscorides`, but that folder is a martyr dated 244, kept by the Greek alone on 28 May, whose own `related` rows are Crescens and Paul of the same 28 May — a different year, a different day and a different company, and whether the man Myra’s persecutors were hunting in 251 is that man is not a reader’s decision. No row was written in either direction and neither folder was touched. The Serbian form is the heading’s bare forename, measured first and held by no other folder. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

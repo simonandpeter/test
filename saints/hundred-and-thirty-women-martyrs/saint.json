@@ -43,8 +43,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.01.2026 (21. децембар ст. ст.) — „Света мученица Јулијана и шест стотина тридесет мученика с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The second half of the day’s first heading’s company. The heading gives «шест стотина тридесет мученика с њом» and the body divides it EXACTLY as the corpus already holds it: «пет стотина мушких и стотину тридесет женских» — this folder is the hundred and thirty women and `five-hundred-martyrs-of-nicomedia` the five hundred men, and the `related` rows both already carry to `juliana-of-nicomedia` stand. The quoted heading is the same for all three because the heading is what the book prints. THE HEADING ENUMERATES NOBODY and the body names no woman, so this stays ONE folder. WHAT THE ENTRY GIVES THEM: conversion at the sight of the furnace that did not scorch her, condemnation of the whole number by the eparch, the sword, and Paradise. NO `dates`, for the same reason the five hundred take none: the book’s «304. године» sits in the sentence about HER beheading and is not stated for them. NO SERBIAN NAME FORM: the heading gives a count and not a name. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
