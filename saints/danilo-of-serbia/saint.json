@@ -1,0 +1,65 @@
+{
+  "slug": "danilo-of-serbia",
+  "display_name": "Danilo of Serbia",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "ascetic"
+  ],
+  "office": "Archbishop of Serbia",
+  "names": [
+    {
+      "form": "Данило",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 20. децембар ст. ст., „Свети Данило архиепископ српски.“ — «Свети» is “saint” and not a rank, and «архиепископ српски» is the rank with the see, both of which BRIEF-SERBIAN §6 keeps out of a stored form, so the bare forename is what the heading leaves. The book gives him no by-name and no number; «Данило II» is not printed and was not assembled. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON ANOTHER FOLDER: `daniel-the-egyptian` already carries the identical Serbian string, so this form makes a two-member fold, and the key «данило» is declared in `scripts/corpus-gate.mjs` in the same commit with both holders read. The other man is the martyr of Egypt, a companion of Pamphilus at Caesarea in Palestine, dead between 284 and 305 and kept by this same book on the Julian 16 February — a martyr of the Diocletian persecution against a Serbian archbishop of 1338, and nothing read links them."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1338,
+      "latest": 1338,
+      "display": "1338",
+      "basis": "attested",
+      "note": "Охридски пролог за 20. децембар ст. ст.: «он се упокојио мирно у време цара Душана, ноћу између 19. и 20. децембра 1338. године» — he reposed peacefully in the time of the Emperor Dušan, in the night between the 19th and the 20th of December 1338, which is also why the Prologue keeps him on the 20th. The book gives no year of birth and none is inferred; this is the only source read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.01.2026 (20. децембар ст. ст.) — „Свети Данило архиепископ српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, one dense paragraph, and the whole of the dossier. WHY A NEW FOLDER: the corpus holds seventeen folders whose display name or `office` names Serbia, four of them archbishops of that see — `arsenius-of-serbia` dead 1266, `eustathius-i-archbishop-of-serbia` 1285 or 1286, `eustathius-ii-archbishop-of-serbia` 1309, `james-of-serbia` of the thirteenth century, `nicodemus-of-serbia` dead 1325 — and a patriarch, `joannicius-ii-of-serbia`, dead 1349. NOT ONE OF THEM IS DATED 1338, none was abbot of Hilandar, none wrote a genealogy of the Serbian kings, and the two nearest in time, Nicodemus and Joannicius II, stand on either side of him. WHAT THE ENTRY GIVES: the son of rich and God-loving parents, well brought up in youth; taken to court by King Милутин and fleeing it out of great love for God to be tonsured in the monastery of Кончул beside the Ибар; later abbot of Хиландар, where he suffered much from the plundering Latin crusaders; bishop of Бања, then of Хум, and at the last archbishop of the Serbs; a strict ascetic from beginning to end, with a particular gift of tears; the reconciler of King Драгутин with Милутин and then of Милутин with Стефан Дечански; a strong opponent of the Latins and of the Bogomils; the builder, under whose oversight the monasteries of Бања and Дечани were raised and many churches renewed; the author of the Родослов of the Serbian kings and saints; and a man untiring in the service of God to the end, who died in the night between 19 and 20 December 1338 in the days of the Emperor Душан. `types` reads «архиепископ» as `archbishop` and the entry’s own «Велики јерарх, велики подвижник» as `hierarch` and `ascetic`; `ascetic` is a monastic type, so the composed honorific comes out Venerable rather than St., WHICH IS AN AUTHOR QUESTION and is in the report — `arsenius-of-serbia` carries `hierarch` and `archbishop` without it, `nicodemus-of-serbia` carries `venerable`, `archbishop`, `hierarch` and `abbot`, and the corpus does both. `abbot` was NOT written although he was abbot of Hilandar: it is an office he held on the way and the entry’s own summary does not rank him by it. `office` is the `Archbishop of Serbia` the locale packs already carry from `arsenius-of-serbia`. NO `locations`: Končul, Hilandar, Banja, Hum and Dečani are five places in one paragraph and no one of them bounds his life. TWO `related` rows, both halves each, to `stephen-milutin` and `stephen-of-decani`, the two kings the entry says he reconciled and at whose court he began — THE RELATION IS THE ENTRY’S OWN AND NOT A SHARED DAY. NOT FOLDERS AND NOT LINKED: Драгутин, whom only `stephen-milutin`’s own life names and who holds no folder; the Emperor Душан; and the monasteries, which are places and not people."
+    }
+  ],
+  "related": [
+    "stephen-milutin",
+    "stephen-of-decani"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

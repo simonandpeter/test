@@ -17,6 +17,11 @@
       "form": "Игнатий Богоносец",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 29 января ст. ст., «Священномученик Игнатий Богоносец», with the rank word left off. That day's line is the translation of his relics and not a commemoration of him, so no attestation row is taken from it."
+    },
+    {
+      "form": "Игњатије Богоносац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 20. децембар ст. ст., „Свештеномученик Игњатије Богоносац.“ — «Свештеномученик» is the rank `hieromartyr` the folder already carries and comes off the stored form, while «Богоносац», the God-bearer, is an epithet and not a rank, so it stays. Measured before it was written: the whole string has no other holder, and the bare «Игњатије» alone was NOT written because ignatius-of-rostov and ignatius-of-stara-zagora already hold it."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.01.2026 (20. децембар ст. ст.) — „Свештеномученик Игњатије Богоносац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the identification needs no argument: the God-bearer, bishop of Antioch, sent in irons to Rome under Trajan and torn by the lions, on the same menologion day the Romanian and Greek already keep him. WHAT THE ENTRY ADDS TO WHAT THE FOLDER HELD: the two traditions behind the by-name Богоносац, that he carried the name of the living God always in his heart and on his tongue and that he was the child the Lord set among the disciples at Matthew 18:4; THAT HE WAS THE FIRST TO BRING THE ANTIPHONAL MANNER OF SINGING INTO THE CHURCH, two choirs answering one another, which the book says was revealed to him among the angels in heaven; that Trajan passed through Antioch on his way to the Persian war and offered him the rank of senator for a sacrifice to the idols; that ten pitiless soldiers escorted him from Asia through Thrace, Macedonia and Epirus; that he prayed only that the beasts might be his body’s grave and that nobody should hinder him in that death; and that the lions left only a few of the larger bones and the heart. ONE DISAGREEMENT, REFUSED: the book gives the year as «106. године» where this folder holds a flat 107 from doxologia and saint.gr. A flat year does not strike out another book’s flat year, and a reader may not average or widen two attested figures — `dates` IS UNTOUCHED and the book’s 106 is recorded here and in the life. The Serbian form keeps the epithet «Богоносац» because the bare «Игњатије» is already held by ignatius-of-rostov and ignatius-of-stara-zagora. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
