@@ -17,6 +17,11 @@
       "form": "Кирил",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 18 March on pravoslavno.rs, „Свети Кирил, архиепископ јерусалимски.“, with Свети left off, which is not a rank, and with the see архиепископ јерусалимски left off as well. The heading gives no epithet, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Кирилл Иерусалимский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 марта ст. ст., «Святитель Кирилл Иерусалимский, патриарх», with the rank word and the grade left off. The day's own line declines the name, «Свт. Кирилла, архиеп. Иерусалимского»."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 марта ст. ст. — «Свт. Кирилла, архиеп. Иерусалимского (386).»",
+        "url": "https://days.pravoslavie.ru/Days/20260318.html",
+        "year": 2026
+      },
+      "note": "The line closes with 386 where saint.gr gives 387, and the life page repeats it, «Скончался святитель Кирилл в 386 году», so the death interval now holds both years and chooses neither; the birth likewise, «родился в Иерусалиме в 315 году» here against saint.gr's «πιθανώς» 313. The day's line ranks him архиеп. while the calendar's own name page heads him «Святитель Кирилл Иерусалимский, патриарх» and the life page calls him Patriarch of Jerusalem; the folder's office stays Archbishop, which is what its other three calendars give, and the grade is recorded here instead. His life page lists this day and no other."
     },
     {
       "church": "romanian",
@@ -125,6 +140,22 @@
         "text": "Rightly named to the Church of Christ was thy light-bearing word, a heavenly authority, O father; for teaching the knowledge of the truth thou dost trace out the shining of holy ways, and by thine intercession thou dost award release from the passions, O Cyril of godly mind.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Языком твоим, мудре,/ Божественными вдохновеньми просветил еси твоя люди/ едину чести Троицу,/ Естеством нераздельну, разделяему же Лицы./ Темже, радующеся, всесвятую твою память празднуем,/ иже к Богу молитвенника тя предлагающий.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 марта ст. ст., «Кондак святителя Кирилла, архиепископа Иерусалимского», глас 4 — the only hymn the day page prints",
+        "url": "https://days.pravoslavie.ru/Days/20260318.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By thy tongue, O wise one, thou didst enlighten thy people with divine inspirations to honour one Trinity, undivided in nature yet distinguished in Persons. Therefore, rejoicing, we keep thy all-holy memory, and set thee forth as our intercessor before God.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -133,17 +164,17 @@
   "dates": {
     "birth": {
       "earliest": 313,
-      "latest": 313,
-      "display": "probably 313",
+      "latest": 315,
+      "display": "313–315",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Κύριλλος καταγόταν από την Παλαιστίνη και γεννήθηκε πιθανώς το έτος 313 μ.Χ. στα Ιεροσόλυμα» — the page's own «πιθανώς», probably, is why the display carries it. Its heading has «(313 - 387)». doxologia.ro gave no year at all."
+      "note": "Two readings and the interval holds both, choosing neither. days.pravoslavie.ru's life for 18 марта ст. ст.: «Святой Кирилл, архиепископ Иерусалимский, родился в Иерусалиме в 315 году». saint.gr: «Ο Άγιος Κύριλλος καταγόταν από την Παλαιστίνη και γεννήθηκε πιθανώς το έτος 313 μ.Χ. στα Ιεροσόλυμα» — its own «πιθανώς», probably, and its heading «(313 - 387)». doxologia.ro gave no year at all."
     },
     "death": {
-      "earliest": 387,
+      "earliest": 386,
       "latest": 387,
-      "display": "387",
+      "display": "386–387",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Κύριλλος κοιμήθηκε με ειρήνη το έτος 387 μ.Χ.», and the page heads him «(313 - 387)». doxologia.ro gave no year at all."
+      "note": "Two readings and the interval holds both, choosing neither. days.pravoslavie.ru closes its line for 18 марта ст. ст. «(386)» and its life «Скончался святитель Кирилл в 386 году»; saint.gr has «Ο Άγιος Κύριλλος κοιμήθηκε με ειρήνη το έτος 387 μ.Χ.» and heads him «(313 - 387)». doxologia.ro gave no year at all."
     }
   },
   "images": [
