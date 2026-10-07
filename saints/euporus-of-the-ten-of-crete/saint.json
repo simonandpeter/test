@@ -11,6 +11,11 @@
       "form": "Εύπορος",
       "lang": "el",
       "note": "Read out of saint.gr's head line for this man on the page of «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στην Κρήτη», 23 Δεκεμβρίου, with the rank word and the clause about Crete left off."
+    },
+    {
+      "form": "Евпор",
+      "lang": "sr",
+      "note": "The Serbian form is this man’s own name out of the book’s list, «Евпор», measured before it was written and with no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.01.2026 (23. децембар ст. ст.) — „Светих десет мученика на Криту.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, AND IT ENUMERATES ITS MEMBERS: „Светих десет мученика на Криту.“ over a body that names all ten, «Њихова су имена: Теодул, Сатурнин, Евпор, Геласије, Евникијан, Зотик, Помпије, Авгатопус, Василид и Еварест.» — so the one heading makes ten rows, on the ten folders the corpus already holds and not a folder more, which is BRIEF.md §4’s ruling on a company that names its members. Identified on the whole dossier and on the same menologion day the Romanian and the Greek already keep the company: the persecution of Decius, the island of Crete, the same ten names, and the prayer at the place of execution, which this book prints in Serbian word for word as the Romanian life prints it in Romanian. THE YEAR IS NEW AND WAS NOT WRITTEN: «у време гоњења Декијева 250. године» is a flat year where this folder holds «3rd century», 201 to 300, read off saint.gr as `traditional` — and the two do not contradict, 250 lying inside that century and saint.gr naming the same reign. Narrowing a century to the newest book’s flat year is a reading of the sources together and not of the newest one, so `dates` is UNTOUCHED, the 250 is recorded here and in the life, and it is an author question. `types` untouched: «мученика» is the `martyr` the folder carries, and the heading gives no other rank. WHAT THE ENTRY ADDS, and goes into the life: that all ten were distinguished and honourable citizens, «најбољи међу најбољим», the best among the best; and that when they were led out to the place of execution they were exceedingly joyful and argued over which of them should be beheaded first, each wishing to be the first to go to the beloved Christ. NO `locations`: this entry names no city of any one of the ten, where the other two books give each of them a home. The ten `related` rows this folder already carries stand untouched and nothing was added to them — the entry names no saint outside the company. The Serbian form is this man’s own name out of the book’s list, «Евпор», measured before it was written and with no other holder in the corpus. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
