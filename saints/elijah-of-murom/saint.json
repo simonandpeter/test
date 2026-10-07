@@ -6,6 +6,11 @@
       "form": "Ηλιού",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Όσιος Ηλιού Μουρόμας ο Θαυματουργός «ὁ ἐν τῷ Σπηλαίῳ»», with the rank word, the place and the by-names left off. The page prints the name as «Ηλιού» and glosses it under the heading «ΗΛΙΑΣ», «(εβραϊκή λέξη από το ελίγια) = αυτός που έχει θεία δύναμη, ο θείος»; the form on the calendar line is the one stored."
+    },
+    {
+      "form": "Илија Муромец",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 19. децембар ст. ст., „Преподобни Илија Муромец.“ — «Преподобни» is the rank `venerable` the folder already carries and comes off the form, and what is left is the forename with the by-name that distinguishes him. Measured before it was written: no other folder holds this key. The bare «Илија» alone was NOT written: four folders already hold it — elias-martyr-with-patermuthius, elias-of-jerusalem, elias-the-egyptian and elijah-the-tishbite — and «Муромец» is what tells this man from them."
     }
   ],
   "sex": "male",
@@ -41,11 +46,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.01.2026 (19. децембар ст. ст.) — „Преподобни Илија Муромец.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, FIVE SHORT SENTENCES, and it is the first dossier this folder has had: saint.gr, which made the folder, says in words that it has no details of the life — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου». Identified on the day and on the by-name together: the same fixed 19 December, the same Murom in the name, and the Greek calls him «the one in the Cave» where the Prologue calls him «Монах кијевопечерски», a monk of the Kiev Caves. THE YEAR IS NEW TO THE CORPUS: «Скончао 1188. године», and this folder had NO `dates` object at all, so a death of 1188 is written where there was nothing — not a narrowing of anything and not an inference. `types` was NOT touched: the book’s «Монах» would add `monk` beside the `venerable` and `wonderworker` the folder holds, and the 11-05 reader’s `stephen-of-decani` ruling is that a `types` row is a reading of the sources together and not of the newest one — it is an author question and it is in the report. WHAT ELSE THE ENTRY GIVES: that his incorrupt relics are wonderworking; that on his right hand the first three fingers still stand joined for prayer, from which it is seen that he died at prayer; and that this is a reproof of those who do not cross themselves with three fingers. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1188,
+      "latest": 1188,
+      "display": "1188",
+      "basis": "attested",
+      "note": "Охридски пролог за 19. децембар ст. ст.: «Скончао 1188. године». This folder held no `dates` object of any kind before: saint.gr, its only other source, states outright that it has no details of his life and carries no year even in its heading. One book, one year, nothing to reconcile and nothing inferred; the book gives no year of birth."
+    }
   }
 }

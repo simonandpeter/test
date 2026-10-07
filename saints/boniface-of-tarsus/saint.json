@@ -11,6 +11,11 @@
       "form": "Βονιφάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Βονιφάτιος και Αγλαΐα η Ρωμαία», with the rank word left off. The page glosses the name itself, «(από το λατινικό bonus + fatus) = ο ευλογημένος»."
+    },
+    {
+      "form": "Бонифатије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 19. децембар ст. ст., „Свети мученик Бонифатије.“ — «Свети» is “saint” and not a rank and «мученик» is the rank `martyr` the folder already carries, so BRIEF-SERBIAN §6 strips both and the bare forename is the whole of what the heading gives him. Measured before it was written: ten characters, above the width the gate indexes, and no other folder holds this string — the other Bonifaces the corpus keeps carry no Serbian form at all."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.01.2026 (19. децембар ст. ст.) — „Свети мученик Бонифатије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the longest of the four. Identified on the whole dossier and not on the name: the slave of the rich and dissolute Аглаида at Rome, sent to Asia to buy martyrs’ relics for her house, who said at parting that she might one day receive his own body instead, who came to Тарс, saw the Christians under torture, repented, cried „И ја сам хришћанин!“, was scourged, had molten lead poured into his mouth without harm and was beheaded — and whose body his slaves carried back to Rome, where an angel told Аглаида to receive him. «Пострада свети Бонифатије 290. године» AGREES EXACTLY with the 290 this folder already holds, and the third-century floruit beside it, so `dates` is untouched. Аглаида’s own repentance, her almsgiving and her fifteen years of bitter penitence are in this entry too, BUT SHE TAKES NO SERBIAN ROW: the heading names only him, and a name inside a body is not a heading. The `related` row the two already carry in both directions stands. The Serbian form is the heading’s bare forename, «Свети» being “saint” and «мученик» the rank; measured first, no other folder in the corpus holds that string. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

@@ -1,0 +1,59 @@
+{
+  "slug": "boniface-the-merciful",
+  "display_name": "Boniface the Merciful",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Бонифатије Милостиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 19. децембар ст. ст., „Свети Бонифатије Милостиви, епископ ферентијски.“ — «Свети» is “saint” and not a rank, and «епископ ферентијски» is the rank with the see, both of which BRIEF-SERBIAN §6 keeps out of a stored form; «Милостиви», the Merciful, is an epithet and not a rank, so it stays. Measured before it was written: no other folder holds this key. THE BARE «Бонифатије» IS WRITTEN IN THIS SAME COMMIT ON `boniface-of-tarsus`, off the same day’s first heading, and these two strings are two keys that do not fold together — which is why the epithet is kept here rather than stripped to the forename."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 19. децембар ст. ст.: «Скончао мирно у Италији у VI веку» — he ended peacefully in Italy in the sixth century. The book gives no year of birth and no year of death, and none is inferred; this is the only source read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026). The corpus keeps thirteen folders on the menologion’s 19/12 in other calendars and not one of them is this man; the nearest claim on the name, `boniface-of-tarsus`, is the martyr of 290 whom this same day’s FIRST entry carries and who has a row of his own in this commit."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.01.2026 (19. децембар ст. ст.) — „Свети Бонифатије Милостиви, епископ ферентијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, THREE SENTENCES, and the whole of the dossier: that from childhood he was uncommonly merciful, so much so that his mother reproached him for it; that by prayer he received from the Lord a hundredfold; and that he ended peacefully in Italy in the sixth century. WHY A NEW FOLDER AND NOT A ROW ON ANY BONIFACE THE CORPUS HOLDS: the three it keeps are `boniface-of-tarsus`, the martyr beheaded at Tarsus in 290 whom THIS SAME DAY’S FIRST ENTRY carries separately, two headings apart, which is the book itself keeping them as two men; `boniface-apostle-of-germany`, the eighth-century archbishop of Mainz; and `boniface-of-ross`. None is a sixth-century Italian bishop, none is called the Merciful, and none has a mother who reproached him for almsgiving. `types` is `bishop` alone, off «епископ»; «Милостиви» is an epithet and not a rank. `office` is reduced to the bare `Bishop`, which the locale packs carry, and the see Ферентино is in the display-free part of the record and in the life, because a new `office` string costs four translations a reader may not invent. NO `locations`: Italy is a country the entry does not bound and the see is the only place it names. NO `dates` beyond the century it states. NO `related`: the entry names nobody but his mother, who has no folder. The Prologue prints no hymn."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
