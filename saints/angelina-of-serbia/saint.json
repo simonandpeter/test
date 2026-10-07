@@ -1,0 +1,62 @@
+{
+  "slug": "angelina-of-serbia",
+  "display_name": "Angelina of Serbia",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Ангелина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 10. децембар ст. ст., „Преподобна Ангелина и свети Јован деспот.“ — «Преподобна» is the rank, which BRIEF-SERBIAN §5 reads as `venerable` and which comes off the stored form, so the bare forename is the whole of what the heading gives her. The body prints no surname and no see; it calls her «Мајка Ангелина», Mother Angelina, as the name the people use, and «Мајка» is not a name form either. Measured before it was written: the key is eight characters, above the width the gate indexes, and no other folder in the corpus holds this string, so it joins no fold."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1501,
+      "latest": 1550,
+      "display": "early 16th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 10. децембар ст. ст.: «Упокојила се почетком XVI века и прешла у царство бесмртно» — she reposed at the beginning of the sixteenth century. The interval is the first half of that century, which is the corpus’s own reading of «early» in a century display; the book gives no year, and none is inferred. The display is not the book’s own words because `date-display.test.mjs` wants a form `lib/date-display.js` parses whole, and the book’s phrase is quoted here instead."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.12.2025 (10. децембар ст. ст.) — „Преподобна Ангелина и свети Јован деспот.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. ITS HEADING NAMES TWO PEOPLE and its body tells one life, hers, so the entry is two folders and the other is `john-the-despot`; both carry this same heading as their quoted line, because the heading is what the book prints and neither name has a heading of its own. THE BOOK’S OWN CROSS-REFERENCE, which the entry closes with, is «в. 30. јул» — see 30 July. THAT PAGE WAS NOT READ: the Julian 30 July is one of the four July days this corpus holds nobody on, so there is no row anywhere to compare, and this is NOT a second-day note and claims nothing about what 30 July prints. WHAT THE ENTRY GIVES: that she was the daughter of Ђорђе Скендербег, prince of the Albanians; that she was the wife of Стефан, despot of the Serbs, the son of Ђурађ; that she bore his exile with him and shared every bitterness of his life in Serbia, in Albania and in Italy; that she brought up her sons Максим and Јован in a true Christian spirit; that after her husband’s death she was tonsured and gave herself wholly to prayer, to works of mercy and to the building and repairing of churches; that a faithful wife, an excellent mother and a perfect Christian, she earned in truth the name «Мајка Ангелина»; that her wonderworking relics rest with her husband’s and her sons’ in the monastery of Крушедол, «уколико нису од Турака уништене»; and that she reposed at the beginning of the sixteenth century. NO `locations`: Serbia, Albania and Italy are an exile the entry does not bound, and Крушедол is where the relics lie and not where she lived. NOT FOLDERS AND NOT LINKED, because the corpus holds none of them: Ђорђе Скендербег; Стефан the despot, her husband, for whom no Stefan folder in the corpus is this man — the Stefans it keeps with a venerated serbian row are the First-Crowned, the Tall, Milutin, Dečanski and Штиљановић; Ђурађ, her husband’s father, named in `joannicius-of-devic`’s own record as the despot Đurađ Branković but holding no folder; and Максим, her other son, whom the heading does not name and who therefore took no folder here. ONE `related` row, both halves, to her son `john-the-despot`, whom the heading does name."
+    }
+  ],
+  "related": [
+    "john-the-despot"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
