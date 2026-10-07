@@ -1,0 +1,62 @@
+{
+  "slug": "vladimir-piksanov",
+  "display_name": "Vladimir (Piksanov)",
+  "names": [
+    {
+      "form": "Владимир (Пиксанов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14948, «Владимир (Пиксанов), сщмч.», with the rank word left off. The day's own line declines the forename and prints no surname at all, «Сщмч. Владимира пресвитера», so the surname is read off the name page and not off the line. The surname in brackets is part of the name the calendar's own link gives and is kept; parentheses are not part of a fold key, and the fold-key probe reports no folder holding this string. The corpus holds nine other folders of the bare «Владимир» and not one of them is a Piksanov."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with for 20 марта ст. ст.: «Сщмч. Владимира пресвитера (1918).» It is the only year the calendar gives him, and neither the day page nor name page 14948 carries a life, a place or a year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 марта ст. ст. — «Сщмч. Владимира пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260320.html",
+        "year": 2026
+      },
+      "note": "The calendar's line is all there is. Neither the day page nor name page 14948 carries a life, and no place, diocese, parish or manner of death is named anywhere on either. The name page lists one further day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church; one row per church is the schema, so that day is recorded here and he does not render on it. «Сщмч.» is read as `hieromartyr` and the line's «пресвитера» as `presbyter` with `office: Priest`; «Новомуч.» on the name page is what `new-martyr` stands on. azbyka.ru was not read. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
