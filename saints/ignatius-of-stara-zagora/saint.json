@@ -16,6 +16,11 @@
       "form": "Игњатије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 20. октобар ст. ст., „Преп. новомуч. Игњатије.“ — «Преп.» and «новомуч.» are the grades this corpus keeps in `types` and come off, leaving the bare forename; the heading gives him no epithet and Eski-Zagora is in the body. `foldchk.py` measured the string as held in sr by `ignatius-of-rostov`, the bishop and wonderworker dead in 1288 and kept on 28 May, so this form takes it to two folders and a two-folder key is in `scripts/corpus-gate.mjs`."
+    },
+    {
+      "form": "Игнатий Новый, Афонский, Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Игнатий Новый, Афонский, Константинопольский, прмч.»; the rank abbreviation is not part of the stored form and the three epithets are. The day line itself declines him as «Игнатия» alone, with the year 1814."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian",
+        "note": "The Russian calendar prints the three new martyrs of the Holy Mountain together on this day — «Прмчч. Афонских Евфимия (1814), Игнатия (1814) и Акакия (1816)» — and the day page carries a troparion and a kontakion naming all three. This is not his own day of martyrdom, which the Romanian and Greek rows keep on 8 October and the Serbian on 20 October ст. ст.; whether the Russian calendar also prints him on that day was not checked. Read 8 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Прмчч. Афонских Евфимия (1814), Игнатия (1814) и Акакия (1816).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -76,7 +91,8 @@
     }
   ],
   "related": [
-    "euthymius-of-dimitsana"
+    "euthymius-of-dimitsana",
+    "acacius-the-new-of-neochorion"
   ],
   "text": {
     "life": "life.md"
@@ -89,5 +105,39 @@
       "basis": "traditional",
       "note": "saint.gr: «Τελικά τον απαγχόνισαν στις 8 Οκτωβρίου 1814 μ.Χ. ώρα έκτη», and its head line gives «(; - 1814)»"
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Равночисленны Троицы Несозданныя суще,/ с лики Ангелов и чины мучеников/ предстоите вы, радующеся, Престолу Божества, мудрии./ Сего ради причастием сияние отонуду приемлюще,/ источник исцелений верным подаете/ и Божественное просвещение,/ мучениче Христов Евфимие со Игнатием мудрым и с Божественным Акакием,/ о нас присно молитеся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Тропарь преподобномучеников Афонских Евфимия, Игнатия и Акакия», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being equal in number to the uncreated Trinity, you stand rejoicing before the throne of the Godhead with the choirs of the angels and the ranks of the martyrs, O wise ones. Therefore, receiving thence the radiance of that communion, you give the faithful a fountain of healings and a divine enlightenment. O Euthymius, martyr of Christ, with wise Ignatius and with godly Acacius, pray for us without ceasing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Явися днесь Церкви новое торжество/ триех страстотерпцев,/ яко светила, озаряющее/ православных, Христе,/ исполнения.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Кондак преподобномучеников Афонских Евфимия, Игнатия и Акакия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "There has appeared today a new feast for the Church, that of three passion-bearers, shining like lamps, O Christ, upon the whole body of the Orthodox.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

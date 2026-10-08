@@ -6,4 +6,6 @@ Iasdich ordered him to worship the sun. He refused, and confessed the Name of th
 
 That is the whole of the notice. The page gives no year for the martyrdom and no relic, and it prints no hymn of his. Its couplet turns on his name: «Καὶ τῷ Βατᾷ, τμηθέντι τὴν κάραν ξίφει, / Βατὰ πρεπόντως οὐρανοῦ τὰ χωρία» — to Vatas, whose head was cut off with the sword, the regions of heaven are fittingly passable.
 
-*After saint.gr's calendar for 1 Μαΐου — [the day](https://www.saint.gr/05/01/index.aspx) and [the life](https://www.saint.gr/1428/saint.aspx); read 30 September 2026.*
+The Russian church calendar keeps him on the same day and its whole notice is two sentences, which name the city his Greek dossier does not. He was a monk, lived in the fourth century, came of Persia and practised ascesis there in one of the monasteries; and in the persecution of the Christians raised by the Persian king he was killed in the city of Низивия — Nisibis — for confessing the faith of Christ.
+
+*After saint.gr's calendar for 1 Μαΐου — [the day](https://www.saint.gr/05/01/index.aspx) and [the life](https://www.saint.gr/1428/saint.aspx); read 30 September 2026; and after the Православный церковный календарь of the Сретенский monastery for 1 мая ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260501.html) and [the life](https://days.pravoslavie.ru/Life/life967.htm), read 8 October 2026.*

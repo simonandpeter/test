@@ -16,6 +16,11 @@
       "form": "Мавра",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 3. мај ст. ст., „Свети мученици Тимотије и Мавра.“ Свети мученици heads both and belongs to neither name alone — мученици is the `martyr` this folder already carries in `types` and `honorific.js` composes back — so stripping it leaves the bare forename. The kinship clause this corpus keeps in the English display name is the body's, and the village the other two calendars name is on no part of this page. The form meets no other folder in any language, which was measured rather than assumed."
+    },
+    {
+      "form": "Мавра Фиваидская",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 3 мая ст. ст., which gives «Мавра Фиваидская, мц.»; the rank word is not part of the stored form. The day line itself declines her as «Мавры» alone."
     }
   ],
   "sex": "female",
@@ -28,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 мая ст. ст. — «Мчч. Тимофея и Мавры (ок. 286).»",
+        "url": "https://days.pravoslavie.ru/Days/20260503.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -124,6 +138,38 @@
       },
       "english": {
         "text": "Having borne torments of every kind and received your crowns from God, intercede with the Lord for us who keep your all-holy memory, O greatest Timothy and renowned Maura, that city and people may have peace; for He is the strength of the faithful.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 мая ст. ст., «Тропарь мучеников Тимофея чтеца и Мавры», глас 4 — the common of martyrs, printed under their names and therefore theirs",
+        "url": "https://days.pravoslavie.ru/Days/20260503.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, received from thee, our God, incorruptible crowns in their sufferings; for having thy strength they threw down their tormentors and broke the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Многообразныя язвы претерпевше/ и венцы от Бога приемше,/ о нас молитеся ко Господу,/ память всесвященную вашу совершающих,/ превеликий Тимофее и преславная Мавро,/ еже умирити град и люди,/ Той бо есть верных утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 мая ст. ст., «Кондак мучеников Тимофея чтеца и Мавры», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260503.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having endured wounds of many kinds and received crowns from God, pray to the Lord for us who keep your all-sacred memory, O most great Timothy and most glorious Maura, that he would give peace to the city and to the people; for he is the strengthening of the faithful.",
         "rendered": "site"
       }
     }

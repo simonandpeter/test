@@ -1,0 +1,68 @@
+{
+  "slug": "nina-kuznetsova",
+  "display_name": "Nina (Kuznetsova)",
+  "names": [
+    {
+      "form": "Нина (Кузнецова)",
+      "lang": "ru",
+      "note": "The calendar’s own name link for 1 мая ст. ст., «Нина (Кузнецова), мц.», with the rank abbreviation left off. The day’s line declines the forename and prints no surname at all, «Мц. Нины (1938)»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "28 December 1887",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life4876: «Блаженная мученица Нина родилась 28 декабря 1887 года в селе Лаль Архангельской губернии (ныне это город в Вятской области) в благочестивой семье урядника Алексея Кузнецова и жены его Анны.»"
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "14 May 1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life4876: «Она умерла в концлагере 14 мая 1938 года.» The day line closes her with «(1938)». 14 May 1938 is the civil reckoning of the Julian 1 мая, which is the day this calendar keeps her on, so her feast is the day of her death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian",
+        "note": "Her life page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Мц. Нины (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "note": "The day page carries no troparion or kontakion under her name; its hymns are the three new martyrs of the Holy Mountain’s, Jeremiah’s, Macarius of Kyiv’s, Paphnutius of Borovsk’s, Tamara’s, and two of an icon of the Mother of God. The calendar calls her «Мц.», a martyr, and its life calls her «блаженная» throughout and once «исповедница»; `fool-for-christ` is not written, because neither page uses «блаженный» as the rank word in her heading, and `new-martyr` stands on the «26 января (Новомуч.)» of her life page and on her canonisation in 2000. No rank in the clergy and no monastic tonsure is given her anywhere on either page, so there is no `office`. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 14 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 14 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

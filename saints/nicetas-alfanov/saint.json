@@ -10,6 +10,11 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαΐου, «Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος εκ Ρωσίας», with the rank word and the origin left off. The surname Αλφάνωφ is printed only in the body of the life page."
+    },
+    {
+      "form": "Никита (Нифонт) Алфанов, Сокольницкий, Новгородский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 4 мая ст. ст., which gives «Никита (Нифонт) Алфанов, Сокольницкий, Новгородский, прп.»; the rank word is not part of the stored form and the two epithets are. The second name in brackets is the calendar’s own: both the name link and the second life page give him as «Никита (Нифонт)», and it is kept in the stored form because the source puts it inside the name and not beside it."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian",
+        "note": "The calendar's own life says the memory of the five is appointed on two days — «Празднование их памяти положено 4 мая и 17 июня» — and one attestation row per church is the schema, so 17 июня is recorded here and they do not render on it. The same life says that after a fire destroyed the Sokolnitsky house their relics were carried to the Antoniev monastery on 4 May 1775, so this day may be the day of that translation as well as of the brothers; the source does not say which day is which and nothing here decides it. The day line closes them «(XIV-XV)» where the life says plainly «жили в XIV веке в Новгороде» and dates the founding of their monastery to 1389; `dates` was not changed and holds the fourteenth century. Read 8 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст. — «Прпп. Никиты , Кирилла , Никифора , Климента и Исаакия , братьев Алфановых (Сокольницких) в Новгороде (XIV-XV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,5 +76,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Послушаша Господня гласа,/ добрии рачители бывше,/ благий Его ярем на ся вземше,/ усердно понесосте/ и постничества путь достигше,/ преподобнии отцы, святии чудотворцы,/ воини Небеснаго Царя Христа,/ Никито, Кирилле, Никифоре, Клименте и Исаакие,/ сего ради от Вседержительныя десницы венцы неувядаемыми увязостеся,/ и Небесною славою одеястеся,/ и чудотворении обогатистеся,/ темже и о нас молите не престайте,/ да получим вечных благ,/ мы же сице взываем:/ слава Давшему вам к подвигу крепость,/ слава Венчавшему вас,/ слава Дающему вами всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст., «Тропарь Никиты, Кирилла, Никифора, Климента и Исаакия, братьев Алфановых (Сокольницких) в Новгороде», глас 1 — the day page prints this troparion twice, the second time headed «Тропарь святых братьев Алфановых» and differing only in where the lines are broken; the fuller heading's copy is the one stored",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "They heard the voice of the Lord and were good lovers of it, and taking his good yoke upon themselves you bore it earnestly and reached the way of fasting, O venerable fathers, holy wonderworkers, soldiers of Christ the heavenly King, Nicetas, Cyril, Nicephorus, Clement and Isaac. Therefore you were bound with unfading crowns by the hand of the Almighty, were clothed with heavenly glory and were enriched with the working of wonders. Cease not, then, to pray for us also, that we may obtain the eternal good things; and we cry out thus: glory to him who gave you strength for the contest, glory to him who crowned you, glory to him who gives healings to all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Светильницы светлии явльшеся,/ доброту земную мудренно оставиша,/ и всю добродетель извыкли есте,/ и обретоша безсмертие,/ постом и бдением и прочим воздержанием себе приношаху,/ и ныне со Ангелы на Небесех Престолу Христову предстоите,/ молитеся Богу, мудрии,/ Никито, Кирилле, Никифоре, Клименте и Исаакие преподобный,/ умирити мир и спасти души наша, поющих,/ и согрешающим оставление грехов даровати,/ чтущим святую память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст., «Ин тропарь Никиты, Кирилла, Никифора, Климента и Исаакия, братьев Алфановых (Сокольницких) в Новгороде», глас 8 — the second of the two troparia the day page prints for the five",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having shown yourselves to be bright lamps, you wisely left the goodness of earth behind, learnt every virtue and found immortality, offering yourselves up by fasting and vigil and all other abstinence; and now with the angels you stand in the heavens before the throne of Christ. Pray to God, O wise and venerable Nicetas, Cyril, Nicephorus, Clement and Isaac, that he would give peace to the world and save the souls of us who sing, and grant forgiveness of sins to those who sin and who honour your holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Благодать приемше исцелением,/ простираете здравие сущим в болезнех,/ преподобнии отцы и чудотворцы славнии,/ Никито чудне, и Кирилле блаженне,/ и Никифоре пречестне, Клименте святе и Исаакие преподобне,/ но молитвами ваю противных шатание разорите,/ и болезни наша исцелите,/ и грехов прощение испросите,/ да благодарив воззовем вам:/ радуйтеся, великому Новуграду похвало и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст., «Кондак Никиты, Кирилла, Никифора, Климента и Исаакия, братьев Алфановых (Сокольницких) в Новгороде», глас 8 — the day page prints this kontakion twice, the second time headed «Кондак святых братьев Алфановых», with «молитвами вашими» for «молитвами ваю» and «похвала» for «похвало»; the fuller heading's copy is the one stored",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the grace of healing, you hold out health to those who lie in sickness, O venerable fathers and glorious wonderworkers, wondrous Nicetas and blessed Cyril, most honourable Nicephorus, holy Clement and venerable Isaac. By your prayers break the tumult of our adversaries, heal our sicknesses and ask forgiveness of sins for us, that in thanksgiving we may cry to you: rejoice, boast and strengthening of great Novgorod.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "К Богу все свое умное желание вперисте/ и к Тому невозвратно от души последовали есте,/ ангельское житие на земли поживше,/ и многим бысте путь ко спасению,/ отсюду же и Христос вас прослави и даром чудес обогати,/ темже вси, притекающе к мощем вашим, зовем:/ радуйтеся, преподобнии отцы, Никито, Кирилле, Никифоре, Клименте и Исаакие,/ молитвенницы теплии о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст., «Ин кондак Никиты, Кирилла, Никифора, Климента и Исаакия, братьев Алфановых (Сокольницких) в Новгороде», глас 8 — the second of the two kontakia the day page prints for the five",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You winged all the desire of your minds towards God and followed after him from the soul without turning back, living the life of angels upon earth and becoming for many a way to salvation; and thence Christ glorified you and enriched you with the gift of wonders. Therefore all we who come to your relics cry: rejoice, venerable fathers Nicetas, Cyril, Nicephorus, Clement and Isaac, fervent intercessors for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

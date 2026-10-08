@@ -1,0 +1,63 @@
+{
+  "slug": "nicholas-benevolsky",
+  "display_name": "Nicholas (Benevolsky)",
+  "names": [
+    {
+      "form": "Николай (Беневольский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9701, «Николай (Беневольский), иерей, сщмч.», with the rank in the clergy and the rank word left off. The day’s own line declines the forename and prints no surname at all, «Сщмч. Николая пресвитера (1941)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Сщмч. Николая пресвитера (1941)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 мая ст. ст. — «Сщмч. Николая пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20260503.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page, none on name page 9701, and no place, no diocese, no arrest and no manner of death. The two pages agree about his rank — the line prints «Сщмч.», a hieromartyr, and «пресвитера», and the name page «иерей, сщмч.» — which is more than they do for several men of this kind, so `hieromartyr` and `presbyter` are both written. `office` reduces «иерей» to `Priest`, which is the word the four locale packs hold. `new-martyr` stands on the «26 января (Новомуч.)» of his name page. He is not `demetrius-benevolensky`, whose surname is the different «Беневоленский», and no other folder stores «Беневольский»: the check was a Latin-stem grep for `benevol`, `ls -d saints/*benevol*`, fk.mjs on the stored form, and a sweep of every nicholas-* folder's recorded year of death, which turns up three men of 1941 and no two of one surname. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 16 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 16 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

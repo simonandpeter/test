@@ -1,0 +1,63 @@
+{
+  "slug": "juliana-of-moscow",
+  "display_name": "Juliana of Moscow",
+  "names": [
+    {
+      "form": "Иулиания Московская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14456, which gives «Иулиания Московская» and no rank word at all. The day’s own line declines her and gives the rank, «Прпп. Иулиании (1393) и Евпраксии (1394) Московских»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1393,
+      "latest": 1393,
+      "display": "1393",
+      "basis": "traditional",
+      "note": "The year the day line gives her: «Прпп. Иулиании (1393) и Евпраксии (1394) Московских». It is the only year either page carries."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «24 августа (Моск.)», marked as the keeping of Moscow. One row per church is the schema, so that day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 мая ст. ст. — «Прпп. Иулиании (1393) и Евпраксии (1394) Московских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260503.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is. Name page 14456 carries the heading, the two days, and one further thing only — a parish link, «Зачатьевский ставропигиальный женский монастырь г. Москва», the Conception convent in Moscow — and no life, no place of birth, no family, no account of her labours and no hymn on the day page. «Прпп.» is the plural of «преподобная» and is the whole of what the source says about her state of life, so `types` is `venerable` alone and there is no `office`; the convent link is set down here rather than turned into an office or a date, because the page states a connexion and not a rank. She is not `juliana-of-lazarevo`, the righteous woman of Murom, nor any of the six other Julianas the corpus keeps: the check was `ls -d saints/juliana*` and fk.mjs on the stored form, which has no other holder. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 16 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 16 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 May 2026 (8 October 2026)."
+    }
+  ],
+  "related": [
+    "eupraxia-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

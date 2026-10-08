@@ -6,4 +6,6 @@ According to the prophecy of Maximos, whose disciple he had been, Theophanes lat
 
 His enrolment among the saints came very late and the page dates it exactly: by act 3401 of the Ecumenical Patriarchate of 11 April 2000, at the instance of the metropolitan Panteleimon of Xanthi and Peritheorion and of the Great Monastery of Vatopedi, and his entry into the calendar was made known by encyclical 2692 of the Holy Synod of the Church of Greece of 18 May 2000. Icons of him have been painted recently and a service composed. The page prints none of it, and names no relic.
 
-*After saint.gr's calendar for 3 Μαΐου — [the day](https://www.saint.gr/05/03/index.aspx) and [the life](https://www.saint.gr/4085/saint.aspx); read 30 September 2026.*
+The Russian church calendar keeps him on the same day and the line is all there is. It reads «Свт. Феофана Перифеорийского (после 1353)» — the hierarch Theophanes of Peritheorion, after 1353 — and the name page behind it adds nothing but the same words and the day. There is no life page, no place beyond the see in his title, and no account of his labours; the day page carries no hymn under his name.
+
+*After saint.gr's calendar for 3 Μαΐου — [the day](https://www.saint.gr/05/03/index.aspx) and [the life](https://www.saint.gr/4085/saint.aspx); read 30 September 2026; and after the Православный церковный календарь of the Сретенский monastery for 3 мая ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260503.html) and its name page 14458, which gives no life, read 8 October 2026.*

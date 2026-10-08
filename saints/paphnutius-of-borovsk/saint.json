@@ -16,6 +16,11 @@
       "form": "Пафнутије Боровски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 1. мај ст. ст., „Преподобни Пафнутије Боровски.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back, so it is stripped; **Боровски is kept**, because it is the by-name of the house and the town and not a rank the composer adds back, as Острошки was kept on `basil-of-ostrog` for the same reason. Keeping it is what holds this folder **out** of the bare «Пафнутије» that `paphnutius-of-the-thebaid` holds, which was measured and not assumed. The Greek page's Παρθένιος, the name he was born with, and the office of abbot are not in this heading and were not brought into the form."
+    },
+    {
+      "form": "Пафнутий Боровский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Пафнутий Боровский, игумен»; the rank word is not part of the stored form."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Прп. Пафнутия Боровского (1477).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -89,5 +103,39 @@
   "related": [
     "bassian-of-rostov",
     "joseph-the-wonderworker-of-volokolamsk"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Жития светлостию просветив твое отечество,/ в молитвах и постех дарований Божественнаго Духа исполнился еси,/ и, во временней сей жизни добре подвизався,/ милость благоутробия всем скорбящим отверзл еси,/ и нищим был еси заступник./ Тем молим тя, отче Пафнутие,/ моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Тропарь преподобного Пафнутия Боровского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having enlightened thy homeland by the brightness of thy life, thou wast filled through prayers and fasting with the gifts of the Divine Spirit; and having striven well in this passing life, thou didst open the mercy of thy tender heart to all who sorrow, and wast a defender of the poor. Therefore we pray thee, father Paphnutius: entreat Christ God to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Божиим светолитием просвещен, отче,/ постническое стяжал еси жительство, преподобне,/ иноком предобрый наставниче и постником благое украшение./ Сего ради Господь, труды, твоя видев,/ чудес даром обогати тя,/ источавши бо исцеления./ Мы же, радующеся, вопием ти:/ радуйся, отче Пафнутие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Кондак преподобного Пафнутия Боровского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the light poured out by God, O father, thou didst gain the life of a faster, O venerable one, most excellent guide of monks and fair adornment of those who fast. Therefore the Lord, seeing thy labours, enriched thee with the gift of wonders, for thou dost pour forth healings. And we, rejoicing, cry to thee: Rejoice, father Paphnutius.",
+        "rendered": "site"
+      }
+    }
   ]
 }
