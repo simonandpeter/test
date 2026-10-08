@@ -16,6 +16,11 @@
       "form": "Талалеј",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 20. мај ст. ст., „Свети мученик Талалеј.“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`; strip them and the bare forename is left, which is all the heading gives. The body repeats it bare three times. Measured before drafting with `foldchk.py`: `[('thalelaeus-of-gabala', 'sr')]`, so the fold is two wide and is read in this batch’s commit message."
+    },
+    {
+      "form": "Фалалей Эгейский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2159, «Фалалей Эгейский, мч.», with the rank abbreviation left off; the day’s own line gives the name alone, in the genitive, without the city. `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст. — «Мчч. Фалалея , Александра и Астерия (284).»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and not a name match. The calendar’s life page, life1108, heads him «Мученик Фалалей Эгейский» and makes him the eighteen-year-old of Lebanon brought before the governor of Aegae under Numerian, whom it dates 283 to 284; he says of himself «Я же обучен врачебному делу врачом Макарием», that he was taught the physician’s craft by the physician Макарий, which is the trade this folder’s own display name carries, and the calendar closes by saying the Church calls him Бессребреник, unmercenary, because he healed without payment. The same day, the same city, the same year and the same two companions as the Romanian, Greek and Serbian rows already on this folder. `dates` is unchanged: the folder holds 284 off the Охридски пролог and both the Russian day line and the Russian life give the same year, «Это произошло в 284 году». The life page lists no day but this one. What the Russian adds and the paragraph now carries: his father Берукий the commander and his mother Ромилия, the brother in subdeacon’s orders, the earlier arrest in Lebanon before the governor Тиверий, the drilled log hung in his place, the magician Урвикиан torn by the beasts the crowd threw him to, and his relics in the church of St Agathonicus at Constantinople. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -156,6 +171,22 @@
         "rendered": "site"
       },
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Мучеником сострадалец явлься и оружник,/ воин изрядный Царя славы был еси,/ искушеньми и мукою возвышение идолослужителеи попрал еси,/ сего ради честную твою поем память,/ мудре Фалалее.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст., «Кондак мученика Фалалея», глас 3 — proper to him, and it names him and nobody else; it is the only hymn the day page prints under any of the three martyrs’ names",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown forth as a fellow-sufferer with the martyrs and as their comrade in arms, thou wast an excellent soldier of the King of glory; by trials and by torment thou didst trample down the arrogance of the idolaters. Therefore do we hymn thy honoured memory, O wise Thalaleus.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

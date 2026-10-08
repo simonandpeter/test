@@ -11,6 +11,11 @@
       "form": "Τιμόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Τιμόθεος του Πσκώφ», with the rank word left off; the life page adds that his name as a pagan was Ντόβμοντ."
+    },
+    {
+      "form": "Довмонт (в крещении Тимофей) Псковский",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link 638, «Довмонт (в крещении Тимофей) Псковский, князь», with the rank word after the comma left off. The parenthesis is the calendar’s own and holds the baptismal name this folder’s display name uses, so the form is kept entire rather than reduced to either name alone: the pagan name is the one the day line leads with and the hymns address, «преблаженне княже Доманте», and the baptismal name is the one the folder carries. The life page adds the variant «Домант» and the second title «князь Нальшинайский (Нальшанский)». `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст. — «Блгв. кн. Довмонта , во св. Крещении Тимофея, Псковского (1299).»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "note": "The identification is exact. The calendar’s line gives the baptismal name this folder goes by and the city and the year its `dates` already holds, and the life page, life1111, is headed «Святой благоверный князь Довмонт Псковский»: the Lithuanian prince of Nalshany who fled the feuds of the Lithuanian princes in 1265 with three hundred households, was baptised at Pskov with the name Тимофей, was chosen prince within the year and ruled thirty-three years, and died in 1299 and was buried in the Trinity cathedral. `dates` is unchanged: the folder holds 1299 off saint.gr and the Russian day line prints the same year. `prince` and `righteous` already stand and neither was altered; the calendar’s own rank is «Блгв. кн.», right-believing prince. The life page lists no day but this one. What the Russian adds and the paragraph now carries: the flight of 1265, the chronicler’s «дохнула на него благодать Божия», the thirty-three years at peace with the Pskov veche, the monastery he founded to the Nativity of the Mother of God, the marriage into the Russian grand-princely house, Rakovor in 1268, the sword laid at the foot of the altar before every battle, the Dovmont wall and the Dovmont town, the last victory of 5 March 1299 on the Velikaya, the chronicle’s lament, his words to the men of Pskov, the appearance of 1480 and the pall carried round the walls, and the sword that hung by his relics. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -56,5 +71,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Иже отчее нечестие возненавидев,/ преблаженне княже Доманте,/ и нощи страстныя избег, еже к идолом тщание,/ прииде мыслию к Солнцу славы — Христу,/ озарився благодатию Божественнаго Крещения,/ и ныне во свете Пресвятыя Троицы предстоя,/ моли Христа Бога сохранити и спасти православный люди/ и град твой от безбожных агарян,/ и латин нашествия, и междоусобныя брани/ и спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст., «Тропарь благоверного князя Довмонта, во св. крещении Тимофея», глас 8 — proper to him, and it names him by his pagan name, «преблаженне княже Доманте»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Hating the impiety of thy fathers, O most blessed prince Domant, and escaping the night of the passions, which is the pursuit of idols, thou didst come in thy mind to Christ, the Sun of glory, and wast illumined by the grace of divine baptism. And now, standing in the light of the Most Holy Trinity, pray thou to Christ God to keep and to save the Orthodox people and thy city from the godless Hagarenes, from the inroads of the Latins and from strife among brethren, and that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Духом Божиим наставляемь,/ отчее нечестие отвергл еси,/ святый благоверный княже Тимофее,/ потщался еси приити в богоспасаемый град Псков,/ в немже душу твою благодатию святаго Крещения просветив,/ верою и любовию обитель в себе сотворил еси Пресвятей Троице,/ Ейже непрестанно молися/ даровати душам нашим/ мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст., «Ин тропарь благоверного князя Довмонта, во св. крещении Тимофея», глас 4 — the second troparion the day page prints for him, proper to him, and it names him by his baptismal name, «святый благоверный княже Тимофее»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guided by the Spirit of God, thou didst cast off the impiety of thy fathers, O holy right-believing prince Timothy, and didst make haste to come to the God-saved city of Pskov; and there, having enlightened thy soul by the grace of holy baptism, thou didst by faith and love make of thyself a dwelling for the Most Holy Trinity. Pray thou unceasingly to her, to grant unto our souls peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Любовию Христовою уязвися, преблаженне княже Доманте,/ ум вперив зарею Духа,/ идольскую прелесть отеческаго нечестия возненавидев,/ порождением святьш купели Тимофей наречен еси,/ слезами и милостынею ко Христу присвоився,/ и жизни сей течение добре скончав,/ веру непорочну соблюд,/ и ныне молим тя:/ моли Пресвятую Троицу и Пречистую Богородицу/ за град Псков и за всех, притекающих к раце мощей твоих,/ избавитися нам от всяких зол,/ да тебе вси, яко тепла заступника, непрестанно почитаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст., «Кондак благоверного князя Довмонта, во св. крещении Тимофея», глас 8 — proper to him, and it names him by both his names. The page prints «порождением святьш купели»; «святьш» is not a word and is how the page stands, so it is copied as the page has it rather than mended to «святыя»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wounded with the love of Christ, O most blessed prince Domant, lifting up thy mind in the dawn of the Spirit, and hating the idolatrous delusion of thy fathers' impiety, thou wast named Timothy in the new birth of the holy font; and cleaving to Christ by tears and by almsgiving, and finishing well the course of this life, thou didst keep the faith undefiled. And now we pray thee: entreat the Most Holy Trinity and the most pure Mother of God for the city of Pskov and for all who run to the shrine of thy relics, that we may be delivered from every evil, so that we all may honour thee unceasingly as a fervent protector.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

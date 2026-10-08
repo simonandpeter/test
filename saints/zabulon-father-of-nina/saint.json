@@ -11,6 +11,11 @@
       "form": "Ζαβουλών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιοι Ζαβουλών και Σωσσάνη», with the rank word left off."
+    },
+    {
+      "form": "Завулон",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 6889, «Завулон, прп.», with the rank abbreviation left off; the day’s own line gives the same name in the genitive, «Завулона». The calendar prints no surname, see or epithet for him anywhere, so the form is bare of necessity and not by choice. `fk.mjs` returned NONE for «Завулон» before the write, so the fold gains no second holder."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст. — «Прпп. Завулона и Сосанны , родителей равноапостольной Нины (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "note": "The line names him as the father of Nina the Equal to the Apostles, which is what this folder’s display name says, so the identification is the line’s own and not a name match. THE CALENDAR GIVES HIM NO LIFE PAGE OF HIS OWN: the entry’s life link is id2630, which is the index of Nina’s lives, and his part is told inside them — the second of the two, life216, makes him a kinsman of the great-martyr George, of a noble house and pious parents, in favour with the emperor Maximian, whose reign it dates 284 to 305, and says that while in the emperor’s military service he, being a Christian, helped free Gallic prisoners who had received Christianity; and that having come to Jerusalem with his wife and their only daughter, by their mutual consent and with the Patriarch’s blessing he gave his life to the service of God in the deserts of Jordan. The first reading, life6773, says only «отец ее Завулон ушел в пустынники», that her father went off to be a hermit — which is this folder’s existing `hermit` type, and its `soldier` type is the emperor’s service. NO `dates` OBJECT WAS WRITTEN and the folder still has none: the day line prints «(III-IV)», two centuries, and no page read gives him a year of birth or of death. The kinship to the great-martyr George is stated by the calendar but was NOT written as a `related` row; it is reported to the author. azbyka.ru was not read."
     },
     {
       "church": "romanian",

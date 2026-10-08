@@ -1,0 +1,62 @@
+{
+  "slug": "paul-lazarev",
+  "display_name": "Paul (Lazarev)",
+  "names": [
+    {
+      "form": "Павел (Лазарев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 15016, «Павел (Лазарев), иерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Сщмч. Павла пресвитера (1919).» — so the surname is read from the name link, which is where this calendar keeps it. Measured against the gate’s own key function before the write: 'лазарев павел' has no other holder in the corpus, and neither does the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Павла пресвитера (1919).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст. — «Сщмч. Павла пресвитера (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth and last entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 15016, prints the title «Павел (Лазарев), иерей, сщмч.» and the line «Дни памяти: 26 января (Новомуч.) , 20 мая» and nothing else at all. What it gives that the day line does not is the surname «Лазарев» and the grade «иерей», priest. `new-martyr` WAS WRITTEN AND THE GROUND IS READ: this calendar marks its own twentieth-century martyrs by giving them the general commemoration of the new martyrs and confessors of Russia on 26 января, and his name page carries that day beside his own, «26 января (Новомуч.)». That second day is the synaxis and not a feast of his own, so one row per church stands and he does not render on it. NO FOLDER WAS FOUND FOR HIM: `fk.mjs` returns no holder for «Павел (Лазарев)» or for the display name; `ls -d saints/paul-laz*` is empty, and `grep -il 'lazarev'` over `saints/` returns only `john-lazarev`, `jonah-lazarev` and `juliana-of-lazarevo`, none of them a Paul. The day page prints nine hymns, five for the metropolitan Alexis whose relics the day’s second entry commemorates, three for the prince Dovmont-Timothy and one for the martyr Thalaleus, and none under his name. azbyka.ru was not read, and it is the source that would give him a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 2 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 2 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 June 2026, the civil day of this Julian 20 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

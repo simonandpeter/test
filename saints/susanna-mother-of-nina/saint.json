@@ -11,6 +11,11 @@
       "form": "Σωσσάνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιοι Ζαβουλών και Σωσσάνη», with the rank word left off. The Greek spells her name «Σωσσάνη»."
+    },
+    {
+      "form": "Сосанна",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 6890, «Сосанна, прп.», with the rank abbreviation left off; the day’s own line gives the same name in the genitive, «Сосанны». The second of the calendar’s two readings of her daughter’s life spells it «Сусанна» in its prose; the day line and the name link agree on «Сосанна» and the form follows the two that agree. The calendar prints no surname or epithet for her anywhere, so the form is bare of necessity. `fk.mjs` before the write returned one holder for «сосанна», `susanna-of-rome`, whose own `ru` form is this identical string: the fold therefore goes from one holder to two and its key was written in the same commit."
     }
   ],
   "sex": "female",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст. — «Прпп. Завулона и Сосанны , родителей равноапостольной Нины (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "note": "The line names her as the mother of Nina the Equal to the Apostles, which is what this folder’s display name says, so the identification is the line’s own and not a name match. THE CALENDAR GIVES HER NO LIFE PAGE OF HER OWN: the entry’s life link is id2630, the index of Nina’s lives, and her part is told inside them. The first reading, life6773, says «мать поступила в диакониссы», that her mother entered among the deaconesses — which is this folder’s existing `deaconess` type; the second, life216, names her and makes her the sister of the Patriarch of Jerusalem, «некоторые называют его Ювеналием», whom some call Juvenal, and says that at Jerusalem she was appointed a deaconess at the church of the Holy Sepulchre. THE CALENDAR SPELLS HER NAME TWO WAYS ON THE PAGES READ and only one was stored: «Сосанна» in the day line and in the name link 6890, «Сусанна» in the body of life216. The form stored follows the day line and the name link, which agree, and the variant is recorded in the form’s note. NO `dates` OBJECT WAS WRITTEN and the folder still has none: the day line prints «(III-IV)», two centuries, and no page read gives her a year. STORING THE BARE FORENAME WIDENS A FOLD and the key was written in the same commit: «сосанна» now holds `susanna-of-rome`, which already stored the identical string, and this folder, and nothing else. azbyka.ru was not read."
     },
     {
       "church": "romanian",

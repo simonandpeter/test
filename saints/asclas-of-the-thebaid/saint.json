@@ -15,13 +15,28 @@
       "form": "Аскалон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 20. мај ст. ст., „Свети мученик Аскалон.“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`. **This is not a spelling of the «Ασκλάς» this folder is named for, and it is stored exactly as printed all the same** — a copied script form is never corrected towards another language’s. **It is also not a reader’s guess that the two are one name**: this folder’s own life records that saint.gr prints three forms, «ή Ακλάς ή Ασκαλάς», and **Ασκαλάς is this form**. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM` — and the three `*-of-ascalon` folders the corpus holds are named for the **city** of Ascalon and not for this man, which was checked rather than assumed."
+    },
+    {
+      "form": "Аскалон",
+      "lang": "ru",
+      "note": "The day’s own line, «Мч. Аскалона (ок. 287)», in the nominative. The calendar’s name link 283 heads him «Аскалон Антиохийский, мч.», but its own life page sets him at Hermopolis Magna in Middle Egypt and has him drowned near Antinoë and names Antioch nowhere, so the epithet was not stored; that is a reading reported to the author and not a correction made in the folder. `fk.mjs` returned NONE for «Аскалон» before the write — the identical string stands on this same folder as its Serbian form, so the fold gains no holder."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст. — «Мч. Аскалона (ок. 287).»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "note": "The identification is exact. The folder already stores «Аскалон» as its Serbian form, and the calendar’s life page, life1109, gives the same man as the Serbian and Greek rows already on it: born at Hermopolis Magna in Middle Egypt, tried before the governor Арриан, drowned in the Nile near the city of Antinoë about 287, with the stone tied to him and the body found on the third day. `dates` is unchanged: the folder holds 287 and both the day line’s «(ок. 287)» and the life’s «около 287 года» agree with it. THE CALENDAR’S OWN EPITHET CONTRADICTS ITS OWN LIFE AND WAS NOT MADE A NAME FORM ALONE FOR THAT REASON: name link 283 heads him «Аскалон Антиохийский, мч.», of Antioch, while the life it stands over names Antioch nowhere and sets him in Egypt — Ермополь Великий and Антиноя. The epithet looks like Антиноя read as Антиохия. The form stored is therefore the bare «Аскалон», which is what the day line prints and what the folder’s Serbian row already holds, and the discrepancy is reported to the author. The life page lists no day but this one. azbyka.ru was not read."
     },
     {
       "church": "romanian",
