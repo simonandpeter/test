@@ -6,6 +6,11 @@
       "form": "Θεράπων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Όσιος Θεράπων του Μονζέσκιϋ», with the rank word left off. The page gives the place in brackets as «(Monza)», and the English display name follows that."
+    },
+    {
+      "form": "Ферапонт Монзенский",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link, «Преподобный Ферапонт Монзенский», with the rank word left off; the day’s own line gives the same. The fuller of its two readings is titled «Преподобный Ферапонт Монзенский, Галичский», with a second epithet which the form does not keep, the name link being the one string the calendar offers as his name. `fk.mjs` returned NONE for «ферапонт монзенскии» before the write. THE FOLDER WAS FOUND BY `ls -d saints/therapon-of-mon*` AND NOT BY `fk.mjs`, which returned NONE for the form because the folder stored only a Greek one — the blind spot BRIEF-RUSSIAN warns of, met twice on this one day."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr calls him a Russian monk, so the Russian calendar is the one that would say most about him, and it has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст. — «Прп. Ферапонта Монзенского (1597).»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the river in his name and the year 1597 this folder’s `dates` already hold, and the entry’s link is an index, id2277, serving two readings, where saint.gr — the only source the folder had — says plainly «Δεν έχουμε λεπτομέριες για τον βίο του», that it has no details of his life. THE RUSSIAN SUPPLIES THE WHOLE OF A LIFE WHERE THE FOLDER HAD NONE. `dates` is unchanged, and the Russian adds the day: «мирно почил 12 декабря 1597 г.» — which is NOT this feast’s day. HIS PAGES LIST TWO DAYS, «27 мая , 12 декабря», and the calendar itself names the second as his repose while printing him on the first; what the 27 мая is, it does not say, and the obvious reading — the finding of the incorrupt relics twenty years after his death, which the fuller page reports without a date — is NOT asserted here. One row per church is the schema, so 12 декабря is recorded here and he does not render on it. THE TWO READINGS DISAGREE ABOUT WHOSE BLESSING FOUNDED THE HOUSE: life6897 has him appear in a dream to the two monks Пафнутий and Андриан of the Pavlo-Obnorsky monastery and command them to found it, and has him come to it afterwards and ask its elder Андриан to be his spiritual father; life3107 has the two come to the Monza by HIS blessing, «по его благословению», and makes him a monk of the house of Адриан. Both are in the paragraph. `fool-for-christ` WAS NOT WRITTEN although life6897 says «вероятно, что юродствовал, подражая блаженному Василию Московскому» — the page's own «вероятно», probably, is a guess and not a statement, and life3107 says only that he imitated that saint and called him his fellow-dweller though he had never seen him. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Любовию Христовою, Богомудре, просветився и добродетельми,/ сожительствовал еси Василию блаженному,/ и, всякое наслаждение плотское возненавидев,/ в пустыню вселился еси,/ в ней же вельми подвизался еси в жизни сей временней,/ плоть умершвляя свою в пениих, и во бдениих, и в пощениих./ Темже и Христос даром чудес обогати тя,/ но поминай убо нас, чтущих пресветлую память твою,/ преподобне отче Ферапонте,/ и моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., «Тропарь преподобного Ферапонта Монзенского», глас 8 — proper to him, and it names him and the fellow-dwelling with the blessed Basil which his second reading reports as his own word",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the love of Christ and by the virtues, O wise in God, thou wast a fellow-dweller with the blessed Basil; and hating every pleasure of the flesh thou didst settle in the wilderness, and there didst labour greatly in this temporal life, putting thy flesh to death in singing and in vigils and in fastings. Therefore did Christ enrich thee with the gift of wonders. Remember us, then, who honour thy most radiant memory, O venerable father Therapon, and pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Возложив себе Богу от юности, преподобне,/ Того паче всех возлюбив,/ и Тому от всея души любовию последовал еси,/ тленная и красная мира нивочтоже вменив, в пустыню вселився,/ в ней же добре подвизался еси противу невидимых врагов козней/ и, яко светозарное солнце, в концех Галическия земли возсиял еси,/ отонуду же, веселяся, прешел еси к Небесным обителем,/ и ныне со Ангелы Владычню Престолу предстоя,/ поминай нас, чтущих память твою, да зовем ти:/ радуйся, Ферапонте, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., «Кондак преподобного Ферапонта Монзенского», глас 8 — proper to him, and it names him and the Galich country his fuller reading sets him in",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having laid thyself before God from thy youth, O venerable one, and having loved him above all, thou didst follow him with the love of thy whole soul, counting the corruptible and lovely things of the world as nothing; and settling in the wilderness thou didst labour well there against the wiles of the unseen enemies, and shonest as the radiant sun in the furthest parts of the land of Galich; and from thence thou didst pass in gladness to the mansions of heaven. And now, standing with the angels before the throne of the Master, remember us who honour thy memory, that we may cry to thee: Rejoice, O Therapon, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

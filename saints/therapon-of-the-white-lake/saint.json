@@ -12,6 +12,11 @@
       "form": "Θεράπων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Μαΐου, «Όσιος Θεράπων ηγούμενος της Λευκής Λίμνης», with the rank word left off. The life page gives the name he was baptised with: «κατά κόσμον Θεόδωρος»."
+    },
+    {
+      "form": "Ферапонт Можайский",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link, «Преподобный Ферапонт Можайский», with the rank word left off. The day’s own line gives both epithets, «Ферапонта Белоезерского, Можайского», and the fuller of its two readings is titled «Преподобный Ферапонт Белозерский, Можайский, Лужецкий» with three; the form follows the name link, which is the one string the calendar itself offers as his name. `fk.mjs` returned NONE for «ферапонт можаискии» before the write."
     }
   ],
   "dates": {
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст. — «Прп. Ферапонта Белоезерского, Можайского (1426).»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and the Russian repeats this folder’s own dates to the year: the line gives both epithets and 1426, and the fuller of the two readings opens «в миру Феодор, родился в 1337 году в Волоколамске в дворянской семье Поскочиных» — the same birth year, the same town and the same family name saint.gr gave the folder. `dates` is unchanged, and what the Russian adds is the day: «преставился к Богу в глубокой старости, 27 мая 1426 года», which is this feast’s own day. HIS PAGES LIST A SECOND DAY AND THE CALENDAR EXPLAINS IT OUTRIGHT: «Память преподобного Ферапонта празднуется дважды: 27 мая (преставление, 1426) и 27 декабря (обретение мощей, 1514)» — the repose and the finding of the relics. One row per church is the schema, so the second is recorded here and he does not render on it. `office` SET TO «Archimandrite», which is read and not assumed: he declined the abbacy at his own Belozersk house out of humility and gave the office to a disciple, and it was at Luzhetsky, «по благословению святителя Фотия, митрополита Московского», that the archimandriteship was established and he was raised to it. The existing `abbot` was left standing. What the Russian adds and the paragraph carries: the name in the world, the tonsure at forty without a novitiate by Феодор of the Simonov monastery, the friendship with Кирилл Белозерский and the instruction from Сергий Радонежский, the errand to the Belozersk country and the decision to stay, the cell between the lakes Бородавское and Павское fifteen versts from Kirillov, the robbers who tried to drive him out or kill him, the wooden church of the Nativity of the Mother of God in 1398 and the stone one painted in 1500–1501, the summons by the Mozhaysk prince Андрей Димитриевич in 1408 and the second house at Luzhki on the Moskva, the eighteen years there, the burial by the north wall, the finding of the relics in 1514 and the canonisation after the Moscow council of 1547. THREE `related` ROWS THE SOURCE MAKES WERE NOT WRITTEN and are reported: the Kirill he lived with, the Sergius whose teaching he heard, and the Photius who raised him archimandrite, that last being a saint the SAME DAY prints. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -68,5 +83,56 @@
   "related": [
     "cyril-of-the-white-lake",
     "photius-of-kyiv"
+  ],
+  "office": "Archimandrite",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Житием чистым просветився,/ в молитвах и постех пустыни явился еси доброе прозябение/ и, духовному твоему учителю последствуя,/ ум свой к Небесным управль,/ стаду твоему наставник был еси,/ тем тя молим, отче Ферапонте:/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., «Тропарь преподобного Ферапонта Белоезерского, Можайского», глас 4 — proper to him, and it names him; the day prints three Therapons and the headings tell them apart",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by a pure life, thou wast shown forth in prayers and fastings as a goodly shoot of the wilderness; and following thy spiritual teacher and directing thy mind to the things of heaven, thou wast a guide to thy flock. Therefore do we entreat thee, O father Therapon: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Преблагий Спас наш Христос/ умножил есть миость Свою к нам,/ даровав нам в заступника и целителя/ преподобнаго отца нашего Ферапонта,/ иже просвещает нас образом святаго жития своего/ и ныне молитвами своими ограждает храм свой от врагов и от разрушения,/ страну сию от глада и напрасный смерти,/ чтущих же память его всех/ от болезней и от лютых страстей.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., «Кондак преподобного Ферапонта Белоезерского, Можайского», глас 4 — proper to him, and it names him. The page prints «миость» for «милость» and «напрасный» for «напрасныя», and both are copied as the page has them",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ our most gracious Saviour has multiplied his mercy towards us, granting us for a protector and a healer our venerable father Therapon, who enlightens us by the pattern of his holy life and now by his prayers guards his own church from enemies and from destruction, this land from famine and from sudden death, and all who honour his memory from sicknesses and from cruel passions.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Христовым желанием распалився,/ страсти плотския воздержанием оттряс,/ постническое стяжав жительство, преподобне,/ сего ради Господь труды твоя видев,/ даром чудес обогати тя,/ источавши бо исцеления и молишися о нас к Богу,/ мы же, радующеся, вопием ти:/ радуйся, Ферапонте, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., «Ин кондак преподобного Ферапонта Белоезерского, Можайского», глас 8 — the second kontakion the day page prints for him, proper to him and naming him",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Set afire with longing for Christ, thou didst shake off the passions of the flesh by abstinence and gain the life of a faster, O venerable one; and therefore the Lord, seeing thy labours, enriched thee with the gift of wonders, for thou pourest out healings and prayest to God for us. And we, rejoicing, cry to thee: Rejoice, O Therapon, our father.",
+        "rendered": "site"
+      }
+    }
   ]
 }

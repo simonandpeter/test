@@ -122,6 +122,8 @@ for (const { slug, saint } of corpus) {
  * set, and a reading that no longer names everyone it folds is worse than none.
  */
 const READ_FOLDS = {
+  'александрииская феодора theodora-companion-of-didymus theodora-of-alexandria':
+    'Two women of Alexandria the Russian calendar gives the same two-word name. Theodora the companion of Didymus is the virgin martyr of the Julian 27 May, tried before the governor Евстратий, saved from the brothel by the soldier Didymus and beheaded with him at Alexandria in 303 or 304 under Diocletian; days.pravoslavie.ru heads her name link «Феодора Александрийская, дева, мц.» Theodora of Alexandria is the venerable woman of the Julian 11 September, who lived in the years of the emperor Zeno and whom all four calendars keep on that day; her folder already stored the identical Russian string. Two centuries apart, one a virgin martyr and the other an ascetic, and nothing shared but the name and the city.',
   'елена helen-martyr-1943 helen-the-empress':
     'Two women the Russian calendar names Елена and nothing else. Helen the mother of Constantine is the empress equal to the apostles, dead in 327, whom days.pravoslavie.ru keeps on the Julian 21 May with her son and who found the Cross at Jerusalem in 326; the calendar’s own heading for her is «Равноапостольная царица Елена», with no epithet to tell her apart by. Helen of 1943 is a twentieth-century martyr. Nothing but the forename is shared. Helen of Dečani folds elsewhere, her forms being the Serbian «Јелена».',
   'сосанна susanna-mother-of-nina susanna-of-rome':

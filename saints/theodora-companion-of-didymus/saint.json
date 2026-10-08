@@ -16,6 +16,11 @@
       "form": "Теодора",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 27. мај ст. ст., „Свети мученици Теодора и Дидим“ — Свети is not a rank, мученици is the `martyr` this corpus puts in `types`, and Дидим is her companion and not part of her name. The body gives „Теодора девица“, and **девица is the `virgin` already in `types`, so it is stripped too** and the bare personal name is what is stored. **Measured, and it is a wide fold entered on purpose**: `foldchk.py` returns four folders already holding a bare «Теодора» — `theodora-12-january`, `theodora-companion-of-leonides`, `theodora-of-alexandria` and `theodora-the-empress` — so this makes a fifth, and the corpus keeps ten more Theodoras that hold no `sr` form at all. **There is no fuller form to prefer**: the heading prints the two names and nothing else, and Alexandria is the other books’ and not this heading’s to attach. The Greek form on this folder, «Θεοδώρα», is the same bare name."
+    },
+    {
+      "form": "Феодора Александрийская",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Феодора Александрийская, дева, мц.», with the two rank words after the comma left off. The city is the calendar’s own and the life bears it out. The day’s own line gives «Феодоры девы». THIS FORM WIDENED A FOLD AND THE CLAIM FIRST WRITTEN HERE WAS WRONG: the note said `fk.mjs` had returned NONE for «александрииская феодора», and `fk.mjs` had not been run on this form at all. It returns `theodora-of-alexandria`, which already stores the identical Russian string. The plain gate printed the new collision as unread, the key ‘александрииская феодора theodora-companion-of-didymus theodora-of-alexandria’ was written in the same commit, and its membership is exactly those two folders. The bare «Феодора» was deliberately not stored, this corpus holding a great many of that name."
     }
   ],
   "related": [
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст. — «Мчч. Феодоры девы и Дидима воина (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line pairs the virgin and the soldier as this folder’s display name does, and its Greek and Serbian rows keep the same pair on the same Julian day. The calendar gives the two of them one page, life1149. `dates` is unchanged: the folder holds 304 off the Охридски пролог and the day line prints the same year, while the life says «в 303 или 304 году» — a choice of two the folder’s single year is one of, and it was not widened to the pair. `virgin` already stands and the line’s «девы» bears it out. What the Russian adds and the paragraph carries: the city of Alexandria and the governor Евстратий, her answer that she had given herself to God and chosen to stay a virgin for the Name of Christ, the three days given her in prison to think and the threat of the brothel, the brothel and the young men quarrelling over who should go in first, Didymus coming in unhindered in his soldier’s dress and driving them out and giving her his clothes, his trial and sentence, her coming to the place of his execution to say she wished to die with him, her bowing her head under the sword first, and the burning of the bodies. azbyka.ru was not read."
     },
     {
       "church": "romanian",

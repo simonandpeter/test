@@ -16,6 +16,11 @@
       "form": "Дидим",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 27. мај ст. ст., „Свети мученици Теодора и Дидим“ — Свети is not a rank, мученици is the `martyr` in `types`, and Теодора is his companion and not part of his name; the body confirms the bare form in the nominative, „уђе к њој војник по имену Дидим“. **Measured, and it is a fold of two**: `foldchk.py` returns `[('didymus-of-laodicea', 'ru'), ('didymus-of-laodicea', 'sr')]` for «Дидим», so that folder holds the identical string already and this makes a second holder. **There is nothing fuller to prefer**: the heading gives the two companions’ names and nothing else, and Alexandria is the other book’s to attach. The two are told apart by their days — Laodicea on its own — and by this one being half of a pair. The corpus keeps two further Didymi, of Cyprus and the tribune of 24 May met in this same wave, neither holding an `sr` form. The Greek form here, «Δίδυμος», is the same bare name."
+    },
+    {
+      "form": "Дидим Александрийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Дидим Александрийский, мч.», with the rank abbreviation left off. The city is the calendar’s own and the life bears it out. The day’s own line gives «Дидима воина». `fk.mjs` returned NONE for «александриискии дидим» before the write, and the bare «Дидим» was deliberately not stored: twelve folders of that name stand on the Julian 24 May alone, three days before this one, as the twelve tribunes of the Meletius company."
     }
   ],
   "related": [
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст. — «Мчч. Феодоры девы и Дидима воина (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line pairs the soldier and the virgin as this folder’s display name does, and its Greek and Serbian rows keep the same pair on the same Julian day. The calendar gives the two of them one page, life1149, and his part in it is the whole middle of the story: he came into the brothel in his soldier’s dress, drove out the frightened men, saved her and gave her his own clothes, and was sentenced to death for it. That is the ground of the `soldier` type this folder already carries. `dates` is unchanged: the folder holds 304 off the Охридски пролог and the day line prints the same year, while the life says «в 303 или 304 году», a choice of two the folder’s single year is one of; it was not widened to the pair. azbyka.ru was not read."
     },
     {
       "church": "romanian",
