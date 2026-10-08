@@ -6,6 +6,11 @@
       "form": "Sava cel Nou din Kalymnos",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Cuvios Sava cel Nou din Kalymnos»."
+    },
+    {
+      "form": "Савва Новый",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 25 марта ст. ст., «Савва Новый, иеромонах», with the rank word left off. The calendar gives no toponym beside it — not Kalymnos, which the English display name and the Romanian form both carry."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 марта ст. ст. — «Прп. Саввы Нового (1948)»",
+        "url": "https://days.pravoslavie.ru/Days/20260325.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar keeps him on the same menologion day as the Greek and the Romanian, 25 March old style and 7 April new. The calendar gives him no life page, no Дни памяти line and no hymn of his own on the day page, which carries only the Annunciation's hymns and Patriarch Tikhon's; the line and the name link are all there is. The name link calls him «Савва Новый, иеромонах», a hieromonk, where this folder's types read venerable, monk, ascetic and iconographer and carry no priestly rank; the rank is recorded here and was not changed. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",

@@ -12,6 +12,11 @@
       "form": "Τύχων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιος Τύχων Πατριάρχης Μόσχας», with the rank word and the see left off."
+    },
+    {
+      "form": "Тихон (Белавин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 25 марта ст. ст., «Святитель Тихон (Белавин), патриарх Московский и всея Руси», with the rank and the see left off. The surname in parentheses is his name in the world and is part of the name the calendar gives."
     }
   ],
   "sex": "male",
@@ -97,5 +102,55 @@
     "peter-of-moscow-27-september",
     "tikhon-of-zadonsk",
     "sebastian-dabovich"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Апостольских преданий ревнителя / и Христовы Церкве пастыря добраго, / душу свою за овцы положившаго, / жребием Божиим избранного / Всероссийскаго Патриарха Тихона восхвалим / и к нему с верою и упованием возопиим: / предстательством святительским ко Господу / Церковь Русскую в тишине соблюди, / расточенная чада ея во едино стадо собери, / отступившия от правыя веры к покаянию обрати, / страну нашу от междоусобныя брани сохрани / и мир Божий людем испроси.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 марта ст. ст., «Тропарь святителя Тихона, патриарха Московского и всея Руси (прославление)», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260325.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise Tikhon, Patriarch of all Russia, a zealot for the traditions of the apostles and a good shepherd of the Church of Christ, who laid down his soul for the sheep and was chosen by the lot of God; and let us cry out to him with faith and with hope: by thy hierarch's intercession before the Lord, keep the Russian Church in quietness, gather her scattered children into one flock, turn those who have fallen from the right faith to repentance, preserve our land from strife among its own, and ask the peace of God for the people.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "В годину тяжкую Богом избранный / в совершенной святости и любви Бога прославил еси, / во смирении величие, в простоте и кротости силу Божию являя, / положил душу за Церковь, за люди своя, / исповедниче патриарше святе Тихоне, / моли Христа Бога, / Емуже сораспялся еси, / и ныне спасти землю Русскую и паству Твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 марта ст. ст., «Ин тропарь святителя Тихона, патриарха Московского и всея Руси», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260325.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chosen by God in a heavy season, thou didst glorify God in perfect holiness and love, showing greatness in humility and the power of God in simplicity and meekness, and thou didst lay down thy soul for the Church and for thine own people, O holy Tikhon, confessor and patriarch. Pray to Christ God, with whom thou wast crucified, that even now he may save the Russian land and thy flock.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Тихостию нрава украшен, / кротость и милосердие кающимся являяй, / во исповедании православныя веры и любве ко Господу / тверд и непреклонен пребыл еси, / святителю Христов Тихоне. / Молися о нас, да не разлучимся от любве Божия, / яже о Христе Иисусе, Господе нашем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 марта ст. ст., «Кондак святителя Тихона, патриарха Московского и всея Руси», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260325.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with a quiet temper, showing meekness and mercy to the penitent, thou didst remain firm and unbending in the confession of the Orthodox faith and in love toward the Lord, O Tikhon, hierarch of Christ. Pray for us, that we be not parted from the love of God which is in Christ Jesus our Lord.",
+        "rendered": "site"
+      }
+    }
   ]
 }
