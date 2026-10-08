@@ -16,6 +16,11 @@
       "form": "Константин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 21. мај ст. ст., „Свети цар Константин и царица Јелена.“ — Свети is not a rank and цар is the `king` this corpus puts in `types`; strip them and the bare forename is left. **«Константин Велики» is nowhere on this page** — the Prologue gives him no epithet at all, where it gave Pachomius Велики in its heading on 15 May — so the fuller form that would have broken the fold does not exist to be copied, and a form a reader builds is what BRIEF-SERBIAN.md §6 forbids. Measured before drafting with `foldchk.py`: `[('constantine-brancoveanu', 'ru'), ('constantine-of-georgia', 'sr'), ('constantine-presbyter-martyr-1918', 'ru')]`, so the fold is four wide and is read in this batch’s commit message."
+    },
+    {
+      "form": "Константин",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Святой равноапостольный царь Константин», with the two rank words stripped; the day’s own line gives «царя Константина», in the genitive, and no epithet anywhere. The calendar prints him no surname, see or place, so the form is bare of necessity. `fk.mjs` before the write returned five holders for «константин» — `constantine-brancoveanu`, `constantine-of-georgia`, `constantine-presbyter-martyr-1918`, `constantine-the-great`, `constantine-the-hagarene` — and THIS FOLDER IS ALREADY ONE OF THEM, by way of its Serbian form «Константин», which is the identical string. Membership is by folder and not by form, so the fold gains no holder and its key does not change. That fold stands unread in the gate and was deliberately not touched."
     }
   ],
   "sex": "male",
@@ -134,8 +139,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст. — «Равноапп. царя Константина (337) и матери его царицы Елены (327) .»",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "note": "The identification needs no reading: the day’s line names him and his mother together, and the folder’s Romanian, Greek and Serbian rows all keep the same pair on the same day. The entry has two life links, id1270 for him and id2494 for her, and each is an index; between them they serve three readings, life6679 («Святой равноапостольный царь Константин»), life6574 (hers) and life1116, which is one page for both and is served under each index. `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder carried no `dates` object at all, and the day line prints «(337)» while life6679 closes «мирно скончался во время молитвы 21 мая 337 г.» — the day of this feast. NO BIRTH WAS WRITTEN: life6679 says he was taken from his parents as a hostage at eighteen under Diocletian and proclaimed emperor in 306, which fixes no year of birth, and neither page gives one. THE TWO READINGS DISAGREE ABOUT THE DAY OF HIS DEATH AND THE YEAR OF HIS SOLE RULE, and neither was chosen: life6679 gives 21 мая 337 and the victory over Licinius at Adrianople in 322, life1116 gives «в день Пятидесятницы в 337 году», the day of Pentecost, and 323 for the year he reigned alone. Both are in the paragraph. What the Russian adds and the paragraph carries: Constantius Chlorus and Gaul and Britain, the years at Diocletian’s court in Nicomedia and his own words «Я отчуждался от бывших доселе правителей», the thanksgiving in the temple of Apollo in 308, the cross in the sky with «Сим побеждай» before the battle with Maxentius in 312, the statue at Rome with the cross in its right hand, the two manifestos of Milan and 313, the eleven measures in favour of the Church the calendar lists by year from 314 to 325, the pagan party at Rome and the twentieth anniversary of his reign, the founding of Constantinople, the Donatists and the Milan council of 316, the summoning of the First Ecumenical Council at Nicaea in 325 with its 318 bishops, his own part in the word «Единосущный», the baptism at the end of his life and the burial in the church of the Apostles. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -248,9 +263,50 @@
         "rendered": "site"
       },
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Креста Твоего образ на Небеси видев/ и, якоже Павел, звание не от человек прием,/ в царех апостол Твой, Господи,/ Царствующий град в руце Твоей положи,/ егоже спасай всегда в мире молитвами Богородицы,/ едине Человеколюбче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст., «Тропарь равноапостольных царя Константина и царицы Елены», глас 8 — the joint troparion of the two of them, who are the whole of the company the day’s line names and who both stand on this day; it is copied to both folders and to no other",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having beheld the image of thy Cross in the heavens, and, like Paul, having received his calling not from men, thine apostle among kings, O Lord, laid the imperial city in thy hand; and do thou save it ever in peace, through the prayers of the Mother of God, O thou who alone lovest mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Константин днесь с материю Еленою/ Крест являют, всечестное древо,/ всех убо иудеев посрамление суще,/ оружие же на противныя верных людей:/ нас бо ради явися знамение велие/ и во бранех грозное.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст., «Кондак равноапостольных царя Константина и царицы Елены», глас 3 — the joint kontakion of the two of them, naming both by name; it is copied to both folders and to no other",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today Constantine, with his mother Helen, shows forth the Cross, the all-honoured tree, which is the shame of all the Jews and a weapon of the faithful against their adversaries. For our sake has it appeared, a great sign, and terrible in battle.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 337,
+      "latest": 337,
+      "display": "337",
+      "basis": "traditional",
+      "note": "The year the Russian day line prints for him, «Равноапп. царя Константина (337)», and the year both of the calendar’s readings give. The folder had no `dates` object at all before this row. The two readings disagree about the day: life6679 has him die «21 мая 337 г.», the day of this feast, and life1116 «в день Пятидесятницы в 337 году», on Pentecost. Neither was chosen and both are in the life. No year of birth was written: no page read gives one, and the eighteen years at Diocletian’s court are not a year."
+    }
   }
 }

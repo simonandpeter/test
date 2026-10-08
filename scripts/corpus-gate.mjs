@@ -122,6 +122,8 @@ for (const { slug, saint } of corpus) {
  * set, and a reading that no longer names everyone it folds is worse than none.
  */
 const READ_FOLDS = {
+  'елена helen-martyr-1943 helen-the-empress':
+    'Two women the Russian calendar names Елена and nothing else. Helen the mother of Constantine is the empress equal to the apostles, dead in 327, whom days.pravoslavie.ru keeps on the Julian 21 May with her son and who found the Cross at Jerusalem in 326; the calendar’s own heading for her is «Равноапостольная царица Елена», with no epithet to tell her apart by. Helen of 1943 is a twentieth-century martyr. Nothing but the forename is shared. Helen of Dečani folds elsewhere, her forms being the Serbian «Јелена».',
   'сосанна susanna-mother-of-nina susanna-of-rome':
     'Two different women whose Russian name form the calendar spells the same way. Susanna of Rome is the martyr of the Julian 11 August, niece of pope Caius, beheaded under Diocletian; Susanna the mother of Nina is the deaconess of the Holy Sepulchre, sister of the patriarch of Jerusalem, kept by days.pravoslavie.ru on the Julian 20 May with her husband Zabulon as the parents of Nina the Equal to the Apostles. The calendar prints «Сосанна» for the second in its day line and its name link 6890 and «Сусанна» in the prose of its life of Nina; the first folder already stored «Сосанна», which is why the fold has two holders. Nothing but the name is shared — different centuries, different countries, different grades.',
   'василии иванов basil-ivanov basil-ivanov-19-may':

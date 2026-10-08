@@ -16,6 +16,11 @@
       "form": "Јелена",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 21. мај ст. ст., „Свети цар Константин и царица Јелена.“ — царица is the `empress` this corpus puts in `types`; strip it and the bare forename is left, and the body repeats it bare twice, „царица Јелена“ and „Света Јелена“. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM` — **and the day’s third entry gives the other Helen Дечанска in its own heading, so the two Helens of this one day do not fold**, which is the first time in the wave that the book has told two namesakes of one day apart by itself."
+    },
+    {
+      "form": "Елена",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Равноапостольная царица Елена», with the two rank words stripped; the day’s own line gives «царицы Елены», in the genitive, and no epithet anywhere, so the form is bare of necessity. `fk.mjs` before the write returned one holder for «елена», `helen-martyr-1943`, so the fold goes from one holder to two and its key was written in the same commit. The folder’s Serbian form is «Јелена», which folds elsewhere."
     }
   ],
   "sex": "female",
@@ -37,16 +42,26 @@
     "death": {
       "earliest": 327,
       "latest": 327,
-      "display": "c. 327",
+      "display": "327",
       "basis": "traditional",
-      "note": "saint.gr, with the page's own hedge kept: «It puts her falling asleep in peace at 327» — «μάλλον», probably, is the page's own word."
+      "note": "The Охридски пролог for 21. мај ст. ст.: „У својој осамдесетој години представи се ова света жена Господу 327. године.“ This folder held no `dates` object at all until now, and neither doxologia.ro nor saint.gr gave it a year. **The eightieth year is a lifespan and no `birth` is reckoned from it**, which would have given 247."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст. — «Равноапп. царя Константина (337) и матери его царицы Елены (327) .»",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "note": "The identification needs no reading: the day’s line names her as the mother of Constantine, which is what this folder’s display name says, and its Romanian, Greek and Serbian rows all keep the same pair on the same day. `dates` is unchanged: the folder holds 327 off the Охридски пролог and the day line prints «(327)» and life1116 says «возвратилась в Константинополь, где вскоре скончалась в 327 году». HER OWN LIFE PAGE LISTS A SECOND DAY: «Дни памяти: 6 марта , 21 мая». The 6 марта is not repeated by this day page, is not thirteen days from it and so is not the style conversion, and the calendar does not say what it is; within the corpus it is the day the finding of the Cross is kept, which is the deed both her readings are built on, but nothing read says so and nothing was moved. One row per church is the schema, so the second day is recorded here and she does not render on it. What the Russian adds and the paragraph carries: the two services it reckons to her, the journey to Jerusalem in 326, the temple of Venus over the place, the three crosses and the board with «Иисус Назарянин, Царь Иудейский», the dead man laid on each in turn, the raising with the Cross and the elevation by the patriarch Макарий, the people’s «Господи помилуй!», the restoring of the name Jerusalem for Aelia Capitolina, the four churches she built — the Resurrection on Golgotha, the Mount of Olives, Bethlehem and the oak of Mamre at Hebron — the part of the Cross she took to the emperor and the rest left with the Patriarch, and the alms and the tables for the poor at which she served herself. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -159,18 +174,41 @@
         "rendered": "site"
       },
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Креста Твоего образ на Небеси видев/ и, якоже Павел, звание не от человек прием,/ в царех апостол Твой, Господи,/ Царствующий град в руце Твоей положи,/ егоже спасай всегда в мире молитвами Богородицы,/ едине Человеколюбче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст., «Тропарь равноапостольных царя Константина и царицы Елены», глас 8 — the joint troparion of the two of them, who are the whole of the company the day’s line names and who both stand on this day; it is copied to both folders and to no other",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having beheld the image of thy Cross in the heavens, and, like Paul, having received his calling not from men, thine apostle among kings, O Lord, laid the imperial city in thy hand; and do thou save it ever in peace, through the prayers of the Mother of God, O thou who alone lovest mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Константин днесь с материю Еленою/ Крест являют, всечестное древо,/ всех убо иудеев посрамление суще,/ оружие же на противныя верных людей:/ нас бо ради явися знамение велие/ и во бранех грозное.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст., «Кондак равноапостольных царя Константина и царицы Елены», глас 3 — the joint kontakion of the two of them, naming both by name; it is copied to both folders and to no other",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today Constantine, with his mother Helen, shows forth the Cross, the all-honoured tree, which is the shame of all the Jews and a weapon of the faithful against their adversaries. For our sake has it appeared, a great sign, and terrible in battle.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 327,
-      "latest": 327,
-      "display": "327",
-      "basis": "traditional",
-      "note": "The Охридски пролог for 21. мај ст. ст.: „У својој осамдесетој години представи се ова света жена Господу 327. године.“ This folder held no `dates` object at all until now, and neither doxologia.ro nor saint.gr gave it a year. **The eightieth year is a lifespan and no `birth` is reckoned from it**, which would have given 247."
-    }
   }
 }
