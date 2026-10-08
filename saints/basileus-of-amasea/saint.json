@@ -46,7 +46,8 @@
       "feast": {
         "day": 26,
         "month": 4,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "A SECOND RUSSIAN DAY, READ AND RECORDED, AND THE ROW DID NOT MOVE. This calendar's 30 апреля ст. ст. names him again, as «Обретение мощей сщмч. Василия , еп. Амасийского (IV).», the finding of his relics, and links the same life page life936 that the 26 апреля entry links. BRIEF-RUSSIAN §6 makes «Обретение мощей» a feast and not a folder, and BRIEF.md §4 gives a second day on one church no field but a note on that church's feast: so the day, the source, the year and the status here are exactly what they were before, and the four days between the two are the distance between a martyr's own day and the day his relics were found, both in the same Julian calendar. The 30 апреля page prints one hymn under his name, «Кондак священномученика Василия, епископа Амасийского» (глас 4), and IT IS THE SAME KONTAKION WORD FOR WORD that the 26 апреля page prints and that this folder already carries, so nothing was added. The 30 апреля line gives his century as «(IV)» where the 26 апреля line gave «ок. 323» and the Prologue gives 322; all three are inside the fourth century and `dates` were not touched again. NO YEAR IS GIVEN FOR THE FINDING, which is why no part of it is in `dates`."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 апреля ст. ст. — «Сщмч. Василия , еп. Амасийского (ок. 323).»",

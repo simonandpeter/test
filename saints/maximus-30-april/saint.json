@@ -16,8 +16,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 апреля ст. ст. — «Мч. Максима .»",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry of seven, and THE ONLY ENTRY IN THIS WHOLE BLOCK OF THREE DAYS WITH NO YEAR AT ALL — the line is «Мч. Максима .», name and rank and nothing else, with the full stop set off by a space where the other lines carry a bracketed year. Page life959 is ONE SENTENCE: «Святой мученик Максим пострадал за веру во Христа и был прободен мечом в чрево» — he suffered for the faith in Christ and was run through the belly with a sword. It heads «День памяти: 30 апреля», one day only. SO NO `dates` WERE WRITTEN: the folder had none, this source gives no century, no reign and no emperor, and nothing was inferred from the name or the company. NO ru NAME FORM WAS WRITTEN, AND THIS IS THE ONE PLACE IN THIS BLOCK WHERE BRIEF-RUSSIAN §2 WAS NOT FOLLOWED: the calendar's only name for him is the bare «Максим» — name page 1432 heads «Максим, мч.» and adds no surname, no toponymic and no grade — and storing it would widen the pre-existing fold 'максим', which at the time of this batch stands UNREAD on the plain gate with seven holders: maximus-companion-of-susanna, maximus-companion-of-terentius, maximus-of-marcianopolis, maximus-of-ozovia, maximus-of-ungrovlachia, maximus-the-confessor, maximus-the-soldier. Neither the plain gate nor `corpus-gate --batch` fails on a fold an upgrade widens, so the widening would have gone unrecorded; and there is no reading of those seven to carry forward inside a wider note, because the key has never been read. The form is therefore NOT in this folder and the fold is handed to the author with its exact membership. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

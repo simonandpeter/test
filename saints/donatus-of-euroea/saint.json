@@ -16,6 +16,11 @@
       "form": "Донат",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 30. април ст. ст., „Св. Донат.“ Св. is not a rank, so there is nothing to strip and the bare forename is the whole of the heading. The see is the body's opening words, „Епископ у Еврији Албанској“, and this corpus keeps a see in `office` and in the English display name. One other folder already holds the same bare Serbian form; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Донат Еврийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 648, «Святитель Донат Еврийский, епископ», with the rank word in front and the grade after the comma left off; the day's own line declines him «Свт. Доната , еп. Еврии», which puts the see in the office where the name page puts the toponymic beside the name. The folder's Serbian form is the bare «Донат»; the toponymic is kept here because a bare forename is a fold waiting to happen. Measured against the gate's own key function before it was written: 'донат евриискии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 апреля ст. ст. — «Свт. Доната , еп. Еврии (ок. 387).»",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of seven, and the one this day's hymns are fullest for: THREE were taken, a troparion, an «Ин тропарь» — a second troparion for the same saint — and a kontakion, which is every hymn the page prints under his name, and the folder had no Russian hymn at all. Page life960 heads «День памяти: 30 апреля», ONE DAY ONLY, so there is no second day to note. HIS `dates` DID NOT MOVE: the folder holds a birth of about 330 off saint.gr and a death the Russian line repeats, «(ок. 387)», with the life saying «Скончался святитель Донат около 387 года». THE REIGN THIS SOURCE PUTS HIM IN IS ITS OWN AND WAS NOT TURNED INTO A DATE: life960 opens «жил в царствование святого благоверного царя Феодосия Великого (379 - 397)», and those bracketed years are the page's reckoning of that reign rather than a statement about him. NO `locations` WERE WRITTEN, although the life names the place «Сориа» near Euroea where the harmful spring was."
     },
     {
       "church": "romanian",
@@ -110,6 +125,54 @@
       },
       "english": {
         "text": "Grace showed thee forth as the shepherd of Euroea and the beacon of Epirus, a wise hierarch, O blessed Donatus; for having shone with wonders and with the brightness of thy life, thou dost deal out to those who honour thee every godly gift. Therefore we run to thy protection, O father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Благий ярем Христов и бремя легко Евангельскаго учения взем,/ иерарше Донате Богоблаженне,/ вельми подвизался еси во временней жизни,/ архиерей убо Богоугоден быв,/ добре пасый люди Божия,/ просветив тыя учением,/ чудотворением вселенную удивил еси./ Сего ради молим тя:/ да избавит нас Христос Бог от всяких бед/ и Небеснаго блаженства сподобит.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Доната, епископа Еврийского», глас 8, under «Молитвы» on the day page for 30 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking upon thee the good yoke of Christ and the light burden of the teaching of the Gospel, O God-blessed hierarch Donatus, greatly didst thou struggle in this temporal life; and being a high priest well pleasing to God, shepherding the people of God rightly and enlightening them with teaching, thou hast astonished the world by thy wonderworking. Therefore we pray thee: may Christ God deliver us from all troubles and count us worthy of the blessedness of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Блажен делатель и украситель Церкве Христовы,/ отче Донате, был еси,/ непрестанно попечение о стаде твоем стяжав,/ научая и руководя оно в любви Сына Божия,/ не токмо бо в твоем граде многий народ,/ но в Константинополе самодержца и в нем вся люди/ удивил еси/ православными чудесы твоими./ Богоугодныя убо мольбы/ сотворяя ко Христу Богу,/ помощник скор всем явися,/ предстоя Всесвятей Троице,/ в Вышних моли Ю о всех нас,/ да спасет души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь святителя Доната, епископа Еврийского», глас 4, under «Молитвы» on the day page for 30 апреля ст. ст. «Ин тропарь» is a second troparion for the same saint and the page prints both.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A blessed labourer and adorner of the Church of Christ wast thou, O father Donatus, taking unceasing care for thy flock, teaching it and leading it in the love of the Son of God; for not the many people of thine own city only, but in Constantinople the sovereign himself and all the people with him didst thou astonish by thine Orthodox wonders. Making therefore thy God-pleasing supplications to Christ God, thou wast shown a swift helper to all: standing before the All-Holy Trinity, entreat It in the heights for us all, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Красото Церкве, утвердившийся на камени — Боговоплощенном Спасе Христе,/ Богоправимое добродетелей правило,/ Донате, досточудный чудотворче,/ яко иерарх имееши дерзновение всетворящему Богу о людех молитися,/ врагов видимых и невидимых предстательством твоим свободи вопиющия:/ слава в Троице Единому Богу.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Доната, епископа Еврийского», глас 8, under «Молитвы» on the day page for 30 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O beauty of the Church, established upon the rock, Christ the Saviour incarnate of God; O divinely guided rule of the virtues, Donatus, wonderworker worthy of all wonder: as a hierarch thou hast boldness to pray to the all-creating God for the people; by thine intercession set free from enemies visible and invisible those who cry, glory to the one God in Trinity.",
         "rendered": "site"
       }
     }
