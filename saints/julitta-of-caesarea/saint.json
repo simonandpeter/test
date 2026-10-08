@@ -11,6 +11,11 @@
       "form": "Ιουλίττη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Ιουλίου, «Αγία Ιουλίττη από την Καισαρεία», with the rank word and the place clause left off."
+    },
+    {
+      "form": "Јулита",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. јул ст. ст., „Св. муч. Јулита.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder already carries, both left off by BRIEF-SERBIAN §6, and the heading gives nothing else at all, so the bare forename is the whole of the form. «of Caesarea» in the display name stays out of it: the body has «Из Кесарије Кападокијске», FROM Caesarea in Cappadocia, a prepositional phrase and not an adjective. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Јулита» returns the key «јулита» at one holder, `julitta-mother-of-cyricus`, which is exactly the folder whose own name note predicted this collision when the Julian 15 July was read. The fold becomes two wide with this form and the key «јулита julitta-mother-of-cyricus julitta-of-caesarea» is declared in the same commit with both holders read. No earlier key existed, because one holder is no collision."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.08.2026 (31. јул ст. ст.) — „Св. муч. Јулита.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (§4). A DAY NO OTHER CALENDAR IN THIS CORPUS KEEPS HER ON: her Romanian and Greek rows are both 30 July and this book puts her on the Julian 31 July. Her `serbian` row was `undocumented`, so the row lands on the day of the book that was read, nothing of this church’s was moved and NO second-day note is owed — the shape is the 12-14 reader’s `thyrsus-of-caesarea` case. THE IDENTIFICATION IS THE DOSSIER AND NOT THE NAME, and it is point for point: «Из Кесарије Кападокијске», of Caesarea in Cappadocia; a dispute with her neighbour over property; the neighbour going to the court and declaring that Julitta was a Christian, «што је у то време значило исто што и бити ван законске заштите», which at that time meant the same as being outside the protection of the law — which is the folder’s own «the decrees of the emperor Diocletian held Christians to be outside the laws and outside civil rights» in other words; her giving up her property rather than her faith; and the burning. NO `dates`, AND THAT IS A REFUSAL AND NOT AN OVERSIGHT. This entry closes «него је мучише и најзад у огњу сагореше, 303. год.», they tortured her and at last burned her in the fire, in the year 303 — the first plain year any of the three books gives her. It is NOT written, because the folder’s own life already records two incompatible datings and this one takes a side in that quarrel without settling it: doxologia puts her under the decrees of Diocletian, which 303 agrees with, while saint.gr puts her in the lifetime of Basil the Great, who had a great regard for her and wrote to Palladius for her and to her to strengthen her, and under the decrees of Julian — sixty years later, and the only ground of her one `related` row. A year that would make that row impossible is not a year this reader writes on the strength of a third book’s single figure. The 303 is recorded in the life beside the other two readings, the folder claims none of the three, and THE AUTHOR IS ASKED about the `related` row to `basil-the-great` in the report. No `locations`: Caesarea in Cappadocia is a prepositional phrase in the heading’s own body and no coordinate is drawn off it. `types` UNTOUCHED: «муч.» is the `martyr` already held. The stored Serbian form is the heading’s bare forename, which lands on `julitta-mother-of-cyricus` — AND THAT FOLD WAS PREDICTED IN WRITING BY THE READER OF THE JULIAN 15 JULY, whose name note on that folder says that this very folder is one this book keeps sixteen days later on the Julian 31 July and that the two Julitta folders would fold with each other before the range was done. The prediction is answered here: the two-member key «јулита» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
