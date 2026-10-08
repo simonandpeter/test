@@ -1,0 +1,59 @@
+{
+  "slug": "mark-the-gravedigger",
+  "display_name": "Mark the Gravedigger",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Марко Гробар",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 29. децембар ст. ст., „Преподобни Марко Гробар и Теофил Плачљиви.“ — «Преподобни» is the rank `venerable`, which §6 keeps out of a stored form, and «Гробар», the gravedigger, is the by-name the heading gives him and is kept. Measured before it was written: neither the full string nor anything folding to it has another holder in the corpus, where the bare «Марко» lands on four folders — `mark-of-arethusa`, `mark-of-byblos`, `mark-of-ephesus` and `mark-the-evangelist`."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 29. децембар ст. ст. closes the entry «Упокојише се ове свете слуге Божје у XI веку и пређоше у Царство Христово» — these holy servants of God reposed in the eleventh century, which it says of the two the heading names together. The interval is that century and nothing narrower: the book gives no year. Read 8 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.01.2026 (29. децембар ст. ст.) — „Преподобни Марко Гробар и Теофил Плачљиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry. THE HEADING NAMES TWO MEN OVER A BODY THAT TELLS TWO STORIES, and this folder is the first of them; the heading is quoted whole on it because that is what the book prints and his name has no heading of its own, which is the 12-10 reader's handling of „Преподобна Ангелина и свети Јован деспот.“ WHY A NEW FOLDER. `ls saints | grep -i gravedigger` returns nothing; of the twenty-nine Mark folders the corpus holds, NOT ONE is of the Kyiv Caves — a search of every Mark folder's whole JSON for «Печер», Caves, Kyiv or Kiev returns no hit at all — and none is called the gravedigger or is credited with commanding the dead. `fk.mjs` on the bare «Марко» returns four folders, all of them Greek or Syrian and none of them Slavonic: `mark-of-arethusa`, `mark-of-byblos`, `mark-of-ephesus`, `mark-the-evangelist`. WHAT THE BOOK SAYS OF HIM, which is the whole of the folder: that he was a monk of the Kyiv Caves; that he had such grace that he gave orders to the dead and they obeyed him; and the one instance, which is the entry's own — that he sent word to a dead monk already washed and sung over, „Почекај, брате, до сутра јер ти гроб још није готов“, wait, brother, until tomorrow, for your grave is not ready yet, and the monk opened his eyes and was alive until the next day. `dates`: death the eleventh century, off «Упокојише се ове свете слуге Божје у XI веку», which the book says of the two together. No `locations`: a monastery is not a coordinate a reader draws, and the entry gives no place but the house itself. NO `related` AND NO HYMN. THE SECOND MAN OF THE HEADING WAS REFUSED AND IT IS THIS BLOCK'S MAIN OPEN QUESTION: «Теофил Плачљиви», Theophilus the Weeper, who wept ceaselessly for his sins and poured his tears into a vessel, and to whom an angel showed before his death a larger vessel full of the tears that had fallen on the ground or been wiped away or dried on his face. The corpus holds `theophilus-of-the-kyiv-caves`, and the two dossiers DO NOT MATCH: that folder is a recluse, with `office` Recluse, whose `floruit` is «12th or 13th century» off the Russian day line's «(XII-XIII)», whom the Russian keeps on 24 October as the third of three recluses with `arethas-of-the-kyiv-caves` and `sisoes-of-the-kyiv-caves`, and whose whole dossier is three sentences with no tears in them. Against that, this entry gives the eleventh century, 29 December, a companion who is not a recluse, and the vessel of tears. Whether they are one man is not a reader's decision (BRIEF.md §5), and both answers cost something — a second folder if they are one man, and a man left unkept if they are two — so NO folder was made for him and NO row was put on the recluse, and the author has everything needed to settle it in a line. The Prologue prints no hymn (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

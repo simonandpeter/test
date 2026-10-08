@@ -1,0 +1,9 @@
+# Mark the Gravedigger
+
+The Охридски пролог keeps him on 29. децембар ст. ст., in a heading that names two men: „Преподобни Марко Гробар и Теофил Плачљиви.“ — the venerable Mark the Gravedigger, and Theophilus the Weeper. «Кијевопечерски монаси» is all the book says of where they lived: monks of the Kyiv Caves. Of Mark it says that he had so great a grace that he gave his orders to the dead, and the dead obeyed him.
+
+The entry gives one instance of it, and it is the whole of what this book tells of him. A monk had died and had already been washed and sung over, and his grave was not ready; so Mark sent word that he should be told, „Почекај, брате, до сутра јер ти гроб још није готов“ — wait, brother, until tomorrow, for your grave is not ready yet. «И монах отвори очи и би жив до другог дана» — and the monk opened his eyes, and was alive until the next day.
+
+«Упокојише се ове свете слуге Божје у XI веку и пређоше у Царство Христово» — these holy servants of God reposed in the eleventh century, the book says of the two of them together, and passed over into the kingdom of Christ. That century is all the dating there is here; no year is given, and no place but the house itself. The second man the heading names, Теофил Плачљиви, has his own story in the same entry — the ceaseless weeping for his sins, the tears poured into a vessel, and the angel who showed him before his death a larger vessel holding all the tears that had fallen to the ground or been wiped away or dried on his face. This corpus keeps no folder read as that man, and his name is left here in the book's own letters.
+
+*After the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 29. децембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-11&prolog=1); read 8 October 2026.*

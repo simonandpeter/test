@@ -54,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.01.2026 (29. децембар ст. ст.) — „Светих четрнаест хиљада младенаца витлејемских.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and it is ONE FOLDER AND NOT FOURTEEN THOUSAND: the heading gives the company a count and a town and enumerates nobody, and the body names no child at all, which is BRIEF.md §4’s ruling and is how the 12-21 and 12-28 readers handled the three Nicomedian companies. Identified on the same menologion day the Romanian and the Greek already keep the company, and on Herod’s order itself. `dates` UNTOUCHED AND NONE WRITTEN: the folder has none, and what this entry gives is not a year but a distance — «изврши се годину дана по рођењу Христовом 29. децембра», done a year after the birth of Christ, on 29 December — which is a span from an undated event and the day the folder already keeps, so it goes in no field. `types` untouched: «мученаца» is the `martyr` the folder carries. WHAT THE ENTRY ADDS, and goes into the life: that the order was carried out «дословце», to the letter, and HOW — some cut down with the sword, some broken against a stone, some crushed underfoot, some strangled with the hands; the mothers’ weeping rising to heaven, with Jeremiah 31:15 and Matthew 2:18 cited; and then the whole of what became of Herod, which is the entry’s second half and is not about the children at all. FIVE PERSONS ARE NAMED IN THAT SECOND HALF AND NOT ONE TAKES A ROW OR A LINK. Захарија, killed in the temple at Herod’s order for not giving up his son; Јован, the son Herod sought, thinking him the new King; свети Симеон Богопримац, who would have been killed too had he not been taken to God soon after the Meeting; Иркан the high priest and the seventy elders of the Sanhedrin, killed for having told Herod where the Messiah was to be born. The heading names the children alone and carries NO company clause, so the 12-19 reader’s `aglaia-of-rome` ruling decides it — a name inside a body is not a heading — and besides, none of the five suffered WITH the children or belongs to their story as a companion: they are what the same tyrant did next. All five stay in the book’s own Cyrillic in the life, so no link and no `related` row is implied in either direction, and the folder’s empty `related` is left empty. NO SERBIAN NAME FORM: the heading gives a count, a rank and a town and no name, and a form assembled out of «четрнаест хиљада» would be a phrase of my making — the 12-21 and 12-28 refusals in the same words. No `locations`. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
