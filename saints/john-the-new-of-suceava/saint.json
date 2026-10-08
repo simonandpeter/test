@@ -16,6 +16,11 @@
       "form": "Јован Нови Сочавски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 2. јун ст. ст., „Свети мученик Јован Нови Сочавски“ — Свети is not a rank and мученик is a rank word this corpus puts in `types`, so both are stripped; Нови and Сочавски are the epithet and the house, not ranks, so both stay and the form is the fullest the heading gives. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`. A note for §7: the sweep’s known trouble with Јован against John did not bite here, because the day list for the menologion 2/6 already held the folder and no name scan was needed."
+    },
+    {
+      "form": "Иоанн Новый, Сочавский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 991 gives it, «Великомученик Иоанн Новый, Сочавский», with the rank word taken off and both name words kept. The comma is the calendar's own and stays inside the stored form, as it does for «Дада Доростольский, Озовийский»: «Новый» is the epithet that tells him from the other Johns and «Сочавский» the city, and dropping either would be a choice. Measured with the gate's own fold before writing: 'иоанн новыи сочавскии' has no other holder, where a bare «Иоанн» folds onto a key 98 folders wide."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 июня ст. ст. — «Вмч. Иоанна Нового, Сочавского (1330-1340).»",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of five, «Вмч. Иоанна Нового, Сочавского (1330-1340).», which gives him the great-martyr's grade this folder already carries and the Сочавский epithet — of Suceava — the folder's Romanian and Serbian forms already carry. The Romanian and Serbian rows stand on this same 2 June and the Greek on 12 June, so the day is not in doubt. The years the line gives, «(1330-1340)», are a decade and not a date: nothing of `dates` was touched here, and the interval is recorded in this note rather than written into the folder. The day page prints a troparion and a kontakion under his name and both are added. `id991`, the index of his lives, was NOT followed, so nothing of his life is touched here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -87,6 +102,38 @@
       },
       "english": {
         "text": "Guiding thy life well on earth, O sufferer, with almsgiving and unceasing prayers and tears, and setting out again manfully to suffering, thou didst rebuke the unbelief of the Persians. Therefore thou art become a strength to the Church and a praise to Christians, O ever-remembered Saint John.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Житие на земли добре окормляя, страдальче,/ милостынями, и частыми молитвами, и слезами,/ паки же ко страданию мужески устремився,/ персское обличил еси нечестие./ Темже Церкве был еси утверждение/ и христиан похвало,/ Иоанне приснопамятне.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь великомученика Иоанна Нового, Сочавского», глас 4, under «Молитвы» on the day page for 2 июня ст. ст.. It names him in the vocative, so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Steering thy life well upon the earth, O sufferer, with alms and with frequent prayers and tears, and then setting out manfully to thy suffering, thou didst put the Persian impiety to shame. Therefore thou wast a strengthening of the Church and the praise of Christians, O ever-memorable John.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Морскую плавая пучину куплею,/ от востока тщался еси к северу,/ но Богу призвавшу тя,/ якоже Матфей мытницу, ты же куплю оставль,/ и Тому последовал еси кровию мучения,/ временными искупив непроходимая,/ и венец приял еси непобедимый.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак великомученика Иоанна Нового, Сочавского», глас 4, under «Молитвы» on the day page for 2 июня ст. ст.. The «Матфей» it names is the evangelist at the tax-booth, in a comparison and not as a companion.",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sailing the deep of the sea in trade, thou didst hasten from the east towards the north; but when God called thee thou didst leave thy merchandise as Matthew left the tax-booth, and didst follow Him by the blood of martyrdom, buying with things that pass what no man may pass to; and thou didst receive an unconquerable crown.",
         "rendered": "site"
       }
     }

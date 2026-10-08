@@ -16,6 +16,11 @@
       "form": "Агапит Печерски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 1. јун ст. ст., „Преподобни Агапит Печерски“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped; Печерски is the house and not a rank, so it stays and the form is the fullest the heading gives. MEASURED, AND THE FULLER FORM AVOIDS A LIVE FOLD: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Агапит Печерски» but `[('agapitus-of-rome', 'sr'), ('agapitus-the-deacon', 'ru')]` for the bare «Агапит», so the bare form would have folded onto a pope of Rome on the strength of a forename."
+    },
+    {
+      "form": "Агапит Печерский",
+      "lang": "ru",
+      "note": "Name page 53 heads him «Преподобный Агапит Печерский, врач безмездный», which is the only name page of this day to spell the rank out rather than abbreviate it; «Преподобный» is the rank and «врач безмездный» the grade, so both come off and the two name words remain. 'agapit pecherski' is the Serbian form already on this folder and folds apart from this one; 'агапит печерскии' has no other holder."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июня ст. ст. — «Прп. Агапита Печерского, врача безмездного (XI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of seven, «Прп. Агапита Печерского, врача безмездного (XI).». «врача безмездного» — the unmercenary physician — is the `unmercenary` and `physician` this folder already carries in `types`, and the century «(XI)» is the 11th century the folder already holds. The identification is the menologion day, the Печерский epithet and the physician's grade together, and the folder's own Romanian life already closes on the 1 June commemoration. The day page prints a troparion and a kontakion under his name, both specifying «в Ближних пещерах», in the Nearer Caves, and both are added. `id53`, the index of his lives, was NOT followed, so nothing of his life is touched here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -91,5 +106,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Богоноснаго Антония ревнуя смиренномудрию,/ аки некиим врачевством зелием снедным/ исцелял еси болящия, преподобне Агапите,/ тем и врача неверна уверив,/ наставил еси на путь спасения./ Уврачуй и наша болезни/ и молися Господеви о воспевающих тя.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Агапита Печерского, врача безмездного, в Ближних пещерах», глас 5, under «Молитвы» on the day page for 1 июня ст. ст. It names him in the vocative, so it is his own proper. It also names «Богоноснаго Антония», to whom this folder is already related.",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Emulating the humble wisdom of the God-bearing Anthony, thou didst heal the sick as with some medicine, by herbs given for food, O venerable Agapitus; and bringing thereby an unbelieving physician to faith, thou didst set him on the way of salvation. Heal our sicknesses also, and pray to the Lord for those who sing thy praise.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Врач сый изряден, чудне,/ являя несумненную твою веру,/ обличая же армениново неверие/ и приводя его к благочестию,/ себе, близ смерти бывшу,/ испросил еси от Бога продолжение живота/ и, сим чудом того уверив,/ привел еси Христови,/ Емуже в веселии предстоя,/ молися о нас, преподобне.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Агапита Печерского, врача безмездного, в Ближних пещерах», глас 6, under «Молитвы» on the day page for 1 июня ст. ст. The «арменин» it reproves is the unbelieving Armenian physician of his life, whom this folder's own life already tells of.",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being an excellent physician, O wondrous one, thou didst show forth thy unwavering faith, reprove the Armenian's unbelief and lead him to piety; and being thyself near to death thou didst ask of God a lengthening of thy life, and having by that wonder brought him to believe, thou didst lead him to Christ, before whom thou standest in gladness: pray for us, O venerable one.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

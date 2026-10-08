@@ -13,6 +13,11 @@
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουνίου, «Όσιος Διονύσιος του Γλουσέτσκ ο Θαυματουργός», with the rank word, the place and the epithet left off."
+    },
+    {
+      "form": "Дионисий Глушицкий",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 620 gives it, «Дионисий Глушицкий, игумен», with the rank word taken off; the day line itself declines the name and prints no epithet beyond this. 'глушицкии дионисии' has no other holder."
     }
   ],
   "dates": {
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr makes him a Russian abbot of the Vologda country, so the Russian calendar is very likely to keep him; this row says what was read."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июня ст. ст. — «Прп. Дионисия , игумена Глушицкого (1437).»",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of seven, «Прп. Дионисия , игумена Глушицкого (1437).», which gives him the abbot's grade this folder already carries in `types` and the year 1437 the folder already holds for his death. Name page 620 heads him «Дионисий Глушицкий, игумен» and this is the first Cyrillic name form the folder has had — it stood on saint.gr's Greek alone. The identification is the menologion day, the Glushitsa epithet and the abbot's grade together. The day page prints a troparion and a kontakion under his name in full and both are added; `life6557` was NOT read, so nothing of his life is touched here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -65,5 +80,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественною любовию от юности распалаемь,/ Дионисие преподобне,/ вся, яже в мире красная, возненавидев,/ Христа единаго возлюбил еси/ и сего ради во внутреннюю пустыню вселился еси,/ со зверьми живый, весь Христови./ Отонудуже и Всевидящее Око, твоя труды видев,/ даром чудес и по преставлении обогатил тя есть./ Темже вопием ти:/ моли непрестанно о всех нас,/ честную память твою присно/ в песнех почитающих.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Дионисия, игумена Глушицкого», глас 1, under «Молитвы» on the day page for 1 июня ст. ст. It names him in the vocative, so it is his own proper and not a common.",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Set afire with divine love from thy youth, O venerable Dionysius, thou didst hate all that is fair in the world and didst love Christ alone; and for His sake thou wentest to dwell in the inner wilderness, living among the beasts and wholly Christ's. Whence the All-seeing Eye, beholding thy labours, enriched thee with the gift of wonders even after thy departure. Therefore we cry to thee: pray thou unceasingly for us all, who ever honour thy precious memory in hymns.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Все твое умное желание к Богу вперив,/ Тому невозвратно от души последовал еси, в пустыню вселився,/ и, тамо ангельски пожив, многим путь был еси ко спасению;/ сего ради и Христос тебе прослави и даром чудес обогати./ Темже вси вопием ти:/ радуйся, Дионисие преподобне, пустынный жителю.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Дионисия, игумена Глушицкого», глас 8, under «Молитвы» on the day page for 1 июня ст. ст. It names him in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having fixed the whole desire of thy mind upon God, thou didst follow Him from thy soul without turning back, settling in the wilderness; and living there as an angel, thou wast a way of salvation to many. For this cause Christ glorified thee and enriched thee with the gift of wonders. Therefore we all cry to thee: rejoice, O venerable Dionysius, dweller in the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

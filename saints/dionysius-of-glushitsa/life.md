@@ -14,4 +14,4 @@ He taught the other monks, saying: my children, do not be afraid of the labours 
 
 Seven years before his repose he dug his own grave and visited it every day, cultivating in his heart the remembrance of death; and he fell asleep in peace in 1437, at the age of seventy-five.
 
-*After saint.gr's calendar for 1 Ιουνίου — [the day](https://www.saint.gr/06/01/index.aspx) and [the life](https://www.saint.gr/434/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 1 Ιουνίου — [the day](https://www.saint.gr/06/01/index.aspx) and [the life](https://www.saint.gr/434/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 1 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260601.html); read 8 October 2026.*

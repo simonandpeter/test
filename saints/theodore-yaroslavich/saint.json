@@ -10,6 +10,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιουνίου, «Άγιος Θεόδωρος Γιάροσλαβ ο Δούκας», with the rank word left off. The patronymic and the rank in the day's line, «Γιάροσλαβ ο Δούκας», are left off the stored form."
+    },
+    {
+      "form": "Феодор Ярославич",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 2206 gives it, «Благоверный князь Феодор Новгородский», with the rank word and the princely title taken off. Measured with the gate's own fold before it was written: 'феодор ярославич' has no other holder. **The form stored is the DAY LINE’s and not the name page’s, which is a departure worth stating.** The line prints «Блгв. кн. Феодора Ярославича ... Новгородского», giving the patronymic AND the city, and name page 2206 gives «Благоверный князь Феодор Новгородский», the city only. The patronymic is a name word where the toponymic is an epithet, and it is also the form this folder’s display name already uses. **The city form was NOT stored because it would make a fold**: ‘новгородскии феодор’ is already held by `theodore-of-novgorod`, which stores the identical string «Феодор Новгородский» — a fool-for-Christ who died at Novgorod in 1392 and whom this calendar keeps on 19 января, a hundred and fifty-nine years after this prince and in a wholly different life. The two men are easily told apart and the fold would have been a readable one, but it would have been a fold made for no reason when the calendar itself offers a form that does not collide. A later reader who stores the city form owes a `READ_FOLDS` key naming both. A bare «Феодор» would meet the hundred-odd Theodore folders this corpus holds."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Блгв. кн. Феодора Ярославича (брата св. Александра Невского), Новгородского (1233).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry of twelve, «Блгв. кн. Феодора Ярославича (брата св. Александра Невского), Новгородского (1233).», which gives him the prince's grade this folder already carries, Novgorod, the year 1233 and his brother's name. Only the Greek row stood before this, on this same 5 June, and this is the folder's first Cyrillic name form. **Александр Невский TOOK NOTHING from this day**: a second `name:` link stands under this line, «Святой благоверный князь Александр Невский» with its own life index, but the parenthesis names him only to say whose brother Theodore was and he is not commemorated here. A brother IS a relation on the standing rule, and the brotherhood is the line's own statement — but no `related` row was written in either direction, because that is a reading of the two men and not of this day, and it is handed to the author. The day page prints a troparion and a kontakion under his name and both are added; the troparion turns on his dying young, «скончався в юности», and the kontakion on the incorruption of his body. `id2206` was NOT followed. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -58,5 +73,39 @@
   },
   "related": [
     "alexander-nevsky"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От благочестиваго корене отрасль благочестивая прозябл еси/ и, скончався в юности, лета долга твоими добродетельми исполнил еси,/ благоверный княже Феодоре,/ сего ради Владеющему временами молимся,/ да молитвами твоими подаст нам долготу лет// и низпослет стране нашей велию и богатую милость.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь благоверного князя Феодора», глас 8, under «Молитвы» on the day page for 5 июня ст. ст.. It names him in the vocative, so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From a pious root thou didst spring up a pious branch; and ending thy life in youth, thou didst fill out long years by thy virtues, O right-believing prince Theodore. Therefore we pray to Him who holds the times, that by thy prayers He grant us length of years and send down upon our land great and abundant mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "В благочестии рожденна,/ в страсе Божии воспитана,/ в житии целомудрие стяжавшаго,/ по успении же нетлением телесе просиявшаго,/ благовернаго князя Феодора во святых почитая,/ смиренно молимся Тебе, Всесильный Владыко,/ да и во веки прославляеши святыми Твоими// страны наша российския.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак благоверного князя Феодора», глас 4, under «Молитвы» on the day page for 5 июня ст. ст.. It names him in the third person rather than the vocative, which is this source's way with several of its princes.",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honouring among the saints the right-believing prince Theodore, born in piety, reared in the fear of God, who gained chastity in his life and who shone after his falling asleep by the incorruption of his body, we humbly pray Thee, O almighty Master, that Thou mayest for ever glorify our Russian lands by Thy saints.",
+        "rendered": "site"
+      }
+    }
   ]
 }

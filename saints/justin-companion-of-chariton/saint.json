@@ -16,6 +16,11 @@
       "form": "Јустин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 1. јун ст. ст., „Свети мученик Јустин, Харитон, Харита, Евелпист, Јеракс, Пеон, Валеријан и Јуст“, which enumerates eight names and puts him first. The rank words stand once at the head of the company — Свети мученик, the `martyr` this corpus puts in `types` — and nothing else in the heading is strippable, so the form is the bare personal name the heading itself prints and no fuller form exists in this source to prefer."
+    },
+    {
+      "form": "Иустин Римский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1151 gives it, «Иустин Римский, мч.», with the rank word taken off; the day line itself declines the name and prints no epithet beyond this. The day line calls him only «другого Иустина», the other Justin, so the city in the stored form is read off the name page and not off the line. 'иустин римскии' has no other holder."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июня ст. ст. — «Мчч. Иустина Философа и другого Иустина и с ними Харитона , Хариты , Евелписта , Иеракса , Пеона и Валериана (166).»",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of seven, and it is one line naming EIGHT people: «Мчч. Иустина Философа и другого Иустина и с ними Харитона , Хариты , Евелписта , Иеракса , Пеона и Валериана (166).» — Justin the Philosopher, «другого Иустина», the other Justin, and then Chariton, Charito, Euelpistus, Hierax, Paion and Valerian. Eight name links stand under it, one for each, and all eight already had folders in this corpus. The year the line gives the whole company at once is 166, and the life it links, life1210, says «пострадали одновременно со святым Иустином Философом , в 166 году»; this folder's recorded 163 comes from the Охридски пролог and was NOT moved — the two sources disagree by three years and neither is preferred here. life1210's own title names the company differently from the day line: «Мученики Иустин, Харитон, Евелпист, Иеракс, Пеон, Валериан, Иуст и мученица Харита», which includes «Иуст» — Justus — whom the day line does not print and for whom no name link stands on this day. `justus-1-june` therefore took NO russian row in this batch, and the omission is a reading reported to the author rather than a decision. The passion as this source tells it: the eight were brought to Rome, imprisoned, and before the prefect Рустик confessed Christ; refusing to sacrifice they were sentenced and beheaded. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -97,6 +112,22 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength they overcame the tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего:/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь мученика Иустина Философа и иже с ним», глас 4, under «Молитвы» on the day page for 1 июня ст. ст. It is the common of martyrs, printed in the plural and under no personal name, and its heading sets it over Justin the Philosopher and those with him — so it is the service of the whole company this day's first line enumerates, and it is copied whole here (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their sufferings have received imperishable crowns from Thee, our God; for having Thy strength they cast down the tormentors and shattered the feeble insolence of the demons. By their prayers save our souls.",
         "rendered": "site"
       }
     }

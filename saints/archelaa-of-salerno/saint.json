@@ -1,0 +1,64 @@
+{
+  "slug": "archelaa-of-salerno",
+  "display_name": "Archelaa of Salerno",
+  "types": [
+    "venerable-martyr",
+    "virgin",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Архелая Салернская",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 2414 gives it, «Архелая Салернская, дева, прмц.», with the grade «дева» and the rank word taken off. Measured with the gate's own fold before it was written: 'архелая салернская' has no other holder."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 293,
+      "latest": 293,
+      "display": "293",
+      "basis": "traditional",
+      "note": "The day line gives the three of them one year, «(293)», and `life1249` closes with the same, «Святые мученицы были обезглавлены + 293)» — the stray bracket is the page's own. The life also dates the persecution «Диоклетиана (284–305)», which contains it. No year of birth is given."
+    }
+  },
+  "related": [
+    "thecla-of-salerno",
+    "susanna-of-salerno"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июня ст. ст. — «Прмцц. дев Архелаи , Феклы и Сосанны (293).»",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of eight, «Прмцц. дев Архелаи , Феклы и Сосанны (293).», one line naming THREE women; three `name:` links stand under it and not one of the three had a folder in this corpus. `ls -d saints/archela*`, `saints/thecla*` and `saints/susanna*` were all run first, and a Cyrillic `grep -rl` for «Архелая», «Сосанна» and «Салерн» besides: the corpus's six Thecla folders and five Susanna folders are all other women, and the one Cyrillic hit was `susanna-of-rome`, which stores the bare «Сосанна» and is venerated russian on 11 августа — a virgin-martyr of Rome, not a преподобномученица of a monastery near it, and on a different day with a different page. The two were kept apart on that and the stored forms fold apart. `life1249` is the one reading for all three and was read whole. The day page prints eleven hymns and NONE under any of these three names. azbyka.ru was not read, and each of the three name pages lists «День памяти: 6 июня» and nothing else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

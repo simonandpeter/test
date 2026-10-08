@@ -11,6 +11,11 @@
       "form": "Φωτεινός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιοι Φωτεινός ο Επίσκοπος, Σάνκτιος ο διάκονος, Βέτιος, Επάγαθος, Ποντικός, Βιβλίδης, Άτταλος, Αλέξανδρος, Μάτουρος και οι συν αυτώ Μάρτυρες», with the rank words left off."
+    },
+    {
+      "form": "Пофин",
+      "lang": "ru",
+      "note": "A BARE FORENAME, and the only one available. Name page 14891 heads him «Святитель Пофин епископ Лионский, епископ Лионский, сщмч.» and the day line «Сщмч. Пофина , епископа Лионского»: in both, everything after the name is the rank and the see, which is `office` and not a name word, and the see appears nowhere as a bare toponymic adjective standing with the name the way «Бландина Лионская» does. The bare string costs nothing: measured with the gate's own fold before writing, 'пофин' has no holder in the corpus at all, so no fold is made and none is widened. «Пофин» spells the θ of Πόθεινος with ф, which is why no Cyrillic sweep reaches the Greek «Φωτεινός» this folder already holds."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 июня ст. ст. — «Сщмч. Пофина , епископа Лионского и с ним пострадавших (ок. 177) Мц. Бландины и мч. Понтика Лионских (177).»",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "note": "The day's third entry as `day-candidates.mjs` prints it is in fact TWO printed lines run together — «Сщмч. Пофина , епископа Лионского и с ним пострадавших (ок. 177)» and «Мц. Бландины и мч. Понтика Лионских (177)» — which is the merging the instrument is known to do; the three `name:` links behind it were counted and they are three. «и с ним пострадавших», and those who suffered with him, enumerates nobody and is not a folder; the other eight of the Lyons company this corpus holds took nothing from this day. Neither of the two lines links a /Life/ page, so the three readings here rest on the day lines and the three name pages and on nothing else, and the day page prints no hymn for any of them. azbyka.ru was not read. He is the Сщмч. Пофин of the first of the two lines, the bishop of Lyons, and his name page heads him «Святитель Пофин епископ Лионский, епископ Лионский, сщмч.» — the see twice over, which is the page's own doubling and not a transcription error. **THE CORPUS HOLDS TWO FOLDERS FOR THIS ONE MAN AND THE ROW WENT ON THIS ONE.** `pothinus-of-lyon` is the same Pothinus, bishop of Lyons: it carries «Άγιος Πόθεινος επίσκοπος Λουγδούνου», the Latin «Pothinus» and the Serbian «Свешт. муч. Потин еп. Лионски», is graded `hieromartyr` and `bishop` with `office` Bishop of Lyon, and stands venerated greek and serbian on 23 August with a death of «the 2nd century». This folder, `photinos-of-lyons`, carries «Φωτεινός», the same two types, a death of 177, and stands venerated greek on 2 June in the company of the eight other martyrs of Lyons, to all of whom it is related. The duplication is NOT this batch's work and nothing was merged: the two folders differ by the tradition that keeps them — 2 June with the company against 23 August with Irenaeus — and merging two existing folders is not a reader's decision. The row was put here because this is the folder standing on the menologion day the Russian calendar prints him on, and in the company the Russian line names him at the head of. **It is handed to the author as the open question of this day.**"
     },
     {
       "church": "romanian",

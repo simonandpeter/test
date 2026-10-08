@@ -16,6 +16,11 @@
       "form": "Доротеј",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 5. јун ст. ст., „Свештеномученик Доротеј, епископ Тирски“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „Тирски“ is the see, which the display name already carries. `foldchk.py` returns `[('dorotheus-the-hermit-of-egypt', 'sr')]`: a fold of two on the bare form, deliberate, the other man being a hermit of Egypt kept on another day."
+    },
+    {
+      "form": "Дорофей Тирский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 654 gives it, «Святитель Дорофей Тирский, епископ, сщмч.», with the rank word, the office and the grade taken off. Measured with the gate's own fold before it was written: 'дорофеи тирскии' has no other holder. The corpus holds seven Dorotheus folders and two of them are named on this same day by this same calendar — this one and `dorotheus-of-gaza` — so the toponymic is what keeps them apart; a bare «Дорофей» is already the stored `ru` form of `dorotheus-the-hermit-of-egypt`."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Сщмч. Дорофея , еп. Тирского (ок. 362).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of twelve, «Сщмч. Дорофея , еп. Тирского (ок. 362).», which gives him the hieromartyr's grade and the Tyre see this folder already carries. The Romanian, Greek and Serbian rows all stand on this same 5 June. «ок. 362» is the one reading to record and not to write: the folder holds a birth of 255 and its own death reading from the other calendars, and 362 was not put into `dates`, because this line gives a year for a death the folder already dates and the two were not reconciled here. The day page prints THREE hymns under his name — a troparion, an «Ин тропарь» that names the Tyre see in its heading, and a kontakion — and all three are added. `life1233` was NOT read. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -106,6 +121,54 @@
       },
       "english": {
         "text": "As a perfect gift from the Father of lights you received the shining of wisdom, O Dorotheus, being a wise hierarch; and so, having multiplied your talent, blessed one, you contended beyond nature in the deepest old age, interceding, O hieromartyr, for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник, апостолом быв,/ деяние обрел еси, Богодохновенне,/ в видения восход;/ сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Дорофее,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь священномученика Дорофея», глас 4, under «Молитвы» on the day page for 5 июня ст. ст.. It is the common of a hieromartyr bishop with the saint's name filled into its vocative, so it is his own service (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A sharer in their ways and a successor to their throne, thou wast made one with the apostles, O God-inspired one, and didst find in action an ascent to contemplation; and therefore, setting straight the word of truth, thou didst suffer for the faith even unto blood, O hieromartyr Dorotheus: pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Нищелюбием обогатився/ и милость воздержания источив,/ наслаждения Царствия Небеснаго сподобися,/ страдальчески беды приим по стаде своем,/ и апостолом обретеся ссельник,/ отче священномучениче Дорофее,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь священномученика Дорофея, епископа Тирского», глас 5, under «Молитвы» on the day page for 5 июня ст. ст.. «Ин тропарь» is this source's way of printing a second troparion for the same saint, and this heading is the only one of the three to name the Tyre see.",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enriched by the love of the poor and pouring forth the mercy of abstinence, thou wast counted worthy of the delight of the Kingdom of heaven; and taking hardships as a sufferer for the sake of thy flock, thou wast found a fellow-dweller with the apostles, O father and hieromartyr Dorotheus: pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Добродетельми сияя, и Божественными учении паче солнца,/ и страдании, блаженнее, облистал еси,/ просветил еси землю, Дорофее, отгнав мглу многобожия и лютыя ереси.// Сего ради память твою светло празднуем.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак священномученика Дорофея», глас 5, under «Молитвы» on the day page for 5 июня ст. ст.. It names him in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining with virtues, and with divine teachings brighter than the sun, and flashing forth with sufferings, O most blessed one, thou didst enlighten the earth, O Dorotheus, driving off the fog of many gods and of cruel heresies. Therefore we keep thy memory in brightness.",
         "rendered": "site"
       }
     }

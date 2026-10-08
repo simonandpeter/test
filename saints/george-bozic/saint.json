@@ -12,13 +12,28 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιος Γεώργιος ο Ιερομάρτυρας ο εκ Κροατίας», with the rank words left off."
+    },
+    {
+      "form": "Георгий (Богич)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 14513 gives it, «Георгий (Богич), иерей, сщмч.», with the grade and the rank word taken off. Measured with the gate's own fold before it was written: 'богич георгии' has no other holder. The Russian calendar writes the Serbian Божић as Богич and puts it in the parentheses it uses for a surname, where it stays; the day line prints only «Георгия» in the genitive, and a bare «Георгий» would meet the many George folders this corpus holds."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Сщмч. Георгия пресвитера (1941) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry of eleven, «Сщмч. Георгия пресвитера (1941) (Серб.).». «(Серб.)» marks him a saint of the Serbian church whom the Russian calendar keeps, and the surname behind the name link, Богич, is the Божић of this folder's slug and display name; the grades agree too, иерей and сщмч. against the folder's `hieromartyr`, `presbyter` and `new-martyr`. Only the Greek row stood before this, and this is the folder's first Cyrillic name form. **`dates` were written for the first time from the line's «(1941)»**, the folder having held none; the name page gives no year of birth and no day within 1941, and the folder has no `locations`. His name page, 14513, lists «День памяти: 4 июня» and nothing else, with no «26 января (Новомуч.)» beside it, and carries no life and no article. The day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -48,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "The year the day line gives him: «Сщмч. Георгия пресвитера (1941) (Серб.).» The folder held no dates at all before this; the name page gives no year of birth and no day within the year."
+    }
   }
 }

@@ -16,6 +16,11 @@
       "form": "Јустин Философ",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 1. јун ст. ст., „Свети мученик Јустин Философ“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`, so both are stripped and the bare form keeps the epithet Философ, which is the one thing in the heading that tells him from the Јустин of the company below. THE FULLER FORM IS DELIBERATE AND MEASURED: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for both «Јустин Философ» and «Јустин» today, but a bare «Јустин» here beside the bare «Јустин» the company below needs would be two folders on one string and a fold with nothing to tell them apart. One form, the fullest, as §6 requires. AND A FOLD IS NAMED IN ADVANCE: `justin-popovich` is kept on this same menologion day and his Serbian form is «Јустин Поповић», so when a later reader writes it the two will stand on adjacent strings and must be told apart by their centuries."
+    },
+    {
+      "form": "Иустин Философ",
+      "lang": "ru",
+      "note": "Name page 1152 heads him «Иустин Философ, Великий, Римский, мч.» — four words of name and epithet and then the grade. The stored form keeps the two the day line itself uses, «Иустина Философа» in the genitive; «Великий» and «Римский» are further epithets the day line does not print and are recorded here instead of stored, because «Римский» is also the whole of what distinguishes the OTHER Justin of this same line, whose form is «Иустин Римский». Measured with the gate's own fold before writing: 'иустин философ' has no other holder."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июня ст. ст. — «Мчч. Иустина Философа и другого Иустина и с ними Харитона , Хариты , Евелписта , Иеракса , Пеона и Валериана (166).»",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of seven, and it is one line naming EIGHT people: «Мчч. Иустина Философа и другого Иустина и с ними Харитона , Хариты , Евелписта , Иеракса , Пеона и Валериана (166).» — Justin the Philosopher, «другого Иустина», the other Justin, and then Chariton, Charito, Euelpistus, Hierax, Paion and Valerian. Eight name links stand under it, one for each, and all eight already had folders in this corpus. The year the line gives the whole company at once is 166, and the life it links, life1210, says «пострадали одновременно со святым Иустином Философом , в 166 году»; this folder's recorded 163 comes from the Охридски пролог and was NOT moved — the two sources disagree by three years and neither is preferred here. life1210's own title names the company differently from the day line: «Мученики Иустин, Харитон, Евелпист, Иеракс, Пеон, Валериан, Иуст и мученица Харита», which includes «Иуст» — Justus — whom the day line does not print and for whom no name link stands on this day. `justus-1-june` therefore took NO russian row in this batch, and the omission is a reading reported to the author rather than a decision. The passion as this source tells it: the eight were brought to Rome, imprisoned, and before the prefect Рустик confessed Christ; refusing to sacrifice they were sentenced and beheaded. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -122,6 +137,38 @@
       },
       "english": {
         "text": "Let us praise with encomia the true herald of godliness and the glorious orator of the mysteries, Justin the philosopher; for by the power of wisdom and of grace he made plain the word of the faith, asking divine forgiveness for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего:/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь мученика Иустина Философа и иже с ним», глас 4, under «Молитвы» on the day page for 1 июня ст. ст. It is the common of martyrs, printed in the plural and under no personal name, and its heading sets it over Justin the Philosopher and those with him — so it is the service of the whole company this day's first line enumerates, and it is copied whole here (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their sufferings have received imperishable crowns from Thee, our God; for having Thy strength they cast down the tormentors and shattered the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Премудростию Божественных твоих словес, Иустине,/ Церковь Божия вся украсившися,/ жития твоего светлостию мир освещает,/ излияния же ради крове венец прием/ и со Ангелы предстоя Христу,// моли непрестанно о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак мученика Иустина Философа», глас 2, under «Молитвы» on the day page for 1 июня ст. ст. It names him in the vocative and stands under his name alone, so it is on this folder only and not on the other seven of the company.",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned throughout by the wisdom of thy divine words, O Justin, the Church of God enlightens the world with the brightness of thy life; and having received a crown for the pouring out of thy blood, and standing with the angels before Christ, pray thou unceasingly for us all.",
         "rendered": "site"
       }
     }

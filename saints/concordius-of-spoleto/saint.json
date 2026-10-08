@@ -1,0 +1,60 @@
+{
+  "slug": "concordius-of-spoleto",
+  "display_name": "Concordius of Spoleto",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Конкордий Римлянин, Сполетский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1263 gives it, «Конкордий Римлянин, Сполетский, иерей, сщмч.», with the grade and the rank word taken off. The day line declines the forename and prints no epithet, so everything beyond the forename is read off the name page. Measured with the gate's own fold before it was written: 'конкордии римлянин сполетскии' has no holder in the corpus. Both toponymics are kept and the calendar's own comma with them, as it is for «Дада Доростольский, Озовийский»: Римлянин is the Roman he was and Сполетский the Spoleto his relics rest near, and dropping either would be a choice."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 175,
+      "latest": 175,
+      "display": "about 175",
+      "basis": "traditional",
+      "note": "The day line gives «(ок. 175)» and `life1225` closes «Кончина его последовала около 175 года» — the same year, about, in both places. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Мч. Конкордия (ок. 175).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of eleven, «Мч. Конкордия (ок. 175).», with `life1225` behind it. **The source grades him two ways and both are recorded.** The day line says Мч., a martyr; name page 1263 heads him «Конкордий Римлянин, Сполетский, иерей, сщмч.», a priest and a hieromartyr; and the life agrees with the page, having him made subdeacon by the bishop of Rome and afterwards ordained presbyter by a bishop Анфим. The folder follows the page and the life, and `office` is the bare `Priest` the locale packs carry. `ls -d saints/concord*` returned only `concordia-of-rome`, a woman and another day. The day page prints no hymn under his name. azbyka.ru was not read, and his name page lists «День памяти: 4 июня» and nothing else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -4,4 +4,4 @@ saint.gr's calendar names him Theodore Yaroslav the duke and gives him one sente
 
 That is the whole of what the Greek calendar keeps of him. It gives no year of death, although its head line leaves the place for one open as «(1218 - ;)»; it names no city, tells nothing of his life or of his repose, and prints no hymn. Nothing more is written here than it prints.
 
-*After saint.gr's calendar for 5 Ιουνίου — [the day](https://www.saint.gr/06/05/index.aspx) and [the life](https://www.saint.gr/1821/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 5 Ιουνίου — [the day](https://www.saint.gr/06/05/index.aspx) and [the life](https://www.saint.gr/1821/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 5 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260605.html); read 8 October 2026.*

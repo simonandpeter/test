@@ -10,13 +10,28 @@
       "form": "Βλανδίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Ιουλίου, «Άγιοι Σάκτος, Ματούρος, Άτταλος και Βλανδίνα», with the rank word left off; her own head line on the life page is «Αγια Βλανδινα»."
+    },
+    {
+      "form": "Бландина Лионская",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 14892 gives it, «Бландина Лионская, мц.», with the rank word taken off and the city kept, the day line itself printing «Бландины и мч. Понтика Лионских», of Lyons, over the two of them. Measured with the gate's own fold before writing: 'бландина лионская' has no other holder, and the corpus's other Blandina, `blandina-of-iasi`, folds nowhere near it."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 июня ст. ст. — «Сщмч. Пофина , епископа Лионского и с ним пострадавших (ок. 177) Мц. Бландины и мч. Понтика Лионских (177).»",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "note": "The day's third entry as `day-candidates.mjs` prints it is in fact TWO printed lines run together — «Сщмч. Пофина , епископа Лионского и с ним пострадавших (ок. 177)» and «Мц. Бландины и мч. Понтика Лионских (177)» — which is the merging the instrument is known to do; the three `name:` links behind it were counted and they are three. «и с ним пострадавших», and those who suffered with him, enumerates nobody and is not a folder; the other eight of the Lyons company this corpus holds took nothing from this day. Neither of the two lines links a /Life/ page, so the three readings here rest on the day lines and the three name pages and on nothing else, and the day page prints no hymn for any of them. azbyka.ru was not read. She is the Мц. Бландина of the second of the two lines, and name page 14892 heads her «Бландина Лионская, мц.» — the one of the three whose see-word stands as a toponymic with the name. **`day-candidates.mjs` COULD NOT SEE THIS FOLDER**: it keeps her venerated greek on 25 July, not on the menologion's 2 June, so she is absent from the day's held list and the scan showed the line as naming nobody the corpus had. `ls -d saints/blandina*` found her, which is the documented check and the reason this is an upgrade and not a duplicate folder. The Russian line gives her 177, the year this folder has no `dates` for at all — `dates` is null here — and nothing was written into it, because a year the line gives to a company of two is recorded and not inferred into a field the folder has deliberately left empty. She is NOT `blandina-of-iasi`, who is a twentieth-century Romanian saint of a quite different story."
     },
     {
       "church": "romanian",

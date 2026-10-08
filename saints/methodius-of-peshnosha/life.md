@@ -4,4 +4,4 @@ saint.gr's calendar names him and gives him two sentences. The line for 4 June r
 
 So what is recorded of him is a country, a century, a monastery with a place beside it, an abbacy, and a year. The page says nothing of who tonsured him, nothing of whether he founded the house or inherited it, nothing of a disciple or a wonder or a relic, and it prints neither verse nor hymn. The Russian form of his name is not on the page and is not invented here.
 
-*After saint.gr's calendar for 4 Ιουνίου — [the day](https://www.saint.gr/06/04/index.aspx) and [the entry](https://www.saint.gr/4426/saint.aspx); read 1 October 2026.*
+*After saint.gr's calendar for 4 Ιουνίου — [the day](https://www.saint.gr/06/04/index.aspx) and [the entry](https://www.saint.gr/4426/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 4 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260604.html); read 8 October 2026.*

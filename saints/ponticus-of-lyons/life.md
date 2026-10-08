@@ -8,4 +8,4 @@ The other eight of the nine are [Photinos of Lyons](/saints/photinos-of-lyons), 
 
 Of Ponticus the page says nothing but his name, his rank of martyr and the year 177. It does not say how old he was, what he did, or in what order the company suffered.
 
-*After saint.gr's calendar for 2 Ιουνίου — [the day](https://www.saint.gr/06/02/index.aspx) and [the life](https://www.saint.gr/4407/saint.aspx); read 1 October 2026.*
+*After saint.gr's calendar for 2 Ιουνίου — [the day](https://www.saint.gr/06/02/index.aspx) and [the life](https://www.saint.gr/4407/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 2 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260602.html); read 8 October 2026.*

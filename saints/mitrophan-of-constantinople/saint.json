@@ -16,6 +16,11 @@
       "form": "Митрофан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 4. јун ст. ст., „Свети Митрофан, први патријарх цариградски“ — Свети is not a rank, први is an ordinal, and „патријарх цариградски“ is the rank with its see, which `types` and `office` already carry; all of it comes off and the bare forename is what the heading leaves. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder."
+    },
+    {
+      "form": "Митрофан Константинопольский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1546 gives it, «Святитель Митрофан Константинопольский, патриарх», with the rank word and the grade taken off. Measured with the gate's own fold before it was written: 'константинопольскии митрофан' has no other holder. Here the city stands with the name and before the comma, unlike «Святитель Никифор, I Патриарх Константинопольский» two days earlier, where it stood inside the office and the stored form is therefore bare; the comma is where the two readings part. The folder's Serbian form is the bare «Митрофан» and folds apart from this one."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Свт. Митрофана , патриарха Константинопольского (ок. 326).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of eleven, «Свт. Митрофана , патриарха Константинопольского (ок. 326).». The see and the grade are the `Patriarch of Constantinople` and the `patriarch` this folder already carries, and «ок. 326» sits inside the folder's own «325 or 327», so nothing of `dates` was touched. The Romanian, Greek and Serbian rows all stand on this same 4 June. The day page prints THREE hymns under his name — a troparion and TWO kontakia, глас 4 and глас 2, which is two kontakia and not an «Ин кондак» — and all three are added; the troparion is the common of a hierarch with his name filled into it, which BRIEF.md §4 makes his own service. `life1224` was NOT read, so nothing of his life is touched here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -167,6 +182,54 @@
       },
       "english": {
         "text": "You laid down the faith of Christ plainly as doctrine, and keeping it you truly increased your faithful flock into a multitude; and so, Metrophanes, you now rejoice with the angels and intercede unceasingly with Christ for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему/ Яже вещей Истина,/ сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче священноначальниче Митрофане,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Митрофана», глас 4, under «Молитвы» on the day page for 4 июня ст. ст.. It is the common of a hierarch with the saint's name filled into its vocative, here «отче священноначалниче Митрофане», so it is his own service and not a proper belonging to somebody else (BRIEF.md §4). It is the same common the 2 июня page prints for Nicephorus of Constantinople, with a different name and one more word in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Truth of things hath shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; wherefore thou hast gained the heights by humility and riches by poverty. O father and hierarch Mitrophan, pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От младенства явился еси честен сосуд,/ святитель быв избран Богу, Емуже с веселием взывал еси:// равен еси, Христе, Отцу и Духу.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Митрофана», глас 4, under «Молитвы» on the day page for 4 июня ст. ст.. The page prints TWO kontakia for him, this one and another in глас 2, both headed in exactly the same words.",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thine infancy thou wast shown to be a vessel of honour, a hierarch chosen for God, unto whom thou didst cry with gladness: Thou art equal, O Christ, to the Father and to the Spirit.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Веру Христову ясно ты проповедал еси/ и, сию соблюдая,/ во множество воистинну возрастил еси верное твое стадо./ Темже со Ангелы, Митрофане, срадуешися,// Христу моляся непрестанно о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, the SECOND «Кондак святителя Митрофана», глас 2, under «Молитвы» on the day page for 4 июня ст. ст.. The page gives it the same heading as the глас 4 kontakion rather than marking it «Ин кондак»; it names him in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Clearly didst thou preach the faith of Christ, and keeping it thou didst truly increase thy faithful flock into a multitude. Therefore thou dost rejoice with the angels, O Mitrophan, praying unceasingly to Christ for us all.",
         "rendered": "site"
       }
     }

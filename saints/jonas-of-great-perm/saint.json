@@ -39,7 +39,8 @@
       "feast": {
         "day": 29,
         "month": 1,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "days.pravoslavie.ru also prints him on 6 июня ст. ст., fourth of that day's eight entries — «Свт. Ионы , еп. Великопермского (1470).» — which is a SECOND COMMEMORATION DAY of the same man and not a relics feast and not a second person: the line gives his see in the very words this folder's `office` has, еп. Великопермского, and name page 1040 heads him «Святитель Иона, епископ Великопермский», the identical string this folder's `ru` name form already stores. The row stays on 29 января ст. ст., where saint.gr keeps him with Gerasimus and Pitirim, because a second day on one church has no field of its own (BRIEF.md §4). **THE YEAR DISAGREES WITH THE FOLDER’S AND NOTHING WAS MOVED.** This line closes «(1470)» — and so does the 29 января line this row already quotes, «Ионы (1470)» — so days.pravoslavie.ru says 1470 on BOTH of its days, while the folder holds 1471 as attested off saint.gr, which is where its `dates` came from. One year between two sources, one of them twice; recorded and not reconciled, and `dates` were not touched. **AND THE CORPUS HAS A SECOND FOLDER THAT IS PROBABLY THIS SAME MAN.** `jonah-bishop-6-june` was written from saint.gr's own 6 June, where the line is «ο Όσιος Ιωνάς ήταν Ρώσος επίσκοπος» with no epithet and no see and the year 1470 — a Russian bishop Jonah, on this very menologion day, with this very year. It carries `hierarch` and `bishop`, no Cyrillic name form and no office. So the Greek source appears to keep this one man on two days and the Greek wave made a folder for each. **NOTHING WAS MERGED and the 6 июня russian row was NOT put on that folder**, which would have asserted two bishops of Great Perm dead a year apart; the duplication predates this batch and is handed to the author. The 6 июня page prints a troparion under his name, глас 4, and it is NEW — «Святителю Церкви Великопермстей», which names him alone in the vocative, where the глас 4 troparion this folder already had from 29 января is «Первопрестольницы Пермстии», a plural for the three bishops together. So it was added and none of the four he already held was touched. `id1040` was not followed."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Свтт. Герасима (ок. 1441-1467), Питирима (1455) и Ионы (1470), епископов Великопермских, Устьвымских»",
@@ -137,6 +138,22 @@
       },
       "english": {
         "text": "Having lived in godliness among the hierarchs and led the people of Perm to the knowledge of God, you pleased God well. Therefore Ustvym and the land of the Zyryans boast, having your relics as a fountain of healings for all who come to you with faith; for you were glorified with miracles, as disciples of the grace of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Святителю Церкви Великопермстей,/ истинный хранителю апостольских преданий,/ столпе непоколебимый Православия,/ благочестия учителю,/ Ионо святителю блаженне,/ Владыку всех моли/ мир пастве твоей/ и всей Русстей земли даровати/ и всем нам спастися.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Ионы, епископа Великопермского», глас 4, under «Молитвы» on the day page for 6 июня ст. ст.. It names him alone in the vocative and is his own proper, which is what distinguishes it from the глас 4 troparion this folder already carries from 29 января, a plural «Первопрестольницы Пермстии» for the three bishops together.",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O hierarch of the Church of Great Perm, true keeper of the apostolic traditions, unshaken pillar of Orthodoxy, teacher of piety, O blessed hierarch Jonah: pray to the Master of all to grant peace to thy flock and to all the Russian land, and salvation to us all.",
         "rendered": "site"
       }
     }

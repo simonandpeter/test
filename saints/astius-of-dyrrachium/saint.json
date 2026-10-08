@@ -17,6 +17,11 @@
       "form": "Астије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 4. јун ст. ст., „Свештеномученик Астије, епископ драчки“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „драчки“ is the see, which the display name already carries; strip them and the bare personal name is what is left, which is the `therapon-of-cyprus` reading of 25 May applied again. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder."
+    },
+    {
+      "form": "Астий Диррахийский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 289 gives it, «Святитель Астий Диррахийский, епископ, сщмч.», with the rank word, the grade and the office taken off. Measured with the gate's own fold before it was written: 'астии диррахиискии' has no other holder."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Сщмч. Астия , еп. Диррахийского (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry of eleven, «Сщмч. Астия , еп. Диррахийского (II).», which gives him the hieromartyr's grade and the Dyrrachium see this folder already carries, and the century «(II)», which contains the folder's own «c. 98». The Romanian, Greek and Serbian rows all stand on this same 4 June. `life1226` was NOT read, so nothing of his life is touched here, and the day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

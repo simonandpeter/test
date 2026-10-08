@@ -16,6 +16,11 @@
       "form": "Паула",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 3. јун ст. ст., „Свети мученици Лукилијан и с њим: Клавдије, Ипатије, Павле, Дионисије, и девица Паула“. Свети is not a rank, мученици is the `martyr` this corpus puts in `types`, and the heading carries no see, no house and no epithet, so the form is the bare personal name the heading itself prints. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder. The heading’s девица is the `virgin` this corpus puts in `types` and is stripped from the form."
+    },
+    {
+      "form": "Павла Византийская",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 2635 gives it, «Павла Византийская, дева, мц.», with the rank word and the grade «дева», the virgin, which this folder already carries in `types` taken off; the day line declines the forename and prints no epithet, so «Византийские» is read off the name page. Measured with the gate's own fold before it was written: 'византииская павла' has no other holder, where a bare forename would meet the corpus's other Paula folders."
     }
   ],
   "sex": "female",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июня ст. ст. — «Мчч. Лукиллиана , Клавдия , Ипатия , Павла , Дионисия и мц. Павлы девы (ок. 270-275).»",
+        "url": "https://days.pravoslavie.ru/Days/20260603.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of six, «Мчч. Лукиллиана , Клавдия , Ипатия , Павла , Дионисия и мц. Павлы девы (ок. 270-275).», one line naming SIX people and giving them one bracket; six `name:` links stand under it, one for each, and all six already had folders in this corpus, kept on this same menologion day by the Romanian, Greek and Serbian calendars. The year the line gives the company, «(ок. 270-275)», is the very interval all six folders already hold for the death, so nothing of `dates` was touched. `life1219`, which all six name links point at, was NOT read: the identification rests on the day, on the six names in the calendar's own order, on the year, and on the Byzantium the six name pages give each of them, and the folders' lives already carry the passion from the other three calendars. The day page prints four hymns, two for the tsarevich Dimitri and two for the Yug icon, and none under any of these six names. azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Δωρόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Αυγούστου, «Όσιος Δωρόθεος», with the rank word left off."
+    },
+    {
+      "form": "Дорофей Палестинский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 653 gives it, «Дорофей Палестинский, авва», with the grade taken off. Measured with the gate's own fold before it was written: 'дорофеи палестинскии' has no other holder. The calendar calls him Палестинский where the other calendars and this folder's display name say Gaza; the stored form is what this calendar prints, and the Gaza is in the folder's own life. Name pages 653 and 654 are one digit apart and are two different men whom this day prints two entries apart, Дорофей Палестинский and Дорофей Тирский, which is worth saying because it is exactly the pattern that has made a duplicate elsewhere."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Прп. аввы Дорофея , из обители аввы Серида (ок. 620).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of twelve, «Прп. аввы Дорофея , из обители аввы Серида (ок. 620).». **`day-candidates.mjs` COULD NOT SEE THIS FOLDER**: it stands venerated romanian and greek on 13 August, not on the menologion's 5 June, so it is absent from the day's held list and the scan showed the line as naming nobody the corpus had. `ls -d saints/dorotheus*` found it, which is the documented check, and this is the second time in this block that call has turned a would-be duplicate into an upgrade. The identification is exact rather than inferred: the line's «из обители аввы Серида» is the community of Abba Seridos near Gaza that this folder's own life already names and links, and авва is the `abbot` it already carries. **The years disagree and nothing was moved.** This line says «ок. 620»; the folder holds 501 to 600, «the 6th century», off saint.gr, and 620 falls outside it by twenty years. Widening to 501–620 would invent an interval neither source gives, so `dates` were not touched and the disagreement is recorded here. `life1240` was NOT read, and the day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

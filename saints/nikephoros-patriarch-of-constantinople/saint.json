@@ -17,6 +17,11 @@
       "form": "Никифор",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 2 June on pravoslavno.rs, „Свети Никифор Исповедник, патријарх цариградски.“, with Свети left off, which is not a rank, with the rank word Исповедник left off, and with the see патријарх цариградски left off as well. The Julian 13 March heading, „Свети Никифор, патријарх цариградски.“, leaves the same bare forename. Nothing on either page gives an epithet, so the bare form is what the source gives and it folds with `nicephorus-of-antioch`."
+    },
+    {
+      "form": "Никифор",
+      "lang": "ru",
+      "note": "A BARE FORENAME, and deliberately. Name page 1625 heads him «Святитель Никифор, I Патриарх Константинопольский» — the rank before the comma and, after it, the regnal numeral and the see, which are the office this folder already carries and not name words. So «Никифор» is the whole of the name the calendar gives, and BRIEF-RUSSIAN §2's preference for a fuller form has nothing to work with. The bare string costs no fold: 'никифор' is ALREADY a four-member fold that corpus-gate.mjs has marked READ — nicephorus-4-may, nicephorus-companion-of-zebinas, nicephorus-of-antioch and this folder — because the Serbian wave stored the identical string here, so this `ru` row joins a fold it is already in and the key's membership does not move. Verified against the gate's own fold() and against the plain gate's collision row before it was written."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 июня ст. ст. — «Свт. Никифора исп., патриарха Константинопольского (828).»",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of five, «Свт. Никифора исп., патриарха Константинопольского (828).». «исп.» is исповедник, the confessor, which this folder already carries in `types`; «патриарха Константинопольского» is the `Patriarch of Constantinople` already in `office`; and 828 is the year the folder already holds. The Romanian, Greek and Serbian rows all stand on this same 2 June, so the identification is as firm as this corpus gets. The day page prints THREE hymns under his name — a troparion, an «Ин тропарь» and a kontakion — and all three are added; the first is the common of a hierarch with his name filled into it, which BRIEF.md §4 makes his own service and not a mis-hang. `id1625`, the index of his lives, was NOT followed, so nothing of his life is touched here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -140,6 +155,54 @@
       },
       "english": {
         "text": "Having received today from heaven the crown of victory from God, O Nikephoros, save those who honour you in faith as hierarch and teacher alike.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему/ Яже вещей Истина:/ сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче Никифоре,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Никифора», глас 4, under «Молитвы» on the day page for 2 июня ст. ст.. It is the common of a hierarch — the same text the Church sings to Nicholas of Myra and to other bishops — with the saint's name filled into its vocative, «отче Никифоре», so it is his own service and not a proper belonging to somebody else (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Truth of things hath shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; wherefore thou hast gained the heights by humility and riches by poverty. O father Nicephorus, pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже первороднаго Царства отец,/ правоверный службы истинный пастырь бысть, преподобне,/ Царя града, Церкви всех матере явися светильник, Никифоре,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь святителя Никифора», глас 4, under «Молитвы» on the day page for 2 июня ст. ст.. «Ин тропарь» is this source's way of printing a second troparion for the same saint, and this one names him in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O father of the first-born Kingdom, thou wast a true shepherd of the right-believing worship, O venerable one; thou wast shown forth a lamp of the City of the King and of the Church that is mother of all, O Nicephorus: pray thou to Christ God that He save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Победы венец с Небесе,/ о Никифоре преславне,/ яко прием от Бога,/ спасай верою почитающия тя,// яко священноначальника Христова и учителя.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Никифора», глас 4, under «Молитвы» on the day page for 2 июня ст. ст.. It names him in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received from God a crown of victory out of heaven, O most glorious Nicephorus, save those who honour thee with faith, inasmuch as thou art a hierarch and teacher of Christ.",
         "rendered": "site"
       }
     }

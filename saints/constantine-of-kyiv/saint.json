@@ -1,0 +1,86 @@
+{
+  "slug": "constantine-of-kyiv",
+  "display_name": "Constantine of Kyiv",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1159,
+      "latest": 1159,
+      "display": "1159",
+      "basis": "traditional",
+      "note": "The year the day line gives him: «Свт. Константина , митр. Киевского и всея России (1159).» No year of birth appears on the day page or on name page 1274, and no day within the year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Свт. Константина , митр. Киевского и всея России (1159).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry of twelve, «Свт. Константина , митр. Киевского и всея России (1159).». Name page 1274 heads him «Святитель Константин, митрополит Киевский и всея России», lists «День памяти: 5 июня» and offers «Молитвы» and NO life: there is no /Life/ page for him on the site and the day line links none, so this folder rests on the line, that heading and the two hymns the day page prints under his name. `ls -d saints/constantine-of-kyiv*` and `saints/constantine-of-kiev*` returned nothing. **NO `ru` NAME FORM WAS STORED, against BRIEF-RUSSIAN §2, and this is deliberate.** The calendar's only name for him is the bare «Константин»: Святитель is the rank and «митрополит Киевский и всея России» is the office, and the same is true of both hymn headings. Storing the bare form would widen the pre-existing UNREAD fold 'константин' from five holders to six — `constantine-brancoveanu`, `constantine-of-georgia`, `constantine-presbyter-martyr-1918`, `constantine-the-great`, `constantine-the-hagarene` — and reading five other Constantine dossiers was not this day's work. The fold's exact membership is handed to the author; if the answer is that the bare form should go in, the change is one `names` entry and one `READ_FOLDS` key. **NO `office` WAS WRITTEN EITHER.** «Metropolitan of Kyiv and all Russia» is not a string the four locale packs carry — the nearest they hold is «Metropolitan of Kiev, Galicia and all Rus’», which is a different see title and was not substituted — so `metropolitan` is in `types` and the see is in the display name and the life, after BRIEF-ADDENDUM §4. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Апостолов преемниче,/ архиереев сопрестольниче,/ России всея пастырю и учителю,/ всеблаженне отче Константине,/ Владыце всех молися/ мир пастве твоей даровати/ и спасение душам нашим и велию милость.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Константина, митр. Киевского и всея России», глас 4, under «Молитвы» on the day page for 5 июня ст. ст.. It names him in the vocative, so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O successor of the apostles, sharer of the hierarchs' throne, shepherd and teacher of all Russia, all-blessed father Constantine: pray to the Master of all to grant peace to thy flock, and salvation and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Звезду российскую,/ от Киева возсиявшую/ и Чернигов блаженною кончиною своею озарившую,/ всеблаженнаго святителя Константина почтим,/ просяще его молитися Христу,/ да подаст мир стране нашей/ и душам нашим велию милость.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Константина, митр. Киевского и всея России», глас 8, under «Молитвы» on the day page for 5 июня ст. ст.. It names him and names Kyiv and Chernigov, and it is the only place on the day page where anything of his history is printed.",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the star of Russia, which shone forth from Kyiv and lit Chernigov with its blessed end, the all-blessed hierarch Constantine, asking him to pray to Christ that He grant peace to our land and great mercy to our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

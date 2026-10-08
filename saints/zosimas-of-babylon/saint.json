@@ -1,0 +1,60 @@
+{
+  "slug": "zosimas-of-babylon",
+  "display_name": "Zosimas of Babylon",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Зосима Вавилонский (Египетский)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 847 gives it, «Святитель Зосима Вавилонский (Египетский), епископ», with the rank word and the office taken off. The day line declines the forename and prints no epithet, so everything beyond the forename is read off the name page. Measured with the gate's own fold before it was written: 'вавилонскии египетскии зосима' has no holder in the corpus. The parenthesis holds a SECOND TOPONYMIC and not a surname — the Babylon meant is the Egyptian one, as the day line itself spells out in «еп. Вавилона Египетского» — so it is kept in the stored form, where a twentieth-century surname in parentheses would be too, and BRIEF-ADDENDUM §2 keeps the brackets out of the key either way."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The day line closes with the bare century, «(VI)», and `life1228` with the same, «там мирно преставился Богу (в VI в.)». No year and no year of birth is given anywhere on either page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Прп. Зосимы , еп. Вавилона Египетского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry of eleven, «Прп. Зосимы , еп. Вавилона Египетского (VI).», with `life1228` behind it. **The source grades him two ways.** The day line says Прп., преподобный, a venerable, and so does the life's own title; name page 847 heads him «Святитель Зосима Вавилонский (Египетский), епископ», a hierarch. Both are kept: `venerable` for the monk of Sinai the life describes and `bishop` for the see, with `office` the bare `Bishop` the locale packs carry — `Bishop of Babylon` is not a string the four packs have and was not invented. `ls -d saints/zosima*` returned thirteen folders and not one of them is this man: the nearest in kind, `zosimas-of-palestine` and `zosimas-the-phoenician`, stand on other days with other dossiers. The day page prints no hymn under his name, and his name page lists «День памяти: 4 июня» and nothing else. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

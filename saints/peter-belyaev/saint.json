@@ -1,0 +1,61 @@
+{
+  "slug": "peter-belyaev",
+  "display_name": "Peter (Belyaev)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Беляев)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 13722 gives it, «Петр (Беляев), иерей, сщмч.», with the grade and the rank word taken off. The day line declines the forename and prints no epithet, so everything beyond the forename is read off the name page. Measured with the gate's own fold before it was written: 'беляев петр' has no holder in the corpus. The surname is the whole reason the form is not bare: eleven folders in this corpus already share a bare «Петр», which is a fold the gate stops on, and the day line prints only «Петра» in the genitive. The corpus holds four Беляев folders — Augustine, Demetrius, Nikon and Theodore — and not one of them is a Peter."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line gives him: «Сщмч. Петра пресвитера (1918).» It is the only year on either page; the name page gives no year of birth and no date within the year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Сщмч. Петра пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's tenth entry of eleven, and a line and a name page and nothing else: «Сщмч. Петра пресвитера (1918).» Name page 13722 heads him «Петр (Беляев), иерей, сщмч.» and lists «26 января (Новомуч.) , 4 июня»; it carries no life, no icon, no place, no diocese and no year of birth, and there is no /Life/ page for him on the site. Иерей is the `Priest` the locale packs carry, so that is the `office`. A Cyrillic `grep -rl` for «Беляев» returned four folders and no Peter among them. «26 января (Новомуч.)» was not read, and azbyka.ru was not read. He is not to be confused with the Peter of the day's eleventh entry, Петр (Зверев), archbishop of Voronezh, whose relics were found in 1999 and for whom this corpus has no folder at all."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
