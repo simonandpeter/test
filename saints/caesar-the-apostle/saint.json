@@ -16,6 +16,11 @@
       "form": "Кесар",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“ — with «Свети апостоли» left off and the last of the seven bare forenames taken. It is the same stripping the Romanian «Cezar» and the Greek «Καίσαρ» already stored here were made by. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Кесарь",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Апостол от 70-ти Кесарь»; «Апостол от 70-ти» is the rank and is not part of the stored form. It is the Russian spelling of the form the Ohrid Prologue gave this folder as «Кесар»."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The source itself calls this day the second memory of the company: its life of them closes «Все эти апостолы мирно преставились к Богу (вторая память 30 марта)». The first is not named on any page read here, and the 30 марта day page is the page that prints him. The Ohrid Prologue, which this folder already cites, gives him 30 March as a separate day with Cephas, and the Russian calendar prints both of them on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Апп. Сосфена , Аполлоса , Кифы , Кесаря и Епафродита (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
