@@ -1,0 +1,61 @@
+{
+  "slug": "michael-okolovich",
+  "display_name": "Michael (Okolovich)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Михаил Околович",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13703, «Михаил (Околович), протоиерей, сщмч.», with the rank words left off and the parentheses dropped — BRIEF-ADDENDUM §2: a parenthesis is not part of a name, so «Михаил (Околович)» and «Михаил Околович» are one string. The day’s own line gives only «Сщмч. Михаила пресвитера (1938)», without the surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Сщмч. Михаила пресвитера (1938)». It is the only year either page gives, and neither gives a day or a place of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст. — «Сщмч. Михаила пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is. Name page 13703 carries the heading, «Дни памяти: 26 января (Новомуч.), 7 мая», and no life, no place, no account of his ministry and no hymn on the day page. The 26 января is the synaxis of the new martyrs and confessors of Russia, a commemoration of the company and not a second day of his own, so it is noted here and nothing was moved for it; one row per church is the schema in any case. The two pages disagree about his grade: the day line says «пресвитера», a presbyter, and the name page «протоиерей», an archpriest. Both are written — `types` carries `presbyter` and `hieromartyr`, with `new-martyr` for the company he is numbered in — and no `office` was set, because the corpus’s locale packs carry no Archpriest and reducing it to Priest would drop what the fuller of the two sources says. Checked for an existing folder before writing: `ls -d saints/*okolov*` returns `alexander-sokolov` and `basil-kolokolov`, neither of them this name, and fk.mjs on «Михаил Околович» and on «Michael Okolovich» returns NONE. The corpus does keep a `nicholas-presbyter-martyr-1934`, display name «Nicholas (Okolovich)», who stores «Николай Околович»: a different forename, a different year and a different day, so a different man. Whether the two were kin is not something either source says, and no `related` row was made. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 20 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 20 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
