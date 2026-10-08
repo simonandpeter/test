@@ -12,6 +12,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Νικόλαος Επίσκοπος Αχρίδος και Ζίτσης», with the rank word and the two sees left off. The body of the page adds the surname in brackets and in Greek letters, «Ο Άγιος Νικόλαος (Βελιμίροβιτς)»."
+    },
+    {
+      "form": "Николай (Велимирович)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name page 13515, «Святитель Николай (Велимирович), епископ Охридский и Жичский», with the rank and the two sees left off; the line itself gives «Николая» and the sees and no surname at all. Measured against the gate’s own key function before it was written: 'велимирович николаи' has no other holder."
     }
   ],
   "sex": "male",
@@ -45,8 +50,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian",
+        "note": "The day the calendar gives him here is the translation of his relics: his life page heads «Дни памяти: 5 марта , 20 апреля (Перенесение мощей) , 30 августа (Серб.)», and the translation it describes is the carrying of his relics in 1991 from South Canaan to his native Lelić. One row per church is the schema, so the other two days are recorded here and he does not render on them; neither of those day pages was read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Свт. Николая , еп. Охридского и Жичского (1956).»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The name page is 13515 and the life page life6916. The year on the line, 1956, is the year of repose this folder already carried. The line is followed on the page by a bare «(Серб.)», a marker of the Serbian local calendar standing on a line of its own, which the candidate scan reads as a twelfth entry and which is not a person. The day page prints no hymn under his name."
+      }
     },
     {
       "church": "romanian",

@@ -17,6 +17,11 @@
       "form": "Анастасије Синаит",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Блажени Анастасије Синаит.“, with the rank word Блажени left off. „Патријарх Антиохијски“ is the body's first sentence and not part of the heading; the rank and the see are what this folder keeps in `types` and `office` in any case. The by-name Синаит is kept: `anastasius-the-persian` already holds the bare «Анастасије»."
+    },
+    {
+      "form": "Анастасий I Синаит, Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name page 168, «Святитель Анастасий I Синаит, Антиохийский, патриарх», with the rank words left off; the line itself gives «Анастасия I Синаита». Both epithets are kept, comma and all, because the bare forename is a wide fold in this corpus and because the next entry on the same day page is a different Anastasius who is also called Синаит. Measured against the gate’s own key function before it was written: 'i анастасии антиохиискии синаит' has no other holder."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Свтт. Григория (593), Анастасия I Синаита (599) , Патриархов Антиохийских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The second of the two patriarchs of Antioch on one line, with name page 168 and life900 of his own. The name page gives «День памяти: 20 апреля» and no other day. ONE READING LEFT UNRESOLVED: the life behind this line closes «мирно скончался (+ 21 апреля 599)», the twenty-FIRST of April, while this day page and his name page both keep him on the twentieth. The difference is one day and not thirteen, so it is neither the style conversion nor a second feast; nothing else on either page repeats the twenty-first, and under BRIEF.md §8 the day page stands and he was not moved. The day page prints no hymn under his name."
+      }
     },
     {
       "church": "romanian",

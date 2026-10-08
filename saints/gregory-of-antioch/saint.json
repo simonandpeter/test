@@ -6,6 +6,11 @@
       "form": "Григорије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Блажени Григорије патријарх Антиохијски.“, with the rank word Блажени, the rank патријарх and the see Антиохијски all left off; патријарх is the type this folder carries and Антиохијски the see it keeps in `office`. The heading gives no by-name, so the bare form is the fullest this calendar gives, and `gregory-of-nyssa` and `gregory-of-moesia` already hold it — a deliberate fold, recorded in the batch's commit message."
+    },
+    {
+      "form": "Григорий Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name page 533, «Святитель Григорий Антиохийский, патриарх», with the rank words left off; the line itself gives only the genitive forename «Григория» and the see in the shared ending «Патриархов Антиохийских». Measured against the gate’s own key function before it was written: 'антиохиискии григории' has no other holder."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Свтт. Григория (593), Анастасия I Синаита (599) , Патриархов Антиохийских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "One line for two patriarchs of Antioch, with a name link and a life page apiece — name page 533 and life899 for this one. The name page gives «День памяти: 20 апреля» and no other day. The year on the line, 593, is the year this folder already carried. The day page prints no hymn under his name."
+      }
     },
     {
       "church": "romanian",

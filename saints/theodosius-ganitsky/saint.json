@@ -1,0 +1,63 @@
+{
+  "slug": "theodosius-ganitsky",
+  "display_name": "Theodosius (Ganitsky)",
+  "names": [
+    {
+      "form": "Феодосий (Ганицкий)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14247, «Святитель Феодосий (Ганицкий), епископ Коломенский, исповедник», with the rank words and the see left off. The day’s own line declines the forename and prints no surname at all, «Свт. Феодосия исп., еп. Коломенского (1937)». Measured against the gate’s own key function before it was written: 'ганицкии феодосии' has no other holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with: «Свт. Феодосия исп., еп. Коломенского (1937)». It is the only year either page gives him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Свт. Феодосия исп., еп. Коломенского (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 14247, and no place of birth, no year of consecration, no arrest and no manner of death. The name page knows two things the line abbreviates — the surname «Ганицкий» and the word исповедник written out — and nothing else. «26 января (Новомуч.)» on his name page was not read. The day’s six hymns under «Молитвы» are headed for four other saints the day keeps, and none is under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 3 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 3 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

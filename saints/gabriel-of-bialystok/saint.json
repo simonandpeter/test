@@ -10,6 +10,11 @@
       "form": "Γαβριήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιος Γαβριήλ ο Μάρτυρας», with the rank word left off; the life page heads him «Αγιος Γαβριηλ ο Μαρτυρας (1684 - 1690)». The day's line gives him no epithet; the city in the English form here is the one the page names as the place of his martyrdom and of his relics."
+    },
+    {
+      "form": "Гавриил Белостокский, Слуцкий",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name page 447, «Гавриил Белостокский, Слуцкий, младенец, мч.», with the grade and the word младенец left off; the line itself gives «Гавриила Белостокского» with the second surname omitted. Measured against the gate’s own key function before it was written: 'белостокскии гавриил слуцкии' has no other holder."
     }
   ],
   "related": [],
@@ -32,8 +37,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 20 апреля , 9 мая , 8 июня , 8 июня (Белорус.)». One row per church is the schema, so the other three days are recorded here and he does not render on them; none of those three day pages was read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Мч. младенца Гавриила Белостокского (1690).»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The name page is 447 and the life page life6516. The two years the page gives, 22 марта 1684 and 1690, are the two this folder already carried off saint.gr. TWO THINGS REFUSED AND REPORTED, not resolved: the Russian account, unlike the Greek one this folder was written from, names the child’s killers as Jews and presents his death as a ritual murder — the blood-libel accusation, which has no historical standing — and the day page’s two hymns under his name rest the charge in liturgical verse. The accusation is not repeated in the life and NEITHER HYMN WAS COPIED. That is a reader’s refusal and an author question, not a ruling."
+      }
     },
     {
       "church": "romanian",
