@@ -11,6 +11,11 @@
       "form": "Νεκτάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Νεκτάριος της Όπτινα», with the rank word and the house left off."
+    },
+    {
+      "form": "Нектарий Оптинский",
+      "lang": "ru",
+      "note": "The whole heading of days.pravoslavie.ru's name page 6989, «Нектарий Оптинский», which carries no rank word at all and needed nothing taken off; the day's own line declines him «Нектария Оптинского». The life page gives his name in the world as «Николай Васильевич Тихонов», which is not what the calendar calls him and is recorded in the life rather than stored as a name form. The bare «Нектарий» is a fold eight folders wide in this corpus, which is why the toponymic is kept: measured against the gate's own key function, 'нектарии оптинскии' has no other holder."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Прп. Нектария Оптинского (1928).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of eight. Page life4642 heads «Дни памяти: 29 апреля , 11 октября (Оптин.)»; the 29 апреля day page is the one that lists him and is the day recorded here, and THE «11 октября (Оптин.)» DAY PAGE WAS NOT READ — it is the synaxis of the elders of Optina. THE FOLDER HAD NO `dates` AT ALL and now has both: the life gives «родился в 1853 году в городе Ельце Орловской губернии» and «Скончался преподобный Нектарий в глубокой старости 29 апреля/12 мая 1928 года», which is the day line's own 1928 and the style conversion of this very feast. NO `locations` WERE WRITTEN, although the page names Yelets, Optina and the village of Kholmishchi, because a man who was born in one and died in a third cannot be put on one point and the folder's other sources name no place at all. The day page prints no hymn under his name. The relics were taken up on 3/16 July 1989 and the page says where they now lie, which is an event after his death and not a feast on this calendar's list for him."
     },
     {
       "church": "romanian",
@@ -60,5 +75,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1853,
+      "latest": 1853,
+      "display": "1853",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life page life4642: «Преподобный Нектарий (в миру Николай Васильевич Тихонов) родился в 1853 году в городе Ельце Орловской губернии в бедной семье». The folder held no date of any kind before."
+    },
+    "death": {
+      "earliest": 1928,
+      "latest": 1928,
+      "display": "1928",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life page life4642: «Скончался преподобный Нектарий в глубокой старости 29 апреля/12 мая 1928 года и был похоронен на местном кладбище», and the day's own line closes «(1928)». The two agree, and the double date in the life is the style conversion of this feast and not a second day."
+    }
   }
 }

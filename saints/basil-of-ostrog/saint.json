@@ -21,6 +21,11 @@
       "form": "Василије Острошки",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 29. април ст. ст., „Св. Василије Острошки.“, with Св. left off as no rank. Острошки — of Ostrog, where he ended his life and where his relics are — is an epithet and not a rank `honorific.js` composes, so it is kept, and the fuller form is what keeps this folder **out** of the bare «Василије» fold the corpus's five other Basils share. The see of Zahumlje and Skenderija and the rank of metropolitan are the body's and belong to `office` and `types`."
+    },
+    {
+      "form": "Василий Острожский",
+      "lang": "ru",
+      "note": "The nominative of the day's own line, «Свт. Василия Острожского», and the form life6921 titles him with, «Святитель Василий, чудотворец Острожский», with the rank words taken off. THE NAME PAGE PUTS THE OTHER SEE WHERE A SURNAME WOULD GO: 381 heads «Святой Василий, епископ Захолмский», where «Захолмский» is inside the office rather than beside the name, and life6491 heads him «Святитель Василий Захолмский, Скендерийский (Острожский, Требинский, Сербский)» — five toponymics at once, of which the stored form keeps the one the day line itself uses and the one the folder's Serbian form «Василије Острошки» already carries. The bare «Василий» is one of this corpus's widest folds, which is why a toponymic is kept: measured against the gate's own key function, 'василии острожскии' has no other holder."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Свт. Василия Острожского (1671) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of eight, marked «(Серб.)», which is how this calendar flags a commemoration it keeps from the Serbian church. Index 381 serves THREE readings of him — life6921, life6491 and life954 — and all three head «Дни памяти: 29 апреля , 30 августа (Серб.)»; the 29 апреля day page is the one that lists him and is the day recorded here, and THE «30 августа (Серб.)» DAY PAGE WAS NOT READ. THE THREE READINGS CONTRADICT EACH OTHER ABOUT HIS CENTURY AND HIS `dates` DID NOT MOVE: life6921 opens «Святитель Василий родился в 1610 году», which is the year the folder already holds off doxologia; life954 says he was born «в XVI веке в Поповой волости в Герцеговине» and held the see «во 2-й половине XVI века», a hundred years earlier, as the successor of a bishop Pavle and the predecessor of a bishop Nikodim. The day's own line heads him «(1671)», which is the death year the folder already holds. Widening a birth of 1610 to cover a whole earlier century would invent an interval no source gives, and the folder's two flat years are each read from a page that states them, so nothing moved and the disagreement is recorded. Both hymns the day page prints under his name are added here."
     },
     {
       "church": "romanian",
@@ -99,5 +114,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От юности твоея всего себе Господеви отдал еси,/ пребывая в молитвах, трудех и постех, отче Богоносне,/ образ был еси добродетели твоему стаду;/ сего ради видя Бог твое благое произволение,/ поставляет тя Своей Церкви пастыря и добраго архиерея/ и по преставлении твоем соблюде святое тело твое нерушимо, святителю Василие./ Темже, яко имея дерзновение,/ молися Христу Богу/ спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Василия, епископа Захолмского или Острожского (в Черногории, Cербского)», глас 4, under «Молитвы» on the day page for 29 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou gavest thyself wholly to the Lord, abiding in prayers, in labours and in fasting, O God-bearing father, and thou wast a pattern of virtue to thy flock. Wherefore God, seeing thy good will, set thee over His Church as a shepherd and a good high priest, and after thy departure kept thy holy body incorrupt, O hierarch Basil. Therefore, having boldness, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко от младенства себе поработив Господеви,/ постом и бдением свое тело удручая, мудре,/ сосуд честен Духу Пресвятому явился еси,/ сего ради поставляет тя пастырем Своей Церкви,/ юже добре пасл еси./ Темже ко Господу отходиши, Егоже возлюбил еси./ Молимся ти, помяни и нас, верою чтущих святую память твою, да вси зовем ти:/ радуйся, всечестне отче Василие.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Василия, епископа Захолмского или Острожского (в Черногории, Cербского)», глас 8, under «Молитвы» on the day page for 29 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having enslaved thyself to the Lord from infancy, and wisely wearing thy body down with fasting and vigil, thou wast shown to be a vessel of honour for the All-Holy Spirit; wherefore He sets thee as a shepherd over His Church, which thou didst shepherd well. Then thou departest to the Lord whom thou didst love. We pray thee, remember us also who honour thy holy memory with faith, that we all may cry to thee: rejoice, all-honoured father Basil.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

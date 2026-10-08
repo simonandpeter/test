@@ -1,0 +1,59 @@
+{
+  "slug": "three-hundred-martyrs-of-dudikvati-and-papati",
+  "display_name": "The Three Hundred Martyrs of Dudikvati and Papati",
+  "names": [
+    {
+      "form": "Триста мучеников, в горах Дудиквати и Папати пострадавшие",
+      "lang": "ru",
+      "note": "The whole heading of days.pravoslavie.ru's name page 14251, which is the calendar's own nominative designation of the company and not a personal name; the day's own line declines it as «Трехсот мучеников , в горах Дудиквати и Папати (Турция) пострадавших». The rank word «мучеников» is inside the designation rather than in front of it and cannot be lifted out without destroying the phrase, which is why it stands here where a personal name would be stored bare. The corpus already keeps a company this way: `six-thousand-martyrs-of-david-gareji` carries «6000 мученика у Грузији» as its Serbian form. Measured against the gate's own key function before it was written: the key has no other holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1601,
+      "latest": 1800,
+      "display": "17th–18th century",
+      "basis": "traditional",
+      "note": "The day's line gives «(XVII-XVIII)», the seventeenth to the eighteenth century, and that is the whole of what the calendar says about when they died; its name page for them gives no century at all, only «День празднования: 29 апреля». The interval is two hundred years wide because the source's is, and nothing narrower was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Трехсот мучеников , в горах Дудиквати и Папати (Турция) пострадавших (XVII-XVIII) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry of eight, marked «(Груз.)», which is how this calendar flags a commemoration it keeps from the Georgian church. A COMPANY THAT ENUMERATES NOBODY IS ONE ENTRY AND ONE FOLDER: the line gives a number and two mountains and not a single name, so BRIEF.md §4's ruling makes it one folder and not three hundred, and the corpus already holds `six-thousand-martyrs-of-david-gareji` and `eight-anchorites` on exactly that reading. THE CALENDAR GIVES NO LIFE: page 14251 prints the heading «Триста мучеников, в горах Дудиквати и Папати пострадавшие» and «День празднования: 29 апреля» and nothing else at all — no life link, no icon, no article. NO FOLDER WAS FOUND FOR THEM: `grep -rl 'Дудиквати'` over `saints/` returns nothing and the gate's own key function returns no holder for either the Russian designation or the English one. NO COORDINATE IS IN THIS FOLDER: the line names two mountains and puts «(Турция)» after them, and a mountain range in which three hundred people were killed is not a point, so nothing was placed. The day page prints four hymns, two for the nine martyrs of Cyzicus and two for the bishop of Ostrog, and none for this company. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 12 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

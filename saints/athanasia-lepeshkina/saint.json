@@ -1,0 +1,61 @@
+{
+  "slug": "athanasia-lepeshkina",
+  "display_name": "Athanasia (Lepeshkina)",
+  "names": [
+    {
+      "form": "Афанасия (Лепешкина)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 15089, «Афанасия (Лепешкина), игумения, прмц.», with the two rank words after the comma left off. The day's own line gives the forename only — «Прмц. Афанасии (1932).» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate's own key function before it was written: 'афанасия лепешкина' has no other holder in the corpus, where the bare «Афанасия» has several."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "abbess",
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "The year the day line prints for her: «Прмц. Афанасии (1932).» No year of birth appears on the name page, which is all the calendar gives her, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Прмц. Афанасии (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry of eight, and the whole of it. THE CALENDAR GIVES NO LIFE: the line links no reading, and page 15089 prints the title «Афанасия (Лепешкина), игумения, прмц.» and «Дни памяти: 26 января (Новомуч.) , 29 апреля , 24 августа (Моск.)» and nothing else at all — no life link, no icon, no article. What it gives that the line does not is the surname «Лепешкина» and the grade «игумения», an abbess. TWO OF HER THREE DAYS WERE NOT CHECKED against their own day pages: 26 января, the general commemoration of the new martyrs and confessors of Russia, and «24 августа (Моск.)», the Moscow synaxis. `office` IS DELIBERATELY ABSENT: BRIEF-ADDENDUM §4 names `Abbess` as a string the four locale packs do not carry, and inventing four translations is not a reader's to do — the grade is carried by `abbess` in `types` instead, which is in the vocabulary BRIEF.md §9 prints, and by this note. `venerable-martyr` stands on the grade «прмц.», преподобномученица, and `new-martyr` on 26 января. NO FOLDER WAS FOUND FOR HER: `grep -rl 'Лепешкина'` over `saints/` returns nothing, `ls -d saints/*athanasia*` holds no Lepeshkina, and the gate's own key function returns no holder for 'афанасия лепешкина' or 'athanasia lepeshkina'. NO PLACE, DIOCESE OR MONASTERY IS NAMED ANYWHERE on either page — not even the house she was abbess of — and nothing of the kind is in this folder. The day page prints four hymns, two for the nine martyrs of Cyzicus and two for the bishop of Ostrog, and none under her name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 12 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

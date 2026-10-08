@@ -11,6 +11,11 @@
       "form": "Ροδοπιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιοι Διόδωρος και Ροδοπιανός ο Διάκονος», with the rank word and the order left off."
+    },
+    {
+      "form": "Родопиан Афродисийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1872, «Родопиан Афродисийский (Карийский), диакон, сщмч.», with the two rank words after the second comma left off and the parenthesis left out of the form. THE PARENTHESIS HERE IS NOT A SURNAME but a second toponymic, «Карийский», of Caria, the province Aphrodisias stood in, which is recorded here rather than stored. The day's own line declines him «Родопиана диакона», name and grade and no toponymic. Measured against the gate's own key function before it was written: 'афродисиискии родопиан' has no other holder in the corpus, and neither has the bare «Родопиан»."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Мчч. Диодора и Родопиана диакона (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of eight, one line naming two men. `day-candidates.mjs` DID NOT LIST HIM, because this corpus keeps him on the menologion's 3 May; `ls -d saints/*rodopian*` found him, which is the check BRIEF-RUSSIAN §5 names for a folder standing on a different menologion day. HE IS THE SAME MAN: life953 names him a deacon, as this folder's `types` already do, and tells the same passion under the same emperor in the same city as saint.gr. HIS `dates` DID NOT MOVE: the folder holds a flat 302 off saint.gr and this line gives only the reign, «(284-305)». One thing the Russian heading adds is the grade: name page 1872 heads him «Родопиан Афродисийский (Карийский), диакон, сщмч.» — священномученик, a HIEROMARTYR, where the folder's own `types` carry `martyr` and `deacon` off the Greek. `hieromartyr` WAS NOT ADDED: a deacon is not a priest, and the two gradings are the two sources' own, so the Russian reading is recorded in this note and the folder's types were left as they were read. The day page prints no hymn under either name."
     },
     {
       "church": "romanian",

@@ -11,13 +11,19 @@
       "form": "Iacov Golovatiuc",
       "lang": "ro",
       "note": "His baptismal name, read out of doxologia.ro's life: «În anul 1912, la vârsta de 15 ani, Iacov Golovatiuc a fost înrolat în armata țarului.»"
+    },
+    {
+      "form": "Амфилохий (Головатюк) Почаевский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13520, «Амфилохий (Головатюк) Почаевский, схиигумен, прп.», with the two rank words after the comma left off. The day's own line declines him «Амфилохия Почаевского» and leaves the surname out, so it is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate's own key function before it was written: 'амфилохии головатюк почаевскии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
     "hieromonk",
-    "wonderworker"
+    "wonderworker",
+    "abbot"
   ],
   "related": [
     "james-the-persian",
@@ -42,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Прп. Амфилохия Почаевского (1970).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry of eight. THE RUSSIAN JULIAN 29 APRIL IS THE CIVIL 12 MAY, WHICH IS THE DAY THE FOLDER'S ROMANIAN ROW ALREADY STANDS ON, and the folder's own note already said why: doxologia keeps him on 12 mai and its life says «Ziua prăznuirii Sfântului Amfilohie este pe data de 29 aprilie. Proclamarea oficială a avut loc pe data de 12 mai 2002». So the two rows are the same day of the year reckoned in two calendars, not two feasts, and the Russian row is a plain arrival on a row that was `undocumented`. THE CALENDAR GIVES NO LIFE: the line links no reading, and page 13520 prints the heading «Амфилохий (Головатюк) Почаевский, схиигумен, прп.», «День памяти: 29 апреля», an icon section, a parish website and ONE ARTICLE ON Православие.Ru, «Почаев – удел Богородицы», WHICH IS AN ARTICLE ABOUT THE LAVRA AND NOT A LIFE OF HIM AND WAS READ ONLY AS FAR AS ITS OPENING PARAGRAPHS, which are a journalist's memories of visiting Pochaev in Soviet times. What the calendar gives that the folder did not have is the grade «схиигумен», a schema-abbot, which is where `abbot` comes from, and the surname «Головатюк» in Cyrillic beside the Romanian «Iacov Golovatiuc» the folder already held. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
