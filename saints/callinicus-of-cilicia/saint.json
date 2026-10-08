@@ -11,6 +11,11 @@
       "form": "Καλλίνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιος Καλλίνικος», with the rank word left off. The page glosses it: κάλλος + νίκη, the fair and glorious victor."
+    },
+    {
+      "form": "Калиник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. јул ст. ст., „Св. муч. Калиник.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder already carries, both left off by BRIEF-SERBIAN §6, and the heading gives nothing else at all, so the bare forename is the whole of the form. «Киликије» stands in the body as «Родом из Киликије», a prepositional phrase, and is not turned into an adjective to make a fuller form. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Калиник» returns the key «калиник» at one holder, `callinicus-of-caesarea`; of the nine Callinicus folders the corpus holds, that one is the only other to carry a Serbian form at all. The fold becomes two wide with this form and the key «калиник callinicus-of-caesarea callinicus-of-cilicia» is declared in the same commit with both holders read. No earlier key for this string existed, because one holder is no collision."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.08.2026 (29. јул ст. ст.) — „Св. муч. Калиник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (§4). THE IDENTIFICATION IS THE DOSSIER AND NOT THE NAME: the corpus holds nine Callinicus folders, and this entry is this one on four particulars its own life already carries — «Родом из Киликије», a Cilician by birth; taken at Ancyra by a pagan prince the book calls «Сакердон», whom the folder’s life already names as Sacerdon out of doxologia and saint.gr; the iron shoes with nails inside them and the forced march to Gangra, which saint.gr already gave as eighty stadia in nailed shoes; and the heated furnace he walked into with a thanksgiving in his mouth. The folder’s Romanian and Greek rows are already 29 July, the same menologion number, and its `serbian` row was `undocumented`, so nothing was moved. THE NEAR FOLDER IS `callinicus-of-caesarea` AND IT IS NOT HIM: the servant of the idols at Caesarea in Bithynia, converted by the wonders done through Thyrsus, whom this same book keeps on the Julian 14 December with Thyrsus and Leucius, dated to the middle of the third century — a convert of a company of three on another day, against a lifelong Christian preacher who travelled alone. `dates` ADDED WHERE THE FOLDER HAD NONE: its `dates` was `null`, and the entry’s last sentence gives «Чесно пострада и увенча се венцем вечне славе око 250. год.», he suffered honourably and was crowned about the year 250, so a `death` of 250 goes in as `traditional`, the first date of any kind this folder has had. `types` UNTOUCHED: «муч.» is the `martyr` already held, and the `preacher` beside it is what this entry shows him doing. No `locations`: Cilicia is a birthplace in a prepositional phrase, Ancyra and Gangra are stations of a journey, and none is written as a coordinate. The stored Serbian form is the heading’s bare forename, which widens the string «калиник» from one holder to two, and the key is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
@@ -114,5 +129,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "c. 250",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 29. јул ст. ст.: «Чесно пострада и увенча се венцем вечне славе око 250. год.» — he suffered honourably and was crowned with the crown of eternal glory about the year 250. «око», about, is why the basis is traditional and not attested. The folder held no `dates` of any kind before this; neither doxologia.ro nor saint.gr gives him a year."
+    }
   }
 }
