@@ -15,6 +15,11 @@
       "form": "Неон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Евсевије, Неон, Леонтије и Лонгин.“, with „Св.“ and the one rank word муч., which stands over all four and belongs to none of them, left off. The heading gives him no epithet, no city and no year, and the day this corpus keeps in his English display name is the corpus's own device and no source's name."
+    },
+    {
+      "form": "Неон Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 1595, «Неон Никомидийский, мч.», with the rank abbreviation after the comma left off; the day’s own line gives only the genitive «Неона» and no city. Measured against the gate’s own key function before it was written: 'неон никомидиискии' has no other holder in the corpus."
     }
   ],
   "related": [
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мчч. Евсевия , Неона , Леонтия , Лонгина и иных (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s fourth entry, a line naming four men and an unnumbered remainder, of whom this is the second. The name link, page 1595, is titled «Неон Никомидийский, мч.» and gives the city the line does not; the shared life, life928, heads «День памяти: 24 апреля» and no other day. The line’s «и иных» becomes «и 40 иных» in that life’s own title, forty others who are named nowhere; they stay one entry and no folder was made for them, which is reported as an author question. The year 303 is the folder’s already and `dates` was not changed. The day page prints no hymn for any of the four. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
