@@ -56,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.08.2026 (30. јул ст. ст.) — „Св. апостоли Сила, Силуан, Крискент, Епенет и Андроник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, AN ENUMERATED FIVE, so BRIEF-SERBIAN §5 counts five; the corpus holds all five and FOUR OF THEM TAKE A ROW. The Romanian and the Greek keep those four on this same menologion day. THE FIFTH TAKES NOTHING AND THE ENTRY ITSELF IS WHY: of «Андроник (Рим. 16, 7) епископ Паноније» it says «спомиње се посебно 17. маја», he is commemorated separately on 17 May — and `andronicus-the-apostle` ALREADY CARRIES A VENERATED SERBIAN ROW FOR THE JULIAN 17 MAY, the very day this entry sends the reader to. So the book names him here and refers him away in the same clause, which is a mention and not a second feast, and his folder was not touched at all: no row, no note and no name form. «Павле» and «Варнава», who appear in the first sentence over the Jerusalem council, take nothing either: a decision taken at a council is not a companionship this reader will write a `related` row for, and the corpus's rows for those two were made elsewhere. The Prologue prints no hymn (8 October 2026). He is the SECOND name of the five. The entry confirms this folder's `office`, Bishop of Thessalonica, in words. `dates` UNTOUCHED AND STILL NULL. NO SERBIAN NAME FORM WAS STORED, AND THAT IS A DELIBERATE REFUSAL: the heading gives the five their bare forenames and nothing else, and `fk.mjs` on «Силуан» returns two holders, `silvanus-of-gaza` and `silvanus-of-tabennisi`, which the plain gate prints as an UNREAD `?` collision. Writing a third member into an unread fold is exactly the failure BRIEF-ADDENDUM §2 describes — the gate does not fail on it — and there was no fuller form in the heading to reach for instead, so the form was refused and the unread pair is left at the width another wave left it."
     }
   ],
   "hymns": [

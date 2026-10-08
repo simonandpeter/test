@@ -11,6 +11,11 @@
       "form": "Θεοδώρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Οσία Θεοδώρα «η από Καισαρείδος»», with the rank and the by-name left off."
+    },
+    {
+      "form": "Теодора Кесаријска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's fourth heading for 30. децембар ст. ст., „Преподобна Теодора Кесаријска.“ — «Преподобна» is the rank `venerable`, which §6 keeps out of a stored form, and «Кесаријска», of Caesarea, is kept. Measured before it was written: the bare «Теодора» lands on five folders, so the bare form was refused; the full string has no other holder at all."
     }
   ],
   "sex": "female",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.01.2026 (30. децембар ст. ст.) — „Преподобна Теодора Кесаријска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, and FOUR SENTENCES ARE THE WHOLE OF IT. The identification is the day, the city, the monastery and the grade together: the Romanian and the Greek already keep a venerable Theodora «from Caesarea» on this same menologion day, and the monastery of Saint Anne this entry names is the house the folder's own life already records her returning to and being tonsured in. The serbian row was `undocumented`, so the row lands here. `types` UNTOUCHED: «Преподобна» is the `venerable` held. `dates`: A `death` OF 755 WRITTEN AS A NEW KEY BESIDE THE `floruit` THE FOLDER HELD, which is carried forward word for word and not touched — see the `dates` note. NO `locations` and NO `related`: the entry names the house and nobody else. NOTE THAT THIS DAY'S SECOND ENTRY IS ALSO A THEODORA, „Преподобна Теодора Цариградска.“, who is a different woman two centuries later and is the arrival of this same batch, `theodora-of-constantinople`; the two stored Serbian forms are «Теодора Кесаријска» and «Теодора Цариградска» and neither folds with the other or with anything else. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
@@ -70,6 +85,13 @@
       "display": "8th century",
       "basis": "attested",
       "note": "saint.gr: «Η Οσία Θεοδώρα έζησε στα χρόνια του βασιλιά Λέοντα του Ισαύρου (717 - 741 μ.Χ.)». The years are the reign the page names and the page's own dating of it; no year of birth, no year of death and no age is given, and doxologia.ro, which the folder follows, gave no year at all."
+    },
+    "death": {
+      "earliest": 755,
+      "latest": 755,
+      "display": "755",
+      "basis": "traditional",
+      "note": "The folder's first `death` of any kind; it held a `floruit` of «8th century» off saint.gr and nothing else, and that floruit is carried forward here word for word. The Охридски пролог for 30. децембар ст. ст. is four sentences long and this is one of them: «После многих подвига у манастиру Свете Ане мирно се упокојила 755. године» — after many labours in the monastery of Saint Anne she reposed in peace in 755. The year lies fourteen years PAST the end of the reign saint.gr dates her life by, which is no contradiction: that page says she lived in the days of Leo the Isaurian and does not say she died in them. Nothing is replaced and nothing is narrowed. Read 8 October 2026."
     }
   }
 }

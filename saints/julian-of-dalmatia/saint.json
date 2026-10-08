@@ -1,0 +1,42 @@
+{
+  "slug": "julian-of-dalmatia",
+  "display_name": "Julian of Dalmatia",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.08.2026 (28. јул ст. ст.) — „Свети мученик Јулијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and AN ARRIVAL. WHY A NEW FOLDER, and this was the day's longest check: the corpus holds seventeen Julian folders and SIXTEEN Julianas and companions besides, and NOT ONE of them is this man. Every one of the seventeen was read by day, by date and by dossier — `julian-companion-of-caesarius` (about 268, 7 October), `julian-companion-of-euboulos` (under Julian the Apostate, 6 March), `julian-companion-of-macarius` (250), `julian-companion-of-modestus` (undated, 12 February), `julian-companion-of-pamphilus` (284–305, 16 February), `julian-of-africa` (430, 23 May), `julian-of-antinoopolis` (early 4th century, 8 January), `julian-of-emesa` (312, 6 February), `julian-of-kandavla` (288–311, 4 September), `julian-of-samosata` (297, 29 January), `julian-of-tarsus` (21 June), `julian-of-the-brazen-gate` (716), `julian-of-the-dogazou` (undated, 12 June), `julian-of-the-euphrates` (4th century, 18 October), `julian-presbyter-of-ancyra` (300–323, 12 September), `julian-the-deacon-of-aegina` (319) and `julian-the-martyr-18-may` — AND NONE OF THEM IS OF DALMATIA, NONE IS UNDER ANTONINUS, AND NOT ONE IS KEPT ON 28 JULY IN ANY CALENDAR. A grep of every Julian folder's whole life and whole JSON for «Antoninus» and «Dalmatia» returns NOT ONE HIT; `ls -d saints/*dalmat*` returns five folders of which none is a Julian. `fk.mjs` on the bare «Јулијан» returns seven holders. NO SERBIAN NAME FORM WAS STORED, AND THAT IS A DELIBERATE REFUSAL: the heading „Свети мученик Јулијан.“ gives «Свети», which is not a rank, and «мученик», which is the `martyr` in `types`, and NO by-name, no see and no place at all — the place stands in the body only — so the bare forename is the only form there was to store, and `corpus-gate.mjs` already carries a READ `READ_FOLDS` key for that form at SEVEN members. Storing it would have widened a fold another reader wrote and read, and the brief says to refuse the form rather than widen a fold; so this folder ships with no `names` entry of any kind, as `stephen-the-first-martyr` does for the same reason at thirteen. The English display name is this corpus's own and is the country the entry puts in his own mouth. NO `dates`: «У време цара Антонина», in the time of the emperor Antoninus, is the whole of the entry's dating and it is a name and not a year — the 12-14 reader's refusal on «Кумврикије» in the same words. NO `locations`: Dalmatia and Italian Campania are a journey and not a place, which is the shape `map-span.test.mjs` exists to stop. NO `related`: the entry names nobody but the emperor, and the thirty men who turned to Christ at his trial are unnamed. The Prologue prints no hymn (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "theodora-of-constantinople",
+  "display_name": "Theodora of Constantinople",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Теодора Цариградска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 30. децембар ст. ст., „Преподобна Теодора Цариградска.“ — «Преподобна» is the rank `venerable`, which §6 keeps out of a stored form, and «Цариградска», of Constantinople, is the by-name the heading gives her and is kept. Measured before it was written: the bare «Теодора» lands on five folders — `theodora-12-january`, `theodora-companion-of-didymus`, `theodora-companion-of-leonides`, `theodora-of-alexandria` and `theodora-the-empress` — and the full string has no other holder at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 940,
+      "latest": 940,
+      "display": "940",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 30. децембар ст. ст. closes the entry «Представила се 30. децембра 940. године» — she reposed on 30 December 940. It is the only year any source read for this folder gives her, and no year of birth and no age is given anywhere. Read 8 October 2026."
+    }
+  },
+  "related": [
+    "basil-the-new-of-constantinople"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.01.2026 (30. децембар ст. ст.) — „Преподобна Теодора Цариградска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and AN ARRIVAL. WHY A NEW FOLDER: the corpus holds sixteen folders whose display name carries this forename and NOT ONE of them is this woman. `fk.mjs` on the bare «Теодора» returns five holders — `theodora-12-january`, `theodora-companion-of-didymus`, `theodora-companion-of-leonides`, `theodora-of-alexandria` and `theodora-the-empress` — and on the full «Теодора Цариградска» it returns NONE. A grep of every `life.md` and every `saint.json` in the corpus for «митарств», «мытар» and the English toll-house returns four files, of which the only relevant one is `basil-the-new-of-constantinople`, whose own life says in words that his disciple was the eldress Theodora and that she described the twenty toll-houses after her death — HIS FOLDER NAMES HER AND NO FOLDER HELD HER. Each of the sixteen was read: `theodora-12-january` is the nearest hazard and is NOT she, being this same book's own venerable mother of the Julian 12 January who reposed in peace at the beginning of the fifth century, five hundred years earlier and with no elder, no vision and no toll-houses in her entry; `theodora-of-caesarea` is the eighth-century nun of this same December day, upgraded in this same batch; and the other fourteen are two companies of martyrs, two empresses, an Alexandrian, an Amisene, an Artan, a Thessalonican, a Vastan, a Nizhny Novgorodian and a Sihlan, none of them of Constantinople and none of them of 940. WHAT THE BOOK SAYS OF HER, which is the whole of the folder: that she was a nun and the novice of Basil the New, whom it cross-references «в. 26. март»; that after her death she appeared to Gregory, Basil's disciple, and described to him all twenty of the toll-houses through which her soul had passed before it entered eternal rest by Basil's prayers; and that she reposed on 30 December 940. `dates`: a flat death of 940, the only year any source read gives her. NO `locations`: the heading's «Цариградска» is an adjective and the body names no place at all, and a reader does not draw a coordinate off an epithet. `related`: `basil-the-new-of-constantinople`, both ways, on the discipleship the entry states — and his folder takes the reciprocal row in this same batch. Gregory is named in the book's own Cyrillic and takes no row: nothing in the entry says which Gregory he is. The Prologue prints no hymn (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

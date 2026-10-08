@@ -6,6 +6,11 @@
       "form": "Θεοφύλακτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Όσιος Θεοφύλακτος Βουλγαρίας ο Χαλκιδεύς», with the rank, the see and the by-name of his birthplace left off."
+    },
+    {
+      "form": "Теофилакт",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's fourth heading for 31. децембар ст. ст., „Блажени Теофилакт, архиепископ охридски.“ — «Блажени» and «архиепископ» are ranks and «охридски» is the see, all three of which §6 keeps out of a stored form, so the bare forename is the whole of what the heading leaves. Measured before it was written: `fk.mjs` returns one other holder, `theophylact-of-nicomedia`, and a `READ_FOLDS` key for the pair is written in the same commit as this row. `theophylact-of-stavropol` is NOT in the fold: his only stored form is Russian, «Феофилакт (Губин)», which the key sorts as two words."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.01.2026 (31. децембар ст. ст.) — „Блажени Теофилакт, архиепископ охридски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. The identification is the island of his birth, the see, the century and the commentaries together: the Greek keeps «Όσιος Θεοφύλακτος Βουλγαρίας ο Χαλκιδεύς» on this same 31 December, and «Рођен на острву Еврипу» is Euripos, the strait at Chalkis, which is the Χαλκιδεύς of that line. The serbian row was `undocumented`, so the row lands here. `types` UNTOUCHED: «Блажени» is read here as the `venerable` the folder already carries and not as `fool-for-christ` — BRIEF-SERBIAN §5 says to read which, and a man of enormous learning who wrote the best commentary on the Gospels after Chrysostom is not a fool for Christ; «архиепископ охридски» is the `archbishop` held and the `office` Archbishop of Ohrid and Bulgaria. `dates` UNTOUCHED, AND THE REASON IS A REFUSAL WORTH THE REPORT: this entry gives «око двадесет пет година (од прилике од 1082-1108)», about twenty-five years and approximately 1082 to 1108, which is THE SPAN OF HIS EPISCOPATE AND NOT OF HIS LIFE, hedged by the book itself with «од прилике»; the folder's `floruit` is an eleventh century off saint.gr, and replacing a life floruit with an approximate span of office — one end of which falls in the twelfth century — would be a reading of the two books together and not of the newer one, which is the 11-05 `stephen-of-decani` precedent. The years are in the life instead, as the book hedges them. NO `locations`. NO `related` AND THREE NAMES LEFT IN CYRILLIC. «Живот светог Климента Охридског» is a book he wrote: `clement-of-ohrid` exists, but AN AUTHOR WHO WRITES ANOTHER SAINT'S LIFE FOUR CENTURIES AFTER HIM IS NOT HIS COMPANION, which is the 12-26 reader's `ephrem-the-syrian` refusal read the other way round, so no row was made in either direction and the title stays as the book prints it. «светог Златоуста» is named only in a comparison of commentaries, so `john-chrysostom` takes nothing. «Хоматијан Охридски», who called him the wisest of archbishops, is no folder this corpus holds. WHAT THE BOOK ADDS, and it is nearly the whole of this folder's life: that he was brought up at Constantinople under the most famous teachers of the day; that he was a cleric of the Great Church and was chosen bishop and sent to Ohrid AGAINST HIS OWN WILL; the twenty-five years there; Chomatianos's phrase; the portrait — a man of enormous learning, worldly and theological, of refined Byzantine taste, melancholy and sensitive, WHO FELT HIMSELF AMONG THE SLAVS AT OHRID AN EXILE AMONG BARBARIANS; the Commentaries on all four Gospels and on other books of the New Testament, called the best work of its kind after Chrysostom and read with great profit to this day; the Letters and the Life of Clement of Ohrid; and that in old age he withdrew from Ohrid to Thessalonica, where it is thought he ended his earthly life. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

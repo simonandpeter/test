@@ -1,0 +1,60 @@
+{
+  "slug": "polychronius-of-babylon",
+  "display_name": "Polychronius of Babylon",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Полихроније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 30. јул ст. ст., „Свешт. муч. Полихроније еп. Вавилонски.“ — «Свешт. муч.» is the `hieromartyr`, «еп.» the `bishop` and «Вавилонски» the see, all of which §6 keeps out of a stored form, so the bare forename is what is left. Measured before it was written: `fk.mjs` returned one other holder, `polychronius-the-martyr`, and a `READ_FOLDS` key for the pair is written in the same commit as this folder. `polychronius-disciple-of-zebinas` and `polychronia-mother-of-george` are not in the fold and hold no Serbian form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 30. јул ст. ст. closes the entry «Сви чесно пострадаше 251. год.» — they all suffered honourably in 251, which it says of the bishop, the priests and the two princes together. It is the only year the entry gives and the only year any source read for this folder gives; no year of birth and no age is stated. The reign of Decius, which the entry names, was not turned into a second interval. Read 8 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.08.2026 (30. јул ст. ст.) — „Свешт. муч. Полихроније еп. Вавилонски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, and AN ARRIVAL. WHY A NEW FOLDER: the corpus holds three folders whose name folds to this one and NOT ONE of them is this man. `polychronius-the-martyr` is a `martyr` and `presbyter` of the FOURTH century off saint.gr, whom all four calendars keep on 7 October and who already carries a venerated serbian row for that day — a presbyter and not a bishop, a century later, and with a company of his own. `polychronius-disciple-of-zebinas` is a `venerable` and `ascetic` of the Greek 23 February, a disciple with two disciples of his own and no see at all. `polychronia-mother-of-george` is a woman. NONE of the three is of Babylon, NONE is a bishop, and none is under Decius. `fk.mjs` on «Полихроније» returned exactly one holder before this folder was written, and a `READ_FOLDS` key for the resulting pair is written in the same commit. WHAT THE BOOK SAYS OF HIM, which is the whole of the folder: that when the emperor Decius took Babylon he seized Polychronius with three presbyters, two deacons and two baptised princes; that Polychronius WOULD ANSWER THE EMPEROR NOTHING BUT KEPT SILENT, while the presbyter Parmenius answered for them all; that the emperor took the bishop and the priests into Persia, to the city of Corduba, and beheaded them with axes; and that they all suffered honourably in 251. `office` is the bare `Bishop` and not «Bishop of Babylon»: `i18n.test.mjs` requires every `office` string in all four locale packs and a new one costs four translations a reader should not invent (BRIEF-ADDENDUM §4), so the see is in the display name and in the life instead. `types`: `hieromartyr` off «Свешт. муч.» and `bishop` off «еп.». `dates`: a flat death of 251, the only year the entry gives. NO `locations`: Babylon, Persia and Corduba are a deportation and not a place. NO `related`, AND FOUR PEOPLE NAMED IN THE BODY TAKE NOTHING, WHICH IS THE DAY'S LARGEST REFUSAL. The heading names ONE man and carries NO company clause, so the 12-28 `domna-of-nicomedia` ruling holds. «св. Парменије презвитер», who answered for them all, HAS NO FOLDER IN THIS CORPUS. The two princes have none either, and THE BOOK SPELLS THE FIRST OF THEM TWO WAYS ON ONE PAGE — «Авдоном» in the arrest and «Евдона» in the sentence — beside «Сенисом» / «Сениса»: they are the Abdon and Sennen whom the Western calendars keep on 30 July, thrown first to the beasts at Rome and then put to the sword, and this corpus holds neither. The three unnamed presbyters and two unnamed deacons are a count and not an enumeration. Granting any of them a folder is one line for the author. The Prologue prints no hymn (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
