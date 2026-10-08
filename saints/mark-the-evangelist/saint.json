@@ -16,6 +16,11 @@
       "form": "Марко",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 25. април ст. ст., „Св. апостол и јеванђелист Марко.“ Св. is not a rank, and апостол and јеванђелист are two ranks this folder already carries in `types`, which `honorific.js` composes back; the heading gives no epithet, no city and no see, so the bare forename is the whole of the Serbian form. Three other folders already hold the same bare form; whether the gate reads them as one was measured rather than assumed, and the row is in the batch's commit message."
+    },
+    {
+      "form": "Марк",
+      "lang": "ru",
+      "note": "The name link behind the day’s line is page 1459, titled «Апостол и евангелист Марк», whose two rank words are a rank and are stripped per BRIEF.md §4, leaving the bare forename. THE CALENDAR GIVES NO EPITHET AND NO SURNAME ANYWHERE on that page or on any of its four lives, so there is no two-word form to prefer and none was invented. Measured against the gate’s own key function before it was written: 'марк' has no other holder in the corpus, the twenty-one «μαρκοσ» folders reaching that fold through the Greek and not through this form."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 апреля ст. ст. — «Апостола и евангелиста Марка (63).»",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry. THE FOLDER’S FIRST `dates` OF ANY KIND: all three calendars already in it — doxologia, saint.gr and the Ohrid Prologue — say in so many words that they give no year, and this one does: life931 ends the martyrdom «Это было 4 апреля 63 года. Память его Церковь празднует 25 апреля», and the day line heads him «(63)» as well. Only the year was written; the 4 апреля of the burial is the source’s own and is set out in the life, not in `dates`. The name index behind the line is page 1459, «Апостол и евангелист Марк», and it lists FOUR readings, all of which were read: a short notice, life4615 «Cвятые Апостолы от 70-ти: Тертий, Марк, Иуст и Артема», life1613 «Апостол от 70-ти Марк», and life931 «Святой апостол и евангелист Марк», the full life. TWO OF THOSE FOUR ARE NOT THIS MAN: life4615 and life1613 are the Mark of the Seventy who was also called John, nephew of Barnabas and bishop of Byblos, whom this corpus keeps as `mark-of-byblos` and whose shadow healed the sick — the Russian calendar files him under the Evangelist’s name page and his own 27 сентября, and life1613 closes «(память также 25 апреля)». NO SECOND FOLDER WAS MADE AND NO ROW WENT TO `mark-of-byblos`: the day page’s line is the Evangelist’s, and whether this calendar means to keep the Byblos Mark on 25 апреля as well is a reading off a parenthesis inside a life, which is not a day page listing him. It is reported. All four pages head «Дни памяти: 4 января (70 ап.) , 25 апреля , 27 сентября , 30 октября»; the other three days ARE NOT READ and are not second feasts of this folder. The day page prints three hymns under his name, «Тропарь апостола Марка» (глас 3), «Ин тропарь апостола и евангелиста Марка» (глас 3) and «Кондак апостола Марка» (глас 2), all three naming Mark, and all three are on this folder now; the folder had only its two Greek texts before. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -123,6 +138,63 @@
         "text": "Having received from on high the grace of the Spirit, thou didst break up the twistings of the rhetoricians, O apostle; and having netted all the nations, O Mark of famous memory, thou didst bring them to the Master, preaching the divine Gospel.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоле святый и Евангелисте Марко,/ моли Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь апостола Марка», глас 3, under «Молитвы» on the day page for 25 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostle and evangelist Mark, pray to the merciful God, that He may grant the remission of our offences to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "У верховнаго Петра научився,/ апостол Христов был еси/ и, яко солнце, странам возсиял еси,/ Александриом удобрение быв, блаженне:/ тобою Египет от прелести свободися,/ евангельским твоим учением просвещ вся,/ яко свет, столп церковный./ Сего ради твою память чтуще, светло празднуем,/ Марко Богогласе,/ моли тобою благовестимаго Бога/ да согрешений оставление подаст душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь апостола и евангелиста Марка», глас 3, the second of the two troparia the day page prints under his name, under «Молитвы» for 25 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taught by Peter the chief of the apostles, thou wast an apostle of Christ, and like the sun thou didst shine upon the nations, becoming the adornment of the Alexandrians, O blessed one. Through thee Egypt was set free from delusion, for thou hast enlightened all things by thy evangelic teaching, as a light and a pillar of the Church. Therefore honouring thy memory we keep thy feast with brightness, O Mark whose voice is of God; pray to the God whose good tidings thou hast preached, that He may grant the remission of sins to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "С высоты приим благодать Духа,/ риторская плетения разрушил еси, апостоле,/ и, языки вся уловив, Марко всеславне,/ твоему Владыце привел еси,// Божественное проповедав Евангелие.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак апостола Марка», глас 2, under «Молитвы» on the day page for 25 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the grace of the Spirit from on high, thou didst undo the weavings of the rhetoricians, O apostle; and having caught all the nations, O all-glorious Mark, thou didst bring them to thy Master, preaching the divine Gospel.",
+        "rendered": "site"
+      }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 63,
+      "latest": 63,
+      "display": "63",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life931: «Христиане взяли тело святого апостола и погребли его в каменной гробнице. Это было 4 апреля 63 года.» The day line heads the entry «(63)». No year of birth is given on any of the four readings and none was inferred; doxologia, saint.gr and the Ohrid Prologue each say in their own words that they give no year at all."
+    }
+  }
 }

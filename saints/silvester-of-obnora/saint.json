@@ -12,6 +12,11 @@
       "form": "Σιλβέστρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Απριλίου, «Όσιος Σιλβέστρος της Ομπνόρα», with the rank word left off."
+    },
+    {
+      "form": "Сильвестр Обнорский",
+      "lang": "ru",
+      "note": "The two words the day’s line and the life’s own title both use — «Прп. Сильвестра Обнорского» and «Преподобный Сильвестр Обнорский» — with the rank stripped per BRIEF.md §4. The name index at page 1994 is titled «Сильвестр Обнорский, Пошехонский, прп.» and carries A SECOND TOPONYM, «Пошехонский», which neither the line nor the life repeats: joining two toponyms into one stored form is a reading nobody here has done, so the form takes the two words that are everywhere on the source and the third is recorded here. Measured against the gate’s own key function before it was written: 'обнорскии сильвестр' has no other holder, where the bare «σιλβεστροσ» fold holds five."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 апреля ст. ст. — «Прп. Сильвестра Обнорского (1379).»",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry. A YEAR CONFLICT INSIDE THE ONE SOURCE, AND `dates` WAS NOT TOUCHED: the day line heads him «(1379)», while the life the same line links, life932, ends «Преподобный скончался 25 апреля 1479 года и был погребен справа от деревянного Воскресенского храма». The folder already held 1479 off saint.gr, and the Russian life agrees with it against the Russian line, so nothing moved; a hundred years out on the line, with the source’s own life contradicting it, reads as a slip in the line, but a slip read is not a slip proved and it is reported. The life also confirms the day this row stands on. ITS CONTENT IS LARGELY THE SAME READING saint.gr already gave the folder — the discipleship under Sergius of Radonezh at the Trinity monastery, the cross set up in the thick forest on the Obnora, the peasant who lost his way and the pillar of cloud, the bark and roots and the angel’s touch, the blessing of the hierarch Alexis of Moscow for the church of the Resurrection, the forbidden grove and the four wells, and the dying counsel. WHAT IS NEW IN IT is the record of his wonders from the year 1645, twenty-three of them, twelve of possession and six of diseases of the eye, and the hieromonk «Иов» struck blind for having the forbidden grove cut for firewood and given his sight back after four weeks of repentance; that is the paragraph added to the life. The page heads «Дни памяти: 25 апреля , 23 мая (Ростов.)»; 23 мая is the synaxis of the saints of Rostov, NOT a second feast of this folder, and THAT DAY PAGE WAS NOT READ. The day page prints three hymns under his name, «Тропарь преподобного Сильвестра Обнорского» (глас 6), «Ин тропарь» (глас 4) and «Кондак» (глас 6), each of which names Сильвестр, and all three are on this folder now, which had no hymn of any kind. The name link, page 1994, is titled «Сильвестр Обнорский, Пошехонский, прп.» and adds the second toponym «Пошехонский», which neither the line nor the life uses. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -61,5 +76,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Иже измлада Христа возлюбив/ и верою к Нему приближся,/ изнурил еси, в пустыни живый, многострадальное тело твое./ Тем, блаженне Сильвестре, со Ангелы ликовствуя,/ моли Христа Бога мир мирови даровати/ и буди помощник верою призывающим тя на помощь/ и чтущим святую память твою.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Сильвестра Обнорского», глас 6, under «Молитвы» on the day page for 25 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Christ from thy youth and drawn near to Him in faith, thou didst wear out thy much-suffering body, living in the wilderness. Therefore, O blessed Silvester, rejoicing with the angels, pray to Christ God to grant peace to the world, and be a helper to those who call upon thee in faith for help and who honour thy holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко добр блаженнаго Сергия ученик,/ вере и благочестию его подражая,/ стяжал еси даров Духа Святаго сокровище/ и силы многи соделал еси о Господе/ во спасение и утешение верных./ Не остави убо и нас, с верою притекающих к тебе,/ Сильвестре преподобне.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь преподобного Сильвестра Обнорского», глас 4, the second of the two troparia the day page prints under his name, under «Молитвы» for 25 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a good disciple of the blessed Sergius, imitating his faith and his piety, thou didst gain the treasure of the gifts of the Holy Spirit and didst work many mighty things in the Lord, for the salvation and the consolation of the faithful. Forsake not us either, then, who run to thee in faith, O venerable Silvester.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Подвигом добрым подвизался еси, преподобне,/ и душу твою, яко жертву чисту и непорочну,/ Духу Святому принеся еси,/ и по смерти твоей стадо твое духовное соблюдавши,/ и в болезнех скоро посещавши./ Темже молим тя, преблаженне:/ с лики преподобных моли Христа Бога,/ да спасет православный христианы/ и подаст людем в мире глубоце устроитися, да зовем ти:/ радуйся, Сильвестре, иноком духовный пастырю и наставниче.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Сильвестра Обнорского», глас 6, under «Молитвы» on the day page for 25 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast striven the good strife, O venerable one, and hast offered up thy soul to the Holy Spirit as a pure and spotless sacrifice; and after thy death thou dost keep thy spiritual flock and visitest them swiftly in their sicknesses. Therefore we pray thee, most blessed one: with the choirs of the venerable, pray to Christ God that He may save the Orthodox Christians and grant His people to be settled in deep peace, that we may cry to thee: Rejoice, Silvester, spiritual shepherd and teacher of monks.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
