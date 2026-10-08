@@ -1,0 +1,61 @@
+{
+  "slug": "sergius-arkhangelsky",
+  "display_name": "Sergius (Arkhangelsky)",
+  "names": [
+    {
+      "form": "Сергий (Архангельский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13715, «Сергий (Архангельский), псаломщик, мч.», with the two words after the comma left off. The day’s own line gives the name without the surname — «Мч. Сергия (1938).» Measured against the gate’s own key function before it was written: 'архангельскии сергии' has no other holder in the corpus, where the bare «Сергий» has many."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "office": "Reader",
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Мч. Сергия (1938).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мч. Сергия (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026
+      },
+      "note": "The day’s eleventh entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 13715, prints the title and «Дни памяти: 26 января (Новомуч.) , 24 апреля» and nothing else. What it gives that the line does not is the surname «Архангельский» and his station, «псаломщик», the reader who chants the psalms. 26 января is the general commemoration of the new martyrs and confessors, which is how `new-martyr` is read into `types`, and THAT DAY PAGE WAS NOT READ. He is graded «мч.» and not «сщмч.», a martyr and not a hieromartyr, and the reader is not a priest, so `presbyter` was not reached for; the station is recorded in `office` as `Reader`, which was checked in the packs rather than assumed — `src/ui/locales/ru.js` has `'Reader': 'Чтец'` and the other three packs likewise. The `types` vocabulary has no word for a reader, which is the same gap an earlier wave reported for a чтец of the Puteoli company. NO FOLDER WAS FOUND FOR HIM: the corpus holds `alexander-arkhangelsky` and `basil-arkhangelsky`, who share the surname and nothing else, and no Sergius carries it. The day page prints no hymn under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 7 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 7 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

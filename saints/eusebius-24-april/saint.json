@@ -15,6 +15,11 @@
       "form": "Евсевије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Евсевије, Неон, Леонтије и Лонгин.“, with „Св.“ and the one rank word муч., which stands over all four and belongs to none of them, left off. The heading gives him no epithet, no city and no year, and the day this corpus keeps in his English display name is the corpus's own device and no source's name."
+    },
+    {
+      "form": "Евсевий Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 699, «Евсевий Никомидийский, мч.», with the rank abbreviation after the comma left off; the day’s own line gives only the genitive «Евсевия» and no city. Measured against the gate’s own key function before it was written: 'евсевии никомидиискии' has exactly one other holder, `eusebius-companion-of-bassus`, and that fold is keyed as read in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "related": [
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мчч. Евсевия , Неона , Леонтия , Лонгина и иных (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s fourth entry, a line naming four men and an unnumbered remainder, of whom this is the first. The name link, page 699, is titled «Евсевий Никомидийский, мч.» and gives the city the line does not; the shared life, life928, heads «День памяти: 24 апреля» and no other day. THE LINE SAYS «и иных» AND THE LIFE’S OWN TITLE SAYS «и 40 иных» — forty others, a number the day page does not print. The forty are unnamed on both pages, so they stay one entry and NO FOLDER WAS MADE FOR THEM; whether the corpus should hold them as it holds the seventy soldiers of the same day’s first line is an author question and is reported as one. The year 303 is the folder’s already and `dates` was not changed. THE STORED FORM MAKES A FOLD, KEYED AS READ IN THIS COMMIT: `eusebius-companion-of-bassus` already stores the identical «Евсевий Никомидийский», written by the reader of 20 января ст. ст. off another Nicomedian company of 303. The day page prints no hymn for any of the four. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",

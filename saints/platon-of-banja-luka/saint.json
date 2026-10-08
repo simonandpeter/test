@@ -13,6 +13,11 @@
       "form": "Πλάτων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Απριλίου, «Άγιος Πλάτων ο Ιερομάρτυρας επίσκοπος Μπάνια Λούκα», with the rank words and the see left off; the page gives his name in the world as Milivoje Jovanović, in Greek letters."
+    },
+    {
+      "form": "Платон (Йованович)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 22 апреля ст. ст., name page 14507, «Святитель Платон (Йованович), епископ Бянолукский», with the rank word before the name and the see after it left off; the day’s own line gives the genitive «Платона» without the surname. The surname is part of the name and stays, per BRIEF-RUSSIAN §2. Measured against the gate’s own key function before it was written: 'иованович платон' has no other holder in the corpus."
     }
   ],
   "related": [
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Сщмч. Платона , еп. Банялукского (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026,
+        "note": "The day’s sixth entry, and THE RUSSIAN CALENDAR GIVES HIM NO LIFE PAGE: the line carries a name link and no life link, and the name page behind it, 14507, prints the title and «День памяти: 22 апреля» and nothing else. What it gives that the line does not is the surname, «Платон (Йованович)», which is the form stored here. THE TWO SPELL THE SEE DIFFERENTLY: the line reads «еп. Банялукского» and the name page’s own title «епископ Бянолукский», which looks like a slip for the first; the folder’s `office`, Bishop of Banja Luka, was not touched. The year 1941 is the year the folder already held off saint.gr, and `dates` was not changed. No second day anywhere on the page. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",

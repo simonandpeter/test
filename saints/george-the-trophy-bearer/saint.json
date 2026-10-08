@@ -16,6 +16,11 @@
       "form": "Ђорђе",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 23. април ст. ст., „Св. вел. муч. Ђорђе.“, with „Св.“ and the ranks вел. муч. left off — великомученик is the `great-martyr` this folder carries in `types`. The heading gives no epithet: Тропајоносац, the Trophy-bearer this corpus's English name keeps, is not in it, and the body's „победоносни“ is an adjective in a sentence. The Serbian vernacular Ђорђе is what this book prints, not Георгије, which eight other folders hold; `george-of-kratovo` holds the fuller «Ђорђе Кратовац» and no folder held this bare form before."
+    },
+    {
+      "form": "Георгий Победоносец",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 23 апреля ст. ст., name page 497, «Великомученик Георгий Победоносец», with the rank word left off; the day’s own line gives the genitive «Георгия Победоносца». Победоносец, the Trophy-bearer, is kept because the calendar prints it attached to the name and because the bare «Георгий» would fold onto a great many folders. Measured against the gate’s own key function before it was written: 'георгии победоносец' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Вмч. Георгия Победоносца (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "The day’s second entry, after the moveable Преполовение Пятидесятницы. The name link behind the line, page 497, is titled «Великомученик Георгий Победоносец» and gives «День памяти: 23 апреля» and no other day, so there is no second day to record. The index it links lists two readings and both were read: life6415, a short notice of his companions, and life918, titled for him and five of his company together — «Великомученик Георгий Победоносец. Мученики Анатолий и Протолеон, Гликерий земледелец, Афанасий волхв и Валерий». THE DAY PAGE PRINTS THREE HYMNS UNDER HIS NAME and all three are on this folder now; two of them name nobody in their own text and are taken as his under the page’s own headings, which is BRIEF.md §4’s common and not a mis-hang, and the hymn notes say which is which. The year 303 is the folder’s already and `dates` was not changed; life918 gives the day as well, «Это было 23 апреля 303 года», and adds that he was not yet thirty. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -121,6 +136,57 @@
       },
       "english": {
         "text": "Being tilled by God thou wast shown a most honourable husbandman of piety, gathering to thyself the sheaves of the virtues; for having sown in tears thou reapest in gladness, and having contended through thy blood thou hast won Christ. And by thine intercessions, O holy one, thou grantest to all the forgiveness of their trespasses.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко пленных свободитель/ и нищих защититель,/ немощствующих врач,/ православных поборниче,/ победоносче, великомучениче Георгие,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Тропарь великомученика Георгия», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "The first of the three the day prints under his name, and the only one of them whose own text names him, «победоносче, великомучениче Георгие». It is the Slavonic of the troparion this folder already carries in Romanian and in Greek. Copied whole off the page and checked back against it by whitespace-normalised match."
+      },
+      "english": {
+        "text": "As the deliverer of captives and the defender of the poor, the physician of the sick and the champion of the Orthodox, O victorious great-martyr George, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Подвигом добрым подвизался еси,/ страстотерпче Христов,/ верою и мучителей обличил еси нечестие,/ жертва же благоприятна Богу принеслся еси./ Темже и венец приял еси победы/ и молитвами, святе, твоими всем подавши/ прегрешений прощение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Ин тропарь великомученика Георгия Победоносца», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "«Ин тропарь» is the page’s own word for a second troparion. THE TEXT NAMES NOBODY: it addresses a «страстотерпче Христов», a passion-bearer of Christ, and is recognisably the common of a passion-bearer. It is taken whole under the page’s own heading, which is BRIEF.md §4’s ruling that a common printed under one name is that saint’s service; it is reported as a common and not as his proper. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Thou didst strive in the good struggle, O passion-bearer of Christ, and by faith thou didst convict thy tormentors of their impiety; thou wast offered as a sacrifice acceptable to God. Therefore hast thou received the crown of victory, and by thy prayers, O holy one, thou grantest unto all forgiveness of transgressions.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Возделан от Бога,/ показался еси благочестия делатель честнейший,/ добродетелей рукояти собрав себе:/ сеяв бо в слезах, веселием жнеши,/ страдальчествовав же кровию, Христа приял еси,/ молитвами, святе, твоими всем подаеши// прегрешений прощение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Кондак великомученика Георгия», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "THE TEXT NAMES NOBODY, addressing a «святе» who sowed in tears and reaped in gladness and strove unto blood; it is taken whole under the page’s own heading, as the second troparion is, and it is the Slavonic of the kontakion this folder already carries in Greek, at the same tone. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Cultivated by God, thou wast shown forth a most honourable husbandman of piety, gathering to thyself the sheaves of the virtues; for having sown in tears thou reapest in gladness, and having striven unto blood thou hast received Christ. By thy prayers, O holy one, thou grantest unto all forgiveness of transgressions.",
         "rendered": "site"
       }
     }

@@ -17,19 +17,37 @@
       "form": "Теодор Сикеот",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 22. април ст. ст., „Преп. Теодор Сикеот.“, with the rank word Преп. left off. The by-name Сикеот is kept: it is not a rank but the thing the entry explains in its first sentence — his birthplace was the village of Сикеа in Galatia, „због чега би прозван Сикеот“ — and `theodore-boyar-of-chernigov`, `theodore-of-perga` and `theodore-prince-of-yaroslavl` already share the bare «Теодор», which a bare form here would fold onto."
+    },
+    {
+      "form": "Феодор Сикеот",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 22 апреля ст. ст., name page 2200, «Святитель Феодор Сикеот», with the rank word «Святитель» left off; the day’s own line gives the genitive «Феодора Сикеота». Measured against the gate’s own key function before it was written: 'сикеот феодор' has no other holder in the corpus."
     }
   ],
   "sex": "male",
   "types": [
     "bishop",
     "hierarch",
-    "wonderworker"
+    "wonderworker",
+    "venerable",
+    "monk",
+    "presbyter"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Прп. Феодора Сикеота, еп. Анастасиупольского (613).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026,
+        "note": "The day’s first entry. THE LINE AND THE NAME PAGE GRADE HIM DIFFERENTLY: the line reads «Прп.», преподобный, while the name link behind it (page 2200) is titled «Святитель Феодор Сикеот» — venerable against hierarch. Both gradings are kept, the folder’s own `hierarch` standing and `venerable` added from the line. The index at that link lists two readings and both were read: life915, the life, and life1318, the carrying of his relics from Galatia to Constantinople not later than the ninth century. Both head «Дни памяти: 22 апреля , 15 июня (Перенесение мощей)»; 15 июня is RECORDED HERE AND NOT READ, and the folder renders on 22 апреля ст. ст. only. life1318 dates his repose «+ 22 апреля 613», the same day this row stands on and the same year the folder already held off saint.gr. `dates` WIDENED, NOT MOVED: the death 613 is unchanged and a birth is added where the folder had none, «родился в середине VI века», the middle of the sixth century. The day page prints a troparion and a kontakion under «преподобного Феодора»; he is the day’s only Theodore and both texts name him, so they are his own propers and are on this folder now. Not checked: azbyka.ru, and the 15 июня day page."
+      }
     },
     {
       "church": "romanian",
@@ -125,18 +143,59 @@
         "text": "Mounted as on a chariot of fire upon the virtues, O God-bearer, thou didst run up to the heavenly dwellings — an angel living among men, a man dancing with the angels; and therefore thou wast shown to be a divine vessel of wonders, O Theodore.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Познан быв от пелен освящен/ и явлься благодатей исполнен,/ чудесы мир озарил еси/ и демонов множество отгнал еси,/ священнодетелю Феодоре,// темже о нас молися Господеви.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Тропарь преподобного Феодора», глас 2, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026,
+        "note": "The heading gives the bare forename and he is the day’s only Theodore; the text names him and addresses him, so it is his own proper and not a common. It is the Slavonic of the troparion this folder already carries in Romanian off doxologia.ro, «Cunoscut fiind din scutece sfinţit» — the same hymn in the other tongue, kept because this is the Russian calendar’s own witness to it. Copied whole off the page and checked back against it by whitespace-normalised match, not by eye."
+      },
+      "english": {
+        "text": "Known from thy swaddling-clothes to be sanctified, and shown forth filled with graces, thou hast lit up the world with wonders and driven off a multitude of demons, O Theodore, worker of holy things; therefore pray thou to the Lord for us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко на огненную колесницу добродетельми, богоносе, возшед,/ востекл еси на Небесная жилища,/ яко Ангел, с человеки пожил еси/ и, яко человек, со Ангелы окрест ликовствуеши./ Сего ради показался еси чудес Божественное приятелище,// Феодоре преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Кондак преподобного Феодора», глас 3, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026,
+        "note": "The Slavonic of the kontakion this folder already carries in Greek off saint.gr, «Ὡς πυρίνῳ ἅρματι, ταῖς ἀρεταῖς Θεοφόρε» — the same hymn, kept because this is the Russian calendar’s own witness to it, and at the same tone, глас 3 against Ἦχος γ’. Copied whole off the page and checked back against it by whitespace-normalised match."
+      },
+      "english": {
+        "text": "Mounting the virtues as a chariot of fire, O God-bearer, thou hast run up to the dwellings of heaven; as an angel thou hast lived among men, and as a man thou dancest round about with the angels. Therefore hast thou been shown forth a divine vessel of wonders, O venerable Theodore.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
   },
   "dates": {
+    "birth": {
+      "earliest": 534,
+      "latest": 566,
+      "display": "mid-6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, life915: «Преподобный Феодор Сикеот родился в середине VI века в селе Сикее, недалеко от города Анастасиополя» — born in the middle of the sixth century. The corpus’s first year of birth for him: the Greek and Romanian rows the folder was built from give none, and saint.gr heads him «(; - 613)». The display reads «mid-6th century» because `tests/date-display.test.mjs` requires a form `lib/date-display.js` parses whole."
+    },
     "death": {
       "earliest": 613,
       "latest": 613,
       "display": "613",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Θεόδωρος κοιμήθηκε με ειρήνη το έτος 613 μ.Χ.», and the page heads him «(; - 613)»; no year of birth is printed, though the page dates his second visit to Constantinople to 610."
+      "note": "saint.gr: «Ο Όσιος Θεόδωρος κοιμήθηκε με ειρήνη το έτος 613 μ.Χ.», and the page heads him «(; - 613)»; no year of birth is printed, though the page dates his second visit to Constantinople to 610. days.pravoslavie.ru agrees and adds the day: life915 ends «В 613 году отошел ко Господу и преподобный Феодор», and life1318 heads him «(+ 22 апреля 613)», which is the day this folder’s Russian row stands on."
     }
   },
   "images": [

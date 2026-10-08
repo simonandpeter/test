@@ -16,6 +16,11 @@
       "form": "Пасикрат",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Пасикрат и Валентин.“, with „Св.“ and the one rank word муч., which stands over both names, left off. The heading gives no city: Durostorum, which this corpus's English name keeps, is the Greek calendar's and is nowhere in this entry. No other folder in this corpus holds this form in any language."
+    },
+    {
+      "form": "Пасикрат Доростольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 1742, «Пасикрат Доростольский, мч.», with the rank abbreviation after the comma left off; the day’s own line gives only the genitive «Пасикрата» and no city. Measured against the gate’s own key function before it was written: 'доростольскии пасикрат' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мчч. Пасикрата и Валентина (228).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s third entry, a line naming two men, of whom this is the first. The name link, page 1742, is titled «Пасикрат Доростольский, мч.» and gives the city, which the line does not; both it and the life head «День памяти: 24 апреля» and no other day. THE LINE AND THE LIFE DISAGREE ON THE YEAR BY SIXTY, AND `dates` WAS NOT CHANGED. The line heads the pair «(228)»; life927 ends «Оба мученика были усечены мечом (+ 288)». The two differ in one digit and the earlier of them is far outside the persecution the account describes, so the likelihood is a slip on the day line; but a year is one of the nine things a machine may not decide and this folder’s interval, 275 to 297 off saint.gr, agrees with neither. Both readings are set out in the life. REPORTED TO THE AUTHOR. What the life does give and nothing else did: he was twenty-two years old. The day page prints no hymn under his name. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",

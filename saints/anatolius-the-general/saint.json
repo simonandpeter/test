@@ -11,6 +11,11 @@
       "form": "Ανατόλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Ανατόλιος ο στρατηλάτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Анатолий",
+      "lang": "ru",
+      "note": "The whole of the title on the name link behind the line for 23 апреля ст. ст., name page 171, «Мученик Анатолий», with the rank word left off; the page gives no city and no epithet, and the day’s line gives only the genitive «Анатолия». The form is therefore a bare forename, which folds onto `anatoly-martyr-1918`, a martyr of 1918 kept on 2 сентября ст. ст. who stores the identical string; that fold is keyed as read in `scripts/corpus-gate.mjs` in the same commit. The icon caption on life6415, «Мч. Анатолий Никомидийский», would have given a two-word form, and it was not used: a caption is not a heading."
     }
   ],
   "related": [
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Мчч. Анатолия и Протолеона (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "The day’s fifth entry, a line naming two men, of whom this is the first. The name link behind «Анатолия» is page 171, titled «Мученик Анатолий», which gives «День памяти: 23 апреля» and no other day and NO EPITHET AT ALL — so the stored form is the bare forename, and that is what makes the fold this batch had to key. The caption of the icon on his own life page, life6415, reads «Мч. Анатолий Никомидийский», giving him the city his companion’s name page gives in its title; a caption is weaker than a heading and the city was NOT written into the stored form, only recorded here and in the life. `dates` WRITTEN WHERE THE FOLDER HAD NONE AT ALL: the line heads the pair «(303)», which is the year of the great-martyr’s own death on this day, «Это было 23 апреля 303 года» in life918. The day page prints no hymn under his name — the four it prints are three for the great-martyr and one for the empress. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru heads the line for 23 апреля ст. ст. «Мчч. Анатолия и Протолеона (303)», and life918 gives the day and year of the great-martyr he was beheaded beside — «Это было 23 апреля 303 года». He was put to the sword at once and without trial on the day of those torments, so the year is the same. The corpus’s first year of any kind for him: the folder held no `dates` object and the Greek calendar it was built from gives none."
+    }
   }
 }

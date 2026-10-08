@@ -1,0 +1,61 @@
+{
+  "slug": "branko-dobrosavljevic",
+  "display_name": "Branko (Dobrosavljević)",
+  "names": [
+    {
+      "form": "Бранко (Добросавлевич)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14508, «Бранко (Добросавлевич), иерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Сщмч. Бранко пресвитера (1941).» Measured against the gate’s own key function before it was written: 'бранко добросавлевич' has no other holder in the corpus. THE DISPLAY NAME IS NOT THIS STRING TRANSLITERATED: Бранко is a Serbian name and the Russian calendar prints the surname in Russian spelling, so the display name gives it in the Serbian orthography it belongs to, «Dobrosavljević», which is the form a reader would look up and the form a Serbian wave reading the Ohrid Prologue would write. That choice is an author question and is reported as one."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Бранко пресвитера (1941).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Сщмч. Бранко пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026
+      },
+      "note": "The day’s tenth entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14508, prints the title and «День памяти: 24 апреля» and nothing else, so no second day is owed. What it gives that the line does not is the surname «Добросавлевич» and the grade «иерей», priest. `new-martyr` WAS NOT WRITTEN, and the reason is read and not assumed: the Russian calendar marks its own twentieth-century martyrs with a second day, «26 января (Новомуч.)», and his page carries no such marker — he is a Serbian priest of 1941 and the Russian general commemoration is not his. NO FOLDER WAS FOUND FOR HIM: `grep -ril 'Добросавл'` and `grep -ril 'Бранко'` over `saints/` return nothing with this name, and the gate’s own key function returns no holder for the form or for the display name. The day page prints four hymns, two for the two Caves fathers and two for the martyr Sabbas, and none under his name. azbyka.ru was not read, and so was the Ohrid Prologue, which is where a second account of him would be."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 7 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 7 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "NOT CHECKED AND THE MOST LIKELY TO HOLD HIM: the Ohrid Prologue at pravoslavno.rs for 7 May 2026, the civil day of this Julian 24 April (8 October 2026). He is a Serbian priest and the Serbian calendar is where his own church keeps him."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

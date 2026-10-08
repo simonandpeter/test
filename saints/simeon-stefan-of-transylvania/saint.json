@@ -6,6 +6,11 @@
       "form": "Simion Ștefan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Ierarh Simion Ștefan, Mitropolitul Transilvaniei»."
+    },
+    {
+      "form": "Симеон Трансильванский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 14950, «Святитель Симеон, митрополит Трансильванский», with the rank word before the name and the see word after it left off; the day’s own line gives the genitive «Симеона Трансильванского». The calendar prints no Ștefan and no family name anywhere, so the stored form has none. Measured against the gate’s own key function before it was written: 'симеон трансильванскии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Свт. Симеона Трансильванского (1656) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s ninth entry. «(Рум.)» is the calendar’s own mark that this is a Romanian commemoration it keeps, as «(Серб.)» is for a Serbian one. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14950, prints the title «Святитель Симеон, митрополит Трансильванский» and «День памяти: 24 апреля» and nothing else, so no second day is owed. It writes out the see the line abbreviates, metropolitan of Transylvania, which is the `Metropolitan` this folder already holds in `office`, and it gives no family name and no Ștefan. `dates` WRITTEN WHERE THE FOLDER HAD NONE AT ALL: the line heads him «(1656)». The day page prints no hymn under his name. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1656,
+      "latest": 1656,
+      "display": "1656",
+      "basis": "traditional",
+      "note": "The only year any calendar in this folder prints for him, on the day line itself: «Свт. Симеона Трансильванского (1656) (Рум.).» It is recorded as a death because the line’s shape is the calendar’s standard one of a year of repose, and because nothing on either page gives a year of birth or an event to attach it to. The corpus’s first year of any kind for him: the folder held no `dates` object at all. REPORTED: a year read off a bare line in this shape is weaker than one read out of a life, and the basis is set `traditional` for that reason."
+    }
   }
 }

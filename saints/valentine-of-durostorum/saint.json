@@ -16,6 +16,11 @@
       "form": "Валентин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Пасикрат и Валентин.“, with „Св.“ and the one rank word муч., which stands over both names, left off. The heading gives no city and the body says nothing of him beyond the beheading; Durostorum is the Greek calendar's. No other folder in this corpus holds this form — `valentina-of-caesarea`'s Russian «Валентина Кесарийская» is a woman's name and a fuller form."
+    },
+    {
+      "form": "Валентин Доростольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 335, «Валентин Доростольский, мч.», with the rank abbreviation after the comma left off; the day’s own line gives only the genitive «Валентина» and no city. Measured against the gate’s own key function before it was written: 'валентин доростольскии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мчч. Пасикрата и Валентина (228).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s third entry, a line naming two men, of whom this is the second. The name link, page 335, is titled «Валентин Доростольский, мч.» and gives the city, which the line does not; it heads «День памяти: 24 апреля» and no other day, and the illustration on the shared life page is captioned for him, «Мученик Валентин». THE LINE AND THE LIFE DISAGREE ON THE YEAR BY SIXTY, AND `dates` WAS NOT CHANGED — the line heads the pair «(228)» and life927 ends «(+ 288)», while this folder’s interval, 267 to 297, comes off saint.gr and agrees with neither. Both readings are set out in the life and the matter is REPORTED TO THE AUTHOR. What the life gives that nothing else did: he was thirty years old, and the page records of him only that he declared his own readiness to suffer for Christ beside his companion. The day page prints no hymn under his name. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",

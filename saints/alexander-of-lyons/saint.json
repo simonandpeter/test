@@ -10,6 +10,11 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιοι Φωτεινός ο Επίσκοπος, Σάνκτιος ο διάκονος, Βέτιος, Επάγαθος, Ποντικός, Βιβλίδης, Άτταλος, Αλέξανδρος, Μάτουρος και οι συν αυτώ Μάρτυρες», with the rank words left off."
+    },
+    {
+      "form": "Александр Лионский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 14895, «Александр Лионский, мч.», with the rank abbreviation after the comma left off; the day’s own line gives the genitive «Александра Лионского». Measured against the gate’s own key function before it was written: 'александр лионскии' has no other holder in the corpus, where the bare «Александр» has many."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мч. Александра Лионского (ок. 177).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s second entry, and THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14895, prints the title «Александр Лионский, мч.» and «День памяти: 24 апреля» and nothing else. The year, «ок. 177», is the 177 this folder already holds off saint.gr and `dates` was not changed. REPORTED, NOT ACTED ON: the same calendar’s 22 апреля ст. ст. prints «Мч. Епиподия Лионского (ок. 177).» in exactly this shape, a martyr of Lyons of about the same year with a name page and no life, and that line became the folder `epipodius-of-lyons` in this same branch. In the Latin tradition the two are a pair martyred together. NEITHER PAGE NAMES THE OTHER, so no `related` row was written in either direction and no company was read; it is an author question and it is stated as one. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",

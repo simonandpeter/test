@@ -16,6 +16,11 @@
       "form": "Сава Стратилат",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Сава Стратилат.“, with „Св.“ and the rank муч. left off. Стратилат is kept: it is a military office and not a rank in the Church — none of the words `honorific.js` composes — and this corpus keeps it in his English display name as well. Keeping it also holds him out of the bare «Сава»; `sabbas-the-goth` and `sava-the-second` hold the fuller «Сава Готски» and «Сава II»."
+    },
+    {
+      "form": "Савва Стратилат",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 1905, «Савва Стратилат, Римский, мч.», taking the name and the epithet the day’s own line also uses and leaving the rank abbreviation and the second epithet «Римский», which the line does not give and which sits oddly beside life922’s «Мученик Савва происходил из готфского племени». Measured against the gate’s own key function before it was written: 'савва стратилат' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мч. Саввы Стратилата и с ним 70-ти воинов (272).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s first entry, naming him and an unnamed company of seventy. The name link, page 1905, is titled «Савва Стратилат, Римский, мч.» and heads «День памяти: 24 апреля» and no other day; it gives him «Римский», of Rome, which the line does not, and the stored form takes the two words the line itself uses and leaves the third, since the life calls him a Goth and the two epithets together are a reading nobody here has done. The year 272 is the folder’s already and `dates` was not changed; life922 ends «был утоплен в реке (+ 272)». THE DAY PAGE PRINTS TWO HYMNS UNDER HIS NAME and both are on this folder now: both address «Савво» and the kontakion names the стратилат he is surnamed for, so they are his own propers. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -87,6 +102,40 @@
       },
       "english": {
         "text": "Casting away office and earthly honour, before the torturer and the crafty emperor thou didst confess Christ God, and for him didst suffer many torments, O glorious one. Therefore thou wast crowned by the King who reigns over all with the most beautiful crown of victory, and wast adorned with light. And standing before Christ with the hosts of heaven, holy Martyr Sabbas, pray that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Земнаго сана пояс оставив и почести, страдальче,/ пред мучителем, льстивым царем/ Христа, Бога суща, исповедал еси/ и Того ради многа страдания подъял еси, славне./ Тем прекрасным победы венцем увязлся еси/ от Царя всех царствующаго,/ с Небесными вои светло преукрашен./ Предстоя Тому, Савво,// моли, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Тропарь мученика Саввы», глас 5, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "His own proper: the text names «Савво» and its opening image, the belt of earthly rank thrown off, is the very act life922 describes. The day’s other two hymns are under the names of the two Caves fathers and are not his. Copied whole off the page and checked back against it by whitespace-normalised match."
+      },
+      "english": {
+        "text": "Having left behind the belt of earthly rank and its honours, O sufferer, thou didst confess before the tormentor, the deceitful king, that Christ is very God, and for His sake didst endure many torments, O glorious one. Therefore wast thou crowned with the beautiful crown of victory by the King of all who reign, and art brightly adorned among the hosts of heaven. Standing before Him, O Sabbas, pray that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Непобедимый явлься стратилат,/ варварския козни победил еси/ и, страдальчествовав, славне, твердейши,/ множество врагов невидимых поборил еси,/ темже венец исплел еси победы./ О нас моли Христа, Савво всеблаженне,/ верою почитающих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Кондак мученика Саввы», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "His own proper: it names «Савво всеблаженне» and the rank, стратилат, that he is surnamed for. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Shown forth an unconquered commander, thou didst overcome the wiles of the barbarians; and suffering most steadfastly, O glorious one, thou didst vanquish a multitude of unseen foes, and so didst weave for thyself the crown of victory. Pray thou to Christ for us, O all-blessed Sabbas, who honour thee in faith.",
         "rendered": "site"
       }
     }
