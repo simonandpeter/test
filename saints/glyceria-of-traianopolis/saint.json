@@ -16,6 +16,11 @@
       "form": "Гликерија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 13 May, „Света мученица Гликерија.“ — Света left off, which is not a rank, and мученица left off, which is the `martyr` this folder already carries in `types`. The heading gives no epithet and no city: Rome, Traianopolis, Thrace, Antoninus and the 177 are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Гликерија, so the form folds with nothing — neither `glyceria-of-adrianople` nor `glyceria-of-novgorod` nor `glycerius-the-farmer`, the three the name sweep raised, has a Serbian form."
+    },
+    {
+      "form": "Гликерия Гераклейская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 2445 as the day page prints it, «Мученица Гликерия Гераклейская», with the rank word left off. The day's own line declines her «Мц. Гликерии девы и с нею мч. Лаодикия , стража темничного (ок. 177).», giving the name with «девы» and no epithet; the epithet is the name page's. Her two life pages are headed «Мученица Гликерия, дева» and «Мученица Гликерия Гераклейская». `fk.mjs` on «Гликерия Гераклейская» returned NONE before the write."
     }
   ],
   "sex": "female",
@@ -25,18 +30,28 @@
   ],
   "dates": {
     "death": {
-      "earliest": 141,
-      "latest": 141,
-      "display": "141",
+      "earliest": 177,
+      "latest": 177,
+      "display": "177",
       "basis": "traditional",
-      "note": "saint.gr's head line, as the folder's own life has it: «Her head line dates her death to 141»."
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 13 May: „Чесно пострада 177. године.“ Neither doxologia.ro's line for 13 mai nor saint.gr's gave any year at all. The entry also sets her „У време нечестивог цара Антонина“, in the time of the impious emperor Antoninus, and gives that reign no bounds, so nothing was built on it; the 177 is the only number on the page. No birth is recorded and none is printed."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Мц. Гликерии девы и с нею мч. Лаодикия , стража темничного (ок. 177).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the other three churches, and the same woman: the virgin who broke the idol of Zeus by her prayer, was kept alive in prison by angels, and was killed by the second lioness in the arena at Heraclea. The Russian name page heads her «Мученица Гликерия Гераклейская», of Heraclea where she died, against this folder's Traianopolis where she lived; both are in the life. **The source contradicts itself on the date and `dates` were not touched.** Its fuller life page, life1055, opens «пострадала за Христову веру во II веке во время гонения на христиан императора Антонина (138 - 161)» and closes «Она пострадала за Христа около 177 года» — a persecution under Antoninus, who was dead sixteen years before the year the same page ends with. The day line gives «(ок. 177)». The folder already carries 177 off the Ohrid Prologue, whose own note records the same internal disagreement in the Serbian book, so nothing is widened and both readings now stand in the life. **Two hymns were copied**, the troparion and the kontakion the day page prints «мученицы Гликерии девы»; the troparion is the common of a virgin martyr with her name set into it, which BRIEF.md §4 takes as hers. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -116,6 +131,38 @@
         "text": "Let us honour Christ's fair virgin, who excelled in the labours of her contest and, in the weakness of the flesh, threw down the serpent; for out of longing for her Maker she counted the onset of the torments as nothing, and has been glorified by God. To her let us all cry aloud: rejoice, God-minded Glyceria.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Агница Твоя, Иисусе, Гликерия,/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе, и умираю за Тя,/ да и живу с Тобою,/ но, яко жертву непорочную, приими мя, с любовию пожершуюся Тебе./ Тоя молитвами,/ яко Милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Тропарь мученицы Гликерии девы»; it is the common of a virgin martyr with her name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb, O Jesus, Glyceria, cries out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I suffer; I am crucified and buried together with Thee in Thy baptism, and I suffer for Thy sake that I may reign in Thee, and I die for Thee that I may also live with Thee. Receive me as an unblemished sacrifice, offered to Thee in love. By her prayers, as Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Деву любящи и Богородицу Марию,/ соблюла еси нетленно твое девство,/ любовию же ко Господу усердствовавши,/ пострадала еси мужемудренно даже до смерти./ Сего ради и сугубым тя, дево мученице, венцем венчает Христос Бог.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Кондак мученицы Гликерии девы»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving the Virgin and Mother of God Mary, thou didst keep thy virginity undefiled; and being zealous in thy love toward the Lord, thou didst suffer with a manly wisdom even unto death. For this Christ God crowns thee, O virgin martyr, with a double crown.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -129,14 +176,5 @@
   ],
   "related": [
     "laodicius-the-jailer"
-  ],
-  "dates": {
-    "death": {
-      "earliest": 177,
-      "latest": 177,
-      "display": "177",
-      "basis": "traditional",
-      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 13 May: „Чесно пострада 177. године.“ Neither doxologia.ro's line for 13 mai nor saint.gr's gave any year at all. The entry also sets her „У време нечестивог цара Антонина“, in the time of the impious emperor Antoninus, and gives that reign no bounds, so nothing was built on it; the 177 is the only number on the page. No birth is recorded and none is printed."
-    }
-  }
+  ]
 }

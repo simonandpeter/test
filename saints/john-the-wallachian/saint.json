@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Ιωάννης ο Βλάχος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Иоанн Влах",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name link 968, «Иоанн Влах (Валах), Румынский, мч.», with the rank word left off. The calendar gives the epithet twice over in one heading — Влах and, in its own parenthesis, Валах — and adds Румынский after it; the first spelling is stored and the rest is recorded here, which is how `cyprian-martyr-10-may` carries its three spellings. The day's own line declines him «Мч. Иоанна Валаха (1662) (Рум.).» `fk.mjs` on «Иоанн Влах» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Мч. Иоанна Валаха (1662) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Romanian and the Greek, the same year, 1662, and the same man: the Russian calendar marks him «(Рум.)», a saint of the Romanian church, which is how this source flags an entry it keeps from another local church. **There is no life page behind the line** — the entry is the line and a name link, 968, headed «Иоанн Влах (Валах), Румынский, мч.» — so nothing was added to the life but a sentence saying what the Russian prints. The day page carries hymns for four of the saints it heads and nothing under his name. `dates` were not touched: the folder already carries 1662 off doxologia's own sentence. azbyka.ru was not read."
     },
     {
       "church": "romanian",

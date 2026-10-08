@@ -1,0 +1,64 @@
+{
+  "slug": "polybius-of-rhinocorura",
+  "display_name": "Polybius of Rhinocorura",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Полувий Ринокирский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 1817 and of his life page, «Святитель Полувий Ринокирский», with the rank word left off. The day's own line declines him «Свт. Полувия , еп. Ринокирского (V).» The calendar spells the forename two ways: his own page has Полувий throughout, and the life of his teacher calls him «инока Поливия» at the first mention and «второй его ученик Полувий (впоследствии епископ Ринокирский)» at the second, which is how the two spellings were read as one man. `fk.mjs` on «Полувий Ринокирский» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "His life page, life1046, closes «Преставился к Богу святитель Полувий в глубокой старости в V веке» — he departed to God in deep old age in the fifth century — and the day line gives him «(V)» and nothing narrower. No year is anywhere in the notice, and no birth: the page says only that he was his teacher's disciple from his young years. No other source was read."
+    }
+  },
+  "related": [
+    "epiphanius-of-cyprus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Свт. Полувия , еп. Ринокирского (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "note": "**Checked for an existing folder before writing, because the corpus holds a Polybius already**: `saints/polybius-companion-of-terentius` is «Πολύβιος», one of the martyrs of Carthage the Greek keeps on 10 April and dates to 250 under Decius, who is neither a hierarch nor of Egypt and whom no calendar keeps on this day; it is the only other `polyb*` folder. A grep of the corpus for «rhinocorura» and «rhinocolura» returns nothing, and `fk.mjs` on «Полувий Ринокирский» returned NONE. The see is Ринокир, Rhinocorura in Egypt, where his teacher's dying charge sent him — «Иди в Египет, а я и по смерти буду заботиться о тебе». **No `locations` were recorded**: the page names Egypt and the city but this folder has only a century for a date, and a located folder without close dates is what `map-span.test.mjs` and the undated tray are for. `office` is the bare `Bishop`, which the locale packs carry, with the see left to the display name and the life (BRIEF-ADDENDUM §4). The day page prints a troparion and a kontakion for two of the hierarchs it heads and **nothing under his name**. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

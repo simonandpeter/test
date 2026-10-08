@@ -11,6 +11,11 @@
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Διονύσιος του Ραντονέζ», with the rank word left off."
+    },
+    {
+      "form": "Дионисий Радонежский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 630 as the day page prints it, «Преподобный Дионисий Радонежский», with the rank word left off. The day's own line declines him «Прп. Дионисия Радонежского (1633).», and the four hymns on the page head him «преподобного Дионисия, архимандрита Радонежского». `fk.mjs` on «Дионисий Радонежский» returned NONE before the write."
     }
   ],
   "related": [
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Прп. Дионисия Радонежского (1633).»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, the same year, 1633, and the same man: the archimandrite of the Trinity-Sergius Lavra whom the Greek life already in this folder has tried for heresy over the service books and acquitted. **The day page prints four hymns under his name** — a troparion and a second troparion, a kontakion and a second kontakion, each headed «преподобного Дионисия, архимандрита Радонежского» — and the folder carried none before; all four are copied here with the tone the page gives. `dates` were not touched: the folder already carries 1633 off saint.gr, and the Russian day line gives the same year. **His Russian life page, id630, was not opened**, because the folder already carries a full life read off saint.gr and this upgrade is the row, the name form and the hymns; a later reader who opens it will find the Russian telling of the same man. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -66,5 +81,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Земная, прельщающая очеса миролюбцев,/ возненавидел еси, отче Богоносне Дионисие,/ за уметы та вменив,/ шествуя путем скорбным,/ и в терпении добр воин Христов явился еси,/ победив страсти мира,/ был еси до кончины непоколебимый благочестия поборник./ Темже мы днесь, совершая священную память твою,/ духовными тя песньми ублажаем и смиренно молим,/ да, предстоя Престолу Господа Бога,/ ходатайствуеши о спасении душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Тропарь преподобного Дионисия, архимандрита Радонежского»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The things of earth, which beguile the eyes of them that love the world, thou didst hate, O God-bearing father Dionysius, counting them as refuse; and walking the way of sorrows thou wast shown in thy patience a good soldier of Christ. Having overcome the passions of the world, thou wast to thy very end an unshaken champion of godliness. Therefore we today, keeping thy holy memory, call thee blessed with spiritual songs and humbly pray thee: standing before the throne of the Lord God, intercede for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Благости научився от Вышняго благодати,/ измлада подвизався благою совестию,/ Дионисие преподобне,/ терпения столп был еси/ и слова Божия проповедник,/ благочестия догматы утвердив и суеумных мудрование упразднив,/ темже и пострадал еси за истину, радуяся,/ образ страдальцем собою показав,/ но, яко имея дерзновение ко Христу Богу,/ не престай моляся о нас,/ любовию чтущих святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Ин тропарь преподобного Дионисия, архимандрита Радонежского», the second troparion the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taught goodness by the grace of the Most High, striving from thy youth with a good conscience, O venerable Dionysius, thou wast a pillar of patience and a preacher of the word of God, establishing the doctrines of godliness and undoing the cleverness of the vain-minded. And so thou didst suffer for the truth with joy, showing thyself a pattern to them that suffer; but having boldness before Christ God, cease not to pray for us who honour thy holy memory with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Свет Трисиянный, вселивыйся в душу твою,/ сосуд избран показа тя,/ вещающа Божественная людем,/ исповедник Божия Слова явился еси,/ и прилагающих Божеству вещественный огнь/ явственно обличил еси,/ и злославных смыслы, яко паучинное прядение, растерзал еси,/ благочестия столп и забрало твердое мирови показался еси/ и сего ради от Вселенскаго Патриарха дивне похвален был еси./ Мы же благодарными гласы, веселящеся, вопием ти:/ радуйся, отче наш, Дионисие преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Кондак преподобного Дионисия, архимандрита Радонежского»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The thrice-radiant Light, making its dwelling in thy soul, showed thee forth a chosen vessel uttering things divine to the people. Thou wast made manifest a confessor of the Word of God, and openly didst refute those who would add a material fire to the Godhead, and didst tear apart the reasonings of the ill-believing like a spider's web. A pillar of godliness and a firm rampart thou wast shown to the world, and for this thou wast wondrously praised by the Ecumenical Patriarch. And we with thankful voices cry out to thee in gladness: Rejoice, O our father, venerable Dionysius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры, столп благочестия/ был еси, Богоносне Дионисие,/ явив в себе образ и пример/ преуспеяния добродетели и подвигов:/ сею Евангельскою мрежею/ многих уловил еси подражателей,/ подай блестящею на Небеси славою своею/ ревность к содействованию на пользу правоверных./ Темже мы, ныне воспевающе сия, молим тя,/ да ходатайствуеши о стране нашей/ и о всем Церкви исполнении.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Ин кондак преподобного Дионисия, архимандрита Радонежского», the second kontakion the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and a pillar of godliness thou wast, O God-bearing Dionysius, showing in thyself the image and the example of advancement in virtue and in ascetic labour; and with this net of the Gospel thou didst take many imitators. By thy shining glory in heaven grant us zeal to work together for the good of the right-believing. Therefore we, singing these things now, pray thee: intercede for our land and for the whole fullness of the Church.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

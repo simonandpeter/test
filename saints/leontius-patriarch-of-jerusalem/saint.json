@@ -14,6 +14,11 @@
       "form": "Λεόντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Λεόντιος Πατριάρχης Ιεροσολύμων», with the rank word and the see left off."
+    },
+    {
+      "form": "Леонтий Иерусалимский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 1346 as the day page prints it, «Святитель Леонтий Иерусалимский, патриарх», with the rank words left off; his life page is headed «Святой Леонтий, Патриарх Иерусалимский». The day's own line declines him «Свт. Леонтия , патриарха Иерусалимского (1175).»; the space before the comma is the page's own. `fk.mjs` on «Леонтий Иерусалимский» returned NONE before the write."
     }
   ],
   "dates": {
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Свт. Леонтия , патриарха Иерусалимского (1175).»",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man. **Its whole value is that it names three readings of his dates and `dates` were therefore not touched.** Its life page, life1065, is four sentences, and all four are about the record rather than the man: that on the testimony of Григорий Палама he was patriarch **from 1223 to 1261**; that his life was written in detail by Феодор, a monk of Constantinople; that this life was translated from Greek into Russian in an abridgement; and that it was translated a second time and more fully by Никодим Святогорец, **who puts the patriarch's repose in 1175** — which is the year the Russian day line prints. This folder already carries «14 May 1190» off saint.gr, with a birth in the second half of the twelfth century that its own note calls odd beside it. 1175, 1190 and a patriarchate of 1223–1261 cannot all be one man's, and **nothing was chosen**: the folder keeps the year it had, and the two Russian readings are set out in the life and here. The day page prints hymns for two of the saints it heads and nothing under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

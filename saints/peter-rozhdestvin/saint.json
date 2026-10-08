@@ -1,0 +1,62 @@
+{
+  "slug": "peter-rozhdestvin",
+  "display_name": "Peter (Rozhdestvin)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Петр (Рождествин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14460, «Петр (Рождествин), протоиерей, сщмч.», with the rank words left off. The day's own line gives the name without the surname — «Сщмч. Петра пресвитера (1939).» — and the surname is read off the name page behind it. The parenthesis is the calendar's own. `fk.mjs` on «Петр Рождествин» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "attested",
+      "note": "The year the day line closes him with: «Сщмч. Петра пресвитера (1939).» It is the only year the calendar gives him; there is no life page behind the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Сщмч. Петра пресвитера (1939).»",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "note": "The line is all there is: no life page stands behind it, and name page 14460 is a heading and two days — «Дни памяти: 26 января (Новомуч.) , 14 мая». **The 26 января is the synaxis of the new martyrs and confessors of Russia**, a company's feast and not this man's own day, so it is recorded here as a note and the feast is the day page that printed him (BRIEF.md §8). **The grade is given two ways and the name page's was taken**: the day line says «пресвитера» and the name page «протоиерей», so `office` is `Archpriest`, which the locale packs carry, and `types` holds the looser `presbyter`. Checked before writing, because the corpus holds eleven folders whose stored Russian form is the bare «Петр»: `grep -l Рождествин saints/*/saint.json` returns only `alexius-belkovsky`, which carries the word in prose and not as a name, and `fk.mjs` on «Петр Рождествин» returned NONE. He is not the `peter-popov` this reader wrote two days earlier on 12 мая, whose surname, name page and year are all different. The day page prints hymns for two of the saints it heads and **nothing under his name**. azbyka.ru was not read, and it is the source that would give this folder a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "irene-wife-of-george",
+  "display_name": "Irene, wife of George of Constantinople",
+  "sex": "female",
+  "types": [],
+  "names": [
+    {
+      "form": "Ирина Константинопольская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 6947 as the day page prints it, «Ирина Константинопольская» — the calendar gives her no rank word at all, which is why none was written into `types`. The day's own line declines her «Свв. Георгия исп. с супругою Ириною и чадами (IX).», in the instrumental, as the wife; the nominative is the name link's. `fk.mjs` on «Ирина Константинопольская» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "The day line gives the household «(IX)», the ninth century, and the life page sets her husband's confession in the first half of it. **It is a floruit and not a death**: the page says that she went with him into exile and says nothing whatever about her death, so there is nothing here to bound. The century is the line's own and the only figure the calendar gives her. No other source was read."
+    }
+  },
+  "related": [
+    "george-of-constantinople"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Свв. Георгия исп. с супругою Ириною и чадами (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "She is a folder because the line names her, and the children of the same line are not because it names none of them (BRIEF.md §4). **Checked against every Irene the corpus holds before writing**: all twelve `saints/irene-*` folders were listed with their venerated days, and none stands on 13 May or in the ninth century — the nearest in time is `irene-wife-of-leo-iv`, an eighth-century empress the Romanian keeps on 7 August, and `irene-the-empress-nun-xenia` is a twelfth-century empress on 13 August; `fk.mjs` on «Ирина Константинопольская» returned NONE. **`types` is empty on purpose.** The calendar's «Свв.» covers the whole household and gives her no rank of her own; her husband is «исп.», a confessor, and she is not, so no grade was carried across to her from him and none was invented. No `office`, no `locations`. The day page prints hymns for three of the saints it heads and nothing under her name. azbyka.ru was not read, and it is the source that would say when she died."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

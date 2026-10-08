@@ -13,22 +13,37 @@
       "form": "Παυσίκακος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Παυσίκακος Επίσκοπος Συνάδων», with the rank word and the see left off."
+    },
+    {
+      "form": "Павсикакий Синадский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 1705 as the day page prints it, «Святитель Павсикакий (Павсакий) Синадский (Фригийский), епископ», with the rank words left off and the first of each pair kept. The calendar's own parentheses give a variant of the forename, Павсакий, and the province, Фригийский, beside the see; both are recorded here rather than in the form, which is `cyprian-martyr-10-may`'s precedent. The day's own line declines him «Свт. Павсикакия , еп. Синадского (ок. 606).» `fk.mjs` on «Павсикакий Синадский» returned NONE before the write."
     }
   ],
   "dates": {
     "death": {
-      "earliest": 595,
-      "latest": 620,
-      "display": "early 7th century",
+      "earliest": 606,
+      "latest": 606,
+      "display": "606",
       "basis": "traditional",
-      "note": "saint.gr gives no year of death and says only «Απεβίωσε ειρηνικά, μοχθώντας για την επισκοπή του μέχρι τελευταίας του πνοής»; the bracket here is what the page's own two reigns allow — he lived «στα χρόνια του βασιλιά Μαυρικίου (582 - 602 μ.Χ.)» and was made bishop by the patriarch Kyriakos «(595 - 606 μ.Χ.)», so his episcopate begins no earlier than 595."
+      "note": "**This replaces a bracket with the year inside it.** The folder carried «early 7th century», 595 to 620, which its own note described as what saint.gr's two reigns allowed, that page giving no year of death at all. days.pravoslavie.ru gives one in words — its life page closes «Святитель Павсикакий мирно скончался в 606 году» — and its day line prints «Свт. Павсикакия , еп. Синадского (ок. 606).» The same page has the patriarch Кириак (592–606) ordain him bishop of Synada and has him heal the emperor Маврикий (582–602) at Constantinople, so 606 sits at the end of one reign and after the other, and contradicts neither. No birth is recorded: the page says only that he lived «в конце VI века в Сирийском городе Апамее» and was brought up in the faith by pious parents, and a youth placed in a century is not a year."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Свт. Павсикакия , еп. Синадского (ок. 606).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: the bishop of Synada with the gift of healing who cured the emperor Маврикий at Constantinople and brought water out of the ground for his thirsty companions on the road home. **`dates` were replaced, narrowed and not widened.** The folder carried «early 7th century», 595 to 620, a bracket its own note says was built out of the two reigns saint.gr names because that page gives no year; the Russian life page says «Святитель Павсикакий мирно скончался в 606 году» and the day line prints «(ок. 606)». 606 falls inside the bracket it replaces, and it is also the last year of the patriarch Кириак (592–606) whom the same page has ordain him, so the two sources do not contradict. The Russian adds Апамея in Syria for his birthplace and the end of the sixth century for his youth; **no `locations` were recorded**, because the folder has a see in its `office` already and the page gives no more than city names. The day page prints hymns for three of the saints it heads and nothing under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

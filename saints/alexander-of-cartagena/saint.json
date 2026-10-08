@@ -16,6 +16,11 @@
       "form": "Александар",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 13 May, „Свети мученик Александар.“ — Свети left off, which is not a rank, and мученик left off, which is the `martyr` this folder already carries in `types`. **The heading gives no epithet, no city and no year, and the body's „Словен“ is a nation and not a by-name**, so there is nothing fuller to store: Cartagena, which this folder's display name carries from the Greek, is nowhere on this page, and the Slav, the eighteen years, Tiberian, Carassura, the Ergine and the 298 are all in the body. The form folds with `alexander-of-side`, which holds the same bare «Александар», and that fold is recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Александр Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 121 as the day page prints it, «Александр Римский, мч.», with the rank word left off; his life page is headed «Мученик Александр Римский». The day's own line declines him «Мч. Александра Римского (ок. 284-305).» **The epithet is the Russian calendar's and contradicts the other three rows on this folder**, which make him of Cartagena; it is stored as the calendar prints it and the disagreement is in the attestation note and in the life. `fk.mjs` on «Александр Римский» returned NONE before the write — `alexander-of-rome-pope` stores «Александр I Римский», which folds elsewhere."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Мч. Александра Римского (ок. 284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "**This is a row and not a second folder, and the identification is the whole reading of the day.** The Russian calls him «Александра Римского», of Rome, where this folder's Romanian and Greek rows call him of Cartagena — so the epithet does not match and the day does not match the Romanian or the Greek either, and `day-candidates.mjs` listed this folder only because the folder's **Serbian** row already stands on the Julian 13 May. Nine things in the Russian life page, life1058, are in the folder's own life already, every one of them off the Ohrid Prologue: the mother **Пимения** who follows him and buries him; the tribune **Тивериан** to whom the emperor hands him over; the emperor **Максимиан** (the Russian names him Максимиан Геркул and dates him 284–305); his eighteenth year; the march through Thrace behind the tribune's chariot; the spring of water brought out of a dry place by his prayer for the thirsty soldiers; the beheading on the bank of the river the Russian spells **Еригона** and the Prologue Ergine; the executioner who saw angels about the martyr and whose arm went slack until the saint prayed them away; and the appearance to his mother afterwards, telling her of her own near passing. The Russian also makes the Cartagena of the Greek and Romanian intelligible: it has Пимения find her son «в городе Катаргене», on the road into Thrace. Three things differ and none of them is a person: the Russian has him a soldier of the tribune's regiment **at Rome** where saint.gr brings him from Cartagena; it puts a second trial at Филиппополь and the sentence at Дризипер, which is the Drizipara saint.gr names him for; and it sets the healing tree and the place Вуртодексион, where the Prologue has Carassura. `dates` were **not** touched: the folder carries a floruit of the early fourth century and the Russian says «пострадал за Христа в начале IV века», the same words. The day page prints hymns for three of the saints it heads and nothing under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

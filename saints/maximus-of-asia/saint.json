@@ -1,0 +1,59 @@
+{
+  "slug": "maximus-of-asia",
+  "display_name": "Maximus of Asia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Максим Азийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 1421 as the day page prints it, «Максим Азийский, мч.», with the rank word left off; his life page is headed «Мученик Максим Азийский». The day's own line declines him «Мч. Максима (ок. 250).», with no epithet at all; the epithet is the name page's. `fk.mjs` on «Максим Азийский» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "c. 250",
+      "basis": "traditional",
+      "note": "The day line closes him with «(ок. 250)», about 250, and his life page gives the reign instead: «Святой мученик Максим пострадал при императоре Декии (249 - 251)». The two agree, so the display is the day line's approximate year and the bounds are the reign the life names. The page gives no birth and no age."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Мч. Максима (ок. 250).»",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "note": "**Checked against every Maximus the corpus holds before writing**, because there are eighteen: all `saints/maximus*` folders were listed with their types, their venerated days and their years, and not one stands on the menologion's 14/5 or is a layman trader of Asia — the nearest in year are `maximus-companion-of-olympias`, a martyr of 249–251 the Greek keeps on 15 April in a company, and `maximus-companion-of-terentius`, 250, of the Carthaginian company; `fk.mjs` on «Максим Азийский» returned NONE. **No `office` and no clerical type**: the life makes him a layman who lived by trade. **No `locations`**: the name page's Азийский is a province and the life names no city. The day page prints hymns for two of the saints it heads and nothing under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
