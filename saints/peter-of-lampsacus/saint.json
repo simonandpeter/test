@@ -16,6 +16,11 @@
       "form": "Петар",
       "lang": "sr",
       "note": "Read out of the heading of the Охридски пролог’s second entry for 18. мај ст. ст., „Свети мученици Петар, Дионисије, Андреј, Павле и Христина.“ — Свети is not a rank and мученици the `martyr` this corpus puts in `types`, so the heading leaves five bare forenames and the body adds nothing to any of them but a description. Measured with `foldchk.py` before drafting: `[('peter-of-bulgaria', 'sr')]`. The folds are read in this batch’s commit message."
+    },
+    {
+      "form": "Петр Лампсакский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1778.html` link carries in its `title`, «Петр Лампсакский, мч.», with the rank abbreviation left off. **The surname-less bare «Петр» was deliberately not written**: BRIEF-RUSSIAN §2 records that eleven folders already share it and that `corpus-gate.mjs` stops on the fold, and this calendar gives the place epithet, which is the fuller form. The day's own line declines the five together. `fk.mjs` on «Петр Лампсакский» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -33,18 +38,28 @@
   ],
   "dates": {
     "death": {
-      "earliest": 249,
-      "latest": 251,
-      "display": "249–251",
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
       "basis": "traditional",
-      "note": "The reign the page prints as the date, as the folder's own life has it: «saint.gr says all eight were martyred in the years of the emperor Decius, who reigned from 249 to 251»."
+      "note": "The Охридски пролог for 18. мај ст. ст., closing its second entry: „То је било 250. године.“ The year is given of the episode, which is the whole company and Nicomachus with them, and not of one man. This folder held no `dates` object at all until now; saint.gr gave only the reign of Decius, 249 to 251, inside which 250 falls."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Петра , Дионисия , Андрея , Павла и Христины Лампсакийских (249-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for its other calendars, and the same man: the first of the five to suffer, tried at Lampsacus on the Hellespont. **`dates` were not touched.** The folder carries 250; this calendar dates the five only by the reign, «при императоре Декии (249 - 251)», which the day line prints as a span, so 250 falls inside it and nothing is widened. The Russian names the governor **Опитимин** and the goddess he was told to worship, and it is explicit about his answer — that a Christian will not bow to the idol of a harlot. He already carries the other four as `related` rows. **The day page prints no hymn for the five**; its only hymn block is the kontakion of Theodotus of Ancyra and his company. His life page gives one day only, «18 мая». azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -145,14 +160,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 250,
-      "latest": 250,
-      "display": "250",
-      "basis": "traditional",
-      "note": "The Охридски пролог for 18. мај ст. ст., closing its second entry: „То је било 250. године.“ The year is given of the episode, which is the whole company and Nicomachus with them, and not of one man. This folder held no `dates` object at all until now; saint.gr gave only the reign of Decius, 249 to 251, inside which 250 falls."
-    }
   }
 }

@@ -16,6 +16,11 @@
       "form": "Фаина",
       "lang": "sr",
       "note": "Read out of the heading of the Охридски пролог’s first entry for 18. мај ст. ст., „Свети мученици Теодот и седам девојака мученица, Текуса, Александра, Клавдија, Фаина, Ефрасија, Матрона, и Јулија.“ — Свети is not a rank and мученици/мученица the `martyr` this corpus puts in `types`, so the heading leaves a bare forename for every one of the eight. **An enumerated company is a fold factory, and this one made eight folds in a day**; every form here was measured with `foldchk.py` before a line was drafted and the folds are read in this batch’s commit message. For this form `foldchk.py` returned `NO FOLDER HOLDS THIS FORM`."
+    },
+    {
+      "form": "Фаина Анкирская (Коринфская)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/2693.html` link carries in its `title`, «Фаина Анкирская (Коринфская), дева, мц.», with the two trailing rank words left off — `virgin` and `martyr` are already in this folder's `types`. The parenthesis is the calendar's own second epithet and is kept exactly as the five sisters' forms already in this corpus keep theirs, «Александра Анкирская (Коринфская)» and the rest; it is not part of the fold key (BRIEF-ADDENDUM §2). The day's own line declines her inside the company, «...и мцц. семи дев: Александры , Текусы , Клавдии , Фаины , Евфрасии , Матроны и Иулии (303).» `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мч. Феодота Анкирского и мцц. семи дев: Александры , Текусы , Клавдии , Фаины , Евфрасии , Матроны и Иулии (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "**She is one of only two of the eight this day's line names whose russian row was free to be written.** The line prints Theodotus and the seven virgins by name; of the seven, five — `alexandra-of-ancyra`, `thecusa-of-ancyra`, `claudia-of-ancyra`, `euphrasia-of-ancyra`, `matrona-of-ancyra` — already carry venerated russian rows on 6 ноября, and `theodotus-of-ancyra` on 7 ноября, and BRIEF-RUSSIAN §4 forbids moving any of them. She and `julia-of-ancyra` had `undocumented` rows, and they are named in full in this line, so this is their day in this calendar. **She gained the first `dates` she has ever had**, in the exact words and bounds the five sisters already carry, because the figure comes from the same page and the same company. **The one hymn on the day page was not copied**: «Кондак мученика Феодота Анкирского и иже с ним» (глас 2) is addressed to Theodotus and his fellow sufferers and mentions the virgins only as «с честными страстотерпицами девами», and the saint it is headed for stands on another day in this calendar, which is the case the standing rule tells a reader to report rather than copy. Her name page lists one day only. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -105,5 +120,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 304,
+      "display": "3rd or early 4th century",
+      "basis": "traditional",
+      "note": "Two readings on one page and neither is chosen, and the bounds are the ones her five sisters in this corpus already carry from the same source. The life behind the company's name pages says they «жили во 2-й половине III века в городе Анкире» and «мученически скончались за Христа в начале IV века» — lived in the second half of the third century and died at the beginning of the fourth. The upper bound is the page's own: it dates the death of Theodotus, who took their bodies out of the lake after they were drowned, to «7 июня 303 или 304 года». The day line for 18 мая ст. ст. prints «(303)», which falls inside those bounds. Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
+    }
   }
 }

@@ -21,6 +21,11 @@
       "form": "Христина",
       "lang": "sr",
       "note": "Read out of the heading of the Охридски пролог’s second entry for 18. мај ст. ст., „Свети мученици Петар, Дионисије, Андреј, Павле и Христина.“ — Свети is not a rank and мученици the `martyr` this corpus puts in `types`, so the heading leaves five bare forenames and the body adds nothing to any of them but a description. Measured with `foldchk.py` before drafting: `NO FOLDER HOLDS THIS FORM`."
+    },
+    {
+      "form": "Христина Лампсакийская",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/2755.html` link carries in its `title`, «Христина Лампсакийская, мц.», with the rank abbreviation left off and the place epithet kept — the calendar's adjective for the company, which this folder's display name replaces with the day because the epithet was not in the sources it was made from. The day's own line declines the five together. `fk.mjs` on «Христина Лампсакийская» returned NONE before the write."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Петра , Дионисия , Андрея , Павла и Христины Лампсакийских (249-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same woman, and **the Russian gives her the age and the words no other book in this folder has**: a girl of sixteen standing in the crowd, who cried out at the apostate Никомах, «Окаянный и погибающий человек! Вот ты из-за одного лишь часа стяжал себе теперь вечную и несказанную муку!» — and was arrested for it. **`dates` were not touched.** The folder carries «3rd century»; this calendar dates the company by the reign of Decius, «(249-251)», which falls inside that century, so nothing is narrowed and nothing widened — an age at the time of death is not a year of birth and none was reckoned from it. The day page prints no hymn for the five. Her life page gives one day only. azbyka.ru was not read."
     },
     {
       "church": "romanian",
