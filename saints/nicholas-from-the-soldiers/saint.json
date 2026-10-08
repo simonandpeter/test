@@ -21,6 +21,13 @@
       "display": "802 to 811",
       "basis": "attested",
       "note": "saint.gr: «επί Νικηφόρου του Λογοθέτου (802 - 811 μ.Χ.)», and in the Nikodemos passage the same page quotes, «κατά τους χρόνους Nικηφόρου του βασιλέως, του Πατρικίου και Σταυρακίου επικαλουμένου, εν έτει ωβ΄ [802]». Those are the years of the campaign he went out on; the page gives no year of birth and no year of death, and says only that he died in peace in a monastery afterwards."
+    },
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "The folder’s first `death` of any kind; it held a `floruit` of 802 to 811 and nothing else, and that floruit is carried forward here word for word. The Охридски пролог for 24. децембар ст. ст. closes the entry «Скончао мирно у IX веку и преселио се у блажено Царство Христа Господа» — he ended peacefully in the ninth century. The interval is that century and nothing narrower: the book gives no year of his death, and the 811 it does give is the year of the defeat he survived and left the army after, which is already inside the floruit. Read 8 October 2026."
     }
   },
   "attestations": [
@@ -51,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.01.2026 (24. децембар ст. ст.) — „Преподобни Никола војвода.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. Identified on the whole dossier and on the same menologion day the Greek already keeps him: a voivode under the emperor Никифор commanding part of the army that went to war against the Bulgars, who lodged a night at an inn on the way, had a great temptation and a strange dream there, saw the dream come true exactly in the battle, survived it, and left his soldier’s rank out of thanks to the Providence of God and became a monk. The folder’s own life, written off saint.gr and the passage of Nikodemos the Hagiorite it quotes whole, tells the same inn, the same threefold temptation, the same judge who changed his feet about and showed the armies, and the same night attack in which the Romans and Nikephoros were destroyed. A `death` WAS WRITTEN WHERE THERE WAS NONE, and nothing was replaced: the folder held a `floruit` of 802 to 811 off saint.gr’s «επί Νικηφόρου του Λογοθέτου» and no `death` at all, that floruit is carried forward word for word, and the new `death` is the ninth century, 801 to 900, off this entry’s own closing «Скончао мирно у IX веку». The entry’s one flat year, «811. године», is the year of the defeat and is already inside the floruit, so it is written in no field. WHAT THE ENTRY ADDS: «Неки мисле да је овај велики светитељ био балкански Словен пореклом» — some think this great saint was a Balkan Slav by origin, which the book states as an opinion of some and which is therefore stated in the life as that and NOT written into any field, there being no `origin` field and no coordinate a guess could go on; and that he struggled long and perfected himself by that struggle until he became a great seer and a pleaser of God. `types` UNTOUCHED: `venerable`, `monk` and `soldier` are all three there already, and «војвода» is a command and not one of BRIEF.md §9’s types. No `office`: a voivode over part of an army is not a see, and a new `office` string costs four locale translations. NO SERBIAN NAME FORM WAS WRITTEN ON THIS FOLDER. The heading is „Преподобни Никола војвода.“; «Преподобни» is the rank `venerable`, and the only other word beside the forename is «војвода», a RANK and not an epithet, which §6 keeps out of a stored form — so there was no fuller form to write, and the bare «Никола» was measured first and lands on `nicholas-of-magnesia` and `nicholas-the-grocer-of-karpenisi`, so a three-member fold was refused instead. This is the 12-10 reader’s `john-the-despot` refusal in the same shape: a heading all rank, and the Serbian carried in the quoted heading alone. No `related`: the entry names no saint, and the emperor Никифор, the innkeeper and the Bulgars are furniture. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

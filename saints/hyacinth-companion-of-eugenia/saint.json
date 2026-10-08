@@ -6,6 +6,11 @@
       "form": "Υάκινθος",
       "lang": "el",
       "note": "Read out of saint.gr's head line for this man on the page of «Άγιοι Πρωτάς και Υάκινθος», 24 Δεκεμβρίου, with the rank word and the clause about Eugenia left off."
+    },
+    {
+      "form": "Јакинт",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог’s first entry for 24. децембар ст. ст., «Тада бише посечени и оба она евнуха, Прот и Јакинт». The heading does not print the name; the body does. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON ANOTHER FOLDER: `hyacinth-the-chamberlain` already carries the identical Serbian string, written by the 07-03 reader off this same book, so the two-member fold key «јакинт» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.01.2026 (24. децембар ст. ст.) — „Преподобна мученица Евгенија и други с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-06&prolog=1",
+        "year": 2026
+      },
+      "note": "WHY A ROW OFF A HEADING THAT DOES NOT PRINT THIS NAME. The heading is „Преподобна мученица Евгенија и други с њом.“ — Eugenia AND OTHERS WITH HER — and the body says who the others are. That is the 12-21 reader’s case exactly: there the heading’s «и шест стотина тридесет мученика с њом» was filled in by the body and the two companies took rows off that one heading, and here the clause is indefinite and the body names its members instead of counting them. It is NOT the 12-19 «Аглаида» refusal, where the heading named one man and carried no company clause at all and a name inside the body was therefore not a heading. The three the body names as beheaded in Rome about her death — «Ускоро Василија би посечена за Христа», and «Тада бише посечени и оба она евнуха, Прот и Јакинт» — are the «други с њом», and they are three folders this corpus already holds on this same menologion day in the Greek. AND ONE MORE NAME IN THE BODY TOOK NO ROW, WHICH IS THIS DAY’S OPEN QUESTION: `philip-father-of-eugenia`, her father, the eparch of all Egypt, who was baptised with his whole house at her trial, was chosen bishop of Alexandria and was then killed secretly by a wicked voivode named Теренције whom the Roman emperor sent for that purpose. He is named and he dies for the faith — but he dies in Alexandria and before she goes to Rome, so «с њом» does not reach him, and a reader does not stretch a heading. HE IS LEFT WITHOUT A SERBIAN ROW ON PURPOSE and named in the report; granting it is one line for the author. NO YEAR WAS WRITTEN ON THIS FOLDER. The entry’s one year, «25. децембра 262. године», is attached to Eugenia’s own beheading; that this person died about the same time is the narrative’s order and not a year the page states here, which is the 12-21 reader’s refusal to write 304 onto the two Nicomedia companies. The folder keeps the `dates` it had. `types` untouched — the heading’s «мученица» is the `martyr` the folder carries, and «Преподобна» belongs to Eugenia, who was a nun, and not to this person. The `related` rows to `eugenia` already stand in both directions and nothing was added. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "related": [

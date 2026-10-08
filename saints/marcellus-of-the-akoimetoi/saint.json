@@ -11,6 +11,11 @@
       "form": "Μάρκελλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Δεκεμβρίου, «Όσιος Μάρκελλος», with the rank word left off."
+    },
+    {
+      "form": "Маркел",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 29. децембар ст. ст., „Преподобни Маркел, из Апамије Сиријске.“ — «Преподобни» is the rank `venerable` the folder carries, and «из Апамије Сиријске» is a PREPOSITIONAL PHRASE, from Apamea of Syria, and not a by-name adjective, so the bare forename is what is left. THE PHRASE WAS DELIBERATELY NOT TURNED INTO ONE: `marcellus-of-apamea`, the hieromartyr bishop of that city dated about 389 and kept on 14 August, already carries the Serbian form «Маркел Апамејски», and manufacturing the same adjective here would have folded a bishop OF Apamea together with a man merely FROM it. MEASURED BEFORE IT WAS WRITTEN: the bare string lands on `marcellus-15-november`, so the two-member fold key «маркел» is declared in the same commit with both holders read. The monastery of the Sleepless Ones is in the body and not in the heading, and no form was assembled out of it either."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.01.2026 (29. децембар ст. ст.) — „Преподобни Маркел, из Апамије Сиријске.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and FIVE SENTENCES is the whole of it. Identified past any doubt: the heading gives the city, «из Апамије Сиријске», which is the Apamea in Syria the folder’s own life opens with, and the first sentence of the body gives the house — «Игуман обитељи „Неусипајушчих“ у Цариграду», abbot of the monastery of the Sleepless Ones at Constantinople — which is this folder’s display name and its `abbot`. The Romanian and the Greek already keep him on this same menologion day. AND THE DAY’S ONE REAL TRAP WAS CHECKED AND IS NOT THIS MAN: the corpus also holds `marcellus-of-apamea`, whose `office` IS Bishop of Apamea and whose Serbian form IS «Маркел Апамејски» — but that is a `hieromartyr` and `bishop` dated about 389, whom the Russian, the Greek and this same book keep on 14 August, and the heading here prints a PREPOSITIONAL PHRASE and not that adjective. Writing «Маркел Апамејски» on this folder would have made a two-man fold out of a bishop of Apamea and a man merely from it, which is why the bare forename was stored instead. A `death` WAS WRITTEN WHERE THERE WAS NONE, and nothing was replaced: the folder held a `floruit` of «5th century», 401 to 500, off saint.gr, and no `death` at all; that floruit is carried forward word for word and the new `death` is the flat 486, off «Овај свети и славни муж упокојио се 486. године», which sits inside it. `types` untouched: «Преподобни» is the `venerable` and «Игуман» the `abbot`, both already there. WHAT THE ENTRY ADDS, and goes into the life: that he was a seer, a healer and a great wonderworker; that he talked with the angels and beat the demons easily and drove them off; and that after his death he appeared to his brother-monk свети Лукијан and told him he had begged God to take him too into the heavenly kingdom soon. THAT LUKIJAN TAKES NO ROW AND NO LINK: this book gives him nothing but the name and the vision, and whether he is any of the corpus’s Lucians is not a reader’s decision — he stays in the book’s Cyrillic, and it is named in the report. The folder’s one existing `related` row, to `alexander-the-sleepless`, who founded the house this entry names, predates this reading and stands untouched; the new paragraph deliberately does not name him. No `locations`. The Serbian form is the heading’s bare forename «Маркел»; it lands on `marcellus-15-november`, so the two-member fold key «маркел» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
@@ -104,6 +119,13 @@
       "display": "5th century",
       "basis": "attested",
       "note": "saint.gr: «Ο Μάρκελλος έζησε τον 5ο αιώνα μ.Χ., επί πατριαρχείας Γενναδίου του Α' (458 - 471 μ.Χ.) και βασιλέως του Λέοντα Α' του Μακέλλη». The page gives no year of birth and no year of death, and doxologia.ro's life, which the folder follows, gives neither either; so the century is recorded and nothing is narrowed to the patriarch's dates, which the page gives as the setting of his life and not as the span of it."
+    },
+    "death": {
+      "earliest": 486,
+      "latest": 486,
+      "display": "486",
+      "basis": "traditional",
+      "note": "The folder’s first `death` of any kind; it held a `floruit` of «5th century» off saint.gr and nothing else, and that floruit is carried forward here word for word. The Охридски пролог for 29. децембар ст. ст. closes the entry «Овај свети и славни муж упокојио се 486. године». The year sits inside the century the folder already held, so nothing is replaced and nothing is chosen between. Read 8 October 2026."
     }
   },
   "images": [

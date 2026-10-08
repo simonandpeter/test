@@ -11,6 +11,11 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Δεκεμβρίου, «Άγιος Ευθύμιος ο Ομολογητής, επίσκοπος Σάρδεων», with the rank word, the by-name and the see left off."
+    },
+    {
+      "form": "Јевтимије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 26. децембар ст. ст., „Свети Јевтимије Исповедник, епископ сардијски.“ — «Свети» is “saint” and not a rank, «Исповедник» is the rank `confessor` and «епископ» the rank `bishop`, both of which the folder already carries, and «сардијски» is the see, which §6 keeps out of a stored form and which the folder carries in its `office` and its display name. So the bare forename is what is left, and that is a reading rather than a regex: the see is the one thing here that would have told him apart. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON ANOTHER FOLDER: `euthymius-of-dimitsana` already holds the identical Serbian string, so the two-member fold key «јевтимије» is declared in the same commit with both holders read. The corpus’s four other Euthymii carry two-word Serbian forms — «Јевтимије Велики», «Јевтимије Иверски», «Јевтимије Нови», «Јевтимије Дохијарски» — which the fold key sorts as two words and which therefore reach neither this string nor each other."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.01.2026 (26. децембар ст. ст.) — „Свети Јевтимије Исповедник, епископ сардијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and three sentences is the whole of it. Identified past any doubt and on the same menologion day the Romanian and the Greek already keep him: the heading gives both the grade and the see — «Исповедник», confessor, and «епископ сардијски», bishop of Sardis — and the body gives the Seventh Ecumenical Council, the thirty years of exile for the honouring of icons, and the scourging with ox sinews under the iconoclast emperor Theophilus. THE YEAR AGREES EXACTLY and `dates` is therefore untouched: «мученички сконча 840. године» against the flat 840 the folder already holds off saint.gr. `types` untouched and all four already there: `bishop`, `hierarch`, `confessor`, `martyr`, which is exactly what this heading and this body would read to. `office` untouched: Bishop of Sardis. WHAT THE ENTRY ADDS, and goes into the life: that he was PRESENT AT THE SEVENTH ECUMENICAL COUNCIL, which is a fact of his career the folder’s existing life does not carry; that the exile was «око тридесет година», about thirty years, which is a span of years and is written in no field; that the instrument was «воловским жилама», ox sinews; and that he received the crown of glory in heaven. No `related`: the entry names no saint at all, and Theophilus is a persecutor and not a companion — the folder’s three existing rows, to `nicetas-of-medikion`, `theophylact-of-nicomedia` and `eutychius-kachur`, predate this reading, stand untouched, and the new paragraph deliberately names none of them. No `locations`. The Serbian form is the heading’s forename with the rank and the see stripped; it lands on `euthymius-of-dimitsana`, which already holds the identical string, so the two-member fold key «јевтимије» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [

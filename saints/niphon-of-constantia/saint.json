@@ -11,6 +11,11 @@
       "form": "Νήφων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Δεκεμβρίου, «Όσιος Νήφων επίσκοπος Κωνσταντιανής», with the rank word and the see left off."
+    },
+    {
+      "form": "Нифонт Чудотворац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 23. децембар ст. ст., „Свети Нифонт Чудотворац.“ — «Свети» is “saint” and not a rank, and «Чудотворац» is kept on the form as the 12-21 reader kept it on `peter-of-moscow`’s «Петар Чудотворац». MEASURED BEFORE IT WAS WRITTEN AND THAT IS WHY IT WAS KEPT: the bare «Нифонт» lands on `niphon-of-novgorod` and `niphon-the-athonite`, so stripping it would have made a three-member fold where the full string has no other holder at all. The see, Constantia on Cyprus, is in the body and not in the heading, and no form was assembled out of it. THE AUTHOR MAY READ «Чудотворац» AS A RANK: BRIEF-SERBIAN §5 maps it to the type `wonderworker`, and §6 keeps a rank out of a stored form, so this form and `peter-of-moscow`’s stand or fall together."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.01.2026 (23. децембар ст. ст.) — „Свети Нифонт Чудотворац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. Identified on the whole dossier and on the same menologion day the Romanian and the Greek already keep him: born in Paphlagonia, the archbishop of Alexandria consecrating him by a revelation from heaven bishop of the city of Constantia on Cyprus, and the visit of Athanasius the Great at the end. NO YEAR ANYWHERE in the entry, so the folder’s null `dates` is left null; the entry’s only time-words are that he was already old when he was consecrated and ruled the church of God well for no long while. `types` UNTOUCHED, AND ONE GRADE THE HEADING GIVES WAS NOT ADDED: the heading is „Свети Нифонт Чудотворац.“ and «Чудотворац» is BRIEF-SERBIAN §5’s `wonderworker`, which this folder does not carry and the corpus has. A `types` row is a reading of the sources together and not of the newest one, which is the 11-05 reader’s `stephen-of-decani` precedent and the 12-21 reader’s on `peter-of-moscow`, so it is reported and not written. WHAT THE ENTRY ADDS, and goes into the life: that he was brought up at Constantinople in the house of some voivode; that he fell into bad company, was corrupted, gave himself to many sins and vices and could not pray to God for his sins at all; that he was brought back to the way of righteousness by the mercy of the Mother of God and tonsured; that he had countless visions of the heavenly world; that for FOUR YEARS he fought a hard struggle with a demon that whispered to him without ceasing „Нема Бога! Нема Бога!“ — there is no God — until the Lord Jesus himself appeared to him alive on an icon, after which he had great power over the evil spirits and was freed of those heavy temptations; that he was so clear-sighted that he saw angels and demons about men as he saw men, and knew men’s thoughts, talking often with the angels and disputing with the demons; that he built a church to the Most Holy Mother of God at Constantinople, gathered monks and saved many; and that after his death Athanasius saw his face lit like the sun. The archbishop «Александар» of Alexandria who consecrated him is named in the life as the book names him and TAKES NO ROW: the corpus holds no folder read as that man, and an ordainer is not a companion. The `related` rows the folder already carries to `athanasius-of-alexandria` and `constantine-the-great` stand, and the first of them is why Athanasius may be linked in the new paragraph. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [

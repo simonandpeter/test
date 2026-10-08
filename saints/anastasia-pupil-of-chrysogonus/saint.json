@@ -11,6 +11,11 @@
       "form": "Αναστασία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Δεκεμβρίου, «Αγία Αναστασία η Μεγαλομάρτυς η Φαρμακολύτρια», with the rank words and the by-name left off."
+    },
+    {
+      "form": "Анастасија Узорешителница",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 22. децембар ст. ст., „Света великомученица Анастасија Узорешителница и други с њом.“ — «Света» is “saint” and not a rank, «великомученица» is the rank `great-martyr` the folder already carries, and «и други с њом» is the unnamed company and no part of her name, so the bare name with its by-name is what is left. MEASURED BEFORE IT WAS WRITTEN: the bare «Анастасија» lands on three other folders — `anastasia-of-rome-15-april`, `anastasia-of-serbia` and `anastasia-the-patrician` — so the book’s own epithet «Узорешителница» was kept on the form rather than stripped, and the full string has no other holder in the corpus."
     }
   ],
   "sex": "female",
@@ -28,7 +33,8 @@
     "chrysogonus",
     "agape-of-aquileia",
     "irene-of-aquileia",
-    "chionia-of-aquileia"
+    "chionia-of-aquileia",
+    "theodota-with-her-three-sons"
   ],
   "attestations": [
     {
@@ -67,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.01.2026 (22. децембар ст. ст.) — „Света великомученица Анастасија Узорешителница и други с њом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the fuller of the two. Identified on the whole dossier and on the same menologion day the Romanian and the Greek already keep her: the Roman senator’s daughter of a pagan father and a Christian mother, taught by Chrysogonus, married against her will to the heathen Публије whom she never came to in the body, who went secretly to the prisons of the martyrs, and who was at the last bound over a fire by hands and feet. The book’s «Узорешителница», the loosener of bonds, answers the Greek «Φαρμακολύτρια» the folder already records, and the heading’s «великомученица» is the `great-martyr` the folder already carries. THE YEAR DISAGREES AND WAS NOT CHANGED: «Пострада и пресели се у Царство Христово 304. године», where the folder’s `dates` hold a flat 290 read off saint.gr. Two books, two flat years; a flat year does not strike out another book’s flat year and averaging two attested figures is not a reader’s act, so the 304 is recorded here and in the life and the folder’s reading stands. This is the 12-21 reader’s `ignatius-of-antioch` case, 106 against 107, in the same shape. WHAT THE ENTRY ADDS: that Публије was sent by the emperor to Persia and drowned on the voyage, which is how she was freed; that Diocletian was at Aquileia when Chrysogonus was beheaded, and that she followed him on that road; that she buried the three sisters of Aquileia in white linen with many spices; that she went on to Macedonia and lodged there with Теодотија, which is this day’s second entry and takes a `related` row both ways in this same commit; that a chief of the heathen priests named Улпијан went blind and died as he reached out to her in lust; and that she lay thirty days in prison without food. The heading’s «и други с њом» NAMES NOBODY — it enumerates no member and the body names no companion of her own death — so it makes no folder, which is BRIEF.md §4’s ruling on a company a heading does not enumerate. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
