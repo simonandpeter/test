@@ -16,6 +16,11 @@
       "form": "Јован Зедазнијски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's entry headed „Преподобни оци грузијски.“ for 7. мај ст. ст., whose body says „Началник свих ових христољубивих мисионара био је свети Јован Зедазнијски.“ Свети is no rank and Преподобни in the heading is the `venerable` this folder already carries in `types`; **Зедазнијски is kept**, because it is a by-name from Mount Zaden and not a rank word `honorific.js` composes — and keeping it is what holds this folder out of the gate's eight-folder `? \"јован\"` fold, which the bare form would have made nine. The name stands in the body's naming sentence and not in the heading, which names nobody at all."
+    },
+    {
+      "form": "Иоанн Зедазнийский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 7 мая ст. ст., «Иоанн Зедазнийский, прп.», with the rank abbreviation left off. The day’s own line declines him «Прпп. Иоанна Зедазнийского и учеников его»."
     }
   ],
   "sex": "male",
@@ -46,13 +51,30 @@
       "display": "late 5th century",
       "basis": "traditional",
       "note": "doxologia.ro, Viața Sfântului Cuvios Ioan Zedazneli: «s-a născut într-un sat de lângă Antiohia, la sfârșitul secolului al V-lea». The page gives no year for his death."
+    },
+    "death": {
+      "earliest": 557,
+      "latest": 560,
+      "display": "557–560",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, life1010: «Кончина святого Иоанна последовала между 557 и 560 годами, при Католикосе Макарии (553–569)». The folder held no death interval at all before this; the Romanian page that gave the birth gives no year for the death."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст. — «Прпп. Иоанна Зедазнийского и учеников его: Авива, еп. Некресского, Антония Марткопского, Давида Гареджийского, Зенона Икалтского, Фаддея Степанцминдского, Исе, еп. Цилканского, Иосифа, еп. Алавердского, Исидора Самтавийского, Михаила Улумбийского, Пирра Бретского, Стефана Хирского, Шио Мгвимского (VI) (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "note": "The calendar marks the line «(Груз.)», a commemoration of the Georgian church, and enumerates all twelve disciples by name with a `/name/` link for each; the corpus already keeps the whole company, so the day is upgrades throughout and no folder was made. Five of the thirteen already carried a venerated russian row on another day and were therefore left alone, as BRIEF-RUSSIAN §4 requires: `abibus-of-nekresi` on 29 ноября, `anthony-of-martkopi` on 19 января, `jesse-of-tsilkani` on 2 декабря, `joseph-of-alaverdi` on 15 сентября and `shio-of-mgvime` on 6 февраля. `dates` gained the death interval the folder had none of: life1010 says «Кончина святого Иоанна последовала между 557 и 560 годами, при Католикосе Макарии (553–569)», and the Romanian birth note that stood alone is kept word for word. The day page prints no hymn under his name. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",

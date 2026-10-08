@@ -16,6 +16,11 @@
       "form": "Акакије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 7. мај ст. ст., „Свети мученик Акакије.“ Свети is no rank and мученик is the `martyr` this folder already carries in `types` and `honorific.js` composes back, so stripping them leaves the bare forename and nothing else: the heading gives no epithet, no rank of office, no city and no company, and the officer's commission, Maximian, Perinthus and Byzantium are all in the body. Two other folders already hold this bare form and the fold was measured before drafting, not discovered by the gate."
+    },
+    {
+      "form": "Акакий Каппадокиянин",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 7 мая ст. ст., «Акакий Каппадокиянин, Византийский, сотник, мч.», taking the forename with the first of its two epithets and leaving the rank off; the day’s own line gives only «Акакия сотника». The second epithet, «Византийский», is the place of his death and is in the life."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст. — «Мч. Акакия сотника (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "note": "The calendar’s name link gives him two epithets the day line does not, «Акакий Каппадокиянин, Византийский, сотник» — the Cappadocian and the Byzantine — and the life accounts for both: he was born in Cappadocia and was beheaded at Byzantium. The life’s own dating is loose against the day line’s year: it opens «живший в III столетии», in the third century, and then sets the persecution under «императора Максимиана Галерия (305 - 311)», a reign that begins after the 303 the line gives and the folder holds. `dates` is unchanged and the disagreement is recorded here. The day page prints no hymn under his name; the one troparion this folder carries is the Greek one it already had. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",

@@ -16,6 +16,11 @@
       "form": "Издериос",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's naming clause in the entry headed „Преподобни оци грузијски.“ for 7. мај ст. ст. — „А имена су њихова: Авид, Антоније, Давид, Зинон, Тадеј, Иса, Издериос, Јосиф, Михаил, Пир, Стефан и Шијо.“ The list carries no rank word and no epithet on any of the twelve; Преподобни heads the whole company in the heading and belongs to no one name, and the see or monastery each folder's English name keeps is nowhere on this page. So the bare forename is the whole of the form. The form meets no other folder in any language, which was measured rather than assumed — and it is nothing like the Ισίδωρος this folder already holds, which is why the identification rests on the set and not on the name."
+    },
+    {
+      "form": "Исидор Самтавийский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 7 мая ст. ст., «Исидор Самтавийский, прп.», with the rank abbreviation left off. The day’s own line declines him «Исидора Самтавийского»."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст. — «Прпп. Иоанна Зедазнийского и учеников его: … Исидора Самтавийского … (VI) (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "note": "One thing in the day’s reading touches another folder and was deliberately not written anywhere: the life of «Авив», the bishop of Nekresi, says that the brethren of the Samtavisi house buried that bishop’s body with honour in their own monastery, and that under the ruler Степаноз his relics were afterwards carried from Samtavisi to the Samtavro cathedral at Mtskheta. That is the burial of another man in this man’s monastery, not a relation between them, and no `related` row was made of it; `abibus-of-nekresi` was in any case left alone, his russian row standing venerated on 29 ноября. `dates` is unchanged: the life gives him no year. The day page prints no hymn under his name. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
