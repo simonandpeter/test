@@ -1,0 +1,75 @@
+{
+  "slug": "basil-sokolov-13-may",
+  "display_name": "Basil (Sokolov, 13 May)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Василий (Соколов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9286, «Василий (Соколов), протоиерей, сщмч.», with the rank words left off. The day's own line gives the name without the surname — «Сщмчч. Василия , Александра и Христофора пресвитеров, прмч. Макария и мч. Сергия (1922).» — and the surname is read off the name page behind it. The parenthesis is the calendar's own. **This form is already held by three other folders** and the fold it widens is set out in the attestation note; `fk.mjs` on «Василий (Соколов)» returned `basil-sokolov`, `basil-sokolov-20-march` and `basil-sokolov-27-november` before the write, and the day in the display name is what tells the four apart."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "The shared life page, life4778: «Священник Василий Александрович Соколов, родился в 1868 году в селе Старая слобода Александровского уезда Владимирской губернии». **This is one of the two figures that tell him from the `basil-sokolov` the corpus already held**, whose own folder records a birth on 5 May 1880 at Чёрный Ручей in the province of Tver."
+    },
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "The year the day line closes the five with, «(1922)», and the shared life page's own: «Расстреляны они были в начале июня 1922 года» — they were shot at the beginning of June 1922. The page gives no day, and no day is recorded here. **It is the other figure that tells him from the three Basils the corpus already held**, whose years are 1937, 1937 and 1938."
+    }
+  },
+  "related": [
+    "christopher-nadezhdin",
+    "alexander-zaozersky",
+    "macarius-telegin",
+    "sergius-tikhomirov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Сщмчч. Василия , Александра и Христофора пресвитеров, прмч. Макария и мч. Сергия (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "**He is a FOURTH man of a name the corpus already holds three times, and this is the reading the batch rests on.** days.pravoslavie.ru keeps four name pages headed «Василий (Соколов)», on four days, with three grades and three years. **9286** is this man: «протоиерей, сщмч.», days «26 января (Новомуч.) , 13 мая», the shared life page life4778, born 1868 at Старая слобода in the province of Vladimir, shot in June 1922 in the Moscow case of the church valuables. **9509** is `basil-sokolov`: «иерей», a priest, fourth of six presbyters on 16 ноября ст. ст., born 5 May 1880 at Чёрный Ручей in the province of Tver, shot 29 November 1937. **9287** — one digit from this man's page and a different page — is `basil-sokolov-27-november`: «протоиерей», second in a clause of twenty-three on 27 ноября ст. ст., 1937, with no life at all. **13705** is `basil-sokolov-20-march`: «протодиакон», alone on 20 марта ст. ст., 1938. Four pages, four days, two ranks of priest and one of deacon, and three years, and nothing read puts any two of the four in one sentence; this man is the only one of them with a dossier of his own in 1922 and the only one on this day. By the corpus's own established reading — a distinct name page with a distinct day is a distinct man on this source, as `demetrius-rozanov-18-march` stands beside `demetrius-rozanov-12-november` — that is a fourth man, and the slug follows the convention of the two newer folders. **The fold «василии соколов» therefore widens from three holders to four, and the key was re-keyed in the same commit.** `corpus-gate.mjs --batch ru-05-13-2` went RED on the widened fold until it was, which is why the three-member key another wave wrote was replaced rather than left standing dead: `addfold.py --replace` removed it and inserted a four-member key whose reading carries the three-member one forward whole. The exact membership is `basil-sokolov`, `basil-sokolov-13-may`, `basil-sokolov-20-march` and `basil-sokolov-27-november`, verified by codepoint on the plain gate as a U+00B7 row, and it is handed back in the report so that a parallel wave which widened the same fold can be re-keyed against it. The page lists «Дни памяти: 26 января (Новомуч.) , 13 мая»; the 26 января is the synaxis of the new martyrs and is a note here and not a feast. The day page prints hymns for three of the saints it heads and nothing under the five. azbyka.ru was not read, and it is the source that would settle this pair if the author reads 9286 and 9287 as one man."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

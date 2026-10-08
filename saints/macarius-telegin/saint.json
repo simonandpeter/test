@@ -1,0 +1,69 @@
+{
+  "slug": "macarius-telegin",
+  "display_name": "Macarius (Telegin)",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromartyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Макарий (Телегин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 9225 as the day page prints it, «Макарий (Телегин), иеромонах, сщмч.», with the rank words left off. The day's own line gives the name without the surname — «прмч. Макария» — and the surname is read off the name page behind it. The parenthesis is the calendar's own, and the shared life page gives the name in the world as «Телегин Макарий Николаевич». `fk.mjs` on «Макарий Телегин» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "The year the day line closes the five with, «(1922)», and the shared life page's own: «Расстреляны они были в начале июня 1922 года» — they were shot at the beginning of June 1922. The page gives no day, and no day is recorded here. **No birth is recorded**: his is the one of the five paragraphs that gives no year of birth at all, only the province, the district and the village, and a year cannot be had from those."
+    }
+  },
+  "related": [
+    "christopher-nadezhdin",
+    "alexander-zaozersky",
+    "basil-sokolov-13-may",
+    "sergius-tikhomirov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Сщмчч. Василия , Александра и Христофора пресвитеров, прмч. Макария и мч. Сергия (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "One of the five the line names, each with a name page of his own and all five sharing one life page, life4778, which is the Moscow trial over the confiscation of church valuables in 1922. **He carries two grades because the calendar gives him two**: the day line makes him «прмч.», преподобномученик, a venerable-martyr, and name page 9225 makes him «иеромонах, сщмч.», a hieromonk and a hieromartyr; both are in `types` and neither displaced the other. `office` is `Hieromonk`, which the locale packs carry. The page lists «Дни памяти: 26 января (Новомуч.) , 13 мая»; **the 26 января is the synaxis of the new martyrs and confessors of Russia**, a company's feast and not his own day, so it is a note here and the feast is the day page that printed him (BRIEF.md §8). Checked before writing: `grep -l Телегин saints/*/saint.json` returns nothing at all, no `macarius-*` folder carries the year 1922, and `fk.mjs` on «Макарий Телегин» returned NONE. **He is not the Макарий Каневский of the line above him on the same page**, whose translation of relics that line keeps and whose folder, `macarius-of-kanev`, is a seventeenth-century abbot already venerated russian on 7 сентября. The day page prints hymns for three of the saints it heads and nothing under the five. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

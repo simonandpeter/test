@@ -1,0 +1,75 @@
+{
+  "slug": "christopher-nadezhdin",
+  "display_name": "Christopher (Nadezhdin)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Христофор (Надеждин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 9825 as the day page prints it, «Христофор (Надеждин), иерей, сщмч.», with the rank words left off. The day's own line gives the name without the surname — «Сщмчч. Василия , Александра и Христофора пресвитеров, прмч. Макария и мч. Сергия (1922).» — and the surname is read off the name page behind it. The parenthesis is the calendar's own. `fk.mjs` on «Христофор Надеждин» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1869,
+      "latest": 1869,
+      "display": "21 February 1869",
+      "basis": "attested",
+      "note": "The shared life page, life4778: «Протоиерей Христофор Надеждин, настоятель церкви Иоанна Воина (что на Якиманке), родился 21 февраля 1869 года в семье священника Рязанской губернии Зарайскаго уезда Нижне-белоомутского села»."
+    },
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "The year the day line closes the five with, «(1922)», and the shared life page's own: «Расстреляны они были в начале июня 1922 года» — they were shot at the beginning of June 1922. The page gives no day, and no day is recorded here."
+    }
+  },
+  "related": [
+    "alexander-zaozersky",
+    "basil-sokolov-13-may",
+    "macarius-telegin",
+    "sergius-tikhomirov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Сщмчч. Василия , Александра и Христофора пресвитеров, прмч. Макария и мч. Сергия (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "One of the five the line names, each with a name page of his own and all five sharing one life page, life4778, which is the Moscow trial over the confiscation of church valuables in 1922. **The grade is given two ways and the name page's was taken.** Name page 9825 heads him «иерей», a priest; the shared life page's title and its first line both make him «протоиерей», an archpriest; the day line calls the first three «пресвитеров». `office` is the bare `Priest` off the name page, which is this corpus's index for a Russian form, and the life's archpriest is set down in the life. The page lists «Дни памяти: 26 января (Новомуч.) , 13 мая»; **the 26 января is the synaxis of the new martyrs and confessors of Russia**, a company's feast and not his own day, so it is a note here and the feast is the day page that printed him (BRIEF.md §8). Checked before writing: `ls -d saints/christopher*` returns fifteen folders and none is of this surname or this century; `grep -l Надеждин saints/*/saint.json` returns only `basil-nadezhdin`, another man of the surname; `fk.mjs` on «Христофор Надеждин» returned NONE. The day page prints hymns for three of the saints it heads and nothing under the five. **`related` carries the other four of the line** and their names are written in the life; the tie is the one the source itself makes, a single case and a single sentence of execution. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

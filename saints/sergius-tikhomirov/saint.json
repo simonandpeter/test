@@ -1,0 +1,73 @@
+{
+  "slug": "sergius-tikhomirov",
+  "display_name": "Sergius (Tikhomirov)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Сергий (Тихомиров)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 10032 as the day page prints it, «Сергий (Тихомиров), мч.», with the rank word left off. The day's own line gives the name without the surname — «мч. Сергия» — and the surname is read off the name page behind it. The parenthesis is the calendar's own, and the shared life page gives him in full as «Сергей Федорович Тихомиров». `fk.mjs` on «Сергий Тихомиров» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1866,
+      "latest": 1867,
+      "display": "1866 or 1867",
+      "basis": "attested",
+      "note": "The shared life page, life4778, which asks the question itself: «Сергей Федорович Тихомиров, родился в 1866 (1867?) году в семье московского купца 2-й гильдии». The parenthesis and the question mark are the page's own, so both years are kept and neither is chosen, which is how `fridolin-of-sackingen` carries its two."
+    },
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "The year the day line closes the five with, «(1922)», and the shared life page's own: «Расстреляны они были в начале июня 1922 года» — they were shot at the beginning of June 1922. The page gives no day, and no day is recorded here."
+    }
+  },
+  "related": [
+    "christopher-nadezhdin",
+    "alexander-zaozersky",
+    "basil-sokolov-13-may",
+    "macarius-telegin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Сщмчч. Василия , Александра и Христофора пресвитеров, прмч. Макария и мч. Сергия (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "One of the five the line names, each with a name page of his own and all five sharing one life page, life4778, which is the Moscow trial over the confiscation of church valuables in 1922. **He is the layman of the five** — «мч. Сергия» on the day line, «мч.» on the name page, and «мирянин Сергий Тихомиров» in the life page's own list of the executed — so no clerical type and **no `office`** were written, and `types` is martyr and new-martyr. The page lists «Дни памяти: 26 января (Новомуч.) , 13 мая»; **the 26 января is the synaxis of the new martyrs and confessors of Russia**, a company's feast and not his own day, so it is a note here and the feast is the day page that printed him (BRIEF.md §8). Checked before writing: `grep -l Тихомиров saints/*/saint.json` returns only `john-tikhomirov`, another man of the surname; no `sergius-*` folder carries the year 1922; `fk.mjs` on «Сергий Тихомиров» returned NONE. **He is not the Сергий исповедник the Romanian and the Greek keep on this same menologion day**, `sergius-the-confessor`, whom the Russian page does not print at all. The day page prints hymns for three of the saints it heads and nothing under the five. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
