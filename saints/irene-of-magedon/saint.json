@@ -16,6 +16,11 @@
       "form": "Ирина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 5. мај ст. ст., „Света великомученица Ирина.“ Света is no rank; великомученица is the `great-martyr` this folder already carries in `types` and `honorific.js` composes back, so stripping it leaves the bare forename and nothing else. **Magedon, which the English display name keeps, is in the body and not in the heading** — „у некоме граду Магедону“ — so it is not part of the form, and no epithet was invented to hold the folder out of the fold with `irene-of-aquileia`'s equally bare Ирина."
+    },
+    {
+      "form": "Ирина",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 5 мая ст. ст., which gives «Святая великомученица Ирина»; the rank words are not part of the stored form, and the calendar gives her no epithet beside the bare name on this day. The baptismal change of name the lives give — «до крещения носила имя Пенелопа» — is in the life and is not a second stored form."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 мая ст. ст. — «Вмц. Ирины (I-II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260505.html",
+        "year": 2026
+      },
+      "note": "The calendar gives her three life pages and they do not agree about where she came from. life6650 makes her «родом славянка», a Slav by birth, and her father Ликиний the ruler of «города Магеддона в Македонии» — the Magedon this folder's display name keeps her under; life4837 makes him ruler of «области Мигдония в Македонии», a province; life997 of «города Мигдонии (Македония, или Фракия)», and hedges the country. All three keep the same father, the same baptism at the hands of the apostle Тимофей, the same three birds, the same Седекия and the same cave at Ephesus, so they are three tellings of one dossier and not two women. Nothing was moved and the display name was not changed. `dates` gained a `floruit` the folder had none of. The stored Russian form is the bare «Ирина», which is all the calendar's name link gives; the fold «ирина» ALREADY HELD two folders before this batch, on the Serbian form both of them store, and it is unread. This batch DOES NOT WIDEN IT — irene-of-magedon is already one of the two — and so writes no key for it. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -124,6 +139,38 @@
         "text": "Let us all hymn the fair virgin, the bride of Christ, risen from the dead, whom God glorified with fearful signs; for she drew a countless multitude of the ungodly into the faith, and received from God her calling by Christ's name, since an angel of God came and from Penelope named her Irene.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Агница Твоя, Иисусе, Ирина/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся Крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе, и умираю за Тя,/ да и живу с Тобою,/ но яко жертву непорочную приими мя,/ с любовию пожершуюся Тебе.// Тоя молитвами, яко Милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 мая ст. ст., «Тропарь мученицы Ирины», глас 4 — the common of a woman martyr, with her name set into it, as the same calendar sets other names into the same text",
+        "url": "https://days.pravoslavie.ru/Days/20260505.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb Irene cries out to thee with a great voice, O Jesus: thee, my Bridegroom, I love; seeking thee I contend, and I am crucified and buried with thee in thy baptism; I suffer for thy sake, that I may reign in thee, and I die for thee that I may live with thee. Receive me as a spotless sacrifice, offered to thee in love. By her prayers, as thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Девства добротами преиспещренна, дево,/ страдальчеством была еси краснейшая, Ирино,/ кровьми твоими истекшими обагрена,/ прелесть же низложившая безбожия.// Сего ради и прияла еси почести победы рукою Создателя твоего.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 мая ст. ст., «Кондак мученицы Ирины», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260505.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the beauties of virginity, O maiden, thou wast made fairer still by thy martyrdom, Irene, reddened by thine own blood poured out, and thou didst throw down the deceit of godlessness. Therefore hast thou received the honours of victory from the hand of thy Creator.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -134,5 +181,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru gives her three lives and all three put her in the first century: life4837 and life997 open «жила в I веке», and life6650 «жила во второй половине I века». The day line closes her «(I-II)», the first or the second century, which is wider than any of the lives and is recorded here rather than in the interval. No source read gives a year for her birth or her death, and the lives end with her body not found in the cave, so there is neither a birth nor a death object."
+    }
+  }
 }

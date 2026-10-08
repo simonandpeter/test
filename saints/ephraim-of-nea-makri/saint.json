@@ -11,6 +11,11 @@
       "form": "Εφραίμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαΐου, «Άγιος Εφραίμ ο Μεγαλομάρτυρας και θαυματουργός», with the rank words left off."
+    },
+    {
+      "form": "Ефрем Новый, Неамакринский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link and name page 14692 for 5 мая ст. ст., which give «Ефрем Новый, Неамакринский, прмч.»; the rank abbreviation is not part of the stored form and the two epithets are. «Неамакринский» is the Russian form of Nea Makri, which the display name keeps him under. The day line itself declines him as «Ефрема Нового» alone."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 мая ст. ст. — «Прмч. Ефрема Нового (1426) (Конст.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260505.html",
+        "year": 2026
+      },
+      "note": "The calendar gives him no life: name page 14692 heads «Ефрем Новый, Неамакринский, прмч.», gives «День памяти: 5 мая», and carries nothing else. The line's «(Конст.)» marks him as kept by the Church of Constantinople, which is how this calendar flags a saint it takes over from another local church, as its «(Болг.)» and «(Серб.)» do. Its year, 1426, is the year this folder already holds for his martyrdom off doxologia, which gives the day as well — 5 May 1426 — so the Russian adds nothing to `dates` and nothing was changed. Read 8 October 2026."
     },
     {
       "church": "romanian",
