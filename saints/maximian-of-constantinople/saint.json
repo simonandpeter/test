@@ -3,7 +3,10 @@
   "display_name": "Maximian of Constantinople",
   "sex": "male",
   "types": [
-    "patriarch"
+    "patriarch",
+    "hierarch",
+    "monk",
+    "presbyter"
   ],
   "office": "Patriarch of Constantinople",
   "names": [
@@ -11,6 +14,11 @@
       "form": "Μαξιμιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Απριλίου, «Άγιος Μαξιμιανός Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off; the life page heads him «Αγιος Μαξιμιανος Πατριαρχης Κωνσταντινουπολης (; - 434)»."
+    },
+    {
+      "form": "Максимиан (Максим) Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 21 апреля ст. ст., name page 1437, «Святитель Максимиан (Максим) Константинопольский, патриарх», with the rank words left off; the page’s own variant of the forename is kept in the parentheses it prints it in. Measured against the gate’s own key function before it was written: 'константинопольскии максим максимиан' has no other holder."
     }
   ],
   "related": [],
@@ -26,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Свт Максимиана , патриарха Константинопольского (434).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "The name page is 1437 and the life page life911, and both give «День памяти: 21 апреля» and no other day. The year on the line, 434, is the year this folder already carried. ONE READING LEFT UNRESOLVED: the life closes «Скончался святой Патриарх Максимиан мирно, 12 апреля 434 года, в Великий четверг» — the TWELFTH of April — while this day page and his name page both keep him on the twenty-first. The difference is nine days, so it is neither the style conversion, which is thirteen, nor a second feast the pages repeat; under BRIEF.md §8 the day page stands and he was not moved. No hymn under his name."
+      }
     },
     {
       "church": "romanian",
