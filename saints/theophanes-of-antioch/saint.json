@@ -11,6 +11,11 @@
       "form": "Θεοφάνης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουνίου, «Όσιοι Θεοφάνης και Πανσέμνη», with the rank word left off."
+    },
+    {
+      "form": "Феофан Антиохийский",
+      "lang": "ru",
+      "note": "The name as name page 2252 gives it, with the grade taken off. Measured with the gate's own fold before it was written: 'антиохиискии феофан' has no other holder; the «Ефрем Антиохийский» this wave wrote two days earlier is a different forename and a different key."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Прп. Феофана Антиохийского (369).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry. The Romanian and Greek rows already stand on this same 10 June. Name page 2252 heads him «Феофан Антиохийский, прп.» and gives «День памяти: 10 июня» and no other day. **The year 369 is the first year any calendar has given this folder**: its `dates` are null, because neither the Romanian nor the Greek page gave a year. It was NOT written into `dates` from a day line alone while the /Life/ page that would corroborate it was left unread, and it is recorded here and in the life instead; that is a question for the author. The day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

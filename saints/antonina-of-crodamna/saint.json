@@ -16,6 +16,11 @@
       "form": "Антонина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 10. јун ст. ст., „Свети мученик Александар и Антонина“, which names the two of them. Свети is not a rank and мученик is the `martyr` this corpus puts in `types` — and the heading uses it in the singular for a pair, which is the book’s own looseness and not a reading — so both come off and the bare personal name is the whole of the form. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('antonina-of-nicaea', 'sr')]`, so this makes a fold of two; the heading gives the bare forename and the city is in the body, which §6 does not let into a form."
+    },
+    {
+      "form": "Антонина Кродамнская",
+      "lang": "ru",
+      "note": "The name as name page 2400 gives it, «Мученица Антонина Кродамнская», with the grade taken off; the epithet is the Crodamna this folder's English name already carries. Measured with the gate's own fold before it was written: 'антонина кродамнская' has no other holder, where the folder's existing Serbian form is the bare «Антонина»."
     }
   ],
   "sex": "female",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Мчч. Александра и Антонины девы (ок. 313).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry names the two together, «Мчч. Александра и Антонины девы (ок. 313).», and the Romanian, Greek and Serbian rows of both folders already stand on this same 10 June, so the day and the identity were not in doubt. The line's «ок. 313» is this folder's own 313 and nothing in `dates` was touched. Each of the two has a name page of its own — 105 «Мученик Александр Воин» and 2400 «Мученица Антонина Кродамнская» — each giving «День памяти: 10 июня» and no other day, and each listing the same two readings of the pair under «Жития». Those readings were NOT opened: both folders already carry a life and three hymns apiece from the other calendars, and this upgrade adds the Russian day and the Russian name form only. The day page prints no hymn for either. azbyka.ru was not read."
     },
     {
       "church": "romanian",

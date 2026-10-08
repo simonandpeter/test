@@ -1,0 +1,61 @@
+{
+  "slug": "mitrophan-of-china",
+  "display_name": "Mitrophan of China",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Митрофан Китайский",
+      "lang": "ru",
+      "note": "The name as name page 14812 gives it, «Митрофан Китайский, иерей, сщмч.», with the rank word and the grade taken off; the day's line prints only the bare forename in the genitive, so the epithet is read off the link. Measured with the gate's own fold before it was written: 'китаискии митрофан' has no other holder, where a bare «Митрофан» would have met the six the corpus already keeps."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "attested",
+      "note": "The year the line closes with, «(1900)», which is also the year of the Boxer rising the company's own name page dates. No year of birth is given anywhere on the site."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Сщмч. Митрофана пресвитера и иже с ним мучеников многих (1900).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, and a line and a name page and nothing else. `ls -d saints/mitrophan*` returned six folders and not one is this man: `mitrophan-of-constantinople` is the patriarch, `mitrophan-of-voronezh` the Russian hierarch, `mitrophan-disciple-of-dionysius` another, and the three twentieth-century ones stand on 19 ноября (Kvanin, 1875 to his death), 19 мая (Vilgelmsky, 1938) and 24 ноября (Kornitsky, 1873 to his death); a Cyrillic grep for «Китайск» over every saint.json returned nothing, and `fk.mjs` no holder for either form. **The company of his line is not in this folder and took no folder of its own**: the «мучеников многих» link leads to name page 13625, «222 китайских новомучеников убиенных при Боксерском восстании в 1900 г.», which enumerates nobody and whose own page gives «День празднования: 11 июня» — the day after this one. No relation was written to it, and no собор was turned into a folder. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

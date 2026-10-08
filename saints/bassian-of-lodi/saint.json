@@ -1,0 +1,63 @@
+{
+  "slug": "bassian-of-lodi",
+  "display_name": "Bassian of Lodi",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Вассиан Лавдийский",
+      "lang": "ru",
+      "note": "The name as name page 396 gives it, «Святитель Вассиан Лавдийский, епископ», with the grade and the rank word taken off; Лавдийский is the Laudia the life itself glosses as Lodi in Liguria. Measured with the gate's own fold before it was written: 'вассиан лавдиискии' has no other holder. The corpus's four other Bassians store «Вассиан» bare and «Вассиан Тиксненский», and the epithet is what keeps this form out of that fold."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 409,
+      "latest": 409,
+      "display": "409",
+      "basis": "attested",
+      "note": "The life's last sentence: «Святитель Вассиан мирно скончался в 409 году, прослужив в архиерейском сане 35 лет», and the day line gives the same year. The thirty-five years in the episcopate are a duration and were used for nothing; no year of birth is given."
+    }
+  },
+  "related": [
+    "ambrose-of-milan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Свт. Вассиана , еп. Лавдийского (409).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's ninth entry. `ls -d saints/bassian*` returned four folders and none is this man: `bassian-the-venerable` is the abbot of Constantinople of about 450 whom all four calendars keep on 10 октобря, `bassian-of-tiksna` the Russian venerable of 1624, and the two `bassian-of-rostov` folders are a bishop of Rostov on two days. A Cyrillic grep for «Лавдийск» over every saint.json returned nothing, Latin-stem `ls` for ‘lodi’ and ‘laodicea’ returned no bishop of Lodi, and `fk.mjs` no holder for either form. Name page 396 gives «День памяти: 10 июня» and no other day, and the day page prints no hymn under his name. The one relation written is to `ambrose-of-milan`, whom the life calls his friend, who consecrated him with the bishop Ursus, with whom he exchanged letters often, and at whose end he was present and whose body he buried. The presbyter Gordian, the bishop Ursus of Ravenna and the presbyter Clement of Lodi are named in the life and have no folder. `office` is the bare `Bishop` the locale packs carry, with the see in the display name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

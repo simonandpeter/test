@@ -1,0 +1,15 @@
+# Bassian of Lodi
+
+The Православный церковный календарь of the Сретенский monastery keeps him on 10 июня and prints a full reading of him. Bassian was the friend of [Ambrose of Milan](/saints/ambrose-of-milan). His father governed the province of Syracuse in Sicily and was grooming the son to succeed him, and sent him to Rome for his education; but Bassian had heard of the Christians while he was still a child and wanted to know them and their faith better. A presbyter named Gordian opened the substance of Christ's teaching to him and the young man asked for baptism.
+
+While the mystery was being performed he saw an angel at the font, holding the garment the newly baptised was to be clothed in, and made bold to ask him who he was and where he came from. The angel answered that he had long been sent to help him carry out his holy purpose of knowing Christ, and became invisible. From then Bassian lived strictly, ate little and spent his nights in prayer; and the servants, wondering at such abstinence, began to guess that their master had become a Christian and told his father, who ordered him brought back to Syracuse.
+
+Praying in the church of «Иоанн Богослов», as the reading names it, he received a command from that apostle to leave Rome. He gave away what he had to the poor and went with one faithful Christian servant to Ravenna, to a kinsman of his, the bishop Ursus, who settled him in a solitary place outside the city at a church in honour of the hieromartyr Apollinaris. There he grew quickly in the spirit and was soon known for wonders.
+
+At that time the judge of Ravenna was falsely accused and condemned to death, and on the way to the execution he called on Bassian in prayer for help. When the headsman had already raised the sword over his head the sword suddenly fell out of his hands and flew off to one side, and this happened three times; and the same thing happened with a second headsman. The emperor, told of it, released the judge, who said that he had been saved by the intercession of Bassian.
+
+The people of the city, believing that his prayers were strong before God, asked the bishop Ursus to ordain him presbyter. And when the bishop of the city of Lodi — Laudia, in Liguria in northern Italy — died, it was revealed to Clement, a presbyter of the cathedral church there, that Bassian should be chosen bishop of Lodi. His consecration was performed by Ambrose and the bishop Ursus.
+
+He taught the people not by word only but by deed, showing his flock the pattern of a virtuous life, and in Lodi he built a beautiful church in the name of the holy Apostles. He exchanged letters often with Ambrose, was present at his blessed end, and buried his body. Bassian himself died in peace in the year 409, having served thirty-five years in the rank of a bishop.
+
+*After the Православный церковный календарь of the Сретенский monastery for 10 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260610.html), [his name page](https://days.pravoslavie.ru/name/396.html) and [the life](https://days.pravoslavie.ru/Life/life1278.htm); read 8 October 2026.*

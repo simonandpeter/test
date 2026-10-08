@@ -1,0 +1,61 @@
+{
+  "slug": "timothy-ulyanov",
+  "display_name": "Timothy (Ulyanov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Тимофей (Ульянов)",
+      "lang": "ru",
+      "note": "The name as name page 13724 gives it, «Тимофей (Ульянов), иерей, сщмч.», with the rank word and the grade taken off. The day line prints the bare forename «Тимофея» in the genitive and no surname, so the surname is read off the name link. Measured with the gate's own fold before it was written: 'тимофеи ульянов' has no other holder, where a bare «Тимофей» is a fold this corpus keeps many folders wide. A Cyrillic grep for «Ульянов» returned only `natalia-ulyanova`, another person."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "The year the line closes with, «(1940)». No year of birth is given anywhere on the site."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Сщмч. Тимофея пресвитера (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's twelfth and last entry, and a line and a name page and nothing else. He is not the day's first Timothy: that is `timothy-of-prusa`, the bishop of the fourth century whose row this same batch wrote, and the two share the forename and the day and nothing else. A Cyrillic grep for «Ульянов» over every saint.json returned only `natalia-ulyanova`, `ls -d saints/timothy-*` was read through and none of its folders is a presbyter of 1940, and `fk.mjs` returned no holder for either form. Name page 13724 lists «26 января (Новомуч.) , 10 июня», carries no life, no icon and no article, and there is no /Life/ page for him on the site. The day page prints no hymn under his name. «26 января» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

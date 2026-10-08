@@ -16,6 +16,11 @@
       "form": "Тимотеј",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 10. јун ст. ст., „Свештеномученик Тимотеј, епископ бруски“ — Свештеномученик is the `hieromartyr`, епископ the `bishop` and the `Bishop` in `office`, and „бруски“ is the see, which the display name already carries; strip them and the bare personal name is left. `foldchk.py` returns `[('timothy-of-ephesus', 'sr'), ('timothy-of-symbola', 'sr')]`: a fold of three, deliberate, told apart by the sees."
+    },
+    {
+      "form": "Тимофей Прусский",
+      "lang": "ru",
+      "note": "The name as name page 2106 gives it, with the grade and the rank word taken off. Measured with the gate's own fold before it was written: 'прусскии тимофеи' has no other holder."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Сщмч. Тимофея , еп. Прусского (ок. 361-363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's first entry. The Romanian, Greek and Serbian rows already stand on this same 10 June, so the day and the identity were not in doubt. Name page 2106 heads him «Святитель Тимофей Прусский, епископ, сщмч.» and gives «День памяти: 10 июня» and no other day. The line's «ок. 361-363» spans this folder's own 361 or 362 and nothing in `dates` was touched. The day page prints no hymn under his name, and the /Life/ page behind the line was NOT read: the folder already carries a life from the Romanian and Greek calendars, and this upgrade adds the Russian day and the Russian name form only. The day's twelfth entry is another Timothy, `timothy-ulyanov`, a presbyter of 1940, and the two share the forename and the day and nothing else. azbyka.ru was not read."
     },
     {
       "church": "romanian",
