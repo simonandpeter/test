@@ -6,6 +6,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Μαρτίου, «Όσιος Ιωάννης ο εν τω φρέατι», with the rank word left off."
+    },
+    {
+      "form": "Иоанн Египетский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 29 марта ст. ст., which gives «Иоанн Египетский, пустынник»; the rank word is not part of the stored form. The day’s own line prints «Прп. Иоанна пустынника» with no country."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The Greek day is 30 Μαρτίου and this one is 29 марта, one day apart and not thirteen, so the difference is not the style conversion. The two were read as one man on the dry well and not on the day: see the note below."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Прп. Иоанна пустынника (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «До самой своей блаженной кончины, последовавшей в IV веке, святой Иоанн жил в колодце». The day line prints «(IV)». This folder held no `dates`: saint.gr gives no year for anything in his life. No year of birth is stated by either page and none is inferred."
+    }
   }
 }
