@@ -11,6 +11,11 @@
       "form": "Теодор Освештани",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 16. мај ст. ст., „Преподобни Теодор Освештани.“ Преподобни is the venerable rank, which this corpus puts in `types`; strip it and the fuller form is left. **Освештани is kept**: it is the epithet „the Sanctified“ that this folder's own display name carries and not a rank — doxologia's life devotes a whole appended note to arguing why he is called it — and keeping it is also what saves this folder from the bare «Теодор» that four other folders now share. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
+    },
+    {
+      "form": "Феодор Освященный",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Преподобный Феодор Освященный», with the rank word «Преподобный» left off — it is the `venerable` this folder carries in `types`. The epithet is kept, because it is the whole of what distinguishes him and the page explains it: «Назван «освященным» потому, что первым в своей обители был рукоположен во священники.» The day's own line declines him «Прп. Феодора Освященного (368).» `fk.mjs` on «Феодор Освященный» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Прп. Феодора Освященного (368).»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Romanian and the Serbian, and the same man: the disciple of Pachomius who was the first of his house to be ordained priest, which is what «Освященный» means. **`dates` gained a birth and the death was left exactly as it stood.** The first of the two Russian readings says «Родился он около 316 г. в Египте и был сыном богатых родителей» — a year the page states, not one reckoned from anything — while the second gives no birth at all; the new note says both, and says that 368 against 316 makes fifty-two years, where the second reading calls the death «в глубокой старости». Neither figure was adjusted to the other. **Two hymns were copied**, «Тропарь преподобного Феодора» (глас 1) and «Кондак преподобного Феодора» (глас 2). They are headed with the bare forename and no epithet, and he is the only Theodore the day prints, so they are his; the only other hymns on the page are the two for Ефрем Перекомский, each headed with his own name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -76,6 +91,38 @@
         "text": "A dweller of the desert and an angel in the body and a worker of wonders wast thou shown to be, our God-bearing father Theodore; receiving heavenly gifts by fasting, by vigil and by prayer, thou healest the sick and the souls of those who run to thee with faith. Glory to Him who gave thee strength; glory to Him who crowned thee; glory to Him who works healings for all through thee.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, богоносе отче наш Феодоре:/ постом, бдением, молитвою небесная дарования приим,/ исцеляеши недужныя и души верою притекающих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,// слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Тропарь преподобного Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the desert and an angel in the body, thou wast shown to be a wonderworker also, O our God-bearing father Theodore. Receiving heavenly gifts by fasting, by vigil and by prayer, thou healest the sick and the souls of those who come to thee with faith. Glory to Him who gave thee strength; glory to Him who crowned thee; glory to Him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В дому Божии, яко финикс, процвел еси,/ плоды же добродетелей Господеви принесл пощением изрядным,/ отче преподобне,/ темже и ублажаешися,// яко Безплотных равностоятелен.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Кондак преподобного Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the house of God thou didst flourish like a palm tree, and by exceeding abstinence thou didst bring the fruits of the virtues to the Lord, O venerable father. Therefore thou art called blessed, as one who stands equal with the bodiless hosts.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -92,12 +139,19 @@
     "theodore-of-sykeon"
   ],
   "dates": {
+    "birth": {
+      "earliest": 316,
+      "latest": 316,
+      "display": "about 316",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, the first of its two readings of him: «Родился он около 316 г. в Египте и был сыном богатых родителей.» The page's own «около» is kept in the display. **Its second reading gives no year of birth at all**, and calls the death «в глубокой старости», in deep old age — which against 316 and a death in 368 would be fifty-two years. The two figures are the page's and are left as the page has them; neither was adjusted to the other, and no lifespan was derived."
+    },
     "death": {
       "earliest": 368,
       "latest": 368,
       "display": "368",
       "basis": "traditional",
-      "note": "The Охридски пролог for 16. мај ст. ст.: „Упокојио се мирно и преселио у царство вечне светлости 368. године.“ This folder held no `dates` object at all until now, and no other calendar read for it gives a year: doxologia's life closes with „deep old age“ and no number, and the Greek and Russian rows are undocumented. No year of birth is given by either book."
+      "note": "The Охридски пролог for 16. мај ст. ст.: „Упокојио се мирно и преселио у царство вечне светлости 368. године.“ This folder held no `dates` object at all until the Serbian wave, and no other calendar read for it gave a year: doxologia's life closes with „deep old age“ and no number. days.pravoslavie.ru now agrees to the year in both its readings, «Кончина преподобного последовала в 368 г.» and «Почил святой Феодор в глубокой старости, в 368 году», so nothing here is widened."
     }
   }
 }

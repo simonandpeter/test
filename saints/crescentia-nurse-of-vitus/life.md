@@ -1,0 +1,7 @@
+# Crescentia, nurse of Vitus
+
+The Russian calendar names her third of three martyrs it keeps together on this day, and calls her Питательница, the nurse. She was the nurse of [Vitus the Roman](/saints/vitus-the-roman), the boy son of a Sicilian nobleman called Гилас, and she was a Christian, as his tutor [Modestus, tutor of Vitus](/saints/modestus-tutor-of-vitus) was. When the father resolved to kill the boy for his faith, the two of them took him secretly out of the house, found a boat at the river, and were brought — the page says by an angel who went aboard with them — to Lucania in Italy, where the three of them lived hidden from their pursuers.
+
+Her own moment comes at the end of the account. The boy and his tutor were tried before Диоклетиан, shut in prison, hung on stakes and raked with iron claws; and she came out of the crowd of onlookers, confessed herself a Christian and reproached the emperor for his cruelty, and was given the same torture as they. Then the earthquake came that the boy's prayer had asked for: the pagans' buildings fell and killed many of them, and the emperor fled to his palace. An angel took the three down from the stakes and carried them to Lucania, where they gave up their souls gladly, about the year 303.
+
+*After the Православный церковный календарь of the Сретенский monastery for 16 мая ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260516.html) and [the life](https://days.pravoslavie.ru/Life/life1311.htm); read 8 October 2026.*

@@ -11,6 +11,11 @@
       "form": "Λαυρέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαΐου, «Όσιοι Κασσιανός και Λαυρέντιος», with the rank word left off; the page's own head line for him reads «Οσιος Λαυρεντιος (; - 1548)»."
+    },
+    {
+      "form": "Лаврентий Комельский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Преподобный Лаврентий Комельский», with the rank word «Преподобный» left off — it is the `venerable` this folder carries in `types`. The day's own line declines him inside a joint heading, «Прпп. Кассиана (1537) и Лаврентия (1548) Комельских.» `fk.mjs` on «Лаврентий Комельский» returned NONE before the write."
     }
   ],
   "related": [
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Прпп. Кассиана (1537) и Лаврентия (1548) Комельских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: the disciple of Cornelius who was made abbot of Komel, led the brethren into the forests before a Tatar raid, and governed the house ten years after his teacher's death. **`dates` were not touched and the Russian adds the day.** The folder carries 1548 off saint.gr; this page gives «скончался преподобный Лаврентий 16 мая 1548 г.», the same year with the day of this very feast, so the row and the death fall together and nothing was widened. The line is a joint one and its other half is Cassian of Komel, whose own folder took its russian row in the same batch. The day page prints no hymn for either of them. azbyka.ru was not read."
     },
     {
       "church": "romanian",

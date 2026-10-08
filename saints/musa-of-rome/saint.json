@@ -1,0 +1,60 @@
+{
+  "slug": "musa-of-rome",
+  "display_name": "Musa of Rome",
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Муза Римляныня",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Муза Римляныня, отроковица», with the trailing «отроковица» — a girl, a maiden — left off; it is a word for her age and not part of the name, and the calendar gives her no rank word of its own. The day's own line declines her «Блж. отроковицы Музы (V).» `fk.mjs` on «Муза Римляныня» returned NONE before the write, and no folder in the corpus held any form of this name in any language."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Блаженная Муза жила в V веке», and the day line prints «(V)». The page gives no year of birth and no year of death — it says only that she fell ill on the twenty-fifth day after the vision and died on the thirtieth — so the century is recorded as a floruit and nothing is derived from it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Блж. отроковицы Музы (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "The line ranks her «Блж.», which BRIEF-RUSSIAN §6 reads as either fool-for-christ or righteous: nothing on the page makes her a fool for Christ, so `righteous` is what is written and `fool-for-christ` is not. Her life page gives one day only, «16 мая». The day page prints no hymn for her. The account names the pope who told it, his archdeacon and her brother, all three of whom the corpus may hold under other forms; none was made a `related` row, because the page makes them witnesses to the story and not companions in it. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

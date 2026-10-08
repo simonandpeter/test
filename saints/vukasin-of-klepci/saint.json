@@ -11,6 +11,11 @@
       "form": "Vukasin Mandrapa",
       "lang": "ro",
       "note": "The form doxologia.ro's life page uses in its first sentence: «Sfântul Martir Vukasin Mandrapa din Klepci»."
+    },
+    {
+      "form": "Вукашин из Клепца",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Вукашин из Клепца, мч.», with the rank abbreviation left off. The preposition is the calendar's own and is part of the form it prints — from Klepci — and this folder's two Romanian forms, «Vakusin din Klepci» and «Vukasin Mandrapa», give the same place and a surname the Russian does not. The day's own line declines him «Мч. Вукашина (1943) (Серб.).» `fk.mjs` on «Вукашин из Клепца» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -20,18 +25,28 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1941,
-      "latest": 1945,
-      "display": "between 1941 and 1945",
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
       "basis": "traditional",
-      "note": "doxologia.ro's life gives no year of death, only that he was arrested «la începutul celui de-al Doilea Război Mondial» and killed at Jasenovac, and that the camp existed «În timpul domniei lui Ante Pavelic în Croația (1941-1945)». The interval is those years; the page adds that the event was «dezvăluit în 1946»."
+      "note": "days.pravoslavie.ru, 16 мая ст. ст.: «Мч. Вукашина (1943) (Серб.)» — the year is in the calendar's own line, and the line is all that calendar prints of him. It falls inside the interval this folder carried before, which was read off doxologia.ro and is kept here whole: that life gives no year of death, only that he was arrested «la începutul celui de-al Doilea Război Mondial» and killed at Jasenovac, and that the camp existed «În timpul domniei lui Ante Pavelic în Croația (1941-1945)»; the same page adds that the event was «dezvăluit în 1946». A year a calendar prints inside a bracket another book allowed narrows the bracket and contradicts nothing."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Мч. Вукашина (1943) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "The same man, and the Russian calendar keeps him with the bracket «(Серб.)» by which it flags an entry it holds from another local church. **The line is all there is**: the day page hangs no `/Life/` link on it, and the `/name/` link's title is «Вукашин из Клепца, мч.» and no more. **`dates` were narrowed to the year this line gives**, 1943, inside the 1941–1945 the folder carried — the Romanian page gave no year at all, only the span of the Croatian state and of the camp, and a year a calendar prints inside that span contradicts nothing and widens nothing. The old reading is carried forward whole in the new note. The day page prints no hymn for him. azbyka.ru was not read."
     },
     {
       "church": "romanian",

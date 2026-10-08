@@ -12,6 +12,11 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Άγιος Αλέξανδρος Ιερομάρτυρας Αρχιεπίσκοπος Ιεροσολύμων», with the rank and the see left off."
+    },
+    {
+      "form": "Александр Иерусалимский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Святитель Александр Иерусалимский, патриарх, сщмч.», with «Святитель» and the two trailing rank words left off — `hieromartyr` is already in this folder's `types` and the see is in `office`. The calendar's own title calls him patriarch while its day line calls him «еп.», bishop, and the life page is headed «епископ Иерусалимский» and sub-headed «патриарх Иерусалимский»; the folder's existing `archbishop` was left as it stood and neither of the calendar's two words was written into `types`. The day's own line declines him «Сщмч. Александра , еп. Иерусалимского (ок. 213-250).» `fk.mjs` on «Александр Иерусалимский» returned NONE before the write, in a corpus holding some dozens of folders of the bare forename."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Сщмч. Александра , еп. Иерусалимского (ок. 213-250).»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "The same man the folder already keeps: bishop first in Cappadocia, imprisoned under Severus, then co-bishop of Jerusalem with the aged Narcissus, and dead in prison under Decius. **The day is not the day the folder's other venerated row stands on.** The Serbian row is on 12 децембар ст. ст., and this page's own «Дни памяти» line gives both, «16 мая , 12 декабря» — so the two books agree on two days and the Russian keeps him principally on this one. One row per church is the schema, so the December day is recorded here and he does not render on it in this calendar. **`dates` were not touched.** The folder carries a floruit of 203–251 and a death of 251; the day line prints «(ок. 213-250)», which is a bracket on his episcopate and not on his life, and the page says he was chosen co-ruler «в 212 году» and governed the church of Jerusalem thirty-eight years — 212 and 38 reaching 250, which is the day line's second figure. 250 against the folder's 251 is one year inside a persecution both books put at 249 to 251, and nothing was moved. The day page prints no hymn for him. azbyka.ru was not read."
     },
     {
       "church": "romanian",
