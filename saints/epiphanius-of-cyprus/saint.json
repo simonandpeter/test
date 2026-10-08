@@ -16,6 +16,11 @@
       "form": "Епифаније",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 12 May, „Свети Епифаније, епископ кипарски.“ — Свети left off, which is not a rank, and „епископ кипарски“ left off, which is the see this corpus puts in `office` and whose rank this folder already carries in `types`. The heading gives no epithet; the Jewish birth, the sister, Hilarion's monastery, Salamis, Paphnutius, Chrysostom and the Panarion are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Епифаније, so the form folds with nothing."
+    },
+    {
+      "form": "Епифаний Кипрский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 784 as the day page prints it, «Святитель Епифаний Кипрский, епископ», with the rank words left off; his life page is headed «Святитель Епифаний, епископ Кипрский». The day's own line declines him «Свт. Епифания , еп. Кипрского (403).» `fk.mjs` on «Епифаний Кипрский» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -30,29 +35,34 @@
     "callitropos",
     "john-chrysostom",
     "theodosius-the-great",
-    "theotimus-of-tomis"
+    "theotimus-of-tomis",
+    "sabinus-of-cyprus-12-may",
+    "polybius-of-rhinocorura"
   ],
   "dates": {
-    "birth": {
-      "earliest": 310,
-      "latest": 310,
-      "display": "310",
-      "basis": "traditional",
-      "note": "saint.gr, as the folder's own life has it: «saint.gr has him born in 310 to a very poor family of Jewish farmers»."
-    },
     "death": {
       "earliest": 403,
       "latest": 403,
-      "display": "12 May 403",
+      "display": "403",
       "basis": "traditional",
-      "note": "saint.gr, as the folder's own life has it: «He died at sea on 12 May 403, returning from Constantinople to Constantia»."
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 12 May: „Упокоји се свети Епифаније 403. године.“ — and the folder's own Greek attestation note records saint.gr giving the same year, a death at sea on 12 May 403 after thirty-six years in the episcopate, so the two books agree and nothing is widened. **No birth is recorded.** The Prologue gives „Свега је живео на земљи сто петнаест година“, a hundred and fifteen years on earth, consistent with its own sixty years to the episcopate and fifty-five years in it; subtracted from 403 that is a birth of 288, and a lifespan taken off a death is a calculation and not a year any book prints. It also contradicts the 310 that the Greek note records as saint.gr's, which would make him ninety-three. Neither number was turned into a bound. saint.gr's 310 and 367 were not lifted here because that page was not opened by this reader."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Свт. Епифания , еп. Кипрского (403).»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the other three churches, and the same man: the bishop of Salamis in Cyprus who died in 403 and whom the Seventh Council named a father and teacher of the Church. The Russian life page, life1043, heads «День памяти: 12 мая» and lists no other day. The day line calls him «еп.», bishop, where the folder's Romanian and Greek rows make him archbishop; nothing was changed, and the `office` the folder already carried was left as it stood. **The day page's two hymns are headed «святителей Епифания и Германа», for him and for the patriarch of Constantinople together, and both are copied here and on that folder** — the troparion is the common of holy fathers, «Боже отец наших», and the kontakion names the two of them. The line gives 403, which is the year the folder already carries, so `dates` were not touched. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -132,18 +142,41 @@
         "text": "Branch of Phoenicia and prop of the Cypriots, you were shown forth as the president of Constantia, Epiphanius; and for this the king of the Assyrians falls rolling at your feet, the spirit driven out of him by your prayer. Glory to him who made you wonderful, glory to him who gave you to us as an unsleeping advocate.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их/ в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Тропарь святителей Епифания и Германа»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to Thy gentleness, take not Thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Священноначальник чудную двоицу восхвалим, вернии, по долгу,/ с Германом Божественнаго Епифания:/ сии бо попалиша безбожных языки,/ догматы премудрейшия возложше всем,/ православно поющим присно благочестия великое таинство.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Кондак святителей Епифания и Германа»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful praise as we ought the wondrous pair of hierarchs, the divine Epiphanius together with Germanus; for they burned up the tongues of the godless, setting forth most wise doctrines for all who sing ever in the Orthodox manner the great mystery of godliness.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 403,
-      "latest": 403,
-      "display": "403",
-      "basis": "traditional",
-      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 12 May: „Упокоји се свети Епифаније 403. године.“ — and the folder's own Greek attestation note records saint.gr giving the same year, a death at sea on 12 May 403 after thirty-six years in the episcopate, so the two books agree and nothing is widened. **No birth is recorded.** The Prologue gives „Свега је живео на земљи сто петнаест година“, a hundred and fifteen years on earth, consistent with its own sixty years to the episcopate and fifty-five years in it; subtracted from 403 that is a birth of 288, and a lifespan taken off a death is a calculation and not a year any book prints. It also contradicts the 310 that the Greek note records as saint.gr's, which would make him ninety-three. Neither number was turned into a bound. saint.gr's 310 and 367 were not lifted here because that page was not opened by this reader."
-    }
   }
 }

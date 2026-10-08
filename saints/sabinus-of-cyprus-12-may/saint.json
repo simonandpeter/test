@@ -1,0 +1,64 @@
+{
+  "slug": "sabinus-of-cyprus-12-may",
+  "display_name": "Sabinus of Cyprus (12 May)",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop",
+  "names": [
+    {
+      "form": "Савин Кипрский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 1912, «Святитель Савин Кипрский, архиепископ», with the rank words left off. The day's own line declines him «Свтт. Савина , архиеп. Кипрского (V) и прочих свтт. Кипрских.», and his life page heads him «Святитель Савин, епископ Кипрский» — the day line makes him archbishop and the life page bishop, and both readings are in the life. `fk.mjs` on «Савин Кипрский» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 430,
+      "latest": 470,
+      "display": "mid-5th century",
+      "basis": "traditional",
+      "note": "His life page, life1045, closes «Скончался он в преклонных годах в середине V века» — he reposed in advanced years in the middle of the fifth century — and the day line gives him «(V)», the century and nothing narrower. The interval is set as the century's middle on the strength of «в середине», which is the page's own word; no year is anywhere in the notice. No other source was read."
+    }
+  },
+  "related": [
+    "epiphanius-of-cyprus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Свтт. Савина , архиеп. Кипрского (V) и прочих свтт. Кипрских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "note": "**This is not the Sabinus the corpus already keeps, and the check is the whole reason this folder exists.** `saints/sabinus-of-cyprus` carries a venerated russian row on 15 октября ст. ст. off the line «Свт. Савина , еп. Катанского (760)», stores the form «Савин Катанский (Сицилийский)» read off that calendar's own name page 1911, and is dated 760; its own note sets out why the three calendars' Catania and Cyprus were read there as one man. The man on this day is a different one on every count the source gives: the fifth century against 760, archbishop of Cyprus against bishop of Catania in Sicily, a different name page (1912 against 1911), a different day in the Russian calendar, and a life — life1045 — that makes him the disciple and the successor of Епифаний on the Cyprus see, which the 15 октября notice says nothing of. Checked before writing: `ls -d saints/sabin*` and `saints/savin*` returned sixteen folders, of which `sabinus-of-cyprus`, `sabinus-25-october` and `sabinus-of-hermopolis` were read and none is this man; `fk.mjs` on «Савин Кипрский» returned NONE. The slug carries the day because the plain epithet was taken. **The line's second half, «и прочих свтт. Кипрских» — and the other hierarchs of Cyprus — names nobody and is therefore no folder**, per BRIEF.md §4. The day page prints a troparion and a kontakion for Епифаний and Герман together and **nothing under his name**. No `locations` were recorded: his life makes him born in «финикийском городе Ликии», a Phoenician city of Lycia, which is a geography the page states and this reader cannot place. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

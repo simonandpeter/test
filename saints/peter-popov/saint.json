@@ -1,0 +1,61 @@
+{
+  "slug": "peter-popov",
+  "display_name": "Peter (Popov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Попов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9776, «Петр (Попов), иерей, сщмч.», with the rank words left off. The day's own line gives the name without the surname — «Сщмч. Петра , пресвитера (1937).» — and the surname is read off the name page behind it. The parenthesis is the calendar's own. `fk.mjs` on «Петр Попов» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes him with: «Сщмч. Петра , пресвитера (1937).» It is the only year the calendar gives him; there is no life page behind the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Сщмч. Петра , пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "note": "The line is all there is: no life page stands behind it, and name page 9776 is a heading and two days — «Дни памяти: 26 января (Новомуч.) , 12 мая». **The 26 января is the synaxis of the new martyrs and confessors of Russia, which is a company's feast and not this man's own day**, so it is recorded here as a note and the feast is the day page that printed him, per BRIEF.md §8. Checked before writing, because the corpus holds eleven folders whose stored Russian form is the bare «Петр» and ten more of the surname: `grep -l Попов saints/*/saint.json` returns `barlaam-popov`, `eugene-popov`, `john-popov`, `john-popov-26-january`, `michael-popov`, `nicholas-popov`, `palladius-popov`, `procopius-popov` and three folders carrying the word in prose, and not one of them is a Peter; `ls -d saints/peter-pop*` returns nothing; `fk.mjs` on «Петр Попов» returned NONE. `office` is the bare `Priest`, which the locale packs carry; the day line's «пресвитера» and the name page's «иерей» are the same grade in two words. The day page prints hymns for four of the saints it heads and **nothing under his name**. azbyka.ru was not read, and it is the source that would give this folder a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

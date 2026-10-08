@@ -1,0 +1,59 @@
+{
+  "slug": "eudocia-martishkina",
+  "display_name": "Eudocia (Martishkina)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Евдокия (Мартишкина)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 10067, «Евдокия (Мартишкина), мц.», with the rank word left off. The day's own line gives the name without the surname — «Мц. Евдокии (после 1937).» — and the surname is read off the name page behind it. The parenthesis is the calendar's own. `fk.mjs` on «Евдокия Мартишкина» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": null,
+      "display": "after 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(после 1937)» after her name on 12 мая ст. ст. — after 1937, which is a finding and not a year: the calendar is saying that it does not know when she died, only that it was not before that. The upper bound is left open for that reason, which is how `anastasia-lebedeva` and `tatiana-fomicheva` carry the same clause off the same calendar. There is no life page behind the line, and her name page carries three days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 мая ст. ст. — «Мц. Евдокии (после 1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260512.html",
+        "year": 2026
+      },
+      "note": "The line is all there is: no life page stands behind it, and name page 10067 is a heading and three days — «Дни памяти: 26 января (Новомуч.) , 12 мая , 10 июня (Ряз.)». **The 26 января is the synaxis of the new martyrs and confessors of Russia and the 10 июня the synaxis of the saints of Ryazan**; both are companies' feasts and not days of her own, so they are recorded here as a note and the feast is the day page that printed her, per BRIEF.md §8. Checked before writing: `ls -d saints/eudocia*` returns nine folders, of which `eudocia-nun-martyr-1937` (a venerable-martyr on 14 августа, of the company of Vladimir and Nicholas) and `eudocia-arkhipova` (a novice on 1 марта, dead 1938) were read and are other women; `grep -l Мартишкин saints/*/saint.json` returns nothing; `fk.mjs` on «Евдокия Мартишкина» returned NONE. Her grade is «мц.», мученица, a martyr and not a nun, so no monastic type and no `office` were written. The day page prints hymns for four of the saints it heads and **nothing under her name**. azbyka.ru was not read, and it is the source that would give this folder a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
