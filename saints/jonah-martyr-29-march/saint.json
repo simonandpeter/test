@@ -11,6 +11,11 @@
       "form": "Ιωνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιοι Ιωνάς, Βαραχήσιος και οι συν αυτοίς …», with the rank word left off."
+    },
+    {
+      "form": "Иона Персидский",
+      "lang": "ru",
+      "note": "Read out of the calendar's name link for 28 марта ст. ст., which gives «Иона Персидский, мч.»; the rank word is not part of the stored form. The day line itself prints only «Ионы»."
     }
   ],
   "sex": "male",
@@ -39,8 +44,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст. — «Мчч. Ионы и Варахисия и других с ними (ок. 330).»",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

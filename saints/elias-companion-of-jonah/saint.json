@@ -15,8 +15,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The day's line names only the two brothers and then «и других с ними», others with them. The nine are named not in that line but in the life page the line links, which finds in the prison at Варавох «мучеников Занифана, Лазаря, Маруфана, Нарсина, Илию, Марина, Авива, Сивефина и Савву» — the same nine men, in the same order, as the eleven saint.gr prints together on 29 Μαρτίου. This row rests on that reading and not on the day line alone. No `ru` name form is stored for this folder: the life gives the nine in an oblique case, and the calendar’s own nominative, which its `/name/` links carry for the two brothers, exists for none of the nine."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст. — «Мчч. Ионы и Варахисия и других с ними (ок. 330).»",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
