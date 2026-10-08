@@ -12,22 +12,37 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Όσιος Ιωάννης ὁ ἐν Λυκῷ», with the rank word left off."
+    },
+    {
+      "form": "Иоанн Прозорливый Египетский",
+      "lang": "ru",
+      "note": "The title of days.pravoslavie.ru's life page 718 and the heading of its name page 1006, «Иоанн Прозорливый, Египетский, прп.», with the rank word left off and the page's own commas closed up. The calendar gives him no form naming Lycopolis, which is the city both its life and the Greek entry behind this folder put him in."
     }
   ],
   "dates": {
-    "floruit": {
-      "earliest": 301,
-      "latest": 400,
-      "display": "4th century",
-      "basis": "traditional",
-      "note": "saint.gr: «Έζησε κατά τον 4ο αιώνα μ.Χ. και κατοικούσε στα μέρη της Θηβαΐδας κοντά στην πόλη Λυκώ» — the page gives no year."
+    "death": {
+      "earliest": 395,
+      "latest": 395,
+      "display": "395",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru for 27 марта ст. ст.: the day line closes «(394-395)» and the life «Преподобный Иоанн Египетский дожил до глубокой старости и отошел ко Господу в 395 году, в возрасте девяноста лет». It replaces the floruit saint.gr's entry supported — «Έζησε κατά τον 4ο αιώνα μ.Χ. και κατοικούσε στα μέρη της Θηβαΐδας κοντά στην πόλη Λυκώ», a fourth century and no year — and 395 falls inside it. The age of ninety would put his birth about 305; the calendar does not state a year of birth and none is written here."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 марта ст. ст. — «Прп. Иоанна прозорливого, Египетского (394-395)»",
+        "url": "https://days.pravoslavie.ru/Days/20260327.html",
+        "year": 2026
+      },
+      "note": "This row rests on an identification made on the city and not on the day, and it should be read as such. The folder stands on saint.gr's «Ιωάννης ο εν τω Λύκω» of the Greek 6 February, who lived in the fourth century in the parts of the Thebaid near the city of Lyko, surpassed great ascetics and was given the gift of healing by wonder. The Russian entry puts its man in Lycopolis in Middle Egypt — Lyko and Lycopolis being the same city — and then in the Thebaid on the mountain it calls «Волчья гора», the Wolf Mountain, which is that city's own name translated; it gives the same century, the same region, the same manner of life and the same gift of healing, and adds the gift of foresight the Greek entry does not mention. The two were read as one man on that. The days differ, 6 February against 27 March old style, which is the ordinary case between calendars and not thirteen days apart; neither was moved. `dates` was replaced: the Greek page gave only a floruit in the fourth century, and this entry gives the year of death twice over, «(394-395)» on the day line and «отошел ко Господу в 395 году, в возрасте девяноста лет» in the life — the age gives a birth about 305 which the calendar does not state and which was not written. Name page 1006 gives «День памяти: 27 марта» and nothing else. The day page prints no hymn at all. azbyka.ru was not read."
     },
     {
       "church": "romanian",

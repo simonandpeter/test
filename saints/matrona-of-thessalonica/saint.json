@@ -16,6 +16,11 @@
       "form": "Матрона",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 27 March on pravoslavno.rs, „Света мученица Матрона.“, with Света left off, which is not a rank, and with the rank word мученица left off. The heading gives no epithet and no city — Thessalonica is in the body's first sentence — so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Матрона."
+    },
+    {
+      "form": "Матрона Солунская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2614 is «Матрона Солунская (Фессалоникийская), мц.»; the form stored here is the one the day line itself uses, with the rank word left off, and the page's parenthesis is the same city under its other name."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 марта ст. ст. — «Мц. Матроны Солунской (III-IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260327.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the Romanian, Greek and Serbian rows on this folder already keep, and name page 2614 gives «День памяти: 27 марта» and nothing else, so no second day is owed. The calendar dates her «III-IV», the third or fourth century, and carries the fullest life of her this folder has had; it is set down below. The day page prints no troparion or kontakion at all, for her or for anybody on the day. azbyka.ru was not read."
     },
     {
       "church": "romanian",
