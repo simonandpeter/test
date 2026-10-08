@@ -11,6 +11,11 @@
       "form": "Ανυσία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Αγία Ανυσία η Οσιομάρτυς από τη Θεσσαλονίκη», with the rank and the city left off."
+    },
+    {
+      "form": "Анисија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's first heading for 30. децембар ст. ст., „Света мученица Анисија.“ — «Света» is not a rank and «мученица» is the `martyr` the folder already carries, so §6 leaves the bare forename, which is all the heading gives. Measured before it was written: `fk.mjs` returns no other holder of this string or of anything folding to it."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.01.2026 (30. децембар ст. ст.) — „Света мученица Анисија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. The identification is past doubt and is the day, the city and the manner of death together: the Romanian and the Greek already keep her on this same menologion day, and this entry gives the girl born at Thessalonica of notable and wealthy parents who was killed by a soldier's sword under the ribs in Maximian's persecution. The serbian row was `undocumented`, so the row lands here. `dates` UNTOUCHED AND AGREEING EXACTLY: the entry closes «Пострада ова света девица 298. године» and the folder already holds a flat 298 off saint.gr. `types` UNTOUCHED: «мученица» is the `martyr` held and the body's «ова света девица» the `virgin`. NO `locations`: Thessalonica is named, but the folder has none and a reader does not add a coordinate to a saint whose dossier did not ask for one. NO `related`: the soldier is unnamed and the emperor is no folder's subject. WHAT THE BOOK ADDS, all of it new to this folder: that she was orphaned early and gave herself wholly to the thought of God and to prayer in her own house; her own saying about the deceitfulness of youth and her longing for the age that would bring her nearer heaven; that she sold her whole estate and gave it to the destitute and lived by the work of her own hands; the strict fast, the very little sleep and the unceasing tears; and the sentence this folder had nowhere — „Опасно је спавати када непријатељ мој бди“, it is dangerous to sleep when my enemy is awake. It also gives the decree in its sharpest form, THAT ANY MAN MIGHT KILL A CHRISTIAN WHERE HE SAW HIM, WITHOUT TRIAL OR SENTENCE; that the day of her death was a heathen feast of the sun; that she crossed herself and answered the soldier „Слушкиња сам Христова, и идем у цркву“, I am the handmaid of Christ and I am going to church; and that a church was raised over her grave. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

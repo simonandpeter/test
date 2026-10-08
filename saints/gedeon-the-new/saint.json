@@ -6,6 +6,11 @@
       "form": "Γεδεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Άγιος Γεδεών ο Νέος Οσιομάρτυρας», with the rank and the by-name left off. The page also gives his name in the world, «κατά κόσμον ονομαζόταν Νικόλαος», and the Muslim name he was given under duress, Ιμπραήμ; both are recorded in the life and neither is stored as a form of his monastic name."
+    },
+    {
+      "form": "Гедеон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's fifth heading for 30. децембар ст. ст., „Преподобни мученик Гедеон.“ — «Преподобни мученик» is the `venerable-martyr` the folder already carries, and the heading gives no by-name, no see and no place, so §6 leaves the bare forename. Measured before it was written: `fk.mjs` returns no other holder of this string or of anything folding to it."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.01.2026 (30. децембар ст. ст.) — „Преподобни мученик Гедеон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fifth entry. The identification is the Athonite monastery, the denial, the manner of death and the year together: Karakallou, the fingers and toes cut off, the latrine, and 1818, all of which the folder's own life already tells out of saint.gr, and the Greek keeps him on this same menologion day. The serbian row was `undocumented`, so the row lands here. `dates` UNTOUCHED AND AGREEING EXACTLY: the entry gives «1818. године» and the folder holds a flat 1818. `types` UNTOUCHED: «Преподобни мученик» is the `venerable-martyr` held. NO `locations`: SEE THE LIFE — THE TWO BOOKS DISAGREE ABOUT WHERE HE DIED, saint.gr putting it at Tyrnavos in Thessaly and this book «у месту Турнову у Тракији», at a place Turnovo in Thrace, and both readings are now in the life and neither is chosen between. NO `related`: «светом Јакову Персијанцу (в. 27. новембар)» is named only as the likeness of a torture and a comparison is not a companion, so the name stays in the book's own Cyrillic and NO ROW WAS PUT ON `james-the-persian` IN EITHER DIRECTION; the spiritual father who gave him the blessing is unnamed. WHAT THE BOOK ADDS: that he was a Greek by descent and of very poor parents; that he was made a Turk by force in his youth; that he repented and fled to the Holy Mountain and took the monastic habit at Karakallou; that he took his spiritual father's blessing before he went, and that he reviled Mohammed openly before the Turks as a false prophet, which no source this folder had said; that they shaved his head and set him backwards on a donkey and led him through the town, AND THAT HE REJOICED IN THAT MOCKERY FOR CHRIST'S SAKE; and that his wonderworking relics rest in the church of the Holy Apostles in the village of Turnovo with a part of them at Karakallou, where saint.gr had his head in the metropolitan church of Tyrnavos. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
