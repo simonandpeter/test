@@ -6,6 +6,11 @@
       "form": "Dodo",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 mai, «Sfântul Dodo, ucenicul Sfântului David din Gareji, Georgia»."
+    },
+    {
+      "form": "Додо Гареджийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 639 as the day page prints it, «Додо Гареджийский, Грузинский, прп.», with the rank word left off and the first epithet kept; Грузинский, of Georgia, is recorded here beside it. The day's own line declines him «Прп. Додо Давидо-Гареджийского, Грузинского (596).», which compounds the name of the desert with that of its founder. `fk.mjs` on «Додо Гареджийский» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Прп. Додо Давидо-Гареджийского, Грузинского (596).»",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "note": "**The Russian keeps him three days off the Romanian and the row is written on the day page that printed him.** This folder's Romanian row stands on 17 May; the Russian day is the Julian 14 May, which is neither the same number nor thirteen days from it, so BRIEF.md §8's style rule does not reach the difference and nothing was moved — the two churches simply number this day differently, as they do for `isidora-of-tabennisi`. **The year is the first date this folder has carried**: `dates` were null, and the Russian day line closes him with «(596)». **There is no life page behind the line**: name page 639 is a heading and a link to an article on the site, which was not opened, so no life was written from it and the paragraph added here says only what the calendar's own line says. The day page prints hymns for two of the saints it heads and nothing under his name. azbyka.ru was not read, and it is one of the sources that would give this folder a life."
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   },
   "related": [
     "david-of-gareji"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 596,
+      "latest": 596,
+      "display": "596",
+      "basis": "traditional",
+      "note": "The first date this folder has carried: `dates` were null, doxologia.ro's line for 17 mai having given no year. days.pravoslavie.ru closes its line for 14 мая ст. ст. with «(596)» — «Прп. Додо Давидо-Гареджийского, Грузинского (596).» — and that is the only year any calendar read for this folder gives him. There is no life page behind the line to confirm or contradict it, and no birth is anywhere."
+    }
+  }
 }

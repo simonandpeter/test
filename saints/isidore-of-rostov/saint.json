@@ -16,6 +16,11 @@
       "form": "Исидор",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 14 May, „Блажени Исидор Јуродиви, Христа ради.“ — Блажени, Јуродиви and „Христа ради“ all left off, which together are the `fool-for-christ` this folder already carries in `types`: BRIEF-SERBIAN.md §5's table reads Блажени as fool-for-christ or righteous and „Христа ради јуродиви“ as fool-for-christ outright, and the three words here are one formula and not an epithet. **Nothing else is in the heading**: the German birth, Rostov, the hut in the swamp, the merchant, the prince's wine and the 1484 are all in the body, and Rostov, which this folder's display name carries, the Greek page put in its body too and not in its line. **The page's by-name is not stored**: saint.gr gives «Τβερντίσλοβ», Tverdislov, faithful to the Word, which this folder's Greek note already declines to copy as a Slavonic form written in Greek letters — **and the Prologue, which is the Slavonic book, does not print it at all**, so there is still no form of it to copy. **The form folds with `isidore-of-chios`, and the fold is made by this one day**: the Prologue's first entry for the same 14 May is the martyr of Chios, whose heading strips to the same bare Исидор. Recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Исидор Твердислов",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name page 1117, «Исидор Твердислов, Ростовский, Христа ради юродивый», with the rank words left off and the first epithet kept — the by-name Твердислов, which no other calendar in this folder gives him, with Ростовский recorded here beside it. The day's own line declines him «Блж. Исидора Твердислова, Христа ради юродивого, Ростовского, чудотворца (1474).» `fk.mjs` on «Исидор Твердислов» returned NONE before the write."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Блж. Исидора Твердислова, Христа ради юродивого, Ростовского, чудотворца (1474).»",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek and the Serbian, and the same man: the fool for Christ and wonderworker of Rostov. The Russian adds the by-name **Твердислов** the folder did not hold, and the day line gives 1474, which is one of the two years the folder already carries. **There is no life page behind the line** — name page 1117 is a heading, two days and a link to a magazine article on the site which was not opened — so the paragraph added here says what the calendar says and no more. **Five hymns were copied**, all of them headed «блаженного Исидора, Христа ради юродивого»: three troparia, in the fourth, the fourth and the first tone, and two kontakia, in the eighth and the fourth; the calendar keeps two Isidores on this day and its own service line distinguishes them, «14 мая: Мученика Исидора Хиосского. Блаженного Исидора Ростовского», so the two sets of hymns are not a mis-hang but two services on one page. **`dates` were not touched**: the folder carries «1474 or 1484» off two books ten years apart and the Russian day line gives the earlier of the two, which widens nothing. Name page 1117 also lists «23 мая (Ростов.)», the synaxis of the saints of Rostov, which is a company's feast and not a second day of his own (BRIEF.md §8). azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -74,5 +89,87 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Просветився Божественною благодатию, Богомудре,/ целомудрием многим и терпением/ во временней жизни течение добре скончал еси./ Тем и по смерти яви тя светлость жития твоего:/ источавши бо исцелений благодать/ иже с верою притекающим ко святому твоему гробу,/ Исидоре блаженне,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Тропарь блаженного Исидора, Христа ради юродивого»",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine grace, O God-wise one, thou didst finish well the course of this temporal life in much chastity and patience. Therefore after thy death also the brightness of thy living has shown thee forth, for thou pourest out the grace of healings upon those who come with faith to thy holy tomb. O blessed Isidore, pray to Christ God that He save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От земли Воззвавый тя на вечныя обители,/ соблюдает и по смерти тело твое невредимо,/ святе Исидоре,/ ты бо в целомудрии и чистоте жития пожил еси, блаженне,/ не осквернив своего телесе,/ темже со дерзновением Христа Бога моли/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Ин тропарь блаженного Исидора, Христа ради юродивого», the second troparion the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who called thee from the earth to the eternal mansions keeps thy body unharmed after death also, O holy Isidore; for thou didst live, O blessed one, in chastity and purity of life and didst not defile thy body. Therefore with boldness pray to Christ God for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественною свыше просветився благодатию, Богомудре,/ многим терпением во временней жизни течение совершил еси,/ темже и по успении источавши чудеса/ иже с верою приходящим к раце мощей твоих, Исидоре всеблаженне./ Слава Давшему ти крепость,/ слава Прославльшему тя в чудесех,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Ин тропарь блаженного Исидора, Христа ради юродивого», the third troparion the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened from on high by divine grace, O God-wise one, thou didst accomplish the course of this temporal life in much patience; and so after thy falling asleep thou pourest out wonders upon those who come with faith to the shrine of thy relics, O all-blessed Isidore. Glory to Him who gave thee strength, glory to Him who glorified thee in wonders, glory to Him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Взбранному и дивному в праведницех,/ иже убо от Христа дар чудес приимшему,/ похвальный ныне принесем глаголы,/ но яко имея дерзновение ко Святей Троице,/ Юже моли избавитися от бед рабом твоим, да зовем ти:/ радуйся, Богомудре Исидоре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Кондак блаженного Исидора, Христа ради юродивого»",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To the champion, wondrous among the righteous, who received from Christ the gift of wonders, let us now bring words of praise; and since thou hast boldness before the Holy Trinity, pray to It that thy servants be delivered from troubles, that we may cry to thee: Rejoice, O God-wise Isidore.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Верою память твою, блаженне, совершающий,/ соблюдай от всякия злобы и соблазна змиина,/ имаши бо дерзновение ко всех Владыце, Христу Богу,/ Егоже моли избавитися от бед и напастей рабом твоим,/ Богомудре Исидоре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 мая ст. ст. — «Ин кондак блаженного Исидора, Христа ради юродивого», the second kontakion the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260514.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keep those who with faith observe thy memory, O blessed one, from all malice and from the serpent's snare; for thou hast boldness before the Master of all, Christ God. Pray to Him that thy servants be delivered from troubles and from temptations, O God-wise Isidore.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
