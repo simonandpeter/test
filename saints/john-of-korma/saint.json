@@ -1,0 +1,60 @@
+{
+  "slug": "john-of-korma",
+  "display_name": "John of Korma",
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Иоанн Кормянский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/14952.html` link carries in its `title` and as the heading of that page, «Святой праведный Иоанн Кормянский», with «Святой» and the rank word «праведный» left off — the latter is the `righteous` this folder carries in `types`. The calendar gives him no surname anywhere, and none was supplied from memory. The day's own line declines him «Прав. Иоанна Кормянского (1917).» `fk.mjs` on «Иоанн Кормянский» returned NONE before the write, in a corpus holding a great many folders of the bare forename."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1917,
+      "latest": 1917,
+      "display": "1917",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of its line for 18 мая ст. ст.: «Прав. Иоанна Кормянского (1917).» His name page gives no year at all and no year of birth, and none was reckoned from anything."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Прав. Иоанна Кормянского (1917).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "There is no life page behind the line — the day page hangs no `/Life/` link on it — but his name page, 14952, carries a paragraph of its own, which is unusual for this calendar and is the whole of what is written here. It lists one day only, 18 мая. The line's rank is «Прав.», which BRIEF-RUSSIAN §6 reads as `righteous`, and the name page repeats it; he is given no clerical grade there, so none was written, and the calendar supplies no surname, no see and no place beyond the epithet Кормянский. azbyka.ru was not read, and it is the source that would give him a biography."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 31 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 31 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

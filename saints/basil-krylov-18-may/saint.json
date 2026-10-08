@@ -1,0 +1,62 @@
+{
+  "slug": "basil-krylov-18-may",
+  "display_name": "Basil (Krylov, 18 May)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Крылов)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/13718.html` link carries in its `title` and as the heading of that page, «Василий (Крылов), иерей, сщмч.», with the two trailing rank words left off. The day's own line gives only «Сщмч. Василия пресвитера (1942).» **THE FOLD IS DELIBERATE AND IT IS NEW.** `fk.mjs` on this form returns one holder, `basil-krylov`, which stores the identical string off name page 9497 for 6 ноября; writing it here makes a fold of two, and the key «василии крылов» was added to `corpus-gate.mjs`'s `READ_FOLDS` in the same commit with both slugs and the reading that tells them apart. The string is identical because the calendar prints it identically on two of its own pages; see this folder's russian row for the four things that differ."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of its line for 18 мая ст. ст.: «Сщмч. Василия пресвитера (1942).» Name page 13718 gives no year at all and no year of birth. The corpus's other `basil-krylov`, off name page 9497 for 6 ноября, carries 1938 from that line in the same way; the two years are four apart and are the two pages' own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Сщмч. Василия пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "**This is the weakest folder of the day and the reason is stated here in full, on the `basil-sokolov-13-may` precedent.** days.pravoslavie.ru keeps TWO name pages headed «Василий (Крылов), иерей, сщмч.» — 13718, on 18 мая, with the year 1942, and 9497, on 6 ноября, with the year 1938, which is the corpus's existing `basil-krylov`. Both were fetched and read side by side, and the four things that differ are: the id, the day, the year, and nothing else. Both carry the same heading, the same grade, the same «26 января (Новомуч.)» synaxis beside their own day, and not one sentence of narrative between them; 13718 links a site article, «Новомученики земли Щелковской», which was not opened, because an essay on this site is not the calendar's own life page. **A calendar that prints a man on two days usually prints him once with two days in the «Дни памяти» line, as it does for most saints in this corpus; here it prints two pages, each listing one proper day.** That is the ground for two folders and it is the whole of it. If the author reads 13718 and 9497 as one man, the answer is one row with a second-day note and this folder comes out — and the fold key added in this commit then comes out with it. azbyka.ru was not read and is the source that would settle it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 31 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 31 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

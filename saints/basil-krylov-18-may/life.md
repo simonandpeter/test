@@ -1,0 +1,9 @@
+# Basil (Krylov, 18 May)
+
+The Russian calendar names him and nothing more. Its line for 18 мая ст. ст. reads «Сщмч. Василия пресвитера (1942)» — the hieromartyr Basil the presbyter, with the year — and the name link behind it supplies the surname the line omits, «Василий (Крылов), иерей, сщмч.» That page, 13718, carries a heading, two days, and a link to an article on the site about the new martyrs of the Shchelkovo country, which was not opened here. It gives no birthplace, no year of birth, no parish and no account of his arrest or his death. The first of its two days, 26 января, is the synaxis of the new martyrs and confessors of Russia, a company's feast and not a day of his own.
+
+The calendar prints a second page with the same heading and the same grade: 9497, which keeps a priest of this name and surname on 6 ноября and gives the year 1938. That page is the one the corpus's existing folder of this name was made from, and it is as bare as this one. Both were read side by side here. They differ in their id, in their proper day and in their year by four, and in nothing else whatever; neither names a place, a parish or a relative, and neither lists the other's day.
+
+That is the ground on which this folder stands, and it is a thin one. A calendar that keeps one man on two days ordinarily prints him once and lists both days together, which is what it does for most of the saints this corpus holds from it. Here it prints two pages, each with one proper day, which is how it treats two men. If a fuller source shows them to be one, this folder is the one that should go.
+
+*After the Православный церковный календарь of the Сретенский monastery for 18 мая ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260518.html) and [his name page](https://days.pravoslavie.ru/name/13718.html), which carries no life; read 8 October 2026.*
