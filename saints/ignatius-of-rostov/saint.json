@@ -18,6 +18,11 @@
       "form": "Игњатије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 28. мај ст. ст., „Свети Игњатије епископ ростовски“ — Свети is not a rank, епископ is the `bishop` this corpus puts in `types` and the `Bishop` in `office`, and „ростовски“ is the see, which `office` and the display name both carry. Strip them and the bare personal name is left. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Игњатије», so this is the first folder to hold it, although the corpus keeps a long column of Ignatii, none of them with an `sr` form. **Note the Serbian spelling**: «Игњатије» with the њ, where the Russian calendar writes «Игнатий» — the same name and not the same string, as with «Маркијан» against «Маркиан» on 25 May. The Greek form on this folder, «Ιγνάτιος», is the same bare name."
+    },
+    {
+      "form": "Игнатий Ростовский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 905, «Святитель Игнатий Ростовский, епископ», with the rank word before the name and the office after it left off; the day’s own line gives the see in the genitive. `fk.mjs` returned NONE for «игнатии ростовскии» before the write, and the bare «Игнатий» was deliberately not stored, this corpus holding a great many of that name and this branch having written an `ignatius-markov` on this very day."
     }
   ],
   "dates": {
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Свт. Игнатия , еп. Ростовского (1288).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the see this folder’s office already names and the year 1288 its `dates` already hold, and its Greek and Serbian rows keep him on the same Julian day. `dates` is unchanged. THE CALENDAR GIVES HIM NO LIFE PAGE AT ALL: his line carries a link to his name, 905, and none to a reading, and his whole content here is the two hymns the day page prints under his own name. HE IS THE THIRD OF THE THREE ROSTOV HIERARCHS this calendar sings together, and the day page prints FOUR company hymns beside his two: «Тропарь святителей Ростовских Леонтия, Исаии, Игнатия» (глас 4) and its «Кондак» (глас 8), which name the three, and «Тропарь святителям Ростовским» (глас 4) and its «Кондак» (глас 4), the first of which names six. NONE OF THE FOUR WAS COPIED, on the ruling the 15 May reader stated and queued: a hymn addressed to three saints or to six, sitting in one folder, tells the reader that the Church sings it to him. The 15 May page prints the same four under `isaiah-of-rostov` and they were refused there too. The third of the three, Leontius of Rostov, HAS NO FOLDER IN THIS CORPUS AT ALL, which is this branch’s 23 May finding. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -73,5 +88,38 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Благоверия просвещся учении,/ святительства прием паству/ и апостолов наследник быв,/ тем приял еси от Бога дар чудес, святителю отче Игнатие,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст., «Тропарь святителя Игнатия, епископа Ростовского», глас 4 — proper to him, under his own name and his own see, as against the four company hymns the same page prints",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being enlightened by the teachings of right belief, thou didst receive a flock in the office of a hierarch and wast made an heir of the apostles; and thereby thou didst receive from God the gift of wonders, O hierarch and father Ignatius. Pray thou to Christ God, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Явися днесь пресветлая память твоя,/ святителю преблаженне Игнатие,/ в мире светло сияющи и являющи всем Божественное сияние.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст., «Кондак святителя Игнатия, епископа Ростовского» — proper to him, under his own name and his own see. THE PAGE PRINTS NO TONE FOR THIS ONE, alone of the day's thirteen hymn blocks, so none is recorded here",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today thy most radiant memory has appeared, O most blessed hierarch Ignatius, shining brightly in the world and showing forth to all the divine radiance.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

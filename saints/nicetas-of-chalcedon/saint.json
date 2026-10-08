@@ -17,6 +17,11 @@
       "form": "Никита",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 28. мај ст. ст., „Свети Никита исповедник, епископ халкидонски“ — Свети is not a rank, исповедник is the `confessor` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „халкидонски“ the see, which the display name carries. Strip all four and the bare personal name is what is left. **THIS IS A FIFTH HOLDER, ENTERED ON PURPOSE AND MEASURED**: `foldchk.py` returns `nicetas-of-epirus`, `nicetas-of-medikion`, `nicetas-the-chartularius` and `nicetas-the-goth` for «Никита». **There is no fuller form to prefer**, the heading printing nothing between the name and the rank words — unlike `nicetas-the-stylite-of-pereslavl` four days earlier in this same wave, whose heading gave „Никита Столпник“ and which therefore raised no fold at all. The two cases together are the rule: the form is as full as the heading, never fuller."
+    },
+    {
+      "form": "Никита Халкидонский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1619, «Святитель Никита Халкидонский, епископ, исповедник», with the rank word before the name and the two after it left off; the day’s own line gives the see in the genitive, «Никиты исп., еп. Халкидонского». `fk.mjs` returned NONE for «никита халкидонскии» before the write, and the bare «Никита» was deliberately not stored — this folder already holds that identical bare string as its SERBIAN form, and four other folders hold it besides."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Прп. Никиты исп., еп. Халкидонского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the see and the grade «исп.» this folder already holds, and its Romanian, Greek and Serbian rows keep him on the same Julian day. `dates` WAS WRITTEN WHERE THERE WAS NONE and it is an interval and not a year: the folder had no `dates` object, the line prints «(IX)», and the life says he «жил во 2-й половине VIII века» and «скончался в начале IX века» — lived in the second half of the eighth century and died at the beginning of the ninth. The interval written is 801 to 825, the beginning of the ninth century, which is what the page states for the death, and the reign of Leo the Armenian it names, «(813 - 820)», falls inside it. NO BIRTH WAS WRITTEN. What the Russian adds and the paragraph carries: the mercy and the almsgiving, the strangers taken into his house, the care of orphans and widows and the standing up for the wronged, the open rebuking of the iconoclast heresy under Leo the Armenian and the urging of his flock to venerate the icons of Christ, of the Mother of God and of the saints, the sufferings, the torments and the exile, the healings at his relics, AND A BROTHER THE CALENDAR NAMES: «В каноне службы ему, написанном Константинопольским пресвитером Иосифом, прославляется также брат святителя Никиты - святой Игнатий» — the canon of his service, written by the Constantinopolitan presbyter Иосиф, glorifies also his brother, St Ignatius. NO `related` ROW WAS WRITTEN FOR THAT BROTHER: the calendar gives him no day, no see and no epithet, and this corpus holds a great many men of that name, so there is nobody to link to without guessing which. It is reported to the author. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -91,9 +106,50 @@
         "text": "A rule of faith and an image of meekness, a teacher of abstinence: so did the truth of things show thee to thy flock. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Nicetas, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему,/ Яже вещей истина./ Сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче Никито,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст., «Тропарь преподобного Никиты исповедника епископа Халкидонского», глас 4 — the common of a hierarch with his name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore hast thou gained the heights by humility and riches by poverty, O father Nicetas. Pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Светлостию дел твоих просиял еси, преподобне,/ апостольскаго престола наследник был еси, Никите,/ и, яко солнце, облистал еси твоей пастве, отче,/ вся Божественных учений исполнь./ Темже зовем ти:/ радуйся, Халкидону удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст., «Кондак преподобного Никиты исповедника епископа Халкидонского», глас 8 — proper to him, and it names him and his see",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst shine with the brightness of thy deeds, O venerable one, and wast an heir of the apostolic throne, O Nicetas; and as a sun thou didst give light to thy flock, O father, being filled with all divine teachings. Therefore do we cry to thee: Rejoice, O adornment of Chalcedon.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 825,
+      "display": "early 9th century",
+      "basis": "traditional",
+      "note": "The folder had no `dates` object at all. The Russian day line prints «(IX)» and its life says «Святой исповедник Никита скончался в начале IX века», that he died at the beginning of the ninth century; the same page sets his life «во 2-й половине VIII века» and names the reign of the iconoclast Leo the Armenian, «(813 - 820)», which falls inside the interval written. No year of birth appears and none was inferred."
+    }
   }
 }

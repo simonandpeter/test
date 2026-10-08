@@ -16,6 +16,11 @@
       "form": "Еликонида",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 28. мај ст. ст., „Света мученица Еликонида“ — Света is not a rank and мученица is the `martyr` this corpus puts in `types`; the bare personal name is what is left. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Еликонида», so this is the first folder to hold it and the corpus keeps no other woman of the name. **The body spells it once «Елконида**, without the и, in „уздиже Елконида руке своје“ — **that shorter spelling is not stored**: one `sr` form per folder, the fullest, and the heading’s form is the fuller and the one the entry uses everywhere else. It is named here so a later reader who meets «Елконида» knows which folder holds it. The Greek form, «Ελικωνίδα», and the Romanian «Eliconida» are the same name."
+    },
+    {
+      "form": "Еликонида Солунская (Фессалоникийская), Коринфская",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2496, «Еликонида Солунская (Фессалоникийская), Коринфская, мц.», with the rank abbreviation left off. All three epithets are the calendar’s own, in the calendar’s own punctuation: the parenthesis is its second name for Thessalonica, and the third epithet is Corinth, where its life has her suffer. The day’s own line gives the bare «Еликониды». `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Мц. Еликониды (244).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the year this folder’s interval closes at, and its Romanian, Greek and Serbian rows keep her on the same Julian day. `dates` IS UNCHANGED AND WAS NOT NARROWED: the folder holds «mid 3rd century», 238 to 244, and both the Russian day line and its life close on 244 — «Кончина ее последовала в 244 году» — which is the interval’s own upper bound. A calendar agreeing with one end of a bracket is not an argument for discarding the other end, and this is the same decision made for `paisius-of-galich` on 23 May. The life page lists no day but this one. What the Russian adds and the paragraph carries: Thessalonica and the journey to Corinth, the governor Периний, the burning furnace she came out of unhurt because an angel of the Lord cooled the heat, the skin flayed from her head and the burning of her head and breast, the feigned consent and the offer of a priestess’s rank, the trumpets and kettledrums that led her to the temple and her asking to be left alone there, the idols she threw down and broke, the priests’ fury and the cry «Предать волшебницу смерти!», the five days in prison and the appearing of Christ with the archangels Michael and Gabriel who healed her wounds, the three hungry lions that licked her feet and then leapt off the arena at the crowd, and the beheading, at which she heard a Voice calling her to the mansions of heaven. azbyka.ru was not read."
     },
     {
       "church": "romanian",

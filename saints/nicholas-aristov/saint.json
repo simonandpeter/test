@@ -1,0 +1,62 @@
+{
+  "slug": "nicholas-aristov",
+  "display_name": "Nicholas (Aristov)",
+  "names": [
+    {
+      "form": "Николай (Аристов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14265, «Николай (Аристов), диакон, сщмч.», with the rank words after the comma left off. The day’s own line gives the name without the surname — «Прмч. Макария , Дионисия , сщмч. Николая диакона, мчч. Игнатия и Петра (1931).» — so the surname is read from the name link, which is where this calendar keeps it. Measured against the gate’s own key function before the write: `fk.mjs` returns no holder for this form and none for the display name. THE BARE FORENAME WAS DELIBERATELY NOT STORED, this corpus holding many of that name and a bare form on a twentieth-century martyr being the fold failure BRIEF-ADDENDUM §2 describes. `ananias-aristov` carries the same surname and is a different man: a different forename, a different grade and nothing read linking them."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "The year the day line prints: «Прмч. Макария , Дионисия , сщмч. Николая диакона, мчч. Игнатия и Петра (1931).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Прмч. Макария , Дионисия , сщмч. Николая диакона, мчч. Игнатия и Петра (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry, and third of the five people that one line names. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14265, prints the title «Николай (Аристов), диакон, сщмч.» and the line «Дни памяти: 26 января (Новомуч.) , 28 мая» and nothing else at all. What it gives that the day line does not is the surname and the degree. `new-martyr` WAS WRITTEN AND THE GROUND IS READ: this calendar marks its own twentieth-century martyrs by giving them the general commemoration of the new martyrs and confessors of Russia on 26 января, and his page carries that day beside his own. That second day is the synaxis and not a feast of his own, so one row per church stands and he does not render on it. NO `related` ROW WAS WRITTEN FOR ANY OF THE FIVE, and the reason is stated rather than assumed: the line groups them and gives them one year, and that is ALL it gives. It has no «и с ним» and no head, as the Belgorod company of 19 мая had, and no page read says that any two of them knew each other, lived in one house or died in one place. A shared year is not a relation and neither is a shared line. The company is reported to the author, who may link them in one pass. The day page prints thirteen hymns — four for the Rostov hierarchs as a company, two for Ignatius of Rostov under his own name, two for Nicetas of Chalcedon, two for Gerontius of Moscow and two for the Nicene icon — and none under his name. azbyka.ru was not read, and it is the source that would give him a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 10 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 June 2026, the civil day of this Julian 28 May (8 October 2026)."
+    }
+  ],
+  "office": "Deacon",
+  "text": {
+    "life": "life.md"
+  }
+}
