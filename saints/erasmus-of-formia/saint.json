@@ -1,0 +1,62 @@
+{
+  "slug": "erasmus-of-formia",
+  "display_name": "Erasmus of Formia",
+  "names": [
+    {
+      "form": "Еразм Формийский (Кампанийский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name link for 4 мая ст. ст., «Святитель Еразм Формийский (Кампанийский), епископ, исповедник», with the rank words and the rank in the hierarchy left off. The day’s own line declines him «Сщмч. Еразма , еп. Формийского (303)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, life991: «Там святой и скончался в 303 году», which is also the year the day line closes him with."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст. — «Сщмч. Еразма , еп. Формийского (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "note": "The source calls him three things and they are not all the same thing, so all three are written and the disagreement is recorded rather than resolved. The day line gives «Сщмч.», a hieromartyr; the name link gives «епископ, исповедник», a bishop and a confessor; the life page is titled «Святой Еразм исповедник, епископ Формийский» and then closes «Христиане с честью погребли останки святого священномученика», calling him a hieromartyr at the end. The life has him die in his own see after the angel had freed him, not under sentence, which is why the confessor's title is there at all. `office` reduces «епископ» to `Bishop`, the word the four locale packs hold, and the see is in the display name and in the life. He is not `erasmus-of-the-caves`, `erasmus-the-venerable` or `erasmus-10-may`: the checks were `ls -d saints/erasmus*`, a Latin-stem grep for `formia`, and fk.mjs on both the stored Russian form and the display name, neither of which has another holder. azbyka.ru was not read, and no day page of any other calendar was."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

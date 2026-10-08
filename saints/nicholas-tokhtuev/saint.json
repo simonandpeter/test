@@ -1,0 +1,63 @@
+{
+  "slug": "nicholas-tokhtuev",
+  "display_name": "Nicholas (Tokhtuev)",
+  "names": [
+    {
+      "form": "Николай (Тохтуев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14254, «Николай (Тохтуев), протодиакон, сщмч.», with the rank in the clergy and the rank word left off. The day’s own line declines the forename and prints no surname at all, «Сщмч. Николая диакона (1943)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Deacon",
+  "types": [
+    "hieromartyr",
+    "deacon",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Сщмч. Николая диакона (1943)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст. — «Сщмч. Николая диакона (1943).»",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "note": "The calendar gives him no life page, and his folder holds the line, the surname off name page 14254 and the year. That name page does carry one thing more than the usual bare entry — a link to an article on Православие.Ru, «Мы живем на костях», whose standfirst says that he joins the settlement of Кожва in the Печора district of Komi, where a church is being built, with Королев near Moscow and with Кыласово in the Perm region. THAT ARTICLE WAS NOT READ, and nothing from its standfirst is recorded as a fact about him: a strapline naming three places is not a statement that he lived or died in any of them. It is the first thing a reader who comes to enrich this folder should open. Both pages agree about his grade — the line says «Сщмч.» and «диакона», the name page «протодиакон, сщмч.» — so `hieromartyr` and `deacon` are both written, with `office` reduced to `Deacon`, the word the four locale packs hold; `new-martyr` stands on the «26 января (Новомуч.)». No other folder stores «Тохтуев»: the checks were a Latin-stem grep for `tokhtuev`, a grep for the Cyrillic surname, and fk.mjs on the stored form and the display name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "john-vasilyev-4-may",
+  "display_name": "John (Vasilyev) (4 May)",
+  "names": [
+    {
+      "form": "Иоанн (Васильев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14253, «Иоанн (Васильев), иерей, сщмч.», with the rank in the clergy and the rank word left off. The day’s own line declines the forename and prints no surname at all, «Сщмч. Иоанна пресвитера (1942)». The corpus already stores this exact string on two other folders, and the fold is read in the gate’s READ_FOLDS entry for the form."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Сщмч. Иоанна пресвитера (1942)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст. — «Сщмч. Иоанна пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page, none on name page 14253, and no place, no diocese, no arrest and no manner of death. Both pages say priest and hieromartyr, so `hieromartyr` and `presbyter` are written, with `office` reduced to `Priest`, the word the four locale packs hold; `new-martyr` stands on the «26 января (Новомуч.)» of the name page. He is the THIRD folder of this exact Russian name string and the reading that keeps the three apart is the gate’s READ_FOLDS entry for «васильев иоанн», rewritten in the same commit as this folder. In short: `john-vasilyev` is the archpriest born 18 June 1876 at Малая Киселенка and shot on 1 October 1937, kept on 18 сентября ст. ст.; `john-vasilyev-23-november` is Иван Сергеевич Васильев, born 1869 at Мартьяново, a church warden and a layman, dead in exile in Kazakhstan on 6 December 1932 and kept on 23 ноября ст. ст. as a confessor; this man is a priest of 1942 on a third day, ten years and five years later than the other two and of a different grade from the layman. Three name pages, three days, three years. azbyka.ru was not read for him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

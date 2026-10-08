@@ -1,0 +1,61 @@
+{
+  "slug": "alvianus-of-aneia",
+  "display_name": "Alvianus of Aneia",
+  "names": [
+    {
+      "form": "Альвиан Анейский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name link for 4 мая ст. ст., «Святитель Альвиан, епископ Анейский, сщмч.», with the rank words and the rank in the hierarchy left off and the comma closed up, because the epithet and the name are one form. The day’s own line declines him «Сщмч. Альвиана , еп. Анейского, и учеников его (304)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "about 304",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, life992: «пострадал за Христа около 304 года в гонение на христиан императоров Диоклетиана и соправителя его – Максимиана». The «около», about, is why the display says about 304; the day line closes him «(304)» flat."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 мая ст. ст. — «Сщмч. Альвиана , еп. Анейского, и учеников его (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260504.html",
+        "year": 2026
+      },
+      "note": "The day line says «и учеников его», and his disciples, in the plural; the life says «Вместе с ним мучили и его ученика», in the singular, and names nobody. The companions are therefore not folders — there is no list to count and no name to write — and the number is left as the two halves of the source give it, which is a disagreement and not a reading. Only one folder was made from this line. He is not `peter-of-aneia`, the only other folder whose epithet names that city: the checks were a Latin-stem grep for `alvian`, `albian` and `aneia`, `ls -d saints/alvian* saints/albian*`, and fk.mjs on the stored Russian form and on the display name, neither of which has another holder. azbyka.ru was not read, and no day page of any other calendar was."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
