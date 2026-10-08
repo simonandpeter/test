@@ -1,0 +1,64 @@
+{
+  "slug": "marcellinus-of-spain",
+  "display_name": "Marcellinus of Spain",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Маркеллин Испанский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1475 gives it, «Маркеллин Испанский», with the rank and the grade taken off; the day line declines the forename and prints no epithet, so the toponymic is read off the name page. Measured with the gate's own fold before it was written: 'испанскии маркеллин' has no holder in the corpus."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 81,
+      "latest": 96,
+      "display": "81 to 96",
+      "basis": "traditional",
+      "note": "The line gives the whole company of five one bracket, «(ок. 81-96)», and `life1220` says why those are the years: «римский император Домициан (81 - 96) воздвиг второе (после Нерона, 54 - 68) гонение на христиан». The interval is a reign and not a date, and the source gives no year within it; it is recorded as the interval the source prints and nothing narrower."
+    }
+  },
+  "related": [
+    "lucian-of-belgium",
+    "maxian-of-belgium",
+    "julian-of-belgium",
+    "saturninus-of-gaul"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июня ст. ст. — «Сщмчч. Лукиана еп., Максиана пресвитера, Иулиана диакона, Маркеллина и Сатурнина в Бельгии (ок. 81-96).»",
+        "url": "https://days.pravoslavie.ru/Days/20260603.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of six, «Сщмчч. Лукиана еп., Максиана пресвитера, Иулиана диакона, Маркеллина и Сатурнина в Бельгии (ок. 81-96).», one line naming FIVE men and giving them one bracket. Five `name:` links stand under it, one for each, and not one of the five had a folder in this corpus: `ls -d saints/lucian*`, `saints/maxian*`, `saints/julian*`, `saints/marcellin*` and `saints/saturnin*` were all run first, and the six Lucians, two Maximians, nine Saturninuses and three Marcellinuses the corpus holds are all other men on other days. `life1220`, titled for the bishop alone, is the one reading for all five and was read whole. azbyka.ru was not read, and the «26 января» kind of second day does not arise here — each of the five name pages lists «День памяти: 3 июня» and nothing else. The day page prints four hymns, two for the tsarevich Dimitri and two for the Yug icon, and none under any of these five names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

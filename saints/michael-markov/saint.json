@@ -1,0 +1,61 @@
+{
+  "slug": "michael-markov",
+  "display_name": "Michael (Markov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Михаил (Марков)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 14269 gives it, «Михаил (Марков), иерей, сщмч.», with the grade and the rank taken off. The day line prints the bare forename «Михаила» in the genitive and no surname, so the surname is read off the name link; it stays in the parentheses the calendar itself prints. Measured with the gate's own fold before writing: 'марков михаил' has no holder, and `ls -d saints/*markov*` returned nothing."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year the day line gives him: «Сщмч. Михаила пресвитера (1938).» It is the only year on either page; the name page gives no year of birth and no date within the year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июня ст. ст. — «Сщмч. Михаила пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260603.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of six, and a line and a name page and nothing else: «Сщмч. Михаила пресвитера (1938).». Name page 14269 heads him «Михаил (Марков), иерей, сщмч.» and lists «26 января (Новомуч.) , 3 июня»; it carries no life, no icon, no place, no diocese and no year of birth, and there is no /Life/ page for him on the site. Иерей is the `Priest` the locale packs carry, so that is the `office`. `ls -d saints/*markov*` and a Cyrillic `grep -rl` for «Марков» returned nothing. «26 января (Новомуч.)» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
