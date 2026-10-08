@@ -8,4 +8,8 @@ Diocletian ordered their deaths. Codratus they beheaded; Apollos, with the other
 
 The page gives Apollos nothing of his own: no country, no parentage, no age, no office in the palace beyond the word servant, and no relic. Its couplets take the three in two groups — that two athletes, bearing the noose of famine, escape the demon's noose that kills souls; and that Codratus, cut down, seasons the broths of his own pot with the salt of his blood — and it prints no hymn.
 
-*After saint.gr's calendar for 21 Απριλίου — [the day](https://www.saint.gr/04/21/index.aspx) and [the life](https://www.saint.gr/320/saint.aspx); read 30 September 2026.*
+The Russian calendar says what the three were before and parts their deaths. They were pagans serving at the court of the emperor Diocletian (284–305), and were among the onlookers at the sufferings of the great-martyr [George](/saints/george-the-trophy-bearer), whose day the page gives as 23 апреля; his faith, his courage and his wonders woke faith in Christ in them, and they declared themselves Christians before all the people and reproached the emperor for his impiety and his cruelty. They were condemned to death.
+
+The manner of it differed. [Codratus](/saints/codratus-companion-of-alexandra) was cut down with the sword, and Apollos with [Isaacius](/saints/isaacius-companion-of-alexandra) was starved to death. The name page behind his forename gives him the city the line leaves out, Nicomedia, where Diocletian’s court was.
+
+*After saint.gr's calendar for 21 Απριλίου — [the day](https://www.saint.gr/04/21/index.aspx) and [the life](https://www.saint.gr/320/saint.aspx); read 30 September 2026; and after the Православный церковный календарь of the Сретенский monastery for 21 апреля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260421.html) and [the shared life](https://days.pravoslavie.ru/Life/life910.htm), read 8 October 2026.*

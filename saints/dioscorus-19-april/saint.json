@@ -15,6 +15,11 @@
       "form": "Диоскор",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's entry for 21. април ст. ст., „да баци жреца Диоскора“ — **out of the entry's body and not out of its heading**, which names Theodore alone. The entry prints the name in the accusative there and nowhere in the nominative, so the form stored is that accusative read back into the nominative: a reading of the source's own word and not a transliteration, and flagged as a reading in the batch's commit message. The rank or kinship word beside it is left off, and the companionship clause this corpus keeps in the English display name is not part of the source's name."
+    },
+    {
+      "form": "Диоскор Пергийский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 21 апреля ст. ст., name page 635, «Диоскор Пергийский (Памфилийский), мч.», with the grade left off; the page’s own second epithet is kept in the parentheses it prints it in. Measured against the gate’s own key function before it was written: 'диоскор памфилиискии пергиискии' has no other holder."
     }
   ],
   "related": [
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Мч. Феодора , иже в Пергии, матери его Филиппии , Диоскора , Сократа и Дионисия (ок. 138-161).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "Named in the line as the third of the five, with his own name link, page 635, and the company’s shared life page life909 — which is the first account of him this folder has that runs to more than a sentence; saint.gr gave it one clause. Both pages give one day, 21 апреля. The reign the line heads the company with, about 138 to 161, is Antoninus Pius, whom the life names, and it agrees with the «(138-160)» saint.gr gave this folder; the folder carried no `dates` at all before this reading. The slug says 19 April because the Greek keeps the company then; the Russian keeps it on the twenty-first and a slug is not a feast. No hymn was taken for him."
+      }
     },
     {
       "church": "romanian",
@@ -67,5 +82,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 138,
+      "latest": 161,
+      "display": "138–161",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru heads the company’s line «(ок. 138-161)» and its shared life opens «пострадали в царствование императора Антонина Пия (138–161) в Пергии Памфилийской». It agrees with the reign saint.gr gave this folder, «(138-160)», which was never recorded as dates; this interval is the Russian’s own figures."
+    }
   }
 }

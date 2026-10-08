@@ -16,6 +16,11 @@
       "form": "Теодор",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 21. април ст. ст., „Св. муч. Теодор.“, with Св. and the rank муч. left off. The heading gives him no by-name and no city — Perga is the body's, as it is the Greek page's — so the bare forename is the whole of what this calendar gives, and `theodore-boyar-of-chernigov` and `theodore-prince-of-yaroslavl` already hold it: a deliberate fold, recorded in the batch's commit message."
+    },
+    {
+      "form": "Феодор Пергийский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 21 апреля ст. ст., name page 2194, «Феодор Пергийский (Памфилийский), мч.», with the grade left off; the page’s own second epithet is kept in the parentheses it prints it in. The line itself gives «Феодора , иже в Пергии». Measured against the gate’s own key function before it was written: 'памфилиискии пергиискии феодор' has no other holder."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Мч. Феодора , иже в Пергии, матери его Филиппии , Диоскора , Сократа и Дионисия (ок. 138-161).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "The day’s second entry, one line for five people, with a name link apiece — this one is name page 2194 — and one shared life page, life909, which all five links point to. Both pages give «День памяти: 21 апреля» and no other day. The reign the line heads the company with, about 138 to 161, is Antoninus Pius, whom the life names; this folder carried no `dates` at all before this reading and now carries that interval. The day page’s one hymn, a kontakion of «святых Ианнуария и Феодора», names him and the Januarius who heads the day’s first company and nobody else; it is on this folder and on `januarius-of-benevento`."
+      }
     },
     {
       "church": "romanian",
@@ -89,6 +104,23 @@
         "text": "O God of our fathers, who deal with us always according to your gentleness: take not your mercy from us, but by their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Священия помазанием и мучения кровию украсистеся,/ славне Ианнуарие и Феодоре,/ и сияете всюду, в Вышних ликующе,/ и нас назирайте, в храм ваш пришедшия/ и в нем непрестанно зовущия:// всех нас соблюдите, моляще Человеколюбца Бога.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Кондак святых Ианнуария и Феодора», глас 3, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "The day’s only hymn, and it is addressed to two men: this martyr, who heads the day’s second company, and the bishop Januarius who heads the first. Both are named in the text and nobody else is, so it is a proper of the two and is copied whole onto both folders. The anointing of the priesthood in the first line is the bishop’s and not his. Checked back against the page."
+      },
+      "english": {
+        "text": "Ye were adorned with the anointing of the priesthood and with the blood of martyrdom, O glorious Januarius and Theodore, and ye shine everywhere, rejoicing in the highest. Watch over us also, who have come into your temple and cry out in it without ceasing: keep us all, praying to God who loves mankind.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -99,5 +131,14 @@
     "dioscorus-19-april",
     "socrates-companion-of-dionysius",
     "dionysius-companion-of-socrates"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 138,
+      "latest": 161,
+      "display": "138–161",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru heads the company’s line «(ок. 138-161)» and its shared life opens «пострадали в царствование императора Антонина Пия (138–161) в Пергии Памфилийской» — the reign, and the only dating either page gives. This folder carried no dates at all before this reading."
+    }
+  }
 }
