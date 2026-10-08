@@ -55,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.08.2026 (30. јул ст. ст.) — „Св. Јован војник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. The identification is past doubt and is the whole of the folder's dossier: the secret Christian soldier sent by Julian the Apostate to kill Christians who instead helped them hide, imprisoned at Constantinople, freed at the tyrant's death, and invoked for the finding of thieves. The serbian row was `undocumented`, so the row lands here. **A DAY NO OTHER CALENDAR KEEPS HIM ON**: the two greek rows on this folder are 29 July and 12 June and this book puts him on the Julian 30 July — the Prologue's own 29 July page was read in this same block and does not name him, printing Callinicus, Serapheima, Theodota and Eustathius of Mtskheta — so 30 July is the day of the page actually read and the row stands on it. `types` UNTOUCHED: «војник» is the `soldier` held. `dates` UNTOUCHED: the folder's `floruit` is «under Julian the Apostate» and the entry names that emperor and gives no year, closing only «Упокојио се мирно у старости», he reposed in peace in old age — an age is not a year and nothing was narrowed. NO `locations`. NO NEW `related`: `john-the-theologian` is already here and untouched, and the entry names nobody but the emperor. NO SERBIAN NAME FORM WAS STORED, AND THAT IS A DELIBERATE REFUSAL: the heading „Св. Јован војник.“ gives «Св.», which is not a rank, «војник», which BRIEF-SERBIAN §5 reads as the rank `soldier` and which §6 keeps out of a stored form, and no by-name, no place and no see — so the bare «Јован» was the only form there was, and `fk.mjs` returns ELEVEN other holders of it. The brief says to refuse the form rather than widen a fold, and this is the 12-24 `nicholas-from-the-soldiers` refusal in the same words, his heading's only other word having likewise been a rank. WHAT THE BOOK ADDS: that prayers to him help thieves to be found, «Молитве њему помажу да се пронађу лопови», and that after his death he appeared to some who had need of his help. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "dates": {

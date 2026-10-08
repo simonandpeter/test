@@ -12,6 +12,11 @@
       "form": "Ουαλεντίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Ουαλεντίνος ο Ιερομάρτυρας Επίσκοπος Τέρνι», with the rank words left off."
+    },
+    {
+      "form": "Валентин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 30. јул ст. ст., „Свешт. муч. Валентин.“ — «Свешт. муч.» is the `hieromartyr` the folder already carries and the heading gives no see, no place and no by-name, the city standing in the body only, so §6 leaves the bare forename. Measured before it was written: `fk.mjs` returns one other holder, `valentine-of-durostorum`, and a `READ_FOLDS` key for the pair is written in the same commit as this row."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.08.2026 (30. јул ст. ст.) — „Свешт. муч. Валентин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry. The identification is the see and the day together: the entry opens «Био епископ у Италијанском граду Интерамни», he was bishop in the Italian city of Interamna, which is this folder's `office` word for word, and the Romanian keeps him on this same menologion day. The serbian row was `undocumented`, so the row lands here. `types` UNTOUCHED: «Свешт. муч.» is the `hieromartyr` held. `dates`: THE FOLDER'S `dates` WAS NULL AND THIS ENTRY GIVES IT ITS FIRST DATE OF ANY KIND, a flat death of 273 off «Сви пострадаше 273. год.», which takes the folder out of the undated tray. NO `locations`. NO NEW `related`: `valentine-of-rome` is already here and untouched. FIVE PEOPLE NAMED IN THE BODY AND NOT ONE FOLDER MADE, AND THE HEADING IS WHY. «Свешт. муч. Валентин.» names ONE man and carries NO company clause of any kind, so the 12-19 `aglaia-of-rome` and 12-28 `domna-of-nicomedia` ruling decides it: a name inside a body is not a heading. The three the entry beheads with him are ENUMERATED BY NAME — «она три ученика Кратонова: Прокул, Евив и Аполоније», the three disciples of Craton — AND THE CORPUS HOLDS NO FOLDER FOR ANY OF THEM; granting them three folders, or three rows if they existed, is one line for the author, and this is the day's second-largest finding. The philosopher «Кратон» and his son «Херимон», whom Valentine straightened, and «Фронтон» the tribune's brother are likewise no folders. «Авундије», the Roman eparch's son who buried the bodies, IS NOT `abundius-of-rome`: that folder is the martyr of 258 kept by the Russian on 13 August in the company of Hippolytus and Lawrence at Rome, fifteen years later and in another story, so no row was made on it. WHAT THE BOOK ADDS, which is this folder's whole narrative: the healing of the tribune Fronto's brother; Chaeremon drawn up so that his head was bent down between his knees; the night the bishop shut himself in the room with the sick boy in prayer, and the boy led out next morning perfectly well and given back to his father; the baptism of Craton with his whole household and his three disciples; Chaeremon leaving his father's house to go with Valentine; the baptism of the eparch's son; and the eparch, enraged at that, seizing Valentine and beheading him with the sword after torture. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
@@ -89,5 +104,14 @@
   ],
   "related": [
     "valentine-of-rome"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 273,
+      "latest": 273,
+      "display": "273",
+      "basis": "traditional",
+      "note": "The folder's first date of any kind: `dates` was null, neither doxologia.ro nor saint.gr giving a year. The Охридски пролог for 30. јул ст. ст. closes the entry «Сви пострадаше 273. год. и посташе грађани царства небеског» — they all suffered in 273, which the book says of the bishop and of the three disciples of Craton beheaded with him. No year of birth and no age is given. Read 8 October 2026."
+    }
+  }
 }
