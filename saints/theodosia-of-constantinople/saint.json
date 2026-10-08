@@ -17,6 +17,11 @@
       "form": "Теодосија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Преподобна мученица Теодосија“ — Преподобна and мученица together are the `venerable-martyr` this corpus puts in `types`; strip them and the bare personal name is the whole of what the heading gives. **THIS IS A SECOND HOLDER OF A FORM THAT ALREADY FOLDS, AND IT IS ENTERED ON PURPOSE**: `foldchk.py` returns `[('theodosia-of-caesarea-in-palestine', 'sr')]` for «Теодосија». **There is nothing fuller to prefer** — this heading, unlike the same day’s second one, prints no city, and Constantinople is the Greek page’s and the display name’s, not this heading’s to attach. The three women are told apart by their days, their years and their ranks: 25 March and 361 for the Caesarean martyr, 29 May and 308 for the virgin of Tyre, 29 May and 730 for this `venerable-martyr`."
+    },
+    {
+      "form": "Феодосия Константинопольская",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2713, «Феодосия Константинопольская, дева, прмц.», with the two rank words after the comma left off; the day’s own line gives the same city. `fk.mjs` returned NONE for «константинопольская феодосия» before the write — and this time `fk.mjs` WAS RUN, the same check having been claimed and not made on `theodora-companion-of-didymus` two days earlier in this branch. The bare «Феодосия» was not stored, the corpus holding several."
     }
   ],
   "dates": {
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст. — «Прмц. Феодосии девы, Константинопольской (730).»",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the city and the year 730 this folder’s `dates` already hold, and its Greek and Serbian rows keep her on the same Julian day. `dates` is unchanged. What the Russian adds and the paragraph carries: the birth at her parents’ earnest prayer, the upbringing in the Constantinopolitan convent of the martyr Anastasia, the tonsure after she had given her inheritance to the poor, the icons of the Saviour, of the Mother of God and of Anastasia she had painted with part of the money, the brazen gates and the brazen image of the Saviour that had hung over them more than four hundred years, the false patriarch Анастасий’s order to take it down in 730, the ladder overturned with the soldier on it by her and the other nuns, the killing of all the nuns and her own imprisonment as the most zealous defender of the icons, the hundred blows a day for a week and the eighth day’s dragging through the city, the soldier whose blow killed her, and the burial in the Diokritis monastery where the place became famous for healings. THE DAY PRINTS THREE HYMNS UNDER THE NAME «Феодосия» AND ONLY TWO ARE HERS: the «Тропарь преподобномученицы Феодосии» (глас 4) and «Кондак преподобномученицы Феодосии» (глас 2) both name «Копроним», Constantine Copronymus, the iconoclast emperor, so they belong to the Constantinopolitan nun and are copied here; the third, «Ин кондак преподобномученицы Феодосии девы, Тирской» (глас 4), carries the OTHER Theodosia’s epithet in its own heading and was not copied, that folder’s row standing on 3 апреля. The heading of that third one mixes this one’s rank, «преподобномученицы», with the other one’s place, and the mixture is the calendar’s. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -75,5 +90,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Добродетель благоприятно, мученице, постигла еси,/ Христово приятелище бывши чистое/ и Святаго Духа дом возлюблен;/ отнюдуже посрамила еси врага, борющаго род человеческий,/ добре страдавшая,/ и посекла еси Копронима, Феодосие, мечем веры,/ и к чертогу Небесному преставилася еси, радующися./ Тебе верою чтущим/ присно проси велия милости.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст., «Тропарь преподобномученицы Феодосии», глас 4 — hers and not the Tyrian's: it names «Копронима», the iconoclast emperor, which is her story and not that of a martyr of 307",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Acceptably didst thou attain to virtue, O martyr, becoming a pure dwelling of Christ and a beloved house of the Holy Spirit; whence thou didst put to shame the enemy who fights against the human race, suffering well, and didst cut down Copronymus, O Theodosia, with the sword of faith, and wast taken over rejoicing to the bridal chamber of heaven. Ask thou ever great mercy for those who honour thee with faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Трудами живот нетрудный достигла еси,/ кровию же Копронима удавила еси, мученице,/ сквернаго врага Христовы Церкве, всеблаженная Феодосие,/ и с Вышними радуешися воинствы,/ чтущия память твою покрывающи.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст., «Кондак преподобномученицы Феодосии», глас 2 — hers for the same reason, naming «Копронима» again",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By thy labours thou didst attain to a life without labour, and by thy blood thou didst choke Copronymus, O martyr, the defiled enemy of the Church of Christ, O all-blessed Theodosia; and thou rejoicest with the hosts on high, sheltering those who honour thy memory.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

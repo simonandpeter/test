@@ -1,0 +1,60 @@
+{
+  "slug": "andrew-trofimov",
+  "display_name": "Andrew (Trofimov)",
+  "names": [
+    {
+      "form": "Андрей (Трофимов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14462, «Андрей (Трофимов), мч.», with the rank abbreviation left off. The day’s own line gives the name without the surname — «Сщмч. Иоанна диакона и мч. Андрея (1938).» `fk.mjs` returns no holder for the form and none for the display name. THE BARE «Андрей» WAS DELIBERATELY NOT STORED: the gate carries an unread fold over four Andronici and the corpus holds a great many Andrews, and a bare forename on a twentieth-century martyr is the fold failure BRIEF-ADDENDUM §2 describes."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year the day line prints for the entry that names him and the protodeacon John: «Сщмч. Иоанна диакона и мч. Андрея (1938).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст. — «Сщмч. Иоанна диакона и мч. Андрея (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "note": "The day’s eighth entry, and the second of the two people that one line names. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14462, prints the title «Андрей (Трофимов), мч.» and the line «Дни памяти: 26 января (Новомуч.) , 29 мая» and nothing else at all. What it gives that the day line does not is the surname «Трофимов». He carries no church rank at all, which makes him the layman of the pair. `new-martyr` WAS WRITTEN AND THE GROUND IS READ: his page carries the 26 января synaxis of the new martyrs beside his own day, and the line calls him a martyr. NO `related` ROW WAS WRITTEN TO THE JOHN OF THE SAME LINE: the line names the two of them with one year and gives no «with him», no place and no narrative. The pair is reported to the author. NO FOLDER WAS FOUND FOR HIM. The day page prints eleven hymns and none under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 11 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 11 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 June 2026, the civil day of this Julian 29 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

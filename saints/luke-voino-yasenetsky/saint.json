@@ -1,0 +1,70 @@
+{
+  "slug": "luke-voino-yasenetsky",
+  "display_name": "Luke (Voino-Yasenetsky)",
+  "names": [
+    {
+      "form": "Лука (Войно-Ясенецкий)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9115, «Святитель Лука (Войно-Ясенецкий), архиепископ Симферопольский, исп.», with the rank word before the name and the office and rank after it left off. The parenthesis is the calendar’s own and holds his family name, which its life gives in full as «Валентин Феликсович Войно-Ясенецкий», his name in the world. The day’s own line gives «Луки исп., архиеп. Симферопольского», without the surname. `fk.mjs` returns no holder for this form and none for the display name. THE BARE «Лука» WAS NOT STORED: the corpus holds the evangelist and others of that name, and the surname is what the calendar itself supplies to tell this one apart."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "confessor",
+    "physician"
+  ],
+  "office": "Archbishop",
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "27 April 1877",
+      "basis": "attested",
+      "note": "The calendar’s life states it in full: «Архиепископ Лука (в миру Валентин Феликсович Войно-Ясенецкий) родился в Керчи 27 апреля 1877 г.» — born at Kerch on 27 April 1877."
+    },
+    "death": {
+      "earliest": 1961,
+      "latest": 1961,
+      "display": "1961",
+      "basis": "attested",
+      "note": "The year the day line prints, «Свт. Луки исп., архиеп. Симферопольского (1961).», and the year the life gives with its day in the new style: «Скончался Преосвященнейший Лука 11 июня 1961 г., в День Всех святых, в земле Российской просиявших.» The calendar keeps him on 29 мая ст. ст., and 29 May old style IS 11 June new style, so the two dates are one date in two styles and not two feasts (BRIEF.md §8)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст. — «Свт. Луки исп., архиеп. Симферопольского (1961).»",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry, and the one person of this day the calendar gives a real life. HIS PAGES LIST THREE DAYS: «Дни памяти: 26 января (Новомуч.) , 5 марта (обретение мощей) , 29 мая». The first is the general commemoration of the new martyrs and confessors of Russia; the second is the finding of his relics, which the life dates 1996; the third is the day this page printed him and the day this row keeps. One row per church is the schema, so the other two are recorded here and he renders on neither. `new-martyr` WAS DELIBERATELY NOT WRITTEN although the 26 января marker stands on his page: the line, the name page and the life all call him исповедник, confessor, and none of them calls him a martyr, and that synaxis is of the new martyrs AND CONFESSORS of Russia — the same reading made for `heraclius-motyakh` on 28 мая. `physician` IS READ AND NOT INFERRED: the life makes the whole of his life a surgeon’s, «показал пример сочетания служения архипастыря и врача», and has the bishop of Tashkent tell him «Доктор, вам надо быть священником». `office` is «Archbishop», which the four locale packs carry; the see, Simferopol, is in the display-name discussion and in the life, per BRIEF-ADDENDUM §4. THE TWO PAGES GIVE HIM TWO SEES: the name page «архиепископ Симферопольский», the life’s own title «архиепископ Крымский», archbishop of the Crimea; the life says he governed the Crimean diocese from 1946 to 1961 and that his relics rest in the Holy Trinity cathedral of Simferopol, so the two are the same see under two names and neither was written into a field. NO FOLDER WAS FOUND FOR HIM. The day page prints eleven hymns — three for John of Ustyug, three under the name Theodosia, three for the Споручница грешных icon and two for the fathers of the First Council — and none under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 11 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "NOT CHECKED AND LIKELY TO HOLD HIM: saint.gr’s list for 11 Ιουνίου, the corresponding civil day (8 October 2026). He is widely kept in the Greek church, and the folder’s own English display name would there be «Luke the Surgeon»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 June 2026, the civil day of this Julian 29 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
