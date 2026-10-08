@@ -1,0 +1,61 @@
+{
+  "slug": "basil-preobrazhensky",
+  "display_name": "Basil (Preobrazhensky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Преображенский)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 13720 gives it, «Василий (Преображенский), иерей, сщмч.», with the grade and the rank taken off. The day line prints the bare forename «Василия» in the genitive and no surname, so the surname is read off the name link; it stays in the parentheses the calendar itself prints, which BRIEF-ADDENDUM §2 keeps out of the fold key. Measured with the gate's own fold before it was written: 'василии преображенскии' has no holder in the corpus, where a bare «Василий» is a fold eleven folders wide."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "The year the day line closes the two of them with: «Сщмч. Василия пресвитера, мц. Веры (1940).» It is the only year on either page; the name page gives no year of birth and no date within the year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июня ст. ст. — «Сщмч. Василия пресвитера, мц. Веры (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "note": "The day's seventh and last entry, «Сщмч. Василия пресвитера, мц. Веры (1940).», which names two people and gives them one year. He is the сщмч. of it, a presbyter, and the name link behind «Василия» carries the surname the line leaves out: name page 13720, «Василий (Преображенский), иерей, сщмч.», whose days are «26 января (Новомуч.) , 23 мая (Ростов.) , 1 июня». That page carries no life, no icon, no place, no diocese and no year of birth — the two lines quoted are the whole of it, and there is no /Life/ page for him anywhere on the site. **He is NOT Василий Кинешемский**, the bishop whose name in the world was Вениамин Преображенский: this calendar grades the man of 1 июня иерей, a priest, and gives him 1940. Before the folder was written the corpus was searched for the surname in Cyrillic and in Latin and for a Basil of 1940, and nothing was found: the four Преображенский folders are Agathangel, Gabriel, Paul and Stephen. «23 мая (Ростов.)» — the synaxis of the saints of Rostov and Yaroslavl — and «26 января (Новомуч.)» were NOT read, and the Rostov day is the one that might name a place. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

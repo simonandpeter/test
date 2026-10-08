@@ -12,6 +12,11 @@
       "form": "Ιουστίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Ιουστίνος Πόποβιτς», with the rank word left off; the surname as the same page spells it in Greek is Πόποβιτς."
+    },
+    {
+      "form": "Иустин (Попович) Челийский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 13516 gives it, «Иустин (Попович) Челийский», whole and with no rank word to take off. The surname stands in the parentheses the calendar itself prints, which BRIEF-ADDENDUM §2 keeps out of the fold key; 'иустин попович челиискии' has no other holder, and it folds apart from the two other Justins of this same day."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июня ст. ст. — «Прп. Иустина Поповича, Челийского (1978).»",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of seven, «Прп. Иустина Поповича, Челийского (1978).», which gives him the Челийский epithet — of Ćelije, the monastery at Valjevo where he lived and died — and the year 1978 this folder already holds. The identification is the menologion day, the surname and the epithet together. The day page prints NO hymn under his name, and `life6917` was NOT read, so nothing of his life is touched here. He is the second of the day's seven entries to be a twentieth-century saint of the Serbian church kept by the Russian calendar, the other being the Athonite synaxis marked «(Серб.)». azbyka.ru was not read."
     },
     {
       "church": "romanian",

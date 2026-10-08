@@ -1,0 +1,59 @@
+{
+  "slug": "vera-samsonova",
+  "display_name": "Vera (Samsonova)",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Вера (Самсонова)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 10060 gives it, «Вера (Самсонова), ктитор, мц.», with the grade and the rank taken off. The day line prints the bare forename «Веры» in the genitive, so the surname is read off the name link; it stays in the parentheses the calendar itself prints, which BRIEF-ADDENDUM §2 keeps out of the fold key, and the corpus already stores «Вера (Графова)» and «Вера (Морозова)» that way. Measured with the gate's own fold before it was written: 'вера самсонова' has no holder."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "The year the day line closes the two of them with: «Сщмч. Василия пресвитера, мц. Веры (1940).» It is the only year on either page; the name page gives no year of birth and no date within the year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июня ст. ст. — «Сщмч. Василия пресвитера, мц. Веры (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260601.html",
+        "year": 2026
+      },
+      "note": "The day's seventh and last entry, «Сщмч. Василия пресвитера, мц. Веры (1940).», which names two people and gives them one year. She is the мц. of it, and the name link behind «Веры» carries both the surname and a grade the line leaves out: name page 10060, «Вера (Самсонова), ктитор, мц.», whose days are «26 января (Новомуч.) , 1 июня». Ктитор is the church warden, the layperson who kept a parish; BRIEF-ADDENDUM §4 names `Church warden` among the office strings the four locale packs do not carry, so **the grade is recorded here and in her life and is NOT in `office`**, and it answers to nothing in BRIEF.md §9's `types` vocabulary either. Her rank word is мц., мученица, with no monastic standing, and nothing was added to that. That page carries no life, no icon, no place and no year of birth — the two lines quoted are the whole of it, and there is no /Life/ page for her. The corpus was searched for the surname in Cyrillic and in Latin before the folder was written: the only hit was the Самсоновский church in `john-baranov`. «26 января (Новомуч.)» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
