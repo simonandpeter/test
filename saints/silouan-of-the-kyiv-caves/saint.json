@@ -11,6 +11,11 @@
       "form": "Σιλουανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουνίου, «Όσιος Σιλουανός ο της Λαύρας Κιέβου», with the rank word and the house left off."
+    },
+    {
+      "form": "Силуан Киево-Печерский",
+      "lang": "ru",
+      "note": "The name as name page 1988 gives it, with the grade and the rank word схимник taken off. Measured with the gate's own fold before it was written: 'киево печерскии силуан' has no other holder, where a bare «Силуан» would have met `silouan-the-athonite`."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian of the Kyiv Caves Lavra, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Прп. Силуана , схимника Печерского (XIII-XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's tenth entry. The Greek row already stands on this same 10 June. Name page 1988 heads him «Преподобный Силуан, схимник Киево-Печерский» and lists THREE days, «10 июня , 10 июля , 28 августа (Печер.(Д))»; the day read is the first, and the other two were not read — the third is the synaxis of the fathers of the Far Caves, which is where the day page's own hymn headings place him. The line's «(XIII-XIV)» contains this folder's own late-thirteenth-to-early-fourteenth-century floruit and nothing in `dates` was touched. Two hymns the day page sets over him by name are added with their English typed; both head him «в Дальних пещерах», in the Far Caves. The two /Life/ readings behind the line were NOT read. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Многаго ти ради воздержания и безмернаго пощения/ приемый свыше благодать чудотворения/ и к Богу велие дерзновение стяжавый,/ постником удобрение, Силуане,/ Тому молися,/ да подаст нам мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Тропарь преподобного Силуана, схимника Печерского, в Дальних пещерах», глас 3, printed in the day page’s «Молитвы» block and repeated on his name page 1988. It names him, «Силуане».",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For thy great abstinence and thy measureless fasting thou didst receive from above the grace of working wonders, and didst gain great boldness with God, Silouan, adornment of those who fast: pray thou to him, that he may grant us peace and great mercy.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "В бденном и трезвенном молении/ и крепком всегдашнем пребывая пощении,/ тело свое умерщвлял еси, Силуане преподобне,/ и многих учением твоим в тыяжде добродетели наставляя,/ привел еси Христови./ Емуже в веселии днесь предстоя,/ поминай нас, чтущих память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Кондак преподобного Силуана, схимника Печерского, в Дальних пещерах», глас 8, printed in the day page’s «Молитвы» block and repeated on his name page 1988. It names him, «Силуане преподобне».",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Abiding in wakeful and sober prayer and in strong unceasing fasting, thou didst put thy body to death, venerable Silouan, and guiding many by thy teaching into the same virtues thou didst bring them to Christ. Standing before him today in gladness, remember us who honour thy memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    }
+  ]
 }

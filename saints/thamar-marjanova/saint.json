@@ -1,0 +1,60 @@
+{
+  "slug": "thamar-marjanova",
+  "display_name": "Thamar (Marjanova)",
+  "types": [
+    "venerable",
+    "confessor",
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Фамарь (Марджанова)",
+      "lang": "ru",
+      "note": "The name as name page 14953 gives it, «Фамарь (Марджанова), прп., исп.», with the two grades taken off; the day's line prints the surname without the parentheses, «Фамари Марджановой», in the genitive. Measured with the gate's own fold before it was written: 'марджанова фамарь' has no other holder, and a Cyrillic grep for «Марджанов» over every saint.json returned nothing. Her name in the world, Tamara, is in the article teaser the name page prints and was NOT stored as a form: the corpus keeps three Tamaras and a baptismal name is not the calendar's form for her."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1936,
+      "latest": 1936,
+      "display": "1936",
+      "basis": "attested",
+      "note": "The year the line closes with, «(1936)». The heading of the first article her name page links repeats it and adds a year of birth — «Святая схиигумения Фамарь (Марджанова; 1868–1936)» — but the article itself was not read and the birth year is left out of `dates` rather than taken off a headline."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июня ст. ст. — «Прп. Фамари Марджановой, исп (1936) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260610.html",
+        "year": 2026
+      },
+      "note": "The day's eleventh entry. A line and a name page and two unread articles. The calendar grades her прп. and исп. and not новомуч., so `new-martyr` is not in `types`, which is the `raphael-sheichenko` reading of 06-06. «(Груз.)» is this calendar's own mark for a saint of the Georgian Church and is quoted in the row above as printed. `abbess` is in `types` on the strength of the article heading's «схиигумения», which is page content; **no `office` was written**, because `Abbess` is one of the strings BRIEF-ADDENDUM §4 names as absent from the locale packs, and the four translations it would cost are not a reader's to invent. `ls -d saints/thamar* saints/tamara*` returned three Tamaras, all other women, and `fk.mjs` no holder for either form. azbyka.ru was not read, and the two Pravoslavie.Ru articles were not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

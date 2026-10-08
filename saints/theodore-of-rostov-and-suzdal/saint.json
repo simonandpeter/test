@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιουνίου, «Όσιος Θεόδωρος Επίσκοπος Ροστώφ και Σούζνταλ Ρωσίας», with the rank words left off."
+    },
+    {
+      "form": "Феодор Ростовский и Суздальский",
+      "lang": "ru",
+      "note": "The name as name page 2199 gives it, «Святитель Феодор Ростовский и Суздальский, епископ», with the grade and the rank word taken off; the day's line gives only «еп. Суздальского» and so the Rostov half is read off the link. Measured with the gate's own fold before it was written: 'и ростовскии суздальскии феодор' has no other holder. The corpus's `theodore-of-rostov`, the fourteenth-century archbishop, stores the shorter «Феодор Ростовский», which is a different string and a different key, and the fuller form was taken partly for that reason."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июня ст. ст. — «Свт. Феодора , еп. Суздальского (ок. 1023).»",
+        "url": "https://days.pravoslavie.ru/Days/20260608.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. The Greek row above stands on 8 June of the revised calendar and this one on 8 June of the Julian, which are the same menologion day in two reckonings and two different civil days; nothing was moved. Name page 2199 heads him «Святитель Феодор Ростовский и Суздальский, епископ» and lists «Дни памяти: 23 мая (Ростов.) , 8 июня»; it carries no life page, no icon and no article, and the day page carries no /Life/ link for him either, so the whole of what this calendar adds is the name, the day, the grade «Свт.» and the hymns. The year «ок. 1023» agrees with the 1023 saint.gr gave the folder and nothing in `dates` was touched. The 23 мая synaxis of the saints of Rostov was not read. Three hymns the day page sets over him by name are added; four more on the same page join him with another bishop of Suzdal whom the corpus keeps, and those were not copied, because a hymn of two saints would claim a relation between two folders that no page of this calendar states. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -56,5 +71,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "В молитвах бдя, сердцем же о стаде твоем выну болезнуя,/ учением своим всех просветил еси, Феодоре премудре,/ темже Христа Бога моли,/ в день памяти твоея даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июня ст. ст. — «Тропарь святителя Феодора, епископа Ростовского и Суздальского», глас 8, printed in the day page’s «Молитвы» block and repeated on his name page 2199 under the heading 8 июня. It names him, «Феодоре премудре».",
+        "url": "https://days.pravoslavie.ru/Days/20260608.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Watching in prayers, and grieving in heart without ceasing for thy flock, thou hast enlightened all men by thy teaching, most wise Theodore; therefore entreat Christ God to grant us great mercy on the day of thy memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "В молитве бдя, Горняя желая,/ дольняя возненавидел еси,/ и, сердцем болезнуя, выну о стаде своем печешися,/ учением бо своим всех просветил еси,/ Феодоре премудре, Христа Бога моли в памяти твоей/ даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июня ст. ст. — «Ин тропарь святителя Феодора, епископа Ростовского и Суздальского», глас 8, printed in the day page’s «Молитвы» block and repeated on his name page 2199 under the heading 8 июня. It names him, «Феодоре премудре».",
+        "url": "https://days.pravoslavie.ru/Days/20260608.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Watching in prayer and longing for the things above, thou didst set at nought the things below; and grieving in heart thou dost care without ceasing for thy flock, for by thy teaching thou hast enlightened all men. Most wise Theodore, entreat Christ God to grant us great mercy at thy memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Яко велие солнце,/ возсия преславная память твоя, премудре Феодоре,/ в нейже подававши в бедах сущим спасение,/ притекающим к тебе усердно,/ благодатию, еюже облагодати тя Христос/ в жизни нескончаемой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июня ст. ст. — «Кондак святителя Феодора, епископа Ростовского и Суздальского», глас 3, printed in the day page’s «Молитвы» block and repeated on his name page 2199 under the heading 8 июня. It names him, «премудре Феодоре».",
+        "url": "https://days.pravoslavie.ru/Days/20260608.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a great sun thy most glorious memory has shone forth, most wise Theodore; and in it thou givest deliverance to those who are in troubles and who run to thee with zeal, by that grace wherewith Christ has graced thee in the life that has no end.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
+    }
+  ]
 }

@@ -1,0 +1,109 @@
+{
+  "slug": "cyril-of-belozersk",
+  "display_name": "Cyril of Belozersk",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Кирилл Белоезерский",
+      "lang": "ru",
+      "note": "The name as name page 1224 gives it, «Преподобный Кирилл Белоезерский», with the grade taken off, which is also the day line's own spelling; the body of both readings spells it Белозерский instead, and the calendar's form is the one stored. Measured with the gate's own fold before it was written: 'белоезерскии кирилл' has no other holder, and neither has the English 'belozersk cyril'. The corpus's `cyril-of-the-white-lake` stores «Кирилл Новоезерский», a different man of 1532 and a different key."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1337,
+      "latest": 1338,
+      "display": "1337 or 1338",
+      "basis": "traditional",
+      "note": "Not stated. The long reading gives no year of birth and says he fell asleep «на 90-м году своей жизни 9 июня 1427 года», in the ninetieth year of his life, which puts the birth in 1337 or 1338 depending on whether the ninetieth year was complete. The interval holds both and no single year is asserted."
+    },
+    "death": {
+      "earliest": 1427,
+      "latest": 1427,
+      "display": "1427",
+      "basis": "attested",
+      "note": "Both readings close with it: «преподобный Кирилл блаженно почил на 90 году своей жизни 9 июня 1427 г.», and the day line gives the same year."
+    }
+  },
+  "related": [
+    "stephen-of-makhrishche",
+    "theodore-of-rostov",
+    "sergius-of-radonezh",
+    "therapon-of-the-white-lake",
+    "martinian-of-white-lake"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Яко крин, в пустыни давидски процвел еси, отче Кирилле,/ злострастия терние искореняя,/ и собрал еси в ней ученик множество,/ страхом Божиим и учением твоим наставляемых,/ ихже и до конца, яко чадолюбивый отец,/ не оставил еси, посещая, да вси вопием:/ слава Давшему ти крепость,/ слава Венчавшему тя,// слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Тропарь преподобного Кирилла Белоезерского», глас 1, printed in the day page’s «Молитвы» block. It names him, «отче Кирилле».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a lily thou didst flower in the wilderness after the manner of David, father Cyril, rooting up the thorns of evil passions; and thou didst gather there a multitude of disciples, led by the fear of God and by thy teaching, whom thou didst not leave to the end but didst visit them, as a father who loves his children; so that we all cry: glory to him who gave thee strength, glory to him who crowned thee, glory to him who works through thee healings for all.",
+        "rendered": "site"
+      },
+      "tone": "глас 1"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Яко преобидев тленная и долу влекущая мудрования, отче,/ к Вышнему течению радостно устремился еси,/ и тамо со святыми Пресвятей Троице предстоя,/ моли от враг сохранитися стаду твоему,/ яко да святое твое успение празднующе, вопием:// радуйся, преблаженне Кирилле, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Кондак преподобного Кирилла Белоезерского», глас 8, printed in the day page’s «Молитвы» block. It names him, «преблаженне Кирилле, отче наш».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having despised the things that perish and the reasonings that drag a man downward, father, thou didst run with joy on the upward course; and standing there with the saints before the Most Holy Trinity, entreat that thy flock be kept from its enemies, so that keeping thy holy falling asleep we may cry: rejoice, most blessed Cyril, our father.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Прп. Кирилла , игумена Белоезерского (1427).»",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. The corpus had no folder for him, and the reason it looked as though it had is worth stating: `cyril-of-the-white-lake` carries the English name of this man and is a different Cyril, the calendar's «Кирилл Новоезерский» of 1532 whom this same calendar keeps on 4 февраля ст. ст.; that folder's own Russian row raises the naming as a question. `ls -d saints/cyril-*` was read through all twenty-seven folders, a Cyrillic grep for «Белоезерск» returned only `martinian-of-white-lake`, which names him in its own prose, and `fk.mjs` returned no holder for either the Cyrillic or the English form. Name page 1224 gives «День памяти: 9 июня» and no other day, five icons and no article; the two readings behind index id1224 are the whole of the life. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

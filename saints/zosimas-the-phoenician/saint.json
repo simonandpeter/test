@@ -11,6 +11,11 @@
       "form": "Зосим Финикијски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. јун ст. ст., „Преподобни Зосим Финикијски“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped. Финикијски is kept: it is not a rank and not a see but the by-name the display name itself carries («Zosimas the Phoenician»), and §6 asks for the fullest form. **The bare form was measured and refused for that reason**: `foldchk.py` returns `[('zosimas-of-palestine', 'sr'), ('zosimas-of-solovki', 'sr')]` for «Зосим» and `NO FOLDER HOLDS THIS FORM` for the two-word form, so keeping the by-name avoids a fold three wide and costs nothing."
+    },
+    {
+      "form": "Зосима Финикийский",
+      "lang": "ru",
+      "note": "The name as name page 855 gives it, «Зосима Финикийский, прп.», with the grade taken off. Measured with the gate's own fold before it was written: 'зосима финикиискии' has no other holder; the folder's Serbian form «Зосим Финикијски» is a different string and a different key."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июня ст. ст. — «Прп. Зосимы Финикийского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260608.html",
+        "year": 2026
+      },
+      "note": "The day's third entry. The Serbian row below already stands on this same Julian 8 June, from the Охридски пролог, so the two agree on the day and the identity was not in doubt. Name page 855 heads him «Зосима Финикийский, прп.» and gives «День памяти: 8 июня» and no other day; the day page prints no hymn under his name. The line's «(VI)» is a third witness to the sixth century against the late fourth this folder's `dates` hold off doxologia, and the Russian life sharpens it by having him foresee the fall of Antioch while he was at Caesarea, which that life dates to 526. `dates` were NOT changed: the folder's own life already sets the two readings against each other and says neither can be widened into the other, and overturning a dated interval on a third calendar's century mark is a question for the author and not a day's work. azbyka.ru was not read."
     },
     {
       "church": "romanian",

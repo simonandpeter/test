@@ -1,0 +1,138 @@
+{
+  "slug": "alexander-of-kushta",
+  "display_name": "Alexander of Kushta",
+  "types": [
+    "venerable",
+    "abbot",
+    "hieromonk",
+    "wonderworker"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Александр Куштский",
+      "lang": "ru",
+      "note": "The name as name page 113 gives it, «Александр Куштский, игумен», with the rank word taken off. The life's own title is fuller, «Преподобный Александр, игумен Куштский, Вологодский», but the name link is the calendar's own nominative and is what is stored. Measured with the gate's own fold before it was written: 'александр куштскии' has no other holder, and a grep for «Куштск» and for the Latin stem ‘kusht’ over every saint.json returned nothing."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1371,
+      "latest": 1371,
+      "display": "c. 1371",
+      "basis": "traditional",
+      "note": "The life's first sentence: «родился около 1371 года в Вологде» — about 1371, at Vologda. Its own closing arithmetic agrees: it has him die in the sixty-eighth year of his age in 1439."
+    },
+    "death": {
+      "earliest": 1439,
+      "latest": 1439,
+      "display": "1439",
+      "basis": "attested",
+      "note": "The life: «на 68 году мирно предал свой дух Господу 9 нюня 1439 года», the month printed with that misspelling, and the day line gives the same year."
+    }
+  },
+  "related": [
+    "euthymius-of-syanzhema"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Иже плотским дебельством Богови работати изволи,/ в пустыню вселився,/ в нейже многими поты и труды/ безтелеснаго равноангельнаго пребывания возможе достигнута,/ таже от Бога узрен быв,/ сподобися великих чудес в жизни и по преставлении,/ на нечистыя духи силу восприим,/ изгониши от приходящих к тебе с верою,/ темже, отче Александре,/ за вся ны моли,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Тропарь преподобного Александра, игумена Куштского», глас 4, printed in the day page’s «Молитвы» block and repeated on his name page 113. It names him, «отче Александре».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who in the thickness of the flesh didst choose to serve God, and didst settle in the wilderness, and there by many sweats and labours wast able to attain a bodiless and angelic manner of life; then, being looked upon by God, thou wast counted worthy of great wonders both in life and after thy repose, and receiving power over the unclean spirits thou dost drive them out of those who come to thee in faith: therefore, father Alexander, pray for us all, that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Во плоти, яко Ангел, на земли подвизася,/ желанием духовным в пустыню вселися/ и, со зверьми живый, весь Христови быв,/ Тому невозвратно шествовал еси, ведом к Небеси,/ последуя Божественным стезям, отче блаженне Александре,/ яко чуден, чудеса источаеши/ и отгонявши недуги к тебе приходящих с верою,/ но яко имея дерзновение ко Господу,/ поминай нас, чтущих честную память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Ин тропарь преподобного Александра, игумена Куштского», глас 8, printed in the day page’s «Молитвы» block. It names him, «отче блаженне Александре».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the flesh thou didst struggle on earth as an angel, and out of spiritual longing didst settle in the wilderness; and living among the wild beasts thou becamest wholly Christ's, and didst walk after him without turning back, led up to heaven and following the divine paths, blessed father Alexander. Wonderful as thou art, thou pourest out wonders and drivest off the sicknesses of those who come to thee in faith; but having boldness before the Lord, remember us who honour thy precious memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Иже земная оставль,/ в пустыню вселився,/ Христовым стопам последовал еси, тепле,/ и Того, славне, на раму своею честньш крест взем,/ умертвил еси плоти взыграния/ труды постническими и желанием духовным, всеблаженне,/ темже зовем ти:/ радуйся, Александре, пустынный жителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Кондак преподобного Александра, игумена Куштского», глас 8, printed in the day page’s «Молитвы» block. It names him, «Александре, пустынный жителю».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having left the things of earth and settled in the wilderness, thou didst follow fervently in the steps of Christ, and taking up his precious cross on thy shoulders, O glorious one, thou didst put to death the stirrings of the flesh by the labours of fasting and by spiritual longing, all-blessed father: therefore we cry to thee, rejoice, Alexander, dweller in the wilderness.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Пустынный жителю,/ опустевшая ны от благотворных помышлений вражиими прилогми,/ презельным твоим к Богу молением сердца наша очисти,/ яко да благодарственно вопием ти:/ радуйся, яко земным пустынножительствием, Александре,/ дошед Небеснаго Царствия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Ин кондак преподобного Александра, игумена Куштского», глас 6, printed in the day page’s «Молитвы» block. It names him, «Александре».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dweller in the wilderness, cleanse thou our hearts, laid waste of good thoughts by the enemy's assaults, through thy exceeding great entreaty to God, that we may cry to thee with thanksgiving: rejoice, Alexander, who by dwelling in an earthly wilderness didst reach the kingdom of heaven.",
+        "rendered": "site"
+      },
+      "tone": "глас 6"
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Прп. Александра , игумена Куштского (1439).»",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry. Name page 113 gives «День памяти: 9 июня» and no other day, no icon and no article, and its «Молитвы» block repeats the first of the day page's four hymns. The one relation written is the exchange of cells with `euthymius-of-syanzhema`, which the life states plainly and which that folder's own Greek account corroborates from the other side: saint.gr has Euthymius go from the Spaso-Kamenny monastery to the Kubenka and then to the country of the Syanzhema, which is the move this life describes from Alexander's side. `ls -d saints/alexander-*` was read, a Cyrillic grep for «Куштск» and a Latin-stem grep for ‘kusht’ returned nothing, and `fk.mjs` no holder. The abbot Dionysius the Athonite of Spaso-Kamenny, the archbishop Dionysius of Rostov, the prince Dmitry Vasilyevich of Zaozerye and the princess Maria are named in the life and have no folder; no relation was written for any of them. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

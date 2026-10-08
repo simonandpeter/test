@@ -1,0 +1,61 @@
+{
+  "slug": "gregory-zlatorunsky",
+  "display_name": "Gregory (Zlatorunsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Григорий (Златорунский)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 15071 gives it, «Григорий (Златорунский), сщмч.», with the grade taken off. The day line prints the forename in the genitive, «Григория Златорунского пресвитера», so the surname is on the line as well as on the link and nothing here is reconstructed. Measured with the gate's own fold before it was written: 'григории златорунскии' has no other holder, and neither has the English 'gregory zlatorunsky'; a Cyrillic grep for «Златорунск» over every saint.json in the corpus returned nothing at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the line closes with, «(1918)». No year of birth is given anywhere on the site."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июня ст. ст. — «Сщмч. Григория Златорунского пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260608.html",
+        "year": 2026
+      },
+      "note": "The day's fourteenth entry of fifteen, and the only person on the whole of it for whom the corpus had no folder. A line and a name page and nothing else: «Сщмч. Григория Златорунского пресвитера (1918).» Name page 15071 heads him «Григорий (Златорунский), сщмч.» and lists «26 января (Новомуч.) , 8 июня»; it carries one icon of 803 by 1080 pixels and otherwise no life, no article, no place, no diocese and no year of birth, and there is no /Life/ page for him on the site. The day page prints no hymn under his name. A Cyrillic grep for «Златорунск» over every saint.json returned nothing, `ls -d saints/gregory-zlato*` nothing, and `fk.mjs` no holder for either the Cyrillic or the English form. «26 января (Новомуч.)» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
