@@ -16,6 +16,11 @@
       "form": "Квинтилијан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. муч. Максим, Дада и Квинтилијан.“ Св. муч. stands over all three names and муч. is the `martyr` this folder already carries; the heading gives no epithet and no village. The form drops the Latin -us of Quintilianus, which is this page's habit with Latin names."
+    },
+    {
+      "form": "Квинтилиан Доростольский, Озовийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1191, «Квинтилиан (Кинтилиан) Доростольский, Озовийский, мч.», with the rank word left off and the parenthesis left out of the form. THE PARENTHESIS HERE IS NOT A SURNAME: unlike «Мария (Носова)», where it holds the family name, it holds a second reading of the forename, «Кинтилиан», which the calendar prints as an alternative and which is recorded here rather than stored as part of the name. The comma inside the form is the calendar's own and separates two toponymics, Durostorum and the village of Ozovia. Measured against the gate's own key function: 'доростольскии квинтилиан озовиискии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Мчч. Дады , Максима и Квинтилиана (286).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of five, one line naming three brothers. His name page heads him «Квинтилиан (Кинтилиан) Доростольский, Озовийский, мч.», and the parenthesis is a second reading of the forename rather than a surname, so the stored form carries «Квинтилиан» and the note records «Кинтилиан» as the variant the page also prints. The life page spells him «Квинтиллиан» with a double L in one place and «Квинтилиан» in the others, which is the page's own inconsistency and not a reading of mine. The day page prints no hymn under their names."
     },
     {
       "church": "romanian",
@@ -97,5 +112,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 286,
+      "display": "286",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 апреля ст. ст. closes «(286)» for the three brothers, and its life page life947 ends «отвели под стражей в их деревню и там усекли мечом (+ 286)». The two agree, and the folder had no year of any kind before."
+    }
   }
 }

@@ -16,6 +16,11 @@
       "form": "Јаков",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 30. април ст. ст., „Св. апостол Јаков.“, with Св. left off as no rank and апостол left off as the `apostle` this folder already carries in `types` and `honorific.js` composes back. The heading carries no kinship clause and no epithet, so the bare forename is the whole of the Serbian form; „Син Заведејев и брат Јованов“ is the body's first sentence, and this corpus keeps such a clause in the English display name and not in a name form. Four other folders already hold the same bare form; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Иаков Зеведеев",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 872, «Апостол Иаков Зеведеев», with the rank word in front of it left off; the day's own line declines him «Ап. Иакова Зеведеева». «Зеведеев» is the patronymic the calendar prints as part of the name — son of Zebedee — and it stays, where the bare «Иаков» would reach a great many folders. Measured against the gate's own key function before it was written: 'зеведеев иаков' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 апреля ст. ст. — «Ап. Иакова Зеведеева (44).»",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of seven. Index 872 serves two readings of him and both head «Дни памяти: 30 апреля , 30 июня (12 ап.)»; the 30 апреля day page is the one that lists him and is the day recorded here, and «30 июня (12 ап.)», the synaxis of the Twelve, WAS NOT CHECKED against its own day page — it is the same pair of days the folder's Romanian row already carries a note about, 30 aprilie and 30 iunie, so this calendar and doxologia agree about which two days he has. HIS `dates` DID NOT MOVE: the folder holds «44 or 45» from the Prologue's forty-fifth year against saint.gr; this line heads him «(44)» and life957 ends «был обезглавлен вместе со святым Иаковом в 44 году в Иерусалиме», so the Russian agrees with the lower bound the folder already holds and adds nothing to widen. Three hymns were taken, all the day page prints under his name, and the folder had no Russian hymn at all."
     },
     {
       "church": "romanian",
@@ -123,6 +138,54 @@
       },
       "english": {
         "text": "Hearing the divine voice that called thee, thou didst overlook a father's love and run to Christ, O James, together with thy brother, O glorious one, with whom thou wast counted worthy to see the divine Transfiguration of the Lord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоле святый Иакове,/ моли Милостиваго Бога,/ да прегрешений оставление/ подаст душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь апостола Иакова Зеведеева, брата Иоанна Богослова», глас 3, under «Молитвы» on the day page for 30 апреля ст. ст. It is the common of an apostle with his name filled into it, which BRIEF.md §4 makes his own service and not a mis-hang.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle James, pray to the merciful God, that He grant forgiveness of offences unto our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостол Христов был еси избранный/ и Богослову возлюбленному брат единородный,/ всехвальне Иакове,/ поющим тя грехов оставление испроси/ и душам нашим велию милость.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь апостола Иакова Зеведеева, брата Иоанна Богослова», глас 3, under «Молитвы» on the day page for 30 апреля ст. ст. «Ин тропарь» is a second troparion for the same saint and the page prints both.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a chosen apostle of Christ and the one brother of the beloved Theologian, O all-praised James: ask forgiveness of sins for those who sing thy praise, and great mercy for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Глас Божественный слышав, призывающ тя,/ любовь отца презрел еси/ и притекл еси ко Христу, Иакове, с сродником твоим, славне,/ с нимже сподобился еси видети/ Господне Божественное преображение.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак апостола Иакова Зеведеева, брата Иоанна Богослова», глас 2, under «Молитвы» on the day page for 30 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Hearing the divine voice that called thee, thou didst set at nought thy father's love and ran to Christ, O glorious James, together with thy kinsman; and with him thou wast counted worthy to behold the Lord's divine Transfiguration.",
         "rendered": "site"
       }
     }

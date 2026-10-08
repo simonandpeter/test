@@ -21,6 +21,11 @@
       "form": "Μπριαντσιανίνωφ",
       "lang": "el",
       "note": "The surname as saint.gr transliterates it: «Ο Άγιος Ιγνάτιος (Μπριαντσιανίνωφ) γεννήθηκε το έτος 1807 μ.Χ. στην κωμόπολη Ποκρόφσκ»."
+    },
+    {
+      "form": "Игнатий Брянчанинов",
+      "lang": "ru",
+      "note": "The whole heading of days.pravoslavie.ru's name page 898, «Святитель Игнатий Брянчанинов», with the rank word in front of it left off; the day's own line declines him «Свт. Игнатия Брянчанинова, еп. Кавказского и Черноморского». The surname is part of the name and stays — the folder already held it transliterated in Romanian and in Greek, «Ignatie Briancianinov» and «Μπριαντσιανίνωφ», and this is the calendar's own Cyrillic. Measured against the gate's own key function before it was written: 'брянчанинов игнатии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026). doxologia.ro's own life says the Russian Church canonised him in 1988 with his day at 30 April, but that is the Romanian page's report and not the Russian calendar read."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 апреля ст. ст. — «Свт. Игнатия Брянчанинова, еп. Кавказского и Черноморского (1867).»",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of seven, and the only entry on it this calendar gives a liturgical rubric for: a footnote under the hymns says that on the day his polyeleos service is sung the matins gospel is John X, 1-9 and the liturgy takes the readings of the day and of the hierarch, Hebrews VII, 26 - VIII, 2 and John X, 9-16. Index 898 serves two readings and both head «День памяти: 30 апреля», ONE DAY ONLY, so there is no second day to note. HIS `dates` DID NOT MOVE and the Russian agrees with them: the folder holds 1807 off doxologia and life6594 opens «родился 6 февраля 1807 г. в родовом имении отца, селе Покровском Вологодской губернии», which is the same year with a day and a village added; the line heads him «(1867)», the death year the folder already holds. THE DAY AND MONTH OF BIRTH WERE NOT WRITTEN: the schema's `dates` hold years, not days. What the Russian gives that the folder did not have is his name in the world, «Дмитрий Александрович Брянчанинов», and the see in full — «еп. Кавказского и Черноморского», bishop of the Caucasus and the Black Sea — which is in the life and not in `office`, because the folder's `office` is the bare `Bishop` the four locale packs carry and BRIEF-ADDENDUM §4 forbids inventing a longer one. Two hymns were taken, both the day page prints under his name, and the folder had no Russian hymn at all."
     },
     {
       "church": "romanian",
@@ -100,6 +115,38 @@
       },
       "english": {
         "text": "Defender of Orthodoxy, teacher and zealous worker of repentance and of prayer, Spirit-bearing adornment of bishops, glory and praise of monks, Ignatius made wise by God, by thy writings thou hast enlightened all. Spiritual harp, entreat Christ, God the Word, whom thou didst carry in thy heart, to grant us repentance before the end.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия поборниче, покаяния и молитвы делателю и учителю изрядный, архиереев богодухновенное украшение, монашествующих славо и похвало: писании твоими вся ны уцеломудрил еси. Цевнице духовная, Игнатие Богомудре, моли Слова Христа Бога, Егоже носил еси в сердце твоем, даровати нам прежде конца покаяние.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Игнатия Брянчанинова, епископа Кавказского и Черноморского», глас 8, under «Молитвы» on the day page for 30 апреля ст. ст. The page prints this one without the slashes it uses to mark the verses elsewhere, and it is copied as printed.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O champion of Orthodoxy, excellent worker and teacher of repentance and prayer, God-inspired adornment of bishops, glory and praise of monastics: by thy writings thou hast made us all sober-minded. O spiritual harp, God-wise Ignatius, pray to Christ the Word, whom thou didst bear in thy heart, to grant us repentance before the end.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Аще и совершал еси стезю жития земнаго, святителю Игнатие, обаче непрестанно зрел еси законы бытия вечнаго, сему поучая ученики словесы многими, имже последовати и нам, святче помолися.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Игнатия Брянчанинова, епископа Кавказского и Черноморского», глас 8, under «Молитвы» on the day page for 30 апреля ст. ст. Printed without verse slashes, as the troparion above it is.",
+        "url": "https://days.pravoslavie.ru/Days/20260430.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Though thou didst walk the path of earthly life, O hierarch Ignatius, yet didst thou behold unceasingly the laws of eternal being, teaching them to thy disciples in many words: pray, O holy one, that we too may follow them.",
         "rendered": "site"
       }
     }

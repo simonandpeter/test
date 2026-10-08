@@ -51,7 +51,8 @@
     "stephen-the-first-martyr",
     "vitalius-of-corfu",
     "zeno-of-corfu",
-    "tertius"
+    "tertius",
+    "murin-of-corfu"
   ],
   "attestations": [
     {
@@ -61,7 +62,7 @@
         "day": 10,
         "month": 11,
         "calendar": "julian",
-        "note": "The name page lists «4 января (70 ап.) , 28 апреля , 10 ноября». The 4 января entry is the synaxis of the Seventy Apostles, a synaxis and not a feast; 28 апреля is the day the Romanian calendar keeps him on, and that Russian day page was not read. Both are recorded here as notes, and this row's feast is the 10 ноября day page that listed him."
+        "note": "The name page lists «4 января (70 ап.) , 28 апреля , 10 ноября». The 4 января entry is the synaxis of the Seventy Apostles, a synaxis and not a feast; 28 апреля is the day the Romanian calendar keeps him on, and THAT RUSSIAN DAY PAGE HAS NOW BEEN READ — 8 October 2026 — and it does list him, as the day's first entry, «Апп. от 70-ти Иасона и Сосипатра , Керкиры девы и иных, с ними пострадавших (I).», with the whole Corfu company. So the Russian calendar keeps him on two fixed days, 28 апреля with Jason and Kerkyra and 10 ноября with the five other apostles of the Seventy, and his own name page prints both. One attestation row per church is the schema: the row's feast stays the 10 ноября day this folder was read from, the 28 апреля day is recorded here as the note it was always meant to be, and the folder does not render on it. The 4 января synaxis page was still not read."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Апп. от 70-ти Ераста , Олимпа , Родиона , Сосипатра , Куарта (Кварта) и Тертия (I).»",
@@ -211,6 +212,22 @@
       },
       "english": {
         "text": "Today the honoured festival of the apostles has appeared, plainly granting the forgiveness of their offences to all who keep their memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явистеся, яко звезды пресветлыя,/ просвещающе всю вселенную светом проповедания,/ апостоли Божественнии/ Иасоне и Сосипатре,// спасайте верою чтущих вас.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак апостолов», глас 4, under «Молитвы» on the day page for 28 апреля ст. ст. It names Jason and Sosipater by name in the vocative. THE DAY PAGE ALSO PRINTS A «Тропарь апостолов», глас 3, AND IT WAS NOT ADDED: it is the same common of apostles this folder already carries from 10 ноября ст. ст., word for word, the only difference being that the 28 апреля page capitalises «Милостиваго» where the 10 ноября page has «милостиваго». One text, one hymn row.",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ye have shone forth as stars most radiant, enlightening the whole world with the light of your preaching, O divine apostles Jason and Sosipater: save those who honour you with faith.",
         "rendered": "site"
       }
     }

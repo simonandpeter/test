@@ -16,6 +16,11 @@
       "form": "Мемнон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 29. април ст. ст., „Преп. Мемнон чудотворац.“ Преп. is the `venerable` and чудотворац the `wonderworker` this folder already carries in `types`, both of which `honorific.js` composes back; the heading gives no house and no country, so the bare forename is the whole of the Serbian form. One other folder holds the same bare spelling in Russian; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Мемнон Египетский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1515, «Мемнон Чудотворец, Египетский, игумен», with TWO RANK WORDS TAKEN OFF and not one: «игумен», abbot, after the second comma, and «Чудотворец», wonderworker, which BRIEF-RUSSIAN §6 lists among the rank words and which this folder already carries in `types`. What is left is the forename and the toponymic, «Мемнон Египетский». The day's own line declines him «Мемнона чудотворца» and gives no toponymic at all. The bare «Мемнон» is a fold two folders wide in this corpus, which is why the toponymic is kept: measured against the gate's own key function, 'египетскии мемнон' has no other holder."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Прп. Мемнона чудотворца (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of eight. ITS CENTURY AGREES WITH THE FOLDER'S: the line heads him «(II)» and the folder's existing second-century death came off the Ohrid Prologue, so nothing moved. WHAT THIS SOURCE GIVES THAT THE OTHERS DID NOT IS THE COUNTRY AND THE OFFICE: doxologia's life says expressly that it names no year, no country and no monastery, and this calendar's life page life952 opens «Преподобный Мемнон Чудотворец с юности подвизался в Египетской пустыне» and makes him abbot of one of the Egyptian monasteries — which is where the ru name form's «Египетский» comes from and which the folder's existing `abbot` already said. THE MONASTERY IS STILL NOT NAMED, by this source either. NO `locations` WERE WRITTEN: the Egyptian desert is not a point. The day page prints no hymn under his name — its four hymns are two for the nine martyrs of Cyzicus and two for the bishop of Ostrog — and the folder's existing troparion is not Russian and was left as it stands."
     },
     {
       "church": "romanian",

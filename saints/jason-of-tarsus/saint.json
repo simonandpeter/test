@@ -16,6 +16,11 @@
       "form": "Јасон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. апостоли Јасон и Сосипатер, и Керкира девица.“ Св. апостоли is not his alone — it stands over the first two names — and апостол is the `apostle` this folder already carries in `types`; the heading gives him no see and no epithet, Tarsus being the body's, so the bare forename is the whole of the Serbian form."
+    },
+    {
+      "form": "Иасон",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 893 gives it: «Святитель Иасон, епископ Тарсийский, апостол от 70-ти», whose only name word is «Иасон», everything after the first comma being the office and the grade. The calendar gives him no surname and no toponymic that stands as part of the name, so one word is all there is to store; measured against the gate's own key function before it was written, 'иасон' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -39,13 +44,24 @@
     "sosipater-of-iconium",
     "stephen-the-first-martyr",
     "vitalius-of-corfu",
-    "zeno-of-corfu"
+    "zeno-of-corfu",
+    "murin-of-corfu"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Апп. от 70-ти Иасона и Сосипатра , Керкиры девы и иных, с ними пострадавших (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of five, and the Russian calendar keeps the whole Corfu company on this day where the Greek keeps it on 29 Απριλίου. The line is one line naming three people and then «и иных, с ними пострадавших» — and others who suffered with them — which enumerates nobody and is not a folder; the twelve who suffered with them are named in the day's third line instead and are upgraded in this batch and the next. The name link behind «Иасона» heads «Святитель Иасон, епископ Тарсийский, апостол от 70-ти», which gives the office this folder already carries and the name «Иасон» with nothing after it, so the ru form stored here is the bare forename. The day page prints two hymns under «апостолов», a troparion of the apostles in the plural and a kontakion that names Jason and Sosipater by name; both are added here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -142,9 +158,50 @@
         "text": "Illumined by the teachings of Paul, you became lights of the whole world, O thrice-blessed ones; for you shine upon the world for ever with wonders — Jason, the fount of healings, and Sosipater, the glory of the martyrs of Christ. O God-bearing apostles, protectors of those in straits, entreat God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь апостолов», глас 3, under «Молитвы» on the day page for 28 апреля ст. ст. It is a common of apostles, printed in the plural and under no personal name, and it is this day's apostles' own service (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, pray to the merciful God, that He grant forgiveness of offences unto our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явистеся, яко звезды пресветлыя,/ просвещающе всю вселенную светом проповедания,/ апостоли Божественнии/ Иасоне и Сосипатре,// спасайте верою чтущих вас.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак апостолов», глас 4, under «Молитвы» on the day page for 28 апреля ст. ст. It names Jason and Sosipater by name in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ye have shone forth as stars most radiant, enlightening the whole world with the light of your preaching, O divine apostles Jason and Sosipater: save those who honour you with faith.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 апреля ст. ст. closes «(I)», the first century, for the three it names and the company with them; its life page life946 gives him no year of death at all, only that the apostles reached Corfu «в 63 году» and lived there «до глубокой старости», to a great old age. The century is the only year-bearing statement either page makes about him."
+    }
   }
 }

@@ -15,6 +15,11 @@
       "form": "Јакисхол",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог's entry for 28. април ст. ст., the second of the seven in a bare list with no rank word and no epithet on any of them. Corfu, which this corpus's English name keeps, is the entry's setting and not in the list."
+    },
+    {
+      "form": "Иакисхол Керкирский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 866, «Иакисхол Керкирский, мч.», with the rank word after the comma left off. The day's own line declines the forename alone, so the toponymic — of Corfu — is read off the name link, where the calendar prints it. Measured against the gate's own key function before it was written: 'иакисхол керкирскии' has no other holder in the corpus."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Мчч. Саторния , Иакисхола , Фавстиана , Ианнуария , Марсалия , Евфрасия , Маммия , Мурина , Зинона , Евсевия , Неона и Виталия (ок. 63).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of five, ONE LINE NAMING TWELVE MEN, and he is the second of them. ELEVEN OF THE TWELVE ALREADY HAD FOLDERS and this batch upgrades all eleven; the twelfth, «Мурин», had none and arrived in batch ru-04-28-1. `day-candidates.mjs` listed only seven of the eleven for this menologion day, because the corpus keeps `zeno-of-corfu`, `eusebius-of-corfu`, `neon-of-corfu` and `vitalius-of-corfu` on the menologion's 29/4; all four were found with `ls -d saints/*corfu*`, which is the check BRIEF-RUSSIAN §5 names for a folder standing on a different menologion day. THE DAY PAGE PRINTS NO HYMN UNDER ANY OF THE TWELVE: its four hymns are a troparion and a kontakion of the apostles and a troparion and a величание of the bishop of Turov. NO `related` ROW TO «Мурин» WAS WRITTEN: the Russian life has him die alone at the door of the maiden's prison, healed and taught by her and not by the apostles, and this corpus's Corfu rows follow the sub-groups the passion itself makes — the seven of the cauldron to one another, the four of the fire to one another, and all eleven to the two apostles. Whether all twelve should be related to one another on the strength of «и иных, с ними пострадавших» is an author question and nothing was written on it. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -71,5 +86,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 63,
+      "latest": 63,
+      "display": "about 63",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 апреля ст. ст. closes «(ок. 63)», about 63, for the twelve martyrs it names, and its life page life946 says the apostles reached Corfu «в 63 году», the martyrdoms following on the same mission. The folder had no year of any kind before. No day or month of death is given anywhere and none was inferred."
+    }
   }
 }

@@ -11,6 +11,11 @@
       "form": "Διόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιοι Διόδωρος και Ροδοπιανός ο Διάκονος», with the rank word left off."
+    },
+    {
+      "form": "Диодор Афродисийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 606, «Диодор Афродисийский (Карийский), мч.», with the rank word left off and the parenthesis left out of the form. THE PARENTHESIS HERE IS NOT A SURNAME but a second toponymic — «Карийский», of Caria, the province Aphrodisias stood in — which the calendar prints as an alternative and which is recorded here rather than stored. The day's own line declines the forename alone. The bare «Диодор» would reach nine Diodorus folders in this corpus, which is why the toponymic is kept: measured against the gate's own key function, 'афродисиискии диодор' has no other holder."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Мчч. Диодора и Родопиана диакона (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of eight, one line naming two men, with a name link each and both pointing at one life page, life953. `day-candidates.mjs` DID NOT LIST EITHER OF THEM, because this corpus keeps both on the menologion's 3 May, where the Greek and Romanian calendars have them, and the scan asks only about 29/4; they were found by `ls -d saints/*diodor*` and `ls -d saints/*rodopian*`, which is the check BRIEF-RUSSIAN §5 names for a folder standing on a different menologion day. THEY ARE THE SAME TWO MEN: the folder's `related` already pairs him with `rodopianus`, and life953 is four lines long and says the same four things saint.gr says — a Diodorus and a Rhodopianus who was a deacon, under Diocletian, at Aphrodisias in Caria, stoned for spreading the faith among the heathen. HIS `dates` DID NOT MOVE: the folder holds a flat 302 off saint.gr's «(302 μ.Χ.)», and this line gives only the reign, «(284-305)», which is wider and not narrower. Widening to the whole reign would displace a year that was read. The day page prints no hymn under either name."
     },
     {
       "church": "romanian",

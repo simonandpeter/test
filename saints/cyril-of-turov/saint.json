@@ -13,6 +13,11 @@
       "form": "Κύριλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Απριλίου, «Όσιος Κύριλλος Επίσκοπος Τούρωφ», with the rank word and the see left off."
+    },
+    {
+      "form": "Кирилл Туровский",
+      "lang": "ru",
+      "note": "The form days.pravoslavie.ru's own life page life6673 titles him with, «Святитель Кирилл Туровский, епископ», with the rank words taken off; the name page 1232 and life948 set the toponymic inside the office instead, «Святитель Кирилл, епископ Туровский». The day's line declines him «Кирилла , еп. Туровского». The bare «Кирилл» has many holders in this corpus, so the toponymic is kept: measured against the gate's own key function, 'кирилл туровскии' has no other holder."
     }
   ],
   "related": [],
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr's whole account is of a Russian saint and the Russian calendar is very likely to keep him, but that page was not read and this row does not guess it."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Свт. Кирилла , еп. Туровского (ок. 1183).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of five, and the one Russian saint on it. Index 1232 serves two readings of him, life6673 and life948, and both head «Дни памяти: 28 апреля , 8 июня (Белорус.) , 8 июня»; the 28 апреля page is the one that lists him and is the day recorded here, and THE TWO 8 июня DAYS WERE NOT CHECKED AGAINST THEIR OWN DAY PAGES — one of them is marked Белорус., the Belarusian commemoration. HIS EXISTING `dates` WERE NOT TOUCHED AND THE SOURCES DISAGREE: the folder holds a birth of 1121 to 1130, read off saint.gr's «την τρίτη δεκαετία του 12ου αιώνα», the third decade; both Russian readings say «в 30-х годах XII в.», the 1130s, which is the fourth decade and does not overlap the folder's interval at the top. Widening to 1121–1140 would invent an interval neither source gives. The death the folder holds is a flat 1183 and this calendar says «около 1183» and «28 апреля около 1183 г.», which is the same year less firmly, so nothing moved there either. The day page prints a troparion for him, added here, and a «Величание» which the schema has no kind for and which is therefore not in this folder."
     },
     {
       "church": "romanian",
@@ -66,5 +81,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Благочестия ревнителю и рачителю,/ иноков и столпников похвале,/ святителю Туровския паствы, преславне,/ златословесный учителю,/ светлым учением богоразумия своего просветивый концы русския,/ в молитве к Богу благодатный грешников споспешниче,/ Кирилле Богомудре, моли Христа Бога/ утвердитися нам, соотечественником твоим,/ во Православии, благочестии и единомыслии.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Кирилла, епископа Туровского», глас 4, under «Молитвы» on the day page for 28 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Zealot and lover of godliness, praise of monks and of stylites, most glorious hierarch of the flock of Turov, teacher of the golden word, who hast enlightened the ends of the Russian land with the bright teaching of thy knowledge of God, gracious helper of sinners in prayer to God: O God-wise Cyril, entreat Christ God that we thy countrymen may be established in Orthodoxy, in godliness and in oneness of mind.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
