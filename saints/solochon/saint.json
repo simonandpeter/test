@@ -16,6 +16,11 @@
       "form": "Солохон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 17. мај ст. ст., „Свети мученик Солохон.“ Свети is not a rank; мученик is the `martyr` this folder carries in `types`; strip them and the bare forename is left, which is all the heading gives. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
+    },
+    {
+      "form": "Солохон Халкидонский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Солохон Халкидонский, мч.», with the rank abbreviation left off and the place epithet kept — Chalcedon is where the life has the regiment sent and the three of them tried. The day's own line declines the three together, «Мчч. Солохона , Памфамира и Памфалона воинов (284-305).» `fk.mjs` on «Солохон Халкидонский» returned NONE before the write."
     }
   ],
   "related": [
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Мчч. Солохона , Памфамира и Памфалона воинов (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same three soldiers of the regiment of the tribune Campanus, and this folder already carries the other two as `related` rows. **`dates` were not touched and the Russian is wider, not narrower.** The folder carries 298 off the Охридски пролог; this calendar dates them only by the reign, «в царствование императора Максимиана (284–305)», and the day line prints that span — so 298 falls inside it and nothing is contradicted or widened. The Russian is an Egyptian by birth, which this folder's other books do not say, and it has the martyrdom at Chalcedon, where the tribune's regiment was sent. The day page prints no hymn for the three. azbyka.ru was not read."
     },
     {
       "church": "romanian",

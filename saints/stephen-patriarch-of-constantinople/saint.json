@@ -17,6 +17,11 @@
       "form": "Стефан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 17. мај ст. ст., „Свети Стефан, патријарх цариградски.“ Свети is not a rank; „патријарх цариградски“ is the rank and the see, which this corpus puts in `types` as `patriarch` and in `office` as Patriarch of Constantinople, and **stripping a rank and a see to reach the stored form is the reading BRIEF-SERBIAN.md §6 asks be said in the note** — here it leaves a bare forename with nothing beside it, the father, the brother, Photius and the years all being in the body. **So this is a deliberate twelfth joining of the largest fold this corpus has in Cyrillic**: `foldchk.py` returned eleven folders holding „Стефан“ before a line was drafted, and the plain gate run already prints them as one `?` row. There is no fuller form on the page to prefer, and a form a reader builds is what §6 forbids. The fold is read in this batch's commit message."
+    },
+    {
+      "form": "Стефан Константинопольский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Святитель Стефан Константинопольский, патриарх», with «Святитель» and the trailing «патриарх» left off — the latter is the `patriarch` this folder carries in `types`, with the see in `office`. The day's own line declines him «Свт. Стефана , Патриарха Константинопольского (893).» `fk.mjs` on «Стефан Константинопольский» returned NONE before the write; the corpus's read fold «стефан», of thirteen holders, already counts this folder among them through a shorter form, and storing a longer string adds no member to it."
     }
   ],
   "related": [
@@ -42,8 +47,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Свт. Стефана , Патриарха Константинопольского (893).»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: the younger son of the emperor Basil the Macedonian, brother of Leo the Wise, raised to the see of Constantinople in 886 when Photius had to leave it, dead in 893. `dates` were not touched — the folder carries a birth of 867 and a death of 893 off saint.gr, and this page gives the same death year and no birth. The Russian adds the burial place, the Sikellion monastery, and says he was watchful over his flock, merciful, a defender of the defenceless, a carer for widows and orphans and marked by extreme abstinence. His life page gives one day only, «17 мая». The day page prints no hymn for him. azbyka.ru was not read."
     },
     {
       "church": "romanian",

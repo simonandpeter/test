@@ -16,6 +16,11 @@
       "form": "Памфалон",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог's second entry for 17. мај ст. ст., „То исто учинише и два његова друга: Памфамир и Памфалон“; свети, which the next sentence puts before it, is not a rank. **It is a different form of the name from the one this folder is named for** — Памфалон against the Greek «Παμφυλών» — and it is the very variant this folder's life already records saint.gr as giving, „also written Pamphalon or Pamphalion“. Stored exactly as the Prologue prints it. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language, and the only neighbouring fold in the gate's rows is `? \"памфил\" — pamphilus-of-caesarea, pamphilus-the-martyr`, which this form does not join."
+    },
+    {
+      "form": "Памфалон Халкидонский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Памфалон Халкидонский, мч.», with the rank abbreviation left off and the place epithet kept. The day's own line declines the three together, «Мчч. Солохона , Памфамира и Памфалона воинов (284-305).» `fk.mjs` on «Памфалон Халкидонский» returned NONE before the write."
     }
   ],
   "related": [
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Мчч. Солохона , Памфамира и Памфалона воинов (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same three soldiers; this folder already carries the other two as `related` rows. **`dates` were not touched: the folder has none and the Russian gives no year of its own**, only the reign «в царствование императора Максимиана (284–305)» which the day line prints as a span; a reign is not a death year. The Russian spells him Памфалон, which is the form this folder's slug and display name already follow, and has him die with the second of the three under the first torture, before their leader's long ordeal. The day page prints no hymn for the three. azbyka.ru was not read."
     },
     {
       "church": "romanian",
