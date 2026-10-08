@@ -1,0 +1,63 @@
+{
+  "slug": "serapia-of-antioch",
+  "display_name": "Serapia of Antioch",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Серафима",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. јул ст. ст., „Св. муч. Серафима.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder carries, both left off by BRIEF-SERBIAN §6, and the heading gives nothing else at all, so the bare forename is the whole of the form. «of Antioch» in the display name is not stored: the body has «Девојка из Антиохије», a girl FROM Antioch, which is a prepositional phrase and not an adjective, and a form assembled out of a heading and a body is not stored. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Серафима» returns the key «серафима» at one holder, `seraphima-abbess-martyr-1918`, whose own single stored form is the identical string under `lang: ru`. The fold therefore becomes two wide with this form and the key «серафима seraphima-abbess-martyr-1918 serapia-of-antioch» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. No earlier key for this string existed, because one holder is no collision."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "117–138",
+      "basis": "attested",
+      "note": "The entry’s last sentence dates her death by a reign whose years it prints itself: «Пострада св. Серафима у време цара Адријана (117 – 138).» — she suffered in the time of the emperor Hadrian, 117 to 138. The bounds are that reign and nothing narrower; the page gives no year of her birth, no year of her death and no other mark of time anywhere."
+    }
+  },
+  "related": [
+    "sabina-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 29 июля ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for 29 iulie, which is the page for this menologion number — not 11 august, which merely shares her civil date in 2026. The corpus already keeps three folders off that Romanian day, `callinicus-of-cilicia`, `theodota-with-her-three-sons` and `eustathius-of-mtskheta`, and none of them is this woman; whether doxologia prints her there was not looked at."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for 29 Ιουλίου, which is the page for this menologion number. The corpus holds twelve folders on that number and none of them is this woman."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.08.2026 (29. јул ст. ст.) — „Св. муч. Серафима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (§4), and the only arrival of the day. THAT NO FOLDER HOLDS HER WAS GREPPED AND NOT INFERRED. `fk.mjs` on «Серафима» returns one holder, the Russian new-martyr abbess of 1918; on «Серафима Антиохијска», on «Serapia» and on «Serapia of Antioch» it returns NONE. `ls -d saints/seraph*` lists twenty-five folders, of which three are women — `seraphima-abbess-martyr-1918` (1918), `seraphima-gorshkova` (1937) and `seraphima-of-sezenovo` (born 1806) — all three modern Russians, and the other twenty-two are men named Seraphim. `grep -ril` for `Serapia`, `Σεραπία` and `Серапи` over every `saint.json` and every `life.md` returns no folder of her own; the menologion scan for 29/7 lists twelve folders and she is not among them. THE IDENTIFICATION, AND IT IS THIS DAY’S ONE REAL READING. This corpus’s own `sabina-of-rome` — the Roman noblewoman kept by the Romanian calendar on 29 august, beheaded under Hadrian about 126 — has a life that says in words: «She owed her conversion to her servant Serapia, a devout Christian from Antioch», and «She was beheaded under Hadrian, on 29 August in about the year 126, a month after her servant Serapia had suffered the same death for Christ.» The Prologue’s entry here matches that on five independent particulars and not on a name: a girl of Antioch; living in the house of «неке Савине, сенаторке», a certain Savina, a senator’s lady; who «коју приведе вери Христовој», brought that lady to the faith of Christ; the reign of Hadrian; and beheading, after which «Благочестива Савина чесно погребе њено тело», the pious Savina honourably buried her body — a month before the 29 August on which the other folder has Sabina herself beheaded. SO THE ENGLISH DISPLAY NAME IS «Serapia» AND NOT «Seraphima», because that is the form this corpus already prints for her in the other folder’s prose and the one an English reader would look up; the Serbian «Серафима» the book prints is stored as the name form, and the correspondence of the two strings is recorded here and is not what the identification rests on. `related` rows run both ways with `sabina-of-rome` in this same commit, and that folder’s existing prose mention of Serapia is linked in the same pass. NO `locations`: Antioch is a prepositional phrase in the body and Sabina’s house is not placed at all, and no coordinate is drawn off either. No `office`. The three young men sent to defile her, the angel, and «Вирил» the persecutor of Christians who was blinded by the flying piece of his own staff have no folders and are left in the book’s Cyrillic where they are not translated. The Prologue prints no hymn; the day carries only Bishop Nikolai’s verse, and that verse is on this very woman — twenty-four lines of it — which does not make it a troparion (BRIEF-SERBIAN §3)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

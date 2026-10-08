@@ -11,6 +11,11 @@
       "form": "Ευδόκιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Ιουλίου, «Όσιος Ευδόκιμος ο Δίκαιος», with the rank word and the byname left off. The page glosses the name from ευ + δοκώ: the well-approved and praiseworthy, the glorious one."
+    },
+    {
+      "form": "Евдоким",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. јул ст. ст., „Св. Евдоким.“ — «Св.» is “saint” and not a rank (BRIEF-SERBIAN §5), and the heading gives nothing else at all, so the bare forename is the whole of the form. «of Cappadocia» in the display name stays out of it: the body has «Рођен у Кападокији», born IN Cappadocia, a prepositional phrase and not an adjective. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Евдоким» returns the key «евдоким» with NO holders, so this form is no collision at any width and no fold key is owed for it."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.08.2026 (31. јул ст. ст.) — „Св. Евдоким.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (§4). THE IDENTIFICATION IS THE DOSSIER AND NOT THE NAME: born in Cappadocia; a young officer in the reign of the emperor Theophilus, whose years this book prints as 829–842, exactly as saint.gr prints them; dead in his thirty-third year; a relic found incorrupt and fragrant; and the relic carried to Constantinople — four points the folder already carries and one it does not. The folder’s Romanian and Greek rows are already 31 July, the same menologion number, and its `serbian` row was `undocumented`, so nothing was moved. `dates` UNTOUCHED, AND THE TWO BOOKS AGREE EXACTLY: the folder’s `floruit` of 829–842 is saint.gr’s reading of the same reign with the same printed years, and this book gives nothing narrower, so the object is not rewritten. The thirty-third year is AN AGE AND NOT A YEAR and no birth is derived from it, which is this wave’s standing refusal. `types` UNTOUCHED: this book gives him no rank word at all — «Св.» is “saint” — and calls him «овога праведнога Евдокима», this righteous Eudocimus, which is the `righteous` the folder already holds; «млад официр» and «војвода Кападокијски» are a commission and a command and not types, and `soldier` was NOT added, because the entry’s whole point is that he was a soldier who lived by the Gospel and the corpus’s own reading of him is the civil office, not the arms. No `locations`: Cappadocia is a birthplace, Constantinople is where the relic went, and neither is written as a coordinate. WHAT THE ENTRY ADDS AND THE OTHER TWO BOOKS DO NOT HAVE: the names of his parents, «Василија и Евдокије», whom the closing sentence also makes the builders of the new church of the Mother of God in Constantinople where the relic was laid; the commission as «војвода Кападокијски», governor of Cappadocia, given him by the emperor for his virtues; the discipline of his life in detail — the unspotted chastity, the avoiding of speech with any woman but his mother, the mercy to the wretched, the reading of the sacred books, the prayer, and the shunning of vain amusements and idle talk; the sentence «Усред метежа и сујете светске беше као крин усред трња и као злато усред огња», that amid the turmoil and vanity of the world he was as a lily among thorns and as gold in the fire; two healings at the grave, a madman and a palsied child; and that it was his MOTHER who after eighteen months opened the coffin, where the Greek page gives the translation without saying whose hands opened it. The stored Serbian form is the heading’s bare forename, and `fk.mjs` measures «Евдоким» at NO other holder, so it widens no fold at any width. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [

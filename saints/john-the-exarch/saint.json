@@ -1,0 +1,53 @@
+{
+  "slug": "john-the-exarch",
+  "display_name": "John the Exarch of Bulgaria",
+  "sex": "male",
+  "types": [
+    "presbyter",
+    "theologian"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 892,
+      "latest": 896,
+      "display": "892–896",
+      "basis": "traditional",
+      "note": "The entry dates him by a reign whose years it prints itself: «Знаменити свештеник и богослов бугарски из времена цара Симеона (892.-896.).» — a notable Bulgarian priest and theologian from the time of the emperor Simeon, 892 to 896. The bounds are those years as the page prints them and nothing of his own; it gives no year of birth, no year of death and no other mark of time. The years are the page’s and are not corrected here: a reader who knows the Bulgarian regnal lists longer than this page prints them has a question for the author and not a licence to alter a source."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 31 июля ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for 31 iulie, which is the page for this menologion number — not 13 august, which merely shares his civil date in 2026. The corpus already keeps `eudocimus-of-cappadocia` and `joseph-of-arimathea` off that Romanian day and neither is this man."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for 31 Ιουλίου, which is the page for this menologion number. The corpus holds four folders on that number and none of them is this man."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.08.2026 (31. јул ст. ст.) — „Св. Јован егзарх.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, quoted whole with its closing full stop (§4), and the only arrival of the day. THAT NO FOLDER HOLDS HIM WAS GREPPED AND NOT INFERRED FROM A SWEEP, and the search was built for a heading whose second word is an office rather than a by-name. `ls -d saints/john*` is **233 folders**, which no reading can go through by eye, so three independent searches were made instead. `fk.mjs` returns NONE on «Јован егзарх», on «John the Exarch» and on «John the Exarch of Bulgaria», and eleven holders on the bare «Јован» — none of them a Bulgarian of the ninth century. `grep -ril` for `Exarch`, `Hexaemeron`, `Shestodnev`, «Шестоднев», «егзарх» and «Экзарх» over every `saint.json` and every `life.md` in the corpus returns twenty-odd files, and in every one of them the word is an office held by somebody else in prose — `john-kaloktenes`, `hierotheus-of-hungary`, `athanasius-of-christianoupolis` and the rest — with no folder of this man and no mention of either translation. `grep -ril bulgar` over the 233 John folders returns `john-koukouzelis` the fourteenth-century hymnographer, `john-of-rila` the hermit who died in 946, `john-of-zedazeni` and `john-the-bulgarian` the new-martyr born 1765, and none of those four is a priest and theologian of the Simeon years. THE NAME FORM IS DELIBERATELY REFUSED AND THE FOLDER SHIPS WITH NO `names` AT ALL. «егзарх» is an office and not a by-name — the body itself calls him «Знаменити свештеник и богослов бугарски», a notable priest and theologian, and never says he governed anything — so BRIEF-SERBIAN §6 strips it, and what the stripping leaves is the bare «Јован», which `fk.mjs` measures at **eleven holders**. A form at eleven is refused rather than written, which is this block’s standing practice and the reason `john-the-despot` and `stephen-the-first-martyr` carry no Serbian form either: the fold is the corpus’s instrument and a reader does not blunt it to store a string the source shares out among eleven men. The office is not written into `office` either: `tests/i18n.test.mjs` wants every `office` string in all four locale packs and «Exarch» is in none of them, which is four translations a reader should not invent (BRIEF-ADDENDUM §4). It is in the display name, where the corpus puts what distinguishes a man, and «of Bulgaria» there is the body’s own «бугарски» turned round. `types`: «свештеник» is `presbyter` and «богослов» is `theologian`, both off the body and both in the sanctioned vocabulary. NO `related`, AND TWO BOOKS ARE LEFT IN CYRILLIC FOR A REASON. The entry names «Шестоднев Василијев» and «Богословље Дамаскиново», the two works he put into Slavonic, and the corpus holds both of their authors — but translating a man’s book six hundred years after him is not the kind of tie a `related` row asserts, any more than sharing a day is (BRIEF-SERBIAN §6), so the two titles stay in the book’s own Cyrillic in the life and no row is made in either direction. The emperor «Симеон» is a ruler and no folder. NO `locations`: «бугарски» is an adjective of a people, no city is named anywhere in the entry, and no coordinate is drawn off either. The Prologue prints no hymn; the day carries only Bishop Nikolai’s verse, and that verse is on Joseph of Arimathea alone and says nothing of this man (BRIEF-SERBIAN §3)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

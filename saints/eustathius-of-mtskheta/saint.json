@@ -6,6 +6,11 @@
       "form": "Eustație din Georgia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 iulie, «Sfântul Mucenic Eustație din Georgia», with the rank word left off."
+    },
+    {
+      "form": "Јевстатије Мцхетски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. јул ст. ст., „Св. муч. Јевстатије Мцхетски.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder already carries, both left off by BRIEF-SERBIAN §6; «Мцхетски» is an adjective in the heading itself and not a phrase read out of the body, so it stays and the form is the fullest the calendar gives. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Јевстатије Мцхетски» returns the key «мцхетски јевстатије» with NO holders, so this form widens no fold. The bare «Јевстатије» is a declared key at two holders and was deliberately not written here: the heading does not print it bare."
     }
   ],
   "sex": "male",
@@ -19,6 +24,13 @@
       "display": "575–600",
       "basis": "attested",
       "note": "doxologia.ro dates his move to Mtskheta by a reign it prints with its years: «În timpul domniei împaratului georgian Guram Kuropalat (575-600), la vârsta de 30 de ani, Eustație și-a luat familia și s-a mutat în vechea capitala a Georgiei, cetatea Mtskheta.» The page gives no year for his birth and none for his death."
+    },
+    "death": {
+      "earliest": 589,
+      "latest": 589,
+      "display": "589",
+      "basis": "attested",
+      "note": "The Охридски пролог for 29. јул ст. ст.: «Мучен за Христа и посечен у Тифлису 589. год.» — tortured for Christ and beheaded at Tiflis in the year 589. It falls inside the 575–600 the `floruit` beside it carries off doxologia, which dates his move to Mtskheta and not his death, so the two readings agree; the `floruit` is carried forward here word for word because this key replaces the whole `dates` object."
     }
   },
   "attestations": [
@@ -48,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.08.2026 (29. јул ст. ст.) — „Св. муч. Јевстатије Мцхетски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, quoted whole with its closing full stop (§4). THE IDENTIFICATION IS THE HEADING AND THE DOSSIER TOGETHER: «Мцхетски» is Mtskheta, and the entry agrees with the folder point for point — a Persian; thirty years old when he came to the city of Mtskheta; baptised there after seeing how the Christians lived and believed; tortured for Christ and beheaded; his relics in the cathedral church at Mtskheta, which the folder’s life already has as beneath the altar table of Svetitskhoveli. The folder’s Romanian row is already 29 July, the same menologion number, and its `serbian` row was `undocumented`, so nothing was moved. WHAT THE ENTRY ADDS, AND THE TWO BOOKS DO NOT CONTRADICT EACH OTHER: the village he came from, «родом из једнога села, Арбукета»; that he was beheaded at Tiflis, which doxologia does not place at all; the year 589; and that his relics give healing to those who believe. `dates`: the folder’s `floruit` of 575–600 is doxologia’s, read off a reign with its years printed, and it is CARRIED FORWARD WORD FOR WORD because `upgrade.py` replaces the whole `dates` object; a `death` of 589 is added beside it off «посечен у Тифлису 589. год.», and 589 falls inside 575–600, so the two readings agree and neither was chosen over the other. `types` UNTOUCHED: «муч.» is the `martyr` already held. No `locations`: Arbuketa, Mtskheta and Tiflis are a birthplace, a city he moved to and a place of execution, and none is written as a coordinate. The stored Serbian form is «Јевстатије Мцхетски», the heading’s name with its by-name and without the rank; `fk.mjs` returns NONE for it, so it is no fold at any width, and the bare «Јевстатије» — a read key at two holders — is NOT what was written. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

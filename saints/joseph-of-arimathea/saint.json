@@ -11,6 +11,11 @@
       "form": "Ιωσήφ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Ιουλίου, «Άγιος Ιωσήφ ο από Αριμαθαίας», with the rank word and the place clause left off."
+    },
+    {
+      "form": "Јосиф Ариматејски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. јул ст. ст., „Св. Јосиф Ариматејски.“ — «Св.» is “saint” and not a rank (BRIEF-SERBIAN §5); «Ариматејски» is an adjective in the heading itself and not a phrase read out of the body, so it stays and the form is the fullest the calendar gives. «Благообразни», the noble Joseph, is the first word of the BODY and not of the heading, and is an epithet of the hymns rather than a by-name, so it is not stored. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Јосиф Ариматејски» returns the key «ариматејски јосиф» with NO holders, so this form widens no fold; the bare «Јосиф» was not written and was not needed, the heading printing the by-name itself."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.08.2026 (31. јул ст. ст.) — „Св. Јосиф Ариматејски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop (§4). THE IDENTIFICATION NEEDS NO READING BEYOND THE HEADING: «Ариматејски» is Arimathea, and the body cites Matthew 27 and John 19 for him by chapter and verse. The folder’s Romanian and Greek rows are already 31 July, the same menologion number, and its `serbian` row was `undocumented`, so nothing was moved. NO `dates`, AND NONE IS DERIVED FROM THE GOSPEL: the entry gives no year of any kind, as neither of the other two books does, and the folder’s `dates` stays `null`. `types` UNTOUCHED: the entry gives no rank word — «Св.» is “saint” — and «Благообразни», the noble or comely Joseph, is the hymns’ epithet for him and not a rank; the `righteous` the folder holds stands. No `locations`: Arimathea is in the display name, the tomb is in a garden the entry does not place, and England is named without a place in it. WHAT THE ENTRY ADDS, AND IT IS A WHOLE EPISODE THE OTHER TWO BOOKS DO NOT HAVE: that he was «члан Синедриона јеврејског», a member of the Jewish Sanhedrin, with the two scripture citations beside it; that FOR THE BURIAL HE WAS PUT IN CHAINS BY THE JEWS AND THROWN INTO PRISON; that THE RISEN LORD APPEARED TO HIM THERE AND ASSURED HIM OF HIS RESURRECTION; that he was then released and driven out of his homeland; and that he went through the world preaching the Gospel of Christ and brought that good news to England too, where he reposed in the Lord — which the Greek page had only as a parenthesis, «most probably in England», and which this book states flatly. NO `related` ROW AND NO NEW LINK: the entry names «Никодимом», Nicodemus, as the other man who took the body down from the cross, and the folder’s existing life already names him unlinked in both of its accounts, because the corpus holds no folder for the Nicodemus of the Gospel — the nine `nicodemus-*` folders are all later saints. The folder’s one `related` row, `mary-magdalene`, is untouched. No new name form was written: the heading gives «Јосиф Ариматејски», which `fk.mjs` measures at NO holder, and it is stored as the fullest form the calendar gives. The Prologue prints no hymn; the day’s verse is on this very man, thirty-odd lines of it, and it is still not a troparion and does not go into `hymns` (BRIEF-SERBIAN §3)."
     }
   ],
   "text": {
