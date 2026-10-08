@@ -16,6 +16,11 @@
       "form": "Александра",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's entry for 23. април ст. ст., „жена царева Александра“ — **out of the entry's body and not out of its heading**, which names the great martyr alone. The form is the nominative the entry itself prints, in a list of those who received the faith; the trade or station named beside it is left off, as is the companionship or day clause this corpus keeps in the English display name."
+    },
+    {
+      "form": "Александра Римская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 23 апреля ст. ст., name page 2379, «Мученица Александра Римская», with the rank word left off; the day’s own line gives «Мц. царицы Александры», the rank, the style царица and the genitive forename, and no epithet. Measured against the gate’s own key function before it was written: 'александра римская' has no other holder in the corpus, where the bare «Александра» is already held."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Мц. царицы Александры (314).»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "The day’s fourth entry. The name link, page 2379, is titled «Мученица Александра Римская» and gives «День памяти: 23 апреля» and no other day. THE CALENDAR PRINTS TWO ACCOUNTS OF HER DEATH AND THEY DO NOT AGREE, AND `dates` WAS NOT CHANGED. life6397 says she fainted on the road to execution, leant against the wall of a building and quietly died, «Ее мирная кончина последовала 21 апреля 303 года» — a peaceful end on 21 April 303, her memory kept with the great-martyr on the 23rd. life919, «Святые царицы Александра и Валерия», says the death written into his acts was only an apparent one, «о мнимой кончине которой было записано в мученических актах святого Георгия», and that she was crowned a martyr years later, in 314, beheaded with her daughter Валерия by Licinius and their bodies thrown into the sea. THE DAY’S OWN LINE TAKES THE SECOND AND HEADS HER «(314)»; this folder’s year is 303, saint.gr’s, which agrees with the first. A year is one of the nine things a machine may not decide and the source itself prints both, so both are set out in the life and the interval stands as the Greek wave wrote it. REPORTED TO THE AUTHOR. The day page prints one hymn under her name and it is on this folder now, which had none. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -96,5 +111,24 @@
     "valerius",
     "donatus-23-april",
     "therinus"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Царства земнаго славу презревши,/ Единаго Христа, нас ради распятаго, возлюбила еси/ и, Того мужественне исповедающи,/ венцем мученическим увенчалася еси,/ всеблаженная царице Александре./ Темже и ныне Престолу Царя славы на Небесех предстоящи,/ молися о спасении душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Тропарь мученицы царицы Александры», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "The second of the day’s four hymns and the only one not under the great-martyr’s name. Her own proper: the text names her, «всеблаженная царице Александре», and nobody else. It is the first hymn of any kind on this folder, which the Romanian and Greek calendars gave none. Copied whole off the page and checked back against it by whitespace-normalised match."
+      },
+      "english": {
+        "text": "Having despised the glory of an earthly kingdom, thou didst love Christ alone, who was crucified for our sake, and confessing Him manfully thou wast crowned with the martyr’s crown, O all-blessed queen Alexandra. Wherefore, standing now before the throne of the King of glory in the heavens, pray thou for the salvation of our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }

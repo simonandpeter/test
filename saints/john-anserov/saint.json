@@ -1,0 +1,62 @@
+{
+  "slug": "john-anserov",
+  "display_name": "John (Anserov)",
+  "names": [
+    {
+      "form": "Иоанн (Ансеров)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9593, «Иоанн (Ансеров), иерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname at all — «Сщмч. Иоанна пресвитера (1940).» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate’s own key function before it was written: 'ансеров иоанн' has no other holder in the corpus, where the bare «Иоанн» has many."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Иоанна пресвитера (1940).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Сщмч. Иоанна пресвитера (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry, on a day whose other six are the moveable Преполовение Пятидесятницы, the great-martyr George and his company, two icons of the Mother of God and Sophia of Kleisoura. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 9593, prints the title «Иоанн (Ансеров), иерей, сщмч.» and «Дни памяти: 26 января (Новомуч.) , 23 апреля» and nothing else. What it gives that the line does not is the surname «Ансеров» and the grade «иерей», priest, written out beside «сщмч.». 26 января is the general commemoration of the new martyrs and confessors, which is how `new-martyr` is read into `types`, and THAT DAY PAGE WAS NOT READ. NO FOLDER WAS FOUND FOR HIM: `grep -ril 'Ансеров'` over `saints/` returns nothing, and the gate’s own key function returns no holder for 'ансеров иоанн'. The day page prints four hymns, three for the great-martyr and one for the empress, and none under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 6 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 6 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

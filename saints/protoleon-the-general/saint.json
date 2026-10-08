@@ -11,6 +11,11 @@
       "form": "Πρωτολέων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Πρωτολέων ο στρατηλάτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Протолеон Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 23 апреля ст. ст., name page 1854, «Протолеон Никомидийский, мч.», with the rank abbreviation after the comma left off; the day’s own line gives only the genitive «Протолеона» and no city. Measured against the gate’s own key function before it was written: 'никомидиискии протолеон' has no other holder in the corpus."
     }
   ],
   "related": [
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Мчч. Анатолия и Протолеона (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "The day’s fifth entry, a line naming two men, of whom this is the second. The name link behind «Протолеона» is page 1854, titled «Протолеон Никомидийский, мч.», which GIVES HIM THE CITY THE LINE DOES NOT and heads «День памяти: 23 апреля» and no other day. It links one reading, life918, the life of the great-martyr and five of his company, and no notice of its own. `dates` WRITTEN WHERE THE FOLDER HAD NONE AT ALL: the line heads the pair «(303)», the year of the great-martyr’s own death on this day. The day page prints no hymn under his name. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru heads the line for 23 апреля ст. ст. «Мчч. Анатолия и Протолеона (303)», and life918 gives the day and year of the great-martyr he was beheaded beside — «Это было 23 апреля 303 года». He was put to the sword at once and without trial on the day of those torments, so the year is the same. The corpus’s first year of any kind for him: the folder held no `dates` object and the Greek calendar it was built from gives none."
+    }
   }
 }

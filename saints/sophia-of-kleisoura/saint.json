@@ -11,6 +11,11 @@
       "form": "Σοφία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Μαΐου, «Οσία Σοφία η εν Κλεισούρα ασκήσασα», with the rank word and the clause about Kleisoura left off."
+    },
+    {
+      "form": "София (Хотокуриду)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 23 апреля ст. ст., name page 14713, «София (Хотокуриду), прп.», with the rank abbreviation after the comma left off; the day’s own line gives only the genitive «Софии» and no surname. The surname is part of the name and stays, per BRIEF-RUSSIAN §2. Measured against the gate’s own key function before it was written: 'софия хотокуриду' has no other holder in the corpus, where the bare «София» would fold onto several."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 апреля ст. ст. — «Прп. Софии (1974).»",
+        "url": "https://days.pravoslavie.ru/Days/20260423.html",
+        "year": 2026,
+        "note": "The day’s sixth entry, and THE RUSSIAN CALENDAR GIVES HER NO LIFE: the line carries a link to her name and none to a reading, and the name page behind it, 14713, prints the title «София (Хотокуриду), прп.» and «День памяти: 23 апреля» and nothing else. What it gives that the line does not is the surname, Хотокуриду, which is the Russian spelling of the Χοτοκουρίδου this folder already carries out of the Greek and Romanian accounts, and which is the form stored here. The year 1974 is the folder’s already and `dates` was not changed. The day page prints no hymn under her name. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
