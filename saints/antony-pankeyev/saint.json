@@ -1,0 +1,70 @@
+{
+  "slug": "antony-pankeyev",
+  "display_name": "Antony (Pankeyev)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Антоний (Панкеев)",
+      "lang": "ru",
+      "note": "The day page's own `/name/9130.html` link carries in its `title` and as that page's heading «Святитель Антоний (Панкеев), епископ Белгородский, сщмч.», and the stored form is that with «Святитель» and the three trailing rank words left off — `bishop` and `hieromartyr` are in this folder's `types` and the see belongs in `office`, which carries the bare `Bishop` because BRIEF-ADDENDUM §4 records that «Bishop of Belgorod» would cost four locale translations a reader may not invent. The see is in the life. The day's own line declines him «Сщмчч. Антония , еп. Белгородского...» `fk.mjs` on «Антоний (Панкеев)» returned NONE before the write."
+    }
+  ],
+  "related": [
+    "mitrophan-vilgelmsky",
+    "alexander-eroshov",
+    "michael-deyneka",
+    "hippolytus-krasnovsky",
+    "nicholas-kulakov",
+    "nicholas-sadovsky",
+    "maximus-bogdanov"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of its line for 19 мая ст. ст., which is the year for all fourteen people that line names. His name page gives no year at all and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Сщмчч. Антония , еп. Белгородского, и с ним Митрофана , Александра , Михаила , Ипполита , Николая , Василия , Николая , Максима , Александра , Павла , Павла , Георгия пресвитеров и мч. Михаила (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "**The head of a company of fourteen the line names one by one, and therefore fourteen folders** (BRIEF.md §4). The line gives forenames and ranks only; the thirteen surnames are each in the name link behind that forename, and all fourteen name pages were fetched and read. **Every one of them is bare** — a heading, the grade, and «26 января (Новомуч.)» beside 19 мая, with two of them adding «8 июня (Петерб.)» — so there is no life page behind any of the fourteen and each folder says exactly what its line and its name link say. The 26 января is the synaxis of the new martyrs, a company's feast and not a second day. **The company's structure is the line's own**: he is named with his see and the other thirteen «и с ним», with him, so each of the thirteen carries him as a `related` row and he carries each of them. The six companions written in the next batch of this day were added to this `related` list in that batch's commit, because a `related` slug with no folder fails the manifest build. The day page prints no hymn for the company. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 June 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
