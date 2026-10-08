@@ -16,6 +16,11 @@
       "form": "Карп",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 26. мај ст. ст., „Свети апостол Карп“ — Свети is not a rank and апостол is the `apostle` this corpus puts in `types`; strip the two and the bare personal name is the whole of what the heading gives. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Карп», so this is the first folder to hold it, and the corpus keeps no other Carpus. The Greek form on this folder, «Κάρπος», and the Romanian «Carp» are the same bare name."
+    },
+    {
+      "form": "Карп",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link 1174, «Апостол Карп», with the rank word left off; the day’s own line gives the same in the genitive. The first of its two readings titles him «Священномученик Карп, апостол от 70-ти», which adds a rank and no name. The calendar prints no epithet for him anywhere, so the form is bare of necessity. `fk.mjs` before the write returned TWO holders for «карп» — `carpus-of-thyatira` and `carpus-the-apostle` — and the gate already READS that fold, its key being ‘карп carpus-of-thyatira carpus-the-apostle’ with a U+00B7 row. THIS FOLDER IS ALREADY ONE OF THE TWO, by way of its Serbian form, which is the identical string; membership is by folder and not by form, so the fold gains no holder, the key does not change and the read fold was not touched."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст. — «Апп. от 70-ти Карпа и Алфея (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line names him as one of the Seventy, which is what this folder’s display name says, and the folder’s Romanian, Greek and Serbian rows keep him on the same Julian day. The entry’s link is an index, id1174, serving two readings. HIS PAGES LIST A SECOND DAY: «Дни памяти: 4 января (70 ап.) , 26 мая», the first marked by the calendar itself as the synaxis of the Seventy Apostles and therefore not a feast of his own; one row per church is the schema, so it is recorded here and he does not render on it. `dates` WAS NOT WRITTEN: the folder has none, the line prints «(I)», and the two readings disagree about the manner and therefore about the time of his death, one dating nothing and the other naming Nero’s persecution; a century written here would have had to choose. THE TWO READINGS CONTRADICT EACH OTHER ABOUT HIS DEATH and both are in the paragraph: life6662 has him «с жестокостью убит иудеями (по другим источникам, он мирно отошел ко Господу)», cruelly killed by the Jews, or by other sources departing in peace; life1140 has him «скончался мирно в Берии (по другим источникам он принял мученическую кончину в гонение императора Нерона)», dying in peace at Berroea, or by other sources a martyr under Nero. The folder’s `martyr` type was not altered. `paul-the-apostle` WAS ADDED AS A `related` ROW in both directions: the first words of both readings are «Ученик и спутник св. апостола Павла», disciple and companion, and the detail that follows is the phelonion and the books left in his house at Troas, which is a relation the source makes and not a shared day. `dionysius-the-areopagite` already stood as a row and the Russian bears it out, the visit on Crete and the wonderful vision being its substance. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -142,12 +157,45 @@
         "rendered": "site"
       },
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Апостоле святый Карпе,/ моли Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст., «Тропарь апостола Карпа», глас 3 — the common of an apostle with his name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle Carpus, entreat the merciful God, that he may grant unto our souls the remission of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко звезду пресветлую,/ Церковь всегда стяжа тя,/ апостоле Карпе,/ чудес твоих многоподаванием просвещаема,// спаси верою чтущих память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст., «Кондак апостола Карпа», глас 4 — proper to him, and it names him",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most radiant star the Church has ever possessed thee, O apostle Carpus, being enlightened by the abundant giving of thy wonders. Save those who honour thy memory with faith.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
   },
   "related": [
-    "dionysius-the-areopagite"
+    "dionysius-the-areopagite",
+    "paul-the-apostle"
   ]
 }

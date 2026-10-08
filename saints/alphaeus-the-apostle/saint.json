@@ -16,6 +16,11 @@
       "form": "Алфеј",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 26. мај ст. ст., „Свети апостол Алфеј“ — Свети is not a rank and апостол is the `apostle` in `types`; the bare personal name is what is left. **Measured, and it is a fold of two told apart by the Prologue itself**: `foldchk.py` returns `[('alphaeus-martyr-10-may', 'sr')]` for «Алфеј», because **this same book keeps an «Алфеј» on its own Julian 10 May** — the martyr of the three brothers, whose `serbian` row a reader of this wave wrote off the Охридски пролог за 23.05.2026 — **and two commemorations on one calendar means two men**, which is exactly how this fold is told. So the identical string is stored a second time on purpose, and the two folders are kept apart by their days and their ranks, the 10 May man being `martyr` and this one `apostle`. **A third Alphaeus is already distinguished in this folder’s own life**, the brother of Alexander and Zosimas kept on 28 September, so the corpus now reads three men of the name and says so on each. **It is stored on this folder and not on `james-son-of-alphaeus`, although that folder’s Greek form «Ιάκωβος του Αλφαίου» carries the same name**, because the heading is this folder’s heading and a patronymic inside another saint’s name is not a form of this one. The Greek form here, «Αλφαίος», and the Romanian «Alfeu» are the same bare name."
+    },
+    {
+      "form": "Алфей Капернаумский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Алфей Капернаумский, апостол от 70-ти», with the two rank words after the comma left off. The epithet is the calendar’s own and names the town its life gives him, «происходил из галилейского города Капернаума»; the day’s own line gives only «Алфея». `fk.mjs` returned NONE for the form before the write, and the bare «Алфей» was not stored."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст. — «Апп. от 70-ти Карпа и Алфея (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line names him as one of the Seventy on the day this folder’s display name carries, and its Romanian, Greek and Serbian rows keep him on the same Julian day. The calendar gives the three of them — him, Abercius and Helen — ONE life page, life1141, of four sentences, titled «Апостол Алфей, мученики Аверкий и Елена». `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder had no `dates` object, and the century is the one the line itself prints, «(I)». `james-son-of-alphaeus` AND `matthew-the-apostle` WERE ADDED AS `related` ROWS in both directions: the page says «был отцом апостолов Иакова Алфеева и Матфея», he was the father of the apostles James son of Alphaeus and Matthew — a relation the source states outright. `abercius-martyr-26-may` and `helen-martyr-26-may` already stood as rows and the Russian bears them out, «по преданию, были детьми святого апостола Алфея», by tradition the children of the apostle Alphaeus. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -78,6 +93,17 @@
   },
   "related": [
     "abercius-martyr-26-may",
-    "helen-martyr-26-may"
-  ]
+    "helen-martyr-26-may",
+    "james-son-of-alphaeus",
+    "matthew-the-apostle"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century the Russian day line prints for the entry: «Апп. от 70-ти Карпа и Алфея (I).» The folder had no `dates` object before this row. The calendar’s life of him gives no year, no reign and no manner of death at all; the century is the whole of what it states."
+    }
+  }
 }

@@ -20,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст. — «Мчч. Аверкия и Елены (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "note": "The identification is the day and the company: the line pairs her with Abercius on the day this folder’s display name carries, and its Romanian and Greek rows keep the same pair on the same day. The calendar gives her, her brother and the apostle Alphaeus ONE page, life1141, and what it says of her is half a sentence: «Сестра его, святая Елена, была побита камнями» — his sister Helen was stoned to death. `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder had no `dates` object, and the century is the one the line itself prints, «(I)». NO `ru` NAME FORM WAS STORED, DELIBERATELY: the calendar’s name link gives only «Елена, мц.», a bare forename, and «елена» is the fold key THIS BRANCH WROTE on 05-21 for `helen-martyr-1943` and `helen-the-empress` — a third holder would widen a key two batches old, and a fourth would have been added five batches later by `helen-korobova`, whose form was withheld for the same reason. The three Helens this branch met are reported together to the author, who can key the wider fold in one pass. `alphaeus-the-apostle` and `abercius-martyr-26-may` already stood as `related` rows and the Russian bears both out. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -64,5 +74,14 @@
   "related": [
     "abercius-martyr-26-may",
     "alphaeus-the-apostle"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century the Russian day line prints for the entry: «Мчч. Аверкия и Елены (I).» The folder had no `dates` object before this row. The calendar gives no year and no reign; the century is the whole of what it states."
+    }
+  }
 }

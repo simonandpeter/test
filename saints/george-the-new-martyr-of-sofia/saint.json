@@ -3,20 +3,36 @@
   "display_name": "George of Sofia",
   "sex": "male",
   "types": [
-    "new-martyr"
+    "new-martyr",
+    "martyr"
   ],
   "names": [
     {
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Γεώργιος ο Νεομάρτυρας εκ Βουλγαρίας», with the rank word left off."
+    },
+    {
+      "form": "Георгий Новый, Софийский, Болгарский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Георгий Новый, Серб, Софийский, Болгарский, мч.», with the rank abbreviation and ONE of its four epithets left off. «Серб» was not stored because it is a nationality and because the calendar’s own life contradicts it in its first sentence, «родился в знатной болгарской семье» — born of a noble Bulgarian family — and a reader may not choose between them. The three kept are the epithet the whole corpus knows him by and the two places, both of which the life bears out. `fk.mjs` returned NONE for the form before the write, and the bare «Георгий» was not stored, this corpus holding a great many of that name."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст. — «Мч. Георгия Нового (1515).»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the name link heads him «Георгий Новый, Серб, Софийский, Болгарский, мч.» — of Sofia, which is this folder’s display name — and the life makes him born at Sredets, «ныне город София», under Turkish rule, in the reign of the sultan Selim the calendar dates 1512 to 1520. `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder had no `dates` object, and 1515 is the year the day line prints. NO BIRTH WAS WRITTEN though the page says his parents died when he was twenty-five: an age at a point the page does not date is not a year. `martyr` WAS ADDED to the folder’s lone `new-martyr`, off the line’s own «Мч.» and the name link’s «мч.». THE NAME LINK CALLS HIM A SERB AND THE LIFE CALLS HIM A BULGARIAN, and neither was made a field: «Серб, Софийский, Болгарский» against «родился в знатной болгарской семье». What the Russian adds and the paragraph carries: the parents Иоанн and Мария who were childless into old age, the baptism in the name of the great-martyr of 23 апреля, the education and the study of Scripture, the tafya thrown on the ground, the governor struck by his bearing and the promises from the sultan, the beating with staves, the drumming through the city with the cry «Не ругай Магомета», the fire he fell beside, the dogs’ carcasses thrown on him so that Christians should not find his remains, the sudden rain that put the fire out, the bright light over the place at nightfall, and the metropolitan Иеремия who found the body and carried it into the church of the great-martyr at Sredets. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -46,5 +62,96 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1515,
+      "latest": 1515,
+      "display": "1515",
+      "basis": "traditional",
+      "note": "The year the Russian day line prints for him: «Мч. Георгия Нового (1515).» The folder had no `dates` object before this row. The life gives no year of its own, but puts the suffering in the reign of the sultan Selim, «(1512 - 1520)», which contains it. No year of birth was written: the page says only that his parents died when he was twenty-five, and it does not date that."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "В терпении многоискуснем, блаженне мучениче Георгие,/ огнеискусную смерть претерпел еси/ и по кончине твоей венец от Христа нетленный/ с мученическими лики приял еси./ И ньше, на земли кротких достойно водворялся,/ Христа Бога о нас непрестанно моли,/ иже верою покланяющихся раце мощей твоих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст., the first «Тропарь мученика Георгия Нового, Софийского, Болгарского», глас 4 — proper to him, and it names him and the fire of his death. The day page prints FIVE hymns under this one heading in three and two, two troparia with the identical heading and a third marked «Ин»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In a patience well proved, O blessed martyr George, thou didst endure a death tried by fire, and after thine end thou didst receive from Christ an incorruptible crown with the companies of the martyrs. And now, dwelling worthily in the land of the meek, pray thou unceasingly to Christ God for us, who venerate with faith the shrine of thy relics.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Божественным желанием от юнаго возраста/ весь сам себе Господеви возложив,/ в молитвах и постех образ быв добродетели,/ богатство же, и славу, и доброродство телесное, яко не сущее, презрев,/ и Христа единаго от души возлюбил еси,/ и Того, истиннаго суща Бога, в Троице покланяема,/ пред нечестивыми турки проповедал еси,/ и, срацынскую веру, и законы Моамефовы под ногами поправ/ и мучителя ужасив,/ мучения венцем украсився, славне,/ к Небесным востекл еси ликостоянием,/ премудре Георгие./ Моли Христа Бога/ сохранити отечество твое и спасти люди и град,/ иже твоя подвиги присно почитающия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст., the second «Тропарь мученика Георгия Нового, Софийского, Болгарского», глас 4 — the day page prints this heading twice with two different texts, and both are his; this one names him and the Turks his life sets him against",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having laid thyself wholly before the Lord from thy young years out of a divine longing, and having become a pattern of virtue in prayers and fastings, thou didst despise riches and glory and bodily nobility as though they were nothing, and didst love Christ alone with all thy soul; and him, the true God, worshipped in Trinity, thou didst preach before the impious Turks, and trampling the Saracen faith and the laws of Mahomet under thy feet and striking thy tormentor with dread, thou wast adorned with the crown of martyrdom, O glorious one, and didst rise up to the choirs of heaven, O most wise George. Pray thou to Christ God to keep thy country and to save the people and the city that ever honour thy labours.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Божественною уязвлен любовию,/ премудре Георгие славне,/ Христа Бога нечестивым проповедал еси/ и злочестие турское ногами попрал еси;/ мучения же венцем украсився,/ к Небесным востекл еси ликостоянием./ Моли Христа Бога/ сохранити отечество твое, град и люди,/ подвиги твоя присно почитающия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст., «Ин тропарь мученика Георгия Нового, Софийского, Болгарского», глас 4 — the third troparion the day page prints for him, a shorter recension of the second",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wounded with a divine love, O most wise and glorious George, thou didst preach Christ God to the impious and didst trample the Turkish impiety under thy feet; and being adorned with the crown of martyrdom thou didst rise up to the choirs of heaven. Pray thou to Christ God to keep thy country, the city and the people that ever honour thy labours.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Вышния славы желая, многострадальне Георгие,/ агарянскую прелесть поплевав, попрал еси/ и победы венец приял еси,/ Ангелом ныне свеселяся и мучеником соводворяяся,/ с нимиже Христу Богу молися непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст., the first «Кондак мученика Георгия Нового, Софийского, Болгарского», глас 2 — proper to him, and it names him",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the glory above, O much-suffering George, thou didst spit upon the Hagarene delusion and trample it down, and didst receive the crown of victory; and now, rejoicing with the angels and dwelling with the martyrs, pray thou with them unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко звезда пресветлая, явился еси непрелестная мирови,/ праведнаго солнца Христа возвещающи страдании твоими, страстотерпче,/ великий мучениче Христов Георгие,/ и прелесть погасил еси срацынскую,/ и Моамефова предания и законы под ногами твоими попрал еси,/ и беззаконнаго царя и мучителей ужасил еси крепким твоим терпением,/ и верным подаеши свет,/ моляся к Богу непрестанно/ о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст., the second «Кондак мученика Георгия Нового, Софийского, Болгарского», глас 4 — the day page prints this heading twice with two different texts, and both are his; this one names him «великий мучениче Христов Георгие»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most radiant star thou hast appeared, free from all delusion, to the world, announcing by thy sufferings Christ the Sun of righteousness, O passion-bearer, great martyr of Christ George; and thou hast quenched the Saracen delusion and trampled the traditions and laws of Mahomet under thy feet, and hast struck the lawless king and the tormentors with dread by thy strong patience, and thou givest light to the faithful, praying unceasingly to God for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
