@@ -15,6 +15,11 @@
       "form": "Лаодикије",
       "lang": "sr",
       "note": "Read out of the body of the Ohrid Prologue's first entry for the Julian 13 May, „Тамничар Лаодикије, видевши то чудо, и сам исповеди Христа Господа, и одмах би посечен.“ — the bare forename, with Тамничар left off, which is the jailer's trade standing before the name as a common noun and not part of it; this folder's display name and its Greek form both carry that word where this corpus would otherwise put it in `office`. The day's heading names only Glyceria, so there is no heading form for him at all. A direct walk of every `names` entry in `saints/` finds no folder holding Лаодикије, so the form folds with nothing."
+    },
+    {
+      "form": "Лаодикий Гераклейский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 1330 as the day page prints it, «Лаодикий Гераклейский, мч.», with the rank word left off. The day's own line declines him «и с нею мч. Лаодикия , стража темничного», which gives the office and not the epithet; the epithet is the name page's. The space before the comma is the page's own. `fk.mjs` on «Лаодикий Гераклейский» returned NONE before the write."
     }
   ],
   "related": [
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Мц. Гликерии девы и с нею мч. Лаодикия , стража темничного (ок. 177).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek and the Serbian, and the same man: the prison guard at Heraclea who came for the martyr in the morning, did not recognise her healed, and believed. The Russian calendar names him «стража темничного», the prison guard, which is the epithet this folder already carries in English, and its name page heads him «Лаодикий Гераклейский, мч.», of Heraclea. **`dates` are the one thing added: the folder carried none at all.** The day line closes the pair with «(ок. 177)» and the fuller life page says of her «Она пострадала за Христа около 177 года», and he was beheaded in the course of the same ordeal, before her — so the year is the pair's and is recorded as approximate, which is how the line prints it. The day page prints the two hymns of the virgin martyr and **nothing under his name**. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -64,5 +79,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 177,
+      "latest": 177,
+      "display": "c. 177",
+      "basis": "traditional",
+      "note": "The first date this folder has carried, and it is the pair's rather than his own. days.pravoslavie.ru closes the line that names them both with «(ок. 177)» — «Мц. Гликерии девы и с нею мч. Лаодикия , стража темничного (ок. 177).» — and its fuller life page for her says «Она пострадала за Христа около 177 года». He was beheaded in the course of her ordeal and before her, so the year is his as well, and it is recorded approximate because the calendar prints it so. **The same page opens that life under a persecution of «императора Антонина (138 - 161)», who was dead sixteen years before 177**; that disagreement is the source's own, it is set out in her folder's life and in this one's, and no bound was widened to cover it. The Greek and Serbian pages this folder was read from gave no year at all."
+    }
   }
 }

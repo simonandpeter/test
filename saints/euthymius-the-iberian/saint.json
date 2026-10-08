@@ -16,6 +16,11 @@
       "form": "Јевтимије Иверски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, which is not a rank but the epithet \"the Iberian\" the heading sets after all four names and which the entry's first sentence confirms belongs to all four. Measured: a bare «Јевтимије» would fold with `euthymius-of-dimitsana`, where this form folds with nothing. The body spells his name Јефтимије in its second sentence and Јевтимије in the heading and the third; **the heading's spelling is what is stored**, and the book's own variation is recorded here rather than corrected. The translation of the Scriptures and the 1028 are in the body."
+    },
+    {
+      "form": "Евфимий Иверский",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name link 739, «Евфимий Новый, Святогорец, Иверский (Афонский), прп.», with the rank word left off. The calendar gives him three epithets at once and a parenthetical alternate for the second, and the day line puts Иверский first — «Прп. Евфимия Иверского, Святогорца (1028) (Груз.).» — so that is the pair stored, and Новый, Святогорец and Афонский are recorded here. `fk.mjs` was run on «Евфимий Иверский», «Евфимий Новый» and «Евфимий Новый Святогорец» and returned NONE for all three."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Прп. Евфимия Иверского, Святогорца (1028) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the other three churches, the same year, 1028, and the same man: the Georgian who translated the Scriptures and the service books into Georgian at the Iveron his father founded. The Russian marks him «(Груз.)», a saint of the Georgian church, which is how this source flags an entry it keeps from another local church. **His life page lists three days — «Дни памяти: 13 мая , 1 июня (Афон.) , 12 июля» — and only the first is the day page that printed him**, so the other two are recorded here as a note and not as a feast, per BRIEF.md §8; the 1 июня is marked as the Athonite synaxis and the 12 июля is the day the same page gives his father. **`dates` were not touched.** The folder carries 1028 off doxologia's title and the Russian day line gives the same year; the Russian adds «на 65 году жизни», in the sixty-fifth year of his life, which subtracted from 1028 would give a birth about 963 — **a lifespan taken off a death is a calculation and not a year any book prints**, so no birth was recorded, which is the refusal `rostislav-of-great-moravia` and `epiphanius-of-cyprus` already carry. The day page prints hymns for three of the saints it heads and nothing under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

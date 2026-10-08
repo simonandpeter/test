@@ -1,0 +1,62 @@
+{
+  "slug": "george-of-constantinople",
+  "display_name": "George of Constantinople",
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Георгий Константинопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name link 489 as the day page prints it, «Георгий Константинопольский, исповедник», with the rank word left off; his life page is headed «Исповедник Георгий Константинопольский». The day's own line declines him «Свв. Георгия исп. с супругою Ириною и чадами (IX).» `fk.mjs` on «Георгий Константинопольский» returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 850,
+      "display": "first half of the 9th century",
+      "basis": "traditional",
+      "note": "His life page, life1060, opens «Святой исповедник Георгий пострадал за почитание святых икон в Константинополе в первой половине IX века» — he suffered for the veneration of the holy icons at Constantinople in the first half of the ninth century — and closes «Претерпев в ссылке много скорбей, святой исповедник Георгий скончался», that he died in exile, with no year. The day line gives «(IX)», the century and nothing narrower. The page also names the emperor Феофил, who reigned 829 to 842, which falls inside the half-century the page itself states; the reign was not substituted for the page's own words and no bound was taken from it. No other source was read."
+    }
+  },
+  "related": [
+    "irene-wife-of-george"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Свв. Георгия исп. с супругою Ириною и чадами (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "**Checked against every George the corpus holds before writing**, because there are seventy-odd: `ls -d saints/george-*` was read in full, and the only confessor of the iconoclast age among them is `george-limniotes`, the ascetic of the Bithynian Olympus whom all four calendars keep on 24 August and who died about 716 under the first iconoclasm, unmarried and with no household — a different century, a different day and a different dossier. `george-confessor-presbyter-1928` is a twentieth-century priest. A grep of the corpus for «Феофил» returns twenty folders and none of them is this man. `fk.mjs` on «Георгий Константинопольский» returned NONE. **His wife is a folder and his children are not**: the line names Ирина and says «и чадами», with the children, naming none of them, so by BRIEF.md §4 the children are one entry and no folder. **No `office` was written**: the calendar gives him no rank but исповедник, and the life makes him a layman with property to be confiscated. **No `locations`**: the city is named but this folder has only a half-century for a date. The day page prints hymns for three of the saints it heads and nothing under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

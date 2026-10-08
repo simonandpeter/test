@@ -11,6 +11,11 @@
       "form": "Γλυκερία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Αγία Γλυκερία του Νόβγκοροντ», with the rank word and the city left off."
+    },
+    {
+      "form": "Гликерия Новгородская",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru's name link 2446 and of both her life pages, «Святая праведная Гликерия, дева Новгородская», with the rank words «Святая праведная» and the word «дева» left off — no stored Russian form in this corpus carries «дева», and the grade is in `types` instead. The day's own line declines her «Прав. Гликерии девы, Новгородской (1522).» `fk.mjs` on «Гликерия Новгородская» returned NONE before the write."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for her was not looked at."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Прав. Гликерии девы, Новгородской (1522).»",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, the same year, 1522, and the same woman: the virgin of Novgorod whose incorrupt body was found by the church of the martyrs Флор and Лавр. The Russian gives her a father and a street — daughter of Пантелеймон, the elder of the Легощая street in Novgorod — which the Greek page did not. **`dates` were not touched, and the two Russian life pages disagree about the finding of the relics.** The shorter, life1056, has them found «14 июля 1572 года», fifty years after her death, and quotes the Second Novgorod Chronicle; the fuller, life6536, prints «14 июля 1522 года ... через 50 лет после кончины» and then quotes the Novgorod chronicle **under 1572** two sentences later, so its 1522 is a slip for 1572 inside its own paragraph. Neither is the year the folder carries, which is her repose; both readings are in the life and nothing was changed. **One hymn was copied**, the troparion the day page prints «праведной Гликерии девы, Новгородской»; its last word is printed «спастйся» on the page and is copied as printed. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -59,5 +74,23 @@
   },
   "related": [
     "glyceria-of-traianopolis"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Вышния красоты желающи,/ нижния сласти телесныя далече от себе отринула еси/ и, нестяжание паче суетнаго мира возлюбивши,/ ангельское житие провождала еси, Гликерие, дево блаженная,/ моли Христа Бога спастйся душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 мая ст. ст. — «Тропарь праведной Гликерии девы, Новгородской»; the last word is printed «спастйся» on the page and is copied as printed",
+        "url": "https://days.pravoslavie.ru/Days/20260513.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the beauty on high, thou didst cast far from thee the lower sweetness of the body; and loving poverty above the vain world, thou didst pass thy days in an angelic life, O blessed virgin Glyceria. Pray to Christ God for the salvation of our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }
