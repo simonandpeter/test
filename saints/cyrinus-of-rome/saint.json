@@ -1,0 +1,63 @@
+{
+  "slug": "cyrinus-of-rome",
+  "display_name": "Cyrinus of Rome",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Кирин Римский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1237 gives it, «Кирин Римский, мч.», with the rank word taken off. The day line prints it in the genitive. Measured with the gate's own fold before it was written: 'кирин римскии' has no other holder in the corpus."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The year the day line closes with, «(304)», and the year the reading gives in the one sentence it spends on the three of them, «С ним были обезглавлены и святые мученики Клавдий, Кирин и Антонин (+ 304)». No year of birth is given."
+    }
+  },
+  "related": [
+    "claudius-companion-of-marcellinus",
+    "antoninus-of-rome",
+    "marcellinus-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Сщмч. Маркеллина , папы Римского, и мчч. Клавдия , Кирина и Антонина (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of nine, «Сщмч. Маркеллина , папы Римского, и мчч. Клавдия , Кирина и Антонина (304).» — one line naming FOUR people, of whom he is the third. Four `name:` links stand under the line and the links were counted against the names in it; the day's forty-one /name/ links were listed with `namelinks.py`. The first of the four is `marcellinus-of-rome`, which this corpus already keeps and which took the day's row as an upgrade in the same wave; the other three had no folder. `ls -d saints/claudi*`, `saints/cyrin*`, `saints/quirin*` and `saints/antonin*` were run, a Cyrillic `grep -rl` for «Клавдий Римский», «Кирин» and «Антонин Римский» besides, and `fk.mjs` on every form about to be stored and on every English display name. The day page prints one hymn, a troparion of the hieromartyr Феодот, and nothing under any of these names. azbyka.ru was not read. The reading behind the line is the pope's and gives the three companions one sentence; name page 1237 lists «День памяти: 7 июня» and nothing else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

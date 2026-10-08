@@ -1,0 +1,61 @@
+{
+  "slug": "peter-kuznetsov",
+  "display_name": "Peter (Kuznetsov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Кузнецов)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 9770 gives it, «Петр (Кузнецов), иерей, сщмч.», with the grade and the rank word taken off. The day line prints the bare forename «Петра» in the genitive and no surname, so the surname is read off the name link. Measured with the gate's own fold before it was written: 'кузнецов петр' has no other holder, where a bare «Петр» is a fold this corpus already keeps eleven folders wide."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "The year the line closes with, «(1919)». No year of birth is given anywhere on the site."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Сщмч. Петра пресвитеров (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "The day's ninth and last entry, and a line and a name page and nothing else: «Сщмч. Петра пресвитеров (1919).» The line prints the plural «пресвитеров» over a single forename and a single `name:` link, which is the page's own slip and is quoted here as printed. Name page 9770 heads him «Петр (Кузнецов), иерей, сщмч.» and lists «26 января (Новомуч.) , 7 июня»; it carries no life, no icon, no article, no place, no diocese and no year of birth, and there is no /Life/ page for him on the site. His year is 1919 and not the 1918 the fourteen before him share, so he is not of their company on this page's own showing. A Cyrillic `grep -rl` for «Кузнецов» over the corpus returned `alexis-kuznetsov`, `nina-kuznetsova` and `peter-dyakonov`, none of them this man, and `fk.mjs` on the stored form returned no holder. «26 января (Новомуч.)» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

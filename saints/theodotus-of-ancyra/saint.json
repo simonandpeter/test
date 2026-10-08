@@ -44,7 +44,7 @@
         "day": 7,
         "month": 11,
         "calendar": "julian",
-        "note": "His name page lists three days, «18 мая , 7 июня , 7 ноября». The 18 мая is the day doxologia.ro and saint.gr keep him on and the day his long life gives for the death of the seven virgins; 7 июня is the day that life gives for his own death. Neither day page was read here and one row per church is the schema, so both are recorded as a note and this folder's Russian row renders on 7 ноября ст. ст., the day page that listed him."
+        "note": "His name page lists three days, «18 мая , 7 июня , 7 ноября». The 18 мая is the day doxologia.ro and saint.gr keep him on and the day his long life gives for the death of the seven virgins; 7 июня is the day that life gives for his own death. Neither day page was read here and one row per church is the schema, so both are recorded as a note and this folder's Russian row renders on 7 ноября ст. ст., the day page that listed him. **Added 8 October 2026, and nothing but this note and one hymn changed:** the 7 июня day page HAS now been read. It opens the day with him — «Сщмч. Феодота Анкирского (303).» — and it prints one hymn, «Тропарь священномученика Феодота» глас 4, which is the only hymn on the page and is now on this folder. The row is NOT moved: one attestation row per church is the schema and 7 ноября is the day page this folder was read from, so the 7 июня commemoration stays a note. Two gradings disagree and neither is resolved here: the 7 июня line grades him «Сщмч.», a hieromartyr, and its troparion addresses him «священномучениче Феодоте» and calls him «престолом наместник апостолом быв», successor on the apostles' throne — while his own name page 2216 heads him «Мученик Феодот Анкирский» and both lives behind it make him a married innkeeper of Ancyra, a layman who sheltered Christians and buried the bodies of martyrs. `hieromartyr` was NOT added to `types` on the strength of a day line and a hymn heading against the man's own life."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Мч. Феодота корчемника (303).»",
@@ -144,6 +144,22 @@
       },
       "english": {
         "text": "The choir of the martyrs is bright, a host bearing light; coming down to us with understanding it has enlightened the Church today with wondrous radiance. Therefore, keeping their honoured memory, we ask of thee, our Saviour: by their prayers deliver us from troubles, that we may sing to thee: Alleluia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, богодохновенне,/ в видения восход,/ сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Феодоте,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Тропарь священномученика Феодота», глас 4; the common of a hieromartyr with his name filled into the vocative, and the one hymn the 7 июня page prints",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in the ways of the apostles and successor to their throne, O divinely inspired one, thou didst find in action an ascent to contemplation; therefore, setting straight the word of truth, thou didst suffer for the faith even unto blood, O hieromartyr Theodotus. Intercede with Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,72 @@
+{
+  "slug": "largius-of-rome",
+  "display_name": "Largius of Rome",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ларгий Римский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1331 gives it, «Ларгий Римский, мч.», with the grade and the rank word taken off. The day line prints it in the genitive. Measured with the gate's own fold before it was written: the key has no other holder in the corpus."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 310,
+      "display": "304–310",
+      "basis": "traditional",
+      "note": "The span the day line gives the thirteen of them together, «(304-310)». The reading names no year for any of them but the pope, who died in 310, and dates the whole company by reigns instead — Диоклетиан and Максимиан (284–305) and their successors Галерий (305–311) and Максентий (305–312). No year of birth is given."
+    }
+  },
+  "related": [
+    "marcellus-pope-of-rome",
+    "sisinnius-the-deacon",
+    "cyriacus-the-deacon",
+    "smaragdus-of-rome",
+    "apronianus-of-rome",
+    "saturninus-of-rome",
+    "papias-the-soldier",
+    "maurus-the-soldier",
+    "crescentianus-of-rome",
+    "priscilla-of-rome",
+    "lucina-of-rome",
+    "artemia-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Сщмч. Маркелла , папы Римского, мчч. Сисиния и Кириака диаконов, Смарагда , Ларгия , Апрониана , Сатурнина , Папия и Мавра воинов и Крискентиана , мцц. Прискиллы , Лукины и Артемии царевны (304-310).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of nine, «Сщмч. Маркелла , папы Римского, мчч. Сисиния и Кириака диаконов, Смарагда , Ларгия , Апрониана , Сатурнина , Папия и Мавра воинов и Крискентиана , мцц. Прискиллы , Лукины и Артемии царевны (304-310).» — one line naming THIRTEEN people. Thirteen `name:` links stand under the line and the links were counted against the names in it before anything was drafted; the day's forty-one /name/ links were listed with `namelinks.py`. Not one of the thirteen had a folder in this corpus: `ls -d saints/<stem>*` was run for every one of them, a Cyrillic `grep -rl` over `saints/*/saint.json` for «Маркелл», «Сисиний», «Крискентиан», «Артемия», «Лукина», «Апрониан», «Ларгий», «Смарагд», «Мавр Африканский», «Прискилла Римская», «Папий Римский» and «Кириак Римский» besides, and `fk.mjs` on every form about to be stored and on every English display name. The folders the stems turned up are all other men on other days and were read: `marcellus-15-november`, `marcellus-18-july`, `marcellus-of-apamea`, `marcellus-of-sicily`, `marcellus-of-the-akoimetoi`, `marcellus-of-the-twelve-tribunes`, `marcellus-the-martyr-1-march` and `marcellus-the-martyr-22-may` for the pope; `sisinnius-22-november`, `sisinnius-of-constantinople`, `sisinnius-of-cyzicus`, `sisinnius-of-milan` and `sisinius-of-the-forty-martyrs` for the deacon; `smaragdus-of-the-forty-martyrs`, `maurus-son-of-claudius`, `papias`, `papias-20-november`, `papias-of-corinth`, `papias-of-hierapolis`, `priscilla` the apostle of 13 February, `crescentianus` the soldier of Saldo whom the Greek calendar keeps on 1 June, and the ten Saturninus folders. The day page prints one hymn, a troparion of the hieromartyr Феодот, and nothing under any of these thirteen names. azbyka.ru was not read, and each name page lists «День памяти: 7 июня» and nothing else. He stands in the line as its fifth name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

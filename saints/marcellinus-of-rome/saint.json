@@ -11,6 +11,11 @@
       "form": "Маркелин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. јун ст. ст., „Свештеномученик Маркелин, папа римски“ — Свештеномученик is the `hieromartyr` §5 maps onto `types`, and „папа римски“ is the see, which `office` already holds as «Bishop of Rome» and the display name carries; strip both and the bare personal name is left. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Маркелин» **and also for «Маркел»**, the pope of the entry above, whom no folder holds — so the two popes of this day raise no fold between them."
+    },
+    {
+      "form": "Маркеллин Римский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1477 gives it, «Святитель Маркеллин Римский, папа, сщмч.», with the grade and the rank word taken off. Measured with the gate's own fold before it was written: the key has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -20,14 +25,27 @@
     "hieromartyr"
   ],
   "related": [
-    "emilian-of-trebia"
+    "emilian-of-trebia",
+    "claudius-companion-of-marcellinus",
+    "cyrinus-of-rome",
+    "antoninus-of-rome"
   ],
   "office": "Bishop of Rome",
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Сщмч. Маркеллина , папы Римского, и мчч. Клавдия , Кирина и Антонина (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of nine, «Сщмч. Маркеллина , папы Римского, и мчч. Клавдия , Кирина и Антонина (304).», one line naming FOUR people with him at its head. He is the folder this corpus already kept on this menologion day — the Romanian calendar on 7 iunie and the Охридски пролог on 7. јун — so this is a row and not an arrival, and the three men the line names after him had no folder and took one in the same batch. The reading behind the line, `life1253`'s neighbour `life1252`, is his and was read whole; it tells the story the Ohrid Prologue already gave this folder — the sacrifice under Диоклетиан, the council of a hundred and eighty at Синуесса in Campania, the self-sentence, the robe thrown at the emperor's feet, the thirty-six days by the road and the apostle Петр's command to the next pope — and adds the three companions and the year in the same sentence, «С ним были обезглавлены и святые мученики Клавдий, Кирин и Антонин (+ 304)». The folder had no `dates` at all before this row and now takes that 304. Name page 1477 lists «День памяти: 7 июня» and nothing else. The day page prints one hymn, a troparion of the hieromartyr Феодот, and nothing under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -66,5 +84,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The folder had no dates: doxologia.ro gave the Romanian row no year and the Охридски пролог's entry gave none either, which that row's note says in so many words. days.pravoslavie.ru gives it twice — the day line for 7 июня ст. ст. closes «(304)» and its reading closes «С ним были обезглавлены и святые мученики Клавдий, Кирин и Антонин (+ 304)». No year of birth is given."
+    }
   }
 }

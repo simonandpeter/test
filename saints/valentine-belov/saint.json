@@ -1,0 +1,61 @@
+{
+  "slug": "valentine-belov",
+  "display_name": "Valentine (Belov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Валентин (Белов)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 9481 gives it, «Валентин (Белов), иерей», with the rank word taken off. The day line prints the bare forename in the genitive and no surname, so the surname is read off the name link; it stays in the parentheses the calendar itself prints, which BRIEF-ADDENDUM §2 keeps out of the fold key. Measured with the gate's own fold before it was written: the key has no other holder in the corpus."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The one year the line closes with, «(1918)», given to all fourteen men together. No year of birth is given anywhere on the site."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Сщмч. Александра , Александра , Валентина , Вениамина , Виктора , Александра , Владимира , Игнатия , Михаила , Николая , Павла , Николая , Николая пресвитеров и мч. Александра (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "He is the third of the fourteen. Name page 9481 heads him «Валентин (Белов), иерей» and lists two days, «26 января (Новомуч.) , 7 июня»; that heading and those two days are the whole of the page — no life, no icon, no article, no place, no diocese and no year of birth — and there is no /Life/ page for him anywhere on the site. The day's eighth entry of nine, one line naming FOURTEEN men and giving them one year: «Сщмч. Александра , Александра , Валентина , Вениамина , Виктора , Александра , Владимира , Игнатия , Михаила , Николая , Павла , Николая , Николая пресвитеров и мч. Александра (1918).» — thirteen presbyters covered by the line's «Сщмч.» and a fourteenth man marked off by its own «мч.». Fourteen `name:` links stand under it and the links were counted against the forenames before anything was drafted; the day's forty-one /name/ links were listed with `namelinks.py` and none of the fourteen had a folder in this corpus. The day page prints one hymn, a troparion of the hieromartyr Феодот, and nothing under any of these names. «26 января (Новомуч.)» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}
