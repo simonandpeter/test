@@ -15,6 +15,11 @@
       "form": "Виктор",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 18 April, „Св. муч. Виктор, Зотик, Зинон, Акиндин и Северијан.“, with Св. left off — it is not a rank — and муч. left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all five names and belongs to none of them, and the heading gives no epithet, no city and no year to any of them, so the bare forename is the whole of what the source gives; the day in this folder's display name is the corpus's own way of telling the company's members from their namesakes and is not part of any source's name. Four folders already hold a bare **Russian** Виктор of the same spelling, so the fold crosses languages; it is recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Виктор Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 18 апреля ст. ст., which gives «Мученик Виктор Никомидийский»; Мученик is a rank word and is not part of the stored form, and Никомидийский is the adjective of the city where the page says the company was beheaded."
     }
   ],
   "related": [
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 апреля ст. ст. — «Мчч. Виктора , Зотика , Зинона , Акиндина и Севериана (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260418.html",
+        "year": 2026
+      },
+      "note": "His name page 417 lists this one day and no other. The day’s line names five of the company and the life page it links is headed for six, adding Кесарий; the row rests on the line. The day page prints no hymn for the company. azbyka.ru was not read."
     },
     {
       "church": "romanian",

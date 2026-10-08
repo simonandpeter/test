@@ -11,6 +11,11 @@
       "form": "Ματρώνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαΐου, «Οσία Ματρώνα εκ Ρωσίας», with the rank word and the origin left off."
+    },
+    {
+      "form": "Матрона (Никонова) Московская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 12726, «Матрона (Никонова) Московская, блаженная», with the rank word left off. The day’s own line declines it without the surname, «Блж. Матроны Московской»; the surname is the calendar’s and is part of the name, and its life gives the whole of it as «Матрона Димитриевна Никонова»."
     }
   ],
   "sex": "female",
@@ -46,8 +51,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian",
+        "note": "Her life page heads «Дни памяти: 23 февраля (Обретение мощей) , 19 апреля , 24 августа (Моск.) , 22 сентября (Тул.)» and keeps four days. This row stands on 19 апреля, the day whose page listed her and the day of her repose, which is the civil 2 May the `romanian` and `greek` rows already carry. One row per church is the schema, so the finding of her relics, the synaxis of the saints of Moscow and the synaxis of the saints of Tula are recorded here and she does not render on them; none of those three day pages was read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Блж. Матроны Московской (1952).»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar gives her birth as 1885 where doxologia and saint.gr give 1881, and gives her full civil name, which neither of the others does. Nothing in the folder’s `dates` was changed; the disagreement and the arithmetic that bears on it are set down in the life. The three hymns this day page prints are all hers and are all here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -114,6 +130,57 @@
       },
       "english": {
         "text": "Let us reverently hymn the unshaken eighth pillar of Russia, her who was deprived of eyes from birth, Matrona the renowned, as a vessel of divine gifts and of unalloyed love towards all who are in distress, crying: Scatter the gloom of our passions by the light of thy grace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Богом умудренную блаженную старицу Матрону,/ земли Тульския процветение/ и града Москвы преславное украшение,/ восхвалим днесь, вернии./ Сия бо, света дневнаго не познавши,/ светом Христовым просветися/ и даром прозрения и исцеления обогатися./ Пресельница же и странница на земли бывши,/ ныне в чертозех Небесных Престолу Божию предстоит// и молится о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Тропарь блаженной Матроны», глас 2, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026,
+        "note": "It names her and no other, and the day page prints no hymn for anybody else it heads. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Let us the faithful praise today the blessed eldress Matrona, made wise by God, the flowering of the land of Tula and the most glorious adornment of the city of Moscow. For she, who never knew the light of day, was enlightened with the light of Christ and enriched with the gift of foresight and of healing; and having been a sojourner and a stranger upon the earth, she now stands before the throne of God in the halls of heaven, and prays for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Земли Тульския прозябение, / града Москвы ангелоподобная воительнице / блаженная старице Матроно. / От рождения в слепоте телесней до конца своих дней пребывшая. / Но от Бога щедро духовное зрение приявшая, / прозорливице и молитвеннице. / Наипаче дар исцеления болезней стяжавшая. / Помогай всем с верою к тебе притекающим и просящим в болезнех душевных и телесных, / радосте наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Тропарь блаженной Матроны Московской», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026,
+        "note": "A second troparion for the same saint, printed under a fuller heading than the first and in a different tone, and a different text altogether. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Shoot of the land of Tula, angel-like warrior of the city of Moscow, blessed eldress Matrona: from your birth to the end of your days you remained blind in body, yet you received from God a bountiful sight of the spirit, O seer and woman of prayer; and above all you gained the gift of the healing of sicknesses. Help all who come to you in faith and ask in sicknesses of soul and of body, O our joy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "К служению Христову/ от чрева матерня предызбранная,/ праведная Матроно,/ стезею скорбей и печалей шествующи,/ твердую веру и благочестие явивши,/ Богу угодила еси./ Темже, почитающе память твою, молим тя:/ помози и нам в любви Божии пребывати,// старице блаженная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Кондак блаженной Матроны», глас 7, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026,
+        "note": "It names her and no other. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Chosen beforehand from your mother’s womb for the service of Christ, righteous Matrona, you walked the path of sorrows and griefs, showed forth a firm faith and godliness, and were well-pleasing to God. Therefore, honouring your memory, we pray you: help us also to abide in the love of God, O blessed eldress.",
         "rendered": "site"
       }
     }

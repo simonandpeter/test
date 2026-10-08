@@ -1,0 +1,52 @@
+{
+  "slug": "nicephorus-19-april",
+  "display_name": "Nicephorus (19 April)",
+  "names": [
+    {
+      "form": "Никифор Катавадский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1623, «Никифор Катавадский, игумен», with the rank word left off. The day’s own line declines the forename and gives him the rank and no epithet, «Прп. Никифора игумена». What «Катавадский» refers to is explained nowhere on either page, so it is kept in the form as read and is not carried into the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Прп. Никифора игумена.»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "His name page 1623 lists this one day and no other. The life gives no year and no century for him at all, so this folder carries no `dates`; the three corpus folders of the name whose day is nearest — `nicephorus-4-may`, `nicephorus-13-may` and `nicephorus-23-october` — are an unidentified Romanian line, an abbot of the monastery of Ephapsis and an unidentified Greek line, and none of them is this man. The day page prints no hymn under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 2 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 2 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "bessarion-selinin",
+  "display_name": "Bessarion (Selinin)",
+  "names": [
+    {
+      "form": "Виссарион (Селинин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9523, «Виссарион (Селинин), иерей, сщмч.», with the rank words left off. The day’s own line declines the forename and prints no surname at all, «Сщмч. Виссариона пресвитера (1918)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with: «Сщмч. Виссариона пресвитера (1918)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 апреля ст. ст. — «Сщмч. Виссариона пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260418.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is nearly all there is: no life page on the day page and none on name page 9523, and no place, no diocese, no arrest and no manner of death. The line and the name page agree about his rank, the line as «пресвитера» and the page as «иерей», and both call him «сщмч.». «26 января (Новомуч.)» on his name page is what `new-martyr` stands on. The name page also links a parish website, which is described in the life and from which nothing is claimed. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 1 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 1 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

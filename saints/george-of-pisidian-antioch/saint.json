@@ -12,6 +12,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Όσιος Γεώργιος ο Ομολογητής Επίσκοπος Πισιδίας», with the rank word, the epithet and the see left off; the life page heads him «Οσιος Γεωργιος ο Ομολογητης, Επισκοπος Πισιδιας»."
+    },
+    {
+      "form": "Георгий Антиохийский (Писидийский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 486, «Святитель Георгий Антиохийский (Писидийский), епископ, исповедник», with the rank words left off. The parenthesis is the calendar’s own and distinguishes the Pisidian Antioch from the Syrian one; the see stays in this folder’s `office` and display name as well."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Свт. Георгия исп., еп. Антиохии Писидийской (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "His name page 486 lists this one day and no other, and it is the day the `romanian` and `greek` rows already carry. The day page prints no hymn under his name. THE RUSSIAN PUTS HIM IN THE SECOND ICONOCLASM AND THE GREEK IN THE FIRST — the line heads him «(IX)» and the life names Лев Армянин, 813 to 820, where this folder’s `floruit` of 754 to 775 was inferred from the council of 754 and the reign of Constantine Copronymus. Nothing in `dates` was changed and the disagreement is set out in the life. azbyka.ru was not read."
     },
     {
       "church": "romanian",

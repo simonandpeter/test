@@ -5,7 +5,9 @@
   "types": [
     "hieromartyr",
     "bishop",
-    "confessor"
+    "confessor",
+    "hierarch",
+    "new-martyr"
   ],
   "office": "Bishop of Glazov",
   "names": [
@@ -13,6 +15,11 @@
       "form": "Βίκτωρ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Βίκτωρ ο Ιερομάρτυρας Επίσκοπος Γκλαζώφ», with the rank words and the see left off; the page gives his name in the world as Constantine Alexandrovich Ostrovidov, in Greek letters."
+    },
+    {
+      "form": "Виктор (Островидов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9139, «Святитель Виктор (Островидов), епископ Глазовский, исп.», with the rank words and the see left off; the see stays in this folder’s `office` and display name. The life gives his name in the world as «Константин Александрович Островидов», the monastic name being taken at the Kazan academy."
     }
   ],
   "related": [
@@ -37,8 +44,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 26 января (Новомуч.) , 19 апреля , 8 июня (Петерб.) , 18 июня (обретение мощей)» and keeps four days. This row stands on 19 апреля, the day whose page listed him and the day of his repose, which is the day the `greek` row already carries. One row per church is the schema, so the synaxis of the new martyrs, the synaxis of the saints of Petersburg and the finding of his relics are recorded here and he does not render on them; none of those three day pages was read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Свт. Виктора исп., еп. Глазовского (1934).»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "The Russian agrees with saint.gr in both years, 1875 and 1934, and in the cause of death, so nothing in `dates` was changed; it supplies the day, 19 апреля, which the Greek page did not. The glorification of August 2000 and the «26 января (Новомуч.)» on his life page are what `new-martyr` stands on. The day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

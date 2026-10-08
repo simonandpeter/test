@@ -1,0 +1,63 @@
+{
+  "slug": "auxentius-companion-of-cosmas",
+  "display_name": "Auxentius, companion of Cosmas",
+  "names": [
+    {
+      "form": "Авксентий Халкидский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 28, «Авксентий Халкидский, исповедник, прп.», with the rank words left off. The day’s own line declines the forename and gives him no epithet at all, «и прп. Авксентия (815-820)». What «Халкидский» names is not said on either page — the life gives him no see and calls him only the bishop’s fellow-struggler — so the adjective is kept in the form as read and is not translated into the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life882 opens «Святитель Косма, епископ Халкидонский, и преподобный Авксентий, его сподвижник, жили в IX веке» — they lived in the ninth century. The page gives a year only for the bishop’s repose, «(+ ок. 815 - 820)», and none at all for this man, so the century is recorded as a floruit and no death year is written."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 апреля ст. ст. — «Свт. Космы исп., еп. Халкидонского, и прп. Авксентия (815-820).»",
+        "url": "https://days.pravoslavie.ru/Days/20260418.html",
+        "year": 2026
+      },
+      "note": "His name page 28 lists this one day and no other, and the one life it offers is the joint life of the bishop and himself. The day page prints no hymn under either name; the two hymns it carries for this entry’s neighbours belong to a teacher and to an icon. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 1 mai, the corresponding civil day (8 October 2026). The bishop he struggled beside is kept by that calendar on 18 aprilie; this man was not looked for there."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 1 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 May 2026 (8 October 2026)."
+    }
+  ],
+  "related": [
+    "cosmas-of-chalcedon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
