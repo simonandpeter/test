@@ -6,4 +6,4 @@ In the end they were hanged in the prison, and their bodies were thrown into the
 
 The corpus already keeps her three companions out of saint.gr's own 2 June page, where the same calendar lists nine martyrs of Lyons by name — [Sanctius](/saints/sanctius-of-lyons) the deacon, [Maturus](/saints/maturus-of-lyons) and [Attalus](/saints/attalus-of-lyons) among them — and their Greek feast stands on that day. Blandina is not in that list of nine, and this day in July is where the Greek calendar names her.
 
-*After saint.gr's calendar for 25 Ιουλίου — [the day](https://www.saint.gr/07/25/index.aspx) and [the life](https://www.saint.gr/2113/saint.aspx); read 1 October 2026.*
+*After saint.gr's calendar for 25 Ιουλίου — [the day](https://www.saint.gr/07/25/index.aspx) and [the life](https://www.saint.gr/2113/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 2 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260602.html); read 8 October 2026.*

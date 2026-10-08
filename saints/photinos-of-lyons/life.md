@@ -8,4 +8,4 @@ The other eight of the nine are [Sanctius of Lyons](/saints/sanctius-of-lyons), 
 
 Of Photinos the page says the one thing the company's sentence says of him: that he was the bishop among them, and that the calendar ranks him, with Sanctius, as a hieromartyr rather than a martyr. It gives him no see beyond the city, no length of episcopate and no age.
 
-*After saint.gr's calendar for 2 Ιουνίου — [the day](https://www.saint.gr/06/02/index.aspx) and [the life](https://www.saint.gr/4407/saint.aspx); read 1 October 2026.*
+*After saint.gr's calendar for 2 Ιουνίου — [the day](https://www.saint.gr/06/02/index.aspx) and [the life](https://www.saint.gr/4407/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 2 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260602.html); read 8 October 2026.*

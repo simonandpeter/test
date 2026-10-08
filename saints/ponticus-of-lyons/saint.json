@@ -10,6 +10,11 @@
       "form": "Ποντικός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιοι Φωτεινός ο Επίσκοπος, Σάνκτιος ο διάκονος, Βέτιος, Επάγαθος, Ποντικός, Βιβλίδης, Άτταλος, Αλέξανδρος, Μάτουρος και οι συν αυτώ Μάρτυρες», with the rank words left off."
+    },
+    {
+      "form": "Понтик Лионский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 14893 gives it, «Понтик Лионский, мч.», with the rank word taken off. Measured with the gate's own fold before writing: 'лионскии понтик' has no other holder."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 июня ст. ст. — «Сщмч. Пофина , епископа Лионского и с ним пострадавших (ок. 177) Мц. Бландины и мч. Понтика Лионских (177).»",
+        "url": "https://days.pravoslavie.ru/Days/20260602.html",
+        "year": 2026
+      },
+      "note": "The day's third entry as `day-candidates.mjs` prints it is in fact TWO printed lines run together — «Сщмч. Пофина , епископа Лионского и с ним пострадавших (ок. 177)» and «Мц. Бландины и мч. Понтика Лионских (177)» — which is the merging the instrument is known to do; the three `name:` links behind it were counted and they are three. «и с ним пострадавших», and those who suffered with him, enumerates nobody and is not a folder; the other eight of the Lyons company this corpus holds took nothing from this day. Neither of the two lines links a /Life/ page, so the three readings here rest on the day lines and the three name pages and on nothing else, and the day page prints no hymn for any of them. azbyka.ru was not read. He is the мч. Понтик of the second of the two lines, and name page 14893 heads him «Понтик Лионский, мч.». The folder already holds 177 for his death off saint.gr, which is the year this line gives him, so the two sources agree and nothing of `dates` was touched. He is the one of the three who stands venerated greek on this same 2 June, and he is already related to this corpus's whole Lyons company."
     },
     {
       "church": "romanian",
