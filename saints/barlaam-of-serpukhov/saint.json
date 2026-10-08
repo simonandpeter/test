@@ -1,0 +1,59 @@
+{
+  "slug": "barlaam-of-serpukhov",
+  "display_name": "Barlaam of Serpukhov",
+  "names": [
+    {
+      "form": "Варлаам Серпуховской",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 10997, «Варлаам Серпуховской, прп.», with the rank abbreviation left off. The day’s own line declines him «Прп. Варлаама Серпуховского (1377)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1377,
+      "latest": 1377,
+      "display": "1377",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Прп. Варлаама Серпуховского (1377)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 мая ст. ст. — «Прп. Варлаама Серпуховского (1377).»",
+        "url": "https://days.pravoslavie.ru/Days/20260505.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is. Name page 10997 carries the heading, «День памяти: 5 мая», a heading «Иконы» for the pictures of him, and no life, no place beyond the town in his epithet, no account of his labours and no hymn on the day page. «Прп.» is the whole of what the source says of his state of life, so `types` is `venerable` alone and there is no `office`: the calendar does not call him abbot, hieromonk or monk, and nothing has been inferred from the epithet. He is none of the fifteen other Barlaams the corpus keeps — the nearest in time is `barlaam-of-vazsky`, dead 1462 — and none of them stores «Варлаам Серпуховской»: the checks were `ls -d saints/*barlaam* saints/*varlaam*`, a grep for the Cyrillic «Серпуховск», which returns only `athanasius-of-vysotsk`, a different forename, and fk.mjs on the stored form, which has no other holder. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 18 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 18 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
