@@ -103,7 +103,8 @@
       "feast": {
         "day": 8,
         "month": 2,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The same calendar prints him a second time, on the Julian 8 июня, and the line there reads like a memory and not like a translation: «Вмч. Феодора Стратилата (319).», with the same year 319 this row's February line gives and no word of the relics in it. The site itself says what the day is elsewhere: name page 2201 lists «Дни памяти: 8 февраля , 8 июня» and its «Жития» block carries three readings, the second headed «Перенесение мощей вликомученика Феодора Стратилата» — the page's own spelling of великомученика, quoted as printed — so this calendar makes the June day the translation of the relics even where its day line does not. That agrees with the Greek row's note and with the Serbian row's, and this folder's life already sets out the two sources that send the relics in opposite directions. One row per church is the schema, so the June day is recorded here and he does not render on it; the row it sits in is this folder's own bytes, loaded out of the file and copied back with nothing but this note added. The 8 июня day page prints «Тропарь великомученика Феодора» глас 4 and «Кондак великомученика Феодора» глас 2 over him; the kontakion is word for word the one this folder already holds from 8 февраля and differs from it in one mark only, the February page breaking the line after «в руку взем,» where the June page runs on, which was checked by comparing the two strings and not by eye; and the troparion was not copied, because the row that would carry it stands on another day. Read 8 October 2026."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 февраля ст. ст. — «Вмч. Феодора Стратилата (319).»",

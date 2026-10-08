@@ -12,6 +12,11 @@
       "form": "Јефрем",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. јун ст. ст., „Свети Јефрем, патријарх антиохијски“ — Свети is not a rank and „патријарх антиохијски“ is the rank with its see, which `types`, `office` and the display name already carry; both come off and the bare forename is left. `foldchk.py` returns `[('ephraim-of-tomis', 'sr')]`: a fold of two, deliberate, told apart by the sees."
+    },
+    {
+      "form": "Ефрем Антиохийский",
+      "lang": "ru",
+      "note": "The name as name page 812 gives it, «Святитель Ефрем Антиохийский, патриарх», with the grade and the rank word taken off. Measured with the gate's own fold before it was written: 'антиохиискии ефрем' has no other holder, and a Cyrillic grep for «Ефрем Антиох» over every saint.json returned nothing."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июня ст. ст. — «Прп. Ефрема , Патриарха Антиохийского (545).»",
+        "url": "https://days.pravoslavie.ru/Days/20260608.html",
+        "year": 2026
+      },
+      "note": "The day's second entry. The Serbian row below already stands on this same Julian 8 June, from the Охридски пролог, so the two agree on the day and the identity was not in doubt. The line grades him «Прп.», venerable, where name page 812 heads him «Святитель Ефрем Антиохийский, патриарх» and the life page behind it is titled «Святитель Ефрем, Патриарх Антиохийский»; the line's own words name the patriarchate too, so this is one grade at two words and not a disagreement about the man, and `types` was not touched. Name page 812 gives «День памяти: 8 июня» and no other day. The year 545 falls inside the 540–546 this folder already holds and nothing in `dates` was touched. The day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
