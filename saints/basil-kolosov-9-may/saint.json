@@ -1,0 +1,62 @@
+{
+  "slug": "basil-kolosov-9-may",
+  "display_name": "Basil (Kolosov) (9 May)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Колосов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13716, «Василий (Колосов), иерей, сщмч.», with the rank abbreviation left off. The day’s own line gives only «Сщмч. Василия пресвитера (1939)», without the surname. This is the same string the corpus already stores on `basil-kolosov`, a different man of the same name and the same grade whom this calendar keeps on 26 ноября ст. ст.; the fold it makes is written into `corpus-gate.mjs` with both members named, and the string is kept bare of any day or year because the calendar itself gives neither man more than this."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Сщмч. Василия пресвитера (1939)». It is the only year either page gives, and neither gives a day, a place or a diocese. It is also what tells him apart from the `basil-kolosov` of 26 ноября ст. ст., whom the calendar dates 1937."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст. — «Сщмч. Василия пресвитера (1939).»",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is. Name page 13716 carries the heading, «Дни памяти: 26 января (Новомуч.), 9 мая», and no life, no place, no account of his death and no hymn on the day page. The 26 января is the synaxis of the new martyrs and confessors of Russia, a commemoration of the company and not a second day of his own, so it is noted here and nothing was moved for it. «Иерей» on the name page and «пресвитера» on the day line are the same grade, so `office` is `Priest`, as on the other folder of this name. **The corpus already holds a `basil-kolosov`, and this is a second man and not a duplicate.** The reading was checked and not assumed: this line’s name link is page **13716**, whose days are «26 января (Новомуч.)» and 9 мая; the three Basils of the 26 ноября line are name pages **13096** («Василий (Студницин), протоиерей»), **13094** («Василий (Колосов), иерей, сщмч.») and **13870** («Василий (Агафоников), протоиерей»), each listing «26 января (Новомуч.)» and 26 ноября and none of them 9 мая — so the existing `basil-kolosov`, whose own note quotes that 26 ноября line, is page 13094, and 13716 is a separate record of the calendar’s own. The years differ too, 1939 here against the 1937 the other folder takes from its day line. A distinct name page with a distinct day is a distinct man on this source, which is the reading that already stands behind `demetrius-rozanov-12-november` and `demetrius-rozanov-18-march`, and the slug follows their convention. **If the author reads the two as one man kept by this calendar on two of its own days, the answer is one row with a second-day note and this folder comes out.** azbyka.ru was not read, and it is the one source that might settle it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 22 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 22 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
