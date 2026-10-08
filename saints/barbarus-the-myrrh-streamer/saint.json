@@ -16,6 +16,11 @@
       "form": "Варвар разбојник",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 6. мај ст. ст., „Свети Варвар разбојник.“ Свети is no rank, and **разбојник — the robber — is not a rank word in any of the mappings this wave works from**: `honorific.js` does not compose it, it is not what the folder's `types` hold, and it is the one thing on the page that distinguishes him. **So it is kept, and keeping it is what holds this folder out of the fold with the day's other Barbarus**, the soldier-martyr whose own heading gives him the bare Варвар — the same move Папучар, Тарсанка, Боровски and Кијево-Печерски made on earlier days of this wave. The by-name the Greek page gives him, Μυροβλύτης the Myrrh-streamer, is nowhere on this page and was not imported; the myrrh is in the body's last sentence and not in the heading."
+    },
+    {
+      "form": "Варвар Луканский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link for 6 мая ст. ст., «Варвар Луканский, мч.», with the rank abbreviation left off. The day’s own line calls him only «Варвара, бывшего разбойника», so the epithet is the name link’s and not the line’s."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст. — «Мч. Варвара, бывшего разбойника (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "note": "The Russian keeps him on the same Julian day as the Serbian, 6 мая ст. ст., and the Greek on 15 Μαΐου new style, which is a different menologion number and not a style conversion; nothing was moved. The day line’s «(IX)» agrees with the `floruit` the folder already holds from saint.gr’s reign of Michael the Stammerer, so `dates` is unchanged. The two hymns the day page prints for a Варвар are his and not the soldier Barbarus’s: the kontakion is headed «мученика Варвара, бывшего разбойника» and is proper to him, calling him passion-bearer and naming the myrrh, and the troparion’s heading «мученика Варвара, бывшего» is the same epithet cut short in the source’s own markup. The troparion itself is the common of a martyr with his name set into it, as the same calendar sets other names into the same text, and the hymn’s source line says so. The calendar gives him the epithet «Луканский», which the day line does not, and the life puts his robbery in Greece and his relics in the monastery of Kellia in Thessaly near Larissa; no place was written into `locations`. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -100,6 +115,38 @@
       },
       "english": {
         "text": "Your body is laid in the earth and your soul is taken up by its Maker; the one gives health to all the sick, and the other beseeches Christ to redeem from everlasting fire those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученик Твой, Господи, Варвар,/ во страдании своем венец прият нетленный от Тебе, Бога нашего:/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощный дерзости./ Того молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст., «Тропарь мученика Варвара, бывшего» — the heading is cut short in the source’s own markup for «бывшего разбойника», the epithet the kontakion beside it prints in full; the text is the common of a martyr with his name set into it, as the same calendar sets other names into the same text",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Barbarus, O Lord, has received in his suffering an incorruptible crown from thee, our God; for having thy strength he cast down the persecutors and broke also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "От Бога данныя ти благодати,/ страстотерпче Варваре святе,/ яко многоценным миром, нас посещай целебне,/ да вопием ти:/ радуйся, испивый сладостне чашу Христовых страстей.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст., «Кондак мученика Варвара, бывшего разбойника», глас 3 — proper to him, and the heading that settles which Варвар of the day both hymns belong to",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of the grace given thee by God, O holy passion-bearer Barbarus, visit us with healing as with myrrh of great price, that we may cry to thee: rejoice, thou who hast drunk sweetly of the cup of Christ's sufferings.",
         "rendered": "site"
       }
     }

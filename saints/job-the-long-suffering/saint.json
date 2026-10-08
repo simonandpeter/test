@@ -16,6 +16,11 @@
       "form": "Јов",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 6. мај ст. ст., „Свети праведни и многострадални Јов.“ Свети is no rank and праведни is the `righteous` this folder already carries in `types` and `honorific.js` composes back. **„и многострадални“ was read as an epithet and deliberately NOT kept, and it is the one reading in this form.** It is the very epithet the English display name carries, the Long-Suffering, and keeping it would have held this folder out of the fold with `job-the-hermit-6-march`'s bare Јов — but the heading conjoins it to the rank word with „и“, two attributive adjectives of one kind standing before the name, and splitting that conjunction to keep the second half, then giving it the initial capital the page puts on Свети alone, and then leaving it before the name where no other Serbian form in this corpus puts its epithet, is three corrections to a copied script form. A copied form is never corrected by a reader, so the bare forename is stored and the fold is declared. The question is named in this batch's commit message for the author and is one commit either way."
+    },
+    {
+      "form": "Иов Многострадальный",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name page for 6 мая ст. ст., «Праведный Иов Многострадальный», with the rank word left off. The day’s own line declines him «Прав. Иова Многострадального»."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст. — «Прав. Иова Многострадального (ок. 2000-1500 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "note": "The calendar gives him two lives and they do not agree about when he lived. life6631 opens «Родился в 20-м столетии до Р. X. в Аравии» and has him prosper seventy-eight years before the trial and live a hundred and forty after it; life1000 opens «жил за 2000–1500 лет до Рождества Христова, в Северной Аравии, в стране Авситидийской, в земле Уц» and gives two hundred and forty-eight years in all. The day line’s own «(ок. 2000-1500 до Р.Х.)» is the wider of the two and is recorded here rather than in `dates`, which is unchanged: it holds saint.gr’s «περί το 1650 π.Χ.» for his repose, which both Russian lives would allow. Both lives report, and life1000 marks as an opinion only — «Есть мнение, что Иов приходился племянником Аврааму» — that he was a nephew of the patriarch; nothing has been written from it. The day page prints three hymns under his name, two troparia and a kontakion, and all three are copied here with their English typed; the troparion of глас 1 is the same hymn as the Romanian one this folder already carries, and the kontakion of глас 8 the same as the Greek, each in its own language. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -121,6 +136,54 @@
       },
       "english": {
         "text": "True and just, God-fearing and blameless, thou wast seen also to be sanctified, O all-glorious one, thou genuine servant of God; and thou didst teach the world by thine endurance, O Job of many contests. Wherefore we all honour thee and sing the memory of thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Богатство видев добродетелей Иовлих,/ украсти кознствоваше праведных враг,/ и, растерзав столп телесе,/ сокровище не украде духа,/ обрете бо вооружену непорочнаго душу,/ мене же и обнажив плени:/ предварив убо мя прежде конца,// избави мя льстиваго, Спасе, и спаси мя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст., «Тропарь праведного Иова Многострадального», глас 1 — the same hymn as the Romanian troparion this folder already carries, in Church Slavonic",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeing the riches of Job's virtues, the enemy of the righteous contrived to steal them away; and though he tore down the pillar of his body, he did not steal the treasure of his spirit, for he found the blameless man's soul in arms. But me he has stripped bare and taken captive. Come, then, before my end, O Saviour, deliver me from the deceiver and save me.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Память праведнаго Твоего Иова, Господи, празднующе,/ тем Тя молим:/ избави нас от наветов и сетей лукаваго диавола/ и спаси души наша, яко Человеколюбец.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст., «Ин тропарь праведного Иова Многострадального», глас 2 — the day page prints a second troparion under that heading",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the feast of the memory of thy righteous Job, O Lord, we pray thee through him: deliver us from the plots and the snares of the wicked devil, and save our souls, for thou lovest mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко истинен и праведен, богочестив и непорочен,/ освящен же явлься, всеславне, Божий угодниче истинный,/ просветил еси мир в терпении твоем, терпеливейший и доблейший.// Темже вси, богомудре, память твою воспеваем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст., «Кондак праведного Иова Многострадального», глас 8 — the same hymn as the Greek kontakion this folder already carries, in Church Slavonic",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "True and righteous, godly and blameless, thou wast shown forth as one hallowed, all-glorious and true servant of God; by thy patience thou hast enlightened the world, most patient and most valiant of men. Therefore do we all, O wise in God, sing the praise of thy memory.",
         "rendered": "site"
       }
     }
