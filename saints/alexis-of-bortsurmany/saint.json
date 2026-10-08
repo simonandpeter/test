@@ -1,0 +1,62 @@
+{
+  "slug": "alexis-of-bortsurmany",
+  "display_name": "Alexis of Bortsurmany",
+  "names": [
+    {
+      "form": "Алексий (Гневушев) Бортсурманский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 10108, «Алексий (Гневушев) Бортсурманский, иерей», with the grade left off. The day’s own line declines the forename and gives the place but not the surname, «Прав. Алексия Бортсурманского (1848)». Measured against the gate’s own key function before it was written: 'алексии бортсурманскии гневушев' has no other holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1848,
+      "latest": 1848,
+      "display": "1848",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with: «Прав. Алексия Бортсурманского (1848)». It is the only year either page gives him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «4 августа (обретение мощей)», the finding of his relics. One row per church is the schema, so that day is recorded here and he does not render on it; that day page was not read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Прав. Алексия Бортсурманского (1848).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 10108, and no year of birth, no diocese, no account of his life or his death. The name page knows two things the line abbreviates — the surname «Гневушев» and the grade иерей, a priest — and the line knows the one the name page does not, the rank прав., righteous, which `righteous` stands on. ONE NEAR-MISS READ AND REJECTED: `alexander-gnevushev` carries the same surname, «Александр (Гневушев)», but he is a hieromartyr presbyter of 1930 kept on 15 апреля ст. ст., a different forename, a different century and a different day, and nothing on either page joins the two men. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 4 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 4 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

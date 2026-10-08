@@ -1,0 +1,63 @@
+{
+  "slug": "alexis-protopopov",
+  "display_name": "Alexis (Protopopov)",
+  "names": [
+    {
+      "form": "Алексий (Протопопов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14248, «Алексий (Протопопов), иерей, сщмч.», with the grade words left off. The day’s own line declines the forename and prints no surname at all, «Сщмч. Алексия пресвитера (1938)». Measured against the gate’s own key function before it was written: 'алексии протопопов' has no other holder; `gabriel-protopopov` carries the same surname with a different forename and is a Gabriel of saint.gr’s 19 Μαΐου."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with: «Сщмч. Алексия пресвитера (1938)». It is the only year either page gives him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Сщмч. Алексия пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 14248, and no place, no parish, no arrest and no manner of death. The name page knows one thing the line does not, the surname «Протопопов». «26 января (Новомуч.)» on his name page is what `new-martyr` stands on and that day page was not read. The corpus folders whose slug begins `alexis-` were listed out with `ls -d` and none carries this surname; no folder at all carried a venerated russian row on 21/4 before this day, measured by walking every folder's attestations in Python. `gabriel-protopopov` shares the surname and nothing else: a different forename, and a Greek row off saint.gr's 19 Μαΐου. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 4 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 4 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
