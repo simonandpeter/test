@@ -1,0 +1,7 @@
+# Paul (Bryantsev)
+
+The Russian calendar keeps him in one line with thirteen others on this day, tenth after their bishop, and his forename is one of three the line prints twice: «и с ним Митрофана , Александра , Михаила , Ипполита , Николая , Василия , Николая , Максима , Александра , Павла , Павла , Георгия пресвитеров и мч. Михаила (1938)». The two Pauls are told apart only by the name links behind the forenames; his is «Павел (Брянцев), иерей, сщмч.», which gives the surname and repeats the priestly grade.
+
+That page carries a heading, the grade and three days and not a sentence of narrative. Two of the three are synaxes rather than days of his own — 26 января for the new martyrs and confessors of Russia, and 8 июня for the saints of St Petersburg — and he is one of only two of the fourteen whose page carries the second of them. The day page hangs no life on the line. So this folder says what the calendar says: a priest of this name and surname, kept as a hieromartyr on this day with [Antony (Pankeyev)](/saints/antony-pankeyev), bishop of Belgorod, and twelve others, dead in 1938. What a second source would add is everything, and azbyka.ru was not read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 19 мая ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260519.html) and [his name page](https://days.pravoslavie.ru/name/9744.html), which carries no life; read 8 October 2026.*

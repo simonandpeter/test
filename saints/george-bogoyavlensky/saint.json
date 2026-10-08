@@ -1,0 +1,64 @@
+{
+  "slug": "george-bogoyavlensky",
+  "display_name": "George (Bogoyavlensky)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Георгий (Богоявленский)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/9963.html` link carries in its `title`, «Георгий (Богоявленский), сщмч.», with the trailing rank word left off; the surname in parentheses is part of the name and stays. **His is the only one of the thirteen name links that does NOT repeat the grade «иерей»** — it gives «сщмч.» alone — so the priesthood here is read from the day line, whose «пресвитеров» closes the run of forenames his is the last of. `fk.mjs` on this form returned NONE before the write."
+    }
+  ],
+  "related": [
+    "antony-pankeyev"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of its line for 19 мая ст. ст., which is the year for all fourteen people that line names. His name page gives no year at all and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Сщмчч. Антония , еп. Белгородского, и с ним Митрофана , Александра , Михаила , Ипполита , Николая , Василия , Николая , Максима , Александра , Павла , Павла , Георгия пресвитеров и мч. Михаила (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "Twelfth of the thirteen named «и с ним» after the bishop of Belgorod, and **the last forename before the word «пресвитеров»**, which is what makes the twelve men before the layman priests. **He is the one of the thirteen whose name page does not repeat that grade**: 9963 reads «Георгий (Богоявленский), сщмч.» and no more, so `presbyter` here rests on the day line and the row says so. **The line and the name link are all there is**: that page is a heading, the grade and two days, «26 января (Новомуч.) , 19 мая», with no narrative. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 June 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
