@@ -5,7 +5,7 @@ Ustyuzhna in the Cherepovets district of Novgorod province. In 1874 she
 entered the Leushino convent and ten years later was made a novice; on 14
 February 1901 she was tonsured with the name Seraphima, in 1902 was made the
 convent’s treasurer, and on 2 July 1906 abbess of the Ferapontov monastery —
-founded by Ferapont, the friend of Cyril of Belozersk, twenty kilometres
+founded by Ferapont, the friend of «Кирилл Белоезерский», twenty kilometres
 from his monastery, suppressed under Catherine II and made a parish church,
 and reopened as a convent only in the new century, when the abbess Taisia
 (Solopova) of Leushino invited any of her sisters who wished to go there,

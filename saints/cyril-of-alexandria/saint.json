@@ -17,6 +17,11 @@
       "form": "Кирил",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 9. јун ст. ст., „Свети Кирил, архиепископ александријски“ — Свети is not a rank and „архиепископ александријски“ is the rank with its see, which `office` and the display name already carry; both come off and the bare forename is left. **THE FOLD IS THE WIDEST THIS WAVE HAS WRITTEN**: `foldchk.py` returns four `sr` holders already — `cyril-of-catania`, `cyril-of-heliopolis`, `cyril-of-jerusalem`, `cyril-the-philosopher` — so this is the fifth on the string. Deliberate: the heading offers nothing fuller, and a form may not be built out of a body."
+    },
+    {
+      "form": "Кирилл Александрийский",
+      "lang": "ru",
+      "note": "The name as name page 1221 gives it, «Святитель Кирилл Александрийский», with the grade taken off. Measured with the gate's own fold before it was written: 'александриискии кирилл' has no other holder; the folder's existing Serbian form is the bare «Кирил» and this one is two words."
     }
   ],
   "sex": "male",
@@ -130,13 +135,55 @@
         "text": "Greatest hierarchs of true worship and brave champions of the Church of Christ, guard all those who sing: Save, O compassionate one, those who honour thee in faith.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ вселенныя светильниче,/ архиереов богодухновенное удобрение,/ Кирилле премудре,/ ученьми твоими вся просветил еси,/ цевнице духовная,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Тропарь святителя Кирилла Александрийского», глас 8, printed in the day page’s «Молитвы» block. It names him, «Кирилле премудре».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Teacher of Orthodoxy, instructor in piety and purity, lamp of the whole world, God-inspired adornment of bishops, most wise Cyril: by thy teachings thou hast enlightened all things, O harp of the Spirit; entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Бездну нам учений богословия источил еси/ яве от источник Спасовых,/ ереси погружающую,/ блаженне Кирилле,/ и стадо невредимо от треволнений спасающую,/ странам бо всем наставник, преподобне,// яко Божественная являя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Кондак святителя Кирилла Александрийского», глас 6, printed in the day page’s «Молитвы» block. It names him, «блаженне Кирилле».",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast poured out for us an abyss of the teachings of theology, drawn plainly from the springs of the Saviour, which drowns the heresies and saves the flock unharmed from the surge of the waves; for thou art, O venerable one, the teacher of every land, showing forth the things of God, blessed Cyril.",
+        "rendered": "site"
+      },
+      "tone": "глас 6"
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Свт. Кирилла , архиеп. Александрийского (444).»",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "note": "The day's second entry. The Serbian row below already stands on this same Julian 9 June, from the Охридски пролог, and the Romanian and Greek rows stand on 18 January, which name page 1221 also lists: «Дни памяти: 18 января , 9 июня». Of those two the day read is 9 июня, and the 18 января Russian day page was not read; where the January day is the joint commemoration with Athanasius the Great that the Greek row quotes, this June day is his own. The year 444 agrees with this folder's `dates` and nothing in them was touched. Two hymns the day page sets over him by name are added with their English typed; the troparion is the common of a hierarch with his name filled into it, which BRIEF.md §4 makes his own service, and the kontakion is proper to him and names the heresies he sank. The life behind index id1221 was NOT read: the folder already carries a long life from the Great Synaxarion and from saint.gr, and this upgrade adds the Russian day, the Russian name form and the Russian hymns only. azbyka.ru was not read."
     },
     {
       "church": "romanian",

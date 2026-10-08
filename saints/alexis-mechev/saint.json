@@ -1,0 +1,70 @@
+{
+  "slug": "alexis-mechev",
+  "display_name": "Alexis (Mechev)",
+  "types": [
+    "righteous",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Алексий (Мечев) Московский",
+      "lang": "ru",
+      "note": "The name as name page 6991 gives it, «Алексий (Мечев) Московский, протоиерей, прав.», with the rank word and the grade taken off; the day's line prints only «Алексия Московского» in the genitive and no surname, so the surname is read off the link. The fullest form was taken deliberately and measured with the gate's own fold before it was written: 'алексии мечев московскии' has no other holder, where the corpus's `alexis-of-moscow`, the metropolitan who died in 1378, stores the bare «Алексий» and «Алексий Московский» alone would have folded straight onto a reading of that man."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1859,
+      "latest": 1859,
+      "display": "1859",
+      "basis": "attested",
+      "note": "The life: «родился 17 марта 1859 года в благочестивой семье регента кафедрального Чудовского хора»."
+    },
+    "death": {
+      "earliest": 1923,
+      "latest": 1923,
+      "display": "1923",
+      "basis": "attested",
+      "note": "The life: «Скончался отец Алексий в пятницу 9/22 июня 1923 года», the day given in both styles at once, and the day line gives «(1923)»."
+    }
+  },
+  "related": [
+    "john-of-kronstadt"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Прав. Алексия Московского (1923).»",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "note": "The day's third entry, and the trap of the day: the line reads «Алексия Московского» and the corpus already holds an `alexis-of-moscow`, who is the metropolitan of Moscow and All Russia of 1378 and a different man; the `name:` link settles it by printing the surname, «Алексий (Мечев) Московский, протоиерей, прав.» A Cyrillic grep for «Мечев» over every saint.json returned nothing and `fk.mjs` no holder for either form. Name page 6991 lists four days — «26 января (Новомуч.) , 9 июня , 24 августа (Моск.) , 16 сентября (Перенесение мощей)» — of which the day page read is the second; the other three were not read, and the fourth is a translation of relics and the third a Moscow synaxis. The day page prints no hymn under his name. The Optina elders Anatoly and Theodosius and the elder Nektary, his son the priest Sergius Mechev, the archbishop Theodore who buried him and the bishop Arseny are all named in the life and none of them has a folder; the one relation written is to `john-of-kronstadt`, whose words sent him out to the people and which this reading gives at length. azbyka.ru was not read, and the Pravoslavie.Ru articles the name page links were not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

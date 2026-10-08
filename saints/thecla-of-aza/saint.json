@@ -15,6 +15,11 @@
       "form": "Tecla",
       "lang": "ro",
       "note": "Her own name, read out of doxologia.ro's line for 9 iunie, «Sfânta Muceniță Tecla»."
+    },
+    {
+      "form": "Фекла Персидская",
+      "lang": "ru",
+      "note": "The name as name page 2701 gives it, «Фекла Персидская, мц.», with the grade taken off, and the page offers nothing fuller. **This form widens a fold from one holder to two**: `thecla-20-november` already stores the identical string «Фекла Персидская», from the Russian 20 ноября. Measured by codepoint with the gate's own fold before it was written: 'персидская фекла', holders `thecla-20-november` and `thecla-of-aza`, two and no more. The two are parted by two days in both the Russian and the Greek calendars and by two companies: this Thecla is the first of the five virgins Thecla, Mariamne, Martha, Mary and Ennatha, and that one is of the company the Greek 20 November heads «Θέκλα, Βαούθα, Δενά…», dated 343 where this one is dated about 330 or 346. A `READ_FOLDS` reading was written for the key in the same commit."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 26 сентября ст. ст. (civil 9 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июня ст. ст. — «Мцц. Феклы , Марфы и Марии Персидских (346).»",
+        "url": "https://days.pravoslavie.ru/Days/20260609.html",
+        "year": 2026
+      },
+      "note": "She is the first of the three the line names. The day's fifth entry names three of the five virgins together, «Мцц. Феклы , Марфы и Марии Персидских (346).», and the corpus keeps all five; `mariamne-of-aza` and `ennatha-of-aza` are therefore folders this day page does not print and they took nothing. The /Life/ page behind the line is one sentence long and the whole of what this calendar tells: «Святые мученицы Фекла, Марфа и Мария 6 июня 346 года усечены мечом за Христа при царе Сапоре II в Персии.» — beheaded on 6 June 346 under Shapur II. Two things in that sentence are new and neither was written into `dates`: the year 346, where this folder holds about 330 off the Romanian and Greek pages, and the day of the death, 6 June, which is three days before the feast. Both are recorded in the life and the interval is left as it stands, because a third calendar's year is a reading for the author and not a day's work. The name page links a Pravoslavie.Ru article headed «Святые девы Фекла, Мариамна, Марфа, Мария и Еннафа», which names all five and the Tamshapur of their passion, and NOT ONE WORD of it was read. The day page prints no hymn for them. azbyka.ru was not read."
     },
     {
       "church": "romanian",
