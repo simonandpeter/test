@@ -16,6 +16,11 @@
       "form": "Јунија",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог's first entry for 17. мај ст. ст., „свету Јунију, помоћницу Андроникову“, with the accusative resolved to the nominative the same body gives three words later, „Са светом Јунијом“ → Јунија; света is not a rank and „помоћницу Андроникову“ is a relation and not a name. **This is the one form in these three days that is not read off a heading**, the Prologue giving her none, and it is a copied script form all the same — not a transliteration. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
+    },
+    {
+      "form": "Иуния",
+      "lang": "ru",
+      "note": "The day page's own `/name/` link carries in its `title` «Иуния (Юния)» — one name in two spellings, not a name with an epithet — and the stored form is the first of them, which is the one the day's own line declines, «Ап. от 70-ти Андроника и св. Иунии (I).» The second, Юния, is the spelling both life pages use in their text, «Приветствуйте Андроника и Юнию, сродников моих», and it is recorded here rather than stored, because a parenthesis in this calendar's name links is not part of a name (BRIEF-ADDENDUM §2) and two spellings are not two forms to be written as one string. `fk.mjs` on «Иуния» returned NONE before the write."
     }
   ],
   "sex": "female",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Ап. от 70-ти Андроника и св. Иунии (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the other calendars, and the same woman: the kinswoman of Paul named with Andronicus in Romans 16:7 and called glorious among the apostles there. **`dates` were not touched; the folder has none and the Russian gives none** — the day line prints «(I)» and no year. The line calls her «св.» and gives her no rank word of its own, so nothing was added to `types`, which already holds `apostle` and `martyr`. **Two hymns were copied, and both are joint**: «Тропарь святых Андроника и Иунии» (глас 3) and «Кондак святых Андроника и Иунии» (глас 2), the second naming her «Иунию премудрую» and saying she laboured with him in the preaching of the Gospel. The same two are copied to `andronicus-the-apostle`, which takes its russian row on this day in the same batch and which this folder already carries as a `related` row. The calendar's own name link prints her as «Иуния (Юния)» and its life pages use Юния throughout; the stored form is the first spelling and the note below says so. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -108,6 +123,38 @@
       },
       "english": {
         "text": "A pair full of light, holy apostles and heralds of Christ, you were shown forth to the world, sowing among all the preaching of grace; and so today we faithfully praise you, O Andronicus and God-minded Junia, magnifying Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Тропарь святых Андроника и Иунии»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, entreat the merciful God, that He grant to our souls the forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Звезду пресветлую,/ богоразумия светом просвещшаго языки/ апостола Христова Андроника восхвалим/ и с ним во благовестии потрудившуюся Иунию премудрую, вопиюще:// молите Христа Бога непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Кондак святых Андроника и Иунии»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the most radiant star, Andronicus the apostle of Christ, who enlightened the nations with the light of the knowledge of God, and with him the most wise Junia, who laboured together with him in the preaching of the Gospel, crying out: pray to Christ God without ceasing for us all.",
         "rendered": "site"
       }
     }

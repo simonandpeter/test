@@ -13,6 +13,11 @@
       "form": "Παχώμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Μαρτίου, «Όσιος Παχώμιος ο Αναχωρητής», with the rank word and the epithet left off. Its life page adds the place and the name in the world: «Ο Όσιος Παχώμιος, της Νερέκτα, κατά κόσμον Ιάκωβος»."
+    },
+    {
+      "form": "Пахомий Нерехтский, Сыпановский, Костромской",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1758.html` link carries in its `title`, «Пахомий Нерехтский, Сыпановский, Костромской, прп.», with the rank abbreviation left off and the three place epithets kept, which is the fullest form this calendar gives him; the day's own line declines him «Прп. Пахомия Нерехтского (1384).» `fk.mjs` on this form returned NONE before the write, with eleven other `pachomius-*` and `pahomie-*` folders in the corpus, among them `pachomius-of-keno`, whose own venerated russian row stands on 11 января and who is a different man."
     }
   ],
   "images": [
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him a Russian abbot near Kostroma, so a Russian row is likely and has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Прп. Пахомия Нерехтского (1384).»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "note": "**This folder was nearly written a second time.** The day's candidate scan does not list it, because its one venerated row stands on the Greek 23 March and `sameNumber` cannot see a folder whose row sits on another menologion day; the previous reader's reconnaissance accordingly mapped «Прп. Пахомия Нерехтского» as the day's one arrival. It is not: this folder was made from saint.gr's 23 Μαρτίου in the Greek wave, its Greek note already records that «Η Εκκλησία τιμά, επίσης, την μνήμη του Οσίου Παχωμίου στις 15 Μαΐου», and the two pages are one man — Яков in the world against the Greek's «κατά κόσμον Ιάκωβος», the house of the Holy Trinity he built at Сыпаново near Kostroma, the deep old age, and the year 1384 in both. The Russian row is therefore this day, and no second folder was made. `dates` were not touched: 1384 is the year the folder already carries. **Two hymns were copied**, «Тропарь» (глас 4) and «Кондак» (глас 4), both headed «преподобного Пахомия Нерехтского». The page's «Дни памяти» line gives «21 марта , 15 мая» while its own last sentence gives «Основная память преподобного Пахомия совершается 15 мая, в день тезоименитства святого, 23 марта - в день преставления» — 21 against 23 March inside one page, and the Greek book keeps him on 23 March, which is where this folder's Greek row stands. The day page that printed him is 15 мая and that is the day of this row; the March day is his repose and is recorded here and not rendered. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -65,5 +80,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Житейских молв, преподобне, отвергся/ и, яко птищ, обрете себе в пустыни безмолвие,/ в молитвах и бдении прилежа Богови,/ преподобне отче Пахомие,/ и остави древнее пребывание,/ и отыде в пустыню, и в ней водворися,/ и состави обитель во Имя Пресвятыя Троицы,/ и процвел еси, аки финикс,/ и бысть образ утешения духовнаго./ Темже, преподобне Пахомие,/ моли Пресвятую Троицу спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Тропарь преподобного Пахомия Нерехтского»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having cast off the clamour of this life, O venerable one, like a bird thou didst find silence for thyself in the wilderness, cleaving to God in prayers and in vigil, O venerable father Pachomius. Thou didst leave thy former dwelling and go out into the wilderness and settle there, and thou didst found a monastery in the name of the Most Holy Trinity; and thou didst flourish like a palm tree and becamest an image of spiritual consolation. Therefore, O venerable Pachomius, pray to the Most Holy Trinity that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "В пустыни безмолвствуя,/ единствующу тя, Богоносе, взыскующу ти Господа,/ Богу же тебе не оставльшу единому быти в пустыни,/ и Того повелением снидошася к тебе неколико братии,/ с нимиже ти молящуся Господеви,/ Троице пречестен храм воздвиже,/ в немже предстояще, преподобне Пахомие,/ молися о спасении душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Кондак преподобного Пахомия Нерехтского»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping silence in the wilderness, alone, O God-bearer, thou didst seek the Lord; yet God did not leave thee to be alone in the wilderness, and at His command a few brethren came together to thee. Praying to the Lord with them, thou didst raise a most honourable temple to the Trinity; standing within it, O venerable Pachomius, pray for the salvation of our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

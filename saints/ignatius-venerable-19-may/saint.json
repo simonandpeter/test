@@ -18,6 +18,11 @@
       "form": "Јован Вологодски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. мај ст. ст., „Свети кнез Јован Вологодски.“ — Свети is not a rank and кнез is the `prince` this batch adds to `types`; strip them and the fullest form the calendar gives is left. **This folder is displayed as Ignatius and the form stored for it is John of Vologda, and that is deliberate.** BRIEF-SERBIAN.md §6 allows **one `sr` form per folder, the fullest the calendar gives**, and the calendar gives the princely name in its heading while the monastic name stands in the body’s last clause, „доби име Игњатије“. **«Јован Вологодски» is the fuller of the two and is the one stored; «Игњатије» is recorded in this note and not as a second form.** This is the inverse of the «Кирил (Константин)» case the brief settles — there the name in the world stood in a parenthesis beside the stored one, here the name in the world is the heading and the monastic name is in the body — and **swapping the two is one commit if the author prefers the folder’s own name.** Measured before drafting with `foldchk.py`: «Јован Вологодски» and «Игњатије» are both held by no folder in any language, while a bare «Јован» is held by eight — so keeping Вологодски also keeps this folder out of that fold."
+    },
+    {
+      "form": "Иоанн (в иночестве Игнатий) Угличский, Вологодский, Прилуцкий",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1021.html` link carries in its `title`, «Иоанн (в иночестве Игнатий) Угличский, Вологодский, Прилуцкий, князь, схимонах», with the two trailing rank words left off and everything else kept — the parenthesis is the calendar's own and says which name was the monastic one, and the three place epithets are the fullest form this book gives him. It is stored whole because the calendar prints it whole and because this folder's display name, «Ignatius (19 May)», carries the day for want of anything else; the form supplies what the display name could not. The day's own line declines him «Блгв. кн. Иоанна Угличского, в иночестве Игнатия, Вологодского (1523).» `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "dates": {
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Блгв. кн. Иоанна Угличского, в иночестве Игнатия, Вологодского (1523).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps, and the same man: the prince of Uglich who took the schema with the name Ignatius at the end of his imprisonment. **`dates` were not touched and the calendar contradicts itself by a year.** The folder carries 1477–1522; the life page says «Скончался 19 мая 1522 г. в возрасте 45 лет», on the day of this feast and at forty-five, which agrees with both bounds the folder holds, while the day's own line prints «(1523)». The year in the prose was preferred to neither — nothing was changed — and both are in the life. **Three hymns were copied**, «Тропарь» (глас 2), «Кондак» (глас 8) and «Ин кондак» (глас 8), all headed «благоверного князя Иоанна Угличского, в иночестве Игнатия, Вологодского» and all addressing him by the monastic name. The Russian adds the two things this folder most lacked: his father, the prince Андрей Васильевич of Uglich, and the uncle who shut him up, the great prince Иоанн III Васильевич of Moscow, for thirty-two years without cause. The page's own «Дни памяти» line adds «23 мая (Ростов.)», the synaxis of the saints of Rostov, a company's feast and not a day of his own. The day page prints no hymn for him under the name Иоанн. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -80,5 +95,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В житии своем многи скорби претерпел еси, блаженне,/ и терпения ради венец от Бога приял еси,/ и по смерти своей чудотворец показался еси,/ того ради память твою песньми почитаем,/ преподобне отче наш Игнатие,/ молися, предстоя Святей Троице,/ державе сродник твоих богоугодней быти/ и сыновом Российским спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Тропарь благоверного князя Иоанна Угличского, в иночестве Игнатия, Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thy life thou didst endure many sorrows, O blessed one, and for thy patience thou didst receive a crown from God; and after thy death thou wast shown to be a wonderworker. For this we honour thy memory with hymns, O our venerable father Ignatius. Standing before the Holy Trinity, pray that the realm of thy kinsmen may be pleasing to God and that the sons of Russia may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Изрядная отрасле благочестиваго корене,/ дивный благородный цвете,/ избранный от пелен благодатию Христовою,/ возлюбленный от юности Духом Святым,/ девственное процветение, Игнатие блаженне,/ днесь, сошедшеся, вернии, в память твою,/ похвальными венцы честную твою главу венчающе, зовем:/ радуйся, преподобне, сосуде Святаго Духа, всея Российской земли удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Кондак благоверного князя Иоанна Угличского, в иночестве Игнатия, Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Excellent branch of a pious root, wondrous and noble flower, chosen from thy swaddling clothes by the grace of Christ, beloved from thy youth by the Holy Spirit, blossom of virginity, O blessed Ignatius: today the faithful, gathered for thy memory and crowning thy honoured head with wreaths of praise, cry out: Rejoice, O venerable one, vessel of the Holy Spirit, adornment of all the Russian land.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Чисто житие на земли пожил еси,/ душу и тело без скверны соблюл еси/ и терпения ради, своего мзду восприял еси./ И ныне на Небесех со Ангелы веселяся, преподобне отче Игнатие,/ молися непрестанно Христу Богу о всех нас, почитающих память твою/ и притекающих к раце мощей твоих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Ин кондак благоверного князя Иоанна Угличского, в иночестве Игнатия, Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst live a pure life on earth, and keep soul and body without stain, and for thy patience thou didst receive thy reward. And now, rejoicing in the heavens with the angels, O venerable father Ignatius, pray without ceasing to Christ God for all of us who honour thy memory and who come to the shrine of thy relics.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

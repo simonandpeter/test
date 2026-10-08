@@ -1,0 +1,63 @@
+{
+  "slug": "vitus-the-roman",
+  "display_name": "Vitus the Roman",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Вит Римский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Вит Римский, мч.», with the rank abbreviation left off. The day's own line declines the three together, «Мчч. Вита , Модеста и Крискентии (ок. 303).» The epithet Римский is the calendar's and not the life's: the life makes him the son of a Sicilian nobleman and has him suffer in Lucania, and names Rome nowhere. `fk.mjs` on «Вит Римский» returned NONE before the write, and no folder in the corpus held any form of this name in any language."
+    }
+  ],
+  "related": [
+    "modestus-tutor-of-vitus",
+    "crescentia-nurse-of-vitus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "about 303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Страдания святых мучеников Вита, Модеста и Крискентии совершились около 303 года», and the day line prints «(ок. 303)». The page's own «около» is kept in the display. It gives no year of birth and calls him throughout an отрок, a boy."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Мчч. Вита , Модеста и Крискентии (ок. 303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "The life page's own «Дни памяти» line gives two days, «16 мая , 15 июня», and the body repeats «Память этих святых совершается также 16 мая» — the 15 June is the day the Western books keep them on. One row per church is the schema and the day page that printed him is 16 мая, so the June day is recorded here and he does not render on it. The day page prints no hymn for the three. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

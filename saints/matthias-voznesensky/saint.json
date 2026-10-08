@@ -1,0 +1,62 @@
+{
+  "slug": "matthias-voznesensky",
+  "display_name": "Matthias (Voznesensky)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Матфий (Вознесенский)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/9674.html` link carries in its `title` and as that page's heading, «Матфий (Вознесенский), иерей, сщмч.», with the two trailing rank words left off. The surname in parentheses is part of the name and stays (BRIEF-RUSSIAN §2); the day's own line gives only «Сщмч. Матфия пресвитера (1919).» `fk.mjs` on this form returned NONE before the write. The same day prints a layman «Михаил (Вознесенский), мч.» of 1938 in another entry; the surname is shared and nothing read links the two men."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of its line for 19 мая ст. ст.: «Сщмч. Матфия пресвитера (1919).» His name page gives no year at all and no year of birth, and nothing was reckoned from anything."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Сщмч. Матфия пресвитера (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "**The line is all there is**, which BRIEF-RUSSIAN §2 makes a correct folder. The day page hangs no `/Life/` link on it; name page 9674 is a heading, the grade and two days, «26 января (Новомуч.) , 19 мая», and nothing else. The 26 января is the synaxis of the new martyrs and confessors of Russia, a company's feast and not a second day of his own (BRIEF.md §8). He is the only entry of 1919 on this day, which is otherwise a day of 1938. azbyka.ru was not read, and it is the source that would turn this line into a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 June 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

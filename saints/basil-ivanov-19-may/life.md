@@ -1,0 +1,9 @@
+# Basil (Ivanov, 19 May)
+
+The Russian calendar keeps him in one line with thirteen others on this day, sixth after their bishop: «Сщмчч. Антония , еп. Белгородского, и с ним Митрофана , Александра , Михаила , Ипполита , Николая , Василия , Николая , Максима , Александра , Павла , Павла , Георгия пресвитеров и мч. Михаила (1938)». The word «пресвитеров» at the end of that run covers him, so the line makes him a priest, and the name link behind his forename gives the surname and repeats the grade: «Василий (Иванов), иерей, сщмч.» That page carries a heading and two days and not a sentence of narrative; the second day, 26 января, is the synaxis of the new martyrs and confessors of Russia, a company's feast and not a day of his own.
+
+The same calendar keeps a second man of the same name and surname, on 4 февраля, in a line of thirty-one, and that page heads him «Василий (Иванов), мч.» — a layman, and the folder this corpus made from it. The year is the same in both, 1938; the day, the grade and the company are not. A priest among a bishop's clergy and a layman at the end of a list of thirty-one are two men on the calendar's own showing, and the display name here carries the day because the calendar gives no epithet to tell them by.
+
+So this folder says what the calendar says: a priest of this name and surname, kept as a hieromartyr on this day with [Antony (Pankeyev)](/saints/antony-pankeyev), bishop of Belgorod, and twelve others, dead in 1938. What a second source would add is everything, and azbyka.ru was not read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 19 мая ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260519.html) and [his name page](https://days.pravoslavie.ru/name/9491.html), which carries no life; read 8 October 2026.*

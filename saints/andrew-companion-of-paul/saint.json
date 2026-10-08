@@ -16,6 +16,11 @@
       "form": "Андреј",
       "lang": "sr",
       "note": "Read out of the heading of the Охридски пролог’s second entry for 18. мај ст. ст., „Свети мученици Петар, Дионисије, Андреј, Павле и Христина.“ — Свети is not a rank and мученици the `martyr` this corpus puts in `types`, so the heading leaves five bare forenames and the body adds nothing to any of them but a description. Measured with `foldchk.py` before drafting: `[('andrew-the-monk-martyr-of-crete', 'sr'), ('andrew-the-presbyter-confessor', 'sr')]`. The folds are read in this batch’s commit message."
+    },
+    {
+      "form": "Андрей Лампсакский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/183.html` link carries in its `title`, «Андрей Лампсакский, мч.», with the rank abbreviation left off. The epithet is the calendar's and is the city of the trial, not a city of his own: the page says he and his companion were among those brought before the governor there, and it names Mesopotamia only for the two soldiers. `fk.mjs` on «Андрей Лампсакский» returned NONE before the write."
     }
   ],
   "related": [
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Петра , Дионисия , Андрея , Павла и Христины Лампсакийских (249-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same man. **The Russian confirms the Mesopotamia this folder's display name carries and keeps it vague in the same way**: «Дионисий, Никомах и два воина, приведенные из Месопотамии, а также Андрей и Павел» — two soldiers brought from Mesopotamia, then him and his companion, so the page does not actually say which two of the four the soldiers were, and this folder's `soldier` type, read elsewhere, was left as it stood and nothing was added. **`dates` were not touched**: the folder carries «between 249 and 251» and this calendar gives exactly that, the reign of Decius, which the day line prints as the span. The calendar's own name link calls him «Андрей Лампсакский», of Lampsacus, where this folder's display name names him for his companion; both are in the life. The day page prints no hymn for the five. azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -16,6 +16,11 @@
       "form": "Андроник",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 17. мај ст. ст., „Свети апостол Андроник.“ Свети is not a rank; апостол is the `apostle` this folder carries in `types`; strip them and the bare forename is left, and the heading offers nothing else — the Pannonia, the kinship and the martyrdom are all in the body. **A deliberate exact-form fold, measured with `foldchk.py` before drafting**: `andronicus-of-antioch` already carries „Андроник“ as its **`ru`** form, so the collision is across two languages that spell the name identically. Two men: a companion of Junia among the Seventy, bishop in Pannonia, against a martyr of Antioch. The fold is read in this batch's commit message."
+    },
+    {
+      "form": "Андроник",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Апостол от 70-ти Андроник», with the rank phrase left off — `apostle` is already in this folder's `types` and «от 70-ти», of the Seventy, is the company and not the name. The calendar leaves no epithet and no see behind it, so the bare forename is the fullest form this book gives. The day's own line declines him «Ап. от 70-ти Андроника и св. Иунии (I).» THE FOLD IS DELIBERATE AND IS NOT NEW: `fk.mjs` on «Андроник» returns three holders, and this folder is already one of them through the identical `sr` form, so the read key «андроник» keeps exactly its three members."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Ап. от 70-ти Андроника и св. Иунии (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the other calendars, and the same man: the kinsman of Paul named with Junia in Romans 16:7, bishop of Pannonia. **`dates` were not touched; the folder has none and the Russian gives none** — the day line prints «(I)», the first century, which is an age and not a year, and no interval was invented from it. His life page's «Дни памяти» line gives three days, «4 января (70 ап.) , 17 мая , 30 июля»: the January is the synaxis of the Seventy, a company's feast, and the July is the finding of his relics, so neither is a second day of his own (BRIEF.md §8), and the day page that printed him is 17 мая. **Two hymns were copied, and both are joint**: «Тропарь святых Андроника и Иунии» (глас 3), which names no one and asks the holy apostles for forgiveness, and «Кондак святых Андроника и Иунии» (глас 2), which names him and her. They are not a mis-hang: the day's line is theirs together, both of them take a russian row on this day in this batch, each already carries the other as a `related` row, and the same two hymns are copied to both folders. **The fold was not widened.** This folder already held the identical string «Андроник» in `sr`, so the read key «андроник» stands at the same three holders — `andronicus-of-antioch`, `andronicus-of-tarsus`, `andronicus-the-apostle` — as before, and its note already describes this folder as the apostle kept on 17 May. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -116,6 +131,38 @@
       },
       "english": {
         "text": "A pair full of light, holy apostles and heralds of Christ, you were shown forth to the world, sowing among all the preaching of grace; and so today we faithfully praise you, O Andronicus and God-minded Junia, magnifying Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Тропарь святых Андроника и Иунии»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, entreat the merciful God, that He grant to our souls the forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Звезду пресветлую,/ богоразумия светом просвещшаго языки/ апостола Христова Андроника восхвалим/ и с ним во благовестии потрудившуюся Иунию премудрую, вопиюще:// молите Христа Бога непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Кондак святых Андроника и Иунии»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the most radiant star, Andronicus the apostle of Christ, who enlightened the nations with the light of the knowledge of God, and with him the most wise Junia, who laboured together with him in the preaching of the Gospel, crying out: pray to Christ God without ceasing for us all.",
         "rendered": "site"
       }
     }

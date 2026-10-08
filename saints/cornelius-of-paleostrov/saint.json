@@ -11,6 +11,11 @@
       "form": "Κορνήλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Κορνήλιος», with the rank word left off; the life page's own head calls him «Ο Όσιος Κορνήλιος του Παλεοστρόβ»."
+    },
+    {
+      "form": "Корнилий Палеостровский, Олонецкий",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1286.html` link carries in its `title`, «Корнилий Палеостровский, Олонецкий, игумен», with the trailing rank word left off and both place epithets kept, which is the fullest form this calendar gives him and what tells him from the day's other Cornelius, stored «Корнилий Комельский». The day's own line declines him «Прп. Корнилия , игумена Палеостровского, Олонецкого (ок. 1420).» `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Прп. Корнилия , игумена Палеостровского, Олонецкого (ок. 1420).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same man: the founder of monastic life on the island of Палий in lake Onega, dead about 1420. `dates` were not touched — «ок. 1420» is the year the folder already carries. **The day page prints his two hymns TWICE, under two headings differing only in the epithet Олонецкого and one letter of the text** («в похвалу Рождества Ей» against «Ея» in the troparion, «во плоти, на земли» against «во плоти на земли» in the kontakion), so **one troparion and one kontakion were copied and not two of each**; the variants are recorded here rather than written as separate rows. The other Cornelius the day keeps, of Komel, has three hymn blocks of his own under his own headings, so the two sets are two services on one page. **`abbot` was NOT added to `types`**, which holds `venerable` and `ascetic`: the line and the name link both call him «игумен» and the hymn headings do too, but this folder's own reading of him is the hermit of the cave, and the word is in the life. The page's own «Дни памяти» line adds «21 августа», which it says is the day of his disciple Авраамий; it is not a second day of his own and he does not render on it. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "От юности, премудре, прилежно подвизався,/ от Бога наставляемь,/ отечество свое оставль — град Псков,/ и вселися в пустыню,/ во отоце великаго езера Онега,/ иноки собра мудре/ и извещением Святаго Духа обитель согради/ и храм созда Пресвятей Богородице/ в похвалу Рождества Ей,/ струями же слез твоих/ безплотныя враги погрузил еси/ и жития твоего целомудрием со ангельскими лики совокупися,/ преподобне отче Корнилие,/ с нимиже Христа Бога моли/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Тропарь преподобного Корнилия, игумена Палеостровского»; the page prints the same text a second time as «Тропарь преподобного Корнилия, игумена Палеостровского, Олонецкого», differing only in «Ея» for «Ей»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Striving diligently from thy youth, O most wise one, and taught by God, thou didst leave thine own country, the city of Pskov, and settle in the wilderness, on an island of the great lake Onega; wisely thou didst gather monks, and at the prompting of the Holy Spirit thou didst build a monastery and raise a church to the Most Holy Mother of God in praise of her Nativity. With the streams of thy tears thou didst drown the bodiless enemies, and by the chastity of thy life thou wast joined to the choirs of angels. O venerable father Cornelius, pray with them to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко Ангел во плоти, на земли показася,/ пощением насажден быв, преподобне отче Корнилие,/ наставник иноком многим был еси,/ сего ради вопием ти:/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Кондак преподобного Корнилия, игумена Палеостровского»; the page prints the same text a second time as «Кондак преподобного Корнилия, игумена Палеостровского, Олонецкого», differing only in a comma",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth on earth as an angel in the flesh, planted by fasting, O venerable father Cornelius, and thou wast a guide to many monks. Therefore we cry to thee: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

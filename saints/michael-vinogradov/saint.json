@@ -1,0 +1,62 @@
+{
+  "slug": "michael-vinogradov",
+  "display_name": "Michael (Vinogradov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Михаил (Виноградов)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/14510.html` link carries in its `title` and as the heading of that page, «Михаил (Виноградов), иерей, сщмч.», with the two trailing rank words left off — `presbyter` and `hieromartyr` are in this folder's `types` and the office is the `Priest` the packs carry. The surname in parentheses is part of the name and stays, per BRIEF-RUSSIAN §2, which records that a bare forename here is something a reader reconstructs with less of the record in it; the day's own line gives only «Сщмч. Михаила пресвитера (1932).» `fk.mjs` on «Михаил (Виноградов)» returned NONE before the write, in a corpus already holding nine folders of the surname Виноградов and none of this forename."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of its line for 18 мая ст. ст.: «Сщмч. Михаила пресвитера (1932).» His name page gives no year at all, no year of birth and no place, and nothing was reckoned from anything."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Сщмч. Михаила пресвитера (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "**The line is all there is**, and that is a correct folder per BRIEF-RUSSIAN §2. The day page hangs no `/Life/` link on it; name page 14510 is a heading, «Михаил (Виноградов), иерей, сщмч.», and two days, «26 января (Новомуч.) , 18 мая», and nothing else at all — no paragraph, no icon, no article. The 26 января is the synaxis of the new martyrs and confessors of Russia, a company's feast and not a second day of his own (BRIEF.md §8). The corpus holds nine other folders of this surname — Александр, Алексий, Василий, Иоанн, Мария, and three Николаи — and none of them is a Михаил and none stands on this day. azbyka.ru was not read, and it is the source that would turn this line into a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 31 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 31 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

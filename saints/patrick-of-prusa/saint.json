@@ -16,6 +16,11 @@
       "form": "Патрикије",
       "lang": "sr",
       "note": "Read out of the heading of the Охридски пролог’s first entry for 19. мај ст. ст., „Свети мученик Патрикије епископ бруски, са три презвитера: Акакијем, Менандром и Полиеном.“ — Свети is not a rank, мученик is the martyrdom this corpus puts in `types` as `hieromartyr`, and „епископ бруски“ is the second rank and the see, which go to `types` and `office`; **stripping a rank and a see to reach the stored form is the reading BRIEF-SERBIAN.md §6 asks be said in the note.** The body repeats it bare four times. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM` — the corpus’s other Patrick is `patrick-of-ireland`."
+    },
+    {
+      "form": "Патрикий Прусский (Брусский), Вифинский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1747.html` link carries in its `title`, «Святитель Патрикий Прусский (Брусский), Вифинский, епископ, сщмч.», with «Святитель» and the two trailing rank words left off — `bishop` and `hieromartyr` are in this folder's `types` and the see is in `office` — and all three epithets kept, the parenthesis being the calendar's own variant spelling of the see and not part of the fold key. The day's own line declines him «Сщмчч. Патрикия , еп. Прусского...» `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Сщмчч. Патрикия , еп. Прусского, и с ним трех пресвитеров: Акакия , Менандра и Полиена (ок. 100).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same man, bishop of Prusa in Bithynia, beheaded with his three presbyters. **No `dates` object was written and the folder still has none**: the day line prints «(ок. 100)» and the page closes «Кончина мучеников последовала около 100 года по Рождестве Христовом», but a round hundred with «около» before it is this calendar's only figure, the page's own first sentence says merely «жил в I веке», and no other book in this folder gave a year — a century is already what the line amounts to, and an interval invented around 100 would assert a precision nobody printed. **One hymn was copied**, «Кондак священномученика Патрикия» (глас 4), which names him and «пострадавшими с тобою», those who suffered with him; the folder already held four hymns from elsewhere, and the day page prints no troparion for him. The Russian names the governor **Юлий** and the hot springs, which is the one scene of the martyrdom. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -140,6 +155,22 @@
       },
       "english": {
         "text": "Having received your body as a sacred treasure of Jesus, O Patrick, the Church cries out to you in gladness: through you the whole world is kept in deep peace, unharmed by every heresy and unconquered.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко светосиянен добротою священства/ и мучения кровию преукрашен,/ с пострадавшими с тобою, Патрикие, Христу предстоя,/ о нас поминай,// яко страдалец честный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Кондак священномученика Патрикия»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining with the beauty of the priesthood and adorned with the blood of martyrdom, O Patrick, standing before Christ with those who suffered together with thee, remember us, as an honoured sufferer.",
         "rendered": "site"
       }
     }

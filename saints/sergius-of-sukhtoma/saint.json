@@ -11,6 +11,11 @@
       "form": "Σέργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Σέργιος της Σουχτόμα», with the rank word left off; the life page adds that his name in the world was Στέφανος."
+    },
+    {
+      "form": "Сергий Шухтомский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1978.html` link carries in its `title`, «Преподобный Сергий Шухтомский», with the rank word left off — it is the `venerable` this folder carries in `types`. The calendar's own first life page titles him «Сергий Шухтовский», with a в, against the Шухтомский of the name link, the day line and the second life page; the stored form follows the three that agree. `fk.mjs` on «Сергий Шухтомский» returned NONE before the write."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Прп. Сергия Шухтомского (1609).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same man. `dates` were not touched: 1609 is the year both of the calendar's readings and the day line give, one of them with the day of this feast, «19 мая/1 июня 1609 г.», which is this Julian day and its civil equivalent. **One hymn was copied**, «Тропарь преподобного Сергия Шухтомского» (глас 8). **The two readings disagree about who tonsured him and in what**: life6834 has him tonsured in the Череповец Resurrection monastery «от руки игумена Исаии» and then going on to the Shukhtoma house, while life1104 has him take the great schema there «от архимандрита Исаии» — abbot against archimandrite, and a tonsure against a schema. Both are in the life. The second reading adds that the same Исаия afterwards painted his icon. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -56,5 +71,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Бденными молитвами и потоки слезными пустыню напоил еси/ и из глубины воздыханьми ю расплодил еси/ и бысть постнически равно Ангелом житие твое;/ страдальчески бореньми, яже от бесов и от ненаказанных человек, претерпел еси/ и Ангелом собеседник явися,/ Божественнаго винограда насеятель быв;/ и, оставив временное житие, преселился еси в жилище Небесное./ Темже тя почитаем, преподобне отче наш Сергие,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Тропарь преподобного Сергия Шухтомского»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With vigilant prayers and with streams of tears thou didst water the wilderness, and with sighs from the depths thou didst make it bear fruit; and thy life as an ascetic was the equal of the angels. In the manner of a martyr thou didst endure the assaults of demons and of untaught men, and thou wast shown to be a companion of angels and a planter of the divine vineyard; and leaving this temporal life thou didst pass over to a dwelling in heaven. Therefore we honour thee, O our venerable father Sergius: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

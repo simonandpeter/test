@@ -1,0 +1,60 @@
+{
+  "slug": "caluphus-the-egyptian",
+  "display_name": "Caluphus the Egyptian",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Калуф Египтянин",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1164.html` link carries in its `title` and as that page's heading, «Калуф Египтянин, мч.», with the rank abbreviation left off. Египтянин is a noun, the Egyptian, and is the calendar's own epithet. The day's own line declines him «Мч. Калуфа Египтянина (284-303).» `fk.mjs` on «Калуф Египтянин» returned NONE before the write, and no folder in the corpus held any form of this name in any language."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Наконец, он был брошен в огонь и там принял мученическую кончину. Это произошло в 303 году.» The day line prints «(284-303)», which is not a bracket on his life but the span this calendar uses for the persecution — the same page says he suffered «в гонение императора Максимиана Геркула, соправителя Диоклетиана (284–305)», and names the third century as the century he lived in. The year in the prose is the one recorded; no year of birth is given and none was reckoned."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Мч. Калуфа Египтянина (284-303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "His life page and his name page both give one day only, 19 мая. The day page prints no hymn for him. The page gives him no companions, no judge by name and no relics. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 June 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

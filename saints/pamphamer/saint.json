@@ -16,6 +16,11 @@
       "form": "Памфамир",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог's second entry for 17. мај ст. ст., „То исто учинише и два његова друга: Памфамир и Памфалон“, where the name stands in the nominative; свети, which the next sentence puts before it, is not a rank. **The spelling is this book's own**, Памфамир against the Greek «Παμφαμήρ» this folder also carries, and a copied script form is stored as printed and never corrected towards another language's. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
+    },
+    {
+      "form": "Памфамир Халкидонский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Памфамир Халкидонский» — alone of the day's three it carries no rank abbreviation at all — with the place epithet kept. The day's own line declines the three together, «Мчч. Солохона , Памфамира и Памфалона воинов (284-305).» `fk.mjs` on «Памфамир Халкидонский» returned NONE before the write."
     }
   ],
   "related": [
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Мчч. Солохона , Памфамира и Памфалона воинов (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same three soldiers; this folder already carries the other two as `related` rows. **`dates` were not touched: the folder has none and the Russian gives no year of its own**, only the reign «в царствование императора Максимиана (284–305)», which the day line prints as a span. A reign is not a death year, and the 298 the Serbian book gives the leader of the three was not copied across to him. The one thing the Russian adds about him in particular is that he and the third of them died under the first torture, before their leader's long ordeal began. His `/name/` link's title is the only one of the three that carries no rank abbreviation. The day page prints no hymn for the three. azbyka.ru was not read."
     },
     {
       "church": "romanian",

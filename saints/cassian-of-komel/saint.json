@@ -3,13 +3,19 @@
   "display_name": "Cassian of Komel",
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "abbot"
   ],
   "names": [
     {
       "form": "Κασσιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαΐου, «Όσιοι Κασσιανός και Λαυρέντιος», with the rank word left off; the page's own head line for him reads «Οσιος Κασσιανος (; - 1537)»."
+    },
+    {
+      "form": "Кассиан Комельский, Вологодский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Преподобный Кассиан Комельский, Вологодский», with the rank word «Преподобный» left off — it is the `venerable` this folder carries in `types` — and both place epithets kept, which is the fullest form this calendar gives him. The day's own line declines him inside a joint heading, «Прпп. Кассиана (1537) и Лаврентия (1548) Комельских.» `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "related": [
@@ -28,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Прпп. Кассиана (1537) и Лаврентия (1548) Комельских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: the disciple of Cornelius who governed the house at Komel while his teacher was away at lake Sura, and who died in 1537. `dates` were not touched — 1537 is the year both books give, and this page adds only that he died before his teacher did. **`abbot` was added to `types`**, which held `venerable` alone: both Russian readings say «Избранный братией игуменом с благословения и согласия преподобного Корнилия», chosen abbot by the brethren with his teacher's blessing and consent, and that he gave the office up again on the teacher's return. The line is a joint one and its other half is Laurence of Komel, whose own folder took its russian row in the same batch. Both readings behind the line cite the same chapter of the Komel rule, «О церковном благочинии и о соборной молитве». The day page prints no hymn for either of them. azbyka.ru was not read."
     },
     {
       "church": "romanian",

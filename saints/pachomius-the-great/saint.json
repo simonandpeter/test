@@ -16,6 +16,11 @@
       "form": "Пахомије Велики",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 15. мај ст. ст., „Преподобни Пахомије Велики.“ Преподобни is the venerable rank, which this corpus puts in `types`; strip it and the bare name is left. **Велики is kept**, because BRIEF-SERBIAN.md §5 reads it as the epithet „the Great“ and not as a rank, and this folder's own display name keeps it — so the fullest form the calendar gives is Пахомије Велики and not a bare Пахомије. Measured before drafting: neither form meets any other folder in any language, and the corpus holds eleven other `pachomius-*` and `pahomie-*` folders."
+    },
+    {
+      "form": "Пахомий Великий, Египетский, Фиваидский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1756.html` link carries in its `title`, «Пахомий Великий, Египетский, Фиваидский, прп.», with the rank abbreviation left off and the three epithets kept, which is the fullest form this calendar gives him; the day's own line declines him «Прп. Пахомия Великого (ок. 348).» `fk.mjs` on this form and on a bare «Пахомий Великий» both returned NONE before the write, with eleven other `pachomius-*` and `pahomie-*` folders in the corpus."
     }
   ],
   "sex": "male",
@@ -25,26 +30,29 @@
     "monk"
   ],
   "dates": {
-    "birth": {
-      "earliest": 292,
-      "latest": 292,
-      "display": "292",
-      "basis": "traditional",
-      "note": "saint.gr, as the folder's own life has it: «he was born in 292 in the Lower Thebaid of Egypt of pagan parents»."
-    },
     "death": {
       "earliest": 348,
       "latest": 348,
       "display": "348",
       "basis": "traditional",
-      "note": "saint.gr's head line, as the folder's own life has it: «The page gives his death as 348 in its head line»."
+      "note": "The Охридски пролог for 15. мај ст. ст.: „Упокојио се мирно 348. године, у седамдесет четвртој години свога земнога живота.“ The same year stands in saint.gr's head line, «Οσιος Παχωμιος ο Μεγας (292 - 348)», which an earlier reader recorded in the Greek row and did not write; this folder held no `dates` object at all until now. The seventy-four years are a lifespan and no birth is derived from them."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Прп. Пахомия Великого (ок. 348).»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Romanian, the Greek and the Serbian, and the same man: the father of the common life in Egypt. **`dates` were not touched, and the Russian is the reason to say so.** The folder's death note records the Охридски пролог's seventy-four years of life beside the year 348; this page says «Скончался преподобный Пахомий около 348 года в возрасте 53-х лет», fifty-three. Two books give two lifespans and neither is a year of birth, so no birth was derived from either and the figures are left where they are — in that note and in the life. The day line's «ок. 348» widens nothing. **Two hymns were copied**, «Тропарь преподобного Пахомия Великого» (глас 8) and «Кондак преподобного Пахомия Великого» (глас 2), both headed with his name alone. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -141,6 +149,38 @@
         "text": "A shining light you were shown to be to the ends of the earth; you made the desert a city with multitudes, you crucified yourself and took your cross upon your shoulders, and wasted your body with ascesis, interceding unceasingly for us all.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Пахомие отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Тропарь преподобного Пахомия Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst bear fruit a hundredfold in labours, and thou becamest a lamp to the whole world, shining with wonders, O Pachomius our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Светильник светел показался еси в концех,/ пустыню же грады сотворил еси множествы монашескими,/ сам себе распен, крест твой на рамо взем,/ и воздержанием тело изнурил еси,/ моля непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Кондак преподобного Пахомия Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a bright lamp to the ends of the earth, and thou didst make the desert into cities with multitudes of monks; crucifying thyself and taking thy cross upon thy shoulder, thou didst wear out thy body with abstinence, praying without ceasing for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -152,14 +192,5 @@
     "theodore-the-sanctified",
     "tithoes-of-tabennisi",
     "silvanus-of-tabennisi"
-  ],
-  "dates": {
-    "death": {
-      "earliest": 348,
-      "latest": 348,
-      "display": "348",
-      "basis": "traditional",
-      "note": "The Охридски пролог for 15. мај ст. ст.: „Упокојио се мирно 348. године, у седамдесет четвртој години свога земнога живота.“ The same year stands in saint.gr's head line, «Οσιος Παχωμιος ο Μεγας (292 - 348)», which an earlier reader recorded in the Greek row and did not write; this folder held no `dates` object at all until now. The seventy-four years are a lifespan and no birth is derived from them."
-    }
-  }
+  ]
 }

@@ -1,0 +1,61 @@
+{
+  "slug": "euphrosyne-of-moscow",
+  "display_name": "Euphrosyne of Moscow",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "princess"
+  ],
+  "names": [
+    {
+      "form": "Евфросиния Московская",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Преподобная Евфросиния Московская», with the rank word «Преподобная» left off — it is the `venerable` this folder carries in `types`. The day's own line declines her «Прп. Евфросинии , в миру Евдокии, блгв. вел. кн. Московской (1407)», giving the name she bore in the world, Евдокия, and the princely rank; the monastic name is the one the calendar's own name link heads her by and is the one stored. `fk.mjs` on «Евфросиния Московская» returned NONE before the write, in a corpus holding eleven other `euphrosyn*` folders, among them `euphrosyne-of-polotsk` and `euphrosyne-of-suzdal`, neither of whom is this woman."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1407,
+      "latest": 1407,
+      "display": "1407",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, both of its readings: «7 июля 1407 года она скончалась на 54-м году жизни» and «преподобная Евдокия мирно почила 7 июля 1407 года». The day line prints «(1407)». The fifty-fourth year of her life is a lifespan and not a year of birth, and no birth was reckoned from it, on the standing refusal this corpus applies to an age at death. The same pages give 17 мая 1407 as the day of her tonsure, which is the day this row stands on, and 20 мая as the laying of the foundation of her stone church three days later."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 мая ст. ст. — «Прп. Евфросинии , в миру Евдокии, блгв. вел. кн. Московской (1407).»",
+        "url": "https://days.pravoslavie.ru/Days/20260517.html",
+        "year": 2026
+      },
+      "note": "**This day is her tonsure and not her death**, which the calendar itself says: «Постриг совершился 17 мая 1407 г. в деревянной церкви Вознесения», and she died on 7 июля of the same year. Her two life pages carry a «Дни памяти» line of three days, «17 мая , 19 мая , 7 июля»; one row per church is the schema and the day page that printed her is 17 мая, so the other two are recorded here and she does not render on them. The 7 июля is her repose; the calendar gives no reason for the 19 мая, and the corpus's own `demetrius-donskoi`, her husband, stands on the Greek 19 May for his own death on 19 May 1389, which is a resemblance and not a reading. **Two hymns were copied**, «Тропарь» (глас 8) and «Кондак» (глас 2), both headed «благоверной княгини Евдокии в инокинях Евфросинии» — by both her names. **The two readings disagree twice and neither was resolved**: the longer dates the marriage 18 January 1366 and the shorter says «с 1367 года»; the longer gives five sons and three daughters, the shorter five sons with a sixth dead in infancy. Both are in the life. `related` is empty: everyone the account names — her husband, the metropolitan, the two monastic elders who guided the household, her sons — is named in Cyrillic as the calendar names them, and no English form was written, so no row is owed and none was invented. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 30 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 30 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -10,6 +10,11 @@
       "form": "Ταριχάνι",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Δαβίδ και Ταριχάνι οι Μάρτυρες», with the rank word left off; the life page carries «Αγιος Ταριχανι ο Μαρτυρας» as its own head name."
+    },
+    {
+      "form": "Таричан Грузинский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/2089.html` link carries in its `title`, «Таричан Грузинский, мч.», with the rank abbreviation left off and the calendar's own epithet of nation kept. The day's own line declines the two together, «Мчч. Давида и Таричана отроков (683) (Груз.).» `fk.mjs` on «Таричан Грузинский» returned NONE before the write, and this is the only folder in the corpus of that name."
     }
   ],
   "related": [
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Давида и Таричана отроков (683) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same boy, the second of the two Georgian brothers. The calendar marks the entry «(Груз.)» and calls them «отроков», boys. **`dates` were not touched, and the calendar disagrees with itself by ten years**: the notice says they died in 693 at the hands of the Persian governor Абдула for refusing Islam, which is the year this folder already carries, while the day line prints «(683)». Both are the same page's and both are in the life. He already carries his brother as a `related` row. The day page prints no hymn for them. Their life page gives one day only. azbyka.ru was not read."
     },
     {
       "church": "romanian",

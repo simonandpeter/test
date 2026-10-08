@@ -6,6 +6,11 @@
       "form": "Simeon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 mai, «Sfântul Mucenic Simeon»."
+    },
+    {
+      "form": "Симеон Персидский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/2008.html` link carries in its `title`, «Симеон Персидский, мч.», with the rank abbreviation left off. It is the first epithet any calendar in this folder gives him — doxologia.ro's line had none at all — and it agrees with the Persia the Greek page puts the company in. The day's own line declines the three together, «Мчч. Симеона , Исаака и Вахтисия (IV).» `fk.mjs` on «Симеон Персидский» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Симеона , Исаака и Вахтисия (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "**The identity reading this row rests on, and the folder's own day is not this one.** This folder was made from doxologia.ro's bare «Sfântul Mucenic Simeon» for 16 mai, which gave no epithet and no century, and its display name carries the day for that reason. `bachthisoes`, made from saint.gr's line for 16 Μαΐου, «Άγιοι Ισαάκιος, Συμεών και Βαχθισόης», already names this folder and `isaac-the-persian-of-metsovo` as the two companions of that entry, and the Greek page sets their contest in the reigns of Constantine the Great and of the Persian king Shapur II. The Russian calendar prints the same three names in the same order on 18 мая and its notice makes them Christians in Persia under king Шапур who refused to turn to the fire-worshippers' superstition. Same three names, same company, same persecution: one man, and the row goes on the day the Russian page printed him. **The Russian and the Greek differ by two days of the menologion, not by thirteen**, so BRIEF.md §8's style rule does not reach the difference and no other row was moved. **The Russian also differs from the Greek about the century**: its day line prints «(IV)» while its own notice says «жили в III веке в Персии при царе Сапоре» — and the Shapur the Greek page names reigned 309 to 379, which straddles both. **No `dates` object was written for that reason**: the folder had none, and a century the same page contradicts within two sentences is not a bound. **Two things the author may want**: this folder's display name still carries 16 May, and the calendar's own name page heads him «Симеон Персидский»; and `isaac-the-persian-of-metsovo`'s display name carries an epithet, of Metsovo, which this calendar replaces with a Persian see. Neither display name was changed — and the second reason for leaving this one alone is that **the corpus already holds a `simeon-of-persia`, and he is NOT this man**: Симеон Ктезифонтский, Селевкийский (Персидский), bishop of Seleucia-Ctesiphon, martyred under the same Shapur in 341 or 344, whom all four calendars keep on 17 апреля and whose folder stores that longer form. A bishop with a see on 17 апреля against a plain «мч.» with no see on 18 мая, in a company of three the Greek book keeps as one entry: two men, and a display name of «Simeon the Persian» here would collide with his. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "isaac-the-persian-of-metsovo",
+    "bachthisoes"
+  ]
 }

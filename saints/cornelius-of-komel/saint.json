@@ -11,6 +11,11 @@
       "form": "Κορνήλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Κορνήλιος ο Θαυματουργός», with the rank word left off; the life page's own head calls him «Ο Όσιος Κορνήλιος του Κόμελ»."
+    },
+    {
+      "form": "Корнилий Комельский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1285.html` link carries in its `title`, «Корнилий Комельский, прп.», with the rank abbreviation left off — it is the `venerable` this folder carries in `types`. The day's own line declines him with the epithet «чудотворца», which the name link does not give him. `fk.mjs` on «Корнилий Комельский» returned NONE before the write, the day's other Cornelius being stored «Корнилий Палеостровский, Олонецкий»."
     }
   ],
   "dates": {
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Прп. Корнилия , чудотворца Комельского (1537).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same man, and the day the two disciples of his whom this corpus already holds are dated from — `cassian-of-komel` and `laurence-of-komel`, both of whom took their russian rows on 16 мая in this same wave. **`dates` were not touched and the Russian confirms both bounds by a different route**: it gives the death as «в возрасте 82 лет 19 мая 1537 года», at eighty-two on the day of this feast, and 1537 less 82 is 1455, which is the birth year this folder already carries off saint.gr. An age at death is not a year of birth, so nothing was derived — but the two readings agree, and that is worth recording. **Three hymns were copied**, «Тропарь» (глас 4), «Ин тропарь» (глас 8) and «Кондак» (глас 8), all headed «преподобного Корнилия, чудотворца Комельского»; the day also prints four hymn blocks for the other Cornelius it keeps, of Paleostrov, so the two sets are two services on one page and not a mis-hang. `wonderworker` was NOT added to `types`, the «чудотворца» of the line being the epithet the hymn headings also use rather than a rank the calendar's name link gives him — that link reads simply «Корнилий Комельский, прп.» azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -74,5 +89,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От юности горящим желанием Божественный любве разжигаемь,/ житейския молвы оставил еси, преподобне,/ ревнитель Антонию Великому быв,/ безмолвием и жестоким пребыванием последуя Христу,/ бдением, и молитвами, и постом образ был еси твоим учеником./ Темже молися Господеви, Корнилие блаженне,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Тропарь преподобного Корнилия, чудотворца Комельского»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled from thy youth with a burning desire for divine love, thou didst leave the clamour of this life, O venerable one, and becamest a zealous follower of Anthony the Great, following Christ in silence and in a hard manner of life; and in vigil and in prayers and in fasting thou wast a pattern to thy disciples. Therefore pray to the Lord, O blessed Cornelius, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Постническими труды нетрудную жизнь стяжа, преподобне,/ слезами же мысленнаго фараона потопил еси/ и вместо скорби радость обрел еси,/ предстоя Христови в лице святых,/ поминай молящихся чад твоих, Корнилие, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Ин тропарь преподобного Корнилия, чудотворца Комельского»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the labours of an ascetic thou didst gain a life without labour, O venerable one, and with thy tears thou didst drown the spiritual Pharaoh and find joy in place of sorrow. Standing before Christ in the company of the saints, remember thy children who pray to thee, O Cornelius our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Господеви, от Святыя Девы возсиявшу мирови, и Тому измлада, яко Ангел, послужил еси, блаженне,/ и силою Его пустыню, яко град, сотворил еси,/ множество же ученик в ней собрал еси,/ ихже Богодохновенными ученьми просветил еси./ Тем вопием ти:/ радуйся, отче наш Корнилие, иноком Божественное удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Кондак преподобного Корнилия, чудотворца Комельского»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Lord having shone forth upon the world from the Holy Virgin, thou didst serve Him from thy infancy as an angel, O blessed one, and by His power thou didst make the wilderness a city, and gatheredst in it a multitude of disciples, whom thou didst enlighten with God-inspired teachings. Therefore we cry to thee: Rejoice, O our father Cornelius, divine adornment of monks.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

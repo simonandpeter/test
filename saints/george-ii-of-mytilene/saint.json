@@ -1,0 +1,62 @@
+{
+  "slug": "george-ii-of-mytilene",
+  "display_name": "George II of Mytilene",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Георгий II Митиленский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Святитель Георгий II, епископ Митиленский», with «Святитель» and the trailing «епископ» left off — the latter is the `bishop` this folder carries in `types`, with the see in `office`. The numeral is the calendar's own and is kept, because it is the one thing in the name that tells him from the bishop of the same see whom the same calendar keeps on 7 апреля. The day's own line declines him «Свт. Георгия II, еп. Митиленского (IX).» `fk.mjs` on this form returned NONE before the write."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 842,
+      "latest": 842,
+      "display": "842",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Скончался в 842 году в Митилене». The day line prints «(IX)», the ninth century, which the year falls inside. The page gives no year of birth; it says he was made bishop «в 820 - 829 годах», within those years, which is a bound on the consecration and not on a life, and no birth is derived from it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Свт. Георгия II, еп. Митиленского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "**He is not the `george-of-mytilene` this corpus already holds, and the calendar is what separates them.** That folder is the confessor whom all four calendars keep, whose Russian row stands on 7 апреля off the line «Прп. Георгия , исп., митр. Митиленского (после 820)» and who died in 821 by saint.gr's reading. This man is numbered II by this calendar, was made bishop of the same see between 820 and 829 — that is, at or after the other's death — and died in 842. Two men, two days in the same book, two death years, and the numeral printed to tell them apart. No second row was written on the existing folder and no form was added to it. His life page gives one day only, «16 мая». The day page prints no hymn for him. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

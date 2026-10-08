@@ -17,6 +17,11 @@
       "form": "Димитрије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 3. јун ст. ст., „Свети мученик Димитрије, царевић руски“ — Свети is not a rank, мученик is a rank word, and „царевић руски“ is a rank with a nation after it, set off by the heading’s own comma as an apposition and not as part of the name; all three come off and the bare forename is what is left. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('demetrius-of-rostov', 'sr')]`, so this makes a fold of two, and the two are told apart by their centuries — a boy killed in 1591 and a metropolitan of Rostov. `nikephoros-patriarch-of-constantinople` stored a bare Никифор on the same reading, the see stripped and the fold recorded."
+    },
+    {
+      "form": "Димитрий Угличский (Московский)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/605.html` link carries in its `title`, «Святой благоверный царевич Димитрий Угличский (Московский)», with «Святой» and the rank words «благоверный царевич» left off — BRIEF-RUSSIAN §6 reads Блгв. as the princely rank, which this folder already carries in `types`, and the two place epithets are what is left. The parentheses are the calendar's own and are not part of the fold key (BRIEF-ADDENDUM §2). The day's own line declines him «Блгв. царевича Димитрия , Угличского и Московского (1591).» `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "dates": {
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Блгв. царевича Димитрия , Угличского и Московского (1591).»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: the boy killed at Uglich in 1591. **`dates` were not touched, and there is a disagreement to record.** The folder's birth is 1581 off saint.gr; this page opens «Родился 19 октября 1582 г.» — a full date one year later, and the same page makes 19 октября one of his three feasts, the day of his birth. A precise date against a bare year is not a widening of the bracket but a second reading of it, so nothing was changed and both stand in the life. The death year 1591 is common to both books, and this page adds the day, «В субботний день 15 мая 1591 г.», which is the day the row stands on. **Three hymns were copied**, «Тропарь» (глас 4), «Ин тропарь» (глас 1) and «Кондак» (глас 8), all headed «благоверного царевича Димитрия». The page's own «Дни памяти» line gives four days — 15 мая, 23 мая (Ростов.), 3 июня (Перенесение мощей) and 19 октября — and its second life page, life1222, is the translation of 1606 to the Archangel cathedral in the Kremlin; one row per church is the schema, so the three further days are recorded here and he does not render on them. The 3 июня of that line is the day the folder's **Serbian** row already stands on, off the Ohrid Prologue, and it is the translation and not this day. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -79,5 +94,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Царскую диадиму обагрил еси кровию твоею,/ Богомудре мучениче,/ за скиптр Крест в руку приим,/ явился еси победоносец/ и жертву непорочну Владыце принесл еси себе:/ яко бо агнец незлобив, от раба заколен еси./ И ныне, радуяся, предстоиши Святей Троице,/ молися о державе сродников твоих богоугодней быти/ и сыновом российским спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Тропарь благоверного царевича Димитрия»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast reddened the royal diadem with thine own blood, O martyr wise in God; taking the Cross in thy hand for a sceptre, thou wast shown forth a victor, and thou didst offer thyself to the Master as an unblemished sacrifice, for as a guileless lamb thou wast slaughtered by a servant. And now, rejoicing, thou standest before the Holy Trinity. Pray that the realm of thy kinsmen may be pleasing to God, and that the sons of Russia may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Всеоружеством Духа благодати вооружен быв/ и необорим столп и утверждение отечеству своему показася,/ яко агнец незлобивый, от врага неправедно заклан быв/ и в жертву непорочну Господеви принесеся./ И ныне дар благодати от всех Подвигоположника прием,/ источавши всем исцеление, достохвальне благоверный царевичу княже Димитрие./ Слава Восприимшему тя от земных в Небесная,/ слава Венчавшему тя венцем неувядаемым,/ слава Действующему тобою всем исцеление.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Ин тропарь благоверного царевича Димитрия»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Armed with the whole armour of the Spirit of grace, thou wast shown to be an unshakable pillar and the stay of thine own fatherland; as a guileless lamb thou wast unjustly slain by the enemy and offered to the Lord an unblemished sacrifice. And now, having received the gift of grace from the Giver of all contests, thou pourest out healing upon all, O praiseworthy prince Demetrius, faithful tsarevich. Glory to Him who took thee from earthly things to the heavenly; glory to Him who crowned thee with an unfading crown; glory to Him who works healing for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Возсия днесь в славней памяти твоей верным веселие,/ яко бо доброрасленный грезн, прозябл еси/ и Христу красен плод принесл еси себе;/ темже и по убиении твоем соблюде тело твое нетленно,/ страдальчески обагреное кровию./ Благородие святе Димитрие,/ соблюдай отечество твое и град твой невредим,/ тому бо еси утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Кондак благоверного царевича Димитрия»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today in thy glorious memory gladness has dawned upon the faithful, for like a well-grown cluster thou didst spring up and bring thyself to Christ as fair fruit. Therefore after thy murder also He kept thy body incorrupt, reddened with the blood of thy suffering. O noble and holy Demetrius, keep thy fatherland and thy city unharmed, for thou art its stay.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

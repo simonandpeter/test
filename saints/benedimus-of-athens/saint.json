@@ -15,6 +15,11 @@
       "form": "Венедим",
       "lang": "sr",
       "note": "Read out of the heading of the Охридски пролог’s third entry for 18. мај ст. ст., „Свети мученици Ираклије, Павлин, Венедим.“ — Свети is not a rank and мученици the `martyr` in `types`, and the body is three sentences that add no by-name. Measured with `foldchk.py` before drafting: `NO FOLDER HOLDS THIS FORM`."
+    },
+    {
+      "form": "Венедим Афинянин",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/404.html` link carries in its `title`, «Венедим Афинянин, мч.», with the rank abbreviation left off and the calendar's own noun epithet kept. The Russian spells him Венедим where this folder's display name has Benedimus. The day's own line declines the three together. `fk.mjs` on «Венедим Афинянин» returned NONE before the write."
     }
   ],
   "related": [
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Ираклия , Павлина и Венедима Афинских (250).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same man, third of the three of Athens; he already carries the other two as `related` rows. **`dates` were not touched**: the folder carries «between 249 and 251» and the day line prints «(250)», inside it, the Russian text giving no year. The notice is shared between the three. The day page prints no hymn for them. Their life page gives one day only. azbyka.ru was not read."
     },
     {
       "church": "romanian",

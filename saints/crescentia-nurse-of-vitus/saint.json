@@ -1,0 +1,63 @@
+{
+  "slug": "crescentia-nurse-of-vitus",
+  "display_name": "Crescentia, nurse of Vitus",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Крискентия Римская, Питательница",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/` link carries in its `title`, «Крискентия Римская, Питательница, мц.», with the rank abbreviation left off and both epithets kept — Питательница is the nurse the life makes her, and the life's own title spells it «Крискентия-питательница». The day's own line declines the three together, «Мчч. Вита , Модеста и Крискентии (ок. 303).» `fk.mjs` on this form returned NONE before the write; the corpus's `crescentianus` is a different name and a different man."
+    }
+  ],
+  "related": [
+    "vitus-the-roman",
+    "modestus-tutor-of-vitus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "about 303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Страдания святых мучеников Вита, Модеста и Крискентии совершились около 303 года», and the day line prints «(ок. 303)». The page's own «около» is kept in the display, and it gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 мая ст. ст. — «Мчч. Вита , Модеста и Крискентии (ок. 303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260516.html",
+        "year": 2026
+      },
+      "note": "A line that names three people is three folders, per BRIEF.md §4, and the single life page behind all three gives her an act of her own: she came out of the crowd of onlookers at the others' torture, confessed herself a Christian and reproached the emperor. The page's own «Дни памяти» line gives «16 мая , 15 июня»; the day page that printed her is 16 мая, so the June day is recorded here and she does not render on it. The day page prints no hymn for the three. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

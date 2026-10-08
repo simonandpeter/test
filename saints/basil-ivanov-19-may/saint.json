@@ -1,0 +1,64 @@
+{
+  "slug": "basil-ivanov-19-may",
+  "display_name": "Basil (Ivanov, 19 May)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Иванов)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/9491.html` link carries in its `title` and as that page's heading, «Василий (Иванов), иерей, сщмч.», with the two trailing rank words left off; the surname in parentheses is part of the name and stays. The day's line gives only the bare forename in the genitive, «и с ним ... Василия ... пресвитеров». **THE FOLD IS DELIBERATE AND IT IS NEW.** `fk.mjs` on this form returns one holder, `basil-ivanov`, which stores the identical string off name page 13657 for 4 февраля, where the calendar heads him «Василий (Иванов), мч.» — a LAYMAN. Writing it here makes a fold of two, and the key «василии иванов» was added to `corpus-gate.mjs`'s `READ_FOLDS` in the same commit with both slugs and the reading that tells them apart."
+    }
+  ],
+  "related": [
+    "antony-pankeyev"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of its line for 19 мая ст. ст., which is the year for all fourteen people that line names. His name page gives no year at all and no year of birth. The corpus's other `basil-ivanov`, off name page 13657 for 4 февраля, carries 1938 from that line in the same way; the two years are the same and the two days and the two grades are not."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Сщмчч. Антония , еп. Белгородского, и с ним Митрофана , Александра , Михаила , Ипполита , Николая , Василия , Николая , Максима , Александра , Павла , Павла , Георгия пресвитеров и мч. Михаила (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "Sixth of the thirteen named «и с ним» after the bishop of Belgorod. **This is the weaker of the day's two folders of a shared name and the reason is stated here.** days.pravoslavie.ru keeps two name pages headed «Василий (Иванов)»: **9491**, on 19 мая, where the grade is «иерей, сщмч.», a priest and hieromartyr, and the company is the Belgorod fourteen; and **13657**, on 4 февраля, where the grade is «мч.», a layman, and the company is a line of thirty-one, which is the corpus's existing `basil-ivanov`. Both pages were read. **The year is the same, 1938, and the day, the grade and the company are all different** — a priest among a bishop's clergy against a layman at the end of a list of thirty-one — which is a stronger separation than the two days and two years that separate the day-before's two Krylovs, because the calendar itself gives the two men two ranks. Neither page lists the other's day. **The line and the name link are all there is**: 9491 is a heading, the grade and two days, with no narrative. azbyka.ru was not read and is the source that would settle it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 June 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
