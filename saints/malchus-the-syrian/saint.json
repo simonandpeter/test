@@ -1,0 +1,60 @@
+{
+  "slug": "malchus-the-syrian",
+  "display_name": "Malchus the Syrian",
+  "names": [
+    {
+      "form": "Малх Сирийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 6602, «Малх Сирийский, прп.», with the rank word left off. The day’s own line declines it, «Прп. Малха Сирийского (IV)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The century the calendar closes both the day line and the life with, and the only date either gives: «Прп. Малха Сирийского (IV)» and «мирно скончался (IV)». It gives him no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 марта ст. ст. — «Прп. Малха Сирийского (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260326.html",
+        "year": 2026
+      },
+      "note": "Name page 6602 gives «День памяти: 26 марта» and nothing else, so no second day is owed. The corpus already holds a folder `malchus` off saint.gr’s «Όσιος Μάλχος» on the Greek 24 November, whose entry says in one sentence that nothing further is known of him — no country, no century, no monastery. The two were NOT identified here: the days are not the same and are not thirteen apart, and the Greek entry carries nothing by which a reading could be made. That is a question for the author and not a folder’s to settle. The day page carries three hymns and all three are the Archangel Gabriel’s; none is his. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 8 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 8 Απριλίου, the corresponding civil day (8 October 2026). A folder `malchus` stands on the Greek 24 November and was deliberately not read as this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

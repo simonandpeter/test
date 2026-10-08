@@ -20,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 марта ст. ст. — «Мчч. Вафусия и Верка пресвитеров, Арпилы монаха; мирян: Авива, Агна, Реаса, Игафракса, Искоя, Силы, Сигица, Сонирила, Суимвла, Ферма, Филла и мцц. Анны, Аллы, Ларисы, Моико, Мамики, Уирко, Анимаисы (Анимаиды), Гаафы, царицы Готфской, и Дуклиды, царевны Готфской (ок. 375)»",
+        "url": "https://days.pravoslavie.ru/Days/20260326.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar keeps the company on the same menologion day as the Romanian and the Greek, and unlike either of them it enumerates: the day line names twenty-three of them and gives every one of the twenty-three its own name page. The company was NOT divided into folders here, and the reason is in the life below: the source counts them three ways — twenty-three on the day line, twenty-five in the title of its own shared life, and twenty-one names said to be known out of three hundred and eight who died — and two of its own readings disagree about which of the women was the Gothic queen. One folder per enumerated member is the standing ruling, but this folder already carries venerated Romanian and Greek rows for the same company and a life that names twenty-one of them, so applying the ruling here would hold one company twice over; the division is the author's to make, and the twenty-three names and their disagreements are set down in the life so that nothing has to be fetched again. The line dates them «ок. 375», inside the 375–383 this folder already holds. Two of the women, «Алла» and «Лариса», have a separate life of their own behind their name pages. The day page's three hymns are all the Archangel Gabriel's. azbyka.ru was not read."
     },
     {
       "church": "romanian",
