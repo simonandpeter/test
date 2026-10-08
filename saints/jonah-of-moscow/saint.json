@@ -30,12 +30,19 @@
     "metropolitan"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1376,
+      "latest": 1400,
+      "display": "late 14th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life of him opens «Родился в последней четверти XIV в. недалеко от Солигалича в Костромской земле» — born in the last quarter of the fourteenth century, which is the quarter recorded here and nothing narrower. No source read for this folder before gave any year of his birth. The same sentence puts his birth near Soligalich in the land of Kostroma, and the next has him a monk at twelve in one of the monasteries of Galich; no `locations` was written on either, because a place of birth is not a place of life."
+    },
     "death": {
       "earliest": 1461,
       "latest": 1461,
       "display": "1461",
       "basis": "traditional",
-      "note": "saint.gr's head line, which is all it has: «(; - 1461)» — no birth year and 1461 for the repose. The folder's own life notes that this is «the same year in which it puts Mark's death», Mark Eugenicus being the comparison the page offers in place of a life, so the year is the page's and the coincidence is left visible."
+      "note": "The Ohrid Prologue for 31. март ст. ст.: „Од те ране светитељ умре и оде међу небеске грађане 31. марта 1461. године“ — of that wound the saint died and went among the citizens of heaven on 31 March 1461, which is the day it heads him on. saint.gr heads him «(; - 1461)» and gives the same year; this folder stood Undated until the Prologue was read, because the Greek year stands in a sentence comparing him with Mark Eugenicus and was left untaken on its own. days.pravoslavie.ru gives the same year and the same day — «мирно почил 31 марта 1461 г.» — and NOT the same manner: it has him forewarned of his end and falling asleep in peace, where the Prologue has him die of the wound. The year is not in question and the manner is not resolved (8 October 2026)."
     }
   },
   "attestations": [
@@ -105,16 +112,89 @@
   "text": {
     "life": "life.md"
   },
-  "dates": {
-    "death": {
-      "earliest": 1461,
-      "latest": 1461,
-      "display": "1461",
-      "basis": "traditional",
-      "note": "The Ohrid Prologue for 31. март ст. ст.: „Од те ране светитељ умре и оде међу небеске грађане 31. марта 1461. године“ — of that wound the saint died and went among the citizens of heaven on 31 March 1461, which is the day it heads him on. saint.gr heads him «(; - 1461)» and gives the same year; this folder stood Undated until the Prologue was read, because the Greek year stands in a sentence comparing him with Mark Eugenicus and was left untaken on its own."
-    }
-  },
   "related": [
     "jonah-of-novgorod"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Ярем Господень измлада восприим,/ и Того стопам невозвратным желанием последовал еси,/ и освященнаго подвига достигл,/ святительства паству приим и чудес от Бога дары прият,/ с верою приходящим к раце мощей твоих/ подавши различным недугом исцеление неоскудно,/ отче наш Ионо, святителю Христов,/ моли Христа Бога даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Тропарь святителя Ионы, митрополита Московского и всея России чудотворца», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having taken the Lord’s yoke upon thee from thy youth, thou didst follow in his steps with a desire that never turned back, and didst attain the consecrated struggle; receiving the flock of the high priesthood, thou didst receive from God the gifts of wonders also, and thou givest healing without stint from every kind of sickness to those who come with faith to the shrine of thy relics. O Jonah our father, hierarch of Christ, pray to Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От юности твоей весь сам себе Господеви возложив,/ в молитвах, и трудех, и в постех образ быв добродетели,/ отонудуже видев Бог твое благое произволение,/ архиерея тя и пастыря Церкви Своей устрояет./ Темже и по преставлении честное тело твое цело и нетленно соблюдеся,/ Ионо святителю,/ моли Христа Бога да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Тропарь святителя Ионы, митрополита Московского и всея России чудотворца», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having laid thy whole self upon the Lord from thy youth, thou wast in prayers and labours and fastings an image of virtue; and seeing thy good will, God appointed thee a high priest and a shepherd of his Church. And therefore after thy departure thy honoured body was preserved whole and incorrupt, O hierarch Jonah: pray to Christ God that he save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Божественною благодатию просветився/ и по смерти показуя светлость жития твоего,/ источаеши мирови благоухания,/ притекающим к раце мощей твоих,/ и народи Московстии наставил еси ко свету богоразумия,/ Ионо, отче наш,/ моли Христа Бога/ даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Ин тропарь святителя Ионы, митрополита Московского и всея России чудотворца», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine grace, and showing after thy death the brightness of thy life, thou pourest out sweet fragrance upon the world for those who hasten to the shrine of thy relics; and thou didst guide the peoples of Moscow to the light of the knowledge of God. O Jonah our father, pray to Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Желанием духовным постническое житие совершив/ и святительства паству приим,/ чистоты ради телесный и тело твое Владыка Христос соблюде нетленно/ и Петру чудотворцу наследника тя содела,/ и того нраву последовал еси,/ и учителя тя Христос Своему стаду дарова,/ идеже лежат целебныя мощи твоя,/ благоухают, яко от кадила благовонна,/ и подают исцеления немощным, верою приходящим,/ святителю Ионо, моли Христа Бога непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Кондак святителя Ионы, митрополита Московского и всея России чудотворца», глас 8. Copied as the page has it, including «чистоты ради телесный» where the grammar wants «телесныя». The page prints two kontakia for him under headings that differ in nothing, both «Кондак … глас 8»; they are two different texts and both are here.",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having fulfilled the life of a faster with a spiritual longing and received the flock of the high priesthood, for thy bodily purity Christ the Master kept thy body also incorrupt, and made thee the heir of the wonderworker who went before thee in that see, whose manner of life thou didst follow; and Christ gave thee as a teacher to his own flock. Where thy healing relics lie they are fragrant as from a sweet censer and give healings to the sick who come in faith. O hierarch Jonah, pray unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко от младенства Господеви поработив себе, мудре,/ постом и бдением тело твое удручая,/ темже сосуд чист и дом Духу Пресвятому явился еси./ Сего ради и Церкви Своей тебе архиерея и пастыря устрояет,/ юже добре упас, ко Господу отходиши, Егоже возлюбил еси./ Тем молим тя: поминай нас, верою чтущих святую память твою, да вси зовем ти:/ радуйся, отче Ионо, святителю всечестный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Кондак святителя Ионы, митрополита Московского и всея России чудотворца», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having made thyself a servant of the Lord from infancy, O wise one, and wearing down thy body with fasting and vigil, thou wast shown forth thereby a clean vessel and a house of the Most Holy Spirit. For this cause he appointed thee a high priest and shepherd of his Church, and having shepherded her well thou departest to the Lord whom thou didst love. Therefore we pray thee: remember us who honour thy holy memory with faith, that we may all cry to thee: rejoice, O father Jonah, all-honoured hierarch.",
+        "rendered": "site"
+      }
+    }
   ]
 }

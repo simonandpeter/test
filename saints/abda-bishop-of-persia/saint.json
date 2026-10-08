@@ -47,7 +47,8 @@
       "feast": {
         "day": 5,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "This calendar keeps him a second time on 31 марта ст. ст., where the Romanian, the Greek and the Serbian all keep him and where the line pairs him with Benjamin the deacon: «Сщмчч. @5[Авды], еп. Персидского, и Вениамина диакона (418-424).» One row per church is the schema, so that day is recorded here and he does not render on it; the day was read on 8 October 2026 and nothing else on this row was touched. THE DAY PAGE MANGLES HIS NAME: it prints the forename inside the markup `@5[Авды]` instead of linking it, so the page carries a name link for the deacon and NONE for him, and `ru-namesweep.mjs` returned no Abda folder for the heading at all. The folder was found through the menologion-day list instead. No `ru` name form was read off that day in consequence: the two this folder holds, «Авдий» and «Авид», come from the 5 сентября line, which is this row’s own source."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Мч. Авдия (Авида) в Персии (V)»",
