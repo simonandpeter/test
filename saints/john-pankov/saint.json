@@ -1,0 +1,66 @@
+{
+  "slug": "john-pankov",
+  "display_name": "John (Pankov)",
+  "names": [
+    {
+      "form": "Иоанн (Панков)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9624, «Иоанн (Панков), иерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Сщмч. Иоанна пресвитера и чад его мчч. Николая и Петра (1918).» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate’s own key function before it was written: 'иоанн панков' has no other holder in the corpus, where the bare «Иоанн» has very many."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line prints for the three of them: «Сщмч. Иоанна пресвитера и чад его мчч. Николая и Петра (1918).» No year of birth appears on the name page, which is all the calendar gives him, and none was inferred."
+    }
+  },
+  "related": [
+    "nicholas-pankov",
+    "peter-pankov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 апреля ст. ст. — «Сщмч. Иоанна пресвитера и чад его мчч. Николая и Петра (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry of six, and ONE LINE NAMING THREE PEOPLE — three name links, 9624, 10006 and 10023, all three surnamed «Панков» — of whom the other two are `nicholas-pankov` and `peter-pankov`, separate folders of this batch. THE RELATION IS THE LINE’S OWN WORD: «чад его», his children, so the three `related` rows written in each direction here are the calendar’s reading and not this reader’s. THE CALENDAR GIVES NO LIFE: the line links no reading and page 9624 prints the title «Иоанн (Панков), иерей, сщмч.» and «Дни памяти: 26 января (Новомуч.) , 26 апреля» and nothing else at all. What it gives that the line does not is the surname «Панков» and the grade «иерей», priest, written out beside «сщмч.». 26 января is the general commemoration of the new martyrs and confessors, which is how `new-martyr` is read into `types`, and THAT DAY PAGE WAS NOT READ. NO FOLDER WAS FOUND FOR HIM: `grep -rl 'Панков'` over `saints/` returns nothing and the gate’s own key function returns no holder for 'иоанн панков' or 'john pankov'. The day page prints five hymns — one for the bishop of Amasea, two for the enlightener of Perm and two for the wonderworker of Devič — and none under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 9 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 9 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -16,6 +16,11 @@
       "form": "Василије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 26. април ст. ст., „Свешт. муч. Василије еп. Амасијски.“ Свешт. муч. is the `hieromartyr` this folder already carries in `types`, and еп. Амасијски is the see, which it keeps in `office`; `honorific.js` composes both back. The heading gives no epithet, so the bare forename is the whole of the Serbian form. Four other folders already hold it; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Василий Амасийский",
+      "lang": "ru",
+      "note": "The name link behind the day’s line is page 369, titled «Святитель Василий Амасийский, епископ, сщмч.»; the rank words «Святитель», «епископ» and «сщмч.» are stripped per BRIEF.md §4, leaving the two words the day’s own line also uses, «Василия , еп. Амасийского». Measured against the gate’s own key function before it was written: 'амасиискии василии' has no other holder, where the Serbian «василије» fold holds five and the Greek «βασιλευσ» two."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 апреля ст. ст. — «Сщмч. Василия , еп. Амасийского (ок. 323).»",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry. A YEAR DISAGREEMENT, RECORDED AND NOT RESOLVED: this line heads him «ок. 323», about 323, where the folder holds 322 off the Охридски пролог’s „бачен у море, 322. год.“ The Russian life, life936, gives NO year for his own martyrdom at all — only «(+ 322)» for Glaphyra, who died before the order reached Amasea — so there is nothing here to narrow or widen with, and `dates` was NOT touched. The life is SHARED WITH `glaphyra`: its title is «Священномученик Василий, епископ Амасийский. Праведная дева Глафира» and the day’s third line links the same page. THE ACCOUNT IS SUBSTANTIALLY THE ONE THE FOLDER ALREADY HAD from doxologia, saint.gr and the Prologue, and it differs in four small places, each of which is now in the life: it names the second deacon «Фестим» where the folder has Theotimus; it has GLAPHYRA’S OWN LETTER to the empress fall into the emperor’s hands, where the Prologue has an imperial eunuch intercept it; it makes the trial turn on the offer of the HIGH PRIESTHOOD, «стать верховным жрецом», which he refused; and at Sinope the net cast «на счастье» of the two deacons brought up nothing, and only the net cast in the Name of God brought up the body, whose head had grown back on with nothing but a scar at the neck to show the sword. The day page prints ONE hymn under his name, «Кондак священномученика Василия, епископа Амасийского» (глас 4), which names Василие and «священномучениче», and it is on this folder now; the folder had one Greek troparion and no kontakion. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -103,6 +118,22 @@
       },
       "english": {
         "text": "As a minister of the King of glory thou didst set thyself against the lawless king, O glorious hieromartyr, all-blessed Basileus; wherefore, thy neck cut through by the sword, thou didst pass over rejoicing to the heavenly portion. Entreat that we too may have a share in it, who praise thy godly memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Царево повеление преобидев,/ Царство Небесное получил еси, Василие,/ в немже ликуя,/ поминай нас, чтущих память твою,/ священномучениче.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак священномученика Василия, епископа Амасийского», глас 4, under «Молитвы» on the day page for 26 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having set at nought the command of the emperor, thou hast received the kingdom of heaven, O Basileus; rejoicing therein, remember us who honour thy memory, O hieromartyr.",
         "rendered": "site"
       }
     }
