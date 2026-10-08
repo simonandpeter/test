@@ -1,0 +1,9 @@
+# Eustathius (Malakhovsky)
+
+The Православный церковный календарь of the Сретенский monastery names him and gives no life. Its line for 22 апреля ст. ст. reads «Сщмч. Евстафия пресвитера (1918).» — the hieromartyr Eustathius, presbyter, of the year 1918 — and the line carries a link to his name and none to a reading. That is a shape this calendar has for a great many of the new martyrs of the twentieth century, and it is the whole of what is written here.
+
+The name page behind the line adds two things the line leaves out. It gives his family name, Малаховский, which is why this folder is called by it; and it writes his grade out as «иерей», priest, beside the abbreviation «сщмч.», hieromartyr. It also heads two days, «26 января (Новомуч.) , 22 апреля» — the second is the day he is kept on here, and the first is the general commemoration of the new martyrs and confessors of the Russian Church, which is why the folder carries that rank and not a day of its own.
+
+One further thing is on that page and was deliberately left unread. Under the heading «Статья на Православие.Ru» it links an article by Марина Бирюкова called «Три подвига отца Евстафия», the three labours of Father Eustathius, with a single sentence of it shown. It is a magazine piece on the same site rather than the calendar’s own reading, so nothing out of it is in this folder; it is named because it is the one place where more about this priest is to be had, and because a reader who opens the page cited below will meet it. No other calendar was read for him.
+
+*After the Православный церковный календарь of the Сретенский monastery for 22 апреля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260422.html) and [the name page](https://days.pravoslavie.ru/name/9570.html), which name him and give no life; read 8 October 2026.*

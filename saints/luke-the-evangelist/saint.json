@@ -16,6 +16,11 @@
       "form": "Лука",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 18. октобар ст. ст., „Св. Лука апостол и јеванђелист.“ — «Св.» is \"saint\" and not a rank, and «апостол и јеванђелист» is the pair of grades this corpus keeps in `types`, so all of it comes off and the bare personal name is the whole of the form; the heading gives him no epithet and no see. `foldchk.py` measured the string as held by `doukas-the-tailor` in sr and `luke-of-bathys-ryax` in ru before this day, so this form takes that fold to three folders and the key is in `scripts/corpus-gate.mjs`."
+    },
+    {
+      "form": "Лука Евангелист",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 22 апреля ст. ст., name page 1375, «Лука Евангелист, апостол от 70-ти, сщмч.», taking the name and its epithet and leaving off the two rank words that follow the comma; the day’s own line gives the genitive «Луки» alone. The epithet is kept because the calendar’s own index prints it attached to the name and because the bare «Лука» is already the stored form of `luke-of-bathys-ryax`: measured against the gate’s own key function before it was written, 'евангелист лука' has no other holder while 'лука' has one."
     }
   ],
   "sex": "male",
@@ -23,13 +28,24 @@
     "apostle",
     "evangelist",
     "physician",
-    "iconographer"
+    "iconographer",
+    "martyr"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Апп. Нафанаила , Луки и Климента (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026,
+        "note": "The day’s second entry, a line of three apostles, of whom this is the second; the name link behind «Луки» is page 1375, «Лука Евангелист, апостол от 70-ти, сщмч.», and the life it goes to, life1764, is titled «Апостол и евангелист Лука», so the Luke of this line is the Evangelist and not the `luke-apostle-of-laodicea` whom the Russian 10 сентября keeps in a line of the same shape. THE DAY THIS ROW STANDS ON IS NOT HIS PRINCIPAL ONE. His life page heads «Дни памяти: 4 января (70 ап.) , 22 апреля , 20 июня , 18 октября», and 18 октября is the day the Greek, Romanian and Serbian rows of this folder all keep; 22 апреля is simply the day page that printed him, which BRIEF.md §8 makes the day of the row, and §4 forbids moving it. The other three days are RECORDED HERE AND NOT READ. REPORTED TO THE AUTHOR: a later reader of 18 октября ст. ст. will find this row already venerated on a secondary day and will be able to write only a second-day note, so the folder will render on the civil 5 May and not on the civil 31 October. `types` gained `martyr` off «В городе Фивы он мученически окончил земной путь»; the name index also grades him «сщмч.», hieromartyr, which would assert a priesthood the life does not state, so that grade is recorded here and was not written into `types`. Not checked: azbyka.ru, and the 4 января, 20 июня and 18 октября day pages."
+      }
     },
     {
       "church": "romanian",

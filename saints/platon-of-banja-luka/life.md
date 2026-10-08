@@ -10,4 +10,6 @@ He refused, saying that his election had been made by the Church according to th
 
 They threw the holy relic of the hieromartyr Platon into the river Vrbanja. A few days later some Christians of the village of Kumsale recovered it and buried it in the military cemetery of Banja Luka; and in 1973 his honoured relics were translated to the cathedral of Banja Luka. The canonical act of his glorification was performed by the Holy Synod of the Church of Serbia in 1998.
 
-*After saint.gr's calendar for 22 Απριλίου — [the day](https://www.saint.gr/04/22/index.aspx) and [the life](https://www.saint.gr/1353/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same day as the Greek, 22 апреля ст. ст., and gives him no life at all: the line «Сщмч. Платона , еп. Банялукского (1941).» carries a link to his name and none to a reading, and the name page behind it prints his title, that one day, and nothing more. What it adds is his family name, Јованович, which the Greek account this folder was built from does not print; and it spells the see «Бянолукский» where the day’s own line spells it «Банялукского».
+
+*After saint.gr's calendar for 22 Απριλίου — [the day](https://www.saint.gr/04/22/index.aspx) and [the life](https://www.saint.gr/1353/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 22 апреля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260422.html), which names him and gives no life, read 8 October 2026.*

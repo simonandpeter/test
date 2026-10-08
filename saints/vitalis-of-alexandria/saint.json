@@ -6,6 +6,11 @@
       "form": "Виталије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 22. април ст. ст., „Преп. монах Виталије.“, with the rank word Преп. and the rank монах both left off; монах is the `monk` this folder carries in `types`. The heading gives no city — Alexandria is the body's word — so the bare forename is the whole of what this calendar gives, and no other folder in this corpus holds it: the one Russian Виталий is `vitaly-kokorev`'s fuller «Виталий (Кокорев)»."
+    },
+    {
+      "form": "Виталий Александрийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 22 апреля ст. ст., name page 426, «Виталий Александрийский, прп.», with the rank abbreviation after the comma left off; the day’s own line gives only the genitive forename «Виталия». Measured against the gate’s own key function before it was written: 'александриискии виталии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Прп. Виталия (609-620).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026,
+        "note": "The day’s fourth entry. The line gives the bare forename; the name link behind it, page 426, is titled «Виталий Александрийский, прп.» and gives the city, which the line does not. Both the name page and the life page, life916, head «День памяти: 22 апреля» and no other day, so there is no second day to record. `dates` WRITTEN WHERE THE FOLDER HAD NONE AT ALL: the line heads him «(609-620)» and the life sets him in that span by naming it — «пришел в Александрию при святителе Иоанне Милостивом (память 12 ноября), Патриархе Александрийском (609 - 620)». It is the patriarchate rather than a year of his own, and the interval is recorded as such with the words quoted. The page also says he was sixty when he began this labour, which gives no year on its own and was not turned into one. The day page prints no hymn under his name. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 609,
+      "latest": 620,
+      "display": "between 609 and 620",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru heads the line for 22 апреля ст. ст. «Прп. Виталия (609-620)», and life916 names what the span is: «пришел в Александрию при святителе Иоанне Милостивом (память 12 ноября), Патриархе Александрийском (609 - 620)» — he came to Alexandria in the time of that patriarch, whose years those are. It is therefore the reign the calendar sets him in and not a year read of him, and it is recorded as a death interval because he died at Alexandria within it, the patriarch himself carrying his body through the city. The corpus’s first years of any kind for him: the Ohrid Prologue, which the folder was built from, gives none."
+    }
   }
 }

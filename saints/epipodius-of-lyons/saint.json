@@ -1,0 +1,59 @@
+{
+  "slug": "epipodius-of-lyons",
+  "display_name": "Epipodius of Lyons",
+  "names": [
+    {
+      "form": "Елиподий Лионский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14894, «Елиподий Лионский, мч.», with the rank abbreviation left off. THE TWO PAGES SPELL THE FORENAME DIFFERENTLY and neither was altered: the day’s own line for 22 апреля ст. ст. declines it «Мч. Епиподия Лионского», from a nominative «Епиподий», while the name page’s title reads «Елиподий». The name page’s form is stored, per BRIEF-RUSSIAN §3, because the name link carries the calendar’s own nominative; the day line’s spelling is set down here and in the life. Measured against the gate’s own key function before it was written: 'елиподии лионскии' has no other holder in the corpus, and neither has the bare 'елиподии'."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 177,
+      "latest": 177,
+      "display": "about 177",
+      "basis": "traditional",
+      "note": "The only year the calendar prints for him, on the day line itself: «Мч. Епиподия Лионского (ок. 177).» — «ок.» is около, about. It is recorded as a death because martyr is the only thing the line says of him. No year of birth is printed on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Мч. Епиподия Лионского (ок. 177).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14894, prints the title «Елиподий Лионский, мч.» and «День памяти: 22 апреля» and nothing else, so no second day is owed. The day page prints four hymns, two for Vsevolod-Gabriel of Pskov and two for the day’s Theodore, and none under his name. NO FOLDER WAS FOUND FOR HIM: `ls -d saints/epipod*` is empty, `grep -ril 'Epipodius'` over `saints/` returns nothing, and the gate’s key function returns no holder for either spelling of the forename. The corpus does keep other martyrs of Lyons, on other days and out of other calendars; THIS LINE NAMES NOBODY BESIDE HIM, so no company was read and no `related` row was written. No place is recorded either: the city is in the epithet and nowhere else, and the page does not fix him at it. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 5 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 5 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -31,7 +31,8 @@
   ],
   "sex": "male",
   "types": [
-    "apostle"
+    "apostle",
+    "martyr"
   ],
   "dates": {
     "death": {
@@ -56,7 +57,7 @@
         "url": "https://days.pravoslavie.ru/Days/20260825.html",
         "year": 2026
       },
-      "note": "The translation of his relics; his principal feast is 11 June."
+      "note": "The translation of his relics; his principal feast is 11 June. A SECOND RUSSIAN DAY, AND THE ROW WAS NOT MOVED: the 22 апреля ст. ст. day page prints «Апп. Нафанаила , Луки и Климента (I).» and THE FIRST NAME LINK BEHIND THAT LINE IS NAME PAGE 365, «Апостол Варфоломей» — the source identifies Нафанаил with Варфоломей inside its own markup, and both of the lives that page indexes carry «Нафанаил апостол» as a second heading. The identification is stated outright at the end of life1280: «Святители Иоанн Златоуст, Кирилл Александрийский, Епифаний Кипрской и некоторые другие учители Церкви считают апостола Варфоломея за одно лицо с Нафанаилом (Ин. 1, 45-51; Ин. 21, 2)» — so the calendar holds it as the reading of certain Fathers rather than as a bare fact, and it is set out that way in the life. His own pages head four days, «22 апреля , 11 июня , 30 июня (12 ап.) , 25 августа (Перенесение мощей)». One attestation row per church is the schema, so 22 апреля is recorded here and he does not render on it; 11 июня and 30 июня are recorded and NOT READ. THIS IS A ROW SITTING ON A TRANSLATION OF RELICS WHILE THE PRINCIPAL FEAST GOES UNWRITTEN, and it is reported to the author beside `silvanus-of-gaza`, `theodosius-of-the-kyiv-caves` and `job-of-pochaev` rather than resolved here: §4 forbids moving a day. `types` gained `martyr` off life1280, which has him crucified head downwards at Albanopolis, flayed and beheaded. Not checked: azbyka.ru, and the 11 июня, 30 июня and 22 апреля day pages beyond the 22 апреля one read here."
     },
     {
       "church": "romanian",

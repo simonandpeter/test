@@ -1,0 +1,60 @@
+{
+  "slug": "demetrius-vlasenkov",
+  "display_name": "Demetrius (Vlasenkov)",
+  "names": [
+    {
+      "form": "Димитрий (Власенков)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9555, «Димитрий (Власенков), мч.», with the rank abbreviation left off. The day’s own line gives the name without the surname at all — «Мч. Димитрия (1942).» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate’s own key function before it was written: 'власенков димитрии' has no other holder in the corpus, where the bare «Димитрий» has many."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Мч. Димитрия (1942).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Мч. Димитрия (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026
+      },
+      "note": "The day’s eighth and last entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 9555, prints the title «Димитрий (Власенков), мч.» and «Дни памяти: 26 января (Новомуч.) , 22 апреля» and nothing else. 26 января is the general commemoration of the new martyrs and confessors, which is how `new-martyr` is read into `types`, and that day page was NOT READ. HE IS GRADED «мч.» AND NOT «сщмч.», martyr and not hieromartyr, and nothing on either page gives him a clerical grade, so no `office` was written and `presbyter` was not reached for. NO FOLDER WAS FOUND FOR HIM: `grep -ril 'Власенков'` over `saints/` returns nothing, and none of the corpus’s many Demetrius folders carries this surname or this year on this day. The day page prints no hymn under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 5 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 5 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
