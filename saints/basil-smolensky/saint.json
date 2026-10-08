@@ -1,0 +1,62 @@
+{
+  "slug": "basil-smolensky",
+  "display_name": "Basil (Smolensky)",
+  "names": [
+    {
+      "form": "Василий (Смоленский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14268, «Василий (Смоленский), протоиерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Сщмч. Василия пресвитера (1942).» `fk.mjs` returns no holder for the form and none for the display name. THE BARE «Василий» WAS DELIBERATELY NOT STORED: the branch before this one wrote the fold keys «василии крылов» and «василии иванов» for exactly this reason, and a bare «Василий» would stand in a very crowded place. «Смоленский» here is a family name and not the city: `grep -rl 'Смоленский' saints/*/saint.json` returns `abraham-of-smolensk` and others where the same letters are the city, and no folder where they are a surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Archpriest",
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Василия пресвитера (1942).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 мая ст. ст. — «Сщмч. Василия пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260530.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and the only arrival of this day. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14268, prints the title and the line «Дни памяти: 26 января (Новомуч.) , 30 мая» and nothing else at all. What it gives that the day line does not is the surname «Смоленский» and the grade «протоиерей», archpriest, where the day line says «пресвитера»; `office` is the name page’s own word, which the four locale packs carry, and `presbyter` is in `types` off the day line. `new-martyr` WAS WRITTEN AND THE GROUND IS READ: his page carries the 26 января synaxis of the new martyrs beside his own day, and both pages call him a martyr — as against `heraclius-motyakh` and `luke-voino-yasenetsky`, two confessors of this same branch whose marker was refused for that reason. NO FOLDER WAS FOUND FOR HIM. The day page prints four hymns, one for Isaac of the Dalmatian monastery and three for the two icons, and none under his name. azbyka.ru was not read, and it is the source that would give him a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 12 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 12 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 June 2026, the civil day of this Julian 30 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
