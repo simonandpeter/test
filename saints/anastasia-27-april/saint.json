@@ -1,0 +1,60 @@
+{
+  "slug": "anastasia-27-april",
+  "display_name": "Anastasia (27 April)",
+  "names": [
+    {
+      "form": "Анастасия",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 10048, «Анастасия, мц.», with the rank words after the comma left off. The day’s own line gives the same bare forename, declined — «и мц. Анастасии» — and NO SURNAME ANYWHERE, so there is no two-word form to prefer and none was invented. Measured against the gate’s own key function before it was written: 'анастасия' has exactly ONE other holder, `anastasia-nun-martyr-23-march`, and the fold is keyed in this commit."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "The year the day line closes with for the whole company of seven: «Сщмчч. Павла и Иоанна пресвитеров, мчч. Петра , Николая , Авксентия , Сергия и мц. Анастасии (1922).» No year of birth appears on the name page, which is all the calendar gives, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 апреля ст. ст. — «Сщмчч. Павла и Иоанна пресвитеров, мчч. Петра , Николая , Авксентия , Сергия и мц. Анастасии (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry of eight, and ONE LINE NAMING SEVEN PEOPLE, each with its own name link: 9387, 9630, 10026, 10004, 9927, 10030 and 10048. This folder is the seventh and last of the seven, and the only one the line grades «мц.», a woman martyr. NO `related` ROW WAS WRITTEN BETWEEN ANY OF THE SEVEN and none of the other six is named in English in this life: the line states no kinship and no shared act, only one year for the company, and sharing a day or a year is not a relation — so the line is quoted whole in Cyrillic in the life instead, which loses nothing and asserts nothing. THE CALENDAR GIVES NO LIFE: the line links no reading and page 10048 prints the title «Анастасия, мц.» and «Дни памяти: 26 января (Новомуч.) , 27 апреля» and nothing else at all — no life link, no icon, no article. What it gives that the line does not is NOTHING THE LINE DOES NOT ALREADY HAVE: it prints the bare forename «Анастасия» and the grade «мц.» and no surname at all, so this is the one person of the seven for whom the name link adds nothing. HER STORED FORM IS A BARE FORENAME because that is the whole of what the calendar gives her, and it therefore folds together with `anastasia-nun-martyr-23-march`, the only other holder of that string: a READ_FOLDS key was written for the pair in the same commit. The display name takes the day, following that folder's own «Anastasia (23 March)», which is the corpus's way of telling two folders of one bare name apart. 26 января is the general commemoration of the new martyrs and confessors, which is how `new-martyr` is read into `types`, and THAT DAY PAGE WAS NOT READ. NO FOLDER WAS FOUND FOR THIS PERSON: a `grep -rl` for the surname over `saints/` and the gate’s own key function were both run before drafting. The day page prints nine hymns — three under the name of the kinsman of the Lord and six under the name of the abbot of the Caves — and none under any of the seven names of this line. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 10 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
