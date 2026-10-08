@@ -16,6 +16,11 @@
       "form": "Арсеније",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 8. мај ст. ст., „Преподобни Арсеније Велики.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back, and **Велики is left off because it is not part of the name either**: BRIEF-SERBIAN.md §5 reads it as the epithet \"the Great\", which belongs in the display name, where this folder already has it. So the bare forename is the whole of the form. One other folder already holds it — `arsenius-of-corfu`, equally bare — and the fold was measured before this draft was written rather than discovered by the gate; the row is in this batch's commit message."
+    },
+    {
+      "form": "Арсений Великий",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name page 262 for 8 мая ст. ст., «Преподобный Арсений Великий», with the rank word left off. The day’s own line declines him «Прп. Арсения Великого (449-450)»."
     }
   ],
   "sex": "male",
@@ -31,21 +36,31 @@
       "latest": 354,
       "display": "354",
       "basis": "traditional",
-      "note": "doxologia.ro, Viața Sfântului Cuvios Arsenie cel Mare: «Cuviosul Arsenie s-a născut în Roma cea Veche, în anul 354, din părinți creștini și dreptcredincioși». The page gives no year for his death, only that he was «o sută de ani și mai bine». The Ohrid Prologue gives no year of birth either, only „Свега је поживео сто година“."
+      "note": "doxologia.ro, Viața Sfântului Cuvios Arsenie cel Mare: «Cuviosul Arsenie s-a născut în Roma cea Veche, în anul 354, din părinți creștini și dreptcredincioși». days.pravoslavie.ru agrees and repeats the year in both of its lives: «Родился в 354 г. в Риме, в благочестивой христианской семье»."
     },
     "death": {
-      "earliest": 445,
-      "latest": 448,
-      "display": "445 or 448",
+      "earliest": 449,
+      "latest": 450,
+      "display": "449–450",
       "basis": "traditional",
-      "note": "Two sources one three years apart and neither chosen. saint.gr: «κατέφυγε στην Πέτρα, κοντά στη Μέμφιδα, και μετά στην Κανώπη εκεί όπου το 445 μ.Χ. κοιμήθηκε εν ειρήνη», with the head line «(; - 445)»; the Охридски пролог за 8. мај ст. ст.: „скончао је мирно после дуговременог труда и добровољно наложеног на себе мучеништва 448. године.“ doxologia.ro gives no year of death at all. The interval carries both readings. `node .tmp/dd.mjs \"445 or 448\"` reads it in both packs. **The Prologue's „сто година“ was not used as a third bound**: a lifespan added to the birth of 354 would give 454, which is a calculation and not a year any book prints."
+      "note": "days.pravoslavie.ru gives him two lives and both close with the same two years and the same age: life1015 «скончался в возрасте 95-ти лет в 449 или 450 году», life6446 «там же почил о Господе в возрасте 95 лет в 449 г. или в начале 450 г.»; the day line prints «(449-450)». The folder held no death at all before this: the Romanian page that gave the birth gives no year for the death, only «o sută de ani și mai bine», a hundred years and more, which is wider than the ninety-five the Russian gives, and the Ohrid Prologue gives neither year."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст. — «Прп. Арсения Великого (449-450).»",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "note": "`dates` gained the death interval the folder had none of: both lives close him «скончался в возрасте 95-ти лет в 449 или 450 году», and the day line prints the same two years. The Romanian birth note that stood alone is kept word for word, and the Romanian page’s «o sută de ani și mai bine», a hundred years and more, is a year or two wider than the Russian ninety-five; that is in the note and not in the interval. The two lives disagree about how long he laboured — life6446 says fifty years, forty of them in Scetis, and life1015 fifty-five — and life1015 alone gives the age at which he left the altar, twenty-nine, and names the pope whose order he obeyed in leaving it. The day page prints two hymns under his name; the troparion of глас 8 is the common of a venerable, printed word for word under the other Arsenius of the same day as well, and the hymn’s source line says so. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -123,6 +138,38 @@
       },
       "english": {
         "text": "Prudently thou didst withdraw from delightful things, O venerable one, being warned from heaven like the renowned Abraham; and in thy life thou wast seen to be an imitator of the angels, adorned with the word of practice and with true wisdom, O God-bearing Arsenius. And now entreat without ceasing that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Арсение отче наш,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст., «Тропарь преподобного Арсения», глас 8 — the common of a venerable with his name set into it, printed word for word under the other Arsenius of the same day, «Тропарь преподобного Арсения трудолюбивого», with one line break fewer",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the streams of thy tears thou didst make the barren wilderness fruitful, and by thy sighs out of the deep thou didst bring forth a hundredfold in labours, and thou becamest a lamp to the whole world, shining with wonders, O Arsenius our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "От Рима возсиял еси, якоже солнце великое,/ и к Царскому граду достигл еси, преблаженне,/ словесы твоими просвещая сего и делы,/ всяку неразумия мглу отгоня./ Сего ради тя почитаем,// отцев славо, Арсение преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст., «Кондак преподобного Арсения», глас 3 — proper to him, and the hymn that tells the two Arseniuses of the day apart: it names Rome and the imperial city",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of Rome thou didst shine forth as a great sun, and thou camest to the imperial city, O most blessed one, enlightening it by thy words and by thy deeds and driving off every mist of unreason. Therefore do we honour thee, O glory of the fathers, venerable Arsenius.",
         "rendered": "site"
       }
     }

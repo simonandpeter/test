@@ -17,6 +17,11 @@
       "form": "Арсеније Трудољубиви",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 8. мај ст. ст., „Преподобни Арсеније Трудољубиви.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back; **Трудољубиви — the industrious, the lover of labour — is kept**, because it is not a rank word in BRIEF-SERBIAN.md §5's table, `honorific.js` does not compose it, and it is the one thing on the page that tells him from the day's other Arsenius. **Keeping it is what holds this folder out of the fold `arsenius-the-great` and `arsenius-of-corfu` now share**, which was measured and not assumed: the bare «Арсеније» would have made a third. „Монах кијевски“ is the body's second sentence and the lavra is the English name's, so neither is in the form. That is the second time in two days that the Prologue printed two men of one name on one day and gave one of them a by-name."
+    },
+    {
+      "form": "Арсений Трудолюбивый",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name page 268 for 8 мая ст. ст., «Преподобный Арсений Трудолюбивый», with the rank word left off. The day’s own line declines him «Арсения трудолюбивого … Печерских», lower-cased; one of his two life pages titles him more fully, «Преподобный Арсений Печерский, Трудолюбивый»."
     }
   ],
   "dates": {
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a saint of the Kyiv Caves and that calendar is the one that would settle his own day; it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст. — «Прпп. Пимена постника (XII) и Арсения трудолюбивого (XIV), Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "note": "The line names two men of the Caves and the corpus keeps both; the other, `pimen-the-faster-of-the-caves`, already carries a venerated russian row on 27 августа ст. ст., so BRIEF-RUSSIAN §4 forbids touching it and this upgrade is for one of the two only. Both of his life pages head him «Дни памяти: 8 мая, 28 августа (Печер.(Д))», the second being the synaxis of the fathers of the Farther Caves; that is a day the day page does not repeat, so it is a note here and nothing was moved for it. `dates` is unchanged: both lives say only «жил в XIV веке», the fourteenth century the folder already holds, and neither gives a year. The day page prints two hymns under his name; the troparion of глас 8 is the common of a venerable, printed word for word under `arsenius-the-great` on the same day, and the hymn’s source line says so. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -72,5 +87,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Арсение отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст., «Тропарь преподобного Арсения трудолюбивого», глас 8 — the common of a venerable with his name set into it, printed word for word under the other Arsenius of the same day, «Тропарь преподобного Арсения», with one line break more",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the streams of thy tears thou didst make the barren wilderness fruitful, and by thy sighs out of the deep thou didst bring forth a hundredfold in labours, and thou becamest a lamp to the whole world, shining with wonders, O Arsenius our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яже на земли оставль, Христовым стопам последовал еси тепле/ и, Того, славне, на рамо взем честный крест,/ умертвил еси труды постническими телесныя желания, треблаженне./ Темже зовем ти: радуйся, отче Арсение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст., «Кондак преподобного Арсения трудолюбивого», глас 8 — the hymn that tells the two Arseniuses of the day apart: it sings the labours of fasting and names no city",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving behind the things of earth, thou didst follow fervently in the footsteps of Christ; and taking up his honoured cross upon thy shoulder, O glorious one, thou didst put to death the desires of the body by the labours of fasting, O thrice-blessed. Therefore do we cry to thee: rejoice, O father Arsenius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
