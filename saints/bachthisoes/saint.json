@@ -3,13 +3,20 @@
   "display_name": "Bachthisoes",
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "hieromartyr",
+    "bishop"
   ],
   "names": [
     {
       "form": "Βαχθισόης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιοι Ισαάκιος, Συμεών και Βαχθισόης», with the rank word left off; the page's own head line for him reads «Αγιος Βαχθισοης»."
+    },
+    {
+      "form": "Вахтисий Бет-Никторский (Персидский)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/401.html` link carries in its `title`, «Святитель Вахтисий Бет-Никторский (Персидский), епископ, сщмч.», with «Святитель» and the two trailing rank words left off and both place epithets kept; the parenthesis is the calendar's own and is not part of the fold key. The Russian spells him Вахтисий where saint.gr had Βαχθισόης and this folder's display name has Bachthisoes. The day's own line declines the three together. `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "related": [
@@ -20,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Симеона , Исаака и Вахтисия (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same reading as on the other two: this folder's own life already names `isaac-the-persian-of-metsovo` and `simeon-martyr-16-may` as its two companions out of saint.gr's «Άγιοι Ισαάκιος, Συμεών και Βαχθισόης» for 16 Μαΐου, and this calendar prints the same three names on 18 мая. Of him in particular the Greek page said nothing whatever; **the Russian gives him a rank, a see and a manner of death**, heading him «Святитель Вахтисий Бет-Никторский (Персидский), епископ, сщмч.» and ending the three of them under the sword after seven days without food — where the Greek had them perfected by fire and the synaxarion verse had the three breathe out their lives into a single flame. **Those two deaths cannot both be right and neither was chosen**; both are in the life. `hieromartyr` and `bishop` were added to `types` on the name page's authority and `office` was set to the bare `Bishop`, the see going into the life, per BRIEF-ADDENDUM §4. **No `dates` object was written**: the folder had none and the calendar's day line prints the fourth century where its notice says the third. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -51,5 +68,6 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Bishop"
 }

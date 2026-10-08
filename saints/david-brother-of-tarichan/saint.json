@@ -10,6 +10,11 @@
       "form": "Δαβίδ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Δαβίδ και Ταριχάνι οι Μάρτυρες», with the rank word left off; the life page carries «Αγιος Δαβιδ ο Μαρτυρας» as its own head name."
+    },
+    {
+      "form": "Давид Грузинский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/558.html` link carries in its `title`, «Давид Грузинский, мч.», with the rank abbreviation left off. The epithet is a nation and not a place — the Georgian — and it is the calendar's own; the day line adds «(Груз.)» separately as its flag for an entry kept from another local church. `fk.mjs` on «Давид Грузинский» returned NONE before the write, in a corpus holding some dozens of folders of the bare forename, among them `david-of-gareji`, whose own russian row stands on 7 мая."
     }
   ],
   "related": [
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Давида и Таричана отроков (683) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps, and the same boy: one of two Georgian brothers killed for refusing Islam. The calendar marks the entry «(Груз.)», the bracket by which it flags a saint it keeps from another local church, and calls the two of them «отроков», boys. **`dates` were not touched, and the calendar disagrees with itself by ten years**: its day line prints «(683)» while its notice says «Приняли мученическую кончину в 693 году от персидского правителя Абдулы за отказ перейти в мусульманство» — 693, which is the year this folder already carries. The year in the prose and the year in the line are both the same page's, neither was adjusted to the other, and both are in the life. **The Russian names the man who killed them**, the Persian governor Абдула, which no other book in this folder does. He already carries his brother as a `related` row. The day page prints no hymn for them. Their life page gives one day only, «18 мая». azbyka.ru was not read."
     },
     {
       "church": "romanian",

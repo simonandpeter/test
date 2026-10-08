@@ -16,6 +16,11 @@
       "form": "Павлин",
       "lang": "sr",
       "note": "Read out of the heading of the Охридски пролог’s third entry for 18. мај ст. ст., „Свети мученици Ираклије, Павлин, Венедим.“ — Свети is not a rank and мученици the `martyr` in `types`, and the body is three sentences that add no by-name. Measured with `foldchk.py` before drafting: `NO FOLDER HOLDS THIS FORM`."
+    },
+    {
+      "form": "Павлин Афинянин",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1702.html` link carries in its `title`, «Павлин Афинянин, мч.», with the rank abbreviation left off and the calendar's own noun epithet, the Athenian, kept. The day's own line declines the three together. `fk.mjs` on «Павлин Афинянин» returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Ираклия , Павлина и Венедима Афинских (250).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day and the same man, second of the three of Athens; he already carries the other two as `related` rows. **`dates` were not touched**: the folder carries «249–251» and the day line prints «(250)», inside it, and the Russian text gives no year of its own. The notice is shared between the three and adds the unnamed disciples tried with them and the heated furnace they all died in. The day page prints no hymn for the three. Their life page gives one day only. azbyka.ru was not read."
     },
     {
       "church": "romanian",

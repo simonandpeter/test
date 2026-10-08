@@ -7,6 +7,11 @@
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Μακάριος των Αλταΐων», with the rank word left off."
+    },
+    {
+      "form": "Макарий (Глухарев) Алтайский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/13462.html` link carries in its `title`, «Макарий (Глухарев) Алтайский, архимандрит, прп.», with the two trailing rank words left off and the surname in parentheses and the place epithet kept — the surname is part of the name and stays (BRIEF-RUSSIAN §2), and the parentheses are not part of the fold key. The day's own line declines him without the surname, «Прп. Макария Алтайского (1847)», which is why the fuller form from the name link is the one stored. `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "dates": {
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Прп. Макария Алтайского (1847).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps, and the same man. **`dates` were not touched**: 1847 is the year this folder already carries and the year the day line prints. **`venerable` was added to a folder that carried no `types` at all**, on the authority of the line's own «Прп.» and of the name page's «прп.»; the «архимандрит» the same page gives him was NOT written as an `office`, because Archimandrite is not among the office words the four locale packs carry and BRIEF-ADDENDUM §4 forbids inventing one — it is in the life instead. **There is no life page behind the line.** The day page hangs no `/Life/` link on it; name page 13462 is a heading, four days, an icon, a parish link and a one-paragraph teaser for a site article, and the article itself was not opened, on the same rule by which a magazine article on this site is not the calendar's own life. The teaser's two facts are in the life. The name page's other three days — «23 января (Костр.)», «10 июня (Сибир.)» and «27 июля (Смолен.)» — are the synaxes of the saints of Kostroma, of Siberia and of Smolensk, companies' feasts and not days of his own (BRIEF.md §8). The day page prints no hymn for him. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -61,5 +76,8 @@
   ],
   "related": [
     "aretas-of-the-altai"
+  ],
+  "types": [
+    "venerable"
   ]
 }

@@ -6,17 +6,34 @@
       "form": "Isaachie Persul din Mețovo",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 mai, «Sfântul Mucenic Isaachie Persul din Meţovo»."
+    },
+    {
+      "form": "Исаак Бет-Селевкийский (Персидский)",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1095.html` link carries in its `title`, «Святитель Исаак Бет-Селевкийский (Персидский), епископ, сщмч.», with «Святитель» and the two trailing rank words left off — `bishop` and `hieromartyr` are now in this folder's `types` — and both place epithets kept, the parenthesis being the calendar's own and not part of the fold key (BRIEF-ADDENDUM §2). The day's own line declines the three together, «Мчч. Симеона , Исаака и Вахтисия (IV).» `fk.mjs` on this form returned NONE before the write."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "hieromartyr",
+    "bishop"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 мая ст. ст. — «Мчч. Симеона , Исаака и Вахтисия (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260518.html",
+        "year": 2026
+      },
+      "note": "The same reading as on `simeon-martyr-16-may`: saint.gr's «Άγιοι Ισαάκιος, Συμεών και Βαχθισόης» for 16 Μαΐου and this calendar's «Мчч. Симеона , Исаака и Вахтисия» for 18 мая are the same three men, and `bachthisoes` already names this folder as one of its two companions. **The Russian makes him a bishop and a hieromartyr, which no other book in this folder does**: its name page heads him «Святитель Исаак Бет-Селевкийский (Персидский), епископ, сщмч.» — the hierarch Isaac of Beth-Seleucia, the Persian, bishop, hieromartyr. `hieromartyr` and `bishop` were added to `types` on that authority and `office` was set to the bare `Bishop`, because BRIEF-ADDENDUM §4 records that a see-bearing office string costs four locale translations a reader may not invent; the see is in the life instead. **No `dates` object was written**: the folder had none, and the page's own day line says the fourth century where its notice says the third. **The two epithets do not agree either** — doxologia.ro called him the Persian of Metsovo, a town in Epirus, and this calendar gives him a Persian see; the display name was not changed and both readings are in the life. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -45,5 +62,10 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Bishop",
+  "related": [
+    "simeon-martyr-16-may",
+    "bachthisoes"
+  ]
 }
