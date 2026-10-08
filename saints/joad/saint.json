@@ -11,6 +11,11 @@
       "form": "Ιωήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Μαρτίου, «Προφήτης Ιωήλ», with the rank word left off. The same page says «Ιωάδ κατά μερικούς συναξαριστές», Joad according to some synaxaristae, which is why this Greek form is recorded on the folder the corpus already keeps as Joad; only the form the page prints is stored."
+    },
+    {
+      "form": "Иоад",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Пророк Иоад»; Пророк is the rank and is not part of the stored form. Unlike saint.gr, which heads him «Προφήτης Ιωήλ» and explains the two names, this calendar knows him only as Иоад."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "Both of the calendar’s readings of him head «День памяти: 30 марта» and give no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Прор. Иоада (X до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +75,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -1000,
+      "latest": -901,
+      "display": "10th century BC",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s shorter reading opens «Жил в Х веке до Р. X.» and its longer one «пророчествовал в Х веке до Рождества Христова»; the day line prints «(X до Р.Х.)». This folder held no `dates` at all: doxologia.ro gave him no year and saint.gr none either. A century, not a year, and nothing was sharpened. No death year is stated by any page read, so there is no `death`, though both readings end with the lion."
+    }
   }
 }

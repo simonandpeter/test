@@ -6,18 +6,34 @@
       "form": "Σωφρόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Μαρτίου, «Άγιος Σωφρόνιος Επίσκοπος Ιρκούτσκ», with the rank word and the see left off."
+    },
+    {
+      "form": "Софроний Иркутский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Святитель Софроний, епископ Иркутский»; Святитель and епископ are rank words and are not part of the stored form, and the see stays in this folder’s `office`. The life gives his family name, «Кристаллевский», and his name in the world, Стефан, but the name link does not, so neither is in the form."
     }
   ],
   "sex": "male",
   "office": "Bishop of Irkutsk",
   "types": [
-    "bishop"
+    "bishop",
+    "hierarch"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The day of his repose: the life says «преставился к Богу 30 марта 1771 года, на второй день Святой Пасхи» — on the second day of Holy Pascha, which is what puts his fixed day inside the Bright Week of 1771 and has nothing to do with the Pascha of 2026 that the same day page also carries. His life pages give two further days, «10 июня (Сибир.)», the synaxis of the saints of Siberia, and «30 июня (Прославление)», his glorification. One row per church is the schema, so those are recorded here and he does not render on them; neither of those day pages was read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Свт. Софрония , еп. Иркутского (1771).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -66,5 +82,71 @@
   },
   "related": [
     "john-vostorgov"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От юности Христа возлюбил еси, блаженне Софроние,/ добре управил еси иноческия обители/ и, архиерейства саном почтен быв,/ упасл еси Иркутскую паству,/ темже и по преставлении дарования чудес от Бога приял еси/ и молиши Христа Бога/ избавити нас от бед и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Тропарь святителя Софрония, архиепископа Иркутского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou didst love Christ, O blessed Sophronius; thou didst govern monastic houses well, and being honoured with the rank of the high priesthood thou didst shepherd the flock of Irkutsk; and therefore after thy departure thou didst receive from God the gifts of wonders, and thou prayest Christ God to deliver us from troubles and to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Скорый в бедах и скорбех заступниче,/ отче иерарше страны Сибирский,/ святителю Софроние,/ на Небеси предстояй с первоиерархом Иркутския Церкве и всеми святыми,/ выну имаши благоволение Господа славы,/ призри на люди, притекающия к честным останкам святых мощей твоих,/ с верою и любовию слезно просящия твоея помощи и заступления,/ моли, Егоже проповедал еси людем Сибири,/ избавити я от находящих зол и наветов вражиих,/ просветити людей оляденевшая древле неверием сердца,/ даровати утверждение веры Христовы/ и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Ин тропарь святителя Софрония, архиепископа Иркутского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O swift protector in troubles and sorrows, father and hierarch of the land of Siberia, holy Sophronius, who standest in heaven with the first hierarch of the Church of Irkutsk and with all the saints, thou hast ever the favour of the Lord of glory: look upon the people who come to the honoured remains of thy holy relics and ask thy help and protection with faith and love and tears; and pray to him whom thou didst preach to the people of Siberia, that he deliver them from the evils that come upon them and from the snares of the enemy, enlighten the hearts of a people long hardened by unbelief, grant the strengthening of the faith of Christ, and save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Соименнаго мудрости иерарха,/ изрядное Церкве Иркутския украшение,/ отца нашего святителя Софрония любовию восхвалим, вси вернии,/ той бо есть хранитель града и страны сея/ и молитвенник о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Кондак святителя Софрония, архиепископа Иркутского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all the faithful praise with love the hierarch who bears the name of wisdom, the chosen adornment of the Church of Irkutsk, our father the holy Sophronius; for he is the keeper of this city and of this land, and an intercessor for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Пастырей Начальнику, Христу,/ трудился еси, святителю Софроние,/ на пажити духовней северныя страны нашел,/ языцы монгольстии от прелести и скверны идольския избавляя,/ привел еси я к свету веры Христовой,/ и ныне, со Ангелы Владычню Престолу предстоя,/ моли непрестанно о всех нас,/ избавити ны от бед и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Ин кондак святителя Софрония, архиепископа Иркутского», глас 3. Copied as the page has it, including «нашел» where the sense wants «нашея».",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst labour for Christ, the Chief of shepherds, O holy Sophronius, in the spiritual pasture of our northern land, delivering the Mongol peoples from delusion and from the defilement of idols and bringing them to the light of the faith of Christ; and now, standing with the angels before the Master’s throne, pray without ceasing for us all, that we be delivered from troubles and our souls saved.",
+        "rendered": "site"
+      }
+    }
   ]
 }
