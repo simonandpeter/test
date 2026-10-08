@@ -1,0 +1,63 @@
+{
+  "slug": "severinus-of-gaul",
+  "display_name": "Severinus of Gaul",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Северин Галльский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1949 gives it, «Северин Галльский, мч.», with the rank word taken off. The day line declines the forename and prints no epithet, so everything beyond the forename is read off the name page. Measured with the gate's own fold before it was written: 'галльскии северин' has no holder in the corpus."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 41,
+      "latest": 54,
+      "display": "41 to 54",
+      "basis": "traditional",
+      "note": "The day line gives the four of them the bare century, «(I)», and `life1227` narrows it to a reign: «пострадали за Христа при императоре Клавдии (41 - 54)». The recorded interval is the reign the life prints, which sits inside the line's century; the source gives no year within it."
+    }
+  },
+  "related": [
+    "frontasius-of-gaul",
+    "severianus-of-gaul",
+    "silanus-of-gaul"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Мчч. Фронтасия , Северина , Севериана и Силана (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of eleven, «Мчч. Фронтасия , Северина , Севериана и Силана (I).», one line naming FOUR men; four `name:` links stand under it, one for each, and not one of the four had a folder in this corpus. `ls -d saints/frontas*`, `saints/front*`, `saints/severin*`, `saints/sever*` and `saints/silan*` were all run first: the corpus's nine Severinus/Severian/Severus folders are other men on other days and `severinus-of-noricum` is the only Severinus among them, a fifth-century abbot of the Danube. `life1227` is the one reading for all four and was read whole. The day page prints six hymns, for an abbot, a patriarch and two sisters, and none under any of these four names. azbyka.ru was not read, and each of the four name pages lists «День памяти: 4 июня» and nothing else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

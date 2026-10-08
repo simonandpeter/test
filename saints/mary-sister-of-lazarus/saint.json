@@ -16,6 +16,11 @@
       "form": "Марија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 4. јун ст. ст., „Свете Марта и Марија“, which names the two sisters and nothing else. Свете is not a rank, so there is nothing to strip and the bare personal name is the whole of the form. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('mary-called-marinos', 'sr'), ('mary-of-tarsus', 'sr'), ('mary-wife-of-xenophon', 'sr')]`, so this is the fourth holder of the commonest woman’s name there is. The heading offers nothing fuller: the sisterhood is in the body, not in the heading, and §6 does not let a form be built out of a body."
+    },
+    {
+      "form": "Мария Вифанская",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 2591 gives it, «Мария Вифанская», with nothing, the page giving no rank word at all taken off. Measured with the gate's own fold before it was written: 'вифанская мария' has no other holder. The day line prints only «Марии» in the genitive, so Bethany is read off the name page. A bare «Мария» would meet the many Mary folders this corpus holds, which is the reason for keeping the toponymic."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Свв. Марфы и Марии , сестер прав. Лазаря (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of eleven, «Свв. Марфы и Марии , сестер прав. Лазаря (I).», one line naming the two sisters and naming their brother only to say whose sisters they are. **Лазарь TOOK NOTHING from this day**: a third `name:` link stands under the line, «Святитель Лазарь Четверодневный, Китийский, епископ» with its own life page, but «Свв.» and the genitive govern only the two women and he is not commemorated here. The Romanian, Greek and Serbian rows of both folders already stand on this same 4 June. `life1229`, which both name links point at, was NOT read; the identification is the day, the names, the Bethany of both name pages and the sisterhood the line itself states, and the folders' lives already carry the Gospel account from the other three calendars. The day page prints ONE hymn for the two of them together, a troparion in глас 3 headed «Тропарь праведных Марфы и Марии», and it is added to both folders. That heading is also the only grading the source gives them — праведных, the righteous — where the day line says only «Свв.», the saints, and `righteous` is accordingly the first entry either folder's empty `types` has ever had. **`dates` were written for the first time from «(I)»**, the line's own century, both folders having held none; neither has `locations`, so `map-span.test.mjs` is not in question. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -111,6 +126,34 @@
         "text": "Let us honour in song the all-honoured pair of sisters, the kinswomen of Lazarus, Mary and Martha, that by their entreaties to the Lord we may receive forgiveness of our offences.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Праведнаго Лазаря Боголюбивыя сестры,/ Марфо и Марие преславныя,/ чистым сердцем Христа в житии вашем возлюбили есте,/ мироносиц вземше чин,/ и Его, яко Сына Божия, безбоязненно исповедали есте,/ сего ради ныне во обителех Отца Небеснаго/ со Ангелы и всеми святыми славно царствуете./ Умолите, Егоже возлюбили есте,/ и нам, грешным, в вере и любви Христовой утвердитися/ и Царствия Небеснаго сподобитися.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь праведных Марфы и Марии», глас 3, under «Молитвы» on the day page for 4 июня ст. ст.. It is printed once, for the two of them together, and names both in the vocative, so it stands on both folders. It also names their brother; a hymn naming another saint owes no `related` row, `related-floor.mjs` reading `life.md` prose only.",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "God-loving sisters of the righteous Lazarus, O most glorious Martha and Mary, with a pure heart ye loved Christ in your life, taking up the order of the myrrh-bearers, and fearlessly confessed Him to be the Son of God; and therefore ye now reign in glory in the mansions of the heavenly Father with the angels and all the saints. Entreat Him whom ye loved, that we sinners also be established in the faith and the love of Christ and be counted worthy of the Kingdom of heaven.",
+        "rendered": "site"
+      }
     }
-  ]
+  ],
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The day line closes with the bare century, «(I)», and that is the only date this calendar gives them. The folder held no `dates` at all before this; nothing narrower was inferred, and the Gospel gives no year."
+    }
+  }
 }

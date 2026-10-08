@@ -1,0 +1,60 @@
+{
+  "slug": "joannicius-lipovac",
+  "display_name": "Joannicius (Lipovac)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Иоанникий (Липовац)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 14511 gives it, «Святитель Иоанникий (Липовац), митрополит Черногорско-Приморский, сщмч.», with the rank word, the see and the grade taken off. The day line declines the forename and prints no epithet, so everything beyond the forename is read off the name page. Measured with the gate's own fold before it was written: 'иоанникии липовац' has no holder in the corpus. Липовац is a Serbian surname the Russian calendar prints unaltered, in the parentheses it uses for a surname, and it stays there; иоанникии alone would meet the eight Joannicius folders this corpus holds."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1945,
+      "latest": 1945,
+      "display": "1945",
+      "basis": "attested",
+      "note": "The year the day line gives him: «Сщмч. Иоанникия , митр. Черногорско-Приморского (1945) (Серб.).». The article printed on his name page says his four years on the see ran from December 1940 to November 1944, which is when his episcopate ended and not when he died; no day within 1945 and no year of birth is given on either page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июня ст. ст. — «Сщмч. Иоанникия , митр. Черногорско-Приморского (1945) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260604.html",
+        "year": 2026
+      },
+      "note": "The day's ninth entry of eleven, «Сщмч. Иоанникия , митр. Черногорско-Приморского (1945) (Серб.).». «(Серб.)» marks him a saint of the Serbian church whom the Russian calendar keeps — the second such on this day, with `george-bozic` — and his own name page, 14511, lists «День памяти: 4 июня» and nothing else, with no «26 января (Новомуч.)» beside it. **No `office` was written.** His see is «митрополит Черногорско-Приморский», Metropolitan of Montenegro and the Littoral, and BRIEF-ADDENDUM §4 names `Metropolitan of Montenegro` among the office strings the four locale packs do not carry; `metropolitan` is in BRIEF.md §9's vocabulary, so the grade is in `types` and the see is in the life and in this note instead. `ls -d saints/joannic*` returned eight folders, all other men, and `ls -d saints/*lipovac*` and a Cyrillic `grep -rl` for «Липовац» returned nothing. **His name page carries an article rather than a life** — «Священномученик Иоанникий, митрополит Черногорско-Приморский», by the hieromonk Игнатий (Шестаков), on Pravoslavie.Ru — **and it was read only as far as its opening paragraph**, which is the only part this folder rests on. The rest of that article is enrichment left behind. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

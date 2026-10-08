@@ -1,0 +1,9 @@
+# Frontasius of Gaul
+
+The Православный церковный календарь of the Сретенский monastery keeps four men together on 4 июня and gives them one short reading. It has them suffer for Christ under the emperor Клавдий, who reigned from 41 to 54, having been sent to preach the word of God into southern Gaul — «ныне Франция», now France, the page says — by Фронтон, bishop of Petragoria. A pagan governor named Сквиридон seized them and pressed them to deny Christ; they answered that they had one desire, to live or to die for Him.
+
+Angered, the governor had them taken outside the city, nailed to posts and nails driven into their heads in the manner of crowns of thorns, and then beheaded. By tradition, the reading closes, the four were brought to life again by the power of God, took up their own heads in their hands, walked to the church of the Mother of God where Фронтон, who had sent them out to preach, was at prayer, laid the heads at the bishop's feet and departed to God.
+
+He is the first of the four as the calendar's line names them, «Фронтасий», and name page 2338 heads him «Фронтасий Галльский, мч.» — Галльский, of Gaul, which is the only thing the calendar sets beside his name. His companions are [Severinus of Gaul](/saints/severinus-of-gaul), [Severianus of Gaul](/saints/severianus-of-gaul), [Silanus of Gaul](/saints/silanus-of-gaul). The reading tells nothing of any of the four apart from the others: no birth, no city in Gaul, no order and no office, and this folder records none. The governor and the bishop are named on the page in Cyrillic and have no folder here.
+
+*After the Православный церковный календарь of the Сретенский monastery for 4 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260604.html), [the life](https://days.pravoslavie.ru/Life/life1227.htm) and [the name page](https://days.pravoslavie.ru/name/2338.html); read 8 October 2026.*

@@ -4,4 +4,4 @@ saint.gr's calendar names him and gives him two sentences. The line for 4 June r
 
 So what is recorded of him is a forename, a surname, a town, a priesthood, a war and the hands the page says he died at. There is no year here — not of birth, not of ordination and not of death — no account of what the tortures were, no place of burial and no relic; and there is no hymn and no verse. The Serbian calendar, which is the one that would be likeliest to keep a priest of Slavonia, was not opened for this draft.
 
-*After saint.gr's calendar for 4 Ιουνίου — [the day](https://www.saint.gr/06/04/index.aspx) and [the entry](https://www.saint.gr/4427/saint.aspx); read 1 October 2026.*
+*After saint.gr's calendar for 4 Ιουνίου — [the day](https://www.saint.gr/06/04/index.aspx) and [the entry](https://www.saint.gr/4427/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 4 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260604.html); read 8 October 2026.*
