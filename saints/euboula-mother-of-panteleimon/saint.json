@@ -11,11 +11,17 @@
       "form": "Ευβουλή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Μαρτίου, «Αγία Ευβουλή», with the rank word left off. The page's own Greek form is Ευβουλή."
+    },
+    {
+      "form": "Еввула Никомидийская",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Еввула Никомидийская» with no rank word before it. Никомидийская, of Nicomedia, is kept: it is the by-name the link gives her and not a rank, and it is the city her son is kept at, which neither the Romanian nor the Greek page attaches to her own name."
     }
   ],
   "sex": "female",
   "types": [
-    "venerable"
+    "venerable",
+    "righteous"
   ],
   "related": [
     "panteleimon-the-healer"
@@ -23,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "Her life page is headed «День памяти: 30 марта» and gives no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Св. Еввулы , матери вмч. Пантелеимона (ок. 303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -63,5 +79,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "about 303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life of her is one sentence and the year is in it: «Святая Еввула, мать великомученика Пантелеимона (память 27 июля), скончалась мирно около 303 года ранее мучений своего сына», and the day line prints «(ок. 303)». The page’s «около», about, is why the display says about 303. This folder held no `dates`: the Romanian line gave no year and the Greek page none. No year of birth is stated and none is inferred."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Всерадостное дарование от Бога/ святым женам — святыя дети;/ всерадостное даяние и тебе, святая Еввуло,— / святый великомученик Пантелеимон,/ милости тезоименитый,/ недугующих целитель и наш заступник./ Слава убо о вас Всемилостивому Владыце,/ слава Подающему вами цельбы,/ слава предстатели наши вас Показавшему.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Тропарь праведной Еввулы, матери великомученика Пантелеимона», глас 1. The page prints her son’s name as «Пантелеbмон», with a latin b where the Cyrillic и belongs; the form stored here is the Cyrillic one, and the page’s slip is recorded rather than copied, because a latin letter inside a Cyrillic word is a typesetting fault and not a reading.",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A gift of all joy from God to holy women is holy children; and a gift of all joy to thee also, holy Euboula — the holy great martyr Panteleimon, who bears the name of mercy, the healer of the sick and our protector. Glory therefore for you both to the all-merciful Master, glory to him who gives healings through you, glory to him who has shown you to be our intercessors.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Память твоя, Еввуло,/ веселит чтущих тя,/ матерь славнаго Пантелеимона,/ с нимже Божию Престолу предстоящи,/ молися прегрешений оставление дати нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Кондак праведной Еввулы, матери великомученика Пантелеимона», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy memory, O Euboula, gladdens those who honour thee, O mother of the glorious Panteleimon; and standing with him before the throne of God, pray that forgiveness of our sins be given us.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

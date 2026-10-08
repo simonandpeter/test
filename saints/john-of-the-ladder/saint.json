@@ -16,6 +16,11 @@
       "form": "Јован Лествичник",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 30 March on pravoslavno.rs, „Преподобни Јован Лествичник“, with the rank word Преподобни left off, which is what this folder's `venerable` carries. Лествичник is kept: it is not a rank but the by-name the heading gives him, of the Ladder he wrote, and it is what this folder's English name already carries."
+    },
+    {
+      "form": "Иоанн Лествичник",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Преподобный Иоанн Лествичник»; Преподобный is the rank and is not part of the stored form. Лествичник is kept, as it is in this folder’s Serbian form and in its English name: it is not a rank but the by-name of the Ladder he wrote."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "His own fixed day, and the one all four churches now keep him on. His life pages give «Дни памяти: 9 марта , 30 марта», and the 9 марта of 2026 is the Fourth Sunday of Great Lent, which in that year fell on the civil 22 March: the reader of the Julian 03-09 met him on that page, read him as the moveable Sunday rather than as a fixed feast and deliberately wrote no row. The two days are twenty-one apart, not thirteen, so the difference is not the style conversion either. No moveable feast is held by this corpus and no `calendar: \"paschal\"` row exists in it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Прп. Иоанна Лествичника (649).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -104,6 +119,70 @@
       },
       "english": {
         "text": "Having set a divine ladder under the method of your words for all, you were shown forth as the instructor of monastics, O John, leading them up from the purification that is in practice to the radiance of contemplation. Venerable Father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней,/ сияя чудесы, Иоанне, отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Тропарь преподобного Иоанна Лествичника, игумена Синайского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighs out of the deep thou didst make thy labours bear fruit a hundredfold; and thou wast a lamp to the whole world, shining with wonders, John our father: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко Божественную лествицу, обретохом, Иоанне преподобне,/ твоя Божественныя добродетели,/ к Небеси возводящия ны:/ добродетелей бо ты был еси воображение./ Тем моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Ин тропарь преподобного Иоанна Лествичника, игумена Синайского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a divine ladder we have found thy divine virtues, venerable John, which lead us up to heaven; for thou wast thyself the image of the virtues. Therefore pray to Christ God, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Плоды присноцветущия,/от твоей книги принося учения, премудре,/ услаждавши сердца, сим с трезвением внемлющих, блаженне:/ лествица бо есть, души возводящая от земли к Небесней и пребывающей славе/ верою чтущих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Кондак преподобного Иоанна Лествичника, игумена Синайского», глас 1. Copied as the page has it, including «услаждавши» for «услаждаеши» and the missing space after the first solidus.",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bringing from thy book the ever-blooming fruits of thy teaching, O most wise, thou dost sweeten the hearts of those who attend to them with sobriety, O blessed one; for it is a ladder that raises up from earth to the heavenly and abiding glory the souls of them that honour thee with faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "На высоте Господь воздержания истинна тя положи,/ якоже звезду нелестную, световодящую концы,/ наставниче Иоанне, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст., «Ин кондак преподобного Иоанна Лествичника, игумена Синайского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "On the height the Lord set thee as a true man of abstinence, like a star that does not deceive, giving light to the ends of the earth, O John our teacher and father.",
         "rendered": "site"
       }
     }

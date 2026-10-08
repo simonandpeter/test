@@ -16,6 +16,11 @@
       "form": "Состен",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“ — with «Свети апостоли» left off, that being “holy” and the `apostle` grade `types` keeps, and the first of the seven bare forenames taken. The heading gives the seven nothing but their names; the see this folder’s display name carries is not in it and is not the see the body gives him either. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Сосфен",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Апостол от 70-ти Сосфен»; «Апостол от 70-ти» is the rank and is not part of the stored form. The link gives no surname and no see, so the form is the bare forename, which the corpus also holds for the soldier of Chalcedon — see the «сосфен» entry in READ_FOLDS."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The source itself calls this day the second memory of the company: its life of them closes «Все эти апостолы мирно преставились к Богу (вторая память 30 марта)». The first is not named on any page read here, and the 30 марта day page is the page that prints him, so that is the day this row keeps. The Ohrid Prologue, which this folder already cites, records 30 March as a separate day for two of the seven, and the Russian calendar prints five of them on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Апп. Сосфена , Аполлоса , Кифы , Кесаря и Епафродита (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

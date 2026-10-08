@@ -11,6 +11,11 @@
       "form": "Аполос",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“ — with «Свети апостоли» left off and the second of the seven bare forenames taken. IT IS THE SAME STRING `apelles-the-apostle` ALREADY STORES, read by another reader off this book’s own Julian 10 September, and the fold the two make is keyed in `scripts/corpus-gate.mjs` in this commit with the question set out: this book cross-references its 8 December Аполос to its 10 September Аполос as one man, and the corpus keeps two folders. The form is copied as printed and nothing was merged on it."
+    },
+    {
+      "form": "Аполлос Александриец",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Апостол от 70-ти Аполлос Александриец»; «Апостол от 70-ти» is the rank and is not part of the stored form. Александриец, the Alexandrian, is kept: it is the by-name the link gives him and not a rank, and it is what both of the source’s readings say of his birth."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The source itself calls this day the second memory of the company: its life of them closes «Все эти апостолы мирно преставились к Богу (вторая память 30 марта)». The first is not named on any page read here, and the 30 марта day page is the page that prints him, so that is the day this row keeps."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Апп. Сосфена , Аполлоса , Кифы , Кесаря и Епафродита (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

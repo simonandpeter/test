@@ -6,18 +6,34 @@
       "form": "Ζώσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Όσιος Ζώσιμος επίσκοπος Συρακουσών», with the rank words left off."
+    },
+    {
+      "form": "Зосима Сиракузский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 30 марта ст. ст., which gives «Святитель Зосима Сиракузский, епископ»; Святитель and епископ are rank words and are not part of the stored form."
     }
   ],
   "sex": "male",
   "types": [
     "bishop",
-    "abbot"
+    "abbot",
+    "venerable"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian",
+        "note": "His life page is headed «День памяти: 30 марта» and gives no other day. The Greek calendar keeps him on 21 Ιανουαρίου, which is where this folder was written from; two days, and the difference is neither thirteen nor one, so it is two traditions and not the style conversion. One row per church is the schema and nothing was moved."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 марта ст. ст. — «Прп. Зосимы , еп. Сиракузского (ок. 662).»",
+        "url": "https://days.pravoslavie.ru/Days/20260330.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 662,
+      "latest": 662,
+      "display": "about 662",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Около 662 года он скончался, после 13-летнего управления паствой», and the day line prints «(ок. 662)». The page’s «около», about, is why the display says about 662. This folder held no `dates`: saint.gr gave no year of his birth and none of his repose, as its own life says in so many words. No year of birth is stated here either and none is inferred."
+    }
   }
 }
