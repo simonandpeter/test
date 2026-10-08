@@ -13,6 +13,11 @@
       "form": "Ησαΐας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Ησαΐας ο Θαυματουργός Επίσκοπος Ροστώβ», with the rank word, the epithet and the see left off."
+    },
+    {
+      "form": "Исаия Ростовский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1110.html` link carries in its `title`, «Святитель Исаия Ростовский, епископ», with «Святитель» and the trailing «епископ» left off — the first is not part of the name, the second is the `bishop` this folder already carries in `types` and the see is in `office`. The day's own line declines him «Свт. Исаии , еп. Ростовского, чудотворца (1090).» `fk.mjs` on «Исаия Ростовский» returned NONE before the write."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Свт. Исаии , еп. Ростовского, чудотворца (1090).»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: the wonderworking bishop of Rostov who died in 1090, which is the year both books give. **There is no life page behind the line** — the day page hangs no `/Life/` link on it, only the `/name/1110.html` link — so nothing was added to the life but what the calendar itself says and what its hymns say. `dates` were not touched. **Four hymns were copied, and four more on the same page were not.** The four taken are headed «святителя Исаии, епископа Ростовского, чудотворца» and are his alone: тропарь глас 8, ин тропарь глас 2, кондак глас 3, ин кондак глас 4. The four left are a company's — two «святителей Ростовских Леонтия, Исаии, Игнатия» (глас 4, глас 8) and two «святителям Ростовским» (глас 4, глас 4), the second pair naming six hierarchs of that see. They are not a mis-hang, because he is named in all four, but they are not his proper either, and a hymn addressed to three or six saints copied into one folder would tell the reader the Church sings it to him; the exact headings are in this day's reader report and the ruling is the author's. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -61,5 +76,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ Ростову пресветлый светильниче,/ святителем Богодохновенное удобрение,/ Исаие премудре,/ учением бо твоим вся Российския концы просветил еси благодатию духовною,/ святителю блаженне,/ моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Тропарь святителя Исаии, епископа Ростовского, чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Instructor of Orthodoxy, teacher of piety and of purity, most radiant lamp of Rostov, God-inspired adornment of hierarchs, O most wise Isaiah: by thy teaching thou hast enlightened all the ends of Russia with spiritual grace. O blessed hierarch, pray to Christ God that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В иноцех святыя лавры Печерския/ благоискусен показавыйся/ и во архиерейстем сане добр пастырь/ своему стаду, Боголюбезне Исаие, бывый,/ моли о нас Пастыреначальника Христа Бога/ да помилует и спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Ин тропарь святителя Исаии, епископа Ростовского, чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown to be well proven among the monks of the holy Lavra of the Caves, and in the rank of bishop a good shepherd to thine own flock, O Isaiah beloved of God: pray for us to Christ God, the Chief Shepherd, that He may have mercy and save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко гром, возгремел еси Божественными твоими учении в Российстей земли/ и явился еси светильник пресветел,/ осияя светом Богоразумия, Исаие блаженне./ Темже вопием тй:/ Христа Бога моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Кондак святителя Исаии, епископа Ростовского, чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like thunder thou didst sound forth thy divine teachings in the Russian land, and thou wast shown to be a most radiant lamp, shining with the light of the knowledge of God, O blessed Isaiah. Therefore we cry to thee: pray without ceasing to Christ God for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Своего епископска сана тезоименство храня,/ сирых, вдовиц и всех, зле страждущих,/ сам собою посещал еси любезне/ и, милостынею довольне тех ущедряя, яко отец,/ сподобился еси Ангелы на освящение церкве Печерския, святителю Исаие,/ принесен быти чудне,/ с нимиже молися Господеви о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Ин кондак святителя Исаии, епископа Ростовского, чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping true to the name of thine episcopal office, thou didst lovingly visit in thine own person the orphans, the widows and all who suffer evil; and enriching them abundantly with alms as a father, thou wast counted worthy, O hierarch Isaiah, to be borne wondrously by angels to the consecration of the church of the Caves. With them pray to the Lord for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

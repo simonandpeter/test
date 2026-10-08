@@ -16,6 +16,11 @@
       "form": "Ахил",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 15. мај ст. ст., „Свети Ахил, епископ лариски.“ Свети is not a rank; „епископ“ is the `bishop` this folder carries in `types` and „лариски“ the see it carries in `office`, and **stripping a rank and a see to reach the bare form is the reading BRIEF-SERBIAN.md §6 asks be said in the note** — the heading leaves nothing else, so the bare forename is the fullest form this book gives. The body repeats it bare twice, „свети Ахил“ and „светог Ахила“, and prints Ахил and Аил as the names of the island in Prespa. Measured before drafting: no folder in the corpus holds this form in any language, the four other Achillius-like folders being `achillas`, `achillas-of-alexandria`, `achilles-the-deacon-of-the-caves` and this one."
+    },
+    {
+      "form": "Ахиллий Ларисийский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/318.html` link carries in its `title`, «Святитель Ахиллий Ларисийский, епископ», with «Святитель» and the trailing «епископ» left off — the latter is the `bishop` this folder carries in `types`, with the see in `office`. The day's own line declines him «Прп. Ахиллия , еп. Ларисийского (ок. 330).» `fk.mjs` on «Ахиллий Ларисийский» returned NONE before the write, the other Achillius-like folders being `achillas`, `achillas-of-alexandria` and `achilles-the-deacon-of-the-caves`."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Прп. Ахиллия , еп. Ларисийского (ок. 330).»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Romanian, the Greek and the Serbian, and the same man: the bishop of Larissa in Thessaly who sat at Nicaea. `dates` were not touched — the day line's «ок. 330» and the page's «Скончался святитель мирно около 330 года» are the year the folder already carries off two books. The Russian line ranks him «Прп.», venerable, where the other three calendars rank him a hierarch and a bishop, and the day page's own `/name/318.html` title has him «Святитель Ахиллий Ларисийский, епископ»; the `types` the folder carries were therefore left as they stood and the line's rank word was not written. **The day page prints no hymn under his name**, so nothing was copied; the two hymns this folder holds are the Greek and Serbian ones it already had. azbyka.ru was not read."
     },
     {
       "church": "romanian",

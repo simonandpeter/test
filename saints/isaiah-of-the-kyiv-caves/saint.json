@@ -11,6 +11,11 @@
       "form": "Ησαΐας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Ησαΐας ο Θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Исаия Печерский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/1108.html` link carries in its `title`, «Преподобный Исаия Печерский», with the rank word «Преподобный» left off — it is the `venerable` this folder carries in `types`. The day's own line declines him «Прп. Исаии Печерского (1115).» `fk.mjs` on «Исаия Печерский» returned NONE before the write, and the day's other Isaiah, the bishop of Rostov, is stored «Исаия Ростовский»."
     }
   ],
   "dates": {
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Прп. Исаии Печерского (1115).»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: the monk of the Caves who died in 1115 and lies in the Near Caves. **`dates` were not touched, and the Russian disagrees with the Greek about the century.** The folder carries a `floruit` of «10th–11th century» off saint.gr's «κατά τον 10ο και 11ο αιώνα»; both Russian readings say «подвизался в XI - начале XII вв.», the eleventh and the beginning of the twelfth — one century later at each end, and the death year 1115 which both books share falls inside the Russian bracket and outside the Greek one. Widening a `floruit` to cover three centuries would assert more than either page does, so the interval was left as it stands and both readings are in the life. **The day page prints no hymn under his name**, so none was copied. The page's own «Дни памяти» line adds «28 сентября (Печер.(Б))», the synaxis of the fathers of the Near Caves, and the second reading adds the second Sunday of Lent, the synaxis of all the fathers of the Caves; both are companies' feasts and not days of his own (BRIEF.md §8). azbyka.ru was not read."
     },
     {
       "church": "romanian",

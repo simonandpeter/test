@@ -11,6 +11,11 @@
       "form": "Ευφρόσυνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Ευφρόσυνος ο Θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Евфросин Псковский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/747.html` link carries in its `title`, «Преподобный Евфросин Псковский», with the rank word «Преподобный» left off — it is the `venerable` this folder carries in `types`. The day's own line declines him inside a joint heading, «Прпп. Евфросина (1481) и ученика его Серапиона (1480), Псковских», and the fuller place epithet «Спасо-Елеазаровский» stands only in the title of one of the two life pages and not in the calendar's name link, so it was not written into the form. `fk.mjs` on «Евфросин Псковский» returned NONE before the write."
     }
   ],
   "related": [
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Прпп. Евфросина (1481) и ученика его Серапиона (1480), Псковских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man: born about 1386 at Виделебье near Pskov, died aged ninety-five in 1481. **`dates` were not touched, and one of the two Russian readings is wrong inside its own paragraph.** life1073 gives «Скончался преподобный Евфросин в глубокой старости, 95-ти лет, 15 мая 1481 года», which is the folder's own reading to the year and the age; life6568 has him settle on the Tolva about 1425 and then die «в 1425 г.», the same year he went out — a slip, and the day line prints «(1481)». Both are in the life. **Three hymns were copied**, «Тропарь» (глас 4), «Ин тропарь» (глас 4) and «Кондак» (глас 8), all headed «преподобного Евфросина Псковского». The line is a joint one and its second half is his disciple Серапион, whose own folder `serapion-of-pskov` already carries a venerated russian row on 7 сентября: BRIEF-RUSSIAN §4 forbids moving it, so nothing was written there and the two hymns the page prints under «преподобного Серапиона Псковского» were not copied. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -71,5 +86,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Житейскую печаль и всяк мятеж мира сего/ любве ради Христовы со дерзновением отвергл еси, блаженне,/ и повеленная распятым Господем Иисусом Христом/ вся исправил еси,/ и, Того ярем взем, во всем воли Его повинулся еси,/ и, благочестив делатель, животным заповедем Христовым/ благотрудно прилежал еси./ И сего ради Бог прослави тя/ и по преставлении чудеса показа от честнаго гроба твоя,/ Темже и неоскудно угобзися обитель твоя,/ и нищим бысть богатное пристанище и покров,/ отче наш преподобне Евфросине,/ моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Тропарь преподобного Евфросина Псковского»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ thou didst boldly cast off the cares of this life and all the tumult of this world, O blessed one, and thou didst fulfil all that the crucified Lord Jesus Christ commanded; taking up His yoke, thou wast obedient to His will in all things, and as a pious labourer thou didst toil diligently at the life-giving commandments of Christ. And for this God glorified thee, and after thy departure showed forth wonders from thy honoured tomb; and thy monastery was enriched without stint and became a rich haven and shelter for the poor. O our venerable father Euphrosynus, pray to Christ God that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Изволением Божественнаго разума вселися в пустыню/ и тамо вперив свой ум в Небесныя обители/ и равно Ангелом житие пожив на земли,/ в молитвах, и в трудех, и в пощениих образ быв своим учеником./ Темже Бог, видев твое благое изволение,/ умножи тебе чада в пустыни,/ слез твоих тучами напаяема,/ но, яко имея дерзновение к Богу,/ поминай стадо свое, еже собрал еси, мудре,/ и не забуди, якоже обещался еси, посещая чад своих,/ Евфросине, преподобне отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Ин тропарь преподобного Евфросина Псковского»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the choosing of the divine mind thou didst settle in the wilderness, and there, lifting thy mind to the heavenly mansions, thou didst live on earth a life equal to the angels, becoming a pattern to thy disciples in prayers and in labours and in fasting. Therefore God, seeing thy good will, multiplied thy children in the wilderness, watered by the clouds of thy tears. But since thou hast boldness before God, remember the flock thou didst gather, O wise one, and forget not, as thou didst promise, to visit thy children, O Euphrosynus our venerable father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Божиим светолитием просвещен, отче,/ постническое стяжав жительство, преподобне,/ иноком предобрый наставниче и постником благое украшение./ Сего ради Господь, труды твоя видев, даром чудес обогати тя,/ источавши бо исцеления./ Мы же, радующеся, вопием ти:/ радуйся, отче Евфросине, иноком удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 мая ст. ст. — «Кондак преподобного Евфросина Псковского»",
+        "url": "https://days.pravoslavie.ru/Days/20260515.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the outpouring of God's light, O father, thou didst gain the life of an ascetic, O venerable one, a most excellent guide to monks and a goodly adornment of those who fast. For this the Lord, seeing thy labours, enriched thee with the gift of wonders, for thou pourest out healings. And we, rejoicing, cry to thee: Rejoice, O father Euphrosynus, adornment of monks.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
