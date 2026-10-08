@@ -16,6 +16,11 @@
       "form": "Филаделф",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 May, „Свети мученици Алфеј, Филаделф и Кирин.“ — Свети left off, which is not a rank, and мученици left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year. A direct walk of every `names` entry in `saints/` finds no folder holding Филаделф, so the form folds with nothing, although the corpus keeps two other Philadelphi — the martyr and the venerable of 8 February — neither of whom has a Serbian form."
+    },
+    {
+      "form": "Филадельф Бастийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Филадельф Бастийский, Месопольский, мч.», with the rank abbreviation left off and the forename taken with the first epithet only. The day’s own line declines him «Филадельфа» among four others. `fk.mjs` returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Мчч. Алфия , Филадельфа , Киприана , Онисима , Еразма и иных (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the same company on the same menologion day with the same year the folder already holds, and a separate name link for him. `dates` unchanged; the folder’s 249–251 contains the Russian 251. The two reigns the shared life gives, Ликиний and Декий, are the source’s own disagreement and are recorded in the paragraph, not resolved. The name link gives «Филадельф Бастийский, Месопольский, мч.»; the stored form takes the forename and the first epithet only. The life gives him the iron grid, «сожгли на железной решетке». azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -25,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Апостола Симона Зилота (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and not a name match: the calendar’s life makes him of Cana of Galilee, son of Joseph the Betrothed and brother of the Lord after the flesh, one of the Twelve, in whose house the water was made wine — the apostle the Romanian, Greek and Serbian rows of this folder already keep on 10 May. No `ru` form was added: the folder already stores «Симон Зилот», which is what the calendar’s name link gives, though that link heads him more fully, «Симон Зилот, Кананит, апостол из 12-ти, сщмч.», with the second surname Кананит and a rank of hieromartyr the folder’s `types` does not carry. His life page lists one other day, «30 июня (12 ап.)», the synaxis of the Twelve; one row per church is the schema, so that day is noted here and he does not render on it. `dates` is unchanged — the folder holds none and the calendar gives only «(I)», the first century, which is not a year. The Russian life adds what the folder did not hold and what is now in the new paragraph: the countries he preached in, Judea, Egypt, Libya, Cyrene and Britain; his crucifixion in Abkhazia; his burial at Nikopsis near Sukhumi; and the New Athos monastery of Simon the Kananite built near the Iveron mountain in the nineteenth century, with the cave he laboured in still standing. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -122,6 +132,38 @@
       },
       "english": {
         "text": "Him who surely laid the doctrines of wisdom in the souls of the devout, let us all call blessed with praise — Simon who spoke of God; for he stands now at the throne of glory and rejoices with the bodiless ones, interceding without ceasing for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Апостоле святый Симоне,/ моли милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст., «Тропарь апостола Симона Зилота», глас 3 — the common of an apostle with his name set into it; it is the same hymn as the Romanian troparion this folder already carries, in Church Slavonic",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle Simon, entreat the merciful God to grant our souls the forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Известно премудрости учения в душах благочествующих положшаго/ во хвалении ублажим, яко богоглаголиваго, вси Симона:/ престолу бо славы ныне предстоит и со Безплотными веселится,// моляся непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст., «Кондак апостола Симона Зилота», глас 2 — proper to him, and it is the same hymn as the Greek kontakion this folder already carries, «Τὸν ἀσφαλῶς τὰ τῆς σοφίας δόγματα», in Church Slavonic",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all bless with praise, as one who spoke of God, Simon, who surely laid the teachings of wisdom in the souls of the devout; for now he stands before the throne of glory and rejoices with the bodiless powers, praying without ceasing for us all.",
         "rendered": "site"
       }
     }

@@ -16,6 +16,11 @@
       "form": "Мокије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 11 May, „Свештеномученик Мокије.“ — one rank word, which is the `hieromartyr` this folder already carries in `types` and `honorific.js` composes back, and one forename. The heading gives no epithet, no city and no year: Rome, Amphipolis, Macedonia, Diocletian, the idol of Dionysus and the 295 are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Мокије, so the form folds with nothing — neither `mocius-of-emesa` nor `michaeus-of-zographou`, the two the name sweep raised for this folder once before, has a Serbian form."
+    },
+    {
+      "form": "Мокий Амфипольский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1578, «Мокий Амфипольский, сщмч.», with the rank abbreviation left off. The day’s own line gives only «Сщмч. Мокия (ок. 295)», without the city. `fk.mjs` returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст. — «Сщмч. Мокия (ок. 295).»",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and not a name match: the calendar’s life makes him presbyter at Amphipolis in Macedonia under Diocletian, the man who broke the idol of Dionysus with the Name of Jesus Christ, came unharmed out of the furnace that burned the governor Лаодикий, was unhurt by the lions, and was sent by way of Perinthus to Byzantium and beheaded there — the same man the Romanian, Greek and Serbian rows of this folder already keep on 11 May, and the name link heads him «Мокий Амфипольский, сщмч.» with the city the folder’s own slug carries. `dates` is unchanged: the folder holds «288 or 295» and the Russian line and life both give «около 295 года», which that interval contains. The life page lists no day but this one. What the Russian adds and the paragraph now carries: the feast of Dionysus he preached against, the governor’s name, the furnace, the lions, the crowd that demanded his release, his last words «Господи, приими в мире дух мой», and the church the emperor Константин afterwards built for him and moved his relics into. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -105,6 +120,38 @@
       },
       "english": {
         "text": "Ministering as a priest to Christ, being a priest of the glory, thou didst offer thyself as a reasonable sacrifice and a whole burnt offering upon the coals of thy contest; wherefore, O Mocius, he who glorified thee crowns thee with a double crown, being himself glorified in thy contests — Christ the lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, Богодухновенне,/ в видения восход;/ сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Мокие./ Моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст., «Тропарь священномученика Мокия», глас 4 — the common of a hieromartyr with his name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Partaker of their way of life and successor to the thrones of the apostles, O divinely inspired one, thou didst find in action an ascent to contemplation; wherefore, rightly ordering the word of truth, thou didst suffer for the faith even unto blood, O hieromartyr Mocius. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Вооружився щитом веры,/ нечестивых ополчения стерл еси, священномучениче,/ и венец от Христа взял еси, Мокие,/ тем и, со Ангелы радуяся, спасай от бед поющия тя,/ моля непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст., «Кондак священномученика Мокия», глас 8 — proper to him, and it names him",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Armed with the shield of faith, thou didst wipe out the hosts of the impious, O hieromartyr, and didst receive a crown from Christ, O Mocius. Therefore, rejoicing with the angels, save from troubles those who hymn thee, praying without ceasing for us all.",
         "rendered": "site"
       }
     }

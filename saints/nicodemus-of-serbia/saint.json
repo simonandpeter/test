@@ -19,6 +19,11 @@
       "form": "Никодим",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 11 May, „Свети Никодим, архиепископ пећки.“ — Свети left off, which is not a rank, and „архиепископ пећки“ left off, which is the `archbishop` this folder carries in `types` and the see this corpus puts in `office`. **This is the folder's first Slavonic form in any script**: its Greek name note says saint.gr prints no Serbian form, and until now «Νικόδημος» was all it had. The heading gives no epithet; the Holy Mountain, Hilandar, Sava III, Milutin, the Typikon, the Bogomils, the 1317 and the 1325 are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Никодим, so the form folds with nothing, although the corpus keeps four other Nicodemi — of the Cave, of Tismana, the Hagiorite and Shchapkov — none of whom has a Serbian form."
+    },
+    {
+      "form": "Никодим Сербский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1631, «Святитель Никодим Сербский, архиепископ», with the rank word and the see’s rank left off; the folder’s `office` already carries «Archbishop of Serbia». The day’s own line declines him «Свт. Никодима, архиеп. Сербского (1325)». `fk.mjs` returned NONE before the write."
     }
   ],
   "related": [
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст. — «Свт. Никодима , архиеп. Сербского (1325).»",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the calendar’s life makes him abbot of Hilandar raised to the hierarchy in 1316, the man who in 1319 translated into Slavonic and brought into use in Serbia the Typikon of Sabbas the Sanctified of Jerusalem, dead 1325 — the same man and the same year the Greek and Serbian rows of this folder already keep on 11 May. `dates` unchanged at 1325. The life lists one other day, «30 августа (Серб.)», which it marks as the Serbian one; one row per church is the schema, so that day is noted here and he does not render on it — and the folder’s own Serbian row, which stands on the julian 11 May, was not moved for it. **No `related` row was made for Sabbas the Sanctified**: translating a man’s Typikon three centuries after him is not a relation, and his name is written in the paragraph in Cyrillic. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -78,5 +93,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему,/ Яже вещей Истина,/ сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче священноначальниче Никодиме,/ моли Христа Бога,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст., «Тропарь святителя Никодима, архиепископа Сербского», глас 4 — the common of a hierarch with his name set into it; the day page prints no kontakion for him",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Truth of things has revealed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast gained by humility the heights, by poverty riches, O father and chief of priests Nicodemus. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

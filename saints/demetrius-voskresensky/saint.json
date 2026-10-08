@@ -1,0 +1,61 @@
+{
+  "slug": "demetrius-voskresensky",
+  "display_name": "Demetrius (Voskresensky)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Димитрий (Воскресенский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14459, «Димитрий (Воскресенский), протоиерей, сщмч.», with the rank abbreviation left off. The day’s own line gives only «Сщмч. Димитрия пресвитера (1938)», without the surname, so the surname is read off the name link behind the line. The parentheses are kept as the three `demetrius-rozanov` folders of this corpus keep theirs, and they are not part of the fold key — BRIEF-ADDENDUM §2."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Сщмч. Димитрия пресвитера (1938)». It is the only year either page gives, and neither gives a day, a place or a diocese."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст. — «Сщмч. Димитрия пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is. Name page 14459 carries the heading, «Дни памяти: 26 января (Новомуч.), 9 мая», and no life, no place, no account of his death and no hymn on the day page. The 26 января is the synaxis of the new martyrs and confessors of Russia, a commemoration of the company and not a second day of his own, so it is noted here and nothing was moved for it. The two pages disagree about his grade: the day line says «пресвитера», a presbyter, and the name page «протоиерей», an archpriest. Both are recorded — `types` carries `presbyter` with `hieromartyr` and `new-martyr` — and **no `office` was set**, because the locale packs carry no Archpriest (BRIEF-ADDENDUM §4) and reducing it to Priest would drop what the fuller page says; the same decision was taken for `michael-okolovich` in batch ru-05-07-2. Checked for an existing folder before writing: `fk.mjs` on «Димитрий (Воскресенский)» returns NONE, so the form has one holder and makes no fold; a grep of the corpus for the Cyrillic «Воскресенск» returns `basil-voskresensky`, `benjamin-voskresensky` and `damian-voskresensky`, three other men of this surname with three other forenames, and two folders where the string is a place and not a surname — `michael-stroev`, whose life names the town «Воскресенске», and `michael-presbyter-martyr-1918-24-august`; and of the sixty-odd `demetrius-*` folders the one that could be confused with him is `demetrius-presbyter-martyr-1938`, which is «Demetrius (Smirnov)», a presbyter dead in the same year but of another surname, venerated on 31 августа ст. ст. A different surname, a different day and a different name page: a different man, and no `related` row was made from any of it. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 22 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 22 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

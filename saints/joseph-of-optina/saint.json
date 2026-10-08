@@ -11,6 +11,11 @@
       "form": "Ιωσήφ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Μαΐου, «Όσιος Ιωσήφ της Όπτινα», with the rank word left off. No Russian form is recorded: saint.gr prints his worldly name only in Greek letters, «Ιβάν Ευθύμοβιτς Λιτόφκιν», and a Cyrillic form would be a transliteration."
+    },
+    {
+      "form": "Иосиф Оптинский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name page 6990, «Иосиф Оптинский, прп.», with the rank abbreviation left off. The life page heads him more fully still, «Преподобный Иосиф (Литовкин), старец Оптиной пустыни», so the calendar gives both the place-epithet and the surname Литовкин; the form stored is the one the name link itself carries. The day’s own line declines him «Прп. Иосифа Оптинского (1911)». `fk.mjs` returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст. — «Прп. Иосифа Оптинского (1911).»",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the calendar’s life heads him «Преподобный Иосиф (Литовкин), старец Оптиной пустыни», born Иван Литовкин on 2 November 1837 to the village elder Ефим Литовкин, cell-attendant and then successor of the elder Амвросий, skete superior and confessor of the Optina brotherhood and of the Shamordino sisters, dead 1911 — the same man and the same two years the folder already held from saint.gr. `dates` is unchanged; the Russian life gives the day as well as the year, «тихо отошел ко Господу 9/22 мая 1911 года», which is the day the calendar keeps him on in both styles, and the burial on 12 мая. His name page lists one other day, «11 октября (Оптин.)», the synaxis of the Optina elders; one row per church is the schema, so that day is recorded here and he does not render on it. The day page prints no troparion and no kontakion under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

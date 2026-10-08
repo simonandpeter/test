@@ -3,13 +3,20 @@
   "display_name": "Onesimus (10 May)",
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "hieromartyr",
+    "presbyter"
   ],
   "names": [
     {
       "form": "Ονήσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Έρασμος, Ονήσιμος και οι συν αυτώ δεκατέσσερις Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Ονησιμος ο Μαρτυρας»."
+    },
+    {
+      "form": "Онисим Бастийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Онисим Бастийский, Римский, пресвитер, сщмч.», with the rank abbreviations left off and the forename taken with the first epithet only; the second epithet, Римский, is where the life has him die. The day’s own line declines him «Онисима» among four others. `fk.mjs` returned NONE before the write."
     }
   ],
   "related": [
@@ -30,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Мчч. Алфия , Филадельфа , Киприана , Онисима , Еразма и иных (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the same company on the same menologion day with the same year the folder already holds, and a separate name link for him. `dates` unchanged. **Two things the Russian calendar gives that the Greek line this folder was written from did not**: it makes him a presbyter and a hieromartyr — the name link heads him «Онисим Бастийский, Римский, пресвитер, сщмч.» — so `types` gains `hieromartyr` and `presbyter` beside the `martyr` it had, and `office` is set to `Priest`, which the locale packs carry; and it makes him the one who baptised the three brothers, which is the reason he is in their company at all. The two reigns the shared life gives are recorded in the paragraph and not resolved. **No `related` row was made**: baptising a man is a tie the life states and this corpus has no field for, and `related` is for people the life names who have folders — which the three brothers do, so their rows and his are left as the shared life leaves them, named in Cyrillic in the prose and not linked. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -61,5 +78,6 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Priest"
 }

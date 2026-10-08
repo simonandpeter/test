@@ -16,6 +16,11 @@
       "form": "Алфеј",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 May, „Свети мученици Алфеј, Филаделф и Кирин.“ — Свети left off, which is not a rank, and мученици left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year, and the brotherhood, the father, southern Italy, Sicily and Licinius are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Алфеј, so the form folds with nothing."
+    },
+    {
+      "form": "Алфий Бастийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Алфий Бастийский, Месопольский, мч.», with the rank abbreviation left off and the forename taken with the first epithet only, as `acacius-the-centurion` took his in batch ru-05-07-1. The day’s own line declines him «Мчч. Алфия» among four others. `fk.mjs` returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Мчч. Алфия , Филадельфа , Киприана , Онисима , Еразма и иных (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: one line of the Russian calendar names the same five men this corpus already keeps on the menologion’s 10/5, with the same year, 251, and the calendar carries a separate name link for each. `dates` is unchanged — the folder’s 249–251 from saint.gr contains the Russian 251. The life the five share, life1031, is a company of nineteen and names only these five; «и иных» on the day line and «и 14 других» in the life’s own title are fourteen men the source does not name, so they are not folders and are named as a refusal in the report. The life sets the persecution under «император Ликиний» and then dates the brothers’ passion to 251 «при императоре Декии» — two reigns sixty years apart in one paragraph, which is the source’s own disagreement and is recorded and not resolved; the folder keeps the Decian date it already had. The Russian name link gives him two epithets the day line does not, «Алфий Бастийский, Месопольский», and the life accounts for both: he was sent from Rome to Mesopolis in the territory of Leontini in Sicily. azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -10,13 +10,28 @@
       "form": "Тајса",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 10 May, „Блажена Тајса.“ — Блажена left off, which BRIEF-SERBIAN.md §5 reads as either fool-for-christ or righteous and which this folder carries as `righteous`. The heading gives no epithet, no city and no year; Egypt, the giving away of her goods, the fall, the elder and the angels are all in the body. The day in the display name is the corpus's own way of telling her from `thais-of-egypt`, whom the same book keeps on the Julian 8 October, and is no part of the source's name for her."
+    },
+    {
+      "form": "Таисия Египетская",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Блаженная Таисия Египетская», with the rank word left off. The day’s own line declines her «Блж. Таисии (V)». `fk.mjs` returned NONE before the write."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (5 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Блж. Таисии (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the same menologion day as the Serbian row this folder already stands on, and the calendar’s two lives name her «Блаженная Таисия Египетская», the orphan of a rich house in fifth-century Egypt who spent her inheritance on the poor and the sick, fell, and was brought back in one hour by the elder Иоанн Колов. **`dates` gained the floruit the folder had none of**: both lives open «жила в Египте в V веке», and the day line prints «(V)». It is a century and not a year, so it is a floruit and not a death. The two lives differ in their detail and the difference is in the paragraph, not in a field: the shorter has the elder weep at the sight of her face and the next morning find her dead before she could be tonsured or communicate, and a voice tell him that one hour of her repentance was accepted above the long repentance of others; the fuller has him woken in the night by a light from heaven and see angels bearing her soul up, and has him bury her and return to the skete. The fuller life also sends the reader to 9 сентября for Иоанн Колов. **No `related` row was made to him**: he is the one who called her to repentance, which the life states, but this folder’s own account is of her repentance and not of his company, and a name in prose written in Cyrillic owes no row (BRIEF-RUSSIAN §2). `types` unchanged at `righteous`; the calendar’s «Блж.» can be read either way and BRIEF-RUSSIAN §6 says to read which, and nothing here makes her a fool for Christ. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -49,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "Both of the Russian calendar’s lives open with the century and give no year: «Святая Таисия жила в Египте в V веке» and «В Египте в V веке жила юная христианка, по имени Таисия», and the day line prints «Блж. Таисии (V).» A century for a life is a floruit and not a death; neither life gives a year for either end, and the folder held no `dates` at all before this."
+    }
   }
 }

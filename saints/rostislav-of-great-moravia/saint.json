@@ -1,0 +1,60 @@
+{
+  "slug": "rostislav-of-great-moravia",
+  "display_name": "Rostislav of Great Moravia",
+  "sex": "male",
+  "types": [
+    "prince",
+    "equal-to-the-apostles"
+  ],
+  "names": [
+    {
+      "form": "Ростислав Великоморавский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name link 6888, «Ростислав Великоморавский, князь», with the rank word left off. The day’s own line declines him «Равноапостольного Ростислава , князя Великоморавского (870)», and his life page heads him «Святой равноапостольный князь Ростислав Великоморавский». `fk.mjs` returned NONE before the write."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 870,
+      "latest": 870,
+      "display": "870",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Равноапостольного Ростислава , князя Великоморавского (870).» It is the only year the calendar gives him; his life page says only «жил в IX веке», that he lived in the ninth century, and gives no year at either end. No other source was read."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст. — «Равноапостольного Ростислава , князя Великоморавского (870).»",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "note": "He stands on the day the Russian calendar keeps the teachers of the Slavs, and his life is three sentences long: prince of Moravia, of the ninth century, who furthered the spread of Christianity among the Slavs by Кирилл and Мефодий and was the first of his people to show them high honour and deep sympathy for their holy work. His life page lists no other day. **Checked for an existing folder before writing, because the corpus holds a Rostislav already**: `saints/rostislav-of-kyiv` is «Ростислав Мстиславич Киевский, Смоленский», great prince of Kyiv and Smolensk, dead between 1167 and 1176, whom this same calendar keeps on 14 марта ст. ст. and the Greek on 14 March — three centuries later, another country and another day, and the only other `rostislav-*` folder there is; a grep of the corpus for the Cyrillic «Ростислав» returns that folder and `yaropolk-izyaslavich`, whose life names the name in prose. `fk.mjs` on «Ростислав Великоморавский» and `ls -d saints/rostislav*` were both run and neither reaches this man. **No `related` row was made for Кирилл or Мефодий**, whose folders this corpus holds: the life’s sentence is that he furthered their work and honoured them, which is a tie the source states but which the corpus records as prose rather than as a row — and both names are written in Cyrillic in the life for that reason. The Russian calendar’s own 11 мая keeps all three, and the day page prints hymns for the two teachers and the Величание, and **nothing under his name**. **No `office` was set**: the locale packs carry no Prince of Great Moravia (BRIEF-ADDENDUM §4), so the principality is in the display name and in the life instead. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 24 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 24 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 24 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
