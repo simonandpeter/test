@@ -1,0 +1,69 @@
+{
+  "slug": "sergius-rokhletsov",
+  "display_name": "Sergius (Rokhletsov)",
+  "names": [
+    {
+      "form": "Сергий (Рохлецов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9402, «Сергий (Рохлецов), протоиерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Сщмч. Сергия пресвитера, св. Надежды , исп (1938).» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate’s own key function before it was written: 'рохлецов сергии' has no other holder in the corpus, where the bare «Сергий» has many."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "dates": {
+    "birth": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «Священномученик Сергий родился в 1876 году в семье священника Дмитрия Рохлецова»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «Протоиерей Сергий Рохлецов скончался в тюрьме в Великом Устюге 8 мая 1938 года и был погребен на городском кладбище в общей могиле». The day line heads the entry «(1938)» too. 8 May 1938 is the civil date of this Julian day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 апреля ст. ст. — «Сщмч. Сергия пресвитера, св. Надежды , исп (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry of five, and ONE LINE NAMING TWO PEOPLE: it carries two name links, 9402 behind «Сергия» and 15091 behind «Надежды», and the second is a separate folder of this batch. The name page gives the surname «Рохлецов» and the grade «протоиерей», archpriest, which the line does not; the line gives only «пресвитера». HIS LIFE WAS READ: life4905, «Священномученик Сергий (Рохлецов)», linked from the line, which gives the birth in 1876, the father Dmitry Rokhletsov who served in a cathedral of Veliky Ustyug, the seminary, the whole of his service at the church of the great-martyr Paraskeva Pyatnitsa thirty kilometres out of the city, the elder Maxim Yugov who chose him for his confessor, the raising to archpriest and the mitre, the arrest of 4 December 1937, the denial under questioning, the ten-year sentence of 10 December 1937 and the death in prison on 8 May 1938 in a common grave. Both his pages head «Дни памяти: 26 января (Новомуч.) , 25 апреля»; 26 января is the general commemoration of the new martyrs and confessors, which is how `new-martyr` is read into `types`, and THAT DAY PAGE WAS NOT READ. NO FOLDER WAS FOUND FOR HIM: `grep -rl 'Рохлецов'` over `saints/` returns nothing and the gate’s own key function returns no holder for 'рохлецов сергии' or 'rokhletsov sergius'. The day page prints six hymns — three for the evangelist Mark, three for Silvester of Obnora, and two more for an icon — and none under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 8 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 8 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

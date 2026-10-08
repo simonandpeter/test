@@ -1,0 +1,61 @@
+{
+  "slug": "maria-nosova",
+  "display_name": "Maria (Nosova)",
+  "names": [
+    {
+      "form": "Мария (Носова)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14250, «Мария (Носова), послушница, прмц.», with the two rank words after the comma left off. The day’s own line gives the forename only — «Прмц. Марии (1938).» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate’s own key function before it was written: 'мария носова' has no other holder in the corpus, where the bare «Мария» has many."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "office": "Novice",
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year the day line prints for her: «Прмц. Марии (1938).» No year of birth appears on the name page, which is all the calendar gives her, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 апреля ст. ст. — «Прмц. Марии (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry of eight, and the whole of it. THE CALENDAR GIVES NO LIFE: the line links no reading and page 14250 prints the title «Мария (Носова), послушница, прмц.» and «Дни памяти: 26 января (Новомуч.) , 27 апреля» and nothing else at all — no life link, no icon, no article. What it gives that the line does not is the surname «Носова» and the grade «послушница», a novice. `office` is Novice, which the four locale packs carry; BRIEF-ADDENDUM §4 names «Novice of the Trinity-Sergius Lavra» as a string they do not, and nothing of that shape was written. `monastic` WAS DELIBERATELY NOT WRITTEN INTO `types`: a послушница is a woman under obedience and not yet tonsured, and `anastasia-nun-martyr-23-march`, the corpus’s own nun of that persecution, carries `monastic` because her page grades her прмц. AND her office is Nun. The grade «прмц.», преподобномученица, is what `venerable-martyr` stands on, and 26 января, the general commemoration of the new martyrs and confessors, is what `new-martyr` stands on; THAT DAY PAGE WAS NOT READ. NO FOLDER WAS FOUND FOR HER: `grep -rl 'Носова'` over `saints/` returns nothing and the gate’s own key function returns no holder for 'мария носова' or 'maria nosova'. NO PLACE, DIOCESE OR MONASTERY IS NAMED ANYWHERE on either page, and nothing of the kind is in this folder. The day page prints nine hymns, three under the name of the kinsman of the Lord and six under the name of the abbot of the Caves, and none under hers. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 10 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

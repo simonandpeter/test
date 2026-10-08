@@ -11,6 +11,11 @@
       "form": "Јанићије Девички",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 26. април ст. ст., „Св. Јанићије Девички.“, with Св. left off as no rank. Девички — of Devič, the monastery raised where he struggled — is an epithet and not a rank `honorific.js` composes, so it is kept, and this is the fullest form the book gives. It is also the Serbian vernacular form of a name the corpus otherwise holds as Иоанникий and Ιωαννίκιος, which is why no fold arises with the five other Joannicius folders."
+    },
+    {
+      "form": "Иоанникий Девиченский",
+      "lang": "ru",
+      "note": "The two words the day’s line uses, «Прп. Иоанникия Девиченского», with the rank stripped per BRIEF.md §4. The name index at page 13210 is titled «Иоанникий Девиченский, Чернорецкий, Сербский, прп.» and carries TWO FURTHER EPITHETS, «Чернорецкий» for the Black River where he first lived and «Сербский» for his people, neither of which the line or the life title repeats; stringing three toponyms into one stored form is a reading nobody here has done, so the form takes the two words that are everywhere on the source and the others are recorded here. Measured against the gate’s own key function before it was written: 'девиченскии иоанникии' has no other holder, where the Greek «ιωαννικιοσ» fold holds four."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 апреля ст. ст. — «Прп. Иоанникия Девиченского (XIII) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, carrying the calendar’s own «(Серб.)» mark for a Serbian commemoration. THE THIRD SOURCE TO CONTRADICT ITSELF ABOUT HIS CENTURY, AND `dates` IS STILL EMPTY: the line heads him «(XIII)», the thirteenth century, while the life it links, life6920, has «деспот Георгий» bring him his sick daughter and build the monastery of Devič in thanks — Đurađ Branković, who ruled in the fifteenth. That is exactly the difficulty saint.gr’s page already had and did not notice, and which the Охридски пролог declined to settle by giving no year at all; this source now prints both halves of it too, the century on the line and the despot in the life, and does not notice either. NOTHING WAS WRITTEN INTO `dates` on its account and nothing in the folder moved. The row stands on the same menologion day as the folder’s serbian row, 26/4, where the greek row keeps him on 2 December. The page heads «Дни памяти: 26 апреля , 30 августа (Серб.)»; 30 августа is the synaxis of the Serbian hierarchs and saints and NOT a second feast of this folder, and THAT DAY PAGE WAS NOT READ. The account otherwise repeats what the folder has: the boy leaving his father’s house in Zeta, the cell in the wooded country of the Black River where Petar Koriški had struggled before him, the disciples who gathered and the flight from their praise into the forest of Devič, the gift of unceasing prayer with tears and the casting out of demons, the despot’s daughter healed, the death in old age and the relics still giving healing. The day page prints TWO hymns under his name, «Тропарь преподобного Иоанникия Девиченского (Сербского)» (глас 1) and the kontakion (глас 8), both naming Иоанникий, and both are on this folder now, which had no hymn of any kind — and of which its own Greek page says in so many words that it prints none. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -63,5 +78,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Пощением, молитвами и благодатию Божественною просветився,/ земныя концы светло озаряеши благочестно,/ чудес благодать от Бога прием,/ исцеляеши недуги, духи же лукавыя от человеков отгоняеши,/ иже с верою притекают к раце мощей твоих святых,/ преподобне отче наш Иоанникие./ Слава Давшему ти благодать,/ слава Укрепившему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Иоанникия Девиченского (Сербского)», глас 1, under «Молитвы» on the day page for 26 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by fasting, by prayers and by divine grace, thou dost shine brightly and devoutly upon the ends of the earth; and having received from God the grace of wonders, thou healest sicknesses and drivest the evil spirits out of men who come in faith to the reliquary of thy holy relics, O our venerable father Joannicius. Glory to Him who gave thee grace, glory to Him who strengthened thee, glory to Him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От юности, Богомудре, возлюбив ангельское житие,/ вся красная оставил еси,/ зайде бо, якоже звезда от мира,/ востек к разумному и праведному солнцу, Христу,/ от Него же приемь благодать исцеления,/ различныя недуги врачуеши притекающих к священней раце твоей./ Темже и мы, совершающе любовию всечестную твою память, вопием ти:/ радуйся, отче Иоанникие.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Иоанникия Девиченского (Сербского)», глас 8, under «Молитвы» on the day page for 26 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved the life of angels from thy youth, O thou wise in God, thou didst leave all that is fair behind, for thou didst set like a star out of the world and rise to the spiritual and righteous Sun, which is Christ; and receiving from Him the grace of healing, thou curest the various sicknesses of those who run to thy sacred reliquary. Therefore we too, keeping thy all-honourable memory with love, cry out to thee: Rejoice, father Joannicius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -1,0 +1,59 @@
+{
+  "slug": "nadezhda-semenova",
+  "display_name": "Nadezhda Semenova",
+  "names": [
+    {
+      "form": "Надежда Семенова",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 15091, «Надежда Семенова, исп.», with the rank word after the comma left off. The day’s own line gives the forename only — «св. Надежды , исп» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. The calendar sets no parentheses round this surname, unlike the «Сергий (Рохлецов)» of the same line, and none were added. Measured against the gate’s own key function before it was written: 'надежда семенова' has no other holder in the corpus, and the only «Семенов» already stored is `boris-semenov`, a deacon of a different day."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year the day line prints, «св. Надежды , исп (1938)» — but it stands at the END of an entry naming two people, the other of whom, the archpriest Sergius (Рохлецов), has a life giving his death as 8 мая 1938. Her own name page gives no year and there is no life of her anywhere on the site. It is read as the year of her repose because that is what the line’s closing year means on every other entry of this calendar; the basis is `traditional` and not `attested` for that reason, and nothing narrower was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 апреля ст. ст. — «Сщмч. Сергия пресвитера, св. Надежды , исп (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "note": "The second person of the day’s fourth entry. ONE LINE NAMING TWO PEOPLE: it carries two name links, 9402 behind «Сергия» and 15091 behind «Надежды», and the first is `sergius-rokhletsov`, a separate folder of this batch. THE CALENDAR GIVES NO LIFE OF HER: page 15091 prints the title «Надежда Семенова, исп.» and «Дни памяти: 26 января (Новомуч.) , 25 апреля» and nothing else at all — no life link, no icon, no article. What it gives that the line does not is the surname «Семенова». 26 января is the general commemoration of the new martyrs AND CONFESSORS of Russia, and THAT DAY PAGE WAS NOT READ; `new-martyr` was NOT written, because she is graded «исп.», confessor, and not a martyr, following `boris-semenov`, the corpus’s own confessor of that persecution. NO FOLDER WAS FOUND FOR HER: `grep -rl 'Надежда Семенова'` over `saints/` returns nothing, the three Nadezhda folders the corpus holds carry other surnames, and the gate’s own key function returns no holder for 'надежда семенова' or 'nadezhda semenova'. The day page prints six hymns and none under her name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 8 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 8 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

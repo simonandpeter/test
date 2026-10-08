@@ -4,7 +4,8 @@
   "sex": "male",
   "types": [
     "monk",
-    "bishop"
+    "bishop",
+    "hierarch"
   ],
   "office": "Bishop of Perm",
   "names": [
@@ -17,6 +18,11 @@
       "form": "Стефан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 26. април ст. ст., „Св. Стефан еп. Пермски.“ Св. is not a rank, and еп. Пермски is the see, which this folder keeps in `office` as Bishop of Perm and in `types` as `bishop`; `honorific.js` composes both back. The heading gives no epithet, so the bare forename is the whole of the Serbian form. Two other folders already hold it and several hold the same bare spelling in Russian; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Стефан Пермский",
+      "lang": "ru",
+      "note": "The name link behind the day’s line is page 2064, titled «Святитель Стефан Пермский (Великопермский), епископ», and the life page is titled «Святитель Стефан Пермский»; the rank words are stripped per BRIEF.md §4. THE SOURCE GIVES THE SEE TWO WAYS and the day’s own line uses the longer, «еп. Великопермского», of Great Perm. The stored form takes the two words both page titles agree on, and «Великопермский» — the parenthetical on the name page and the word on the line — is recorded here rather than joined to it, joining two renderings of one see into one stored form being a reading nobody here has done. Measured against the gate’s own key function before it was written: 'пермскии стефан' has no other holder, where the bare «стефан» fold holds thirteen and «στεφανοσ» thirty-five."
     }
   ],
   "related": [
@@ -42,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr's whole account is of a Russian saint and the Russian calendar is very likely to keep him, but that page was not read and this row does not guess it."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 апреля ст. ст. — «Свт. Стефана , еп. Великопермского (1396).»",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and THE RICHEST READING OF THE BLOCK. The line heads him «(1396)», the year the Охридски пролог gave the folder, while the life it links, life937, says «В 1395 году святитель Стефан снова отправился в Москву по делам паствы и здесь скончался», which is saint.gr’s 1395 — so this one source prints both numbers the folder’s existing interval already carries, and `dates.death` was NOT touched. `dates.birth` WAS NOT TOUCHED EITHER, AND IT IS A CONFLICT: the folder holds 1345 off saint.gr’s «γεννήθηκε το έτος 1345», and this life opens «родился около 1340 года в семье устюжского причетника Симеона» — about 1340. Widening to cover both would invent an interval neither source gives and narrowing would displace a read year, so the reading is recorded here and in the life and nothing moved. `types_add: hierarch`, read off the line’s «Свт.», святитель, per BRIEF-RUSSIAN §6; the existing `monk` and `bishop` stand. WHAT THE LIFE GIVES THAT NO OTHER CALENDAR IN THE FOLDER DID: the father Симеон, a причетник of Ustyug, and the mother Мария; the year of reading the holy books learnt in one; the service as канонарх and чтец; the tonsure at the Rostov monastery of Gregory the Theologian and the Greek learnt there to read the fathers in the original; the alphabet he made for the Zyrian language and the books he turned into it; the ordination deacon by bishop Арсений of Rostov (1374–1380) and priest by bishop Герасим of Kolomna at Moscow in 1379, with the safe-conducts of the great prince Димитрий Иоаннович; the descent of the Northern Dvina to the Vychegda; the «прокудливая береза» felled and burnt and the church of the Archangel Michael raised on its place; the dispute with the chief priest Пама and his refusal of the fire and the water; the episcopate of Малая Перм from 1383, the schools at the churches, the clergy raised out of the Zyrians themselves and the liturgy in their language; the list of the books translated; the bread in the famine and the pleading at Moscow against the tax-gatherers; the four monasteries founded; the «заочное свидание» with Sergius of Radonezh in 1390; the death at Moscow and the burial in the monastery «Спаса за стеною» in the Kremlin, which the Zyrians begged in vain to have given back to them; and the life written in 1472 and the service composed by иеромонах Пахомий Серб with иеромонах Епифаний Премудрый. The page heads «День памяти: 26 апреля» — ONE day, with no second. The day page prints two hymns under his name, «Тропарь святителя Стефана, епископа Великопермского» (глас 4) and «Кондак» (глас 8), both of which name Стефан and the second of which names the shaming of the «волхва пансотника» and his being the first bishop and teacher of Perm; both are on this folder now, which had no hymn of any kind. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -83,5 +99,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Божественным желанием,/ от юнаго возраста, Стефане премудре, разжегся,/ ярем Христов взял еси/ и людей оляденевшая древле неверием сердца,/ Божественное семя в них сеяв,/ евангельски духовне породил еси./ Темже преславную твою память почитающе, молим тя:/ моли, Егоже проповедал еси,/ да спасет души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Стефана, епископа Великопермского», глас 4, under «Молитвы» on the day page for 26 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled with divine longing from thy youth, O most wise Stephen, thou didst take upon thee the yoke of Christ; and sowing the divine seed in the hearts of a people long run wild with unbelief, thou didst give them a new birth in the spirit, according to the Gospel. Therefore, honouring thy most glorious memory, we pray thee: entreat Him whom thou didst preach, that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Самозванен не ищущим тебе, святителю, обрелся еси,/ люди, от идольския лести свободив, ко Христове вере привел еси/ и волхва пансотника посрамил еси,/ темже и первый епископ и учитель Перми был еси./ Сего ради духовная твоя чада,/ яко тобою избавльшеся от идол, благодарная тебе возопием:/ радуйся, Стефане, учителю премудрый.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Стефана, епископа Великопермского», глас 8, under «Молитвы» on the day page for 26 апреля ст. ст.",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Uncalled, O hierarch, thou wast found of those who did not seek thee; and setting a people free from the deceit of idols, thou didst bring them to the faith of Christ and didst put the all-knowing sorcerer to shame, and so thou becamest the first bishop and teacher of Perm. Therefore we, thy spiritual children, delivered by thee from the idols, cry out to thee in thanksgiving: Rejoice, Stephen, most wise teacher.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

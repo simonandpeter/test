@@ -16,12 +16,18 @@
       "form": "Глафира",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог's entry for 26. април ст. ст., „девицу Глафиру“ and „умре Глафира“ — the heading names only the bishop, so there is no heading form to take. The accusative девицу Глафиру is restored to the nominative the second mention prints, and девица is the `virgin` this folder already carries in `types`. The body gives her no epithet, no family and no city, so the bare forename is the whole of the Serbian form; Italy, which doxologia gives her, is nowhere on this page."
+    },
+    {
+      "form": "Глафира Амасийская",
+      "lang": "ru",
+      "note": "The name link behind the day’s line is page 2443, titled «Глафира Амасийская, дева», with the rank word «дева» stripped per BRIEF.md §4. THE EPITHET IS THE NAME PAGE’S AND NOT THE LINE’S: the day prints only «Прав. Глафиры девы», a bare forename, and «Амасийская» — of Amasea, the city she fled to and where she died — comes from the link behind it, which is where §3 says the calendar’s own nominative is to be read. Measured against the gate’s own key function before it was written: 'амасииская глафира' has no other holder."
     }
   ],
   "sex": "female",
   "types": [
     "venerable",
-    "virgin"
+    "virgin",
+    "righteous"
   ],
   "images": [
     {
@@ -35,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 апреля ст. ст. — «Прав. Глафиры девы (322).»",
+        "url": "https://days.pravoslavie.ru/Days/20260426.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry. THE FOLDER’S FIRST `dates` OF ANY KIND: the line heads her «(322)» and the life says «Праведная Глафира скончалась (+ 322), прежде чем приказ дошел до Амасии» — she died before the emperor’s order reached Amasea. Only the year was written and no narrower claim. `types_add: righteous`, read off the line’s «Прав.», праведная, which is the grade this calendar gives her where the Romanian and the Greek grade her venerable and virgin; the existing `venerable` and `virgin` stand and nothing was removed. THE LIFE IS THE SAME PAGE AS `basileus-of-amasea`’s, life936, titled for the two of them together, which is why the day links it twice. What it turns differently from the three accounts the folder already has: Licinius’s wife is named «Констанция» and it is SHE who dressed Glaphyra in man’s clothing, gave her money and sent her out of the city with trusted servants, putting it about that the maidservant had gone mad and lay dying; Glaphyra gave the whole of that money to the building of the bishop’s church and wrote to the empress for more, which was sent; and it is HER OWN LETTER that fell into the emperor’s hands, not a eunuch’s interception of the reply. The day page prints five hymns and NONE under her name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -85,5 +101,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 322,
+      "latest": 322,
+      "display": "322",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life936: «Праведная Глафира скончалась (+ 322), прежде чем приказ дошел до Амасии», and the day line heads her «(322)». The first year of any kind in this folder: doxologia, saint.gr and the Охридски пролог each give her none. No year of birth is given and none was inferred."
+    }
   }
 }

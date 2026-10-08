@@ -11,6 +11,11 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Απριλίου, «Όσιος Βασίλειος ο Ησυχαστής», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Василий Поляномерульский",
+      "lang": "ru",
+      "note": "The two words the day’s line uses, «Прп. Василия Поляномерульского», with the rank stripped per BRIEF.md §4. The name page’s title adds a parenthetical «(Пояна-Мэрулуйский)», which is the same place-name rendered from the Romanian «Poiana Mărului» instead of calqued, and not a further part of the name; it is recorded here and was not stored. Measured against the gate’s own key function before it was written: 'василии поляномерульскии' has no other holder, where the bare «βασιλειοσ» fold holds thirty-three."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 апреля ст. ст. — «Прп. Василия Поляномерульского (1767) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260425.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and a LINE-ONLY UPGRADE. The line carries the calendar’s own «(Рум.)» mark for a Romanian commemoration and NO LINK TO A LIFE. The name page behind it, 14455, is titled «Василий Поляномерульский (Пояна-Мэрулуйский), прп.», heads «День памяти: 25 апреля» — one day only, with no second — and prints three icons and three links under «Статьи на Православие.Ru»: two pieces by Богдан Лупеску both called «Святой Василий Поляномерульский», and one «Преподобный Василий Поляномерульский». THOSE ARE MAGAZINE ARTICLES ON THE SAME SITE AND NOT THE CALENDAR’S OWN READING, so NONE OF THEM WAS READ and nothing out of their teaser sentences is in this folder; they are the one place more about him is to be had on that site and they are named here. The year the line prints, 1767, is the year the folder already holds off doxologia’s life, «a trecut cu pace la Domnul, la 25 aprilie, în anul mântuirii 1767», so `dates` was not touched. The day page prints six hymns and NONE under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
