@@ -14,6 +14,11 @@
       "form": "Ιωσήφ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Ιωσήφ ο Ιερομάρτυρας», with the rank words left off. No Russian form is recorded: saint.gr prints none."
+    },
+    {
+      "form": "Иосиф Астраханский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1054, «Священномученик Иосиф Астраханский», with the rank word left off. The day’s own line declines him «Сщмч. Иосифа, митр. Астраханского (1672)», and the fuller of his two lives heads him «Священномученик Иосиф, первый митрополит Астраханский и Терский», with the second see the shorter form leaves out. `fk.mjs` returned NONE before the write."
     }
   ],
   "dates": {
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint, canonised by the Russian Synod in April 1918 according to this page, and that calendar is the one that would settle his own day; it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст. — «Сщмч. Иосифа , митр. Астраханского (1672).»",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: both of the calendar’s lives make him the first metropolitan of Astrakhan, born there in 1579, killed in the city on 11 мая 1672 during Stenka Razin’s revolt, canonised at the Local Council of the Russian Church in April 1918 — the same man and the same two years this folder already held from saint.gr, whose Greek row keeps him on 11 May. `dates` is unchanged, and the Russian source confirms both ends of it independently. The fuller life, life6642, gives a great deal the Greek line did not and it is now in the paragraphs: his parents Климент and Варвара, the stone that struck his head at seven years old in the troubles raised by the first pretender and that he suffered from all his life, the Trinity monastery at Astrakhan, his consecration as archbishop by patriarch Никон, the council at Moscow of 1663–64, the two eastern patriarchs of Alexandria and Antioch whom he lodged and who asked the tsar to make him metropolitan in 1667 and gave him a sakkos of silk and gold, the great bell rung to gather the clergy when the Cossacks surrounded the cathedral, the throwing of him from the slope of the cathedral roof, the nine days his body lay unburied, and the two priests of the Astrakhan cathedral, Кирилл and Пётр, who wrote the event down as witnesses. The two lives differ on one point, and it is in the paragraph and not in a field: life6642 has him consecrated archbishop by patriarch Никон, while life1040 has him made archimandrite of the Trinity monastery in his fifty-second year and in Moscow in 1656, and then raised to metropolitan. **No `related` row was made** for Никон, for the tsar, for the two eastern patriarchs or for the two priests who recorded his death; none of those ties is the kind `related` holds, and all the names are written in Cyrillic in the prose. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -66,5 +81,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Подвигом добрым подвизався,/ жизнь твою страданиями за правду увенчав,/ преселился еси в Небесныя обители,/ идеже предстоя Престолу Святыя Троицы,/ моли, святителю Иосифе,/ граду Астрахани и отечеству нашему в мире спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст., «Тропарь священномученика Иосифа, митрополита Астраханского», глас 6 — proper to him, and it names both him and his city",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having striven with a good striving and crowned thy life with sufferings for the truth, thou didst pass over to the heavenly mansions, where, standing before the throne of the Holy Trinity, pray, O hierarch Joseph, that the city of Astrakhan and our fatherland may be saved in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Яко звезда пресветлая,/ возсиял еси, святителю Иосифе, во Астрахани,/ идеже родился и воспитался еси/ и за верность Богу и властем законным мученическую смерть приял еси./ Мы же, чтуще страдания твоя, зовем ти:/ святителю Иосифе, от мятежников убиенный,/ моли Христа Бога о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 мая ст. ст., «Кондак священномученика Иосифа, митрополита Астраханского», глас 2 — proper to him, and it names how he died",
+        "url": "https://days.pravoslavie.ru/Days/20260511.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most radiant star thou didst shine forth, O hierarch Joseph, in Astrakhan, where thou wast born and brought up, and for faithfulness to God and to the lawful authorities thou didst receive a martyr's death. And we, honouring thy sufferings, cry to thee: O hierarch Joseph, slain by rebels, pray to Christ God for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
