@@ -11,6 +11,11 @@
       "form": "Παρμενάς",
       "lang": "el",
       "note": "Read out of his own head line on saint.gr's page for 28 Ιουλίου, «Αγιος Παρμενας ο Αποστολος Και Διακονος», with the rank words left off; the day's listing spells it «Παρμένας». The page glosses the name from παρά and μένω, the one who remains, the steady one, the faithful friend."
+    },
+    {
+      "form": "Пармен",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's first heading for 28. јул ст. ст., „Свети апостоли: Прохор, Никанор, Тимон и Пармен.“ — «Свети» is not a rank and «апостоли» is the `apostle` the folder already carries, so what the heading leaves is the bare forename, which is all it gives any of the four. Measured before it was written: `fk.mjs` returns no other holder of this string or of anything folding to it."
     }
   ],
   "sex": "male",
@@ -134,8 +139,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.08.2026 (28. јул ст. ст.) — „Свети апостоли: Прохор, Никанор, Тимон и Пармен.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, AN ENUMERATED FOUR, so BRIEF-SERBIAN §5 counts four and each of the four folders the corpus already holds takes this one heading whole with its closing full stop; the corpus holds all four and they are already `related` to one another, so no `related` row was added anywhere. THE ENTRY SETTLES THE DAY IN ITS OWN WORDS: «А она прва четворица немају посебних дана празновања, него се сви спомињу у овај један дан, 28. јула» — these first four have no separate days of celebration but are all commemorated on this one day, 28 July. The Romanian and the Greek keep all four on this same menologion day. All four serbian rows were `undocumented`, so the rows land here. `dates` UNTOUCHED AND STILL NULL ON ALL FOUR: the entry gives not one year, naming only the apostle Peter, John the Evangelist and Patmos, and a reader does not date the apostolic age from a name. THE OTHER THREE OF THE SEVEN ARE NAMED IN THE BODY AND TAKE NOTHING: «Стефан, Филип и Николај», of whom it says that Stephen the protomartyr is kept separately on 27 December, Philip on 11 October, and «Николај није ушао у ред светитеља због своје јереси» — Nicholas did not enter the ranks of the saints because of his heresy. Membership of the Seven is not this entry's story of any one of these four, the existing `related` rows were made on the four of the heading, and a reader does not stretch a heading, so all three names stay in the book's own Cyrillic and NO ROW WAS MADE IN EITHER DIRECTION. «апостола Петра» and «св. Јована Јеванђелиста» likewise take nothing new: `john-the-theologian` is already `related` to Prochorus and no other row was touched. The Prologue prints no hymn (8 October 2026). He is the fourth name of the four, and the entry gives him one clause: «Пармен умре на очи апостола, и од ових би оплакан и погребен» — Parmenas died before the eyes of the apostles, and was mourned and buried by them. That is the whole of what this book says of him, and it agrees with this folder's `types`, which carry no `martyr`."
     }
   ],
   "text": {

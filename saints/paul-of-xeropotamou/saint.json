@@ -11,6 +11,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιουλίου, «Όσιος Παύλος ο Ξηροποταμινός», with the rank word and the byname left off. The page glosses the name from the Latin paulus, the very small one."
+    },
+    {
+      "form": "Павле Ксиропотамски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 28. јул ст. ст., „Преподобни Павле Ксиропотамски.“ — «Преподобни» is the rank `venerable`, which §6 keeps out of a stored form, and «Ксиропотамски», of Xeropotamou, is the by-name the heading gives him and is kept, §6 asking for the fullest form the calendar gives. The bare «Павле» was not even measured as a candidate: eleven folders share a bare «Петар» in this corpus and the brief names a bare Paul as the same hazard. Measured before it was written: `fk.mjs` returns no other holder of the full string."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.08.2026 (28. јул ст. ст.) — „Преподобни Павле Ксиропотамски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry. The identification is past doubt: the son of the emperor Michael Kouropalates, the Xeropotamou monastery he restored and the Saint Paul's monastery he then built are the folder's own dossier, and the Romanian and the Greek keep him on this same menologion day. The serbian row was `undocumented`, so the row lands here. `types` UNTOUCHED: «Преподобни» is the `venerable` held. `dates`: THE FOLDER'S `dates` WAS NULL AND THIS ENTRY GIVES IT ITS FIRST DATE OF ANY KIND, a flat death of 820 off «упокојио се 820. год.», which takes the folder out of the undated tray. NO `locations`. NO `related`: «знаменитог светитеља Козме», the famous saint Cosmas who tonsured him, is named with no see, no epithet and no century, and the corpus holds many folders of that name, so the name stays in the book's Cyrillic and no row was made; the emperors Romanos the Elder and Leo the Armenian are no folders' subjects here. WHAT THE BOOK ADDS: THAT HIS NAME IN THE WORLD WAS PROCOPIUS, «Прокопије (тако се најпре зваше)», which no source this folder had said; that with his brilliant education, rare wisdom and meekness he was the wonder of the whole of Constantinople in his young years; that in a charter the emperor Romanos the Elder called him „највећим од свих философа“, the greatest of all philosophers; that fearing his soul would be puffed up and ruined by human glory he dressed one day in a beggar's rags and came to the Holy Mountain; that when the new monastery was consecrated the emperor Romanos sent as a gift a great part of the Honourable Cross, WHICH IS KEPT THERE TO THIS DAY; THAT HE IS SAID TO HAVE PREACHED THE GOSPEL IN MACEDONIA AND IN SERBIA, which is stated in the life as the book states it, as something said; that he bore many torments from the wicked emperor Leo the Armenian the iconoclast; and his last words to the brethren, „Ево стиже час, који је душа моја увек желела и од кога се тело моје увек страшило“ — the hour is come that my soul has always longed for and that my body has always dreaded. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
@@ -113,5 +128,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 820,
+      "latest": 820,
+      "display": "820",
+      "basis": "traditional",
+      "note": "The folder's first date of any kind: `dates` was null, neither doxologia.ro nor saint.gr giving a year. The Охридски пролог for 28. јул ст. ст. says «Претрпео је многе муке од злог цара Лава Јерменина иконоборца, и упокојио се 820. год.» — he bore many torments from the wicked emperor Leo the Armenian the iconoclast, and reposed in 820. No year of birth and no age is given, and the reigns the entry names were not turned into one. Read 8 October 2026."
+    }
   }
 }

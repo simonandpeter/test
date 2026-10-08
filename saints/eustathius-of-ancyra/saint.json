@@ -40,11 +40,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.08.2026 (28. јул ст. ст.) — „Свети мученик Јевстатије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. The identification is the city, the rank and the day together: the Greek keeps an undated martyr Eustathius on this same menologion day, and this entry's man is a soldier at Ancyra. The serbian row was `undocumented`, so the row lands here. `types` UNTOUCHED: «мученик» is the `martyr` held, and NO `soldier` WAS ADDED — the type is in BRIEF.md §9's vocabulary and the body's «беше војник у Анкири» would carry it, but a `types` row is a reading of the sources together and not of the newest one, which is the 11-05 `stephen-of-decani` precedent, and the Greek line this folder was made from gives him no rank at all. NAMED FOR THE AUTHOR. `dates`: THE FOLDER'S `dates` WAS NULL AND THIS ENTRY GIVES IT ITS FIRST DATE OF ANY KIND, a flat death of 316 off «сконча у Господа, 316. год.», which takes the folder out of the undated tray. NO SERBIAN NAME FORM WAS STORED, AND THAT IS A DELIBERATE REFUSAL: the heading „Свети мученик Јевстатије.“ gives «Свети», which is not a rank, «мученик», which is the `martyr` in `types`, and no by-name and no place — Ancyra stands in the body only — so the bare forename was the only form there was, and `corpus-gate.mjs` already carries a READ `READ_FOLDS` key for that form at TWO members, `eustathius-20-november` and `eustathius-i-archbishop-of-serbia`. Storing it would have widened a fold another reader wrote and read, and the brief says to refuse the form rather than widen a fold. NO `locations` and NO `related`: the voivode «Корнилије» who tortured him and then ran himself through with his own sword is no folder this corpus holds. WHAT THE BOOK ADDS, and it is the whole of this folder's narrative, which had none: that he was a soldier at Ancyra; that dragged to trial he feared no torture but freely praised the name of the Lord Christ; that Cornelius had his feet bored through, a rope drawn through them and the man of God dragged to a river and thrown in; that he was saved by the power of God and healed of his wounds and appeared before the voivode perfectly well; AND THAT THE VOIVODE, SEEING HIM ALIVE, WAS SO TERRIFIED THAT HE DREW HIS SWORD AND RAN HIMSELF THROUGH. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 316,
+      "latest": 316,
+      "display": "316",
+      "basis": "traditional",
+      "note": "The folder's first date of any kind: `dates` was null, the Greek line it was made from giving no year. The Охридски пролог for 28. јул ст. ст. closes the entry «Јевстатије поживе још неко време и сконча у Господа, 316. год.» — Eustathius lived on for some time and ended in the Lord in 316. No year of birth and no age is given. Read 8 October 2026."
+    }
   }
 }
