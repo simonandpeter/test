@@ -6,6 +6,11 @@
       "form": "Υπάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαρτίου, «Όσιος Υπάτιος ο θεραπευτής», with the rank word left off."
+    },
+    {
+      "form": "Ипатий Печерский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 31 марта ст. ст., which gives «Преподобный Ипатий Печерский, целебник»; Преподобный is the rank and целебник, the healer, is the by-name this folder’s English name already carries, so neither is in the stored form. Печерский, of the Caves, is the house the link names him for and is kept."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "julian",
+        "note": "Both of the calendar’s readings of him are headed «Дни памяти: 31 марта , 28 августа (Печер.(Д))». The second is the synaxis of the fathers of the Far Caves of Kyiv, which is where it says his relics lie; one row per church is the schema, so that day is recorded here and he does not render on it, and that day page was not read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст. — «Прп. Ипатия целебника, Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +61,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s shorter reading opens «Подвизался в Киево-Печерском монастыре в XIV в.» and the day line prints «(XIV)». This folder held no `dates` at all, and its own life says why: saint.gr gave him no century, no country and no monastery, only a rule of life and a charism. A century, not a year, and nothing was sharpened; no year of birth or of death is stated by any page read, so there is neither `birth` nor `death`."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Безначальнаго онаго и тихаго места,/ идеже несть печали, ни воздыхания,/ достигнути, преподобне, желая,/ не дал еси себе зде покоя нимало,/ но присно день и нощь в делех всяких/ и жестоком житии трудолюбно подвизаяся, пребываеши,/ тем желаемого получил уже, Ипатие,/ молися о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Тропарь преподобного Ипатия целебника, Печерского, в Дальних пещерах», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring, O venerable one, to reach that place without beginning and full of quiet, where there is neither sorrow nor sighing, thou gavest thyself no rest here at all, but didst abide ever, day and night, labouring diligently in every work and in a hard manner of life; and so thou hast already obtained what thou didst desire, O Hypatius: pray for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Труды ко трудом выну ради Господа прилагая,/ никогдаже обрелся еси празден, Ипатие./ Темже и в лепоту трудолюбив наречеся,/ звание приемь от дел.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Кондак преподобного Ипатия целебника, Печерского, в Дальних пещерах», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ever adding labours to labours for the Lord’s sake, thou wast never found idle, O Hypatius; and therefore thou wast fitly called the diligent one, taking thy name from thy works.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

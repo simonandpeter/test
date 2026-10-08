@@ -11,6 +11,11 @@
       "form": "Υπάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Ιουνίου, «Όσιος Υπάτιος ο εν Ρουφινιαναίς», with the rank word and the monastery left off."
+    },
+    {
+      "form": "Ипатий Руфианский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 31 марта ст. ст., which gives «Преподобный Ипатий, игумен Руфианский»; Преподобный and игумен are rank words and are not part of the stored form. Руфианский is the adjective of the monastery he governed and is the by-name the link gives him; the city this folder is named for, Chalcedon, is the city that monastery stood near and is not in the stored form."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "julian",
+        "note": "Both of the calendar’s readings of him are headed «День памяти: 31 марта» and give no other day. This folder now carries three different days on three churches — the Romanian 25 February, the Greek 17 June and this one — and none of the differences is thirteen, so none of them is the style conversion; one row per church is the schema and nothing was moved. saint.gr’s own page for him remarks that certain synaxaristae repeat his memory on 29 May as well."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст. — «Прп. Ипатия , игумена Руфианского (ок. 446).»",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,5 +76,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 446,
+      "latest": 446,
+      "display": "about 446",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru is the first source read for this folder to give any year: its longer reading closes «Преподобный Ипатий преставился около 446 года, в возрасте восьмидесяти лет», its shorter one «мирно почил о Господе восьмидесятилетним старцем около 446 г.», and the day line prints «(ок. 446)». The page’s «около», about, is why the display says about 446. The folder held no `dates`: doxologia.ro’s life said in so many words that it gave no year, and saint.gr gave none either, dating him only by the reigns of Arcadius and Honorius. Both of these pages agree with those two that he died at eighty, so a birth about 366 could be computed; it is not stated by any page and is therefore not written."
+    }
   }
 }

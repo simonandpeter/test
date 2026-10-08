@@ -17,6 +17,11 @@
       "form": "Ипатије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 31 March on pravoslavno.rs, „Свештеномученик Ипатије епископ гангрски“, with the rank word Свештеномученик left off and with the see епископ гангрски left off as well, this folder keeping the see in `office`. The heading gives no epithet beyond the see, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Ипатий Гангрский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 31 марта ст. ст., which gives «Святитель Ипатий Гангрский, епископ, сщмч.»; Святитель, епископ and сщмч. are rank words and are not part of the stored form, and the see stays in this folder’s `office`. Гангрский is the adjective of the see and is kept, as it is in this folder’s three other name forms."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "julian",
+        "note": "His life page gives «Дни памяти: 31 марта , 16 ноября». The second is a hundred and thirty days away, so it is neither the style conversion nor a transfer; one row per church is the schema, so it is recorded here and he does not render on it, and that day page was not read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст. — «Сщмч. Ипатия , еп. Гангрского (ок. 326).»",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -131,6 +146,102 @@
       },
       "english": {
         "text": "Having completed the life-giving priestly service, and having increased the talent of the gifts, you were brought as a sacrifice and a God-filled offering through your contending, O Hypatius, to him who glorified your life with unspeakable wonders, Father. Entreat him always on behalf of us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Изволением Божественнаго разума/ вперив ум свой в Небесныя обители/ и равно Ангелом житие пожив на земли,/ сего ради мучения красоты венец на своем версе утвердив,/ священномучениче Ипатие,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Тропарь священномученика Ипатия, епископа Гангрского», глас 4. The page prints this troparion twice, the second time under a heading reading «глае 4» for «глас 4», and the two texts are identical character for character; it is taken once.",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the choosing of a divine understanding thou didst lift up thy mind to the heavenly mansions and didst live on earth a life equal to the angels’; and therefore thou didst fasten upon thy head the crown of the beauty of martyrdom. O hieromartyr Hypatius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "В прекрасном Церкве апостольския вертограде/ из юна возраста всесильною десницею Божиею насадился еси,/ Богоблаженне отче Ипатие,/ и в ней, яко верен первосвященник,/ верно Богоначальное и Всетворящее Троическое Единство/ проповедал еси во Вселенском Собрании,/ Духа же Святаго в добродетелех исполнен быв,/ велия чудеса сотворив,/ мучением за веру Христову скончався,/ пришел еси в Небесный град,/ идеже Триипостаснаго Бога зря,/ моли о чествующих тя,/ да в Горнем Иерусалиме со святыми жити сподобимся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Ин тропарь священномученика Ипатия, епископа Гангрского», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the fair garden of the apostolic Church thou wast planted from thy young years by the all-powerful right hand of God, O father Hypatius blessed of God; and in her, as a faithful high priest, thou didst faithfully preach in the Ecumenical Assembly the Unity of the Trinity, which is the beginning of all and the Maker of all. Being filled with the Holy Spirit in the virtues, having worked great wonders and having ended thy life in martyrdom for the faith of Christ, thou didst come to the heavenly city; and beholding there the God of three persons, pray for those who honour thee, that we may be counted worthy to dwell with the saints in the Jerusalem above.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Боговидное досточудных добродетелей зерцало,/ Богоправимое Православный веры правило/ и утверждение Церкве Христовы,/ за нюже и страдал еси, всечудне отче Ипатие,/ чудесы, Богодарованными тебе, весь мир удивив,/ душеспасительныя пользы сотворил еси,/ и ныне верно призывающим тя во всяких бедах и напастех/ испроси нам у Господа Бога/ помощь и спасение вечное душам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Ин тропарь священномученика Ипатия, епископа Гангрского», глас 4. Copied as the page has it, including «Православный веры правило» where the grammar wants «Православныя».",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O godly mirror of most wondrous virtues, rule of the Orthodox faith guided by God, and confirmation of the Church of Christ, for which thou didst also suffer, O all-wondrous father Hypatius: having astonished the whole world with the wonders God gave thee, thou hast wrought what profits the soul to its salvation. And now, for those who call upon thee in faith in every trouble and distress, ask for us of the Lord God help, and the eternal salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Римскому отечеству светильник,/ Богозарными лучами концы светя,/ ныне просвети твое празднество поющия, Ипатие,/ прося свыше мира и грехов оставления,/ молитвами защити ны, Ипатие многострадально.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Кондак священномученика Ипатия, епископа Гангрского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O lamp of the Roman fatherland, shining to the ends of the earth with rays kindled by God, enlighten now those who sing of thy feast, O Hypatius; and asking from on high peace and the forgiveness of sins, defend us by thy prayers, O Hypatius of many sufferings.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Обитель Триипостаснаго Божества,/ достоблаженне отче Ипатие, быв,/ во вселенную Всетворца Бога воскликнул еси./ Благодарственне же чудодействуя,/ вшел еси в Небесный обители,/ тамо моли Всесвятую Троицу, молим тя,/ исцелити телеса и души наша/ в Богосозданную нашу красоту.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Ин кондак священномученика Ипатия, епископа Гангрского», глас 2. Copied as the page has it, including «в Небесный обители» where the grammar wants «Небесныя».",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become a dwelling place of the Godhead in three persons, O father Hypatius worthy of all blessedness, thou didst proclaim to the whole world God the Maker of all; and working wonders in thanksgiving thou didst enter the heavenly mansions. There, we pray thee, entreat the all-holy Trinity to heal our bodies and our souls into the beauty in which God made us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "О всеблаженный чудотворче Ипатие,/ предстояй в Небесех Всетворящей Божественней Троице,/ с лики Горними богоприятне и всерадостне возносиши хвалы./ Приими от нас сие тебе хвалорадостнословие./ И моли Господа избавити ны от всяких грехов, напастей же и болезней/ и даровати Царствие Небесное всюду поющим:/ аллилуйя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 марта ст. ст., «Ин кондак священномученика Ипатия, епископа Гангрского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260331.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O all-blessed wonderworker Hypatius, who standest in the heavens before the divine Trinity that makes all things, and with the choirs on high raisest up praises acceptably to God and in all joy: receive from us this glad word of praise, and pray the Lord to deliver us from all sins and distresses and sicknesses, and to grant the kingdom of heaven to all who everywhere sing: Alleluia.",
         "rendered": "site"
       }
     }
