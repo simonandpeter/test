@@ -10,6 +10,11 @@
       "form": "Μιχαίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαΐου, «Όσιος Μιχαίας του Ραντονέζ», with the rank word left off."
+    },
+    {
+      "form": "Михей Радонежский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name page for 6 мая ст. ст., «Преподобный Михей Радонежский», with the rank word left off. The day’s own line declines him «Прп. Михея Радонежского»."
     }
   ],
   "related": [
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian ascetic and the Russian calendar is very likely to keep him, but that page was not opened for this entry and nothing is claimed for it."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст. — «Прп. Михея Радонежского (1385).»",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "note": "The russian row this folder was written with said that the Russian calendar was very likely to keep him and that nothing was claimed for it; it keeps him, on 6 мая ст. ст., and both of its lives head «День памяти: 6 мая» and name nothing else. The Greek row stands on 5 Μαΐου new style — a menologion number one lower, not a style conversion — and was not moved. The identification is exact and not a name match: cell-attendant and disciple of Sergius of Radonezh, the one companion counted worthy to be present at the visitation of the Mother of God, dead in his teacher’s lifetime, and life6749 closes «преставился еще при жизни своего аввы, 6 мая 1385 г.», the day and the year the folder already held from saint.gr. `dates` is unchanged. The day page prints a troparion and a kontakion for him, both of them proper and both naming him and Sergius; they are copied here with their English typed, and they are the first hymns this folder has had. life6749 dates the visitation to the night between a Friday and a Saturday in the fast before the Nativity, «как думают, в 1384 году», by church tradition recorded in the Nikon chronicle — a tradition and a guess in the source’s own words, and no date object was made of it. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -59,5 +74,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Иго Господне на рамо взем,/ последовал еси Христови со учителем своим преподобным Сергием,/ с нимже и сподобился еси видети Пресвятую Богородицу./ И слышал еси пресладкий глас Ея,/ яко обещася неотступна быти места сего,/ но, о преподобне Михее,/ молися о чтущих святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст., «Тропарь преподобного Михея Радонежского, ученика преподобного Сергия Радонежского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking the Lord's yoke upon thy shoulder, thou didst follow Christ together with thy teacher, the venerable Sergius, and with him thou wast counted worthy to behold the most holy Mother of God. Thou didst hear her most sweet voice, how she promised not to depart from this place; and now, O venerable Micah, pray for those who honour thy holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Приидите, монашествующих собори и постников лицы,/ сошедшеся, похвалим блаженнаго Михея,/ спостника преподобнаго Сергия,/ с нимже предстоит Святей Троице/ и молится спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст., «Кондак преподобного Михея Радонежского, ученика преподобного Сергия Радонежского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, you assemblies of monastics and you companies of ascetics, let us gather and praise the blessed Micah, the fellow-faster of the venerable Sergius, with whom he stands before the Holy Trinity and prays that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

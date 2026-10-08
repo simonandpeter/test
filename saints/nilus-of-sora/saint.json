@@ -16,6 +16,11 @@
       "form": "Нил Сорски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 7 April on pravoslavno.rs, „Преп. Нил Сорски.“, with the rank word Преп. left off. The by-name Сорски is kept, because it is what the heading gives beyond the forename and what distinguishes him from the seven other folders of the name."
+    },
+    {
+      "form": "Нил Сорский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name page 1652 for 7 мая ст. ст., «Преподобный Нил Сорский», with the rank word left off. The day’s own line declines him «Прп. Нила Сорского (1508)». The picture caption on both of his life pages reads «Прп. Нил Афонский», which is a caption and not a name the calendar gives him, and is not stored."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст. — «Прп. Нила Сорского (1508).»",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "note": "The page runs his line on to the end of the Georgian fathers' line without a break, so `day-candidates.mjs` prints the two as one entry; they are two, and his own `/name/` link is 1652. His two lives disagree about the day of his death: life6771 closes «Преподобный Нил мирно скончался 1 мая 1508 г.» and life1007 «Скончался святой на 76-м году жизни 7 мая 1508 года», which is the day the calendar keeps him on and the day the Romanian row on this folder already cites. `dates` is unchanged and both readings are in the paragraph. The two lives disagree about his origin as well, life1007 making him «из рода бояр Майковых» and the shorter giving no family; the Romanian birth note the folder holds says Moscow, which neither Russian life repeats. The day page prints four hymns under his name, two troparia and two kontakia, and all four are copied here with their English typed; they are the first hymns this folder has had. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -96,5 +111,71 @@
   },
   "related": [
     "macarius-of-optina"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Удалився бегая Давидски мира,/ и вся яже в нем яко уметы вменив,/ и в месте безмолвне вселився,/ духовныя радости исполнился еси, отче наш Ниле:/ и Единому Богу изволив служити,/ процвел еси яко финикс,/ и яко лоза благоплодна умножил еси чада пустыни./ Темже благодарственно вопием:/ слава Укрепившему тя в подвизе пустынножительства,/ слава Избравшему тя в России отшельником уставоположника изрядна,/ слава молитвами твоими и нас Спасающем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст., «Тропарь преподобного Нила Сорского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fleeing far from the world as David did, and counting all that is in it as refuse, thou didst settle in a place of silence and wast filled with spiritual gladness, O our father Nilus; and choosing to serve God alone thou didst flourish as a palm tree and, like a fruitful vine, didst multiply the children of the wilderness. Therefore do we cry out in thanksgiving: glory to him who strengthened thee in the labour of the desert life; glory to him who chose thee to be an excellent lawgiver to the hermits of Russia; glory to him who by thy prayers saves us also.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Мирскаго жития отвергся/ и мятежа житейскаго бегая,/ преподобне и Богоносне отче наш Ниле,/ не обленился еси собрати цветы райския от писаний отеческих/ и, в пустыню вселився,/ процвел еси, яко крин сельныи,/ отонюду же прешел еси и в Небесныя обители;/ научи и нас, честно почитающих тя,/ твоим царским путем шествовати/ и молися о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст., «Ин тропарь преподобного Нила Сорского», глас 1 — the day page prints a second troparion under that heading",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Renouncing the life of the world and fleeing the tumult of this age, O venerable and God-bearing father Nilus, thou wast not slow to gather the flowers of paradise out of the writings of the fathers; and settling in the wilderness thou didst blossom as a lily of the field, and from there didst pass over into the heavenly mansions. Teach us also, who honour thee reverently, to walk thy royal road, and pray for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Любве ради Христовы удалився мирских смущений,/ радостною душею вселился еси в пустыни,/ в нейже подвизався добре,/ яко Ангел на земли, отче Ниле, пожил еси:/ бдением бо и постом тело свое изнурил еси вечныя ради жизни./ Еяже ныне сподобився,/ во свете неизреченныя радости Пресвятей Троице со святыми предстоя,/ моли, молимтися, припадающе, чада твоя,/ сохранитися нам от всякаго навета и злых обстояний/ видимых и невидимых враг/ и спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст., «Кондак преподобного Нила Сорского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ thou didst withdraw from the troubles of the world and with a joyful soul didst settle in the wilderness, where, striving well, thou didst live as an angel upon earth, O father Nilus; for by vigil and fasting thou didst wear out thy body for the sake of the life eternal. Having now obtained it, and standing with the saints before the most holy Trinity in the light of unutterable joy, pray — thy children beseech thee, falling down before thee — that we may be kept from every plot and from the evil assaults of enemies seen and unseen, and that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Терпя, потерпел еси суетныя обычаи/ и мирския нравы братии твоих,/ обрел еси пустынное безмолвие, преподобне отче,/ идеже постом, бдением и непрестанною молитвою в трудех подвизався,/ ученьми твоими правыя стези указал еси нам/ шествовати ко Господу./ Темже и почитаем тя, всеблаженне Ниле.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст., «Ин кондак преподобного Нила Сорского», глас 3 — the day page prints a second kontakion under that heading",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Patiently thou didst bear with the vain customs and the worldly manners of thy brethren, and thou didst find the silence of the wilderness, O venerable father, where, labouring in fasting and vigil and unceasing prayer, thou didst show us by thy teachings the straight paths on which to walk towards the Lord. Therefore do we honour thee, O all-blessed Nilus.",
+        "rendered": "site"
+      }
+    }
   ]
 }

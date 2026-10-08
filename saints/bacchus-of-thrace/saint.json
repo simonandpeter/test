@@ -1,0 +1,65 @@
+{
+  "slug": "bacchus-of-thrace",
+  "display_name": "Bacchus of Thrace",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Вакх Фракийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name link for 6 мая ст. ст., «Вакх Фракийский, мч.», with the rank abbreviation left off. The day’s line declines him «Мчч. Варвара воина, Вакха, Каллимаха и Дионисия», so the epithet is the name link’s and not the line’s."
+    }
+  ],
+  "related": [
+    "barbarus-6-may",
+    "callimachus-of-thrace",
+    "dionysius-of-thrace"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 362,
+      "latest": 362,
+      "display": "362",
+      "basis": "traditional",
+      "note": "The day line closes the four of them «(ок. 362)», about 362, and the life they share gives the year plainly for the last of them: «святой Варвар окончил свой славный подвиг и в 362 году был усечен мечом». This man was beheaded in the course of that same torture, several days before it ended, so the year is the one the source gives for the company and the «ок.» of the line is recorded here rather than in the interval."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст. — «Мчч. Варвара воина, Вакха, Каллимаха и Дионисия (ок. 362).»",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "note": "The line enumerates four men by name and the calendar carries a separate `/name/` link for each of the four, so by docs/CORPUS.md §10.1 it is four folders and not one: `barbarus-6-may`, which the corpus already kept and which took its russian row in the same reading, and this man and his two fellow-soldiers. Checked for an existing folder before writing: `ls -d saints/bacch*` returns `bacchus-companion-of-sergius` and `bacchus-of-saint-sabbas`, neither of them a soldier of Julian’s and neither kept on this day; the seventeen folders the corpus keeps on the menologion’s 6/5 in any calendar contain no Bacchus; and fk.mjs on «Вакх Фракийский» and on «Bacchus of Thrace» returns NONE. The day page prints no hymn under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 19 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 19 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6. мај ст. ст. The corpus’s `barbarus-6-may` already quotes that book’s line for the day — „Сва тројица њих беху посечени за име Христово, а за њима и Варвар, 362. године.“ — so the Prologue speaks of all three companions and a Serbian reader is very likely to find him; that page was not opened for this entry and nothing is claimed for it (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

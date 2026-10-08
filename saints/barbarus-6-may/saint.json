@@ -16,17 +16,33 @@
       "form": "Варвар",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 6. мај ст. ст., „Свети мученик Варвар.“ Свети is no rank and мученик is the `martyr` this folder already carries in `types` and `honorific.js` composes back, so stripping them leaves the bare forename and nothing else: the heading gives no epithet, no country, no emperor and no company, and Julian the Apostate, the Franks and the commander are all in the body. **The day's other Barbarus keeps разбојник and is therefore not folded with this form** — which is the reason he keeps it; see `barbarus-the-myrrh-streamer`'s form in this same batch."
+    },
+    {
+      "form": "Варвар Фракийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link for 6 мая ст. ст., «Варвар Фракийский, мч.», with the rank abbreviation left off. The day’s line gives him only «Варвара воина»; the epithet «Фракийский» is the name link’s and not the line’s, and the life places his burial at Methone in the Peloponnese rather than in Thrace."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "soldier"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 мая ст. ст. — «Мчч. Варвара воина, Вакха, Каллимаха и Дионисия (ок. 362).»",
+        "url": "https://days.pravoslavie.ru/Days/20260506.html",
+        "year": 2026
+      },
+      "note": "The line enumerates four men by name and the Russian calendar carries a `/name/` link for each of the four, so by docs/CORPUS.md §10.1 it is four folders: this one, and `bacchus-of-thrace`, `callimachus-of-thrace` and `dionysius-of-thrace`, which the same reading wrote. The calendar calls him «воина», a soldier, which the folder’s `types` did not say and now does. `dates` is unchanged: the day line’s «ок. 362» and life1002’s «в 362 году был усечен мечом» both stand behind the year the Ohrid Prologue already gave. The day page prints two hymns for a Варвар, and they are NOT his: the kontakion is headed «мученика Варвара, бывшего разбойника» and the troparion «мученика Варвара, бывшего», the same epithet cut short, so both belong to the other Barbarus of this day, `barbarus-the-myrrh-streamer`, and were copied there. No hymn is taken here. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -84,5 +100,10 @@
       "basis": "traditional",
       "note": "Охридски пролог за 6. мај ст. ст.: „Сва тројица њих беху посечени за име Христово, а за њима и Варвар, 362. године.“ — the book prints the year plainly and this folder held no date at all before it; doxologia gives him no life and saint.gr gives only the sword. `node .tmp/dd.mjs \"362\"` reads it in both packs. No year of birth is printed anywhere."
     }
-  }
+  },
+  "related": [
+    "bacchus-of-thrace",
+    "callimachus-of-thrace",
+    "dionysius-of-thrace"
+  ]
 }

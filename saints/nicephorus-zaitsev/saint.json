@@ -1,0 +1,60 @@
+{
+  "slug": "nicephorus-zaitsev",
+  "display_name": "Nicephorus (Zaitsev)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Никифор Зайцев",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14418, «Никифор (Зайцев), мч.», with the rank abbreviation left off and the parentheses dropped — BRIEF-ADDENDUM §2: a parenthesis is not part of a name, so «Никифор (Зайцев)» and «Никифор Зайцев» are one string. The day’s own line gives only «Мч. Никифора (1942)», without the surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "traditional",
+      "note": "The year the day line closes him with: «Мч. Никифора (1942)». It is the only year either page gives, and neither gives a day or a place of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст. — «Мч. Никифора (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is. Name page 14418 carries the heading, «Дни памяти: 26 января (Новомуч.), 8 мая», and no life, no place, no account of his death and no hymn on the day page. The 26 января is the synaxis of the new martyrs and confessors of Russia, a commemoration of the company and not a second day of his own, so it is noted here and nothing was moved for it. «Мч.» is the whole of what the source says of his state of life: he is a martyr and not a priest, and `types` is `martyr` with `new-martyr` for the company, with no `office` and nothing read out of the surname. Checked for an existing folder before writing: fk.mjs on «Никифор Зайцев» and on «Nicephorus Zaitsev» returns NONE, `ls -d saints/*nicephor* saints/*nikifor*` returns fifteen folders of which one other is a twentieth-century Russian with a surname — `nicephorus-kuchin`, «Никифор (Кучин)», venerated on 4 апреля ст. ст. and dead in 1928, so a different surname, year and day, and a different man — and a grep of the corpus for the Cyrillic «Зайцев» returns `daria-zaitseva`, who stores «Дария (Зайцева)», and `mark-makhrov`, whose life names the surname in prose — a woman of 1938 and another man’s life, so neither is this man and no `related` row was made. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 21 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 21 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

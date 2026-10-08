@@ -16,6 +16,11 @@
       "form": "Зинон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's naming clause in the entry headed „Преподобни оци грузијски.“ for 7. мај ст. ст. — „А имена су њихова: Авид, Антоније, Давид, Зинон, Тадеј, Иса, Издериос, Јосиф, Михаил, Пир, Стефан и Шијо.“ The list carries no rank word and no epithet on any of the twelve; Преподобни heads the whole company in the heading and belongs to no one name, and the see or monastery each folder's English name keeps is nowhere on this page. So the bare forename is the whole of the form. **A widening**: the gate's existing `? \"зинон\"` set of five becomes six. Measured before drafting."
+    },
+    {
+      "form": "Зенон Икалтойский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 7 мая ст. ст., «Зенон (Зинон) Икалтойский, прп.», with the rank abbreviation left off and the parenthetical variant «Зинон» not stored: a parenthesis is not part of a name and one Russian form per folder is the rule. The day’s own line spells the epithet differently again, «Зенона Икалтского»."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 мая ст. ст. — «Прпп. Иоанна Зедазнийского и учеников его: … Зенона Икалтского … (VI) (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260507.html",
+        "year": 2026
+      },
+      "note": "The stored form is «Зенон Икалтойский», the first of the two spellings the calendar’s name link prints — it heads him «Зенон (Зинон) Икалтойский, прп.», giving the variant in parentheses — and the day line a third, «Зенона Икалтского». One form per folder is BRIEF-RUSSIAN §2, and a parenthesis is not part of a name, so the variant is in the form’s note and not stored. Both «Зенон Икалтойский» and «Зинон Икалтойский» were checked with fk.mjs and neither has any other holder; the folder’s Serbian form is the bare «Зинон», whose fold BRIEF-ADDENDUM §2 names as a past casualty, and this two-word form does not touch it. `dates` is unchanged: the life gives him no year. The day page prints no hymn under his name. azbyka.ru was not read. Read 8 October 2026."
     },
     {
       "church": "romanian",
