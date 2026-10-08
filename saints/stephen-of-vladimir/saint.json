@@ -19,6 +19,11 @@
       "form": "Стефан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 27. април ст. ст., „Преп. Стефан еп. Владимирски.“ Преп. is the `venerable` this upgrade adds to `types`, and еп. Владимирски is the grade and the see this folder keeps in `types` and in `office` as Bishop of Vladimir; `honorific.js` composes all of it back. The heading gives no epithet, so the bare forename is the whole of the Serbian form. Nine other folders already hold the same bare spelling across Serbian and Russian; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Стефан Печерский",
+      "lang": "ru",
+      "note": "The name index at page 2065 is titled «Преподобный Стефан, игумен Печерский» and the second life page repeats it; the rank words are stripped per BRIEF.md §4, leaving the forename and the monastery, of the Caves. THE SOURCE GIVES HIM THREE STYLES — «Стефан Печерский» here, «Святитель Стефан Печерский, Владимиро-Волынский, епископ» on the other life page, and the day line’s «Стефана , игумена Печерского, еп. Владимиро-Волынского» — and the folder’s `display_name` and `office` already carry the see. The two words the name index and one life title agree on are what is stored; the see is recorded in the row and in the life, and the two epithets were not strung together. Measured against the gate’s own key function before it was written: 'печерскии стефан' has no other holder, where the bare «стефан» fold holds thirteen and «στεφανοσ» thirty-five."
     }
   ],
   "related": [
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The whole of saint.gr's account is of a saint of the Kyiv Caves and the Russian calendar is very likely to keep him, but that page was not read and this row does not guess it."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 апреля ст. ст. — «Прп. Стефана , игумена Печерского, еп. Владимиро-Волынского (1094).»",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and SIX HYMNS, more than any folder of this block. The line heads him «(1094)», the year the folder holds off saint.gr, and life6859 gives the day as well — «святой преставился ко Господу 27 апреля 1094 г.» — while life940 adds the hour, «в 6-й час ночи». `dates` was therefore NOT touched; the day and the hour are the source’s own and are in the life, not in `dates`. The name index behind the line is page 2065 and lists TWO readings, both read: life6859, «Святитель Стефан Печерский, Владимиро-Волынский, епископ», and life940, «Преподобный Стефан, игумен Печерский». THE TWO GRADE HIM DIFFERENTLY, святитель against преподобный, as the line’s own «Прп.» does against the first title; the folder already carries `venerable`, `monk`, `abbot` and `bishop` and nothing was added or removed. WHAT THE TWO READINGS GIVE THAT THE GREEK AND THE PROLOGUE DID NOT: the parents’ death and the goods given away before he entered the Caves; the office of уставщик and доместик, chief of the order of the services on the cliros, which Theodosius gave him and in which he sometimes sent him to instruct the brethren in his own place; the brethren’s own petition — «Он вырос под твоей рукой, послужил тебе, дай его нам» — which is how he was made abbot; the finishing under him of the great church of the Dormition that Theodosius had begun, and the moving of the brothers’ cells nearer to it with a few left behind for the burial of the dead and a daily liturgy for them; the expulsion in 1078 «по проискам бесовским» and the new monastery he built on the river Клов, dedicated to the laying of the Mother of God’s robe at Blachernae in thanksgiving for her benefits to the Caves, after he had seen the Greek masons arrive with her icon and heard their account of the vision at Blachernae; the consecration as bishop of Vladimir in Volhynia in 1091 and his part in the carrying of Theodosius’s relics out of the cave into the monastery church, which this calendar keeps on 14 августа; and the labour of bringing the people of Volhynia to Christianity. Both pages head «День памяти: 27 апреля» — one day, with no second. SIX HYMNS, every one headed with his full style and therefore his own propers: a troparion (глас 8), «Ин тропарь» (глас 8), a second «Ин тропарь» (глас 2), a kontakion (глас 6), «Ин кондак» (глас 1) and a second «Ин кондак» (глас 4). The folder had no hymn of any kind. azbyka.ru was not read, and the 14 августа day page was not read."
     },
     {
       "church": "romanian",
@@ -77,5 +92,103 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Учению пов инуяся Богоноснаго Феодосия,/ поставлен бысть от него вождь быти святому его стаду, еже добре пасый,/ церковь Богородицы,/ волею Тоя основанную чудне,/ совершил еси благолепно,/ приснопамятне Стефане,/в нейже нам, молящимся, испроси от Христа Бога велию милость.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», глас 8, under «Молитвы» on the day page for 27 апреля ст. ст. One of the SIX texts the day page prints under his name, every one of them headed with his full style, «преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», which is this folder and no other Stephen; two troparia are headed «Ин тропарь» and two kontakia «Ин кондак», and the order here is the page’s own.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Obedient to the teaching of the God-bearing Theodosius, thou wast set by him to be the guide of his holy flock; and shepherding it well, thou didst finish in all its seemliness the church of the Mother of God, which was founded by her own will and by a wonder, O ever-remembered Stephen. In that church obtain for us who pray great mercy from Christ God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ Волынския паствы светильниче,/ архиереев Богодухновенное удобрение,/ Стефане премудре,/ ученьми своими вся просветил еси, цевнице духовная,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», глас 8, under «Молитвы» on the day page for 27 апреля ст. ст. One of the SIX texts the day page prints under his name, every one of them headed with his full style, «преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», which is this folder and no other Stephen; two troparia are headed «Ин тропарь» and two kontakia «Ин кондак», and the order here is the page’s own.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Teacher of Orthodoxy, instructor in piety and in purity, lamp of the flock of Volhynia, God-inspired adornment of bishops, O most wise Stephen: by thy teachings thou hast enlightened all, O spiritual harp; pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко сый Богоноснаго Феодосия ученик/ и истинный жития его подражатель,/ первый по нем бремя настоятельства понесый,/ темже и мощей его честных самовидец быти сподобился еси,/ яже с прочими святолепно принес,/ наследил еси с темже Царство Небесное,/ Еже получити и нам, чтущим тя, Стефане,/ Господеви молися.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», глас 2, under «Молитвы» on the day page for 27 апреля ст. ст. One of the SIX texts the day page prints under his name, every one of them headed with his full style, «преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», which is this folder and no other Stephen; two troparia are headed «Ин тропарь» and two kontakia «Ин кондак», and the order here is the page’s own.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a disciple of the God-bearing Theodosius and a true imitator of his life, thou wast the first after him to carry the burden of the abbacy; and therefore thou wast counted worthy to see his honourable relics with thine own eyes, and bearing them with the rest in a holy manner, thou didst inherit the kingdom of heaven together with him. Pray to the Lord, O Stephen, that we who honour thee may obtain it too.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Завидя враг честному ти житию,/ изринул тя бяше злокознством своим от начальства паствы,/ но ты, изгнан быв,/ и на ином месте церковь Богородицы воздвигл еси,/ за что и Та саном почте тя архиерейства,/ в нейже ты добре упас врученная ти овцы,/ прейде во веселии ко Христу, Стефане,/ Емуже молися о нас, рабех твоих.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», глас 6, under «Молитвы» on the day page for 27 апреля ст. ст. One of the SIX texts the day page prints under his name, every one of them headed with his full style, «преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», which is this folder and no other Stephen; two troparia are headed «Ин тропарь» and two kontakia «Ин кондак», and the order here is the page’s own.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The enemy, envying thy honourable life, cast thee out by his cunning from the rule of the flock; but being driven away, thou didst raise up a church of the Mother of God in another place, for which she honoured thee with the rank of a bishop. And having shepherded well the sheep committed to thee, thou didst pass over in gladness to Christ, O Stephen; pray to Him for us, thy servants.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Проходя, всеблаженне, добродетельми от силы в силу/ и всех, с тобою сущих, оными провозвышая,/ всем служил еси, Стефане, и угождал,/ тем избран был еси всем,/ в дому Божия Матере сущим, в старейшину./ Последи же и на степень архиерейства возведен был еси,/ и, стадо Христово добре упас,/ моли Его о нас, чадех твоих.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин кондак преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», глас 1, under «Молитвы» on the day page for 27 апреля ст. ст. One of the SIX texts the day page prints under his name, every one of them headed with his full style, «преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», which is this folder and no other Stephen; two troparia are headed «Ин тропарь» and two kontakia «Ин кондак», and the order here is the page’s own.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Going forward in the virtues from strength to strength, O most blessed one, and raising up by them all who were with thee, thou didst serve all men, O Stephen, and please them; and so thou wast chosen by all who were in the house of the Mother of God to be their elder. Afterwards thou wast raised to the rank of bishop also; and having shepherded the flock of Christ well, pray to Him for us, thy children.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Стефан, исполнь веры и благочестия,/ совершитель Богом основанный церкве Печерския,/ днесь, яко великое светило, всем возсия,/ Христово стадо богоугодно упас/ в неусыпных стражех нощных./ Егоже чтуще, приносим песнь/ единому Тебе, Христу, всех Владыце,/ моляще помиловати нас/ того благоприятными молитвами.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин кондак преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», глас 4, under «Молитвы» on the day page for 27 апреля ст. ст. One of the SIX texts the day page prints under his name, every one of them headed with his full style, «преподобного Стефана, игумена Печерского, епископа Владимиро-Волынского», which is this folder and no other Stephen; two troparia are headed «Ин тропарь» and two kontakia «Ин кондак», and the order here is the page’s own.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Stephen, full of faith and of piety, who finished the church of the Caves that God had founded, has shone forth today upon all like a great luminary, having shepherded the flock of Christ in a manner pleasing to God, in unsleeping watches of the night. Honouring him, we offer our song to Thee alone, O Christ, the Master of all, praying Thee to have mercy upon us at his acceptable prayers.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -16,6 +16,11 @@
       "form": "Симеон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 27. април ст. ст., „Св. апостол Симеон.“ Св. is not a rank, and апостол is the `apostle` this folder already carries in `types` and `honorific.js` composes back. The heading gives no epithet and no kinship clause — the son of Cleopas and the kinsman of the Lord, which this corpus's English name keeps, are the body's — so the bare forename is the whole of the Serbian form. One other folder holds it; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Симеон",
+      "lang": "ru",
+      "note": "The name index at page 1997 is titled «Святой Симеон, апостол от 70-ти», whose words beside the forename are a rank and a company and are stripped per BRIEF.md §4; the day’s line gives «Симеона , сродника Господня», which is a kinship and not an epithet of place or office. THE CALENDAR GIVES NO SURNAME AND NO TOPONYM, so the stored form is the bare forename, as BRIEF-RUSSIAN §2 leaves it where the calendar gives no more. Measured against the gate’s own key function before it was written: 'симеон' is an EXISTING key of four holders — `simeon-of-persia`, `simeon-the-fool-for-christ`, this folder and `symeon-with-theonas-and-pherbinus` — and THIS FOLDER IS ALREADY ONE OF THE FOUR, through the Serbian «Симеон» it has carried since the Serbian wave. So the form adds a second route to a membership that does not change, the key is already marked read in the gate, and it was NOT touched, per the standing instruction not to rewrite a key this branch did not write."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 апреля ст. ст. — «Ап. и сщмч. Симеона , сродника Господня (107).»",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The line heads him «(107)», which is the year the folder already holds off saint.gr, so `dates` was NOT touched. The name index behind the line is page 1997, «Святой Симеон, апостол от 70-ти», and it lists TWO readings, both of which were read. THE TWO DISAGREE ABOUT HIS AGE AND NEITHER WAS WRITTEN AS A FACT: life6845 has him crucified «в возрасте 120 лет», a hundred and twenty, which is saint.gr’s figure and the one the folder’s own `dates` note already records; life939 has him taken when he was already «столетним старцем», a man of a hundred. The folder’s interval stands unchanged on the first reading and the second is set out in the life. What the two add between them: he was the son of Клеопа, the younger brother of Joseph the Betrothed; he governed the Church of Jerusalem FORTY YEARS (life6845) and was chosen to it by the Christians after the killing of the apostle James, whom this calendar dates «(+ 63; память 23 октября)»; he came to believe in maturity, having seen the Lord’s wonders, and was numbered among the Seventy; and the denunciation to the Roman governor Аттик under Trajan (98–117) was that he was of the line of king David — «римляне уничтожали всех потомков царя Давида» — as well as a Christian. Both pages head «Дни памяти: 4 января (70 ап.) , 27 апреля»; 4 января is the synaxis of the Seventy and NOT a second feast of this folder, and THAT DAY PAGE WAS NOT READ. The day page prints three hymns under his name, a troparion (глас 1), «Ин тропарь» (глас 4) and a kontakion (глас 4), and all three are on this folder now beside its three Greek texts. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -148,6 +163,54 @@
       },
       "english": {
         "text": "The Church, possessing today as her greatest star the God-speaking Symeon, is led into the light and cries out: rejoice, O honoured first-fruits of the martyrs.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Христова тя сродника, Симеоне священноначальниче,/ и мученика тверда священно восхваляем,/ прелесть потребившаго/ и веру соблюдшаго./ Темже, днесь всесвятую твою память празднующе,// грехов разрешение молитвами твоими приемлем.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь апостола Симеона», глас 1, under «Молитвы» on the day page for 27 апреля ст. ст. The day’s own line grades him «Ап. и сщмч.» and all three texts under his name address the kinsman of the Lord and bishop of Jerusalem by name, so all three are his own propers.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In sacred song we praise thee, O Symeon, chief of the priesthood, as the kinsman of Christ and a steadfast martyr, who didst bring delusion to nothing and didst keep the faith. Therefore, keeping thy all-holy memory today, we receive by thy prayers the loosing of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "В мире радуешися, Симеоне Иерусалимский,/ любезно Христу Богу,/ тело душевное чисто сохранив,/ претерпевши страсть телесную, долготерпеливе, крепко,/ и в конец на кресте распят бысть./ Ты бо, Истинному Рачителю подобяся,/ и от мира скоро отлучися,/ лютыя язвы на себе понесе/ и молишися о душах наших.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь апостола и священномученика Симеона, епископа Иерусалимского, сродника Господня», глас 4, under «Молитвы» on the day page for 27 апреля ст. ст. The day’s own line grades him «Ап. и сщмч.» and all three texts under his name address the kinsman of the Lord and bishop of Jerusalem by name, so all three are his own propers.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou rejoicest in peace, O Symeon of Jerusalem, dear to Christ God, having kept the body of thy soul pure and having endured the suffering of the body bravely, O long-suffering one, and at the last wast crucified upon a cross. For being made like unto Him who truly loved thee, thou wast quickly parted from the world, didst bear cruel wounds upon thee, and prayest for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко звезду превелию,/ Церковь, имущи днесь богоглаголиваго Симеона,/ световодится, зовущи:/ радуйся, мучеников// честный венче.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак апостола Симеона», глас 4, under «Молитвы» on the day page for 27 апреля ст. ст. The day’s own line grades him «Ап. и сщмч.» and all three texts under his name address the kinsman of the Lord and bishop of Jerusalem by name, so all three are his own propers.",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having today in Symeon, who spoke the words of God, a very great star, the Church is led by his light and cries out: Rejoice, honoured crown of the martyrs.",
         "rendered": "site"
       }
     }

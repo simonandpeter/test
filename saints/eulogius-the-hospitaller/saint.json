@@ -10,14 +10,29 @@
       "form": "Ευλόγιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Ευλόγιος ο Ξενοδόχος», with the rank word left off; the page explains the epithet itself, that he was called Ξενοδόχος because the whole care and delight of his life was to receive strangers in his house."
+    },
+    {
+      "form": "Евлогий Странноприимец",
+      "lang": "ru",
+      "note": "The two words the day’s line and the life’s own title both use — «Прав. Евлогия странноприимца» and «Праведный Евлогий Странноприимец» — with the rank word stripped per BRIEF.md §4. «Странноприимец», the hospitaller, the receiver of strangers, is not a rank word but the epithet by which this calendar knows him, and it is capitalised in both page titles. The name index at page 686 is titled «Евлогий Странноприимец, Фиваидский» and adds a THIRD word, «Фиваидский», of the Thebaid, which neither the line nor the life title repeats and which is not joined to the stored form here. Measured against the gate’s own key function before it was written: 'евлогии странноприимец' has no other holder."
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 апреля ст. ст. — «Прав. Евлогия странноприимца (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260427.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry. A CENTURY CONFLICT INSIDE THE ONE SOURCE, AND NO `dates` WAS WRITTEN: the line heads him «(VI)», the sixth century, while the life it links, life942, opens «Праведный Евлогий Странноприимец жил в IV веке в Фиваиде», the fourth. The folder held no date of any kind and still holds none; a century read off a line that its own life contradicts by two hundred years is not a date, and `date-display.js` would take either of them happily, which is exactly why neither was written. THE WHOLE OF THE LIFE IS TWO SENTENCES — «Он нес подвиг служения странникам», he carried the ascetic labour of serving travellers — and it adds one thing the folder did not have, THE THEBAID, which the name page repeats in its own title. `types` unchanged: the line’s «Прав.», праведный, is the `righteous` the folder already carries. The page heads «День памяти: 27 апреля» — one day, with no second. The day page prints nine hymns, three under the kinsman of the Lord and six under the abbot of the Caves, and NONE under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
