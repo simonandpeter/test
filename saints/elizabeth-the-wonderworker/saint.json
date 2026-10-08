@@ -16,6 +16,11 @@
       "form": "Јелисавета",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Преп. Јелисавета.“, with the rank word Преп. left off. The heading gives no epithet — Чудотворица, the Wonderworker this corpus's English name keeps, is not in it — so the bare forename is all of it. It is the **Serbian** spelling with Ј, where the corpus's six Russian forms are Елисавета; whether the two fold onto each other was measured rather than assumed, and the answer is in the batch's commit message."
+    },
+    {
+      "form": "Елисавета Константинопольская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 2498, «Елисавета Константинопольская, игумения», with the office word after the comma left off; the day’s own line gives «Елисаветы чудотворицы», the genitive with the wonderworker grade and no city. Measured against the gate’s own key function before it was written: 'елисавета константинопольская' has no other holder in the corpus."
     }
   ],
   "sex": "female",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Прп. Елисаветы чудотворицы (VI-VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s sixth entry. The name link, page 2498, is titled «Елисавета Константинопольская, игумения» and gives her the city and her office, which the line does not; it and the life both head «День памяти: 24 апреля» and no other day. THE LINE AND THE FOLDER DISAGREE ON WHEN SHE LIVED, AND `dates` WAS NOT CHANGED: the line heads her «(VI-VIII)», somewhere between the sixth century and the eighth, where this folder holds a death of 540 read off the Ohrid Prologue’s «Упокојила се мирно». A three-century window is not a year and it does not contradict 540 so much as decline to fix it; widening the interval to 501-800 would lose the Prologue’s own reading, and a year is not a machine’s decision, so both are set out in the life and nothing was altered. REPORTED TO THE AUTHOR. The folder’s `office` was not touched: the name page’s «игумения» is the Abbess the packs do not carry, and `abbess` is already in `types`. The day page prints no hymn under her name; the three it holds are from the Greek. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",

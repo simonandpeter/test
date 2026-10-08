@@ -4,7 +4,8 @@
   "sex": "male",
   "types": [
     "venerable",
-    "fool-for-christ"
+    "fool-for-christ",
+    "monk"
   ],
   "names": [
     {
@@ -16,14 +17,29 @@
       "form": "Тома",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Преп. Тома Јуродиви.“, with the rank word Преп. and the rank Јуродиви both left off — Јуродиви is the `fool-for-christ` this folder carries in `types`, and BRIEF-SERBIAN.md §5's table reads it as a rank, so it is stripped **although stripping it leaves a bare form that folds**: `thomas-of-constantinople` already holds «Тома». The contract in `src/lib/honorific.js` is that the manifest keeps the bare name, and a fold recorded in the findings table is the sanctioned answer to a shared form, where a rank stored inside a form is a defect the corpus is already carrying in 161 older folders. The heading gives him no city, no monastery and no year besides."
+    },
+    {
+      "form": "Фома Сирийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 24 апреля ст. ст., name page 2326, «Фома Сирийский, Христа ради юродивый, прп.», taking the name and the epithet and leaving the rank words — «Христа ради юродивый» is the fool-for-Christ grade this folder already keeps in `types`, and «прп.» the venerable. The day’s own line gives «Фомы юродивого», the genitive with the grade and no epithet. Measured against the gate’s own key function before it was written: 'сириискии фома' has no other holder in the corpus."
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Прп. Фомы юродивого (ок. 546-560).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The day’s fifth entry. The name link, page 2326, is titled «Фома Сирийский, Христа ради юродивый, прп.» and gives him «Сирийский», of Syria, which the line does not; it and the life both head «День памяти: 24 апреля» and no other day. The interval «ок. 546-560» is the patriarchate of Домн of Antioch, which life923 names as the time the relics were translated, and it is the same 546 to 560 this folder already holds off the Ohrid Prologue, so `dates` was not changed. `monk` ADDED TO `types`: the page opens «был иноком одного из монастырей в Кесарии Каппадокийской». The day page prints no hymn under his name. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",

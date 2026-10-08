@@ -19,8 +19,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 апреля ст. ст. — «Мч. Саввы Стратилата и с ним 70-ти воинов (272).»",
+        "url": "https://days.pravoslavie.ru/Days/20260424.html",
+        "year": 2026,
+        "note": "The second half of the day’s first entry. NO NAME LINK AND NO NAME FORM: the line gives the company as «и с ним 70-ти воинов» and the calendar prints no link for them and no name anywhere, so nothing was added to `names` and nothing could be. They are an unnamed company and remain one entry, per BRIEF-RUSSIAN §6. `dates` WRITTEN WHERE THE FOLDER HAD NONE AT ALL: the line heads the whole entry «(272)» and life922, which is the only account of them, puts their death inside the same torments it dates — «Видя его мучения, уверовали во Христа 70 воинов, которых тут же усекли мечом», and ends with the commander drowned in the river «(+ 272)». The day page prints no hymn for them; its two martyr hymns are under the commander’s name alone. Not checked: azbyka.ru."
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +70,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 272,
+      "latest": 272,
+      "display": "272",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru heads the line for 24 апреля ст. ст. «Мч. Саввы Стратилата и с ним 70-ти воинов (272)», and life922 places their beheading inside the torments of the commander whose death it dates «(+ 272)»: seeing his torments, seventy soldiers believed in Christ and were cut down with the sword on the spot. The corpus’s first year of any kind for them: the folder held no `dates` object at all."
+    }
   }
 }

@@ -8,4 +8,8 @@ The other eight of the nine are [Photinos of Lyons](/saints/photinos-of-lyons), 
 
 Of Alexander the page says nothing but his name, his rank of martyr and the year. The heading above his head line is a lexicon entry on the name and its bearers, from Alexander of Macedon downwards, and it is the page's own furniture and not a word about this man.
 
-*After saint.gr's calendar for 2 Ιουνίου — [the day](https://www.saint.gr/06/02/index.aspx) and [the life](https://www.saint.gr/4407/saint.aspx); read 1 October 2026.*
+The Russian calendar names him and gives no life. Its line for 24 апреля ст. ст. reads «Мч. Александра Лионского (ок. 177).», the martyr Alexander of Lyons of about the year 177, and the name page behind it prints the title in the nominative, the one day, and nothing more. The year is the one this folder already had.
+
+One thing about that line is worth setting down, and it was not acted on. Two days earlier the same calendar prints «Мч. Епиподия Лионского (ок. 177).» in exactly the same shape — a martyr of Lyons, about the same year, a name page and no reading — and the corpus now keeps a folder for him. The Latin tradition holds the two to have been taken and killed together. But neither of the Russian pages names the other man, and neither gives a word of either story, so no relation was written between the two folders from this reading; it is left as a question for somebody with a source that joins them.
+
+*After saint.gr's calendar for 2 Ιουνίου — [the day](https://www.saint.gr/06/02/index.aspx) and [the life](https://www.saint.gr/4407/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 24 апреля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260424.html), which names him and gives no life, read 8 October 2026.*
