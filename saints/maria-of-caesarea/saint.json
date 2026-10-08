@@ -16,13 +16,28 @@
       "form": "Марија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. јун ст. ст., „Свете мученице Кириакија, Велерија и Марија“, which names her third of three. Свете is not a rank and мученице is the `martyr` this corpus puts in `types`, so both come off and the bare personal name is the whole of the form; the heading carries no place, the city being in the body. THE FOLD IS DELIBERATE AND IS NOW FIVE WIDE: `foldchk.py` returns `mary-called-marinos`, `mary-of-tarsus`, `mary-sister-of-lazarus` and `mary-wife-of-xenophon`, the third of them written three days ago in this same wave. The heading offers nothing fuller and §6 does not let a form be built out of a body, so the five are told apart by their days and their companies."
+    },
+    {
+      "form": "Мария Кесарийская (Палестинская)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 2594 gives it, «Мария Кесарийская (Палестинская), мц.», with the rank word taken off and the parenthesised second reading of the forename left out of the form. The calendar names her third of the three and gives her forename one reading only. A bare «Мария» would have met a fold this corpus keeps very wide, so the form stored is the whole of what the name page prints without its rank word, and the two toponymics stay because the day line spells out «в Кесарии Палестинской». Measured with the gate's own fold before it was written: the key has no other holder in the corpus."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Мцц. Калерии (Валерии), Кириакии и Марии в Кесарии Палестинской (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of nine, «Мцц. Калерии (Валерии), Кириакии и Марии в Кесарии Палестинской (IV).», one line naming THREE women, and the three are the three this corpus already keeps — the Russian calendar holds them on the menologion's 7/6 where the Romanian and Greek calendars hold the company on the 6th and the Охридски пролог holds it on the 7th, so this row lands on the day the Serbian row is already on. The day's forty-one /name/ links were listed and the three `name:` links under this line were counted against its three names; `ls -d saints/caleria*`, `saints/valeria*`, `saints/kyria*`, `saints/kyriak*` and `saints/maria-of-caes*` were run and the gate's own fold was measured on every form before it was written. `life1254` was read whole and is four sentences. The day page prints one hymn, a troparion of the hieromartyr Феодот, and nothing under any of these three names. azbyka.ru was not read, and each name page lists «День памяти: 7 июня» and nothing else. The calendar names her third of the three and gives her forename one reading only. A bare «Мария» would have met a fold this corpus keeps very wide, so the form stored is the whole of what the name page prints without its rank word, and the two toponymics stay because the day line spells out «в Кесарии Палестинской»."
     },
     {
       "church": "romanian",

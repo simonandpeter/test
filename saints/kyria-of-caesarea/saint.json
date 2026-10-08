@@ -16,13 +16,28 @@
       "form": "Кириакија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. јун ст. ст., „Свете мученице Кириакија, Велерија и Марија“, which names her first of three. Свете is not a rank and мученице is the `martyr` this corpus puts in `types`, so both come off and the bare personal name is the whole of the form; the heading carries no place, the city being in the body. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder."
+    },
+    {
+      "form": "Кириакия Кесарийская (Палестинская)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 2554 gives it, «Кириакия (Кирия) Кесарийская (Палестинская), мц.», with the rank word taken off and the parenthesised second reading of the forename left out of the form. The calendar names her second of the three and offers «Кириакия» first with «Кирия» behind it as a second reading of the same forename; the stored form keeps «Кириакия», and the variant is recorded here on the «Квинтилиан (Кинтилиан)» reading. The folder's display name and its Greek form are the shorter Κυρία, and its Serbian form, «Кириакија», is the longer one — so both readings were already in the folder before this row, from two other calendars. Measured with the gate's own fold before it was written: the key has no other holder in the corpus."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Мцц. Калерии (Валерии), Кириакии и Марии в Кесарии Палестинской (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of nine, «Мцц. Калерии (Валерии), Кириакии и Марии в Кесарии Палестинской (IV).», one line naming THREE women, and the three are the three this corpus already keeps — the Russian calendar holds them on the menologion's 7/6 where the Romanian and Greek calendars hold the company on the 6th and the Охридски пролог holds it on the 7th, so this row lands on the day the Serbian row is already on. The day's forty-one /name/ links were listed and the three `name:` links under this line were counted against its three names; `ls -d saints/caleria*`, `saints/valeria*`, `saints/kyria*`, `saints/kyriak*` and `saints/maria-of-caes*` were run and the gate's own fold was measured on every form before it was written. `life1254` was read whole and is four sentences. The day page prints one hymn, a troparion of the hieromartyr Феодот, and nothing under any of these three names. azbyka.ru was not read, and each name page lists «День памяти: 7 июня» and nothing else. The calendar names her second of the three and offers «Кириакия» first with «Кирия» behind it as a second reading of the same forename; the stored form keeps «Кириакия», and the variant is recorded here on the «Квинтилиан (Кинтилиан)» reading. The folder's display name and its Greek form are the shorter Κυρία, and its Serbian form, «Кириакија», is the longer one — so both readings were already in the folder before this row, from two other calendars."
     },
     {
       "church": "romanian",

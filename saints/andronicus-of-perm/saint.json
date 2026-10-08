@@ -13,6 +13,11 @@
       "form": "Ανδρόνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουνίου, «Άγιος Ανδρόνικος ο Ιερομάρτυς», with the rank word left off. The life page gives the name he was baptised with: «Στο Άγιο Βάπτισμα έλαβε το όνομα Βλαδίμηρος»."
+    },
+    {
+      "form": "Андроник (Никольский) Пермский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 9106 gives it, «Святитель Андроник (Никольский), архиепископ Пермский, сщмч.», with the grade and the two rank words taken off; the surname stays inside the parentheses the calendar itself prints and the see's adjective stays because it is what the day line itself uses, «архиеп. Пермского». Measured with the gate's own fold before it was written: the key has no other holder."
     }
   ],
   "dates": {
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июня ст. ст. — «Сщмч. Андроника , архиеп. Пермского (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260607.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry of nine, «Сщмч. Андроника , архиеп. Пермского (1918).». One `name:` link stands under it, name page 9106, which heads him «Святитель Андроник (Никольский), архиепископ Пермский, сщмч.» and lists three days, «26 января (Новомуч.) , 7 июня , 8 июня (Петерб.)». The folder was written from saint.gr's 6 Ιουνίου, which is this same Julian 7 June in the revised calendar, so no day moves and no second-day note is owed: 26 января is the common commemoration of the new martyrs and 8 июня is the St Petersburg synaxis, and neither page was read. This calendar gives his year as 1918, which the folder already holds, and `life4756` adds the day — it has him shot in the night going into 7 June 1918 after being made to dig his own grave, where the Greek page the folder was written from says 6 June; the thirteen priests and one layman of the line after his are his own clergy and each took a folder in this wave. The day page prints one hymn, a troparion of the hieromartyr Феодот, and nothing under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
