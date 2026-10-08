@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Δεκεμβρίου, «Άγιος Θεόδωρος ο Γραπτός», with the rank word left off and the by-name kept, as it is what distinguishes him."
+    },
+    {
+      "form": "Теодор Начертани",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 27. децембар ст. ст., „Преподобни мученик Теодор и Теофан Начертани.“ — «Преподобни» is the rank `venerable` and «мученик» the rank `martyr`, both of which §6 keeps out of a stored form, and «Начертани» is the EPITHET, standing in the plural at the end of the heading for both brothers: the body says «због чега су и прозвати Начертани», for which they were called the Written-on, so carrying it onto his own forename is the book’s own doing and not an assembly of mine. MEASURED BEFORE IT WAS WRITTEN: the bare «Теодор» lands on five folders — `theodore-boyar-of-chernigov`, `theodore-of-perga`, `theodore-of-vrsac`, `theodore-prince-of-yaroslavl` and `theodore-the-sabbaite-of-edessa` — where the full string has no other holder at all. The brother’s folder has stored «Теофан Начертани» in the same shape since the 10-11 reading of this same book."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.01.2026 (27. децембар ст. ст.) — „Преподобни мученик Теодор и Теофан Начертани.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, whose heading names BOTH BROTHERS: „Преподобни мученик Теодор и Теофан Начертани.“ — and the other half of it is `theophanes-of-nicaea`, which already carried a venerated `serbian` row on 11 October and therefore took a §4 SECOND-DAY NOTE in this same commit rather than a row. This row is the plain one of the two, the folder’s `serbian` having been `undocumented`. Identified past any doubt: the epithet «Начертани», the brother named beside him, the house of Sabbas the Sanctified, the three iconoclast emperors, the verses cut into the face with iron, and the prison at Apamea of Bithynia where he died of his torments — every one of which the folder’s own life already carries out of doxologia and saint.gr. THE YEAR IS A REAL DISAGREEMENT AND WAS NOT WRITTEN. This book closes «Свети Теодор сконча 833. године», a flat 833. The folder holds `death` «before 842», an upper bound with a null `earliest`, because doxologia gives no year at all and only has the icons restored in 842 after Theophilus died. SO FAR THE 833 LOOKS LIKE A FREE IMPROVEMENT — AND IT IS NOT, BECAUSE THE THIRD BOOK CONTRADICTS IT: saint.gr, quoted in this folder’s own Greek note, puts the final exile to Apamea under the patriarch John VII, «836 ή 837 μ.Χ.», and has Theodore die THERE, which is after 833 and not before it. Two books cannot both be right and neither strikes out the other, so `dates` is UNTOUCHED, the 833 is recorded here and in the life beside the Greek reading, and IT IS THIS DAY’S AUTHOR QUESTION. `types` untouched: «Преподобни» is `venerable` and «мученик» is `martyr`; the folder carries `venerable`, `confessor` and `hieromonk`, and `martyr` is NOT added — a `types` row is a reading of the sources together and not of the newest one, the 11-05 reader’s `stephen-of-decani` precedent, and the Romanian and Greek that made this folder both rank him a confessor who died in exile rather than a martyr. Reported. No `locations`: Apamea is where he died and the folder has never had a coordinate. `related` UNTOUCHED — the row to `theophanes-of-nicaea` stands in both directions and the brother is the only saint the entry names; `jonah-the-sabaite`, his father, is not named in this entry at all and that row stands from the Greek reading. The Serbian form is the heading’s epithet carried onto his own forename, «Теодор Начертани»: the bare «Теодор» was measured first and lands on five folders, and «Начертани» is a plural epithet in the heading that the body gives to both brothers in so many words, which is why the brother’s folder has stored «Теофан Начертани» since the 10-11 reading. The full string has no other holder. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "hymns": [
