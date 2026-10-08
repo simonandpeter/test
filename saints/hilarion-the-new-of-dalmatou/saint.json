@@ -16,6 +16,11 @@
       "form": "Иларион Нови",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 6. јун ст. ст., „Преподобни Иларион Нови“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped; Нови is the epithet the man took with the name and is not a rank, so it stays, and the form is the fullest the heading gives. **IT IS NOT UNIQUE AND THAT IS KNOWN**: `foldchk.py` returns `[('hilarion-the-new-of-pelecete', 'sr')]`, the identical string on another Hilarion the New kept by this same book on another day. The house is in neither heading, so neither form can be made fuller, and the two are told apart by their days."
+    },
+    {
+      "form": "Иларион Новый, Далматский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 930 gives it, «Иларион Новый, Далматский, игумен, исповедник», with the two grades, both of which this folder already carries in `types` taken off. Measured with the gate's own fold before it was written: 'далматскии иларион новыи' has no other holder. Both name words are kept and the calendar's own comma with them, as for «Дада Доростольский, Озовийский»: Новый is what tells him from the other Hilarions and Далматский is the house, and the folder's Romanian form «Ilarion cel Nou» and Serbian «Иларион Нови» already carry the first of the two."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июня ст. ст. — «Прп. Илариона Нового, из обители Далматской (845).»",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of eight, «Прп. Илариона Нового, из обители Далматской (845).». The Romanian, Greek and Serbian rows all stand on this same 6 June, and the line gives the New, the monastery of Dalmatou and the year 845 this folder already holds. The day page prints ONE troparion for him and Bessarion together and a kontakion of his own, and both are added; the kontakion calls him «новый Иларионе» and speaks of the many torments and sorrows he took for piety, which is the confessor's part this folder already carries in `types`. `life1246` was NOT read, so nothing of his life is touched here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -107,6 +122,38 @@
       },
       "english": {
         "text": "Having tilled the grace of the words of the Lord, you blossomed like an olive tree, all-blessed Hilarion, with the oil of the divine virtues and of your confession, O wise one, gladdening the hearts and the souls of those who cry out to you in faith: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all men through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобных Виссариона и Илариона», глас 4, under «Молитвы» on the day page for 6 июня ст. ст.. It is printed ONCE, for the two of them together, and is the common of venerable fathers in the plural — it names neither man and says only «но молитвами их», by their prayers. Its heading sets it over both, so it is on both folders (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest ever with us according to Thy gentleness, take not Thy mercy from us, but by their prayers govern our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Ограды живоносныя твоея пажити,/ пастырски невредимо стадо соблюл еси/ и явился еси высотою дел велик, новый Иларионе,/ по благочестии многи муки и скорби прием:/ тем во всерадостный живот вселився Горняго Сиона,// моли за ны, преподобне.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Илариона», глас 2, under «Молитвы» on the day page for 6 июня ст. ст.. It names him in the vocative as «новый Иларионе», the New, which is the epithet the day line gives him too.",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst keep the flock of thy life-giving pasture unharmed as a shepherd keeps it, and wast shown great by the height of thy deeds, O new Hilarion, having taken many torments and sorrows for the sake of piety; wherefore, having come to dwell in the all-joyful life of the Sion on high, pray thou for us, O venerable one.",
         "rendered": "site"
       }
     }

@@ -16,6 +16,11 @@
       "form": "Висарион",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 6. јун ст. ст., „Преподобни Висарион“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped, and the heading has nothing else in it, no place and no epithet. `foldchk.py` returns `[('bessarion-of-larissa', 'sr')]`: a fold of two on the bare form, deliberate, the other man a metropolitan of Larissa."
+    },
+    {
+      "form": "Виссарион Египетский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 424 gives it, «Виссарион Египетский, пустынник», with the grade «пустынник», the hermit, which this folder already carries in `types` taken off. Measured with the gate's own fold before it was written: 'виссарион египетскии' has no other holder. The day line calls him «чудотворца Египетского» where the name page calls him «Египетский, пустынник»; чудотворец is a rank word in BRIEF-RUSSIAN §6's list and is the `wonderworker` in `types`, so the toponymic is all that is stored. The folder's own kontakion spells him «Висарионе» with one с, which is the page's spelling in the hymn and not in the heading."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июня ст. ст. — «Прп. Виссариона , чудотворца Египетского (IV-V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of eight, «Прп. Виссариона , чудотворца Египетского (IV-V).». The Serbian row of this folder already stands on this same 6 June, where the Romanian and the Greek keep him on 20 February, so this calendar agrees with the Serbian and the identification is the day, the Egypt and the wonderworker's grade this folder already carries in `types`. The line's «(IV-V)» sits inside the folder's own floruit of 351 to 450, «late 4th – early 5th century», so nothing of `dates` was touched. The day page prints ONE troparion for him and Hilarion together and a kontakion of his own, and both are added. `life1247` was NOT read, so nothing of his life is touched here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -92,6 +107,38 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs out of the deep thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Bessarion our father. Pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобных Виссариона и Илариона», глас 4, under «Молитвы» on the day page for 6 июня ст. ст.. It is printed ONCE, for the two of them together, and is the common of venerable fathers in the plural — it names neither man and says only «но молитвами их», by their prayers. Its heading sets it over both, so it is on both folders (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest ever with us according to Thy gentleness, take not Thy mercy from us, but by their prayers govern our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышних сил подражав, преподобне,/ образом птиц житие пожил еси,/ временная в забытии положив,/ непрестанным желанием влеком к Небесным добротам Христа Царя,/ дондеже Того достигл еси, Висарионе,// моли непрестанно о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Виссариона», глас 2, under «Молитвы» on the day page for 6 июня ст. ст.. It names him in the vocative, spelling it «Висарионе» with one с where the heading has two, and it is copied as printed. «образом птиц», in the manner of the birds, is the saying about him this folder's own life already carries from the other calendars.",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Emulating the powers on high, O venerable one, thou didst live the life of the birds, laying aside all temporal things in forgetfulness, drawn by unceasing desire to the heavenly beauties of Christ the King, until thou didst attain to Him, O Bessarion: pray thou unceasingly for us all.",
         "rendered": "site"
       }
     }

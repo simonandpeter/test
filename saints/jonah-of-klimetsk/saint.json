@@ -1,0 +1,93 @@
+{
+  "slug": "jonah-of-klimetsk",
+  "display_name": "Jonah of Klimetsk",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Иона Климецкий",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1041 gives it, «Иона Климецкий (Клименецкий), Олонецкий, прп.», with the rank word taken off. Measured with the gate's own fold before it was written: 'иона климецкии' has no other holder. The heading carries THREE things after the forename and only one is stored. «(Клименецкий)» is a second spelling of the same epithet and not a surname, so it is recorded here, on the standing reading for «Квинтилиан (Кинтилиан)»; «Олонецкий» is a second toponymic, the region rather than the monastery, and the day line itself uses only Климецкого, so that is what is stored and the region is recorded. A bare «Иона» would meet the fourteen Jonah folders this corpus holds."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1534,
+      "latest": 1534,
+      "display": "6 June 1534",
+      "basis": "attested",
+      "note": "`life1248` gives the day and the year outright: «Скончался преподобный 6 июня 1534 года», which is the menologion day the calendar keeps him on, and the day line closes «(1534)». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июня ст. ст. — «Прп. Ионы Климецкого (1534).»",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry of eight, «Прп. Ионы Климецкого (1534).», with `life1248` behind it, read whole. `ls -d saints/jonah*` returned fourteen folders and not one of them is this man; `grep -l 1534` over all of them returned nothing, and the nearest in region, `jonah-of-yashezero`, is a different man of the late sixteenth or early seventeenth century whom this calendar keeps on 22 сентября. A Cyrillic `grep -rl` for «Климец» and «Олонецк» returned only `athanasius-of-murom` and `lazarus-of-murom`, where the word is the region and not the man. **His name page and his life both list TWO days, «28 марта , 6 июня», and the Julian 28 March has already been read by an earlier wave of this run, which left no folder for him.** This folder is therefore made on 6 июня, the day whose page names him and the day his life gives for his death; that the 28 марта page apparently does not print him is a reading for the author and not something settled here, and the 28 марта page was NOT re-read. The day page prints a troparion and a kontakion under his name and both are in the folder. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Ангельскому житию поревновав, блаженне Ионо,/ оставил еси отечество твое, великий Новград,/ и, пришед в пределы Олонецкия/ и в пустыню вселився,/ в трудех, молитвах и слезах подвизался еси,/ и, яко мудрый купец, Царствие Небесное наследовал еси./ Темже любовию вопием ти:/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Ионы Климецкого», глас 4, under «Молитвы» on the day page for 6 июня ст. ст. It names him in the vocative, so it is his own proper, and it gives «великий Новград» as the fatherland he left, which `life1248` does not mention at all.",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Emulating the life of angels, O blessed Jonah, thou didst leave thy fatherland, great Novgorod; and coming into the borders of Olonets and settling in the wilderness, thou didst struggle in labours, prayers and tears, and like a wise merchant thou didst inherit the Kingdom of heaven. Therefore we cry to thee with love: pray thou to Christ God that He save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Христовым стопам последователь быв, блаженне Ионо,/ радуяся, вселился еси в пустыню,/ Вышняго Промыслом наставляемь,/ и, не убоявся вражиих приражений,/ якоже столп непоколебим,/ уготовал еси себе в жилище Духу Пресвятому,/ мы же, память твою совершающе, вопием радостно:/ радуйся, яко озарявши нас чудесы твоими;/ радуйся, яко оставил еси временная ради будущих благ./ Радуйся, яко возставляеши ленивых ко спасению./ Моли убо Христа Бога, отче преподобне,/ да спасет души наша в День Судный.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Ионы Климецкого», глас 2, under «Молитвы» on the day page for 6 июня ст. ст. It names him in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A follower of the steps of Christ wast thou, O blessed Jonah, and rejoicing thou didst settle in the wilderness, guided by the Providence of the Most High; and not fearing the onsets of the enemy, like an unshaken pillar thou didst prepare thyself as a dwelling for the Most Holy Spirit. And we, keeping thy memory, cry out with joy: rejoice, for thou dost enlighten us with thy wonders; rejoice, for thou didst leave things temporal for the good things to come; rejoice, for thou raisest up the slothful to salvation. Pray therefore to Christ God, O venerable father, that He save our souls in the Day of Judgement.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -34,7 +34,8 @@
       "feast": {
         "day": 8,
         "month": 1,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "days.pravoslavie.ru also prints him on 6 июня ст. ст., fifth of that day's eight entries — «Прп. Паисия Угличского (1504).» — which is a SECOND COMMEMORATION DAY of the same man: the line is word for word the 8 января line this row already quotes, name page 1711 heads him «Паисий Угличский, игумен» with the identical string this folder's `ru` name form already stores, and the folder's own life already says that saint.gr repeats his memory on 6 June. The row stays on 8 января, because a second day on one church has no field of its own (BRIEF.md §4), and `life6785` was not followed. **The 6 июня page prints FIVE hymns under his name where 8 января printed two, and three of the five are new.** The troparion глас 8 «Христовы ради любве отечество и род оставил еси, и, ангельскому житию поревновав, в пустыню вселился еси» and the kontakion глас 2 «Чистотою душевною» are already on this folder from 8 января, word for word, and were WITHHELD. The two «Ин тропарь», both глас 8, and the «Ин кондак», глас 8, are new and are added. **The first of the two «Ин тропарь» is the only place in either day's service that tells any of his story**: that he followed his spiritual father преподобный Макарий, reached the town of Uglich, settled near it by the waters in a wilderness shown him by an angel, raised a fair house of the Mother of God and gathered a multitude of monks. A hymn naming another saint owes no `related` row, `related-floor.mjs` reading `life.md` prose only, so no row was written to any Macarius."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Прп. Паисия Угличского (1504).»",
@@ -101,6 +102,54 @@
       },
       "english": {
         "text": "Armed divinely with purity of soul, and holding unceasing prayer as a spear, thou didst mightily cut down the array of the demons. O Paisius our father, pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Христовы ради любве отечество и род оставил еси/ и, ангельскому житию поревновав,/ духовному отцу твоему преподобному Макарию, подражатель быв,/ града Углеча достигл еси,/ и близ того при водах в пустыню, Ангелом показанную, вселился еси,/ и обитель прекрасну Матери Божией воздвигл еси,/ и множество монахов собрал еси,/ имже и наставник ко спасению быв,/ и чудес дарования от Бога приял еси,/ Паисие преподобне,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, the FIRST «Ин тропарь преподобного Паисия Угличского», глас 8, under «Молитвы» on the day page for 6 июня ст. ст.. The page prints three troparia under that name, the first unmarked and two marked «Ин»; this is the second of the three and the fuller of the two «Ин». It names him in the vocative and also names «преподобному Макарию», his spiritual father.",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ thou didst leave thy fatherland and thy kindred, and emulating the life of angels thou wast an imitator of thy spiritual father the venerable Macarius; and thou didst reach the town of Uglich, and settle near it by the waters in a wilderness shown thee by an angel, and raise a fair house of the Mother of God, and gather a multitude of monks, to whom thou wast a guide unto salvation; and thou didst receive from God the gift of wonders, O venerable Paisius: pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси/ и, иже из глубины воздыханьми, во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Паисие, отче наш,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, the SECOND «Ин тропарь преподобного Паисия Угличского», глас 8, under «Молитвы» on the day page for 6 июня ст. ст.. It is the common of a venerable monastic — the «Слез твоих теченьми» the Church sings to many ascetics — with his name filled into the vocative, so it is his own service (BRIEF.md §4).",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighings from the depth thou didst bear fruit a hundredfold in labours; and thou wast a lamp to the whole world, shining with wonders, O Paisius our father: pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Украшен добродетельми, преподобне Паисие Богодухновенне,/ Церкве Христовы красота был еси,/ подвиги бо иноческими украси ю, блаженне./ Темже молим тя:/ молися ко Господу свободити нас от всякия брани борителя, вопиющих ти:/ радуйся, отче преблаженне.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин кондак преподобного Паисия Угличского», глас 8, under «Молитвы» on the day page for 6 июня ст. ст.. It names him in the vocative; the folder's other kontakion, глас 2, came from the 8 января page and the two are different texts.",
+        "url": "https://days.pravoslavie.ru/Days/20260606.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with virtues, O venerable and God-inspired Paisius, thou wast the beauty of the Church of Christ, for thou didst adorn her with monastic struggles, O blessed one. Therefore we pray thee: pray to the Lord to free us who cry to thee from every assault of the adversary: rejoice, O most blessed father.",
         "rendered": "site"
       }
     }
