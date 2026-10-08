@@ -14,6 +14,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιος Πέτρος ο Θαυματουργός Αρχιεπίσκοπος Άργους και Ναυπλίου», with the rank word, the epithet and the see left off."
+    },
+    {
+      "form": "Петр Аргосский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 3 мая ст. ст., which gives «Святитель Петр Аргосский, епископ»; the rank words are not part of the stored form. The day line itself declines him as «Петра чудотворца, еп. Аргосского»."
     }
   ],
   "dates": {
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 мая ст. ст. — «Прп. Петра чудотворца, еп. Аргосского (X).»",
+        "url": "https://days.pravoslavie.ru/Days/20260503.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
