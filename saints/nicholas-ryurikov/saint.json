@@ -1,0 +1,61 @@
+{
+  "slug": "nicholas-ryurikov",
+  "display_name": "Nicholas (Ryurikov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Николай (Рюриков)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 14419 gives it, «Николай (Рюриков), протоиерей, сщмч.», with the grade and the rank word taken off. Measured with the gate's own fold before it was written: 'николаи рюриков' has no holder in the corpus. The day line prints the bare forename «Николая» in the genitive, so the surname is read off the name link; it stays in the parentheses the calendar itself prints. A Cyrillic `grep -rl` for «Рюриков» over the corpus returned nothing."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
+      "basis": "attested",
+      "note": "The year the day line gives him: «Сщмч. Николая пресвитера (1943).» It is the only year on either page; the name page gives no year of birth and no day within the year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Сщмч. Николая пресвитера (1943).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's eleventh entry of twelve, and a line and a name page and nothing else: «Сщмч. Николая пресвитера (1943).» Name page 14419 heads him «Николай (Рюриков), протоиерей, сщмч.» and lists «26 января (Новомуч.) , 5 июня»; it carries no life, no icon, no article, no place, no diocese and no year of birth, and there is no /Life/ page for him on the site. **The day line grades him пресвитер and the name page протоиерей**, a presbyter against an archpriest, which is the same grade at two ranks and not a disagreement about the man; `presbyter` is in `types` and `Archpriest` is the `office`, that string being one the four locale packs do carry. A Cyrillic `grep -rl` for «Рюриков» returned nothing. «26 января (Новомуч.)» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

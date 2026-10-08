@@ -1,0 +1,60 @@
+{
+  "slug": "theodore-of-the-jordan",
+  "display_name": "Theodore of the Jordan",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Феодор Иорданский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 2184 gives it, «Феодор Иорданский, прп.», with the rank word taken off. Measured with the gate's own fold before it was written: 'иорданскии феодор' has no holder in the corpus. **The day line and the name page call him two different things**: the line «Феодора чудотворца», the wonderworker, and the name page «Феодор Иорданский», of the Jordan. Чудотворец is in BRIEF-RUSSIAN §6's list of rank words and is the `wonderworker` this folder carries in `types`, so the toponymic is what is stored; a bare «Феодор» would meet the hundred-odd Theodore folders this corpus holds."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The day line closes with the bare century, «(VI)», and `life1239` opens with the same, «жил в VI веке». No year is given anywhere on either page, and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Прп. Феодора чудотворца (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry of twelve, «Прп. Феодора чудотворца (VI).», with `life1239` behind it, a reading of four sentences read whole. `ls -d saints/theodore-the-wonder*` and `saints/theodore-of-jordan*` returned nothing, and the corpus's hundred-odd Theodore folders were measured against the stored form with `fk.mjs` rather than read: 'иорданскии феодор' has no holder. The day page prints eleven hymns, for two Solovki abbots, a bishop of Tyre, a prince of Chernigov, a metropolitan of Kyiv and a prince of Novgorod, and none under his name. His name page lists «День памяти: 5 июня» and nothing else. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

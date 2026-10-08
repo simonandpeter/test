@@ -16,13 +16,28 @@
       "form": "Анувије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 5. јун ст. ст., „Преподобни Анувије“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped, and the heading gives nothing else. **The Serbian form is longer than the Greek one this folder stores**: «Анувије» against «Ανούβ», and the display name is built on the Greek. The two are the same name in two books and no display name was touched; §10 reserves it. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder of the Serbian string."
+    },
+    {
+      "form": "Анувий Египетский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 231 gives it, «Анувий Египетский, пустынножитель, исповедник», with the two grades taken off. Measured with the gate's own fold before it was written: 'анувии египетскии' has no other holder. The Russian form is Анувий where the Serbian this folder holds is Анувије and the Greek Ανούβ; the three fold apart."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Прп. Анувия , пустынника Египетского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of twelve, «Прп. Анувия , пустынника Египетского (IV).». The Serbian row of this folder already stands on this same 5 June as «Анувије» and the Greek on 6 June, which is the day the two calendars differ by, and the Egypt and the hermit's life are the folder's own; that, with the menologion day, is the identification. **The centuries disagree and nothing was moved.** This line says «(IV)», the fourth century; the folder holds 451 to 500, «the second half of the 5th century», off saint.gr. The two do not overlap at all, and widening to cover both would invent an interval neither source gives, so `dates` were not touched and the disagreement is recorded here. **The grades disagree too.** The line says Прп., a venerable, which the folder carries; name page 231 heads him «Анувий Египетский, пустынножитель, исповедник», a desert-dweller and a CONFESSOR, and `confessor` was NOT added to `types`: the day line, which is the citation, does not say it, and исповедник on a fourth-century Egyptian ascetic may be the word for one who confessed under persecution or may be loose usage, and nothing read settles which. It is recorded here instead. `life1238` was NOT read, and the day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

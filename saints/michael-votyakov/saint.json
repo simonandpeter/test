@@ -1,0 +1,61 @@
+{
+  "slug": "michael-votyakov",
+  "display_name": "Michael (Votyakov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Михаил (Вотяков)",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 14270 gives it, «Михаил (Вотяков), иерей, сщмч.», with the grade and the rank word taken off. Measured with the gate's own fold before it was written: 'вотяков михаил' has no holder in the corpus. The day line prints the bare forename «Михаила» in the genitive, so the surname is read off the name link; it stays in the parentheses the calendar itself prints. A Cyrillic `grep -rl` for «Вотяков» over the corpus returned nothing."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "The year the day line gives him: «Сщмч. Михаила пресвитера (1931).» The name page gives no year of birth and no day within the year, and the article on it names no year at all in the part that was read."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Сщмч. Михаила пресвитера (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's tenth entry of twelve, «Сщмч. Михаила пресвитера (1931).». Name page 14270 heads him «Михаил (Вотяков), иерей, сщмч.» and lists «26 января (Новомуч.) , 5 июня». There is no /Life/ page for him, but the name page links an article on Pravoslavie.Ru by Марина Шмелева titled from a line of a denunciation, «Вотяков доводит до плача присутствующих в церкви. Его надо изолировать», **and it was read only as far as the two lines the name page itself prints** — that title and one sentence of the opening. Everything in this folder's life comes from those two lines and from the day line; the article itself is enrichment left behind, and it is the one page of this day that would give him a village, a diocese and a date. Иерей is the `Priest` the locale packs carry. «26 января (Новомуч.)» was not read, and azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding revised-Julian day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
