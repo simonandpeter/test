@@ -48,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "HE IS NOT ON THE DAY’S OWN LINE AND HAS NO `name:` LINK: the line names seven and then «и с ними 1218 воинов с женами и детьми», and he is one of the 1218, enumerated by name in the prose of the day’s own life page, life1135. He stands in the second of the two lists the calendar’s life page gives of the company’s members, the twelve tribunes of the regiment: «Известны имена некоторых из воинов, 12-ти трибунов: святых мучеников Фавста, Фиста, Маркелла, Феодора, Мелетия, Сергия, Маркеллина, Филикса, Фотина, Феодориска, Меркурия, Дидима.» That list is the calendar’s own enumeration of the company it heads, so this folder is kept on this day by the ruling that a synaxis enumerating its members is one folder per member. NO `ru` NAME FORM WAS STORED, DELIBERATELY. The calendar prints this name nowhere but inside that list, in the genitive and as a bare forename — «Маркеллина» — with no name page, no epithet and no surname anywhere on the day. A nominative reconstructed from a genitive is something a reader made, not something the calendar printed (BRIEF-RUSSIAN §2), and a bare forename of this kind would in several of these fifteen cases widen a fold that stands unread in the gate. The declined form is recorded here instead and the author can promote it. `dates` is unchanged: the folder already holds «between 218 and 222» and the Russian gives the same reign, «(218–222)», with the line’s «(ок. 218)» inside it. azbyka.ru was not read."
     },
     {
       "church": "romanian",

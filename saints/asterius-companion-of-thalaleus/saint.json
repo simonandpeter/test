@@ -16,13 +16,28 @@
       "form": "Астерије",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог’s first entry for 20. мај ст. ст., „нареди овај двојици џелата, Александру и Астерију“, which is a dative, **with the nominative printed four sentences later in the same body**, „Тада Александар и Астерије усред шибе повикаше“ — so unlike the three presbyters of 19 May **this form is a string copied off the page and not a nominative restored by a reader.** џелат is a trade and no rank. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM`."
+    },
+    {
+      "form": "Астерий Эгейский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 288, «Астерий Эгейский, мч.», with the rank abbreviation left off. The day’s own line gives the bare «Астерия», in the genitive and without the city. `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 мая ст. ст. — «Мчч. Фалалея , Александра и Астерия (284).»",
+        "url": "https://days.pravoslavie.ru/Days/20260520.html",
+        "year": 2026
+      },
+      "note": "He is the third name of the day’s first line and his own name link, 288, heads him «Астерий Эгейский, мч.» — of Aegae, the city this folder’s display name names him a companion at. The calendar’s life of Thalaleus makes him and Alexander the two executioners ordered to bore the martyr’s shins, who drilled a log instead, confessed themselves Christians under the beating that followed and were beheaded on the spot: the same part the Greek and Serbian rows of this folder already give him. `dates` was written where there was none: the day line prints «(284)» for the entry that names all three, and the life dates Thalaleus’s own death «в 284 году» in the same episode. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -66,5 +81,14 @@
   "related": [
     "thalaleus-the-physician",
     "alexander-companion-of-thalaleus"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 284,
+      "display": "284",
+      "basis": "traditional",
+      "note": "The year the Russian day line prints for the entry that names all three martyrs: «Мчч. Фалалея , Александра и Астерия (284).» The calendar’s life, which has him beheaded in the same hour as the beating he confessed under, dates Thalaleus’s death «в 284 году». The folder had no `dates` object before this row."
+    }
+  }
 }

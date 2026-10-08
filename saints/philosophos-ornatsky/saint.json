@@ -12,22 +12,44 @@
       "form": "Φιλόσοφος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Φιλόσοφος ο Ιερομάρτυρας και οι συν αυτώ Βόρις και Νικόλαος οι Μάρτυρες», with the rank words left off. The body of the same page gives the rest of the name as the Greek spells it, «Φιλόσοφος (Νικολάγιεβιτς Ορνάτσκιυ)»."
+    },
+    {
+      "form": "Философ (Орнатский)",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Философ (Орнатский), протоиерей, сщмч.», with the two rank words after the comma left off. The parenthesis is the calendar’s own and holds the family name, which the life gives in full with the patronymic as «Философ Николаевич Орнатский». The day’s own line gives «Философа пресвитера», without it. `fk.mjs` returned NONE for «орнатскии философ» before the write, and the bare «Философ» was deliberately not stored: the SAME DAY prints the martyr Philosophos of Alexandria, whose Serbian form is that bare string."
     }
   ],
   "dates": {
+    "birth": {
+      "earliest": 1860,
+      "latest": 1860,
+      "display": "21 May 1860",
+      "basis": "attested",
+      "note": "The calendar states it in full: «Священномученик протоиерей Философ Николаевич Орнатский родился 21 мая 1860 года на погосте Новая Ерга Череповецкого уезда Новгородской губернии в семье сельского священника.» The folder had no birth before this row."
+    },
     "death": {
       "earliest": 1918,
       "latest": 1918,
       "display": "1918",
       "basis": "attested",
-      "note": "saint.gr: «ο Άγιος Ιερομάρτυς Φιλόσοφος συνελήφθη, στις 9 Αυγούστου 1918 μ.Χ., μαζί με τους υιούς του από άνδρες της κρατικής ασφάλειας, που τους μετέφεραν στις φυλακές της Κροστάνδης. Εκτελέσθηκαν διά τουφεκισμού». The page's heading is «(; - 1918)» and gives no year of birth; it says only that he finished the theological academy of Saint Petersburg in 1885."
+      "note": "saint.gr: «ο Άγιος…», and the year the Russian day line prints for him and his two sons. The Russian gives no certain day: it has the arrest on 9 August 1918, the removal to the Kronstadt prison «предположительно на 20 июля 1918 года» — which is earlier than the arrest it has just dated, a contradiction inside one paragraph — and the shooting «предположительно около 30 октября 1918 года». No day was written on a page that guesses three times and contradicts itself once."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr makes him a Russian new martyr of 1918, so the Russian calendar is very likely to keep him; this row says what was read and not that it does not."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст. — «Сщмч. Философа пресвитера и сыновей его мчч. Бориса и Николая (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and the Russian is far fuller than the source this folder was made from: the line names him with his two sons and the year 1918 the folder already holds, and the life, life4927, is titled «Священномученик протоиерей Философ Николаевич Орнатский и иже с ним убиенные сыновья Николай и Борис». `dates` GAINED A BIRTH IT DID NOT HAVE: «родился 21 мая 1860 года на погосте Новая Ерга Череповецкого уезда Новгородской губернии в семье сельского священника». The death 1918 is unchanged; the calendar dates the shooting only by guess — «предположительно около 30 октября 1918 года» — and gives two guesses for the place, Kronstadt or between Ligovo and Oranienbaum near the Gulf of Finland, and says the bodies were apparently thrown into the gulf. HIS PAGES LIST THREE DAYS: «Дни памяти: 26 января (Новомуч.) , 31 мая , 8 июня (Петерб.)», the first the general synaxis of the new martyrs — which is the ground of the `new-martyr` this folder already holds — and the third a Petersburg local day; both are recorded here and he renders on neither. `office` WAS NOT WRITTEN although both the line and the title call him протоиерей: the folder’s `presbyter` type already stands and the author may add «Archpriest», which the packs carry, in one pass. NO `related` ROW WAS ADDED: the two sons already stand on this folder and it on theirs. THE CALENDAR NAMES FOUR OTHER SAINTS IN HIS STORY and none was made a `related` row, the page making them his friends, his kin by marriage and his spiritual father rather than companions in his death: the metropolitan Вениамин (Казанский) of Petrograd, patriarch Тихон, the righteous Иоанн of Kronstadt — whose spiritual son he was for nearly twenty years and whose correspondence with Феофан the Recluse he carried — and the archpriest Пётр Скипетров, his wife’s sister’s husband, shot before his eyes, at whose funeral he preached against the Bolsheviks. azbyka.ru was not read."
     },
     {
       "church": "romanian",

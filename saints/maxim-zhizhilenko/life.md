@@ -1,0 +1,9 @@
+# Maxim (Zhizhilenko)
+
+The Православный церковный календарь of the Сретенский monastery names him and gives no life. Its line for 22 мая ст. ст. reads «Сщмч. Максима , еп. Серпуховского (1931).» — the hieromartyr Maxim, bishop of Serpukhov, of the year 1931 — and the line carries a link to his name and none to a reading. The name page behind it adds his family name, Жижиленко, and the rank word «Святитель», hierarch, before it, and sets out his style in full: «Святитель Максим (Жижиленко), епископ Серпуховской, сщмч.» Beyond the title it carries one line, «Дни памяти: 26 января (Новомуч.) , 22 мая», and nothing further.
+
+So the calendar sets down a bishop of the Russian church who died in 1931 and no more than that. The second of those two days is not a feast of his own: it is the general commemoration of the new martyrs and confessors of Russia, which this calendar prints beside the proper day of each of them, and it is the one mark on his page that places him among that company. He is kept here on the day the calendar gives him for his own, and the synaxis is recorded on his attestation.
+
+His see, Serpukhov, is written into the life and not into the folder’s office field, which carries the bare word Bishop: a see-bearing office would have to be rendered into four languages, and a reader may not invent those renderings. Nothing else about him was found. No folder in this corpus held the name before, and the one other source likely to carry an account of a Russian bishop of 1931 — azbyka.ru — was not read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 22 мая ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260522.html) and [the name page](https://days.pravoslavie.ru/name/15017.html), which name him and give no life; read 8 October 2026.*

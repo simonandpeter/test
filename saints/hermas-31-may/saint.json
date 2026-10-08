@@ -11,6 +11,11 @@
       "form": "Јерма",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 31. мај ст. ст., „Свети апостол Јерма“ — Свети is not a rank and апостол is the `apostle` this corpus puts in `types`; the bare personal name is what is left. **Measured, and the fold that matters here is the one this form AVOIDS**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јерма», and **this book spells the apostle of this entry „Јерма“ and the martyr of its very next entry „Ермије“, where doxologia spells both «Ermie» and this folder and `hermias-of-comana` therefore both carry the identical Romanian form.** It writes „Ермије“ again for a third man, the apostle Hermes of Dalmatia, on its own 8 April — **so that one Serbian string covers two men and this form covers neither of them.** The Serbian book tells the two men apart by spelling where the Romanian one does not, and that is worth having on the folder. The Romanian form «Ermie» here is left alone."
+    },
+    {
+      "form": "Ерм",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link 791, «Апостол Ерм», with the rank word left off; the day’s own line gives the same in the genitive, «Ерма». The calendar prints no epithet for him anywhere — the see is in the prose only — so the form is bare of necessity. `fk.mjs` returned NONE for «ерм» before the write, so this folder is its only holder and no fold is created. The Serbian form on this same folder is «Јерма», which folds elsewhere."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст. — «Ап. от 70-ти Ерма (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "note": "The identification is the day and the company: the line names him one of the Seventy on the day this folder’s display name carries, and its Romanian and Serbian rows keep him on the same Julian day. The entry’s link is an index, id791, serving two readings. `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder had no `dates` object, and the century is the one the line itself prints, «(I)». HIS PAGES LIST THREE DAYS: «Дни памяти: 4 января (70 ап.) , 8 апреля , 31 мая». The first is the synaxis of the Seventy Apostles, which the calendar marks as such; the second is the day the second of its two readings is written for, «Апостолы: Иродион, Агав, Асинкрит, Руф, Флегонт и Ерм», the six of the Seventy kept together, and the calendar does not say which of the three is his own. One row per church is the schema, so the other two are recorded here and he renders on neither. What the Russian adds and the paragraph carries: the see of Philippopolis in Thrace, the greeting in the Epistle to the Romans (Рим. 16, 14), the many sorrows from the pagans and the peaceful end — which is a different reading from the `martyr` type this folder already carries, and `martyr` WAS NEITHER REMOVED NOR DEFENDED here. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -62,5 +77,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century the Russian day line prints: «Ап. от 70-ти Ерма (I).» The folder had no `dates` object before this row. The calendar gives no year and no reign, and its own reading has him die in peace rather than as a martyr."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Апостоле святый Ермие,/ моли Милостиваго Бога,/ да прегрешений оставление/ подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст., «Тропарь апостола от 70-ти Ерма», глас 3 — the common of an apostle with his name set into it. ITS VOCATIVE IS «Ермие», which is the form of the OTHER saint of this day, the martyr Hermias; the heading is the apostle's and the hymn stands under it, so it is copied here as the page has it and the collision of the two names is recorded rather than mended",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle Hermas, entreat the merciful God, that he may grant unto our souls the remission of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко звезда, возсиял еси вселенней,/ светом просияв солнца, блаженне,/ всесветлаго Павла,/ мира просвещшаго концы,/ сего ради тя чтим, Ермие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст., «Кондак апостола от 70-ти Ерма», глас 4 — the apostle's, and its own ground is his: it makes him shine with the light of the sun that is the apostle Paul, which is the one thing the calendar's reading of him says besides his see",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a star thou hast shone upon the world, O blessed one, having shone with the light of the all-radiant sun, of Paul, who enlightened the ends of the earth. For this cause do we honour thee, O Hermas.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

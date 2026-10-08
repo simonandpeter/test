@@ -10,6 +10,11 @@
       "form": "Καλλίνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, which names the whole company, and out of the life page's own head line for him or her; the rank words are left off."
+    },
+    {
+      "form": "Каллиник Галатийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1156, «Каллиник Галатийский, мч.», with the rank abbreviation left off; the day line gives «Каллиника волхва», with the epithet this folder’s display name uses instead of the province. `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "related": [
@@ -47,8 +52,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "He is the fifth name of the line, «Каллиника волхва» — Callinicus the magus, which is exactly what this folder’s display name says, so the identification is the line’s own. THE CALENDAR’S LIFE OF THE COMPANY DOES NOT MENTION HIM AT ALL: life1135 names Meletius, the tribunes Stephen and John, Theodore and Faustus, the women and children, the twelve tribunes and Serapion, and not Callinicus, although the line heading that same page names him fifth. So the day gives him his place in the company and no story, and this row says so. `dates` is unchanged: the folder holds «between 218 and 222» and the Russian gives the same reign and the line’s «(ок. 218)». azbyka.ru was not read."
     },
     {
       "church": "romanian",

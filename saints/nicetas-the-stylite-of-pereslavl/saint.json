@@ -18,6 +18,11 @@
       "form": "Никита Столпник",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 24. мај ст. ст., „Преподобни Никита Столпник“ — Преподобни is the `venerable` inside the `venerable-martyr` this corpus puts in `types`, and it is the only word stripped. **Столпник is kept although `stylite` is in `types`**, and this entry is where the reading is plainest: „затвори се у један столп, због чега се и прозва Столпником“ — he was *called* the Stylite because of the pillar, so the word is the name he is known by and not a rank laid on him, exactly as „прозват је Дивногорац“ works for the other stylite of this same day. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Никита Столпник», where a bare «Никита» would have folded onto the corpus’s other Nicetases for nothing. The Greek form on this folder, «Νικήτας», is the bare one."
+    },
+    {
+      "form": "Никита Переяславский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1618, «Никита Столпник, Переяславский, прп.», with the rank word «Столпник» and the rank abbreviation left off — «Столпник» being stylite, which BRIEF-RUSSIAN §6 maps to a `types` entry and not to a name. His own life page spells the city «Переславский» in its title and «Переяславский» in its running head, and the day line «Переяславльского»; the form follows the name link. `fk.mjs` returned NONE for it before the write."
     }
   ],
   "dates": {
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Прп. Никиты , столпника Переяславльского (1186).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the day line gives the pillar, the city and the year 1186 this folder’s interval opens at, and the folder’s Greek and Serbian rows keep him on the same Julian day. `dates` WAS NOT NARROWED: the folder carries «1186 or 1196», widened by an earlier reading rather than chosen, and the Russian gives the night of 24 мая 1186, which is this feast’s own night and the earlier of the two years. The question of which year is the author’s and the Russian’s preference is recorded here and in the life rather than written into the interval. HIS OWN PAGE LISTS A SECOND DAY: «Дни памяти: 23 мая (Ростов.) , 24 мая», the first marked by the calendar as the Rostov local day; it is not thirteen days from this one. One row per church is the schema, so it is recorded here and he does not render on it. `venerable-martyr` already stands and the Russian bears it out — «преподобный Никита и сам завершил жизнь мученической кончиной». What the Russian adds and the paragraph carries: the tax-gathering under Юрий Долгорукий’s moving of the town in 1152, the words of the prophet Исаия that struck him, the human head and hand and foot seen in the boiling pot, the three days confessing his sins at the monastery gate and the finding of him lying in the marsh covered with insects, the hair shirt and the tonsure, the irons and the two wells and the round pit with the stone cap and the underground passage to the church, the kinsmen who took his crosses and irons for silver and killed him, the three beams of light over the Volga seen by the elder Симеон of the Yaroslavl house of Peter and Paul, the irons found floating and laid on his tomb, the attempt to open his relics under the metropolitan Фотий about 1420–1425 and the grave that closed itself, the side chapel of 1511–1522 and the akathist of the nineteenth century. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -73,5 +88,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Православным смыслом юношеская возжеления возненавидев/ и доблественныя нравы восприим, врага победил еси,/ и во благоразумии Богу угодил еси,/ и свыше от Него прием дар чудес,/ бесы прогоняти, недуги исцеляти,/ Никито преславне,// моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст., «Тропарь преподобного Никиты», глас 4 — proper to him, and it names him; the day prints no other Nicetas",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With an Orthodox mind thou didst hate the desires of youth, and taking up a valiant manner of life thou didst overcome the enemy; in good understanding thou wast well-pleasing to God, and didst receive from him on high the gift of wonders, to drive out demons and to heal diseases. O most glorious Nicetas, pray thou to Christ God, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Христа ради от твоих рабов нуждную смерть претерпел еси/ и венец нетления от Него восприял еси,/ приходящим же с верою от честнаго твоего гроба подаеши цельбы,/ о Никито преподобне,// молитвинниче о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст., «Кондак преподобного Никиты», глас 8 — proper to him, and it names both him and the manner of his death the life gives",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For Christ’s sake thou didst suffer a violent death at the hands of thine own servants, and didst receive from him the crown of incorruption; and from thy honoured tomb thou grantest healings to those who come with faith, O venerable Nicetas, intercessor for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -16,6 +16,11 @@
       "form": "Симеон Столпник Дивногорац",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 24. мај ст. ст., „Преподобни Симеон Столпник Дивногорац“ — Преподобни is the `venerable` this corpus puts in `types`, and it is the only word stripped. **Столпник is kept although `stylite` is in `types`, and that is a reading to say out loud**: the body makes it the name he is known by rather than a rank laid on him — „затвори се у један столп, због чега се и прозва Столпником“ is the other stylite of this same day, and here „По имену ове горе и сам Симеон прозват је Дивногорац“ does the same work for the second epithet. The heading prints the three words as one name and the fullest form is all three. **It was measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Симеон Столпник Дивногорац», and a bare «Симеон» would have folded onto the corpus’s other Symeons for nothing. The Greek form on this folder, «Συμεών», is the bare one and is left alone; the Romanian, «Simeon cel din Muntele Minunat», is the same mountain by its Romanian name."
+    },
+    {
+      "form": "Симеон Дивногорец",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2012, «Преподобный Симеон Столпник, Дивногорец», with the rank word before the name and the rank word «Столпник» after it left off — «Столпник» being stylite, which BRIEF-RUSSIAN §6 maps to a `types` entry and not to a name. What is left is the form the calendar’s own life pages use as their running head, «Симеон Дивногорец». `fk.mjs` returned NONE for it before the write."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Прп. Симеона столпника Дивногорца (596).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the day line gives the Wonderful Mountain and the year 596 this folder’s `dates` already holds, and the folder’s Romanian, Greek and Serbian rows keep him on the same Julian day. The first of the calendar’s two readings opens by telling the reader to distinguish him from the other Symeon the Stylite of 1 September, which is the distinction this folder’s own display name makes. `dates` IS UNCHANGED AND THREE BOOKS NOW GIVE THREE BIRTH YEARS: the folder holds 522 off the Охридски пролог; life6842 says «Родился святой в 512 г. в Антиохии Сирийской»; life1134 says «родился в 521 году в Антиохии Сирийской». All three are in the paragraph and none was chosen. The death is agreed: «Проведя на столпе 68 лет, преподобный Симеон скончался в 596 г.» — and 596 less 68 is 528, which matches none of the three births; that too was left alone. What the Russian adds and the paragraph carries: the mother’s prayer to the Forerunner and her promise, the Lord’s appearances in his childhood, the desert mountain at six, the house of Иоанн Столпник near Seleucia of Syria and the pillar there, the move to the Wonderful Mountain in his twenty-second year and the monastery founded there, the foretelling of the taking of Antioch by Chosroes I and of its earthquake, the dead raised, the Antiochenes freed from Persian captivity at the calling of his name, the wheat that did not fail in the granary for three years, and the parents Иоанн and Марфа of the second reading, with Марфа’s own vision in the church of the Forerunner. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -98,5 +113,39 @@
       "basis": "traditional",
       "note": "Охридски пролог за 06.06.2026 (24. мај ст. ст.): „Лета Господњег 596. а у седамдесет петој години живота свога, представи се Симеон Господу“. The seventy-fifth year is a duration and is used for nothing; it agrees with the stated 522. `martha-mother-of-symeon`’s life says in prose, off calendars never read for this folder, that this Symeon died in 551; that is recorded as a disagreement and nothing here was widened to meet it."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, богоносе, отче наш Симеоне,/ постом, бдением, молитвою Небесная дарования приим,/ исцеляеши недужныя и души верою притекающих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,// слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст., «Тропарь преподобного Симеона», глас 1 — the common of a venerable ascetic with his name set into it, and the only Symeon the day prints",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness, and an angel in the body, and a wonderworker didst thou prove to be, O our God-bearing father Symeon: by fasting, by vigil and by prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who run to thee with faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who through thee works healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Вышняя желая, дольная отложив,/ и, яко небо, столп соделавый,/ тем облистал еси чудес зарею, преподобне,/ и Христу, всех Богу,// молишися непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст., «Кондак преподобного Симеона», глас 2 — proper to him; it is built on the pillar, which is his own labour",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the things above, thou didst lay aside the things below, and didst make thy pillar as it were a heaven; whence thou didst shine with the dawn of wonders, O venerable one, and thou prayest unceasingly to Christ, the God of all, for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

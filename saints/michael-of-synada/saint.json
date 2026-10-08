@@ -16,6 +16,11 @@
       "form": "Михаил",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 23. мај ст. ст., „Свети Михаил епископ синадски“ — Свети is not a rank, епископ is the `bishop` this corpus puts in `types` and the `Bishop` it puts in `office`, and „синадски“ is the see, which `honorific.js` composes and the display name already carries. Strip all three and the fullest form this calendar gives is the bare personal name. **THIS IS A DELIBERATE FOLD AND IT WAS MEASURED, NOT ASSUMED.** `foldchk.py` returns eleven folders already holding a bare «Михаил» — `michael-of-chernigov`, `michael-of-klops` and `michael-of-ulumbo` on `sr` forms and eight twentieth-century Russian confessors on `ru` ones — so storing it here makes a twelfth, exactly as the bare «Стефан» took a twelfth holder on 17 May and the «Силуан» fold was entered on purpose on 15 May. **There is no fuller form to prefer**: the heading prints nothing between the name and the see, and a see is not part of the stored form. `corpus-gate.mjs` will print the fold as a `?` row and it is the right answer."
+    },
+    {
+      "form": "Михаил Синадский (Фригийский)",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Святитель Михаил Синадский (Фригийский), епископ, исповедник», with the rank word before the name and the two after it left off. The parenthesis is the calendar’s own second epithet and is kept because it is part of the string the calendar prints; the day’s own line gives only «Михаила исп., еп. Синадского». `fk.mjs` returned NONE for the form before the write. The bare «Михаил» was deliberately not stored, this corpus holding a great many of that name and the folder’s own Serbian form being that bare string already."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст. — «Прп. Михаила исп., еп. Синадского (821).»",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the day line gives the see, the grade «исп.» and the confessor whose Romanian, Greek and Serbian rows this folder already keeps on the same Julian day, and the name link heads him «Святитель Михаил Синадский (Фригийский), епископ, исповедник». `dates` IS UNCHANGED AND THE TWO BOOKS DISAGREE BY THREE YEARS: the folder holds 818 off the Охридски пролог, and both the Russian day line and the Russian life give 821 — «сослал святителя Михаила в заточение в город Евдокиаду, где исповедник скончался около 821 года». 821 lies outside the folder’s interval, and neither reading was chosen, widened or narrowed; both are in the paragraph. The life page lists no day but this one. THE DAY PAGE’S «Кондак преподобного Михаила» IS HIS AND NOT THE OTHER MICHAEL’S OF THE SAME DAY, and the ground is the text and not the heading: the heading calls him «преподобного», venerable, but the hymn addresses «архиерей всечестен» who overcame «еретическое противление» crying «иконе покланяюся Христове» — a hierarch who withstood iconoclasm, which the day’s other Michael, the «черноризец» of Edessa, was not and did not. What the Russian adds and the paragraph carries: the monastery on the Black Sea shore to which the patriarch Тарасий sent him, the empty copper vessel that gave water at the reapers’ thirst, the consecration by Тарасий to Synada, the regard of the emperors Nikephoros I and Michael I Rangabe, his presence at the Seventh Ecumenical Council at Nicaea in 787, Leo the Armenian’s turning out of the Orthodox bishops, his own answer to Leo, the exile to Eudocias, and his head in the Lavra of St Athanasius on Athos with part of his relics at Iviron. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -124,6 +139,22 @@
       },
       "english": {
         "text": "Risen like a great sun, thou dost light all men with the light of thy virtues and with the flashing of thy wonders, O bearer of wonders, thou who sharest the name of the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко архиерей всечестен и благочестия священнострадалец,/ прещения злоименитаго не убоявся,/ еретическое того противление победил еси,/ свободным гласом велегласно вопия:/ иконе покланяюся Христове и Пречистыя Того Матере.// Сего ради тя почитаем, Михаиле.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Кондак преподобного Михаила», глас 8 — the day prints two Michaels and this is his: the heading says «преподобного», but the text addresses a hierarch who overcame heretical opposition confessing the icon of Christ, which is this confessor bishop and not the Edessene monk of the same day",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most honoured hierarch and a sacred sufferer for piety, thou didst not fear the threatening of the ill-named one, but didst overcome his heretical opposition, crying out aloud with a free voice: I venerate the icon of Christ and of his most pure Mother. Therefore do we honour thee, O Michael.",
         "rendered": "site"
       }
     }

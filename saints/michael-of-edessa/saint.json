@@ -1,0 +1,60 @@
+{
+  "slug": "michael-of-edessa",
+  "display_name": "Michael of Edessa",
+  "names": [
+    {
+      "form": "Михаил Эдесский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name link and of both of its life pages for him, «Преподобномученик Михаил Эдесский», with the rank word left off. The day’s own line gives «Михаила черноризца», Michael the black-robed, without the city; the city is the calendar’s own and its second reading repeats it in prose, «происходил из города Эдессы (Месопотамия)». Measured against the gate’s own key function before the write: 'михаил эдесскии' has no other holder in the corpus, and neither does the display name. The bare «Михаил» was deliberately not stored, this corpus holding a great many of that name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "The century the day line prints for him, «Прмч. Михаила черноризца (IX).», and the century both of the calendar’s readings give: «в IХ веке был обезглавлен за исповедание веры во Христа» and «жил в IX веке». Neither page gives a year, and none was inferred; the reign the second reading sets the story in is named only by the queen Сеида and her husband and is not dated."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст. — «Прмч. Михаила черноризца (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. The entry’s link is an index, id1558, which serves two readings, a one-sentence notice and a full account. HIS PAGES LIST A SECOND DAY: «Дни памяти: 23 мая , 29 июля», and the short notice says «Память его совершается также 23 мая», which makes 29 июля the day the calendar reckons his first. This day page is the one that printed him, so the row stands here; the 29 июля is not thirteen days away and so is not the style conversion, and one row per church is the schema, so it is recorded here and he does not render on it. HE IS NOT THE OTHER MICHAEL OF THE SAME DAY: `michael-of-synada` is the confessor bishop of Synada, and the day page’s one hymn headed «Кондак преподобного Михаила» belongs to him and not to this monk, its text addressing a hierarch who withstood iconoclasm. NO `related` ROW WAS WRITTEN FOR HIS TEACHER: both readings make him the disciple of «святого Феодора Эдесского (память 9 июля)», which is a relation the source makes, but no folder in this corpus holds that man — `fk.mjs` returns no holder for «Феодор Эдесский» and `ls -d saints/theodore-of-edessa*` is empty — so there is nobody to link to, and this is reported to the author as a gap. The Lavra of St Sabbas, where he lived and was buried, is a house and not a companion. NO FOLDER WAS FOUND FOR HIM: `fk.mjs` returns no holder for «Михаил Эдесский» or for the display name, and `ls -d saints/michael-of-edessa*` is empty. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 5 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 5 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 June 2026, the civil day of this Julian 23 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "germanus-of-paris",
+  "display_name": "Germanus of Paris",
+  "names": [
+    {
+      "form": "Герман Парижский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru’s name page 14903, whose title is «Святитель Герман епископ Парижский, епископ Парижский» — the see printed TWICE, once without a comma and once after one, which is the page’s own duplication and not two titles. What is left when the rank word and the two repetitions of the office are taken off is these two words; the day’s own line gives the same in the genitive, «Германа , епископа Парижского». `fk.mjs` returns no holder for the form and none for the display name, and `ls -d saints/germanus*` lists five Germani, none of them of Paris."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 576,
+      "latest": 576,
+      "display": "576",
+      "basis": "traditional",
+      "note": "The year the day line prints for him: «Свт. Германа , епископа Парижского (576).» It is the whole of what either page gives; no year of birth appears, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Свт. Германа , епископа Парижского (576).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14903, prints the title and the line «День памяти: 28 мая» and nothing else at all — one day only, and no «26 января (Новомуч.)» marker, this being a sixth-century Western bishop and not a new martyr. So the calendar gives the see, the rank and the year, and nothing whatever besides: not a sentence of narrative, not the name of a king or a council. `office` is the bare «Bishop» per BRIEF-ADDENDUM §4; the see is in the display name and in the life. NO FOLDER WAS FOUND FOR HIM: `fk.mjs` returns no holder for «Герман Парижский» or for the display name, and `ls -d saints/germanus*` lists `germanus-companion-of-peregrinus`, `germanus-companion-of-zebinas`, `germanus-founder-of-eikosiphoinissa`, `germanus-kosolapov` and `germanus-maroules`, none of them of Paris. The day page prints thirteen hymns and none under his name. azbyka.ru was not read, and the Latin tradition his own church keeps him in was not read either."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 10 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 June 2026, the civil day of this Julian 28 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

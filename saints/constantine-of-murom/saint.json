@@ -11,6 +11,11 @@
       "form": "Κωνσταντίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιος Κωνσταντίνος και οι υιοί αυτού Μιχαήλ και Θεόδωρος οι Πρίγκιπες και Θαυματουργοί», with the rank words left off; his own head line on the life page is «Αγιος Κωνσταντινος»."
+    },
+    {
+      "form": "Константин Муромский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Святой блаженный князь Константин Муромский», with the three rank words stripped. The day’s own line gives «Константина (Ярослава)» with the city attached to the whole company, «Муромских чудотворцев», so the two-word form is the name link’s and not assembled. `fk.mjs` returned NONE for «константин муромскии» before the write, and the bare «Константин» was deliberately NOT stored: it folds to «константин», which stands unread in the gate with five holders, and this folder is not one of them, so the bare form would have widened an unread fold."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст. — «Блгв. кн. Константина (Ярослава) (1129) и чад его Михаила и Феодора , Муромских чудотворцев (XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and not a name match: the day line gives his secular name in parenthesis, «Константина (Ярослава)», the city, the year 1129 this folder’s `dates` already holds, and the same two sons. The calendar serves two readings for the company, life6681 and life1117, each printed under all three of the indexes the entry links. `dates` is unchanged: the folder holds 1129 off saint.gr and both Russian readings give «В 1129 г. князь Константин скончался». `prince` and `wonderworker` already stand — the line’s own «Блгв. кн.» and «чудотворцев» — and neither was altered. THE CALENDAR’S TWO READINGS DIFFER ON TWO POINTS and both are in the paragraph: life6681 has the pagans come to his house threatening him with death and be so struck by his coming out with the icon of the Mother of God that they themselves wished to be baptised, and says the baptism of the men of Murom was done solemnly, with the same rites as under Vladimir at Kiev; life1117 makes the icon the Murom icon of the Mother of God in particular and has the baptism done in the river Oka. life1117 also dates the three to the eleventh and twelfth centuries, «жили в XI - XII веках», which is wider than the line’s own «(XII)» and than the 1129 the folder holds; nothing was widened. THE SECULAR NAME «Ярослав Святославич» WAS NOT MADE A NAME FORM: it is not a saint’s name and the calendar prints it only in parenthesis and in the first sentence of life6681. `michael-of-murom` and `theodore-of-murom` already stood as `related` rows on this folder and nothing was added here; the two brothers were made `related` to EACH OTHER in the same batch, on their own rows, the line itself calling them «чад его» and life6681 «сыновьями». azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -61,5 +76,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Константин днесь весело ликовствует,/ предстоя престолу Святыя Троицы,/ видя отечествие свое, мастию духовною сияющее;/ емуже последоваша Михаил и Феодор, сынове его,/ и молятся вси трие вкупе о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст., «Тропарь благоверного князя Константина и чад его Михаила и Феодора», глас 4 — the joint troparion of the three of them, naming all three; the three are the whole of the company the day’s line names and all three stand on this day, so it is copied to each of the three folders and to no other",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today Constantine keeps glad festival, standing before the throne of the Holy Trinity and seeing his own country shining with spiritual myrrh; and Michael and Theodore, his sons, followed after him, and all three together pray for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Изрядному воеводе и правоверному князю Константину с сынома его вкупе/ отечество его, хваляся, вопиет,/ имеющее его начальника и заступника,/ яко избавльшееся им от прелести и скверны идольския./ Сего ради вопием ему сице:/ радуйся, княже Константине преблаженне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 мая ст. ст., «Кондак благоверного князя Константина и чад его Михаила и Феодора», глас 8 — the joint kontakion of the three of them, addressing the father by name and the sons as «с сынома его вкупе»; copied to each of the three folders and to no other",
+        "url": "https://days.pravoslavie.ru/Days/20260521.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To the excellent captain and right-believing prince Constantine, together with his two sons, his own country cries aloud in boasting, as having him for its head and its protector, and as being delivered by them from the delusion and the defilement of idols. Therefore do we cry to him thus: Rejoice, O most blessed prince Constantine.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

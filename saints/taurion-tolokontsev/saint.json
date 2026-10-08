@@ -1,0 +1,61 @@
+{
+  "slug": "taurion-tolokontsev",
+  "display_name": "Taurion (Tolokontsev)",
+  "names": [
+    {
+      "form": "Таврион (Толоконцев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9881, «Таврион (Толоконцев), инок, прмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Прмч. Тавриона (1939).» THE BARE «Таврион» WAS DELIBERATELY NOT STORED, and the reason is a folder that already exists: `taurion`, the martyr of Amphipolis of Macedonia, stores «Таврион» as its Serbian form, so the bare string would have created a fold where there is none. Measured against the gate’s own key function before the write: 'таврион толоконцев' has no other holder, and neither does the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Прмч. Тавриона (1939).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 мая ст. ст. — «Прмч. Тавриона (1939).»",
+        "url": "https://days.pravoslavie.ru/Days/20260525.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 9881, prints the title «Таврион (Толоконцев), инок, прмч.» and the line «Дни памяти: 26 января (Новомуч.) , 25 мая» and nothing else at all. What it gives that the day line does not is the surname «Толоконцев» and the degree «инок», monk. `new-martyr` WAS WRITTEN AND THE GROUND IS READ: this calendar marks its own twentieth-century martyrs by giving them the general commemoration of the new martyrs and confessors of Russia on 26 января, and his page carries that day beside his own. NO `office` WAS WRITTEN: «инок» is the monastic state itself and `monk` is in `types`; no word in the four locale packs renders it as an office without adding a degree the calendar does not give. HE IS NOT `taurion`, the martyr of Amphipolis of Macedonia whom this corpus keeps on the Julian 7 November with the other three calendars — a different century, a different country, a different company, and nothing read links them. NO FOLDER WAS FOUND FOR HIM: `fk.mjs` returns no holder for «Таврион (Толоконцев)» or for the display name, and `grep -rl 'Толоконцев' saints/*/saint.json` returns nothing. The day page prints two hymns, both the Forerunner's, and none under his name. azbyka.ru was not read, and it is the source that would give him a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 7 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 7 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 June 2026, the civil day of this Julian 25 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

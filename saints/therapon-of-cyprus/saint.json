@@ -16,6 +16,11 @@
       "form": "Терапонт",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 25. мај ст. ст., „Свештеномученик Терапонт епископ кипарски“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „кипарски“ the see, which the display name already carries. Strip them and the bare personal name is what is left. **Measured, and the fold is the one to watch on this name**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Терапонт», so this is the first folder to hold it — but **the Prologue prints the identical string for a different man on the Julian 27 May**, the bishop of Sardis, so a later reader working that day will fold onto this form and must keep `therapon-of-sardis` apart from `therapon-of-cyprus` by the see and not by the name. That is said here so the fold is a known one when it happens."
+    },
+    {
+      "form": "Ферапонт Кипрский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2276, «Святитель Ферапонт Кипрский, епископ, сщмч.», with the rank word before the name and the two after it left off. THE RUSSIAN AND THE SERBIAN SPELL THE SAME NAME DIFFERENTLY and both are now stored: this folder already held «Терапонт» as its Serbian form off the Ohrid Prologue, and the Russian writes the Greek theta as ф, «Ферапонт» — the split BRIEF-RUSSIAN §5 describes, and a reason the two forms do not fold together. `fk.mjs` returned NONE for «Ферапонт Кипрский» before the write."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 мая ст. ст. — «Сщмч. Ферапонта , еп. Кипрского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260525.html",
+        "year": 2026
+      },
+      "note": "The identification is the day and the see: the line gives the island and the grade this folder already holds, and the folder’s Serbian row stands on this same Julian 25 May off the Охридски пролог, its Greek and Romanian rows on 14 Μαΐου / 14 mai. THE RUSSIAN CONTRADICTS THE FOLDER’S `dates` BY FOUR HUNDRED YEARS AND `dates` WAS NOT TOUCHED. The folder carries a `floruit` of «7th–8th century», `basis: \"inferred\"`, reasoned by the Greek page from his acting against theopaschism and against iconoclasm and from Andrew of Crete’s encomium, Andrew having died in 740. The Russian line prints «(IV)» and its life says flatly «Во время гонения Диоклетиана (284–305) святитель Ферапонт мужественно исповедал Имя Христово и скончался мученической смертью». The two cannot both be right, and THIS MAY BE TWO DIFFERENT MEN rather than one man badly dated: a bishop who opposed iconoclasm cannot have died under Diocletian, and the only thing the two accounts plainly share is the see and the translation of the relics to Constantinople. Nothing was replaced, widened or narrowed, and both readings are now in the life. **This is the biggest open question of the block and one the author should settle.** What the Russian adds and the paragraph carries: the monastic life before the see, the translation of the relics in 806 because of the danger of a Saracen invasion, the myrrh that began to flow from them on the voyage and the travellers saved from a storm at his prayer, the laying of them in the church of the icon of the Mother of God Eleousa, and the second church built in his own name the same year. The day page prints two hymns, both the Forerunner’s, and none under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",

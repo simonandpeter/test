@@ -30,7 +30,8 @@
       "feast": {
         "day": 3,
         "month": 4,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The same calendar keeps a feast of her relics on the Julian 29 May and names it outright: its page for that day prints «Мц. Феодосии девы, Тирской (ок. 307-308).» and the reading behind that line is titled «Перенесение мощей мученицы Феодосии Тирской» and says «29 мая празднуется память перенесения ее мощей в Константинополь и Венецию» — the translation of her relics to Constantinople and to Venice (https://days.pravoslavie.ru/Days/20260529.html and https://days.pravoslavie.ru/Life/life1166.htm, read 8 October 2026). One row per church is the schema, so the translation is recorded here and she does not render on it. That day page prints a hymn whose heading carries her own epithet, «Ин кондак преподобномученицы Феодосии девы, Тирской» (глас 4), and it was NOT copied into this folder, the row standing on another day; the heading also gives her the rank «преподобномученицы», which belongs to the other Theodosia the same day keeps, the nun of Constantinople, and the mixture is the calendar's own."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 апреля ст. ст. — «Мц. Феодосии девы (307-308).»",

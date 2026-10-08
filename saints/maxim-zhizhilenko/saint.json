@@ -1,0 +1,63 @@
+{
+  "slug": "maxim-zhizhilenko",
+  "display_name": "Maxim (Zhizhilenko)",
+  "names": [
+    {
+      "form": "Максим (Жижиленко)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 15017, «Святитель Максим (Жижиленко), епископ Серпуховской, сщмч.», with the rank word before the name and the see and rank after it left off. The day’s own line gives the name without the surname — «Сщмч. Максима , еп. Серпуховского (1931).» THE BARE «Максим» WAS DELIBERATELY NOT STORED: it folds to «максим», which the gate carries unread with seven holders as a real reading, and a bare forename there would widen a fold this reader may not touch. Measured against the gate’s own key function before the write: 'жижиленко максим' has no other holder in the corpus, and neither does the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "hieromartyr",
+    "new-martyr"
+  ],
+  "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Максима , еп. Серпуховского (1931).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 мая ст. ст. — «Сщмч. Максима , еп. Серпуховского (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260522.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 15017, prints the title «Святитель Максим (Жижиленко), епископ Серпуховской, сщмч.» and the line «Дни памяти: 26 января (Новомуч.) , 22 мая» and nothing else at all. What it gives that the day line does not is the surname «Жижиленко» and the rank word «Святитель». `new-martyr` WAS WRITTEN AND THE GROUND IS READ: this calendar marks its own twentieth-century martyrs by giving them the general commemoration of the new martyrs and confessors of Russia on 26 января, and his page carries that day beside his own. That second day is the synaxis and not a feast of his own, so one row per church stands and he does not render on it. `office` IS THE BARE «Bishop» AND NOT THE SEE: BRIEF-ADDENDUM §4 records that a see-bearing office costs four locale translations a reader may not invent, so Серпуховской — Serpukhov — is in the display-name discussion and in the life and not in `office`. NO FOLDER WAS FOUND FOR HIM: `fk.mjs` returns no holder for «Максим (Жижиленко)» or for the display name; `ls -d saints/maxim-z*` is empty and `grep -rl 'Жижиленко' saints/*/saint.json` returns nothing. The day page prints seven hymns, one for the martyr Basiliscus, three for James of Borovichi and three for John-Vladimir, and none under his name. azbyka.ru was not read, and it is the source that would give him a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 4 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 4 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 June 2026, the civil day of this Julian 22 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

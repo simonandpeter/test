@@ -1,0 +1,61 @@
+{
+  "slug": "heraclius-motyakh",
+  "display_name": "Heraclius (Motyakh)",
+  "names": [
+    {
+      "form": "Ираклий (Мотях)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9867, «Ираклий (Мотях), схимонах, исповедник, прп.», with the three rank words after the comma left off. The day’s own line gives the name without the surname — «Прп. Ираклия , исп. (1936).» `fk.mjs` returns no holder for the form or for the display name, and `grep -rl 'Мотях' saints/*/saint.json` returns nothing. THE BARE «Ираклий» WAS DELIBERATELY NOT STORED: the gate carries an unread fold `? \"ираклије\"` over `heraclius-of-athens` and `heraclius-of-illyria`, named by the 15–19 May reader, and a bare Russian forename here would have been a second string in the same neighbourhood."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1936,
+      "latest": 1936,
+      "display": "1936",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Прп. Ираклия , исп. (1936).» No year of birth appears anywhere: the life page the calendar gives him is the company life of the Verny ascetics, which says of them all «не представляется возможным с точностью установить биографические данные Казахстанских подвижников», that their biographical data cannot now be established with certainty. None was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Прп. Ираклия , исп. (1936).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The day’s tenth entry. THE LIFE THE CALENDAR LINKS IS NOT HIS BUT A COMPANY’S: life4747 is headed «Преподобномученики Верненские (Алма-Атинские ) Серафим, Феогност, Пахомий, Анатолий, Ираклий, Виктор, Евдокия» — the venerable-martyrs of Verny, seven names of which his is the fifth — and the whole of what it says of him by name is that the Glinsk monks who came to the Holy Trinity missionary monastery on Lake Issyk-Kul «сблизились с монахами Пахомием и Ираклием», became close to the monks Pachomius and Heraclius. The day keeps him alone and the company's own day is not this one, so nothing of the other six was written into this folder and no `related` row was made: the page makes them fellow monks of one house, which is a relation, but it names this day for him alone and this reader did not read the company's day. `new-martyr` WAS DELIBERATELY NOT WRITTEN although his name page carries «26 января (Новомуч.)»: the line, the name page and the company page all call him исповедник and схимонах and none of them calls him a martyr, and the 26 января synaxis is of the new martyrs AND CONFESSORS of Russia, so the marker places him in it without making him a martyr. That is a reading and the author may reverse it. `office` was NOT written: «схимонах», schemamonk, is a degree no word in the four locale packs renders — «Schema-archimandrite» is the nearest the corpus holds and is a different degree — so it is in the life and `monk` is in `types`. NO FOLDER WAS FOUND FOR HIM: the two Heraclii this corpus keeps are of Athens and of Illyria. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 10 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 June 2026, the civil day of this Julian 28 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

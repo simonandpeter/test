@@ -5,29 +5,52 @@
   "types": [
     "martyr",
     "new-martyr",
-    "soldier"
+    "soldier",
+    "physician"
   ],
   "names": [
     {
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Φιλόσοφος ο Ιερομάρτυρας και οι συν αυτώ Βόρις και Νικόλαος οι Μάρτυρες», with the rank words left off."
+    },
+    {
+      "form": "Николай (Орнатский)",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Николай (Орнатский), мч.», with the rank abbreviation left off; the day’s own line gives the bare «Николая». `fk.mjs` returned NONE for «николаи орнатскии» before the write, and the bare «Николай» was deliberately not stored, this corpus holding a great many of that name."
     }
   ],
   "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "The year the calendar states: «Его сын Николай (родился в 1886 году) — военный врач, находился в составе 9-й Русской Армии». The folder had no birth before this row."
+    },
     "death": {
       "earliest": 1918,
       "latest": 1918,
       "display": "1918",
       "basis": "attested",
-      "note": "saint.gr says he was arrested with his father on 9 August 1918 and shot with him: «Εκτελέσθηκαν διά τουφεκισμού». His own heading on the page is «Αγιος Νικολαος ο Μαρτυρας (; - 1918)», with no year of birth."
+      "note": "The year the Russian day line prints for him with his father and brother, and the year this folder already held from saint.gr. No day was written: the calendar gives the shooting as a guess, «предположительно около 30 октября 1918 года»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст. — «Сщмч. Философа пресвитера и сыновей его мчч. Бориса и Николая (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "note": "The identification is the line’s own: it names him a son of the presbyter Philosophos, which is what this folder’s display name says. The calendar gives the three of them one life, life4927. `dates` GAINED A BIRTH IT DID NOT HAVE: «Его сын Николай (родился в 1886 году) — военный врач, находился в составе 9-й Русской Армии» — born in 1886. `physician` WAS ADDED on the same sentence: «военный врач», a military doctor, which is read and not inferred, and the existing `soldier` was left standing beside it because the army he served in is the sentence’s other half. HE IS THE ONE OF THE TWO BROTHERS WHOM THE CALENDAR DOES NOT CALL A SOLDIER: his brother is a staff captain of an artillery brigade, and he is the army’s doctor; `soldier` on this folder came from another source and this reader did not remove it. The death 1918 is unchanged and no day was written, the calendar guessing the date of the shooting and the place twice. HIS PAGES LIST THREE DAYS, «26 января (Новомуч.) , 31 мая , 8 июня (Петерб.)»; both the others are notes. `philosophos-ornatsky` and `boris-son-of-philosophos` already stand as `related` rows. azbyka.ru was not read."
     },
     {
       "church": "romanian",

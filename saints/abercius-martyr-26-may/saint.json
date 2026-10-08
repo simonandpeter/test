@@ -11,6 +11,11 @@
       "form": "Αβέρκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Αβέρκιος», with the rank word left off."
+    },
+    {
+      "form": "Аверкий",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link, «Аверкий, мч.», with the rank abbreviation left off; the day’s own line gives the same in the genitive. The calendar prints no epithet or surname for him anywhere, so the form is bare of necessity. `fk.mjs` returned NONE for «аверкий» before the write, so this folder is its only holder and no fold is created."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст. — «Мчч. Аверкия и Елены (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "note": "The identification is the day and the company: the line pairs him with Helen on the day this folder’s display name carries, and its Romanian and Greek rows keep the same pair on the same day. The calendar gives him, his sister and the apostle Alphaeus ONE page, life1141, and what it says of him is one sentence: «За исповедание веры в Иисуса Христа святой Аверкий был привязан нагим среди пчельника и мученически скончался от укусов пчел» — tied naked in the middle of a beehive yard for confessing the faith in Jesus Christ, and dying a martyr of the bees’ stings. `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder had no `dates` object, and the century is the one the line itself prints, «(I)». `alphaeus-the-apostle` and `helen-martyr-26-may` already stood as `related` rows and the Russian bears both out, calling the two of them «по преданию … детьми святого апостола Алфея». azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -64,5 +79,14 @@
   "related": [
     "alphaeus-the-apostle",
     "helen-martyr-26-may"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century the Russian day line prints for the entry: «Мчч. Аверкия и Елены (I).» The folder had no `dates` object before this row. The calendar gives no year and no reign; the century is the whole of what it states."
+    }
+  }
 }

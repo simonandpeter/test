@@ -11,6 +11,11 @@
       "form": "Φαύστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, which names the whole company, and out of the life page's own head line for him or her; the rank words are left off."
+    },
+    {
+      "form": "Фавст Галатийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2149, «Фавст Галатийский, мч.», with the rank abbreviation left off; the day line gives the bare «Фавста», in the genitive, without the province. `fk.mjs` returned NONE for the form before the write, and the bare «Фавст» was deliberately not stored."
     }
   ],
   "related": [
@@ -48,8 +53,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "He is the seventh name of the line and this folder is the only Faustus this corpus holds in this company. THE CALENDAR NAMES A FAUSTUS TWICE ON ONE PAGE AND DOES NOT SAY WHETHER IT MEANS ONE MAN OR TWO: life1135 says «Святые мученики Феодор и Фавст вместе со многими другими были сожжены», and three sentences later lists among «12-ти трибунов» the names «Фавста, Фиста, Маркелла, Феодора, Мелетия, Сергия, Маркеллина, Филикса, Фотина, Феодориска, Меркурия, Дидима». The day page carries one name link for Faustus, 2149. The row is written on this folder for both readings and the ambiguity is the calendar’s. `dates` is unchanged: the folder holds «between 218 and 222» and the Russian gives the same reign and the line’s «(ок. 218)». azbyka.ru was not read. THE FOLD «φαυστοσ» stands unread in the gate with six holders — `faustus-companion-of-januarius`, `faustus-disciple-of-dionysius-of-alexandria`, `faustus-martyr-16-july`, `faustus-martyr-6-february`, `faustus-of-the-twelve-tribunes`, `faustus-son-of-dalmatus` — and was not touched: the form written here is Cyrillic and folds elsewhere."
     },
     {
       "church": "romanian",

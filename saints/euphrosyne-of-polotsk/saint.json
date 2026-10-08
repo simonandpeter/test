@@ -17,6 +17,11 @@
       "form": "Ефросинија Полоцка",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 23. мај ст. ст., „Преподобна Ефросинија кнегиња Полоцка“ — Преподобна is the `venerable` this corpus puts in `types` and кнегиња the `princess` added with this upgrade; strip the two and „Ефросинија Полоцка“ is left, the personal name with the place that distinguishes her. **Полоцка is kept because it is what tells her from the other five of her name**, and it was measured: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for both «Ефросинија» and «Ефросинија Полоцка», while `ls saints | grep euphrosyn` returns Alexandria, Lesvos, Mega Spileo, Suzdal and the cook beside her. **A bare «Ефросинија» would have been the thinner form and is refused for that reason**, the heading printing more than the bare name. The Greek form on this folder, «Ευφροσύνη», is the bare one."
+    },
+    {
+      "form": "Евфросиния",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Преподобная Евфросиния, игумения Полоцкая», with the rank word before the name and the office and city after it left off — «игумения Полоцкая» being the office with its place and not an epithet of the name. The day’s own line gives the same, «Евфросинии , игумении Полоцкой». The calendar prints no other form of her name, so the form is bare of necessity; `fk.mjs` returned NONE for «евфросиния» before the write, so it is the only holder and no fold is created."
     }
   ],
   "dates": {
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст. — «Прп. Евфросинии , игумении Полоцкой (1173).»",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the day line gives the city, the office of abbess and the year 1173 this folder’s `dates` already holds, and the folder’s Greek row keeps her on the same Julian day. The entry’s link is an index, id2488, serving two readings, a very long one and a short one. `dates` is unchanged: the folder holds a birth of about 1105 and a death of 1173 off saint.gr, and the short reading says «принять мирную кончину 24 мая 1173 года», which agrees in the year. WHAT THE RUSSIAN ADDS IS A DAY THAT IS NOT THIS FEAST’S: it dates her repose 24 мая while keeping her on 23 мая, and says nothing about the difference; it is in the paragraph and nothing was moved. HER PAGES LIST A SECOND DAY: «Дни памяти: 23 мая , 8 июня (Белорус.)», which the calendar itself marks as the Belarusian local commemoration; it is not thirteen days from this one and so is not the style conversion. One row per church is the schema, so it is recorded here and she does not render on it. `abbess` IS NOT IN THE `types` VOCABULARY and `Abbess` is absent from the four locale packs (BRIEF-ADDENDUM §4), so the office the line gives her is in the paragraph and not in a field; `venerable`, `monastic` and `princess` already stand. What the Russian adds and the paragraph carries: her name in the world, Предслава, her descent from Vladimir and her father the Polotsk prince Георгий (Святослав) Всеславич, the suitors refused, the flight to the abbess Романа her uncle’s widow and the tonsure at twelve, the enclosure in the «голубец» by the Sophia cathedral under bishop Илия and the copying of books, the angel’s three appearances and the same word to Илия, the founding at Сельцо about 1128 and the taking of nothing but her books, her sister Градислава and cousin Звенислава tonsured there as Евдокия and Евпраксия, the girls’ school, the cathedral of 1161 still standing, the men’s house of the Mother of God and the copy of the Ephesus icon sent by the patriarch Лука of Constantinople, the pilgrimage with her nephew Давид and her sister Евпраксия, the death in the Russian monastery of the Mother of God at Jerusalem, the translation to the Caves by 1187 and to Polotsk in 1910, the service composed in 1893 and the akathist of 1900. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -82,5 +97,87 @@
   },
   "related": [
     "nicholas-presbyter-martyr-1934"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Подражающи дванадесятолетна дванадесятолетну Христу,/ учившему во святилищи Божию слову,/ последовала еси, Евфросиние./ Славу временную и земнаго обручника оставльши/ и вся мирская презревши,/ краснейшему паче всех Христу себе уневестила еси,/ крест вземши, путем ангельскаго жития шествующи/ и многия к Нему наставляющи,/ во благоухании мира в Небесный Чертог востекла еси,/ идеже моли, Егоже возлюбила еси,/ о чтущих благочестно память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Тропарь преподобной Евфросинии, княжны и игумении Полоцкой», глас 4 — proper to her, and it names her",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being twelve years old, thou didst follow the twelve-year-old Christ, who taught the word of God in the temple, O Euphrosyne. Leaving the glory of this passing age and an earthly betrothed, and despising all that is of the world, thou didst betroth thyself to Christ, who is fairer than all; and taking up the cross, walking the way of the angelic life and guiding many to him, thou didst rise up in the fragrance of myrrh to the heavenly bridal chamber. There pray thou to him whom thou didst love, for those who honour thy memory with reverence.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Богатство свое нищим расточивши/ и славу княжескую ни во что же вменивши,/ обручника временнаго, красная дево, возгнушалася еси/ и, уневестившися Жениху Христу,/ Тому, якоже вено, чистоту душевную и телесную принесла еси, Евфросиние./ Емуже ныне в веселии предстоя,/ поминай нас, чтущих память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Ин тропарь преподобной Евфросинии Полоцкой», глас 4 — the second troparion the day page prints for her, proper to her and naming her",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having scattered thy riches among the poor and counted thy princely glory as nothing, thou didst turn away in loathing, O fair maiden, from a betrothed of this passing age; and being betrothed to Christ the Bridegroom, thou didst bring unto him, as a dowry, purity of soul and of body, O Euphrosyne. Standing now before him in gladness, remember us who honour thy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Избранней Богом от самаго рождения/ и признанней на служение Ему,/ в чине ангельстем Господеви послужившей свято,/ и преподобно пожившей,/ и ныне с Небесными силами Господа восхваляющей,/ о нас же, грешных, пред Господем ходатайствующей,/ с радостию и любовию воззовем:/ радуйся, Евфросиние, невесто Христова всечестная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Кондак преподобной Евфросинии Полоцкой», глас 8 — proper to her, and it names her",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To her who was chosen by God from her very birth and marked out for his service, who served the Lord in holiness in the angelic order and lived as one of the saints, who now praises the Lord with the hosts of heaven and intercedes before him for us sinners, let us cry with joy and with love: Rejoice, O Euphrosyne, all-honoured bride of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Чистое свое девство и честное/ милостынею, яко светильник елеем, украсившую/ и с мудрыми девами в пресветлый чертог Христов вшедшую,/ Евфросинию славную ублажим/ и, припадше к честным ея мощем, насладимся ея благоухания/ и умильне к ней возопием:/ яко имея дерзновение ко Христу Богу/ моли избавитися зловония страстей и спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Ин кондак преподобной Евфросинии Полоцкой», глас 8 — the second kontakion the day page prints for her, proper to her and naming her",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us bless the glorious Euphrosyne, who adorned her pure and honourable virginity with almsgiving as a lamp is adorned with oil, and who entered with the wise virgins into the bright bridal chamber of Christ; and falling down before her honoured relics let us delight in her fragrance and cry to her with compunction: since thou hast boldness before Christ God, pray that we may be delivered from the stench of the passions, and that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Превитавши от земли Полотския,/ отечество свое, яко Авраам, наследовавши, Евфросиние,/ землю высоку сообразну — Горний Сион,/ темже тело твое душевным благомужествием, страданием постным/ яко жертву приносила еси/ милосердием Своим, Давшему Себе за человеки Жертву благоприятну.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Ин кондак преподобной Евфросинии Полоцкой», глас 4 — the third kontakion the day page prints for her, proper to her and naming her",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having journeyed out from the land of Polotsk, thou didst inherit, as Abraham did, a fatherland of thine own, O Euphrosyne, a high land after its likeness, the Sion that is above; and so thou didst offer thy body, by courage of soul and by the suffering of the fast, as a sacrifice to him who in his own mercy gave himself for men as a sacrifice well-pleasing.",
+        "rendered": "site"
+      }
+    }
   ]
 }

@@ -17,6 +17,11 @@
       "form": "Јован Устјужски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Свети Јован Јуродиви, Устјужски чудотворац“ — Свети is not a rank, Јуродиви is the `fool-for-christ` this corpus puts in `types`, and чудотворац is the `wonderworker` added with this upgrade. **Јуродиви stands between the two words that are kept, and taking it out is a reading that is said here rather than hidden**: it is a rank and nothing else, the corpus composes it, and what is left on either side of it — „Јован … Устјужски“ — is the name and the place that distinguishes him. **Устјужски is kept because without it this would be a tenth bare «Јован»**, measured: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јован Устјужски» and nine holders of a bare «Јован», the fold `john-of-gothia` had to join on 19 May, `john-vladimir` was kept out of on 22 May and `john-psychaites` was kept out of on 26 May. The Greek form on this folder, «Ιωάννης», is the bare one."
+    },
+    {
+      "form": "Иоанн Устюжский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1022, «Преподобный Иоанн Устюжский, блаженный, Христа ради юродивый», with the rank word before the name and the three after it left off; the day’s own line gives the same city in the genitive. `fk.mjs` returned NONE for «иоанн устюжскии» before the write, and the bare «Иоанн» was deliberately not stored — that string heads the largest fold in this corpus."
     }
   ],
   "dates": {
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr makes him a saint of Ustyug, so the Russian calendar is very likely to keep him, and this row is the honest state of what was read and not a statement that it does not."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст. — «Блж. Иоанна , Христа ради юродивого, Устюжского (1494).»",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the city and the grade of fool for Christ this folder already holds and the year 1494 its `dates` already hold, and its Greek and Serbian rows keep him on the same Julian day. `dates` is unchanged, and the Russian adds the day, «29 мая 1494 г.», which is this feast’s own day. THE RUSSIAN GIVES AN AGE AT DEATH AND NO BIRTH WAS DERIVED FROM IT: «В восемнадцатилетнем возрасте мирно почил о Господе 29 мая 1494 г.» — he died at eighteen, which would put his birth about 1476; an age at death is not a year of birth and none was written. The entry’s link is an index, id1022, serving two readings; the first is headed for him but runs under the title «Прокопий и Иоанн Устюжские», the two fools of that city together. What the Russian adds and the paragraph carries: the village of Pukhovo near Ustyug, the fasting of his young years — nothing at all on Wednesdays and Fridays, bread and water on the other days, the nights without sleep — the torn rags and the bare feet in every season and the rest on a heap of dung, the live coals he stirred with his hands in the oven and lay down on unharmed, the healing of Мария the wife of the Ustyug prince Феодор Красный from a fever by a word, and the victory over the Polish and Lithuanian invaders at Dmitrov in 1610 attributed to his prayers. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -72,5 +87,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Наготою телесною и терпением/ обнажил еси вражия коварствия,/ обличая неподобное его деяние,/ зельне стражда солнечный вар/ и нуждныя великия студени мраза,/ и огня не чул еси,/ Божиею помощию покрываемь,/ Иоанне премудре,/ моли о верою творящих память твою честно/ и усердно притекающих к раце мощей твоих,/ избавитися от бед и падения избежати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст., «Тропарь блаженного Иоанна, Христа ради юродивого, Устюжского», глас 5 — proper to him, and it names him and the fire of his own life",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the nakedness of thy body and by thy patience thou didst strip bare the wiles of the enemy, rebuking his unseemly work; sorely enduring the burning of the sun and the hard great cold of the frost, thou didst not feel the fire either, being covered by the help of God, O most wise John. Pray for those who keep thy memory with faith and honour and run with zeal to the shrine of thy relics, that they may be delivered from troubles and may escape falling.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Вышния красоты желая,/ нижния сладости телесное ядение тщательно оставил еси,/ нестяжанием суетнаго мира возлюбил еси ангельское житие,/ преходя скончався, Иоанне блаженне,/ с нимиже моли Христа Бога непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст., «Кондак блаженного Иоанна, Христа ради юродивого, Устюжского», глас 8 — proper to him, and it names him",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the beauty on high, thou didst carefully leave the bodily eating of the sweetness below, and by owning nothing of the vain world thou didst love the angelic life; and passing over thou didst make thine end, O blessed John. Pray thou with them unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Иоанне премудре,/ земныя славы не возлюбив,/ того ради яко неистов ся творя,/ желая Царство Небесное наследовати,/ ударения и укорения приемля,/ наготу и зной терпя,/ тем ныне со Ангелы ликуеши,/ моли Христа Бога о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 мая ст. ст., «Ин кондак блаженного Иоанна, Христа ради юродивого, Устюжского», глас 1 — the second kontakion the day page prints for him, proper to him and naming him",
+        "url": "https://days.pravoslavie.ru/Days/20260529.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O most wise John, not loving earthly glory, thou didst for that cause make thyself as one out of his senses, desiring to inherit the kingdom of heaven; and taking blows and reproaches, bearing nakedness and heat, thou now keepest festival with the angels. Pray thou to Christ God for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

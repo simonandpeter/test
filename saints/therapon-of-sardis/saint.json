@@ -12,6 +12,11 @@
       "form": "Терапонт",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 27. мај ст. ст., „Свештеномученик Терапонт, епископ сардијски“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there, and „сардијски“ the see, which `office` and the display name both already carry. **This is the deliberate second holder of a fold named in advance**: `foldchk.py` returned `NO FOLDER HOLDS THIS FORM` for «Терапонт» earlier on 5 October 2026, before `therapon-of-cyprus` was written, and now returns that folder, because the Prologue prints the same bare name for the bishop of Cyprus on its 25 May and for the bishop of Sardis on its 27 May. **There is no fuller form to prefer on either**: each heading gives the name and then the see, and a see is not part of a stored form. The two are told apart by their days, their sees and their `office`. The Romanian form on this folder, «Terapont», is the same bare name."
+    },
+    {
+      "form": "Ферапонт Сардийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Святитель Ферапонт Сардийский, епископ, сщмч.», with the rank word before the name and the two after it left off. THE RUSSIAN AND THE SERBIAN SPELL THE SAME NAME DIFFERENTLY and both now stand on this folder: «Терапонт» (sr, the Ohrid Prologue) and «Ферапонт» (ru), the Russian writing the Greek theta as ф — the same split as on `therapon-of-cyprus` two days earlier in this branch. `fk.mjs` returned NONE for «Ферапонт Сардийский» before the write."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст. — «Сщмч. Ферапонта , еп. Сардийского (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the see and the grade this folder already holds, and its Romanian and Serbian rows keep him on the same Julian day. `dates` is unchanged: the folder holds 259 off the Охридски пролог, which places his death under Valerian, and the Russian line prints «(III)» and its life says «пострадал за Христа в III веке», which contains it. THE TWO BOOKS NAME TWO DIFFERENT PERSECUTORS and neither was written into a field: the Prologue puts him under the emperor Valerian, the Russian makes the judge a governor named Юлиан and names no emperor at all. Both are in the paragraph. The life page lists no day but this one. What the Russian adds and the paragraph carries: the place of Sardis «в малоазийской области Лидии», the pagan Greeks he enlightened and baptised, his declaring himself a Christian bishop before the governor, the long starving in prison, the marches in irons to Synaon in Phrygia and to Ancyra and the torture in both, the stretching out crosswise on the ground by the river Astala tied to four stakes, the end in the bishopric of Satala under the metropolis of Sardis, and the dry stakes which, soaked with his blood, put out green shoots and grew into great trees whose leaves healed many. azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Έλενα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Οσία Έλενα του Ντιβέεβο», with the rank word left off. The life page gives her full name in the world: «Η Έλενα Βασίλιεβνα Μαντούροβα»."
+    },
+    {
+      "form": "Елена (Мантурова) Дивеевская",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 14263, «Елена (Мантурова) Дивеевская, прмц.», with the rank abbreviation left off. The parenthesis is the calendar’s own and holds her family name; the day’s own line gives «Елены Дивеевской», without it. `fk.mjs` returned NONE for «дивеевская елена мантурова» before the write. THE BARE «Елена» WAS NOT STORED: it is the fold key this branch wrote on 05-21 over `helen-martyr-1943` and `helen-the-empress`, and this is the third folder in the branch whose bare Helen was withheld."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Прп. Елены Дивеевской (1832).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives Diveyevo, which is this folder’s display name, and the year 1832 its `dates` already hold, and its Greek row keeps her on the same Julian day. `dates` is unchanged. THE CALENDAR GIVES HER NO LIFE PAGE: her line carries a link to her name, 14263, and none to a reading. What the name link gives that the day line does not is her surname, «Елена (Мантурова) Дивеевская, прмц.»; the day page prints no hymn under her name. THE FORM STORED IS NOT A BARE FORENAME, and that is why it could be stored at all: it is the name link's whole string less the rank, «Елена (Мантурова) Дивеевская», which is three words and not a bare forename, so it does NOT touch the fold key «елена» this branch wrote on 05-21. THE NAME LINK'S RANK ABBREVIATION CONTRADICTS THE DAY LINE'S and neither was written into `types`: the line says «Прп.», venerable, which this folder already holds, and the name page says «прмц.», venerable-martyr, which would make her a martyr of 1832 — a thing nothing else on either page supports. azbyka.ru was not read."
     },
     {
       "church": "romanian",

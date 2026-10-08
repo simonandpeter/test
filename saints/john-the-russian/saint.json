@@ -6,11 +6,17 @@
       "form": "Ioan Rusul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 mai, «Sfântul Mărturisitor Ioan Rusul»."
+    },
+    {
+      "form": "Иоанн Русский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1010, «Святой Иоанн Русский, исповедник», with the rank word before the name and the rank after it left off; the day’s own line gives the same two words. `fk.mjs` returned NONE for «иоанн русскии» before the write, and the bare «Иоанн» was deliberately not stored — that string heads the largest fold in this corpus."
     }
   ],
   "sex": "male",
   "types": [
-    "confessor"
+    "confessor",
+    "righteous"
   ],
   "dates": {
     "birth": {
@@ -31,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст. — «Прав. Иоанна Русского, исп (1730).»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the epithet this folder’s display name carries, the grade «исп.» it already holds and the year 1730 its `dates` already hold. The entry’s link is an index, id1010, serving two readings. `dates` is unchanged: the folder holds a birth of probably 1690 off doxologia, reasoned from his serving as a soldier in the war of 1711, and the Russian says only «Родился и конце XVII века в Малороссии», at the end of the seventeenth century in Little Russia, which contains it; the death 1730 both give, and the Russian adds the day, «27 мая 1730 года», which is this feast’s own day and which the schema’s interval cannot carry. `righteous` WAS ADDED to the folder’s lone `confessor`, off the line’s own «Прав.» and the hymns’ «праведне Иоанне». The life page lists no day but this one. What the Russian adds and the paragraph carries: the service as a soldier in the army of Peter I and the Russo-Turkish war, the captivity and the master’s giving up of the attempt to convert him, the bed in the stall and the charge of the cattle, the mockery and his helping his masters and comforting them in trouble, the offer to live as a free man and his choosing to stay in the stable, the nights of prayer at the church of the great-martyr George and the communions there at the feasts, the alms out of his poverty, the dish of pilaf carried from the family table to the master far away still hot and off the family service, the death after communion, the burial at which all the Christians of Prokopi were present, the finding of the incorrupt relics three and a half years later and their translation to the church of the great-martyr, the honour given him by Armenians and Turks as well as Orthodox, the part of the relics sent to the Russian Panteleimon monastery on Athos in 1881 and the part placed in 1924 in the church of his own name on Euboea. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -74,6 +90,102 @@
       },
       "english": {
         "text": "He who called thee from earth to the world of heaven keeps thy body even after death unchanged, O holy one. For thou wast carried captive into Asia, and there wast joined to Christ, O John. Pray thou to Him, then, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От земли пленения твоего/ воззвавый тя к Небесным селением,/ Господь соблюдает невредимо и цельбоносно тело твое,/ праведне Иоанне,/ ты бо, в России ятый и во Асию проданный,/ посреде, агарянского злочестия благочестно пожил еси во мнозе терпении/ и, сеяв зде слезами,/ жнеши тамо неизглаголанною радостию.// Темже моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., the first «Тропарь праведного Иоанна Русского», глас 4 — proper to him, and it names him. The day page prints SIX hymns under his name, two troparia with the identical heading, a third marked «Ин», two kontakia with the identical heading and a third marked «Ин»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Lord, who called thee from the land of thy captivity to the dwellings of heaven, keeps thy body unharmed and a bearer of healing, O righteous John; for thou, taken in Russia and sold into Asia, didst live devoutly in the midst of the Hagarene impiety with much patience, and having sown here in tears thou reapest there with unspeakable joy. Therefore pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "На Небеси предстоя Святей Троице,/ праведне блаженне Иоанне,/ земный ангеле, Божий человече,/ с Безплотными лики славословиши любовь неизреченную,/ в Церкви первородных со святыми водворялся,/ о нас, сущих на земли, возносиши молитвы/ к Содетелю всех и Спасу,/ да подаст мир всему миру,/ Церквам на земли благостояние и соединение всех,/ чтущих Сына Божия, во плоти пришедша,/ во святем Теле Христа Иисуса,/ еже есть Церковь Бога Живаго,/ во спасение рода человеческаго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., the second «Тропарь праведного Иоанна Русского», глас 4 — the day page prints this heading twice with two different texts and both are his; this one names him «праведне блаженне Иоанне»",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Standing in heaven before the Holy Trinity, O righteous and blessed John, earthly angel and man of God, thou glorifiest with the bodiless choirs that love which cannot be uttered; and dwelling with the saints in the Church of the firstborn, thou raisest prayers for us who are on earth to the Maker of all and the Saviour, that he may grant peace to all the world, and to the Churches on earth good estate and the union of all who honour the Son of God come in the flesh, in the holy Body of Christ Jesus, which is the Church of the living God, for the salvation of the human race.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От земли Призвавший тя в Небесныя обители/ сохраняет и по смерти нетленное тело твое, святе,/ ты бо яко пленник приведен бысть в Азию,/ идеже и уподобися Христу./ Сего ради моли Его спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., «Ин тропарь праведного Иоанна Русского», глас 4 — the third troparion the day page prints for him, a short recension of the first",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who called thee from the earth into the mansions of heaven keeps thy body incorrupt even after death, O holy one; for thou wast brought as a captive into Asia, and there wast made like unto Christ. Therefore pray thou to him that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В честней памяти твоей, святе,/ веселится о тебе Россия,/ во благочестии тя воспитавшая,/ и целебным мощем твоим радуется Асия,/ идеже узкий путь прошед страдальческаго плена и постнических подвигов,/ сосуд честен явился еси Божия благодати,/ еяже проси и нам, чтителем твоим, да зовем ти:// радуйся, Иоанне, благодати тезоимените.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., the first «Кондак праведного Иоанна Русского», глас 8 — proper to him, and it names him and both countries of his life",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "At thy honoured memory, O holy one, Russia, which brought thee up in piety, rejoices over thee, and Asia is glad in thy healing relics; for there, having gone the narrow way of a sufferer’s captivity and of ascetic labours, thou wast shown forth as an honoured vessel of the grace of God. Ask that grace for us also, who honour thee, that we may cry to thee: Rejoice, O John, who bearest the name of grace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Евангельския любве служителя,/ правды Божия ревнителя,/ чистоты душевныя и телесныя хранителя,/ веру Христову исповедавша в страданиих,/ праведнаго Иоанна ублажаем и почитаем днесь/ и, житием его назидающеся, поем:/ радуйся, молитвенниче наш, от Бога прославленный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., the second «Кондак праведного Иоанна Русского», глас 4 — the day page prints this heading twice with two different texts and both are his",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The servant of the love of the Gospel, the zealot of the righteousness of God, the keeper of purity of soul and of body, who confessed the faith of Christ in his sufferings — the righteous John do we bless and honour today; and being built up by his life we sing: Rejoice, O our intercessor, glorified by God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Ныне приспе память славных, святе отче, дел твоих,/ веселяще благочестивыя души,/ верно чтущия тя, Иоанне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 мая ст. ст., «Ин кондак праведного Иоанна Русского», глас 4 — the third kontakion the day page prints for him, of three lines",
+        "url": "https://days.pravoslavie.ru/Days/20260527.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Now has the memory of thy glorious deeds come round, O holy father, gladdening the devout souls that honour thee in faith, O John.",
         "rendered": "site"
       }
     }

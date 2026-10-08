@@ -1,0 +1,60 @@
+{
+  "slug": "helen-korobova",
+  "display_name": "Helen (Korobova)",
+  "names": [
+    {
+      "form": "Елена (Коробова)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14681, «Елена (Коробова), прмц.», with the rank abbreviation left off. The day’s own line gives the name without the surname — «Прмц. Елены (1938).» THE BARE «Елена» WAS DELIBERATELY NOT STORED: this branch wrote the fold key «елена» on 05-21 for `helen-martyr-1943` and `helen-the-empress`, and a third holder would widen the key it had just written. Measured against the gate’s own key function before the write: 'елена коробова' has no other holder in the corpus, and neither does the display name."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year the day line prints for her: «Прмц. Елены (1938).» No year of birth appears on either of the two pages that name her, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 мая ст. ст. — «Прмц. Елены (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260525.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. THE CALENDAR GIVES NO LIFE: the line carries a link to her name and none to a reading, and the name page behind it, 14681, prints the title «Елена (Коробова), прмц.» and the line «Дни памяти: 26 января (Новомуч.) , 25 мая» and nothing else at all. What it gives that the day line does not is the surname «Коробова». `new-martyr` WAS WRITTEN AND THE GROUND IS READ: this calendar marks its own twentieth-century martyrs by giving them the general commemoration of the new martyrs and confessors of Russia on 26 января, and her page carries that day beside her own. `venerable-martyr` is the line’s own «Прмц.», преподобномученица, which BRIEF-RUSSIAN §6 maps so; NO `office` WAS WRITTEN, the calendar giving her no monastic rank and «Nun» being a word a reader would be supplying rather than reading. NO FOLDER WAS FOUND FOR HER: `fk.mjs` returns no holder for «Елена (Коробова)» or for the display name, and `grep -rl 'Коробова' saints/*/saint.json` returns nothing. The day page prints two hymns, both the Forerunner's, and none under her name. azbyka.ru was not read, and it is the source that would give her a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 7 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 7 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 June 2026, the civil day of this Julian 25 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -16,13 +16,28 @@
       "form": "Јован Психаит",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 26. мај ст. ст., „Преподобни Јован Психаит“ — Преподобни is the `venerable` this corpus puts in `types` and is the only word stripped. **Психаит is kept, and keeping it is what keeps this folder out of the bare-«Јован» fold**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јован Психаит» and nine holders of a bare «Јован», which `john-of-gothia` had to join on 19 May and which `john-vladimir` was kept out of on 22 May for the same reason. **The epithet is not a rank**: the Greek page’s own couplet turns on it as a description of the man, and the body makes it the lavra’s name, so it is part of the name and not a word `honorific.js` would compose. The Greek form on this folder, «Ιωάννης», is the bare one and is left alone."
+    },
+    {
+      "form": "Иоанн Психаит",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Иоанн Психаит, исповедник, прп.», with the two rank words after the comma left off; the day’s own line gives the same two words. The epithet is the lavra the life names. `fk.mjs` returned NONE for «иоанн психаит» before the write, and the bare «Иоанн» was deliberately not stored — that string heads the largest fold in this corpus."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 мая ст. ст. — «Прп. Иоанна Психаита исп (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260526.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the Psychaite lavra in his name and the grade «исп.», confessor, both of which this folder already holds, and its Greek and Serbian rows keep him on the same Julian day. `dates` IS UNCHANGED AND THE CALENDAR CONTRADICTS ITSELF INSIDE ONE PAGE: the folder holds a `floruit` of «8th century» off the Охридски пролог; the day line prints «(IX)», the ninth; the life’s first sentence says «жил в конце VIII - начале IX века», at the end of the eighth and the beginning of the ninth, which is wider than either; and its last sentences make the persecuting emperor «Льва Исавра (717 - 741)», Leo the Isaurian, whose reign is in the FIRST half of the eighth century and cannot contain a man who lived at the end of it. Three readings on one page and a fourth in the folder; nothing was widened, narrowed or replaced, and all of them are in the paragraph. What the Russian adds and the paragraph carries: the leaving of the world in his young years and the tonsure in the Psychaite lavra in the suburb of Constantinople, the gift of driving out demons and healing sicknesses, the summons to interrogation and the demand that he renounce the veneration of the icons and write his renunciation, his rebuking the persecutors and calling the emperor a heretic instead, and the exile in which he died after much hardship from the iconoclasts. azbyka.ru was not read."
     },
     {
       "church": "romanian",

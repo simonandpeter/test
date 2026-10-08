@@ -20,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "SHE IS NOT ON THE DAY’S OWN LINE AND HAS NO `name:` LINK: the line names seven and then «и с ними 1218 воинов с женами и детьми», and she is one of them, enumerated by name in the prose of the day’s own life page, life1135. She stands in the first of the two lists the calendar’s life page gives of the company’s members, the women and children: «Из пострадавших жен и детей известны имена святых мучениц Маркианы, Сосанны, Палладии, младенцев Кириака и Христиана.» That list is the calendar’s own enumeration of the company it heads, so this folder is kept on this day by the ruling that a synaxis enumerating its members is one folder per member. NO `ru` NAME FORM WAS STORED, DELIBERATELY. The calendar prints this name nowhere but inside that list, in the genitive and as a bare forename — «Маркианы» — with no name page, no epithet and no surname anywhere on the day. A nominative reconstructed from a genitive is something a reader made, not something the calendar printed (BRIEF-RUSSIAN §2), and a bare forename of this kind would in several of these fifteen cases widen a fold that stands unread in the gate. The declined form is recorded here instead and the author can promote it. `dates` was written where there was none: the reign the calendar prints for the whole company, «в царствование римского императора Антонина Гелиогобала (218–222)», which is the interval the rest of this company already carries. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -71,5 +81,14 @@
     "cyriacus-the-infant",
     "christian-the-infant",
     "serapion-martyr-24-may"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 218,
+      "latest": 222,
+      "display": "between 218 and 222",
+      "basis": "traditional",
+      "note": "The folder had no `dates` object at all. The reign the Russian calendar prints for the whole company, «в царствование римского императора Антонина Гелиогобала (218–222)», with the day line’s «(ок. 218)» inside it; it is the interval the other folders of this company already carry. No year of birth appears anywhere and none was inferred."
+    }
+  }
 }

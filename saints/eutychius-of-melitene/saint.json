@@ -12,6 +12,11 @@
       "form": "Ευτυχής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Ευτυχής Επίσκοπος Μελιτηνής», with the rank word left off. The same page's body writes Ευτύχιος instead — «ο Άγιος Ιερομάρτυς Ευτύχιος» — and its second apolytikion addresses him as «Ἱερομάρτυς Εὐτύχιε», so both forms are the page's own; the day's line is the one copied here."
+    },
+    {
+      "form": "Евтихий Мелитинский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 727, «Святитель Евтихий Мелитинский, епископ, сщмч.», with the rank word before the name and the two after it left off; the day’s own line gives the see in the genitive. `fk.mjs` returned NONE for «евтихии мелитинскии» before the write, and the bare «Евтихий» was not stored."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 мая ст. ст. — «Сщмч. Евтихия , еп. Мелитинского (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260528.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the line gives the see this folder’s office already names and the grade it already holds, and its Romanian and Greek rows keep him on the same Julian day. The life is one sentence, and it is the whole of what the calendar says: «Священномученик Евтихий, епископ Мелитинский, сотрудник святых апостолов, пострадал за Христа в городе Мелитине в I веке» — a fellow-worker of the holy apostles, who suffered for Christ in the city of Melitene in the first century. `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder had no `dates` object, and the century is the one both the line and that sentence print. The calendar gives him no company, no persecutor and no manner of death. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -97,5 +112,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century the Russian day line prints, «Сщмч. Евтихия , еп. Мелитинского (I).», and the century of its one-sentence life, «пострадал за Христа в городе Мелитине в I веке». The folder had no `dates` object before this row, and the calendar gives no year, no reign and no persecutor."
+    }
   }
 }

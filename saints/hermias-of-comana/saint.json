@@ -16,6 +16,11 @@
       "form": "Ермије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 31. мај ст. ст., „Свети мученик Ермије“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`; the bare personal name is what is left. **Measured, and it is a fold of two told apart by the book’s own two days**: `foldchk.py` returns `[('hermes-apostle-of-dalmatia', 'sr')]` for «Ермије» — **the Prologue uses the identical string for the apostle Hermes of Romans 16:14 on its own Julian 8 April**, whose `serbian` row a reader of this wave wrote off the Охридски пролог за 21.04.2026, and who is an apostle, a bishop and a martyr of Dalmatia and not this old soldier of Comana. So the identical form is stored a second time on purpose and the two are told apart by their days and their ranks. **And the spelling is still the point**: this book writes „Ермије“ for this martyr and „Јерма“ for the apostle of its own previous entry, where doxologia writes «Ermie» for both and this folder and `hermas-31-may` consequently carry the identical Romanian form. **So the Serbian forms tell the two men apart where the Romanian ones cannot**, and that is why both were written on the same day. The Greek form here, «Ερμείας», is the same bare name."
+    },
+    {
+      "form": "Ермий Команский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Ермий Команский, мч.», with the rank abbreviation left off; the day’s own line gives the bare «Ермия». `fk.mjs` returned NONE for «команскии ермии» before the write. THE DAY'S OTHER SAINT CARRIES THE SAME NAME IN A HYMN: the apostle Hermas's own troparion on this page addresses «Ермие», which is this man's vocative; the folders are told apart by their epithets and the hymn collision is recorded on the apostle's row."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст. — «Мч. Ермия (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the name link heads him «Ермий Команский, мч.», of Comana, which is this folder’s display name, and its Romanian, Greek and Serbian rows keep him on the same Julian day. `dates` IS UNCHANGED: the folder holds «160 or 166», widened rather than chosen, and the Russian line prints «(II)» and its life sets the suffering «во время гонений при императоре Антонине Пии (138 - 161)», in the persecution under Antoninus Pius, which contains the earlier of the two years and not the later; nothing was narrowed on that, a reign being a bracket and not a year. `soldier` already stands and the Russian bears it out, «убеленный сединами воин», a soldier white with age. What the Russian adds and the paragraph carries: the governor Севастиан come to Cappadocia to carry out the order against the Christians and the honours and the emperor’s favour he offered, the beating that tore the skin from his face, the three days in the heated furnace and his walking out unhurt, the magician set to poison him and the two cups that did not kill him, the magician’s own conversion and beheading — baptised in his own blood — the sinews drawn out of him, the boiling tin, the eyes put out, the three days hanging head downward, the men sent to make sure he was dead who were struck blind with terror and whom he healed by laying his hands on them in the Name of Jesus Christ, the flaying of his whole body, and Севастиан cutting off his head with his own hand. THE CONVERTED MAGICIAN IS A NEW PERSON AND NO FOLDER WAS MADE FOR HIM: the calendar gives him no name, no day and no rank. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -123,6 +138,38 @@
       },
       "english": {
         "text": "Having confessed the name of Christ with vigour, and borne the pains of violent punishments, thou didst put to shame the devices of the lawless and show to all the strength of godliness; and for this the Word, the bestower of the prize, has glorified thee, O Hermias.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученик Твой, Господи, Ермий/ во страдании своем венец прият нетленный от Тебе, Бога нашего:/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст., «Тропарь мученика Ермия», глас 4 — the common of a single martyr with his name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Hermias, O Lord, in his suffering received an incorruptible crown from thee, our God; for having thy strength he cast down the tormentors and broke the feeble boldness of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Иже по Христе усердно подвизався,/ в сединах доблих мужество стяжа,/ мучениче Ермее,/ беззаконных злоумышления поправ/ Христовою силою,/ от чаровных напоений невредим пребысть, зовый:// Бог есть со мною, и никтоже на мя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст., «Кондак мученика Ермия», глас 6 — proper to him, and it names both the grey hairs and the poisoned draughts his own life turns on",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having striven earnestly for Christ, thou didst gain a valiant manhood in thy grey hairs, O martyr Hermias; and trampling down the evil designs of the lawless by the power of Christ, thou didst remain unharmed by the enchanted draughts, crying: God is with me, and no one against me.",
         "rendered": "site"
       }
     }

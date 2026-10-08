@@ -12,22 +12,44 @@
       "form": "Boris",
       "lang": "el",
       "note": "saint.gr prints this name in Latin letters on its Greek page, both in the heading «Αγιος Boris ο Μαρτυρας (; - 1918)» and in the body, «ο υιός του Boris», and gives no Greek spelling of it; the calendar's own line for 31 Μαΐου spells it «Βόρις». The form recorded here is the life page's, exactly as it stands."
+    },
+    {
+      "form": "Борис (Орнатский)",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Борис (Орнатский), мч.», with the rank abbreviation left off; the day’s own line gives the bare «Бориса». `fk.mjs` returned NONE for «борис орнатскии» before the write, and the bare «Борис» was deliberately not stored, the corpus holding the passion-bearer of Kiev and others."
     }
   ],
   "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "The year the calendar states: «сын, Борис (родился в 1887 году), штабс-капитан 23-й артиллерийской бригады». The folder had no birth before this row."
+    },
     "death": {
       "earliest": 1918,
       "latest": 1918,
       "display": "1918",
       "basis": "attested",
-      "note": "saint.gr says he was arrested with his father on 9 August 1918 and shot with him: «Εκτελέσθηκαν διά τουφεκισμού». His own heading on the page is «Αγιος Boris ο Μαρτυρας (; - 1918)», with no year of birth."
+      "note": "The year the Russian day line prints for him with his father and brother, and the year this folder already held from saint.gr. No day was written: the calendar gives the shooting as a guess, «предположительно около 30 октября 1918 года»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст. — «Сщмч. Философа пресвитера и сыновей его мчч. Бориса и Николая (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "note": "The identification is the line’s own: it names him a son of the presbyter Philosophos, which is what this folder’s display name says. The calendar gives the three of them one life, life4927. `dates` GAINED A BIRTH IT DID NOT HAVE: «сын, Борис (родился в 1887 году), штабс-капитан 23-й артиллерийской бригады, закончивший Константиновское артиллерийское училище, геройски сражался на Австро-Венгерском фронте» — born in 1887, which is also the ground of the `soldier` type this folder already carries. The death 1918 is unchanged and no day was written: the calendar guesses the date of the shooting, «предположительно около 30 октября 1918 года», and guesses the place twice. HIS PAGES LIST THREE DAYS, «26 января (Новомуч.) , 31 мая , 8 июня (Петерб.)», the first the general synaxis of the new martyrs and the third a Petersburg local day; both are notes. `philosophos-ornatsky` and `nicholas-son-of-philosophos` already stand as `related` rows and the Russian bears both out. azbyka.ru was not read."
     },
     {
       "church": "romanian",

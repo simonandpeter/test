@@ -15,6 +15,11 @@
       "form": "Философ",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 31. мај ст. ст., „Свети мученик Философ“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`; the bare personal name is what is left, and **it is a personal name and not a trade**, as the Greek «Φιλόσοφος» on both this folder and `philosophos-ornatsky` already shows. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Философ», so this is the first folder to hold it — **but it will fold the moment a reader writes the Russian archpriest of 1918, who is kept on this very menologion day and whose Greek form is the identical «Φιλόσοφος».** That is said here so the fold is a known one when it comes, and so that the two are told apart by their years and not by their names, as the two Therapons of 25 and 27 May are told apart by their sees."
+    },
+    {
+      "form": "Философ Александрийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Философ Александрийский, мч.», with the rank abbreviation left off; the day’s own line gives the bare «Философа». The city is the calendar’s own and the life bears it out. `fk.mjs` returned NONE for «александриискии философ» before the write, and the bare «Философ» was deliberately not stored: the SAME DAY prints another Philosophos, the archpriest Орнатский shot in 1918, and this folder's Serbian form is already that bare string."
     }
   ],
   "related": [
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 мая ст. ст. — «Мч. Философа (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260531.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the name link heads him «Философ Александрийский, мч.», of Alexandria, which is this folder’s display name, and its Greek and Serbian rows keep him on the same Julian day. `dates` IS UNCHANGED AND THE TWO BOOKS DISAGREE BY A CENTURY: the folder holds a `floruit` of «4th century» off saint.gr, and the Russian line prints «(III)» while its life says «пострадал за Христа в Александрии в гонение императора Декия (249 - 251)» — the persecution of Decius, which is squarely in the third. Nothing was replaced, widened or narrowed, and both readings are in the paragraph; THE RUSSIAN IS THE MORE SPECIFIC OF THE TWO, naming a reign and dating it, and the author may prefer it. What the Russian adds and the paragraph carries: the whole of his five-sentence passion — the youth pressed to deny Christ and standing unshaken, the tormentors’ turning to try him by sin instead, the flowering garden and the harlot left alone with him bound, the tongue he bit through to fence himself from the passion of the flesh by that terrible pain, the bloody tongue spat into her face, and the executioners who, seeing his courage and fearlessness, struck off his head with the sword. azbyka.ru was not read."
     },
     {
       "church": "romanian",

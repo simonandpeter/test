@@ -11,11 +11,17 @@
       "form": "Ιννοκέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Μαΐου, «Άγιος Ιννοκέντιος ο Επίσκοπος Χερσώνος», with the rank word and the see left off; the life page adds that his name in the world was Ιωάννης Αλεξέεβιτς Μπορίσωφ."
+    },
+    {
+      "form": "Иннокентий (Борисов)",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 13476, «Святитель Иннокентий (Борисов), архиепископ Херсонский и Таврический», with the rank word before the name and the office and the two sees after it left off. The parenthesis is the calendar’s own and holds his family name, which the life gives in full as «Иван Алексеевич Борисов», his name in the world. The day’s own line gives «Иннокентия , архиеп. Херсонского», without the surname. `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "sex": "male",
   "types": [
-    "hierarch"
+    "hierarch",
+    "archbishop"
   ],
   "dates": {
     "birth": {
@@ -36,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 мая ст. ст. — «Свт. Иннокентия , архиеп. Херсонского (1857).»",
+        "url": "https://days.pravoslavie.ru/Days/20260525.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and the Russian is far fuller than the source this folder was made from: the line gives the see of Kherson and the year 1857 the folder already holds, and the life, life4817, opens «Святитель Иннокентий, архиепископ Херсонский и Таврический (в миру Иван Алексеевич Борисов) родился 15 декабря 1800 года в городе Ельце Орловской губернии в семье священника Успенской церкви Алексия Борисова» — the same full date of birth, the same town and the same priestly family the folder’s existing `dates` cite from saint.gr. `dates` is unchanged. WHAT THE RUSSIAN ADDS TO THE DEATH IS THE DAY AND THE PLACE: «на обратном пути в Одессу скончался в Херсоне 25 мая 1857 года в светлый праздник Живоначальной Троицы» — at Kherson, on this feast’s own day, on Trinity Sunday; the schema’s interval carries years only, so it is in the life. `archbishop` WAS ADDED to the folder’s lone `hierarch`, off the line’s own «архиеп.» and the name link’s «архиепископ Херсонский и Таврический», and `office` SET TO «Archbishop», a word the four locale packs carry and thirteen folders already use; the see is NOT in the office, per BRIEF-ADDENDUM §4. The life page lists no day but this one, and the calendar records the canonisation: «Канонизован Русской Православной Церковью в 1997 году». azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -82,5 +98,6 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "office": "Archbishop"
 }
