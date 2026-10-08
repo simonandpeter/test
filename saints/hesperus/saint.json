@@ -15,6 +15,11 @@
       "form": "Еспер",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 2. мај ст. ст., „Свети мученици Еспер, Зоа, Кириак и Теодул.“ Свети мученици heads the whole company of four and belongs to no one name — мученици is the `martyr` this folder already carries in `types` and `honorific.js` composes back — so stripping it leaves the bare forename and nothing else. The kinship clauses this corpus keeps in the English display name are the body's, not the heading's, and Pamphylia is saint.gr's and is on no part of this page. The form meets no other folder in any language, which was measured rather than assumed."
+    },
+    {
+      "form": "Еспер Атталийский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 2 мая ст. ст., which gives «Еспер Атталийский (Памфилийский), мч.»; the rank abbreviation is not part of the stored form. The day line itself declines him as «Еспера» alone."
     }
   ],
   "related": [
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 мая ст. ст. — «Мчч. Еспера и Зои и чад их Кириака и Феодула (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260502.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

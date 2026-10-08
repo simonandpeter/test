@@ -17,6 +17,11 @@
       "form": "Михаил (Борис)",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 2. мај ст. ст., „Свети Михаил (Борис), цар Бугарски.“ Свети is no rank; „цар Бугарски“ is the rank and the people, which this corpus puts in `types` and in the English display name, and it is stripped. **The bracketed Борис is kept, because it is his second name and not a rank** — the name he was born with, which the body gives as „Борис се покрсти... На крштењу добије име Михаил“ — and the Russian wave already stores a bracketed second name this way, as `peter-uspensky`'s «Петр (Успенский)». Keeping it is also what holds this folder **out** of the bare «Михаил» that `michael-of-chernigov` and `michael-of-klops` share, which was measured and not assumed."
+    },
+    {
+      "form": "Борис Болгарский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 2 мая ст. ст., which gives «Святой благоверный и равноапостольный царь Борис Болгарский»; the rank words are not part of the stored form. The baptismal name Михаил, which the day line gives as «во св. Крещении Михаила», is already stored as the Greek and Serbian forms and is not repeated here."
     }
   ],
   "related": [
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 мая ст. ст. — «Блгв. и равноап. царя Бориса , во св. Крещении Михаила (ок. 908), принявшего Крещение со своим народом в IX веке (Болг.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260502.html",
+        "year": 2026
+      },
+      "note": "The year is the third this folder has met and the widest apart: the day line closes him «(ок. 908)», where the Ohrid Prologue gives 906 and saint.gr 907 — and both of this calendar's own life pages end «Преставился святой благоверный царь Борис, в святом крещении Михаил, 2 мая 907 года», so the calendar disagrees with itself about him by a year. `dates` was not changed; the recorded interval 906 or 907 holds the two readings that are not the day line's, and the 908 of the line is set down here because it is cited in the row above. The line's «(Болг.)» marks him as kept by the Bulgarian church. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -75,5 +90,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Исполнен страха Божия/ и Крещением святым просвещен,/ был еси жилище Святаго Духа,/ благоверный царю Борисе./ Утвердив же веру Православную на земли Болгарстей/ и жезл царствия оставив,/ вселился еси в пустыню,/ процвел еси в подвизех/ и обрел еси благодать пред Господем./ Ныне же предстоя Престолу Всевышняго,/ моли даровати нам, молящимся тебе,/ спасение душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 мая ст. ст., «Тропарь благоверного и равноапостольного царя Бориса, во святом Крещении Михаила», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260502.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Full of the fear of God and enlightened by holy baptism, thou wast a dwelling of the Holy Spirit, O right-believing king Boris. And having established the Orthodox faith in the land of Bulgaria and laid down the rod of the kingdom, thou didst settle in the wilderness, didst flourish in ascetic labours and didst find grace before the Lord. And now, standing before the Throne of the Most High, pray that the salvation of our souls may be given to us who pray to thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Взбранный воеводо Бога Вышняго,/ силою Креста победивый востание тьмы/ и насадивый благочестие на земли твоей,/ имеяй же дерзновение ко Господу,/ сохраняй молитвами твоими достояние твое, да зовем ти:/ радуйся, равноапостольне царю Борисе,/ крестителю земли Болгарския.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 мая ст. ст., «Кондак благоверного и равноапостольного царя Бориса, во святом Крещении Михаила», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260502.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O chosen captain of God the Most High, who by the power of the Cross didst overcome the rising of the darkness and didst plant piety in thy land, and who hast boldness before the Lord: keep thine inheritance by thy prayers, that we may cry to thee, Rejoice, O king Boris, equal to the apostles, baptiser of the land of Bulgaria.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

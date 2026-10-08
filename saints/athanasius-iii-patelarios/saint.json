@@ -11,6 +11,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Αυγούστου, «Άγιος Αθανάσιος ο Πατελλάρος, ο Καθήμενος, Πατριάρχης Κωνσταντινουπόλεως», with the rank word, the epithets and the see left off. The page gives his name in the world as «Αλέξιος Πατελάρος»."
+    },
+    {
+      "form": "Афанасий Сидящий, Константинопольский, Лубенский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 2 мая ст. ст., which gives «Святитель Афанасий Сидящий, Константинопольский, Лубенский, патриарх»; the rank word and the rank in the clergy are not part of the stored form, and the three epithets are. «Сидящий», the Sitting, is explained by the life: he was buried in the Greek manner, seated in a chair, which was unusual in Russia and gave him the name. The day line adds a fourth epithet the name link does not have, «Харьковского чудотворца», for the city where his relics now rest."
     }
   ],
   "sex": "male",
@@ -31,8 +36,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "julian",
+        "note": "The calendar's lives give him «Дни памяти: 18 января (Афон) , 2 мая»; the first is marked as the keeping of the Holy Mountain and is not repeated by this day page. One of the two lives says plainly why this day was chosen and it is not the day of his death: «1 февраля 1662 года святитель Афанасий был прославлен в лике святых и было установлено празднование 2 мая, в день памяти соименного ему святителя Афанасия Великого.» He died on 5 April. Read 8 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 мая ст. ст. — «Свт. Афанасия , патриарха Константинопольского, Лубенского и Харьковского чудотворца (1654).»",
+        "url": "https://days.pravoslavie.ru/Days/20260502.html",
+        "year": 2026
+      },
+      "note": "The calendar's two lives contradict each other about his birth and are left side by side rather than reconciled. life6459: «Родился в 1597 г. в г. Ревимне на о. Крит», of the noble Greek house of the Patelarii, kin to the Palaiologoi. life975: «в миру Алексий, родился в 1560 году на острове Крит, в семье благочестивого грека Пателария». Thirty-seven years apart, with the place agreeing and the father's standing not. `dates` was not changed: the folder holds the Romanian reading, 1654 for the death, and the Romanian life's «către sfârșitul veacului» for the birth. Read 8 October 2026."
     },
     {
       "church": "romanian",
@@ -75,5 +91,39 @@
   "related": [
     "cyril-loukaris",
     "gregory-palamas"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Премудростию учений твоих царствующий град просветив,/ тьму неведения еретического разгнал еси, преблаженне;/ твое благословение земли Российстей принесл еси,/ отче наш, святителю Афанасие,/ идеже скончав течение твое,/ на крилех чистоты возлетел еси в Небесное Царство./ Моли Христа Бога непрестанно о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 мая ст. ст., «Тропарь святителя Афанасия, патриарха Константинопольского, Лубенского чудотворца», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260502.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having enlightened the reigning city by the wisdom of thy teachings, thou didst scatter the darkness of heretical ignorance, O most blessed one; thou didst bring thy blessing to the Russian land, our father and hierarch Athanasius, and there, having finished thy course, thou didst fly up on the wings of purity into the heavenly Kingdom. Pray unceasingly to Christ God for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "О всесвятейший пастырю и учителю вселенныя,/ преблаженне отче наш святителю Афанасие!/ К раце мощей твоих припадающе, усердно молим тя:/ приими от убогих душ наших любовию приносимая тебе моления/ и, яко имея дерзновение у Престола Владычня,/ испроси молитвами твоими чтущим тя/ со Ангелы и всеми святыми/ непрестанно Пресвятей Троице воспевати: аллилуйя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 мая ст. ст., «Кондак святителя Афанасия, патриарха Константинопольского, Лубенского чудотворца», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260502.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O most holy shepherd and teacher of the whole world, our most blessed father and hierarch Athanasius! Falling down before the shrine of thy relics we pray thee earnestly: receive the entreaties our poor souls offer thee in love, and, having boldness at the Master's Throne, ask by thy prayers for those who honour thee that they may sing unceasingly with the angels and all the saints to the Most Holy Trinity: Alleluia.",
+        "rendered": "site"
+      }
+    }
   ]
 }
