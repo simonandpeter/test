@@ -17,6 +17,11 @@
       "form": "Јован Владимир",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 22. мај ст. ст., „Свети мученик Јован Владимир, краљ српски.“ — Свети is not a rank, мученик is the `martyr` this corpus puts in `types` and „краљ српски“ is the `king` it puts there too; strip them and the fullest form the calendar gives is left. **Владимир is kept because it is a second personal name and not a rank or a see**, and because the body uses the two names separately — „дозва на превару Владимира“ — so the heading’s pair is the fuller form. Keeping it also keeps this folder out of the nine-wide bare «Јован» fold that `john-of-gothia` had to join on 19 May, which was measured and not assumed: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јован Владимир» and nine holders of a bare «Јован». The Greek form on this folder, «Ιωάννης ο Βλαδίμηρος», is the same pair of names."
+    },
+    {
+      "form": "Иоанн-Владимир",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1027, «Мученик Иоанн-Владимир, князь Сербский», with the rank word before the name and the rank and country after it left off; the day’s own line gives the same double name in the genitive, «Иоанна-Владимира». The hyphenated pair is the calendar’s own and is kept whole: both its readings use it in their titles and in their body text. `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "dates": {
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 мая ст. ст. — «Мч. Иоанна-Владимира , кн. Сербского (1015).»",
+        "url": "https://days.pravoslavie.ru/Days/20260522.html",
+        "year": 2026
+      },
+      "note": "The identification needs no reading: the day line gives the double name, the Serbian princedom and the year 1015 this folder’s `dates` already holds, and the folder’s Greek and Serbian rows keep the same man on the same Julian day. The entry’s link is an index, id1027, serving two readings. `dates` is unchanged: the folder holds a tenth-century birth and a death of 1015, and the second reading says «родился в Х веке» and «изменнически убит 22 мая 1015 года», which agree with both. WHAT THE RUSSIAN ADDS TO THE DEATH IS THE DAY, 22 мая, the day of this feast, and it is in the paragraph and not in `dates`, the schema’s interval carrying years only. HIS OWN PAGES LIST A SECOND DAY: «Дни памяти: 22 мая , 30 августа (Серб.)». The 30 августа is marked by the calendar itself as the Serbian local day, is not repeated by this day page and is not thirteen days from it; one row per church is the schema, so it is recorded here and he does not render on it. THE TWO READINGS DISAGREE ABOUT HIS GRADE AND NEITHER WAS WRITTEN INTO `types`: the day line and the second reading call him «Мч.», martyr, which this folder already holds, while the first reading’s title calls him «великомученик», great-martyr. `king` already stands on this folder off the Serbian «краљ српски» and the Russian’s «кн.», prince, was not written against it. What the Russian adds and the paragraph carries: the two readings’ account of his rule over Illyria and Dalmatia, the fight with the Bogomils at home and with invaders from outside, his building and endowing of churches, the imprisonment and the angel’s word that he would be freed and yet suffer a martyr’s death, the marriage to Косара daughter of the Bulgarian tsar Самуил, the summons to the Bulgarian tsar Иоанн-Владислав under pretext of negotiations and the murder at the door of the church, Косара’s shutting herself up in the church her husband had built, and the relics. THE TWO READINGS NAME TWO DIFFERENT PLACES FOR THE RELICS — «в его монастыре близ Аблазона» and «близ Элбосани» — and neither was chosen. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -79,5 +94,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Крест, явльшийся тебе с Небесе, светел проповедал еси,/ просветив языки ясно, Владимире славне,/ обагреньми кровей твоих украсився,/ сподобился еси почестей нетленных,/ предстояй Троице,/ тем со дерзновением/ моли спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 мая ст. ст., «Тропарь мученика Иоанна-Владимира», глас 4 — proper to him, and it names him, «Владимире славне»",
+        "url": "https://days.pravoslavie.ru/Days/20260522.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Cross that appeared to thee from heaven thou didst preach in its brightness, enlightening the nations clearly, O glorious Vladimir; and adorned with the crimson of thy blood thou wast made worthy of honours incorruptible, standing before the Trinity. Therefore with boldness pray thou that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Крест, явльшийся тебе с Небес в блистании, всем проповедал еси,/ просветив языки верно, Владимире славне./ Искуплением же, кровьми твоими возблистав,/ сподобился еси мзды нелестныя, предстоя Троице./ Темже дерзновенно моли Христа спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 мая ст. ст., «Ин тропарь мученика Иоанна-Владимира», глас 4 — the second troparion the day page prints for him; it is the first one again in another recension, line for line, and it is kept as a separate row because the page prints it as a separate hymn",
+        "url": "https://days.pravoslavie.ru/Days/20260522.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Cross that appeared to thee from the heavens in splendour thou didst preach to all, faithfully enlightening the nations, O glorious Vladimir; and shining forth in thy ransom by thine own blood, thou wast made worthy of a reward that does not deceive, standing before the Trinity. Therefore pray thou boldly to Christ that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко сокровище многоценное/ и источник, точащ земным токи,/ недуги очищающий,/ нам подадеся тело твое священное,/ болезнем различным подающе исцеление/ и благодать Божественную притекающим к нему, да зовем ти:/ радуйся, княже Владимире.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 мая ст. ст., «Кондак мученика Иоанна-Владимира», глас 8 — proper to him, and it names him, «радуйся, княже Владимире»",
+        "url": "https://days.pravoslavie.ru/Days/20260522.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a treasure of great price, and as a fountain pouring out streams upon the earth and cleansing sicknesses, thy sacred body has been given unto us, granting healing of divers diseases and divine grace to those who run to it; wherefore we cry to thee: Rejoice, O prince Vladimir.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

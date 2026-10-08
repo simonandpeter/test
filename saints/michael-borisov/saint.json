@@ -1,0 +1,62 @@
+{
+  "slug": "michael-borisov",
+  "display_name": "Michael (Borisov)",
+  "names": [
+    {
+      "form": "Михаил (Борисов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 11135, «Михаил (Борисов), протоиерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Сщмч. Михаила пресвитера (1942).» — so the surname is read from the name link, which is where this calendar keeps it. Measured against the gate’s own key function before the write: 'борисов михаил' has no other holder in the corpus, and neither does the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Archpriest",
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Михаила пресвитера (1942).» No year of birth appears on either of the two pages that name him, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 мая ст. ст. — «Сщмч. Михаила пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260522.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 11135, prints the title «Михаил (Борисов), протоиерей, сщмч.» and the line «Дни памяти: 26 января (Новомуч.) , 22 мая» and nothing else at all. What it gives that the day line does not is the surname «Борисов» and the grade «протоиерей», archpriest, where the day line says «пресвитера». `office` IS «Archpriest», which is the name page’s own word and which all four locale packs carry; `presbyter` is in `types` off the day line. `new-martyr` WAS WRITTEN AND THE GROUND IS READ: this calendar marks its own twentieth-century martyrs by giving them the general commemoration of the new martyrs and confessors of Russia on 26 января, and his page carries that day beside his own. That second day is the synaxis and not a feast of his own, so one row per church stands and he does not render on it. NO FOLDER WAS FOUND FOR HIM: `fk.mjs` returns no holder for «Михаил (Борисов)» or for the display name; `ls -d saints/michael-b*` lists no Borisov, and `grep -rl 'Борисов' saints/*/saint.json` returns one folder only, `ambrose-astakhov`, where the word is the village Борисовка and not a surname. He is not `michael-vinogradov`, the presbyter of 1942 the same calendar keeps on 18 мая: a different name page and a different surname, and nothing read links them. The day page prints seven hymns, one for the martyr Basiliscus, three for James of Borovichi and three for John-Vladimir, and none under his name. azbyka.ru was not read, and it is the source that would give him a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 4 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 4 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 June 2026, the civil day of this Julian 22 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
