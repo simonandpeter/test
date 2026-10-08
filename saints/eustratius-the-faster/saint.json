@@ -11,6 +11,11 @@
       "form": "Евстратије Печерски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 28 March on pravoslavno.rs, „Преподобни мученик Евстратије Печерски.“, with both rank words left off — Преподобни and мученик, which are what this folder's `venerable-martyr` carries. Печерски is kept: it is not a rank but the by-name the heading gives him, of the Caves, and a bare Евстратије would fold with `eustratius-of-mount-olympus`."
+    },
+    {
+      "form": "Евстратий Печерский",
+      "lang": "ru",
+      "note": "Read out of the calendar's name link for 28 марта ст. ст., which gives «Евстратий Печерский, прмч.»; the rank word is not part of the stored form."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст. — «Прмч. Евстратия Печерского (1097).»",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,15 +75,49 @@
     }
   ],
   "dates": {
-    "floruit": {
-      "earliest": 1096,
-      "latest": 1096,
-      "display": "1096",
-      "basis": "attested",
-      "note": "saint.gr: «Στις 20 Ιουλίου του έτους 1096 μ.Χ., η Λαύρα των Σπηλαίων του Κιέβου, έγινε ξαφνικά στόχος επιθέσεως των Πολόφσκυ» — the year of the raid that carried him off. The page gives no year for his crucifixion, which its own narrative puts six years and some weeks later, and none is inferred here."
+    "death": {
+      "earliest": 1097,
+      "latest": 1097,
+      "display": "1097",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 марта ст. ст. prints «Прмч. Евстратия Печерского (1097)». This folder held `floruit` 1096 — the year saint.gr gives for the raid that carried him off, «Στις 20 Ιουλίου του έτους 1096 μ.Χ., η Λαύρα των Σπηλαίων του Κιέβου, έγινε ξαφνικά στόχος επιθέσεως των Πολόφσκυ» — because neither page's narrative gives a year for the crucifixion itself. The Russian calendar gives the year of the death; its own life gives none, which is why the basis stays traditional."
     }
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 7",
+      "text": "Постником и мучеником явился еси похвала, преподобне Евстратие, / прежде бо воздержанием плоть умертвив, / последовал еси Христу, нося крест свой. / Последи же и сам на крест вознесен быв / и копнем в ребра прободен, / в руце Божий душу предал еси. / Колесницею огненною возносим на Небеса, / сугубо венчался еси от Христа Бога / и Спаса душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст., «Тропарь преподобномученика Евстратия Печерского», глас 7",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth as the boast of fasters and of martyrs, O venerable Eustratius: for first thou didst put the flesh to death by abstinence and didst follow Christ, bearing thine own cross; and afterwards thou wast thyself lifted up upon a cross and pierced in the side with a spear, and gavest up thy soul into the hands of God. Borne up to heaven on a chariot of fire, thou wast doubly crowned by Christ God, the Saviour of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко ревнитель страсти Владычней / и постников усердный последователь сый, / пленники учением твоим наставль, Христови привел еси, Евстратие, / и нас, плененных страстьми, мольбами своими свободи / и подражатели честному твоему житию покажи, зовущих: / радуйся, испивый сладостне чашу Христовых страданий.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст., «Кондак преподобномученика Евстратия Печерского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a zealot of the Master's Passion and a diligent follower of the fasters, thou didst instruct thy fellow captives by thy teaching and bring them to Christ, O Eustratius; and by thy prayers set us free also, who are held captive by the passions, and show us imitators of thine honoured life, who cry: Rejoice, thou who didst drink sweetly the cup of the sufferings of Christ.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
