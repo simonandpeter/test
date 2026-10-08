@@ -14,8 +14,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The day’s line names the bishop and the deacon and then «и иных многих», and many others with them; this company is not named in the line but is the last paragraph of the life the line links, which says that at the same time, in the Palestinian cities of Ascalon and Gaza, the pagans tortured many Christians. This row rests on that reading and not on the day line alone. No `ru` name form is stored: the day page carries a name link for the bishop and for the deacon and none for the company, and the life describes it rather than naming it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Мчч. Марка , еп. Арефусийского, Кирилла диакона и иных многих (ок. 363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

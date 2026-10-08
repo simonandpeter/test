@@ -17,6 +17,11 @@
       "form": "Марко",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 29 March on pravoslavno.rs, „Свети Марко Исповедник, епископ Аретусијски у Сирији“, with the rank words Свети and Исповедник left off and with the see епископ Аретусијски у Сирији left off as well, this folder keeping the see in `office` and the place in its English name. The heading gives no epithet beyond the see, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Марк Арефусийский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 29 марта ст. ст., which gives «Святитель Марк Арефусийский, епископ, исповедник»; the rank words and the see are not part of the stored form."
     }
   ],
   "sex": "male",
@@ -47,8 +52,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Мчч. Марка , еп. Арефусийского, Кирилла диакона и иных многих (ок. 363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

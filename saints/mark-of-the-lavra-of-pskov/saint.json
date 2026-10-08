@@ -6,6 +6,11 @@
       "form": "Μάρκος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαρτίου, «Όσιοι Ιωνάς, Μάρκος και Βάσσος», with the rank word left off."
+    },
+    {
+      "form": "Марк Псково-Печерский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 29 марта ст. ст., which gives «Преподобный Марк Псково-Печерский»; the rank word is not part of the stored form."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Прпп. Марка (XV), Ионы (1480), Псково-Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,11 +61,11 @@
   ],
   "dates": {
     "floruit": {
-      "earliest": 1301,
+      "earliest": 1401,
       "latest": 1500,
-      "display": "14th–15th century",
+      "display": "15th century",
       "basis": "traditional",
-      "note": "saint.gr: «έζησαν και ασκήτεψαν στη Λαύρα του Πσκωφ της Ρωσίας κατά τον 14ο και 15ο αιώνα μ.Χ.» The page gives no year of birth and none of death for any of the three, so the interval recorded is the two centuries it names."
+      "note": "The day line prints «Прпп. Марка (XV)» and the life says «жил и подвизался в XV в. в пещере при потоке Каменце Псковской губернии». This replaces the wider interval the folder held from saint.gr, which gave the three of them together as of the fourteenth to fifteenth century; the Russian source is the narrower and the more specific. No year of birth or death is stated by either page."
     }
   },
   "related": [
@@ -60,5 +74,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко светильницы, явистеся всесветлии / в вертепе Царицы Богоматери, / преподобнии отцы наши Марко, Ионо и Корнилие, / вы бо, крест Христов на рамо вземше, / усердно тому последовасте / и, чистотою Богови приближившеся, / отонудуже силами чудес обогатистеся, / тем и мы любезно прибегаем к вам и умильно глаголем: / о преподобнии, молите Христа Бога / спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст., «Тропарь Марка, Ионы и Корнилия Псково-Печерских», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As lamps most radiant were ye shown forth in the cave of the Queen and Mother of God, O our venerable fathers Mark, Jonah and Cornelius: for taking the cross of Christ upon your shoulders ye followed Him with all your hearts, and drawing near to God by purity were enriched thence with the powers of wonders. Therefore we too run to you with love and say with compunction: O venerable fathers, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Христовою любовию уязвившеся, преподобнии, / и Того крест на рамо вземше, / понесли есте Божественне, вооружившеся на невидимыя враги / и непрестанный молитвы, яко копие, в руках имуще крепко, / победили есте бесовския ополчения, / тем зовем вам: / радуйтеся, преподобнии отцы наши Марко, Ионо и Корнилие, / верных удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст., «Кондак Марка, Ионы и Корнилия Псково-Печерских», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wounded with the love of Christ, O venerable ones, and taking His cross upon your shoulders, ye bore it divinely, armed against the unseen enemies and holding unceasing prayer firmly in your hands as a spear; and so ye overcame the hosts of the demons. Therefore we cry to you: rejoice, O our venerable fathers Mark, Jonah and Cornelius, the adorning of the faithful.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

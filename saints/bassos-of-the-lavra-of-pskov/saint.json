@@ -6,6 +6,11 @@
       "form": "Βάσσος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαρτίου, «Όσιοι Ιωνάς, Μάρκος και Βάσσος», with the rank word left off."
+    },
+    {
+      "form": "Васса Псково-Печерская",
+      "lang": "ru",
+      "note": "Read out of the heading of days.pravoslavie.ru’s name page 6979, «Васса Псково-Печерская, прп.», with the rank word left off. The day’s own line does not print her at all and carries no name link for her."
     }
   ],
   "sex": "male",
@@ -16,8 +21,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian",
+        "note": "SHE IS NOT NAMED IN THE DAY’S LINE, which prints «Прпп. Марка (XV), Ионы (1480), Псково-Печерских» and stops there. The life that line links, life732, is titled «Преподобные Марк, Иона и Васса» and is her life as much as theirs, and her own name page, 6979, heads «Васса Псково-Печерская, прп.» and gives her days as «19 марта , 29 марта». This row rests on that reading and not on the day line alone. The other day her name page gives, 19 марта, is one day the 29 марта day page does not repeat; one row per church is the schema, so it is recorded here and she does not render on it, and the 19 марта day page WAS NOT READ by this reader."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Прпп. Марка (XV), Ионы (1480), Псково-Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      },
+      "note": "THE TWO SOURCES CONTRADICT EACH OTHER ABOUT WHAT SHE WAS, AND THIS FOLDER IS LEFT AS IT STANDS. It was written off saint.gr’s «Όσιοι Ιωνάς, Μάρκος και Βάσσος» of the Greek 29 March, which gives three men of one house and nothing else, and it holds `sex: male`, the display name Bassos of the Lavra of Pskov, and `types` venerable and monk. The Russian source makes her a woman: life732 says that the priest «Иоанн Шестник» came to the cave with his family, that his wife fell ill soon after and died having received the monastic habit with the name «Васса», that her husband and her spiritual father buried her, and that her coffin was twice set up out of the earth; and name page 6979 heads her «Васса Псково-Печерская, прп.», a feminine form with a feminine rank word. `sex`, `display_name` and `types` were NOT changed by this row, because changing what a folder says a saint was is not a reader’s decision; the contradiction is recorded here and reported to the author. azbyka.ru was not read."
     },
     {
       "church": "romanian",

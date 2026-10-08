@@ -6,4 +6,8 @@ In that new service he showed greater pastoral gifts and worked with greater dev
 
 At the last he gave up his spirit to God, whose faithful and genuine servant he had shone as, having preferred hardship and death to a selfish keeping of his office. The page gives no year for any of it, and no relic; its couplet is on the putting off of the clay: «Τὸν πηλὸν ἐκδύς, Εὐστάθιε παμμάκαρ. Χριστῷ παρέστης τῷ δι' ἡμᾶς πηλίνῳ» — having put off the clay, all-blessed Eustathius, you stood before Christ, who for our sake was of clay.
 
-*After saint.gr's calendar for 29 Μαρτίου — [the day](https://www.saint.gr/03/29/index.aspx) and [the life](https://www.saint.gr/104/saint.aspx); read 30 September 2026.*
+The Russian church calendar keeps him on the same day as the Greek and gives him a short life where saint.gr gives a line. He was a zealous monk from the beginning of his struggle, meek and wise, full of great faith and of love for his neighbours, and for the virtue of his life he was made bishop in Bithynia, the Roman province in the north-west of Asia Minor, and governed his flock for many years as an example of a virtuous and perfected life.
+
+When the iconoclast heresy came he spoke out boldly against the heretics in defence of the honouring of the holy icons. They denounced him to the emperor, and he had to endure imprisonment and cruel beatings; at the last he was deprived of his see and sent into exile, where he bore insults, want, hunger and poverty for three years and died in the ninth century.
+
+*After saint.gr's calendar for 29 Μαρτίου — [the day](https://www.saint.gr/03/29/index.aspx) and [the life](https://www.saint.gr/104/saint.aspx); read 30 September 2026; and after the Православный церковный календарь of the Сретенский monastery for 29 марта ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260329.html) and [the life](https://days.pravoslavie.ru/Life/life731.htm), read 8 October 2026.*

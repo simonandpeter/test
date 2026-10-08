@@ -16,6 +16,11 @@
       "form": "Кирил",
       "lang": "sr",
       "note": "Read out of the body of the Ohrid Prologue's first entry for the Julian 29 March on pravoslavno.rs, „За слично дело пострадао је у то време ђакон Кирил из града Илиопоља под гором Ливаном.“ The rank word ђакон is left off, and „из града Илиопоља под гором Ливаном“ is the clause that says where he came from and not a by-name attached to the name, so the bare forename is all the page gives him."
+    },
+    {
+      "form": "Кирилл Илиопольский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 29 марта ст. ст., which gives «Кирилл Илиопольский, диакон, сщмч.»; the rank words are not part of the stored form."
     }
   ],
   "sex": "male",
@@ -39,8 +44,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Мчч. Марка , еп. Арефусийского, Кирилла диакона и иных многих (ок. 363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
