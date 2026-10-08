@@ -4,13 +4,19 @@
   "sex": "male",
   "types": [
     "venerable",
-    "monk"
+    "monk",
+    "abbot"
   ],
   "names": [
     {
       "form": "Παΐσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιος Παΐσιος του Γκαλίτς», with the rank words left off."
+    },
+    {
+      "form": "Паисий Галичский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Паисий Галичский, архимандрит», with the rank word after the comma left off; the day’s own line gives the same two words in the genitive. His own life page titles him «Преподобный Паисий, Галичский чудотворец». `fk.mjs` returned NONE for «галичскии паисии» before the write."
     }
   ],
   "related": [
@@ -28,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст. — «Прп. Паисия Галичского (1460).»",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the day line gives the city and one of the two years this folder’s `dates` already holds, and the folder’s Greek row keeps him on the same Julian day. `dates` WAS DELIBERATELY NOT NARROWED: the folder carries «1460 or 1463» because saint.gr prints both and chooses neither, and the Russian day line prints «(1460)», which is one of the two; a calendar line preferring one of two candidate years is not an argument for discarding the other, and the choice is left to the author. `abbot` WAS ADDED and `office` SET TO «Archimandrite»: both readings of the house make him игумен — «позднее сделался игуменом» — and the name link heads him «Паисий Галичский, архимандрит», which the long reading explains, the metropolitan Иона of Moscow having ordained him to that rank in Moscow before he would give the grand prince his blessing. «Archimandrite» is a word the four locale packs carry and thirty-four folders already use. The life page lists no day but this one. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -59,5 +75,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Archimandrite",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Днесь возсия нам память твоя, славне Паисие,/ яко солнце светозарное, лучами озаряющи весь мир,/ тако и ты, преподобне,/ чудесы своими тьму нощи злых духов от нас отгоняя;/ днесь Небесныя силы, и святых Ангел,/ и души праведных мысленно торжествуют, радующеся;/ днесь и мы, грешнии, припадающе честному твоему образу молимся:/ о, преподобне Паисие,/ Христа Бога моли непрестанно/ спасти град и люди, иже тебе почитающия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Тропарь преподобного Паисия Галичского», глас 8 — proper to him, and it names him",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today thy memory has shone upon us, O glorious Paisius: as the sun in its brightness lights all the world with its rays, so dost thou also, O venerable one, drive away from us by thy wonders the darkness of the night of evil spirits. Today the powers of heaven, and the holy angels, and the souls of the righteous keep festival in spirit and rejoice; and today we sinners also, falling down before thy honoured image, pray: O venerable Paisius, entreat Christ God without ceasing to save the city and the people that honour thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Возсия, Господи, граду Твоему Галичу,/ яко светозарное солнце, угодник Твой Паисий,/ радостно вселенную озаряя своими чудесы,/ и приходящих с верою ко гробу его святому;/ тако молитвами Пречистый Богородицы от бед всех нас избави,/ и упраздни варварская шатания,/ яко мы, людие Твой, Господи,/ и град наш и страна вельми Тобою хвалится,/ и спасается молитвами преподобнаго Паисия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 мая ст. ст., «Кондак преподобного Паисия Галичского», глас 3 — proper to him, and it names him and his city",
+        "url": "https://days.pravoslavie.ru/Days/20260523.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy servant Paisius has shone forth, O Lord, upon thy city of Galich as the sun in its brightness, gladly lighting the whole world with his wonders, and those also who come with faith to his holy tomb. So, by the prayers of the most pure Mother of God, deliver us all from troubles and bring the ragings of the barbarians to nothing; for we are thy people, O Lord, and our city and our land boast greatly in thee and are saved by the prayers of the venerable Paisius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
