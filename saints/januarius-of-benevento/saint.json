@@ -17,6 +17,11 @@
       "form": "Јануарије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 21. април ст. ст., „Свешт. муч. Јануарије.“, with the rank words Свешт. муч. left off. The heading gives no see: the body has him bishop in Campania in Italy, where this folder's English name and doxologia.ro both say Benevento, and no other folder in this corpus holds this form."
+    },
+    {
+      "form": "Ианнуарий Беневентский, Путеольский (Неапольский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 21 апреля ст. ст., name page 890, «Святитель Ианнуарий Беневентский, Путеольский (Неапольский), епископ, сщмч.», with the rank words and the grade left off; the line itself gives only «Ианнуария еп.». All three cities the page gives him are kept. Measured against the gate’s own key function before it was written: 'беневентскии ианнуарии неапольскии путеольскии' has no other holder."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Сщмч. Ианнуария еп. и с ним мчч. Прокула , Соссия и Фавста диаконов, Дисидерия чтеца, Евтихия и Акутиона (ок. 305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "The day’s first entry, one line for seven men, with a name link apiece — this one is name page 890 — and one shared life page, life908, which all seven links point to. Both the day page and the name page give «День памяти: 21 апреля» and no other day. The year on the line, about 305, is the year this folder already carried. No folder in this corpus held a venerated russian row on 21/4 before this batch. The day page prints one hymn, a kontakion of «святых Ианнуария и Феодора», which names him and the Theodore of the day’s second company and nobody else; it is on this folder and on `theodore-of-perga`."
+      }
     },
     {
       "church": "romanian",
@@ -123,6 +138,23 @@
       },
       "english": {
         "text": "Having shone in the world as a lampstand mystically of seven lights, you give us light, O glorious Januarius with thy fellow contenders, with whom we praise thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Священия помазанием и мучения кровию украсистеся,/ славне Ианнуарие и Феодоре,/ и сияете всюду, в Вышних ликующе,/ и нас назирайте, в храм ваш пришедшия/ и в нем непрестанно зовущия:// всех нас соблюдите, моляще Человеколюбца Бога.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Кондак святых Ианнуария и Феодора», глас 3, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "The day’s only hymn, and it is addressed to two men: the bishop of this entry, anointed for the priesthood, and the Theodore who heads the day’s second company. Both are named in the text and nobody else is, so it is a proper of the two and is copied whole onto both folders. Checked back against the page."
+      },
+      "english": {
+        "text": "Ye were adorned with the anointing of the priesthood and with the blood of martyrdom, O glorious Januarius and Theodore, and ye shine everywhere, rejoicing in the highest. Watch over us also, who have come into your temple and cry out in it without ceasing: keep us all, praying to God who loves mankind.",
         "rendered": "site"
       }
     }

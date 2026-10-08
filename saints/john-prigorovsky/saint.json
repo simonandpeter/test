@@ -1,0 +1,63 @@
+{
+  "slug": "john-prigorovsky",
+  "display_name": "John (Prigorovsky)",
+  "names": [
+    {
+      "form": "Иоанн (Пригоровский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9628, «Иоанн (Пригоровский), иерей, сщмч.», with the grade words left off. The day’s own line declines the forename and prints no surname at all, «Сщмч. Иоанна пресвитера (1918)». Measured against the gate’s own key function before it was written: 'иоанн пригоровскии' has no other holder — the bare «Иоанн» is one of the widest folds in this corpus and the surname is what keeps this form out of it."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with: «Сщмч. Иоанна пресвитера (1918)». It is the only year either page gives him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Сщмч. Иоанна пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 9628, and no place, no parish, no arrest and no manner of death. The name page knows one thing the line does not, the surname «Пригоровский». «26 января (Новомуч.)» on his name page is what `new-martyr` stands on and that day page was not read. No corpus folder carried a venerated russian row on 21/4 at all before this day, measured by walking every folder's attestations in Python, so no folder of this name and year is kept on his day; the generically named `john-presbyter-martyr-1918-13-august` and `john-presbyter-martyr-1918-2-september` are kept on their own days and neither page names the other. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 4 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 4 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

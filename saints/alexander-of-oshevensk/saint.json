@@ -4,13 +4,20 @@
   "sex": "male",
   "types": [
     "venerable",
-    "monk"
+    "monk",
+    "abbot",
+    "presbyter"
   ],
   "names": [
     {
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Αλέξανδρος εκ Ρωσίας», with the rank word left off; the life page heads him «Οσιος Αλεξανδρος Εκ Ρωσιας (1427 - 1479)» and calls him «ο Όσιος Αλέξανδρος του Όσεβεν», with Alexis as his name in the world."
+    },
+    {
+      "form": "Александр Ошевенский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name index 116, «Преподобный Александр Ошевенский», with the rank word left off; the line itself gives the genitive «Александра Ошевенского». Measured against the gate’s own key function before it was written: 'александр ошевенскии' has no other holder."
     }
   ],
   "related": [
@@ -35,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Прп. Александра Ошевенского (1479).»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The name link behind the line is an index, id116, which carries two readings of him, life6393 and life897; both were read and the second is much the fuller. Both head «День памяти: 20 апреля» and no other day. The two years the page gives, 17 марта 1427 and 20 апреля 1479, are the two this folder already carried off saint.gr. The day page prints a troparion and a kontakion under his name and both are on this folder now."
+      }
     },
     {
       "church": "romanian",
@@ -66,5 +83,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Христа, истиннаго Бога, всею душею возлюбил еси/ и Тому невозвратным желанием последовал еси,/ вся же красная и сладкая мира сего возненавидев,/ яко небопарный орел, на Небеса возлете/ и тамо со Ангелы ликуеши и со всеми святыми Святей Троице предстоиши,/ моли и нам спастися, чадом твоим,/ яко же обещася, Александре преподобне, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Тропарь преподобного Александра Ошевенского», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The heading gives his full name and the text names him; it is his own proper. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Thou didst love Christ the true God with thy whole soul and didst follow after Him with a longing that never turned back; and having come to hate all that is fair and sweet in this world, thou didst fly up to the heavens like an eagle that soars on high. There thou dost rejoice with the angels and stand before the Holy Trinity with all the saints. Pray that we thy children may be saved also, as thou didst promise, O venerable Alexander, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Родителей своих любовь отринул еси/ и дом свой, яко чужд, оставил еси,/ водвори бо ся в пустыню,/ и тамо виде Бог труды твоя и подвиги,/ пастыря и наставника избранному Своему стаду сподобляет тя/ и по преставлении великими чудесы прославляет тя,/ исцеляти различный недуги./ Моли о нас Христа Бога,/ празднующих любовию святую память твою,/ да вси единогласно вопием ти:/ радуйся, Александре преподобне, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Кондак, преподобного Александра Ошевенского», глас 8, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The heading gives his full name, with the page’s own comma after «Кондак», and the text names him; it is his own proper. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Thou didst put from thee the love of thine own parents and didst leave thine own house as though it were a stranger’s, for thou wentest to dwell in the wilderness; and there God saw thy labours and thy struggles, and counted thee worthy to be a shepherd and a teacher to His chosen flock, and after thy departure glorified thee with great wonders, to heal all manner of sicknesses. Pray for us to Christ God, who keep thy holy memory with love, that we may all cry out to thee with one voice: Rejoice, O venerable Alexander, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

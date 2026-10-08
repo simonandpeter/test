@@ -10,6 +10,11 @@
       "form": "Κοδράτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Απριλίου, «Αγία Αλεξάνδρα η βασίλισσα και οι ακόλουθοι της Απολλώς, Ισαάκιος και Κοδράτος», with the rank word left off; the life page heads him «Αγιος Κοδράτος (; - 303)»."
+    },
+    {
+      "form": "Кодрат (Кротат) Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 21 апреля ст. ст., name page 1259, «Кодрат (Кротат) Никомидийский, мч.», with the grade left off; the page’s own variant of the forename is kept in the parentheses it prints it in, and the line gives only the genitive «Кодрата». Measured against the gate’s own key function before it was written: 'кодрат кротат никомидиискии' has no other holder."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Мчч. Исакия , Аполлоса и Кодрата (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "Named in the line as the last of the three, with his own name link, page 1259, and the company’s shared life page life910. Both pages give one day, 21 апреля. The year on the line, 303, is the year this folder already carried. The name page gives him the city of Nicomedia and a variant of his forename, «Кротат», neither of which the line has. No hymn was taken for him."
+      }
     },
     {
       "church": "romanian",

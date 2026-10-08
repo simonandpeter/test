@@ -16,6 +16,11 @@
       "form": "Фауст",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's entry for 21. април ст. ст., „његов ђакон Фауст“ — **out of the entry's body and not out of its heading**, which names the bishop alone. The form is the nominative the entry itself prints; the rank word beside it is left off, and the companionship clause this corpus keeps in the English display name is not part of the source's name for him. He is the bishop's own deacon there."
+    },
+    {
+      "form": "Фавст Путеольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 21 апреля ст. ст., name page 2151, «Фавст Путеольский, диакон, сщмч.», with the grade words left off. Measured against the gate’s own key function before it was written: 'путеольскии фавст' has no other holder."
     }
   ],
   "related": [
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Сщмч. Ианнуария еп. и с ним мчч. Прокула , Соссия и Фавста диаконов, Дисидерия чтеца, Евтихия и Акутиона (ок. 305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026,
+        "note": "Named in the line as the fourth of the seven and as one of the three deacons, with his own name link, page 2151, and the company’s shared life page life908, which gives him and the reader more to do than it gives the rest. Both pages give one day, 21 апреля. The year on the line, about 305, is the year this folder already carried. No hymn was taken for him."
+      }
     },
     {
       "church": "romanian",

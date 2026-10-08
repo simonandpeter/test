@@ -1,0 +1,62 @@
+{
+  "slug": "nicholas-pisarevsky",
+  "display_name": "Nicholas (Pisarevsky)",
+  "names": [
+    {
+      "form": "Николай (Писаревский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9721, «Николай (Писаревский), иерей, исп.», with the grade words left off. The day’s own line declines the forename and prints no surname at all, «Св. Николая исп., пресвитера (1933)». Measured against the gate’s own key function before it was written: 'николаи писаревскии' has no other holder, and the surname is what keeps this form out of the bare «Николай» fold that `nicholas-confessor-presbyter-1933` sits in."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes his line with: «Св. Николая исп., пресвитера (1933)». It is the only year either page gives him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 апреля ст. ст. — «Св. Николая исп., пресвитера (1933).»",
+        "url": "https://days.pravoslavie.ru/Days/20260421.html",
+        "year": 2026
+      },
+      "note": "THE ONE IDENTITY THIS DAY TURNED ON, and it was settled by the name pages rather than by the line. `nicholas-confessor-presbyter-1933` already carries a venerated russian row off THE SAME CALENDAR LINE, WORD FOR WORD — «Св. Николая исп., пресвитера (1933)» — for 19 августа ст. ст., and it stores only the bare forename «Николай», so the line alone cannot tell the two apart. The name links do: the 19 августа line links name page 9711, «Николай (Лебедев), иерей, сщмч.», whose days are «26 января (Новомуч.) , 19 августа», and this line links 9721, «Николай (Писаревский), иерей, исп.», whose days are «26 января (Новомуч.) , 21 апреля». Neither page names the other day and neither man’s page repeats the other’s. TWO MEN, ONE PRINTED LINE, TWO DAYS. Both pages were fetched and read. Beyond that the calendar’s line is all there is: no life page here and none on 9721, and no place, no parish, no arrest and no manner of death. «26 января (Новомуч.)» was not read. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 4 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 4 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

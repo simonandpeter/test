@@ -6,6 +6,11 @@
       "form": "Αβραάμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιος Αβραάμιος ο Νεομάρτυρας εκ Βουλγαρίας», with the rank words and the origin left off."
+    },
+    {
+      "form": "Аврамий Болгарский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name index 32, «Святой мученик Аврамий Болгарский», with the rank words left off. The page spells the forename both ways — «Аврамий» in its headings and index title, «Авраамий» in the day’s own line and in the body of both lives — and the index title’s spelling is the one stored. Measured against the gate’s own key function before it was written: 'аврамии болгарскии' has no other holder."
     }
   ],
   "sex": "male",
@@ -25,8 +30,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). The saint is kept in Russia and a row there is likely; it has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian",
+        "note": "The day the calendar gives him here is the translation of his relics, «Перенесение мощей мч. Авраамия Болгарского (1230)»; both of his life pages head «Дни памяти: 1 апреля , 20 апреля (Перенесение мощей)», so the first of April is his own memory. One row per church is the schema, so that day is recorded here and he does not render on it, and the 1 апреля day page was not read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Перенесение мощей мч. Авраамия Болгарского (1230).»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The name link behind the line is an index, id32, carrying two readings of him, life5054 and life756; both were read. ONE READING LEFT UNRESOLVED: the line heads the translation «(1230)», while both lives date the laying of the relics in the Dormition church to 6 марта 1230 — so the calendar keeps a translation feast on 20 апреля whose own account puts the event on 6 марта of the same year. Nothing on either page explains the difference and he was not moved. The year of his death, 1229, is the one this folder already carried; the lives give the day as 1 апреля and `dates` was not changed. The day page prints no hymn under his name."
+      }
     },
     {
       "church": "romanian",

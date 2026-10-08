@@ -19,7 +19,8 @@
       "feast": {
         "day": 19,
         "month": 2,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The same calendar keeps a second day for him, 21 апреля ст. ст. — «Обретение мощей прп. Феодора Санаксарского (1999)», the finding of his relics in 1999 — and his name page 13619 heads «Дни памяти: 19 февраля , 21 апреля (обретение мощей) , 23 мая (Ростов.)». One row per church is the schema, so the April and May days are recorded here and he does not render on them; neither of those two day pages was read, and this row is otherwise the one the 19 февраля reading wrote, copied back word for word."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Прп. Феодора Санаксарского (1791).»",

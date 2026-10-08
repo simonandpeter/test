@@ -16,6 +16,11 @@
       "form": "Анастасије Синајски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Преп. Анастасије Синајски.“, with the rank word Преп. left off. The by-name Синајски is kept: it is not a rank, it is what the heading gives beyond the forename, and `anastasius-the-persian` already holds the bare «Анастасије», which a bare form here would fold onto. The Prologue's next entry calls the patriarch of Antioch Синаит, so the book itself spells the two by-names apart."
+    },
+    {
+      "form": "Анастасий, игумен Синайской горы",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name page 6606, «Анастасий, игумен Синайской горы, прп.», with the grade прп. left off. The descriptive phrase is kept, comma and all, on the corpus’s own pattern for «Аммон, затворник Печерский» and «Алексий, человек Божий»: the bare forename is a wide fold, and the epithet Синаит which the page gives him in its body is the one the patriarch of the same name is stored under two entries above. Measured against the gate’s own key function before it was written: 'анастасии горы игумен синаискои' has no other holder."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Прп. Анастасия , игумена Синайской горы (695).»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "A separate entry from the patriarch of the same name and the same surname two lines above, with its own name page (6606) and its own life page (life903). The name page gives «День памяти: 20 апреля» and no other day. ONE DISAGREEMENT LEFT UNRESOLVED: this life opens «родился в конце VI века», born at the end of the sixth century, while the birth interval on this folder is doxologia.ro’s «în prima jumătate a secolului al VII-lea», the first half of the seventh, at Alexandria. The Russian names no birthplace at all. A year is not this reader’s to decide and `dates` was not changed. The day page prints no hymn under his name."
+      }
     },
     {
       "church": "romanian",

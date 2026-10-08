@@ -16,6 +16,11 @@
       "form": "Теодор Трихина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Преп. Теодор Трихина.“, with the rank word Преп. left off. The by-name Трихина is kept: it is not a rank but the thing the entry turns on — he was called Трихин, the Hairy, for his one garment of haircloth — and `theodore-boyar-of-chernigov` and `theodore-prince-of-yaroslavl` already hold the bare «Теодор», which a bare form here would fold onto."
+    },
+    {
+      "form": "Феодор Трихина",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 20 апреля ст. ст., name page 2204, «Феодор Трихина»; the day’s own line gives the genitive «Феодора Трихины». Measured against the gate’s own key function before it was written: 'трихина феодор' has no other holder."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Прп. Феодора Трихины (400).»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The day’s first entry. The name page behind the line (2204) gives «День памяти: 20 апреля» and no other day, and the life page it links, life896, heads the same one day. The line closes with «(400)», which is the year the Ohrid Prologue gave this folder; the life behind the line ends «Время жизни преподобного Феодора неизвестно» — the time of his life is unknown. Both readings are set down in the life and `dates` was not changed. The day page prints a kontakion under his name, which is on this folder now."
+      }
     },
     {
       "church": "romanian",
@@ -122,6 +137,23 @@
       },
       "english": {
         "text": "Weaving in holiness a garment of light, thou didst wrap thyself in a rag of hair, all-venerable Theodore, treasure of the Comforter; wherefore thou wast counted worthy of grace beyond nature, welling up from thy tomb a fragrant myrrh that cleanses souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явился еси предивен житием,/ Феодоре мудре отче,/ власяными рубы изменив/ паче царских сокровищ,/ яже на земли,/ сего ради небесную одежду восприял еси,// присно моли о нас, преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 апреля ст. ст. — «Кондак преподобного Феодора», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260420.html",
+        "year": 2026,
+        "note": "The heading gives the bare forename, and he is the only Theodore the day keeps; the text itself names the hair garments he is surnamed for, «власяными рубы», so it is his own proper and not a common. Copied whole off the page and checked back against it."
+      },
+      "english": {
+        "text": "Thou wast shown forth most wondrous in thy manner of life, O wise father Theodore, having taken garments of hair in exchange for the treasures of kings that are upon the earth; and for this cause thou hast received the raiment of heaven. Pray for us without ceasing, O venerable one.",
         "rendered": "site"
       }
     }
