@@ -3,7 +3,9 @@
   "display_name": "Tryphon of Constantinople",
   "sex": "male",
   "types": [
-    "patriarch"
+    "patriarch",
+    "hierarch",
+    "monk"
   ],
   "office": "Patriarch of Constantinople",
   "names": [
@@ -16,6 +18,11 @@
       "form": "Трифун",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 19 April, „Св. Трифун патријарх Цариградски.“, with Св. left off — it is not a rank — and with патријарх Цариградски left off, a rank this folder already carries in `types` and a see this corpus keeps in `office`. The heading gives no epithet beyond the see, so the bare forename is left. `tryphon-of-campsada` already holds this same bare Serbian form, so the two fold, and the fold is recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Трифон Константинопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2126, «Святитель Трифон Константинопольский, патриарх», with the rank words left off. The day’s own line declines it with the see in the genitive, «Свт. Трифона , патриарха Константинопольского»; the see stays in this folder’s `office` as well."
     }
   ],
   "related": [],
@@ -31,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Свт. Трифона , патриарха Константинопольского (933).»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "His name page 2126 lists this one day and no other, which is the day the `greek` and `serbian` rows already carry. The day page prints no hymn under his name. Its year, 933, is the Prologue’s and not saint.gr’s 931, and the `death` interval this folder already held covers both, so nothing was changed. azbyka.ru was not read."
     },
     {
       "church": "romanian",

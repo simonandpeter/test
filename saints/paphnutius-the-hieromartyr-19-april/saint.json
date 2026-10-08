@@ -6,17 +6,33 @@
       "form": "Pafnutie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 aprilie, «Sfântul Sfințit Mucenic Pafnutie»."
+    },
+    {
+      "form": "Пафнутий Иерусалимский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1753, «Святитель Пафнутий Иерусалимский, епископ, сщмч.», with the rank words left off. The day’s own line declines it with the see in the genitive, «Сщмч. Пафнутия , еп. Иерусалимского»."
     }
   ],
   "sex": "male",
   "types": [
-    "hieromartyr"
+    "hieromartyr",
+    "bishop"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Сщмч. Пафнутия , еп. Иерусалимского.»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "His name page 1753 lists this one day and no other, and it is the day the `romanian` row already carries. The Russian is the first source read for this folder to give him any life at all: doxologia named him and printed only hymns. The day page prints no hymn under his name. It gives no year: the reign of Diocletian appears only inside a supposition, «Предполагают», so no `dates` was written. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -84,5 +100,6 @@
   "related": [
     "paphnutius-of-the-thebaid",
     "paphnutius-the-egyptian"
-  ]
+  ],
+  "office": "Bishop"
 }

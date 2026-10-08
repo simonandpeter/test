@@ -16,6 +16,11 @@
       "form": "Јован Ветхопешчерник",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 19 April, „Преп. Јован Ветхопешчерник.“, with Преп. left off, which is the `venerable` this folder already carries in `types`. **Ветхопешчерник is kept**: it is not a rank word but the by-name the whole entry turns on — the Old Cave, which is this folder's English name as «of the Old Lavra» — and keeping it is what holds this form out of the seven-folder bare «Јован» fold, on the same reading that kept `Ардалион Глумац` and `Јован Нови Јањински` out of theirs."
+    },
+    {
+      "form": "Иоанн Палеолаврит, Ветхопещерник",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 995, «Иоанн Палеолаврит, Ветхопещерник, иеромонах», with the rank word left off. Both epithets are the calendar’s own and say the same thing twice, the first in Greek and the second in Slavonic: the man of the Old Lavra. The day’s own line declines the second alone, «Прп. Иоанна Ветхопещерника»."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Прп. Иоанна Ветхопещерника (VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "His name page 995 and his life page both list this one day, which is the day the `romanian` and `serbian` rows already carry; the Greek 20 April is one day off and is unaffected. The day page prints no hymn under his name. The Russian is the first source read for this folder to say where the Old Lavra was and what he was ordained. azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -16,6 +16,11 @@
       "form": "Антонин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 19 April, „Св. муч. Христофор, Теона и Антонин.“, with Св. left off — it is not a rank — and муч. left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year, and the day in this folder's display name is the corpus's own way of telling the company's members from their namesakes, not part of any source's name for him. `antony-son-of-john-of-syracuse` holds a bare **Russian** Антонин of the same spelling, so the fold crosses languages; it is recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Антонин Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 19 апреля ст. ст., which gives «Антонин Никомидийский, мч.»; мч. is a rank word and is not part of the stored form, and Никомидийский is the adjective of the city where the page sets the martyrdom."
     }
   ],
   "related": [
@@ -41,8 +46,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 апреля ст. ст. — «Мчч. Феоны , Христофора и Антонина (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260419.html",
+        "year": 2026
+      },
+      "note": "His name page 227 lists this one day and no other, which is the day the `serbian` row already carries; the Greek 20 April is one day off and is unaffected. The Russian calendar splits the nine of this company across two days, five on 18 апреля and these three on 19 апреля, and prints no line for Caesarius on either. The day page prints no hymn for the three. azbyka.ru was not read."
     },
     {
       "church": "romanian",
