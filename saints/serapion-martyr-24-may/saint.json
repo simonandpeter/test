@@ -11,17 +11,35 @@
       "form": "Σεραπίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, which names him inside Meletius's company as «Σεραπίων ο Aιγύπτιος», with the epithet kept and the rank word left off; the life page's own head line for him reads «Αγιος Σεραπιων ο Aιγυπτιος»."
+    },
+    {
+      "form": "Серапион Египтянин, Галатийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1960, «Святитель Серапион Египтянин, Галатийский, епископ, сщмч.», with the rank word before the name and the two after it left off. Both epithets are kept because both are the calendar’s own and the comma between them is the calendar’s: the Egyptian, of Galatia. The day line gives «Серапиона египтянина», with the first of them in lower case. `fk.mjs` returned NONE for the form before the write."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "hierarch",
+    "bishop",
+    "hieromartyr"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "He is the fourth name of the line, «Серапиона египтянина», and the calendar gives him a paragraph of his own at the end of the company’s life: born in Egypt, he came to the province of Galatia, was a witness of the martyrdom of Meletius and his company, believed at the sight of the courage with which they died for Christ, was imprisoned for it, and in the prison an angel of God came down to him «и посвятил святого Серапиона во епископа», consecrated him bishop. THE RUSSIAN MAKES HIM A BISHOP WHERE THE GREEK GAVE HIM NO RANK AT ALL: name page 1960 heads him «Святитель Серапион Египтянин, Галатийский, епископ, сщмч.» and the life tells how he came by the office. `hierarch`, `bishop` and `hieromartyr` were added on that authority and `office` set to the bare «Bishop» — not a see, the calendar naming none and BRIEF-ADDENDUM §4 recording what a see-bearing office costs. `dates` WAS WRITTEN WHERE THERE WAS NONE: the folder had no `dates` object, and the interval written is the one the rest of this company already carries, the reign the calendar itself prints, «(218–222)», with the line’s «(ок. 218)» inside it. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -73,5 +91,15 @@
     "serapion-of-rome",
     "stephen-companion-of-meletius",
     "susanna-companion-of-meletius"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 218,
+      "latest": 222,
+      "display": "between 218 and 222",
+      "basis": "traditional",
+      "note": "The folder had no `dates` object at all. The reign the Russian calendar prints for the whole company, «в царствование римского императора Антонина Гелиогобала (218–222)», with the day line’s «(ок. 218)» falling inside it; it is the same interval the other folders of this company already carry. The calendar gives him no year of his own, and no year of birth appears anywhere; none was inferred, and the consecration in prison is not dated."
+    }
+  },
+  "office": "Bishop"
 }

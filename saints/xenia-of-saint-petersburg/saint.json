@@ -137,7 +137,8 @@
       "feast": {
         "day": 24,
         "month": 1,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The same calendar keeps a second day for her, the Julian 24 May, where its line is «Блж. Ксении Петербургской (прославление 1988)» — her glorification, in 1988, and not her repose; read on 2026-10-08 from days.pravoslavie.ru's page for that day. One row per church is the schema, so the glorification is recorded here and she does not render on it. That day page prints no hymn under her name."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Блж. Ксении Петербургской (XIX)»",

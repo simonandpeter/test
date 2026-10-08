@@ -11,6 +11,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, which names the whole company, and out of the life page's own head line for him or her; the rank words are left off."
+    },
+    {
+      "form": "Стефан Галатийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2054, «Стефан Галатийский, мч.», with the rank abbreviation left off; the day line gives the bare «Стефана», in the genitive, without the province. `fk.mjs` returned NONE for the form before the write, and the bare «Стефан» was deliberately not stored, this corpus holding a great many of that name."
     }
   ],
   "related": [
@@ -48,8 +53,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "He is the second name of the line and the calendar’s life names his part exactly: «Трибуны его полка, святые мученики Стефан и Иоанн, были обезглавлены за свое исповедание Христа Истинным Богом» — a tribune of Meletius’s regiment, beheaded with John for confessing Christ as the true God. That is the part the folder’s Greek row already gives him and the ground of its `soldier` type. `dates` is unchanged: the folder holds «between 218 and 222» and the Russian gives the same reign and the line’s «(ок. 218)». azbyka.ru was not read."
     },
     {
       "church": "romanian",

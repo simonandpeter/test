@@ -1,0 +1,60 @@
+{
+  "slug": "vincent-of-lerins",
+  "display_name": "Vincent of Lérins",
+  "names": [
+    {
+      "form": "Викентий Леринский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14900, «Викентий Леринский, прп.», with the rank abbreviation left off; the day’s own line gives the same two words in the genitive, «Викентия Леринского». Measured against the gate’s own key function before the write: 'викентии леринскии' has no other holder in the corpus, and neither does the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 450,
+      "display": "before 450",
+      "basis": "traditional",
+      "note": "The day line reads «Прп. Викентия Леринского (до 450).» — before 450, and that is the whole of what either page gives. The interval is written open at the fifth century’s own beginning because the calendar states only the upper bound; no year of birth appears, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Прп. Викентия Леринского (до 450).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry. `day-candidates.mjs` SPLIT THIS LINE IN TWO, printing «Прп. Викентия Леринского (до.» and then «450).» as separate entries, so the day reads as eight entries where the page has seven; the line was read off the page. THE CALENDAR GIVES NO LIFE: the line carries a link to his name and none to a reading, and the name page behind it, 14900, prints the title «Викентий Леринский, прп.» and the line «День памяти: 24 мая» and nothing else at all — one day only, with no «(Новомуч.)» marker and no second commemoration. So the calendar gives the monk of Lérins his day, his rank and a bound on his death, and nothing whatever besides; it does not so much as say he wrote. NO FOLDER WAS FOUND FOR HIM: `fk.mjs` returns no holder for «Викентий Леринский» or for the display name; `ls -d saints/vincent*` lists `vincent-nikolsky`, `vincent-of-spain`, `vincent-smirnov` and `vincentius-martyr-11-december`, none of them of Lérins. The day page prints four hymns, two for Nicetas the Stylite of Pereslavl and two for Symeon of the Wonderful Mountain, and none under his name. azbyka.ru was not read, and it is the source that would give him a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 6 iunie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 6 Ιουνίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 June 2026, the civil day of this Julian 24 May (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

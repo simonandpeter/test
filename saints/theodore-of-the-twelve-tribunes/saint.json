@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, which names the whole company, and out of the life page's own head line for him or her; the rank words are left off."
+    },
+    {
+      "form": "Феодор Галатийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 2182, «Феодор Галатийский, мч.», with the rank abbreviation left off; the day line gives the bare «Феодора», in the genitive, without the province. `fk.mjs` returned NONE for the form before the write, and the bare «Феодор» was deliberately not stored, this corpus holding more than a hundred of that name."
     }
   ],
   "related": [
@@ -48,8 +53,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "He is the sixth name of the line and this folder is the only Theodore this corpus holds in this company. THE CALENDAR NAMES A THEODORE TWICE ON ONE PAGE AND DOES NOT SAY WHETHER IT MEANS ONE MAN OR TWO: life1135 says «Святые мученики Феодор и Фавст вместе со многими другими были сожжены», Theodore and Faustus were burned with many others, and three sentences later lists among «12-ти трибунов» the names «Фавста, Фиста, Маркелла, Феодора, Мелетия, Сергия, Маркеллина, Филикса, Фотина, Феодориска, Меркурия, Дидима» — Theodore and Faustus again. The day page carries ONE name link for Theodore, 2182, and one for Faustus, 2149. This corpus holds one folder for each, both of them called «one of the twelve tribunes» by the Greek wave that made them, so the two readings fall together here and the row is written on that folder; the ambiguity is the calendar’s and is reported to the author. `dates` is unchanged: the folder holds «between 218 and 222» and the Russian gives the same reign and the line’s «(ок. 218)». azbyka.ru was not read."
     },
     {
       "church": "romanian",

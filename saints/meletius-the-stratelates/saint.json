@@ -16,6 +16,11 @@
       "form": "Мелетије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 24. мај ст. ст., „Свети мученици Мелетије стратилат и хиљаду двесто осамнаест војника са женама и децом“ — Свети is not a rank, мученици is the `martyr` this corpus puts in `types`, стратилат is the `soldier` it puts there too, and everything after „и“ is the unenumerated company and not part of his name. Strip all of it and the bare personal name is what the calendar gives. **The fold was measured on both instruments, not assumed**: `foldchk.py` compares the stored string exactly and returns `NO FOLDER HOLDS THIS FORM` for «Мелетије», so this is the first folder to hold that form — but `corpus-gate.mjs` folds on a looser reading of the name and its «мелетије» row now reads `meletius-of-antioch, meletius-the-stratelates`, so on the gate’s reading it **is** a joining, of two. The two instruments answer different questions and both answers are recorded here rather than the first one alone. The Greek form on this folder, «Μελέτιος», is the same bare name."
+    },
+    {
+      "form": "Мелетий Галатийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link 1508, «Мелетий Галатийский, трибун, мч.», with the two rank words after the comma left off. THE RANK WORD IT GIVES IS NOT THE LINE’S: the day line calls him «Мелетия Стратилата», commander, and the life «военачальником Галатийской области», while the name page calls him трибун, tribune, which is the grade of the twelve whose names the same life lists separately. The link is reached from the word «Мелетия» in the line’s «Мелетия Стратилата» and so is this man’s; the discrepancy is the calendar’s and is reported to the author. `fk.mjs` returned NONE for «Мелетий Галатийский» before the write, and the form was stored on this folder only, not on `meletius-of-the-twelve-tribunes`."
     }
   ],
   "related": [
@@ -53,8 +58,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 мая ст. ст. — «Мчч. Мелетия Стратилата, Стефана , Иоанна , Серапиона египтянина, Каллиника волхва, Феодора и Фавста , и с ними 1218 воинов с женами и детьми (ок. 218).»",
+        "url": "https://days.pravoslavie.ru/Days/20260524.html",
+        "year": 2026
+      },
+      "note": "He is the head of the day’s company and the line names him by the title this folder’s display name carries, «Мелетия Стратилата». The calendar’s life, life1135, makes him «военачальником Галатийской области» under «римского императора Антонина Гелиогобала (218–222)», a Christian who prayed that the Lord would end the pagan error; the demons of the temples, frightened by his prayer, went into dogs whose howling terrified the province; he destroyed the maddened dogs and the shrines with his soldiers, was taken before the governor Максимиан, was tortured for refusing to sacrifice and died confessing Christ. `dates` IS UNCHANGED: the folder holds «101–200 or 218–222», widened by an earlier reading, and the Russian gives the reign 218 to 222 and the line «(ок. 218)», which fall inside it. THE CALENDAR KEEPS ONE NAME PAGE WHERE THIS CORPUS KEEPS TWO FOLDERS, AND THE AUTHOR SHOULD SEE IT: name page 1508, reached from the word «Мелетия» inside «Мелетия Стратилата», is headed «Мелетий Галатийский, трибун, мч.» — tribune, not stratelates — while the same life page lists among the twelve tribunes a second «Мелетий». This corpus holds `meletius-the-stratelates` and `meletius-of-the-twelve-tribunes` as two folders. The form was stored on THIS folder, the one the line names, and on no other; the other folder’s row says the same thing from its side. azbyka.ru was not read."
     },
     {
       "church": "romanian",
