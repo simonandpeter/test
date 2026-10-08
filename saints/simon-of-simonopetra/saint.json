@@ -11,6 +11,11 @@
       "form": "Σίμων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Όσιος Σίμων ο Μυροβλήτης κτήτορας της Ιεράς Μονής Σιμωνόπετρας», with the rank, the by-name and the monastery left off."
+    },
+    {
+      "form": "Симон Мироточиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 28. децембар ст. ст., „Преподобни Симон Мироточиви.“ — «Преподобни» is the rank `venerable` the folder carries, and «Мироточиви», the myrrh-streaming, is an epithet and not a rank, so it is kept: §6 asks for the fullest form the calendar gives. MEASURED BEFORE IT WAS WRITTEN: neither the full string nor the bare «Симон» has any other holder in the corpus, so the epithet costs nothing and keeps the form the book’s own. The monastery, Симоно-Петра, is in the body and not in the heading, and no form was assembled out of it."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.01.2026 (28. децембар ст. ст.) — „Преподобни Симон Мироточиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and THREE SENTENCES is the whole of it. Identified past any doubt and on the same menologion day the Romanian and the Greek already keep him: the heading’s «Мироточиви» is the Μυροβλήτης and the Izvorâtorul de mir both his other rows print, and the first sentence names the house — «Оснивач светогорског манастира Симоно-Петра», founder of the Athonite monastery of Simonopetra — which is the one thing that tells this Simon from every other. THE YEAR AGREES EXACTLY and `dates` is therefore untouched: «Упокојио се мирно и прешао ка Христу 1257. године» against the flat 1257 the folder already holds off saint.gr’s «στις 28 Δεκεμβρίου 1257». `types` untouched: «Преподобни» is the `venerable` the folder carries, and `hermit` and `abbot` are there already off the other two books; «Мироточиви» is an epithet and not one of BRIEF.md §9’s types. No `office`. No `locations`: the folder has never had one, and a monastery named after its founder is not a coordinate. No `related`: the entry names no saint. WHAT THE ENTRY ADDS is only a summary — «Прослављен подвизима, виђењима и чудесима», glorified by his ascetic labours, by visions and by wonders — which is three words where the folder’s existing life has pages, so the new paragraph says plainly that this book gives him three sentences and what they are. The Serbian form is the heading with the rank stripped and the epithet kept, «Симон Мироточиви», and it has no other holder; the bare «Симон» has none either, and the fuller form was written because §6 asks for the fullest the calendar gives. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {

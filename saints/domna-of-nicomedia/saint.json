@@ -10,6 +10,11 @@
       "form": "Δόμνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Αγία Δόμνα», with the rank word left off."
+    },
+    {
+      "form": "Домна",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 28. децембар ст. ст., „Света мученица Домна.“ — «Света» is “saint” and not a rank and «мученица» is the rank `martyr` the folder carries, so the bare forename is the whole of what is left; the book gives her no by-name, Nicomedia being in the body and in the other books and not in this heading. MEASURED BEFORE IT WAS WRITTEN: the only folder the string lands on is THIS ONE, which already carries the identical Russian form «Домна», so no new fold is made and no key is owed — the gate counts folders and this remains a fold of one."
     }
   ],
   "sex": "female",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 16.09.2026 (3. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.01.2026 (28. децембар ст. ст.) — „Света мученица Домна.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. Identified on the whole dossier and on the same menologion day the Greek already keeps her: a virgin and a priestess of the foul idols at the court of the emperor Maximian, who read the Acts of the holy Apostles, believed in Christ and was baptised together with the eunuch Индис, and who was at the last seized and beheaded for tending and censing the graves of the martyrs. The folder’s own `related` rows to `indes-of-nicomedia`, `anthimus-of-nicomedia` and `twenty-thousand-martyrs-of-nicomedia` are all three named in this entry, which is as strong a confirmation as this wave gets. THE RUSSIAN KEEPS HER ON 3 SEPTEMBER AND THE GREEK AND THIS BOOK ON 28 DECEMBER, and her `serbian` row was `undocumented`, so nothing of this church’s was moved or replaced and no second-day note is owed — the 12-21 reader’s `peter-of-moscow` shape. `dates` UNTOUCHED AND NOTHING WRITTEN: she already holds a flat 302 off the Russian day line, and THIS ENTRY GIVES NO YEAR OF HERS AT ALL — the 302 on the page belongs to the burning of the twenty thousand in the day’s first entry, and that a narrative puts her death after it is the narrative’s order and not a year the page states for her. `types` untouched: «мученица» is the `martyr` and the body’s «Девица» the `virgin`, both already there. `locations` UNTOUCHED: the folder holds a death at Nicomedia with 15 km of uncertainty, and this entry agrees with it, so there is nothing to change. EIGHT FOLDERS THIS CORPUS HOLDS ARE NAMED IN THIS BODY AND NOT ONE OF THEM TAKES A ROW, AND THAT IS THE DAY’S LARGEST REFUSAL. The heading is „Света мученица Домна.“ — ONE NAME AND NO COMPANY CLAUSE OF ANY KIND — and the 12-19 reader’s `aglaia-of-rome` ruling decides it: a name inside a body is not a heading. The body names, as killed by Maximian’s order, свети Индис, Горгоније and Петар, thrown into the sea with stones about their necks; војвода Зинон, beheaded for publicly reproving the emperor for idolatry; свети Теофил, deacon of the bishop Антим, killed with stones and arrows; and the great men Доротеј, Мардоније, Мигдоније and Јевтимије, all put to death for Christ; with игуманија Агатија and монахиња Теофила besides. `indes-of-nicomedia`, `gorgonius-of-nicomedia`, `peter-of-nicomedia`, `zeno-of-nicomedia`, `theophilus-the-deacon-of-nicomedia`, `dorotheus-of-nicomedia`, `mardonius-of-nicomedia` and `migdonius-of-nicomedia` all exist, all sit on this same menologion day in the Greek, and all keep an `undocumented` serbian row after this commit. THE DIFFERENCE FROM THE 12-24 EUGENIA DAY IS THE HEADING AND NOTHING ELSE: there the heading read «и други с њом», others with her, and the body filled the clause in, so three rows were written off it; here there is no clause to fill. GRANTING THOSE EIGHT ROWS IS ONE LINE FOR THE AUTHOR and it is named in the report. Агатија, Теофила, Јевтимије, the bishop Кирил who baptised her and the bishop Антим are named in the life in the book’s own Cyrillic, which is where the names stay: the first three hold no folder read as them, and no link and no `related` row is made in either direction to any of the eight either, so `related-floor` is not given a name it would demand a row for. WHAT THE ENTRY ADDS, and goes into the life: that she was a priestess of the idols at the court; that she read the Acts of the Apostles «однекуд», from somewhere; that the bishop Кирил sent her to a women’s monastery under the abbess Агатија, who dressed her in man’s clothing and sent her to a men’s monastery when the emperor began searching for her; and the whole of the fishermen’s net — that walking the seashore one night, grieving for свети Индис above all, she was called to help the fishermen with their net and by God’s providence they drew up three human bodies in it, in which she recognised the three, and took and honourably buried them. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "locations": [

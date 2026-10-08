@@ -66,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.01.2026 (28. децембар ст. ст.) — „Светих двадесет хиљада мученика никомидијских.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and it is ONE FOLDER AND NOT TWENTY THOUSAND: the heading gives the company a count and a city and enumerates nobody, and the body names not one member of it — the archdeacon who encouraged them is «архиђакон» and no more, with no name anywhere on the page — which is BRIEF.md §4’s ruling on a company a heading does not enumerate, and is exactly how the 12-21 reader handled `five-hundred-martyrs-of-nicomedia` and `hundred-and-thirty-women-martyrs`. Identified on the same menologion day the Romanian and the Greek already keep the company and on the whole account: the church of Nicomedia surrounded by soldiers and fired at the feast of the Nativity under Maximian Hercules, and twenty thousand burnt inside it. `dates` WRITTEN WHERE THERE WAS NONE AT ALL, and it is the first date this folder has ever had: death 302, off the entry’s closing «Пострадаше и прославише се 302. године». Neither of the folder’s other two books gives a year. `types` untouched: «мученика» is the `martyr` the folder carries. WHAT THE ENTRY ADDS, and goes into the life: that the faith was flowering in Nicomedia and increasing day by day and that the emperor, staying in the city, learned of the multitude of Christians and was embittered; that his envoy came INTO the church after midnight and gave them the choice of sacrificing to the idols or being burnt; that the archdeacon, «јуначки војник Христов», took fire with a divine zeal and heartened the people by reminding them of the three youths in the Babylonian furnace, and said „Погледајте, браћо, на жртвеник у олтару Господњем и разумите, да се на њему сада за нас жртвовао Господ и Бог наш истинити; па зар ми да не положимо за њега душе наше на месту овом светом!“; that THOSE AMONG THEM WHO WERE ONLY CATECHUMENS WERE BAPTISED AND CHRISMATED THERE AND THEN, the whole people being roused to die for Christ; that they burned singing the glory of God; that the church burned for five days afterwards, with a smoke rising from it of an intoxicating and wonderful fragrance and a strange gold-shining light standing over the place; and that the dead were men and women, girls and children. No `locations`: the folder has never had one and a burnt church is not a coordinate a reader draws. NO SERBIAN NAME FORM WAS WRITTEN. The heading gives the company a count, a rank and a city and no name — «двадесет хиљада мученика никомидијских» — and a form assembled out of «двадесет хиљада» would be a phrase of my making, which is the 12-21 reader’s refusal on the two other Nicomedian companies in the same words. The `related` rows the folder already carries stand untouched and nothing was added; the new paragraph deliberately names no saint, there being none to name. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
@@ -91,5 +101,14 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading, neither doxologia.ro nor saint.gr giving a year. The Охридски пролог for 28. децембар ст. ст. closes the entry «Пострадаше и прославише се 302. године». The reign it names, «опаког цара Максимијана Херкула», sits around that year and is not itself written as an interval. Read 8 October 2026."
+    }
+  }
 }
