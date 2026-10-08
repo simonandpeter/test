@@ -8,4 +8,4 @@ From 1926 or 1928 — the page allows both — he moved to the island of Kalymno
 
 On 7 April 1957 his holy relics were found whole and giving off a sweet fragrance, and he is held to be the protector of the island. The Ecumenical Patriarchate entered him officially among the saints of the calendar on 19 February 1992. His memory is kept on 7 April and on the fifth Sunday of Great Lent; the second of those moves with Pascha and is not held here, and his own page on the site prints no troparion.
 
-*After doxologia.ro's calendar for 7 aprilie — [the day](https://doxologia.ro/7-aprilie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-sava-cel-nou-din-kalymnos); read 19 September 2026.*
+*After doxologia.ro's calendar for 7 aprilie — [the day](https://doxologia.ro/7-aprilie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-sava-cel-nou-din-kalymnos); read 19 September 2026; and the Православный церковный календарь of the Сретенский monastery for 25 марта ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260325.html), which names him and gives no life, read 8 October 2026.*

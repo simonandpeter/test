@@ -3,20 +3,36 @@
   "display_name": "Basil the New of Constantinople",
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "confessor"
   ],
   "names": [
     {
       "form": "Василије Нови",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 26 March on pravoslavno.rs, „Преподобни Василије Нови.“, with the rank word Преподобни left off. Нови is kept: it is not a rank word but the by-name the heading gives him, the New, and a bare Василије would fold with `basil-the-confessor`, `basileus-of-cherson` and `basil-of-ancyra`, which hold that bare form already."
+    },
+    {
+      "form": "Василий Новый",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 380, «Василий Новый. Константинопольский, исповедник», taking the name before the full stop, which is also the form the day line declines. The page's own qualifier after the stop is not part of the name: the city of it this folder's display name already carries, and «исповедник» is what the added type stands on."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 марта ст. ст. — «Прп. Василия Нового (X)»",
+        "url": "https://days.pravoslavie.ru/Days/20260326.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the Ohrid Prologue keeps him on, and the calendar's name page 380 gives «День памяти: 26 марта» and nothing else, so no second day is owed. `confessor` is added to this folder's types on the strength of that name page's «исповедник», which is the only rank word either source adds to «преподобный»; nothing else about the folder was changed. That name page heads him «Василий Новый. Константинопольский, исповедник» — with a full stop after the name — and the stop is what breaks the candidate extractor on this line, which splits one saint into two phantom entries; the day line itself is one line and reads «Прп. Василия Нового (X)». The qualifier after the stop is what tells him from the venerable Basil the New of Latros whom the Greek calendar keeps on this same day, and this calendar prints only one Basil the New. The calendar dates his repose «около 944 года в возрасте ста десяти лет» — about 944, aged a hundred and ten — which agrees with the 944 this folder already holds; the age gives no year of birth the calendar states and none was inferred. The day page's three hymns are all the Archangel Gabriel's; the calendar prints none for him. azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -16,6 +16,11 @@
       "form": "Иринеј",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 26 March on pravoslavno.rs, „Свештеномученик Иринеј епископ сремски.“, with the rank word Свештеномученик left off and with the see епископ сремски left off as well. The heading gives no epithet beyond the see, so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Иринеј."
+    },
+    {
+      "form": "Ириней Сирмийский",
+      "lang": "ru",
+      "note": "The title of both of days.pravoslavie.ru's life pages for him, «Священномученик Ириней, епископ Сирмийский», with the rank and the word for bishop left off. The name link behind the day line spells the see «Сармийский» instead, and the day line itself calls it «Сремского»; the form here follows the two life pages."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 марта ст. ст. — «Сщмч. Иринея, еп. Сремского (304)»",
+        "url": "https://days.pravoslavie.ru/Days/20260326.html",
+        "year": 2026
+      },
+      "note": "The row this folder's life already described and nobody had written. The calendar's day line calls his see «Сремского», Srem, and the name link behind the forename spells it «Сармийский», while both of the life pages the index serves are titled «епископ Сирмийский»; the form stored here follows the two life pages and the misspelling is recorded. Both life pages head him «Дни памяти: 26 марта , 30 августа (Серб.)». The second day is not repeated by any day page read for this folder and is not thirteen days from this one, so it is a note and not a feast — and it agrees with neither of the two August days already on this folder, the Greek 23 August nor the Serbian 26 March old style: the Russian calendar's idea of the Serbian day is a third reading and is the author's to settle. The index serves two lives, life6918 and life711; the longer, life711, is the same reading azbyka.ru gave this folder in September and adds nothing to it. The day page's three hymns are all the Archangel Gabriel's."
     },
     {
       "church": "romanian",

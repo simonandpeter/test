@@ -1,0 +1,62 @@
+{
+  "slug": "theodosius-of-sirmium",
+  "display_name": "Theodosius of Sirmium",
+  "names": [
+    {
+      "form": "Феодосий Сирмийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2212, «Феодосий Сирмийский, мч.», with the rank word left off. The day’s own line declines the forename and gives no city, «Мчч. Мануила и Феодосия (304)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "The year both the day line and the life give: «Мчч. Мануила и Феодосия (304)» and «пострадали за веру во Христа в 304 году в Сирмии». Neither page gives a year of birth."
+    }
+  },
+  "related": [
+    "manuel-of-sirmium"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 марта ст. ст. — «Мчч. Мануила и Феодосия (304)»",
+        "url": "https://days.pravoslavie.ru/Days/20260327.html",
+        "year": 2026
+      },
+      "note": "Name page 2212 gives «День памяти: 27 марта» and nothing else, so no second day is owed. He was NOT identified with the corpus's `theodosius-of-the-east`, which stands on saint.gr's «Άγιοι Κοδράτος, Θεοδόσιος, Μανουήλ και άλλοι Τεσσαράκοντα μάρτυρες από την Ανατολή» on the Greek 26 March: that entry has a third named man and forty unnamed ones and gives no year and no city, where this one gives 304 and Sirmium and names a pair alone. Whether the two pairs are one pair is an author question, stated and not decided. The corpus's other Sirmium folders — `irenaeus-of-sirmium`, `basilissa-of-sirmium` and `seventy-three-martyrs-of-sirmium` — are on other days, and no reading was made across them either. The day page prints no hymn at all. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 9 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 9 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

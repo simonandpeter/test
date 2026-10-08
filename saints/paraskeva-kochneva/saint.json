@@ -1,0 +1,61 @@
+{
+  "slug": "paraskeva-kochneva",
+  "display_name": "Paraskeva (Kochneva)",
+  "names": [
+    {
+      "form": "Параскева (Кочнева)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14240, «Параскева (Кочнева), мц.», with the rank word left off. The day’s own line declines the forename and prints no surname at all, «Мц. Параскевы (1939)»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes her line with: «Мц. Параскевы (1939)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 марта ст. ст. — «Мц. Параскевы (1939)»",
+        "url": "https://days.pravoslavie.ru/Days/20260326.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 14240, and no place, no diocese, no arrest, no manner of death. She is a martyr and not a monastic martyr — the calendar gives her no monastic grade and no office, which is how it prints a laywoman — and «26 января (Новомуч.)» on her name page is what `new-martyr` stands on. The day page’s three hymns are all the Archangel Gabriel’s. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 8 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 8 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
