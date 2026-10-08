@@ -31,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Мчч. Маркиана , Никандра , Иперехия , Аполлона , Леонида , Ария , Горгия , Селиния , Ириния и Памвона (ок. 305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of twelve, «Мчч. Маркиана , Никандра , Иперехия , Аполлона , Леонида , Ария , Горгия , Селиния , Ириния и Памвона (ок. 305-311).», one line naming TEN people and giving them one bracket; ten `name:` links stand under it, one for each, and all ten already had folders in this corpus, every one of them kept on this same menologion day by the Romanian or the Greek calendar or both. Nine of the ten name links point at one life, `life1237`, which was NOT read; the tenth, Леонид, points at an index of its own, `id1340`, which was not followed either. The identification rests on the day, on the ten names in the calendar's own order, on the year, and on the Egypt nine of the ten name pages give each of them. The year the line gives the company, «(ок. 305-311)», is the reading each folder was to be measured against one at a time; where a folder already held a date it was left alone and the line's interval is recorded here. The day page prints eleven hymns, for two Solovki abbots, a bishop of Tyre, a prince of Chernigov, a metropolitan of Kyiv and a prince of Novgorod, and NONE under any of these ten names. azbyka.ru was not read. **He is the one of the ten whose name page is different from the other nine**: 1340 is headed «Мученик Леонид», with the rank spelled out and NO Egypt and no epithet of any kind after it, and his life link is an index, `id1340`, where the other nine share `life1237`. He is upgraded here on the line's own ordering — fifth of the ten, between Аполлон and Арий — and on the folder's standing on this menologion day, and NOT on his name page, which has nothing in it that could be compared with anything. **NO `ru` NAME FORM WAS STORED FOR HIM, against BRIEF-RUSSIAN §2, and this is deliberate**: the calendar’s only name for him is the bare «Леонид», and storing it would widen the pre-existing UNREAD fold ‘леонид’ from three holders to four — `leonid-presbyter-martyr-1937`, `leonides-father-of-origen`, `leonides-of-epidaurus` — which neither the plain gate nor `corpus-gate --batch` fails on when an upgrade does it, and reading three other Leonid dossiers was not this day’s work. The fold’s exact membership is handed to the author. The other nine of the ten all took their forms, every one with the Egypt its name page gives."
     },
     {
       "church": "romanian",

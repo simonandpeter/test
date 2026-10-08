@@ -11,6 +11,11 @@
       "form": "Μαρκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιουνίου, «Αγιος Μαρκιανος Μαρτυρας Εν Αιγυπτω», with the rank word left off. The day's line names the ten together and the life page heads each of them separately."
+    },
+    {
+      "form": "Маркиан Египетский",
+      "lang": "ru",
+      "note": "The name as days.pravoslavie.ru's name page 1478 gives it, «Маркиан Египетский, мч.», with the rank word taken off. Measured with the gate's own fold before it was written: 'египетскии маркиан' has no other holder."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июня ст. ст. — «Мчч. Маркиана , Никандра , Иперехия , Аполлона , Леонида , Ария , Горгия , Селиния , Ириния и Памвона (ок. 305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260605.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of twelve, «Мчч. Маркиана , Никандра , Иперехия , Аполлона , Леонида , Ария , Горгия , Селиния , Ириния и Памвона (ок. 305-311).», one line naming TEN people and giving them one bracket; ten `name:` links stand under it, one for each, and all ten already had folders in this corpus, every one of them kept on this same menologion day by the Romanian or the Greek calendar or both. Nine of the ten name links point at one life, `life1237`, which was NOT read; the tenth, Леонид, points at an index of its own, `id1340`, which was not followed either. The identification rests on the day, on the ten names in the calendar's own order, on the year, and on the Egypt nine of the ten name pages give each of them. The year the line gives the company, «(ок. 305-311)», is the reading each folder was to be measured against one at a time; where a folder already held a date it was left alone and the line's interval is recorded here. The day page prints eleven hymns, for two Solovki abbots, a bishop of Tyre, a prince of Chernigov, a metropolitan of Kyiv and a prince of Novgorod, and NONE under any of these ten names. azbyka.ru was not read."
     },
     {
       "church": "romanian",
