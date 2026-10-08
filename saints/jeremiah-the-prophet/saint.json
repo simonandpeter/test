@@ -16,6 +16,11 @@
       "form": "Јеремија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 1. мај ст. ст., „Свети пророк Јеремија.“, with Свети left off as no rank and пророк left off as the `prophet` this folder already carries in `types` and `honorific.js` composes back. The heading offers no epithet and no patronymic, so the bare forename is the whole of the Serbian form; Anathoth and the priest Helkias are the body's and the other calendars', and this corpus keeps neither in a name form. Two other folders already hold the same bare form; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Иеремия",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Иеремия, пророк»; the rank word is not part of the stored form, and the calendar gives the prophet no epithet beside the bare name."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Прор. Иеремии (VI до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -113,6 +127,38 @@
       },
       "english": {
         "text": "From the womb wast thou sanctified by the foreknowledge of the Creator, and from thy swaddling clothes wast thou filled with prophetic understanding; thou didst lament the fall of Israel in love, O wise Jeremiah. Therefore we honour thee as prophet and contender, and cry: Glory to Christ who glorified thee, glory to Him who crowned thee, glory to Him who through thee bestows better things upon us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Пророка Твоего Иеремии память, Господи, празднующе,/ тем Тя молим:// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Тропарь пророка Иеремии», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As we keep the memory of thy prophet Jeremiah, O Lord, through him we entreat thee: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Очистив духом, великий пророче и мучениче,/ твое светозарное сердце,/ славнее Иеремие,/ пророчествия дар свыше приял еси/ и возопил еси велегласно во странах:/ се Бог наш, и не приложится ин к Нему,/ Иже, воплощся, на земли явился есть",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Кондак пророка Иеремии», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having cleansed thy light-bearing heart by the Spirit, O great prophet and martyr, most glorious Jeremiah, thou didst receive from on high the gift of prophecy and didst cry aloud among the nations: This is our God, and none other shall be reckoned beside him, who, being made flesh, appeared upon the earth.",
         "rendered": "site"
       }
     }

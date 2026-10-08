@@ -12,6 +12,11 @@
       "form": "Γεράσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Όσιος Γεράσιμος Ηγούμενος Ιεράς Μονής Αγίας Τριάδος εν Μπολτίνσκ», with the rank word and the office left off."
+    },
+    {
+      "form": "Герасим Болдинский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Преподобный Герасим Болдинский»; the rank word is not part of the stored form. The epithet names the Болдина hill above Dorogobuzh, which the Greek source this folder was written from romanised as «Μπολτίνσκ» and which the display name follows."
     }
   ],
   "dates": {
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian",
+        "note": "The calendar's own lives give him «Дни памяти: 1 мая , 7 июля (обретение мощей)». The second is the finding of his relics, which is a feast and not a second day of the saint, so it is recorded here and not as a row. Read 8 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Прп. Герасима Болдинского (1554).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

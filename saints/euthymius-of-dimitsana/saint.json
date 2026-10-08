@@ -16,6 +16,11 @@
       "form": "Јевтимије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 22 March on pravoslavno.rs, „Преподобномученик Јевтимије.“, with the rank word Преподобномученик left off. The heading gives no epithet and no place — Dimitsana is the body's first word — so the bare forename is what the source gives."
+    },
+    {
+      "form": "Евфимий Новый, Афонский, Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Евфимий Новый, Афонский, Константинопольский, прмч.»; the rank abbreviation is not part of the stored form and the three epithets are. The day line itself declines him as «Евфимия» alone, with the year 1814."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian",
+        "note": "The Russian calendar prints the three new martyrs of the Holy Mountain together on this day — «Прмчч. Афонских Евфимия (1814), Игнатия (1814) и Акакия (1816)» — and the day page carries a troparion and a kontakion naming all three. This is not his own day of martyrdom, which the Romanian and Greek rows keep on 22 March; whether the Russian calendar also prints him on that day was not checked. Read 8 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Прмчч. Афонских Евфимия (1814), Игнатия (1814) и Акакия (1816).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -122,6 +137,42 @@
         "text": "Holding in thy hands the trophy of the Cross and the palms, O Euthymius, thou didst stand before a lawless judge and didst put the false prophet to shame with boldness; thou didst gladden the Orthodox by proclaiming Christ to be God, before whom thou dost intercede for all who faithfully hymn thee.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Равночисленны Троицы Несозданныя суще,/ с лики Ангелов и чины мучеников/ предстоите вы, радующеся, Престолу Божества, мудрии./ Сего ради причастием сияние отонуду приемлюще,/ источник исцелений верным подаете/ и Божественное просвещение,/ мучениче Христов Евфимие со Игнатием мудрым и с Божественным Акакием,/ о нас присно молитеся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Тропарь преподобномучеников Афонских Евфимия, Игнатия и Акакия», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being equal in number to the uncreated Trinity, you stand rejoicing before the throne of the Godhead with the choirs of the angels and the ranks of the martyrs, O wise ones. Therefore, receiving thence the radiance of that communion, you give the faithful a fountain of healings and a divine enlightenment. O Euthymius, martyr of Christ, with wise Ignatius and with godly Acacius, pray for us without ceasing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Явися днесь Церкви новое торжество/ триех страстотерпцев,/ яко светила, озаряющее/ православных, Христе,/ исполнения.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Кондак преподобномучеников Афонских Евфимия, Игнатия и Акакия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "There has appeared today a new feast for the Church, that of three passion-bearers, shining like lamps, O Christ, upon the whole body of the Orthodox.",
+        "rendered": "site"
+      }
     }
+  ],
+  "related": [
+    "ignatius-of-stara-zagora",
+    "acacius-the-new-of-neochorion"
   ]
 }

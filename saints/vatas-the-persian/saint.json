@@ -11,6 +11,11 @@
       "form": "Βατάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Βατάς ο Πέρσης ο Ιερομάρτυρας», with the rank words and the epithet left off."
+    },
+    {
+      "form": "Вата Персиянин",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Вата Персиянин, прмч.»; the rank abbreviation is not part of the stored form. The day line itself declines the name as «Ваты Персянина», with the second word spelt differently from the name link."
     }
   ],
   "dates": {
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Прмч. Ваты Персянина (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Ταμάρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Αγία Ταμάρα η βασίλισσα», with the rank word left off."
+    },
+    {
+      "form": "Тамара",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Святая благоверная царица Тамара»; the rank words are not part of the stored form, and the calendar gives her no epithet beside the bare name. The day line itself declines her as «Тамары , царицы Грузинской»."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian",
+        "note": "The calendar gives her two days — «Дни памяти: 13 апреля , 1 мая» — and its own life, life968, says which is which: «Память ее празднуется дважды: 1 мая - день преставления, и вторично в Неделю жен-мироносиц (переходящее празднование).» The 13 апреля of the page is the Sunday of the Myrrh-bearing Women in 2026 and moves with Pascha, and a feast that is neither a fixed day nor a Pascha offset the schema can hold is not recorded here. This row is her fixed day, the day of her falling asleep. Read 8 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Блгв. Тамары , царицы Грузинской (1213).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -76,5 +91,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Вышния красоты желая,/ нижния сласти телесныя далече от себе отгнала еси/ и, в чертозе царском пребывающи,/ ангельское житие препровождала еси,/ царице Тамаро блаженная,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Тропарь благоверной Тамары, царицы Грузинской», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the beauty that is above, thou didst drive far from thee the lower pleasures of the body, and dwelling in a royal chamber thou didst pass thy life as an angel, O blessed queen Tamara; entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Во святых дивная,/ Иверии светило,/ благоверная царице Тамаро,/ на горах высоких храмы воздвигшая,/ да в них моления возсылают ко Господу,/ мольбами твоими крепость даровавшая воем христолюбивых людей страны Иверския,/ десницею же своею полчища агарянская низпровергшая,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Ин тропарь благоверной Тамары, царицы Грузинской», глас 4 — the second of the two troparia the day page prints under her name",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wonderful among the saints, lamp of Iberia, right-believing queen Tamara, who didst raise up churches upon the high mountains that prayers might be sent up to the Lord in them, who by thine entreaties didst give strength to the armies of the Christ-loving people of the land of Iberia and who with thine own right hand didst overthrow the hosts of the Hagarenes: entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

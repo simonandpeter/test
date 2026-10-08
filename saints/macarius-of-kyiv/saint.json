@@ -7,6 +7,11 @@
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Μακάριος ο Ιερομάρτυρας Μητροπολίτης Κιέβου», with the rank word and the see left off."
+    },
+    {
+      "form": "Макарий Киевский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 1 мая ст. ст., which gives «Священномученик Макарий, митрополит Киевский»; the rank word and the see are not part of the stored form, and the epithet is kept because a bare «Макарий» would not tell him from the other holders of the name."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Read and not found, and the near-miss is the point: days.pravoslavie.ru's 5 октября ст. ст. (civil 18 October 2026) was read on 2026-10-04 and prints the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», with two Macarii in it — the metropolitan of Moscow who died in 1563 and the metropolitan of Moscow and Kolomna who died in 1926. Neither is this Macarius, metropolitan of Kyiv, killed in 1497. This stands undocumented rather than as a refusal."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст. — «Сщмч. Макария , митр. Киевского (1497).»",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -58,5 +72,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Божественныя Безкровныя совершая Жертвы,/ кровь твою, от безбожных агарян излиянную,/ в жертву непорочную принесл еси Владыце твоему, Пастыреначальнику Христу./ Егоже моли, молим тя,/ пролити гнев на языки, хотящия браней;/ христолюбивое воинство наше на враги укрепи/ и стадо твое от всяких бед неврежденно соблюди,/ тебе бо крепкаго заступника почитаем,/ новый свяшенномучениче российский,/ святителю блаженный Макарие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Тропарь священномученика Макария, митрополита Киевского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "While celebrating the divine and bloodless Sacrifice, thou didst offer thine own blood, poured out by the godless Hagarenes, as a spotless offering to thy Master, Christ the chief Shepherd. Entreat him, we pray thee, to pour out his wrath upon the nations that desire wars; strengthen our Christ-loving army against its enemies and keep thy flock unharmed from every trouble; for we honour thee as a strong defender, O new hieromartyr of Russia, blessed hierarch Macarius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Веселится град Киев,/ великое сокровище стяжав,/ твое тлению непричастное тело,/ святителю блаженный Макарие,/ твой бо престол даже до крове от лютых врагов нашествия хранил еси./ И ныне Небесному предстоиши Престолу,/ идеже молитвенно пред Творцем поминай нас, отче наш,/ да во всех бедах имеем тя прибежище и тобою хвалимся, зовуще:/ радуйся, Макарие, архиереом честное украшение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 мая ст. ст., «Кондак священномученика Макария, митрополита Киевского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260501.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The city of Kyiv makes glad, having gained a great treasure, thy body untouched by corruption, O blessed hierarch Macarius; for thou didst guard thy see even unto blood from the onslaught of cruel enemies. And now thou standest before the heavenly Throne, where in prayer before the Creator remember us, our father, that in all our troubles we may have thee for a refuge and may boast in thee, crying: Rejoice, Macarius, honoured adornment of bishops.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
