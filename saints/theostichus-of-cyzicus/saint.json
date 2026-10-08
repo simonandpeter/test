@@ -16,6 +16,11 @@
       "form": "Теостих",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог's entry for 29. април ст. ст., out of the naming clause „Имена су њихова Теогоније, Руф, Антипатер, Теостих, Артем, Магн, Теодот, Тавмасије и Филимон.“ — a bare list with no rank word on any of them and no epithet; the heading names nobody, so there is no heading form to take, and Cyzicus, which this corpus's English name keeps, is in the heading and not in the list. The form meets nobody in any language, which was measured rather than assumed."
+    },
+    {
+      "form": "Феостих Кизический",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2249, «Феостих Кизический, мч.», with the rank word after the comma left off. The day's own line declines the forename alone, so the toponymic — of Cyzicus — is read off the name link, where the calendar prints it. Measured against the gate's own key function before it was written: 'кизическии феостих' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 апреля ст. ст. — «Девяти мучеников Кизических: Феогнида , Руфа , Антипатра , Феостиха , Артемы , Магна , Феодота , Фавмасия и Филимона (286-299).»",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of eight, ONE LINE NAMING NINE MEN with a name link each and all nine pointing at one life page, and he is the fourth of them. ALL NINE ALREADY HAD FOLDERS, so this batch is nine upgrades and no arrival. THE LINE AND THE LIFE DISAGREE ABOUT THE YEAR: the line heads the nine «(286-299)» and life951 ends «усечены мечом (+ ок. 284 - 292)», and the `dates` written here are the union of the two, 284 to 299, because both are this source's own and the reader has no ground to prefer one. NO `locations` WERE WRITTEN although the city is named and placed — «Город Кизик находится в Малой Азии на берегу Дарданельского пролива» — because a located saint whose dates read as alive over a century fails `map-span.test.mjs` and this interval is fifteen years short of that limit; the city is in the life instead. TWO HYMNS were taken, the troparion and the kontakion the day page prints for the nine together, each copied whole with its tone and given the same English in this same batch; they name no one of the nine in particular, so each of the nine carries both. THE LIFE NAMES FOUR OTHER PEOPLE and none of them got a `related` row: «Константин Великий», under whom the persecutions stopped and the relics were taken up; «Юлиан Отступник», under whom the temples were rebuilt; a bishop «Елевсий» of Cyzicus whom Julian imprisoned; and the hierodeacon «Стефан» who carried part of the relics from Palestine to Kazan, with «святитель Димитрий Ростовский», who wrote their service. Sharing a page is not a relation, so all five are written in Cyrillic or by description in the life and none is linked. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -104,15 +119,47 @@
         "text": "By the concord of divine faith the nine-numbered company of martyrs did valiantly and in holy fashion at Cyzicus; for having preached the supremely divine Word, they are slaughtered like lambs for His sake. Wherefore they ask forgiveness and mercy for us who sing their divine contest.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Святии девяточисленнии мученицы,/ от различных градов во един лик совокупившеся манием Божественным,/ мужественно за Христа пострадасте, невидимаго врага победисте,/ зловерныя князи и мучители посрамисте вашим терпением,/ огнем же любве Божия разжизаеми,/ вещественно вас огнь мучащий в хлад преложисте,/ темже дадеся вам от Христа Бога благодать трясавичную исцеляти болезнь,/ от неяже и многовидных страстей// милостивно спасайте и нас предстательством вашим, молимся.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь девяти мучеников Кизических», глас 8, under «Молитвы» on the day page for 29 апреля ст. ст. It is printed for the nine together and under no single name; the life page names Димитрий Ростовский as the author of their service.",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy nine-numbered martyrs, gathered out of different cities into one choir at the beckoning of God, manfully did ye suffer for Christ and overcome the unseen enemy; by your patience ye put to shame the evil-believing princes and tormentors; and being kindled with the fire of the love of God, ye turned the material fire that tormented you into coolness. Wherefore there was given you of Christ God the grace to heal the shaking sickness: from it, and from passions of every kind, save us also in mercy by your intercession, we pray.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твердый и всесветлый лик мученик девяти,/ Трисолнечнаго Божества исповедницы,/ на судищи Тому начально взываху:/ кровь и души наша с телесы,/ яко непорочную жертву, приносим Тебе, Владыко,/ в лицех Небесных Твоих сопричти,// яко Бог Милостивый.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак девяти мучеников Кизических», глас 2, under «Молитвы» on the day page for 29 апреля ст. ст. It is printed for the nine together and under no single name.",
+        "url": "https://days.pravoslavie.ru/Days/20260429.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The firm and all-radiant choir of nine martyrs, confessors of the Thrice-Sunlike Godhead, cried out to Him before all else at the judgement seat: our blood and our souls with our bodies we offer Thee, O Master, as an unblemished sacrifice; number us among Thy hosts in heaven, for Thou art a merciful God.",
+        "rendered": "site"
+      }
     }
   ],
   "dates": {
     "death": {
-      "earliest": 201,
-      "latest": 300,
-      "display": "3rd century",
+      "earliest": 284,
+      "latest": 299,
+      "display": "284 to 299",
       "basis": "traditional",
-      "note": "The Охридски пролог for 29. април ст. ст.: „Чесно пострадаше и прославише се у III веку.“ — the first century any calendar read for these nine has given. doxologia's life places the martyrdom only before the reign of Constantine the Great, which the third century satisfies, and saint.gr gives no year and names no emperor."
+      "note": "days.pravoslavie.ru's life page life951 ends the passion «Все девять мучеников были усечены мечом (+ ок. 284 - 292), и тела их погребли близ города», about 284 to 292; the day's own line heads the nine «(286-299)» instead. THE TWO DISAGREE AT BOTH ENDS and the interval recorded here is the union of them, 284 to 299, because each is this one source's own statement and neither was preferred over the other. The folder held no year of any kind before."
     }
   }
 }
