@@ -11,6 +11,11 @@
       "form": "Јован Нови Јањински",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 18 April, „Св. муч. Јован Нови Јањински.“, with Св. left off — it is not a rank — and Св. муч. left off, which is the `martyr` this folder already carries in `types`. **Нови Јањински is kept**: Нови is not in `BRIEF-SERBIAN.md` §5's table of rank words but the by-name the new martyrs carry, and Јањински is the city, which this corpus keeps in the display name as «of Ioannina». Keeping both is what holds this form out of the seven-folder bare «Јован» fold, on the same reading that kept `Ардалион Глумац` and `Марија Египћанка` out of theirs."
+    },
+    {
+      "form": "Иоанн Новый, Янинский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 992, «Иоанн Новый, Янинский, мч.», with the rank word left off. The day’s own line declines it as «Мч. Иоанна Нового из Янины», with the city in a prepositional phrase rather than as an adjective; the name page’s own nominative is what is stored."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 апреля ст. ст. — «Мч. Иоанна Нового из Янины (1526).»",
+        "url": "https://days.pravoslavie.ru/Days/20260418.html",
+        "year": 2026
+      },
+      "note": "His name page 992 lists this one day and no other, and it is the day the `romanian` and `serbian` rows already carry. The day page prints no hymn under his name. Its year, 1526, is the Prologue’s and not the Romanian life’s 1500, and the `death` interval this folder already held covers both, so nothing was changed. azbyka.ru was not read."
     },
     {
       "church": "romanian",

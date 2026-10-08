@@ -7,6 +7,11 @@
       "form": "Cosma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 aprilie, «Sfântul Ierarh Cosma Mărturisitorul, Episcopul Calcedonului»."
+    },
+    {
+      "form": "Косма Халкидонский",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 18 апреля ст. ст., which gives «Святитель Косма Халкидонский, епископ, исповедник»; Святитель, епископ and исповедник are rank words and are not part of the stored form, and the see stays in this folder’s `office` and display name."
     }
   ],
   "sex": "male",
@@ -18,8 +23,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 апреля ст. ст. — «Свт. Космы исп., еп. Халкидонского, и прп. Авксентия (815-820).»",
+        "url": "https://days.pravoslavie.ru/Days/20260418.html",
+        "year": 2026
+      },
+      "note": "His name page 1300 lists this one day and no other, and the day is the same as the `romanian` row’s 18 aprilie. The day page prints no hymn under his name; the two hymns it carries above his entry belong to the teacher of a neighbouring saint and the two below to an icon. The Russian is the first source read for this folder to give a year. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -48,5 +63,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 815,
+      "latest": 820,
+      "display": "about 815–820",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru is the first source read for this folder to give any year: its life882 closes «Святитель Косма (+ ок. 815 - 820) и преподобный Авксентий до самой кончины незыблемо хранили православную веру», and the day’s own line prints the same pair of years as «(815-820)». The interval is the source’s own and nothing inside it is chosen; doxologia.ro gave no year for his birth, his consecration or his death."
+    }
+  },
+  "related": [
+    "auxentius-companion-of-cosmas"
+  ]
 }
