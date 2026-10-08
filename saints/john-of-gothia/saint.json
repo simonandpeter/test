@@ -16,6 +16,11 @@
       "form": "Јован",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. мај ст. ст., „Свети Јован епископ готски.“ — Свети is not a rank and „епископ готски“ is the rank and the see, which this corpus puts in `types` as `bishop` and in `office` as Bishop; **stripping a rank and a see to reach the stored form is the reading BRIEF-SERBIAN.md §6 asks be said in the note**, and here it leaves a bare forename with nothing beside it — Georgia, Bessarabia, the kagan and the century are all in the body. **«Јован Готски» is nowhere on the page** and a form a reader builds is what §6 forbids. **So this is a deliberate ninth joining of the bare «Јован»**: `foldchk.py` returned eight holders before a line was drafted, every one of them an `sr` form from this same book on another Julian day, and the fold is read in this batch’s commit message."
+    },
+    {
+      "form": "Иоанн Готфский",
+      "lang": "ru",
+      "note": "The nominative the day page's own `/name/971.html` link carries in its `title`, «Святитель Иоанн Готфский, епископ», with «Святитель» and the trailing «епископ» left off — the latter is the `bishop` this folder carries in `types`, with the see in `office`. The day's own line ranks him «Прп.», venerable, where the name link makes him a hierarch; the `types` were left as they stood and the line's rank word was not written. `fk.mjs` on «Иоанн Готфский» returned NONE before the write, in a corpus holding over a hundred folders of the bare forename."
     }
   ],
   "sex": "male",
@@ -27,18 +32,28 @@
   "office": "Bishop",
   "dates": {
     "death": {
-      "earliest": 780,
-      "latest": 780,
-      "display": "780",
+      "earliest": 790,
+      "latest": 790,
+      "display": "790",
       "basis": "traditional",
-      "note": "saint.gr, as the folder's own life has it: «there he stayed four years and died in 780, doing good to the last moment»."
+      "note": "days.pravoslavie.ru, 19 мая ст. ст.: the day line prints «Прп. Иоанна , еп. Готфского (790)» and the life page says «через 40 дней святитель скончался, это произошло в то время, когда он обращался с поучением к народу, в 790 году». The year falls inside the interval this folder carried before, which is kept here whole: that reading was «8th century», read off the page that made the folder, which said only that he lived in the eighth century and gave no year at all. The same Russian page dates the iconoclast emperor Constantine Copronymus 741 to 775 and has him driven out of the see in that reign, which 790 does not contradict."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Прп. Иоанна , еп. Готфского (790).»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "The same menologion day the folder already keeps, and the same man. **`dates` were REPLACED by the year inside the century they held**, on the `pausikakos-of-synada` precedent: the folder carried «8th century» and nothing else, the day line prints «(790)» and the page says «через 40 дней святитель скончался, это произошло ... в 790 году», which falls inside the century it replaces and is also consistent with the reign of Constantine Copronymus the same page dates 741–775. The old reading is carried forward whole in the new note. The page's own «Дни памяти» line adds «26 июня», which the calendar does not explain and which the day page for 19 мая does not repeat; one row per church is the schema, so it is recorded here and he does not render on it. The day page prints no hymn for him. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -87,14 +102,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 701,
-      "latest": 800,
-      "display": "8th century",
-      "basis": "traditional",
-      "note": "The Охридски пролог for 19. мај ст. ст.: „Упокоји се мирно у VIII веку.“ This folder held no `dates` object at all until now. **saint.gr gives the narrower 780**, which this folder’s own life records — «πέθανε το 780», read as „there he stayed four years and died in 780“ — and an earlier reader recorded it without writing it. 780 falls inside this century, so there is no disagreement; the century is what this reader’s own source states, and narrowing it to the year is the author’s. Neither book gives a year of birth, saint.gr saying only that he was born at the beginning of the eighth century."
-    }
   }
 }
