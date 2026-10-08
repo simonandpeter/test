@@ -154,6 +154,38 @@
         "text": "Adorned with garments made of thine own blood, thou standest before the Lord, the King of the powers, ever-glorified Christopher, where with the choirs of the bodiless ones and of the martyrs thou singest the sweet and fearful thrice-holy hymn; therefore by thy prayers save thy flock.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Одеждами от кровей украшался,/ Господеви предстоиши, Царю сил, Христофоре приснопамятне,/ отонудуже со Безплотными и мученики поеши/ трисвятым и страшным сладкопением./ Темже молитвами твоими спасай стадо твое.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст., «Тропарь мученика Христофора», глас 4 — proper to him, and it names him; it is the same hymn as the Romanian troparion this folder already carries, in Church Slavonic",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with garments made of thine own blood, thou standest before the Lord, the King of hosts, O ever-memorable Christopher; and from thence thou singest with the bodiless powers and the martyrs the thrice-holy and awesome sweet hymn. Therefore by thy prayers save thy flock.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Свыше, премудре, звание приял еси,/ Христу тезоименит быв, Христофоре славне,/ мучеником Божественная доброто./ С ними же всегда моли/ согрешений разрешение даровати нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст., «Кондак мученика Христофора», глас 2 — proper to him, and it turns on the meaning of his name",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From on high, O most wise one, thou didst receive thy calling, becoming namesake of Christ, O glorious Christopher, divine beauty of the martyrs. With them pray without ceasing that the forgiveness of our sins may be granted us.",
+        "rendered": "site"
+      }
     }
   ]
 }

@@ -16,6 +16,11 @@
       "form": "Исаија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's heading for the Julian 9 May, „Свети пророк Исаија.“ — Свети left off, which is not a rank, and пророк left off, which is the `prophet` this folder already carries in `types` and `honorific.js` composes back. Nothing else is in the heading: the royal kin, Jerusalem, Amos and the seven hundred years are all in the body. The form folds with `isaiah-the-egyptian`, which holds the same bare Исаија, and that fold is recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Исаия",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name page 1109, «Пророк Исаия», with the rank word left off. That is the whole of what this calendar gives him — no epithet and no patronymic — and the day’s own line declines him «Прор. Исаии (VIII до Р.Х.)». `fk.mjs` on the bare form returned NONE before the write, so it has one holder and makes no fold."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст. — «Прор. Исаии (VIII до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and is not a name match: both of the calendar’s lives name him son of the prophet Амос, of the royal line, called under Озия and prophesying some sixty years under Иоафам, Ахаз, Езекия and Манассия, sawn in two with a wooden saw by Манассия’s order, and both head «День памяти: 9 мая» and name no other day — the same man the Romanian, Greek and Serbian rows of this folder already keep on 9 May. `dates` is unchanged. The folder’s birth of about 774 BC comes from saint.gr; the shorter Russian life says only «Жил в VIII веке до Р. X.», the eighth century before Christ, and the fuller one «жил за 700 лет до Рождества Христова», seven hundred years before the Nativity — a round figure a century later than saint.gr’s and neither a birth nor a death, so neither was made a date. Neither Russian life gives a year for his death. Two things the Russian lives add that the folder did not hold, and both are in the new paragraph rather than in a field: that his relics were carried to Constantinople by the emperor Феодосий Младший and laid in the church of Saint Лаврентий at Влахерна, with part of the head now at Хиландар on Athos; and that the spring he drew from under mount Сион by his prayer during the siege is Siloam, the pool the Lord afterwards sent the man born blind to wash in. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -121,6 +136,38 @@
       },
       "english": {
         "text": "Having received the gift of prophecy, O prophet-martyr Isaiah, herald of God, thou didst make plain to all that are under the sun the incarnation of God, crying it with a great voice: behold, the Virgin shall conceive in her womb.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Пророка Твоего Исаии память, Господи, празднующе,/ тем Тя молим:/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст., «Тропарь пророка Исаии», глас 2 — the common of a prophet with his name set into it, printed on the day page under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As we keep the memory of Thy prophet Isaiah, O Lord, through him we entreat Thee: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Пророчества дарование прием, пророкомучениче, Исаие Богопроповедниче,/ всем изъяснил еси вочеловечение Господне,/ возгласив велегласно концем:/ се Дева во чреве приимет.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 мая ст. ст., «Кондак пророка Исаии», глас 2 — proper to him, and it names him twice",
+        "url": "https://days.pravoslavie.ru/Days/20260509.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the gift of prophecy, O prophet and martyr Isaiah, preacher of God, thou didst make plain to all the Lord's becoming man, crying aloud to the ends of the earth: behold, the Virgin shall conceive in her womb.",
         "rendered": "site"
       }
     }
