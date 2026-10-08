@@ -11,6 +11,11 @@
       "form": "Ζωτικός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Άγιος Ζωτικός ο Ορφανοτρόφος», with the rank and the by-name left off. The by-name the Greek gives him, Ορφανοτρόφος, the feeder of orphans, is not the one the Romanian calendar gives him, and neither is stored as part of the name."
+    },
+    {
+      "form": "Зотик Сиропитатељ",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 31. децембар ст. ст., „Преподобни мученик Зотик Сиропитатељ (хранитељ убогих).“ — «Преподобни мученик» is rank and §6 keeps it out; «Сиропитатељ», the feeder of orphans, is the by-name the heading gives him and is kept; and the parenthesis «(хранитељ убогих)», feeder of the destitute, is the book's own gloss on that by-name and not a second name, so it is left out. THE BARE «Зотик» WAS REFUSED DELIBERATELY: `fk.mjs` returns three holders for it — `zoticus-20-april`, `zoticus-of-nicomedia` and `zoticus-of-the-ten-of-crete` — and `corpus-gate.mjs` already carries a read `READ_FOLDS` key for those three at that exact width, so a bare form here would have widened a fold another reader wrote and read. The full string has no other holder at all."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.01.2026 (31. децембар ст. ст.) — „Преподобни мученик Зотик Сиропитатељ (хранитељ убогих).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry. The identification is the house for the destitute, the lepers he took into it, Constantine the Great and the manner of death together, all of which the folder's own life already tells; the Greek keeps him on this same 31 December and the Romanian on the 30th. The serbian row was `undocumented`, so the row lands here. `types` UNTOUCHED: «Преподобни мученик» is the `venerable` and the `martyr` the folder already carries, in the one word `venerable-martyr` would have been — and no `types` row was changed, since both grades are present already. `dates`: THE FOLDER'S `dates` WAS NULL AND THIS ENTRY GIVES IT ITS FIRST DATE OF ANY KIND, a death in the fourth century off «Пострада у IV веку», which takes the folder out of the undated tray. NO `locations`. NO NEW `related`: `constantine-the-great` is already here and the entry confirms him in words, «Лични познаник цара Константина Великог», his personal acquaintance; the son «Констанције» who had him killed is no folder this corpus holds and stays in the book's Cyrillic. WHAT THE BOOK ADDS: that he was notable by birth and by rank; that he moved to Constantinople, cast off everything worldly and took holy orders; THAT HE PUT THE PLAGUE-STRICKEN INTO THE HOUSE HE FOUNDED AND SERVED THEM HIMSELF; and the death, which is the one thing no source this folder had gave in full — that Constantius took him for gold received from the emperor and spent on the plague-stricken, tied him to a wild mule and had it driven until he died of his wounds. The Prologue prints no hymn (8 October 2026)."
     }
   ],
   "text": {
@@ -70,5 +85,14 @@
   ],
   "related": [
     "constantine-the-great"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The folder's first date of any kind: `dates` was null, neither doxologia.ro nor saint.gr giving a year. The Охридски пролог for 31. децембар ст. ст. closes the entry «Пострада у IV веку» — he suffered in the fourth century. The interval is that century and nothing narrower; the entry names Constantine the Great and his son Constantius and gives neither of them a year, and no year was taken from the reigns. Read 8 October 2026."
+    }
+  }
 }

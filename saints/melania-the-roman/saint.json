@@ -11,6 +11,11 @@
       "form": "Μελάνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Οσία Μελάνη η Ρωμαία», with the rank and the by-name left off."
+    },
+    {
+      "form": "Меланија Римљанка",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's first heading for 31. децембар ст. ст., „Преподобна Меланија Римљанка.“ — «Преподобна» is the rank `venerable`, which §6 keeps out of a stored form, and «Римљанка», the Roman woman, is the by-name the heading gives her and is kept, §6 asking for the fullest form the calendar gives. Measured before it was written: `fk.mjs` returns no holder for the full string and none for the bare «Меланија» either, so no fold is created or widened by it."
     }
   ],
   "sex": "female",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.01.2026 (31. децембар ст. ст.) — „Преподобна Меланија Римљанка.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. The identification is past doubt: the Romanian and the Greek already keep her on this same menologion day, and the entry is hers point for point — the Roman girl of devout and very wealthy parents, the marriage forced on her, the brother-and-sister vow, the selling of everything, the fourteen years enclosed on the Mount of Olives and the two monasteries she founded there. The serbian row was `undocumented`, so the row lands here. `types` UNTOUCHED: «Преподобна» is the `venerable` held. `dates`: A `death` OF 439 WRITTEN AS A NEW KEY BESIDE THE `floruit` THE FOLDER HELD, which is carried forward word for word — see the `dates` note. NO `birth` WAS DERIVED from the entry's «у педесет седмој години свога живота», in her fifty-seventh year: that is an age and not a year, and subtracting it from 439 would be arithmetic of my own, which is the 12-26 reader's refusal on Evarestos's seventy-five years. NO `locations`: Rome, Egypt, Alexandria, Jerusalem, the Mount of Olives and Constantinople are all named and she moved between them for years, which is the shape `map-span.test.mjs` exists to stop. NO NEW `related`, AND THREE NAMES DELIBERATELY LEFT IN THE BOOK'S OWN CYRILLIC. «светог Кирила патријарха», the patriarch Cyril whose blessing she received at Alexandria, would be `cyril-of-alexandria`, and a blessing taken in passing on a journey is not the named apparition with an instruction in it that earned `pulcheria-the-empress` a row on 12-14 — so the name stays in Cyrillic and NO ROW WAS MADE IN EITHER DIRECTION. «блажени Августин» is named only to say that Melania converted her kinsman where he could not, which is a comparison and the 12-26 reader's `ephrem-the-syrian` refusal in another form; `augustine-of-hippo` takes nothing. Her husband «Апинијан» and her kinsman the senator «Волусијан» are no folders this corpus holds. `theodosius-the-great`, already here, is untouched. WHAT THE BOOK ADDS: the vow itself, which she asked for from her sickbed after her second child and which healed her in body as soon as he swore it; that God took both children; the journeys through many lands and cities doing good with their money; the visits to the famous spiritual fathers of upper and lower Egypt; HER HABIT OF READING THE WHOLE OF SCRIPTURE, OLD TESTAMENT AND NEW, THREE TIMES EVERY YEAR; that she lived with her husband as with a brother and a fellow ascetic; that she came out of her enclosure to serve others to their salvation; and the conversion of Volusian at Constantinople. The Prologue prints no hymn (8 October 2026). THE DAY'S SECOND ENTRY WAS LEFT OUT AND IT IS THE DAY'S LARGEST READING: „Свети праведни Јосиф, цар Давид и Јаков брат Господњи.“ names three persons, and its very first sentence is «Празнују се у недељу по Рождеству Христовом» — they are celebrated on the SUNDAY AFTER THE NATIVITY. That is a moveable day and not a Pascha offset, so BRIEF.md §4's standing ruling leaves all three out: this book prints them on its 31 December page because it is a 365-day fixed book and that Sunday has nowhere else to go, and a fixed Julian 31/12 row would assert a day the entry itself does not claim. `james-the-brother-of-the-lord` needs nothing in any case: he already carries a venerated serbian row for the Julian 23 October, which is the day this entry's own cross-reference «О Јакову светом в. 23. октобар» sends the reader to, and his russian row's note already records the Sunday after the Nativity as one of his other days. `joseph-the-betrothed` is therefore LEFT WITH NO SERBIAN ROW, his `romanian` row standing alone on 28 December. And «цар Давид» HAS NO FOLDER IN THIS CORPUS AT ALL — of the fifteen David folders not one is the king and psalmist, and this entry, which says of him only that everything may be learned from the books of Kingdoms, is not the page off which that folder gets made."
     }
   ],
   "text": {
@@ -70,6 +85,13 @@
       "display": "late 4th to early 5th century",
       "basis": "attested",
       "note": "saint.gr: «Η Οσία Μελάνη η Ρωμαία έζησε στα χρόνια πού βασιλιάς ήταν ο Ονώριος, δεύτερος γιος του Μεγάλου Θεοδοσίου», and the S. Eustratiades paragraph it quotes, «Αυτή ην επί της βασιλείας Ονωρίου (395 - 423)». The years are the reign the page names and the page's own dating of it; no year of birth and no year of death is given, and doxologia.ro, which the folder follows, gave none either."
+    },
+    "death": {
+      "earliest": 439,
+      "latest": 439,
+      "display": "439",
+      "basis": "traditional",
+      "note": "The folder's first `death` of any kind; it held a `floruit` of the late fourth to the early fifth century off saint.gr and nothing else, and that floruit is carried forward here word for word. The Охридски пролог for 31. децембар ст. ст. closes the entry «где се и представи Богу 439. године у педесет седмој години свога живота» — she went to God in 439, in the fifty-seventh year of her life. The year lies sixteen years past the end of the reign saint.gr dates her life by, which is no contradiction: that page says she lived in the days of Honorius and does not say she died in them. NO `birth` was derived from the age: fifty-seven is an age and not a year, and subtracting it would be arithmetic this corpus does not do. Read 8 October 2026."
     }
   },
   "hymns": [
