@@ -1,0 +1,64 @@
+{
+  "slug": "murin-of-corfu",
+  "display_name": "Murin of Corfu",
+  "names": [
+    {
+      "form": "Мурин Керкирский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1583, «Мурин Керкирский, мч.», with the rank word left off; the day's own line declines him «Мурина» among the twelve and gives no toponymic. The life page's title lists him as «Мурин» in the same series of twelve names. Measured against the gate's own key function before it was written: 'керкирскии мурин' and the bare 'мурин' both have no other holder in the corpus."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 63,
+      "latest": 63,
+      "display": "about 63",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 апреля ст. ст. closes «(ок. 63)», about 63, for the twelve martyrs it names, of whom he is the eighth; and its life page life946 says the apostles reached Corfu «в 63 году», the martyrdoms following on the same mission. No day or month of death is given anywhere and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Мчч. Саторния , Иакисхола , Фавстиана , Ианнуария , Марсалия , Евфрасия , Маммия , Мурина , Зинона , Евсевия , Неона и Виталия (ок. 63).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's third entry of five, ONE LINE NAMING TWELVE MEN, and he is the eighth of them. ELEVEN OF THE TWELVE ALREADY HAVE FOLDERS and are upgraded in this batch and the next; he is the only one who did not. `day-candidates.mjs` could not see four of the eleven, because the corpus keeps `zeno-of-corfu`, `eusebius-of-corfu`, `neon-of-corfu` and `vitalius-of-corfu` on the menologion's 29/4 and the scan asks only about 28/4; they were found by `ls -d saints/*corfu*`, which is the check BRIEF-RUSSIAN §5 names for exactly this. NO FOLDER WAS FOUND FOR HIM: `ls -d saints/*murin*` and `saints/*mourin*` return nothing, `grep -rl 'Мурин'` over `saints/` returns only `moses-the-ethiopian`, where «мурин» is the Slavonic common noun for an Ethiopian and not a name, and the gate's own key function returns no holder for 'мурин', 'керкирскии мурин' or 'corfu murin'. THE WORD IS A COMMON NOUN AND THE CALENDAR TREATS IT AS A NAME: the day's line declines it among eleven unmistakable personal names, the name page heads it «Мурин Керкирский, мч.» with a rank, and the life page's own title lists «Мурин» eighth in the series of twelve. That the calendar reads it as his name is what this folder records; whether it began as the robber's trade or his complexion is not something either page says. The day page prints no hymn under his name — its two hymns are a common of apostles and a kontakion naming Jason and Sosipater. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 May 2026 (8 October 2026)."
+    }
+  ],
+  "related": [
+    "kerkyra",
+    "jason-of-tarsus",
+    "sosipater-of-iconium"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

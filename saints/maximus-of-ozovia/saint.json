@@ -16,6 +16,11 @@
       "form": "Максим",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. муч. Максим, Дада и Квинтилијан.“ Св. муч. stands over all three names and муч. is the `martyr` this folder already carries in `types`; the heading gives no epithet and no village — Ozovia is the Romanian life's — so the bare forename is the whole of the Serbian form. Several folders already hold it; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Максим Доростольский, Озовийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1425, «Максим Доростольский, Озовийский, мч.», with the rank word after the last comma left off. The comma inside the form is the calendar's own and separates two toponymics, Durostorum and the village of Ozovia. The day's line gives the forename alone, «Максима», and the bare «Максим» has many holders in this corpus, which is why the toponymics are kept: measured against the gate's own key function, 'доростольскии максим озовиискии' has no other holder."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Мчч. Дады , Максима и Квинтилиана (286).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of five, one line naming three brothers. He is the one of the three the Russian life gives words to: offered the priesthood of Zeus he called Zeus a foul adulterer and confessed the true God again, and his two brothers told the court that he knew the Scriptures well and that they followed him in everything. The day page prints no hymn under their names."
     },
     {
       "church": "romanian",
@@ -97,5 +112,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 286,
+      "display": "286",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 апреля ст. ст. closes «(286)» for the three brothers, and its life page life947 ends «отвели под стражей в их деревню и там усекли мечом (+ 286)». The two agree, and the folder had no year of any kind before."
+    }
   }
 }

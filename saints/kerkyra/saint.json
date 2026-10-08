@@ -15,11 +15,17 @@
       "form": "Керкира",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. апостоли Јасон и Сосипатер, и Керкира девица.“, with Св. left off as no rank and девица, the `virgin` rank word that follows her name, left off as a rank — although this folder's `types` carry `martyr` and not `virgin`, so the stripping removes a rank the composer will not put back. The heading gives her no father's name and no island, both of which are the body's. The bare forename is the whole of the Serbian form, and it is the island's own name."
+    },
+    {
+      "form": "Керкира Керкирская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2549, «Керкира Керкирская, дева, мц.», with the two rank words after the comma left off. The day's own line declines her as «Керкиры девы» and gives no toponymic, so the second word is read off the name link, where the calendar prints it. Measured against the gate's own key function before it was written: 'керкира керкирская' has no other holder in the corpus."
     }
   ],
   "related": [
     "jason-of-tarsus",
-    "sosipater-of-iconium"
+    "sosipater-of-iconium",
+    "murin-of-corfu"
   ],
   "dates": {
     "floruit": {
@@ -33,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Апп. от 70-ти Иасона и Сосипатра , Керкиры девы и иных, с ними пострадавших (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's first entry of five, where the line calls her «Керкиры девы», Kerkyra the maiden. The name link heads «Керкира Керкирская, дева, мц.», which adds the toponymic the line leaves out and is the form stored here. HER EXISTING `dates` WERE NOT TOUCHED: the folder's first-century floruit came from saint.gr and this line's «(I)» says the same century. The day page prints no hymn under her name; its two hymns are the common of apostles and the kontakion that names Jason and Sosipater. The Russian life differs from the Greek on her father's name, which it does not give at all where saint.gr gives Κερκυλλίνος, and it is the only one of the three readings in this folder that has the beast attack Murin at the prison door and her heal his wounds by prayer before enlightening him."
     },
     {
       "church": "romanian",

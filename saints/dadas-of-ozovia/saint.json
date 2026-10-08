@@ -21,6 +21,11 @@
       "form": "Дада",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. муч. Максим, Дада и Квинтилијан.“ Св. муч. stands over all three names and муч. is the `martyr` this folder already carries; the heading gives no epithet and no village. The form is Дада, as the folder's Romanian forms are Dadas and Dada both. One other folder already holds the same bare form; the fold was measured and the row is in the batch's commit message."
+    },
+    {
+      "form": "Дада Доростольский, Озовийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 567, «Дада Доростольский, Озовийский, мч.», with the rank word after the last comma left off. The comma inside the form is the calendar's own and separates two toponymics, not a name from a surname; the day's line gives the forename alone, «Дады», so both toponymics are read off the name link. Measured against the gate's own key function: 'дада доростольскии озовиискии' has no other holder in the corpus."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Мчч. Дады , Максима и Квинтилиана (286).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's second entry of five, one line naming three brothers, each with its own name link and all three pointing at one life page, life947. The name link heads «Дада Доростольский, Озовийский, мч.»: the two toponymics are Durostorum, where the festival was held, and the village of Ozovia, where the three were taken and where they were beheaded. The day page prints no hymn under their names. The folder's existing troparion is not Russian and was left as it stands."
     },
     {
       "church": "romanian",
@@ -102,5 +117,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 286,
+      "display": "286",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 апреля ст. ст. closes «(286)» for the three brothers, and its life page life947 ends «отвели под стражей в их деревню и там усекли мечом (+ 286)». The two agree, and the folder had no year of any kind before."
+    }
   }
 }

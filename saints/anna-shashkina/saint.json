@@ -1,0 +1,60 @@
+{
+  "slug": "anna-shashkina",
+  "display_name": "Anna (Shashkina)",
+  "names": [
+    {
+      "form": "Анна (Шашкина)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 10058, «Анна (Шашкина), мц.», with the rank word after the comma left off. The day's own line gives the forename only — «Мц. Анны (1939).» — so the surname is read off the name link, where the calendar prints it, and it is part of the name and stays. Measured against the gate's own key function before it was written: 'анна шашкина' has no other holder in the corpus, where the bare «Анна» has many."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "attested",
+      "note": "The year the day line prints for her: «Мц. Анны (1939).» No year of birth appears on the name page, which is all the calendar gives her, and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 апреля ст. ст. — «Мц. Анны (1939).»",
+        "url": "https://days.pravoslavie.ru/Days/20260428.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry of five, and the whole of it. THE CALENDAR GIVES NO LIFE: the line links no reading, and page 10058 prints the title «Анна (Шашкина), мц.» and «Дни памяти: 26 января (Новомуч.) , 28 апреля» and nothing else at all — no life link, no icon, no article. What it gives that the line does not is the surname «Шашкина». THE RANK IS «мц.» AND NOT «прмц.»: мученица, a martyr, with no monastic or clerical grade anywhere on either page, so `office` is absent and `monastic` and `venerable-martyr` were deliberately not written; `new-martyr` stands on 26 января, the general commemoration of the new martyrs and confessors of Russia, AND THAT DAY PAGE WAS NOT READ. NO FOLDER WAS FOUND FOR HER: `grep -rl 'Шашкина'` over `saints/` returns nothing, `ls -d saints/anna-*` holds no Shashkina, and the gate's own key function returns no holder for 'анна шашкина' or 'anna shashkina'. NO PLACE, DIOCESE OR MONASTERY IS NAMED ANYWHERE on either page, and nothing of the kind is in this folder. The day page prints four hymns — a common of apostles, a kontakion naming Jason and Sosipater, and a troparion and a величание for Cyril of Turov — and none under her name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 mai, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Μαΐου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 May 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
