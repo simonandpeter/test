@@ -1,0 +1,63 @@
+{
+  "slug": "michael-viktorov",
+  "display_name": "Michael (Viktorov)",
+  "names": [
+    {
+      "form": "Михаил (Викторов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14241, «Михаил (Викторов), протоиерей, исповедник», with the rank words left off. The day’s own line declines the forename and prints no surname at all, «Св. Михаила , исповедника, пресвитера (1933)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "confessor",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with: «Св. Михаила , исповедника, пресвитера (1933)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Св. Михаила , исповедника, пресвитера (1933)»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 14241, and no place, no diocese, no arrest and no manner of death. The two pages agree about his rank, which is more than they do for every man of this kind — both call him «исповедник», a confessor, which is how this calendar prints a man who died in confinement rather than under sentence of death, and neither calls him a martyr; `hieromartyr` is therefore not written. His name page makes him a протоиерей, a protopriest; `office` reduces that to `Priest`, which is the word the four locale packs hold. «26 января (Новомуч.)» on his name page is what `new-martyr` stands on. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 11 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 11 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

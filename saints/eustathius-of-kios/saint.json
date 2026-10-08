@@ -6,6 +6,11 @@
       "form": "Ευστάθιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιος Ευστάθιος ο Ομολογητής επίσκοπος Κίου Βιθυνίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Евстафий Кийский (Вифинский)",
+      "lang": "ru",
+      "note": "Read out of the calendar’s name link for 29 марта ст. ст., which gives «Святитель Евстафий Кийский (Вифинский), епископ, исповедник»; the rank words are not part of the stored form. The parenthesis is the calendar’s own."
     }
   ],
   "sex": "male",
@@ -17,8 +22,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 марта ст. ст. — «Свт. Евстафия исп., еп. Вифинийского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260329.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -48,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Скончался святой исповедник в IX веке в ссылке, в течение трех лет перенося оскорбления, лишения, голод и нищету». The day line prints «(IX)». This folder held no `dates`: saint.gr gives no year. No year of birth is stated and none is inferred."
+    }
   }
 }

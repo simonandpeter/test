@@ -1,0 +1,63 @@
+{
+  "slug": "nicholas-postnikov",
+  "display_name": "Nicholas (Postnikov)",
+  "names": [
+    {
+      "form": "Николай (Постников)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13708, «Николай (Постников), протоиерей, сщмч.», with the rank words left off. The day’s own line declines the forename and prints no surname at all, «Св. Николая , исп., пресвитера (1931)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "confessor",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with: «Св. Николая , исп., пресвитера (1931)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian",
+        "note": "His name page lists two other days, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church, and «10 июня (Ряз.)», the synaxis of the saints of Ryazan. One row per church is the schema, so those days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст. — «Св. Николая , исп., пресвитера (1931)»",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 13708, and no place, no diocese, no arrest and no manner of death. The two pages do not agree on his rank. The day line calls him «Св.» and «исп.», a saint and a confessor, and his name page calls him «сщмч.», a hieromartyr; `hieromartyr` is therefore NOT written here, because the line this row cites does not call him a martyr, and the disagreement is reported rather than resolved. His name page makes him a протоиерей, a protopriest; `office` reduces that to `Priest`, which is the word the four locale packs hold. «26 января (Новомуч.)» on his name page is what `new-martyr` stands on. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 10 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "basil-malinin-28-march",
+  "display_name": "Basil (Malinin) (28 March)",
+  "names": [
+    {
+      "form": "Василий (Малинин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13709, «Василий (Малинин), протоиерей, сщмч.», with the rank words left off. The day’s own line declines the forename and prints no surname at all, «Сщмч. Василия пресвитера (1938)». The corpus holds a second folder storing the same string, `basil-malinin`, and the two are two men: see this folder’s russian row."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with: «Сщмч. Василия пресвитера (1938)». It is the only year either page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст. — «Сщмч. Василия пресвитера (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line is all there is: no life page on the day page and none on name page 13709, and no place, no diocese, no arrest and no manner of death. THE FOLDER THIS IS NOT: the corpus already holds `basil-malinin`, which was written off this same calendar’s 10 сентября ст. ст. and stores the same name string. The source itself keeps two name pages under that name and they differ in three things — name page 9499 is «Василий (Малинин), иерей, сщмч.», a priest, with the days «26 января (Новомуч.) , 10 сентября», and its life gives a man born 26 March 1898 at Vasyanskoye in the Tver province and shot on 23 September 1937; name page 13709 is «Василий (Малинин), протоиерей, сщмч.», a protopriest, with the days «26 января (Новомуч.) , 28 марта», and the day line closes him with 1938. Two pages, two ranks, two days and two years: two men, and this is the second of them. His name page makes him a протоиерей; `office` reduces that to `Priest`, which is the word the four locale packs hold. «26 января (Новомуч.)» on his name page is what `new-martyr` stands on. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 aprilie, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 10 Απριλίου, the corresponding civil day (8 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 April 2026 (8 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

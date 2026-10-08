@@ -11,6 +11,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Μαρτίου, «Όσιος Στέφανος ο Ομολογητής, ηγούμενος Τριγλίας», with the rank word left off."
+    },
+    {
+      "form": "Стефан Триглийский",
+      "lang": "ru",
+      "note": "Read out of the calendar's name link for 28 марта ст. ст., which gives «Стефан Триглийский, игумен, исповедник»; the rank words are not part of the stored form."
     }
   ],
   "sex": "male",
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 марта ст. ст. — «Прп. Стефана чудотворца, исп., игумена Триглийского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260328.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
