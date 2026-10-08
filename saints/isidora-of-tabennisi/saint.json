@@ -16,6 +16,11 @@
       "form": "Исидора",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 10 May, „Преподобна Исидора Јуродива.“ — Преподобна left off, which is the `venerable` this folder already carries in `types`, and Јуродива left off too, which is the `fool-for-christ` it also carries and which BRIEF-SERBIAN.md §5's table reads as a rank and not an epithet. Nothing else is in the heading: Tabennisi, the feigned madness, Pitirim and the year are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Исидора — not `isidora-17-october`, which has no Serbian form — so this one folds with nothing, and it does not meet the ten `isidore-*` folders either, whose names are masculine."
+    },
+    {
+      "form": "Исидора Тавенская",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Исидора Тавенская, Христа ради юродивая, прп.», with the rank and the epithet of folly left off, which leaves the forename and the monastery. The day’s own line declines her «Прп Исидоры, Христа ради юродивой (VI)». `fk.mjs` returned NONE before the write."
     }
   ],
   "sex": "female",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026). The Romanian life adds that the Russian Church keeps her on 10 May, which is not verified here."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Прп Исидоры , Христа ради юродивой (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the calendar’s life names her «Исидора Тавенская, Христа ради юродивая», the fool for Christ of the Tabennisi monastery in Egypt, with the rag on her head, the kitchen work and the visit of the hermit Питирим sent by an angel — the same woman the Serbian row of this folder already keeps on the julian 10 May. **The Romanian and Greek rows of this folder stand on 1 May and were not moved**: that is a menologion number nine days off, not the thirteen-day style conversion, so BRIEF.md §8’s rule does not reach it, and one row per church is the schema. *An author may want to know that the calendars number this day differently.* `dates` was NOT touched, and the reason is that the Russian life contradicts itself about her century in the space of two paragraphs: it opens «подвизалась в Тавенском монастыре (Египет) в VI веке», the sixth century, and closes «Предполагают, что она скончалась не позднее 365 года», it is supposed she died not later than 365 — a date two centuries earlier, and given as a supposition. The folder’s floruit of the fourth century, read off doxologia, agrees with the second of those and not the first. Both readings are in the new paragraph and neither was made a field. azbyka.ru was not read."
     },
     {
       "church": "romanian",

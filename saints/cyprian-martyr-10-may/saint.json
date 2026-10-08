@@ -16,6 +16,11 @@
       "form": "Кирин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 May, „Свети мученици Алфеј, Филаделф и Кирин.“ — Свети left off, which is not a rank, and мученици left off, which is the `martyr` this folder already carries in `types`. **This is a fifth spelling of the one name** — the folder's Romanian form is Ciprian and its Greek Κυπρίνος, and saint.gr's own parenthesis offers Κύριλλος, Κυρίνος and Κυπριανός beside it; Кирин is that Κυρίνος, and it is stored as the page prints it and not reconciled with the others, because choosing among a source's own variants is not this reader's to do. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year. A direct walk of every `names` entry in `saints/` finds no folder holding Кирин, so the form folds with nothing."
+    },
+    {
+      "form": "Киприан Бастийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Киприан (Кирин, Кирилл) Бастийский, Месопольский, мч.», with the rank abbreviation left off, the forename taken with the first epithet only, and the parenthesised variants left out of the form: the calendar gives his forename three ways, Киприан, Кирин and Кирилл, and this corpus already stores the second as his Serbian form «Кирин» and a Greek «Κυπρίνος» beside it. The day’s own line declines him «Киприана» among four others. `fk.mjs` returned NONE for the stored form before the write."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Мчч. Алфия , Филадельфа , Киприана , Онисима , Еразма и иных (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the same company on the same menologion day with the same year the folder already holds, and a separate name link for him. **This is the folder whose name the calendars read three ways** — the corpus stores the Greek «Κυπρίνος» and the Serbian «Кирин», and the Russian name link heads him «Киприан (Кирин, Кирилл) Бастийский, Месопольский, мч.», giving all three in one line: Киприан, Кирин and Кирилл. The form stored is the nominative the link leads with, and the two parenthesised variants are in the form’s note, after `zeno-of-ikalto`’s precedent in batch ru-05-07-1; one `ru` form per folder is BRIEF-RUSSIAN §2. `dates` unchanged. The two reigns the shared life gives are recorded in the paragraph and not resolved. The life gives him the pan, «сожгли на сковороде». azbyka.ru was not read."
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Ησύχιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Όσιος Ησύχιος ο Ομολογητής», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Исихий Антиохийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Исихий Антиохийский, мч.», with the rank abbreviation left off. The day’s own line declines him «Мч. Исихия Антиохийского (IV)». `fk.mjs` returned NONE before the write."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Мч. Исихия Антиохийского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "**This row is a reading the author should check, and it is written here rather than as a second folder because a duplicate is the worse error.** BRIEF.md §3.4 decides it: a line on the same menologion day under the same name is that man, and the Romanian «Sfântul Cuvios Isihie Mărturisitorul» and the Greek «Όσιος Ησύχιος ο Ομολογητής» this folder already stands on are both the 10 May Hesychius, as is the Russian «Мч. Исихия Антиохийского». **What does not agree is the rank.** The Romanian and Greek call him venerable and confessor; the Russian calls him мученик, a martyr, and gives the martyrdom in full — a man of high and honoured office at the imperial court at Antioch under Максимиан Галерий (305–311), stripped of a dignitary’s dress by the edict that put Christians out of military rank, set among the women’s servants, and drowned in the river with a millstone about his neck. Confessor and martyr are not in conflict over such a death, and the disgrace before the drowning is what a confessor’s title would rest on; but **`types` was NOT touched** and stays `venerable` and `confessor`, because changing a rank on a contested identification is more than this row claims. `dates` was not touched either: the folder has none, the Russian day line gives «(IV)», the fourth century, and the life says in its own last sentence «Год смерти мученика точно не известен», the year of the martyr’s death is not exactly known — which is a refusal of a year and not a year. The folder’s own life already says the Greek page for 10 May sends the reader to 6 March for his life and that a separate martyr Hesychius stands on the Greek 2 September as `hesychius-the-martyr-2-september`; neither page was read here. The corpus’s twelve Hesychius folders were listed and read against this line before the row was written: none is of Antioch, and the nearest in dossier is `hesychius-the-senator`, a martyr the Romanian and Greek keep on 2 March whose epithet would fit a man of the imperial court — a different day in both calendars, and nothing read links them. `fk.mjs` on «Исихий Антиохийский» returned NONE. azbyka.ru was not read, and it is a source that might settle the rank."
     },
     {
       "church": "romanian",

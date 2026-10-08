@@ -13,6 +13,11 @@
       "form": "Σίμων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιος Σίμων Επίσκοπος Βλαδιμίρ και Σουζδαλίας», with the rank word and the see left off. No Slavonic form is recorded: saint.gr prints none."
+    },
+    {
+      "form": "Симон Владимирский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Святитель Симон, епископ Владимирский и Суздальский», with the rank word and the see’s second half left off: the folder’s `office` already carries «Bishop of Vladimir and Suzdal» whole, and the form takes the forename with the first epithet, as the other entries of this batch do. The day’s own line declines him «Свт. Симона, еп. Владимирского и Суздальского, Печерского (1226)», with Печерский for the Caves besides. `fk.mjs` returned NONE before the write."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his own day; it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Свт. Симона , еп. Владимирского и Суздальского, Печерского (1226).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact and not a name match: both of the calendar’s lives make him the first bishop of the Vladimir and Suzdal land, tonsured in the Kiev Caves monastery in the later twelfth century, abbot of the Nativity of the Mother of God monastery at Vladimir from 1206, bishop under the great prince Георгий Всеволодович, writer of the lives of several of the Caves fathers and of the epistles to the monk Поликарп with which the Kiev Caves Paterikon begins, dead 1226 in the schema — the same man the folder already held from saint.gr, with the same year. **Two things the two lives disagree on, and both are in the paragraph rather than in a field.** The year of his consecration: life6847 says 1215 and life1030 says 1214. And the resting place: life6847 has his body laid at once in the Near, or Antony’s, caves of the Kiev Caves Lavra according to his wish, while life1030 has it first buried at Vladimir and carried to the Lavra some years afterwards by his own bequest. `dates` unchanged at 1226; life6847 gives the day as «22 мая 1226 г.», which is neither the calendar’s own 10 мая ст. ст. nor thirteen days from it, so BRIEF.md §8’s style rule does not reach it and nothing was moved — it is recorded and no more. His life pages list one other day, «28 сентября (Печер.(Б))», the synaxis of the fathers of the Near Caves; one row per church is the schema, so that day is noted here and he does not render on it. **No `related` row was made for Поликарп or for Георгий Всеволодович**: the first is the man his letters were written to and the second the prince who appointed him, both named in the prose in Cyrillic, and neither tie is the kind `related` holds. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -61,5 +76,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Житий преподобных отец Печерских списателю известный,/ святителю Христов Симоне всеблаженне,/ молися прилежно с ними Христу Богу,/ да управит в мире живот наш/ и в книги животныя да напишет ны,/ спасая души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст., «Тропарь святителя Симона, чудотворца Печерского, епископа Владимирского и Суздальского, в Киеве, в Ближних пещерах почивающего», глас 1 — proper to him, and it names both him and the work the life credits him with",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O renowned writer of the lives of the venerable fathers of the Caves, all-blessed Simon, hierarch of Christ, pray earnestly with them to Christ God, that He may order our life in peace and write us in the books of life, saving our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Святительства одеждою,/ аще и достойне одеялся еси,/ обаче тем не возносяся,/ желал еси паче сметием пред враты Лавры Печерския поврещися,/ смиренномудре Симоне./ Темже, не аки сметие, врат вне,/ но, яко сокровище, внутрь святыя пещеры положен быти сподобился еси,/ и ныне на Небеси Господеви предстоя,/ молися о нас, чтущих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст., «Кондак святителя Симона, чудотворца Печерского, епископа Владимирского и Суздальского», глас 2 — proper to him, and it turns on where he asked to be buried",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Though thou wast clothed, and worthily, in the vesture of a hierarch, yet thou wast not lifted up by it, but didst rather desire to be cast as sweepings before the gates of the Lavra of the Caves, O humble-minded Simon. Therefore thou wast counted worthy to be laid not as sweepings outside the gates but as a treasure within the holy cave; and now, standing before the Lord in heaven, pray for us who honour thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

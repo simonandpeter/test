@@ -10,6 +10,11 @@
       "form": "Έρασμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Έρασμος, Ονήσιμος και οι συν αυτώ δεκατέσσερις Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Ερασμος ο Μαρτυρας»."
+    },
+    {
+      "form": "Еразм Римский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s name link, «Еразм Римский, мч.», with the rank abbreviation left off. It is the whole of what the link gives him, and the one epithet is the city where the life has him beheaded. The day’s own line declines him «Еразма» among four others. `fk.mjs` returned NONE before the write."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 мая ст. ст. — «Мчч. Алфия , Филадельфа , Киприана , Онисима , Еразма и иных (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260510.html",
+        "year": 2026
+      },
+      "note": "The identification is exact: the same company on the same menologion day with the same year the folder already holds, and a separate name link for him. `dates` unchanged. His name link gives one epithet only, «Еразм Римский, мч.», and no more, where the other four carry Бастийский; the life has him beheaded at Rome with the fourteen unnamed Christians rather than sent on to Sicily, which accounts for it. The two reigns the shared life gives are recorded in the paragraph and not resolved. azbyka.ru was not read."
     },
     {
       "church": "romanian",
