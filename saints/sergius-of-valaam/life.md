@@ -6,4 +6,8 @@ The page's two headings do not quite agree with that. Sergius is headed «Οσι
 
 The page records that the holy relics of Sergius are in the monastery that bears their name, and it links a translation of the relics of the two as a separate commemoration. It names no country for either man, no monastery of their tonsure and no manner of their preaching, and it prints no hymn. The epithet «ο Θαυματουργός», the wonderworker, is the only thing it gives them besides the island and the year.
 
-*After saint.gr's calendar for 28 Ιουνίου — [the day](https://www.saint.gr/06/28/index.aspx) and [the life](https://www.saint.gr/1920/saint.aspx); read 1 October 2026.*
+The Russian calendar keeps the two of them together on 28 июня ст. ст. and gives them four sentences. They settled on the island of Valaam in 1329, and the brotherhood they gathered became a lamp of Orthodoxy in that country: the Karelians began once more to trust Christianity, whose standing there had been undermined in the thirteenth century by the Swedes, who planted Catholicism with the sword. The two reposed about 1353. Both years are the ones already recorded here, and the day’s line dates them to the fourteenth century.
+
+The day page carries three hymns for them and every one is joint: two troparia and a kontakion, each addressing the pair in the dual, «всеблаженнии отцы Сергие и Германе». They are written on both folders for that reason. Their life page also lists 11 сентября, a day this folder claims nothing about.
+
+*After saint.gr's calendar for 28 Ιουνίου — [the day](https://www.saint.gr/06/28/index.aspx) and [the life](https://www.saint.gr/1920/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 28 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260628.html) and [their shared life](https://days.pravoslavie.ru/Life/life1411.htm), read 9 October 2026.*

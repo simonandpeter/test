@@ -16,6 +16,11 @@
       "form": "Сампсон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 27. јун ст. ст., „Свети Сампсон Странопримац“ — Свети is not a rank and Странопримац is an epithet and not a name, and it is the one the display name already carries as «the Hospitable»; §6 takes both off and the bare forename is left. **A by-name the heading gives is normally kept** — keeping Тарсанин kept a Julian out of a fold of five — but Странопримац is a description of what he did rather than a by-name that distinguishes him from another Samson, and there is no other Samson to be distinguished from: `foldchk.py` returns NO FOLDER HOLDS THIS FORM and `.tmp/sr-foldpred.mjs` returns no other holder of the gate’s folded key, so nothing was at stake in the choice and no `READ_FOLDS` key is owed. Recorded because the two cases look alike and are decided differently."
+    },
+    {
+      "form": "Сампсон Странноприимец",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 27 июня ст. ст., «Преподобный Сампсон Странноприимец» (name page 1919), with the rank and grade words left off. The line itself, «Прп. Сампсона странноприимца (ок. 530).», gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s Romanian, Greek and Serbian rows already carry, so there is no second day. The line dates him «ок. 530», which is the year this folder already records off the Охридски пролог, so nothing was changed. The day page carries a troparion and a kontakion under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Прп. Сампсона странноприимца (ок. 530).»",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -122,6 +137,38 @@
       },
       "english": {
         "text": "As a physician of the very best and an intercessor gladly received, we who run to your divine coffin, venerable Samson of godly mind, gathering together praise you with hymns and psalms, glorifying Christ, who gives you such grace of healings.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В терпении твоем стяжал еси мзду твою, отче преподобне,/ в молитвах непрестанно терпевый,/ нищия возлюбивый и сия удовливый,/ но молися Христу Богу, Сампсоне милостиве блаженне,// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Тропарь преподобного Сампсона», глас 8. Proper to him: it names him «Сампсоне милостиве блаженне» in the vocative and the poor he loved and provided for.",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thy patience thou didst gain thy reward, O venerable father, persevering unceasingly in prayers, loving the poor and providing for them. Pray thou to Christ God, O blessed and merciful Samson, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко врача всеизрядна и молитвенника благоприятна,/ к раце твоей Божественней притекающе, Сампсоне богомудре преподобне,/ сошедшеся любовию, псалмы и песньми, радующеся, Христа прославляем,// таковую тебе благодать подавающа исцелений.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Кондак преподобного Сампсона», глас 8. Proper to him: it calls him «врача всеизрядна», a physician most excellent, and has the faithful running to his shrine. **The page’s own template leaves a cross-reference inside this hymn’s markup, «Тропарь и кондак преподобного Амвросия (см. 10/23 октября)», which belongs to the day’s next entry and not to this text; it is cut off here and the hymn ends at «подавающа исцелений.».",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Coming to thy divine shrine as to a physician most excellent and an intercessor well received, O venerable Samson wise in God, gathered together in love we glorify Christ with psalms and songs and rejoicing, for He granteth thee such grace of healings.",
         "rendered": "site"
       }
     }

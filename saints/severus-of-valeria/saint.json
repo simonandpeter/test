@@ -1,0 +1,59 @@
+{
+  "slug": "severus-of-valeria",
+  "display_name": "Severus of Valeria",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Севир Валерийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 27 июня ст. ст., «Севир Валерийский (Италийский), пресвитер» (name page 1950), with the rank and grade words left off. The line itself, «Прп. Севира пресвитера (VI).», gives the name in the genitive. The parenthesis is the calendar’s second epithet for him, «Италийский», of Italy, standing beside the first; the stored form keeps the first, which is the province his life page places him in."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s line gives «(VI)» and his life page «служил в VI веке в церкви Пресвятой Богородицы в селении Интероклея в Средней Италии» — he served in the sixth century. The century is a span of service and not a death, so it is recorded as a floruit; the page gives no year of any kind."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1406 heads «День памяти: 27 июня» and lists no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Прп. Севира пресвитера (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

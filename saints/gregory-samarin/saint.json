@@ -1,0 +1,59 @@
+{
+  "slug": "gregory-samarin",
+  "display_name": "Gregory (Samarin)",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Григорий (Самарин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind the forename in days.pravoslavie.ru's line for 28 июня ст. ст., «Григорий (Самарин), диакон, сщмч.» (name page 13740), with the grade and rank words left off; the surname is part of the name and stays, and the parentheses are the calendar's own. The line itself, «Сщмч. Григория диакона (1940).», gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in the line for 28 июня ст. ст.: «Сщмч. Григория диакона (1940).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 28 июня» (page 13740) and carries no prose at all; the «26 января» is the synaxis of the new martyrs and confessors of Russia and is not a second feast. No folder of this corpus held the surname before today and the stored form folds onto no other folder's (`fk.mjs`, 9 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июня ст. ст. — «Сщмч. Григория диакона (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260628.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 11 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

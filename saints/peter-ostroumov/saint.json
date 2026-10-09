@@ -1,0 +1,60 @@
+{
+  "slug": "peter-ostroumov",
+  "display_name": "Peter (Ostroumov)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Остроумов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 27 июня ст. ст., «Петр (Остроумов), иерей, сщмч.» (name page 14279), with the rank and grade words left off. The line itself, «Сщмч. Петра пресвитера (1939).», gives the name in the genitive. The surname is part of the name and stays, and the line gives none."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 27 июня ст. ст.: «Сщмч. Петра пресвитера (1939).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 27 июня» (page 14279) and carries no prose at all; the «26 января» is the synaxis of the new martyrs and confessors of Russia and is not a second feast. No folder of this corpus held the surname «Остроумов» with this forename before today, and the stored form folds onto no other folder’s (`fk.mjs`, 9 October 2026); `seraphim-ostroumov` is a different forename and a different day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Сщмч. Петра пресвитера (1939).»",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

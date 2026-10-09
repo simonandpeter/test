@@ -1,0 +1,59 @@
+{
+  "slug": "serapion-of-kozheozero",
+  "display_name": "Serapion of Kozheozero",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Серапион Кожеезерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 27 июня ст. ст., «Преподобный Серапион Кожеезерский» (name page 1961), with the rank and grade words left off. The line itself, «Прп. Серапиона Кожеезерского (1611).», gives the name in the genitive."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1611,
+      "latest": 1611,
+      "display": "1611",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 27 июня ст. ст., «Прп. Серапиона Кожеезерского (1611).», and both of his readings repeat it: «Преподобный Серапион скончался в 1611 году». No year of birth is given; the calendar has him brought to Moscow among prisoners in 1551."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "julian",
+        "note": "Both of the readings off index page id1961 head «День памяти: 27 июня» and list no other day. The corpus holds `nicodemus-of-lake-kozha`, a later hermit of the same lake, who is a different man on a different day; nothing was written on that folder."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Прп. Серапиона Кожеезерского (1611).»",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

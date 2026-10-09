@@ -1,0 +1,51 @@
+{
+  "slug": "george-stepanyuk",
+  "display_name": "George (Stepanyuk)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Георгий (Степанюк)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 26 июня ст. ст., «Георгий (Степанюк), иерей, сщмч.» (name page 9551), with the grade and rank words left off; the surname is part of the name and stays, and the parentheses are the calendar's own. The line itself, «Сщмч. Георгия пресвитера (1918).», gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 26 июня» (page 9551) and carries no prose at all; the «26 января» is the synaxis of the new martyrs and confessors of Russia and is not a second feast. No folder of this corpus held the surname «Степанюк» before today (`grep -rl`, 9 October 2026), and no George folder folds onto the stored form."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июня ст. ст. — «Сщмч. Георгия пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260626.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 9 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 9 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

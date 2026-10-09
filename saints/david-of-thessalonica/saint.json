@@ -16,6 +16,11 @@
       "form": "Давид",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 26. јун ст. ст., „Преподобни Давид“ — Преподобни is the rank, which `types` already carries, and the bare forename is the whole of the rest: **the heading is two words long and one of them is the rank**, for the second day running. The «of Thessalonica» of the display name is the corpus’s own, off the city both other books name, and §10 reserves it. **THE FOLD IS THE WIDEST THIS READER HAS WRITTEN AND IS MEASURED BOTH WAYS.** `foldchk.py` returns **seven** other holders of the exact string «Давид» and `.tmp/sr-foldpred.mjs` returns the same seven for the gate’s own folded key, so this folder is the eighth: `david-of-gareji`, `david-of-georgia`, `david-of-hermopolis`, `david-son-of-prince-theodore`, `david-son-of-vukan`, `david-the-builder` and `gleb-prince-and-passion-bearer`. **The last of those is not a David at all**: the form is on his folder in `ru` because David was his baptismal name, which is the same shape as the Germanus of Kazan entry the gate already carries for «Григорий». The heading offers nothing to break the fold with. A `READ_FOLDS` key is added in the same commit, writing the row and registering the fold being two acts."
+    },
+    {
+      "form": "Давид Солунский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 26 июня ст. ст., «Давид Солунский (Фессалоникийский)» (name page 563), with the rank word left off. The parenthesis is the calendar's gloss of the epithet standing before it — Солунь and Фессалоники are its two names for the same city — and not a second element of the name, so it is not stored; the line itself, «Прп. Давида Солунского (VI).», gives «Давида Солунского» in the genitive."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion day this folder's Romanian, Greek and Serbian rows already carry, so there is no second day and none is noted. His life page life1396 heads «День памяти: 26 июня» and lists no other day. The line dates him «(VI)», the sixth century, and the life «около 540 года», about 540, which falls inside the 535–541 this folder already records off saint.gr; nothing was changed. The day page carries a troparion and a kontakion under his name, and it also carries two under the name of «святителя Дионисия, архиепископа Суздальского», whose memory this calendar keeps on this day for the reason its own life page gives: «26 июня память святителя Дионисия празднуется ради тезоименитства с преподобным Давидом Солунским, имя которого он носил в миру» — because the archbishop was called David in the world and this is his namesake's day. Sharing a day is not a relation and no row was written either way on that account."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июня ст. ст. — «Прп. Давида Солунского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260626.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -139,6 +154,38 @@
       },
       "english": {
         "text": "As an imitator of the heavenly orders, and a sojourner among the good things of earth, we call you blessed all unworthily, David blessed of God; for you finished your life as an angel and took your delight in divine gifts, and of these give us a share also, venerable one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В тебе, отче, известно спасеся, еже по образу,/ приим бо крест, последовал еси Христу/ и дея учил еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней.// Темже и со Ангелы срадуется, преподобне Давиде, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июня ст. ст. — «Тропарь преподобного Давида», глас 8. The common of a venerable father with his own name set into it, «преподобне Давиде»; a common printed under one saint’s name is that saint’s service.",
+        "url": "https://days.pravoslavie.ru/Days/20260626.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, that which was made according to the image was surely saved: for taking up thy cross thou didst follow Christ, and by thy deeds thou didst teach us to despise the flesh, for it passeth away, but to care for the soul, a thing immortal. Therefore doth thy spirit rejoice together with the angels, O venerable David.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Сад присноцветущ, добродетелей плоды приносяй,/ явился еси на садовне древе, яко благопеснивая птица,/ рай же паче, жизни древо, Господа, в сердцы твоем прием,/ яко возделав, богомудре,/ имже питаеши нас благодатию;// присно моли о нас, Давиде всеблаженне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июня ст. ст. — «Кондак преподобного Давида», глас 1. Proper to him: the garden, the bird in the orchard tree and the tree of life, «на садовне древе, яко благопеснивая птица».",
+        "url": "https://days.pravoslavie.ru/Days/20260626.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "An ever-blossoming garden, bearing the fruits of the virtues, thou wast shown forth upon the tree of the orchard as a sweetly singing bird; and rather, having received in thy heart the tree of life, the Lord, thou didst till it as a husbandman, O wise in God, and with it thou feedest us by grace. Pray thou ever for us, O all-blessed David.",
         "rendered": "site"
       }
     }

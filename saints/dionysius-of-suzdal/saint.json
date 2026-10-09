@@ -3,13 +3,21 @@
   "display_name": "Dionysius of Suzdal",
   "sex": "male",
   "types": [
-    "archbishop"
+    "archbishop",
+    "hierarch",
+    "bishop",
+    "venerable"
   ],
   "names": [
     {
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Ιουνίου, «Άγιος Διονύσιος Αρχιεπίσκοπος Σουζδαλίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Дионисий Суздальский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 26 июня ст. ст., «Святитель Дионисий, архиепископ Суздальский» (name page 631), with the rank word at the head of the string and the rank word standing inside it both left off; what remains is name and see. The line itself, «Свт. Дионисия, архиеп. Суздальского (1385).», gives «Дионисия, архиеп. Суздальского» in the genitive."
     }
   ],
   "dates": {
@@ -24,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr makes him a Russian hierarch, so a Russian row is likely to exist, but nothing was read for it here."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "julian",
+        "note": "**The day is not the day of his death, and the calendar says why.** His second reading, life1397, ends «26 июня память святителя Дионисия празднуется ради тезоименитства с преподобным Давидом Солунским, имя которого он носил в миру» — the 26 June memory is kept because he was called David in the world, and 26 June is the day of David of Thessalonica, whose own line stands beside his on this page. Both readings head «Дни памяти: 26 июня , 15 октября» and both put his repose on «15 октября 1385 года», in prison at Kiev, which is the year this folder already records off saint.gr. One attestation row per church is the schema, the day page that listed him is 26 июня, and that is the row; **the 15 октября ст. ст. reader should be told, because that day is the day of the man's death and is not among the Julian days already worked.** The day page carries a troparion and a kontakion under his name. The index page id631 carries two readings and both were read; they disagree on nothing, the second being much the fuller."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июня ст. ст. — «Свт. Дионисия, архиеп. Суздальского (1385).»",
+        "url": "https://days.pravoslavie.ru/Days/20260626.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +73,43 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "euthymius-of-suzdal",
+    "macarius-of-zheltovodsk"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия ревнителю, благочестия наставниче,/ ищущим спасения добрый кормчий,/ монашествующих Богодухновенное украшение,/ Богоноснаго Евфимия собеседниче, святителю Дионисие,/ ученьми и добродетельми отечество твое просветил еси,/ не забуди нас, чтущих тя,/ но в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июня ст. ст. — «Тропарь святителя Дионисия, архиепископа Суздальского», глас 8. Proper to him: it names him «святителю Дионисие» in the vocative, the zeal for Orthodoxy the life gives him, and his disciple «Богоноснаго Евфимия».",
+        "url": "https://days.pravoslavie.ru/Days/20260626.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O zealot of Orthodoxy, teacher of piety, good helmsman to those who seek salvation, divinely inspired adornment of monastics, companion of the God-bearing Euthymius, O hierarch Dionysius: by thy teachings and thy virtues thou didst enlighten thy homeland. Forget not us who honour thee, but order our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Звезду Российскую от Киева возсиявшую/ чрез Нижний Новград в Суждаль достигшую,/ и всю страну сию учением озарившую,/ ублажим Богомудраго Дионисия,/ той бо молится Господу спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 июня ст. ст. — «Кондак святителя Дионисия, архиепископа Суздальского», глас 8. Proper to him: it names Kiev, Nizhny Novgorod and Suzdal, the three cities of his life, «Звезду Российскую от Киева возсиявшую».",
+        "url": "https://days.pravoslavie.ru/Days/20260626.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us bless the God-wise Dionysius, the star of Russia that shone forth from Kiev, that came through Nizhny Novgorod to Suzdal and lit up this whole land with its teaching; for he prayeth to the Lord that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

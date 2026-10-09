@@ -10,6 +10,11 @@
       "form": "Paisie Aghioritul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 iulie, «Sfântul Cuvios Paisie Aghioritul», with the rank word left off."
+    },
+    {
+      "form": "Паисий Святогорец",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 29 июня ст. ст., «Преподобный Паисий Святогорец» (name page 14774), with the rank word at the head of the string left off. The line itself, «Прп. Паисия Святогорца (1994).», gives name and epithet in the genitive."
     }
   ],
   "sex": "male",
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "julian",
+        "note": "**A different menologion number from this folder's other two rows, and the same civil day.** The Romanian and Greek rows stand on 12/7 revised-julian; the Julian 29 June is the civil 12 July 2026, so this calendar keeps him on the same day of the year by a different reckoning, and the row carries the Julian number as BRIEF-RUSSIAN §1 requires. His name page 14774 heads «Дни памяти: 1 июня (Афон.) , 29 июня , 31 декабря (прославление)»: the first is the synaxis of the saints of Athos, the third the day of his glorification, and neither is a second feast of the man. The line dates him «(1994)», which is the death year this folder already records off saint.gr, so nothing was changed. The name page prints no life of its own — an icon, and links to articles at pravoslavie.ru which were not opened. The day page prints no hymn under his name; its two hymns are of the chief apostles whose feast the day is."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июня ст. ст. — «Прп. Паисия Святогорца (1994).»",
+        "url": "https://days.pravoslavie.ru/Days/20260629.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
