@@ -16,6 +16,11 @@
       "form": "Тома Малеин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. јул ст. ст., „Преп. Тома Малеин“ — „Преп.“ is the rank and comes off, and „Малеин“ is **kept**, because it is a by-name standing directly on the name and not a see governed by a rank, which is §6’s «Аврамије Смоленски» case and the same reading that kept „Атонски“ on Athanasius on 5 July. **And it is what avoids a fold**: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Тома Малеин» and `thomas-of-constantinople` and `thomas-the-fool-for-christ`, both `sr`, for the bare «Тома», so keeping the by-name keeps this folder off a string two others already share. Measured, not supposed."
+    },
+    {
+      "form": "Фома Малеин",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2325, «Фома Малеин, …», with the rank words after the last comma left off. The day line gives the name in the genitive only. `fk.mjs` returns no other holder for the folded form. The Serbian form «Тома Малеин» this folder already stores is the same name in the other spelling and is left as it is."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Прп. Фомы , иже в Малеи (X).»",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and this folder’s man: the same menologion day its Romanian, Greek and Serbian rows already keep, the same mountain of Maleon, and «(X)», the tenth century, which is exactly the century this folder’s `dates` already carry off the Охридски пролог. `dates` and `types` UNCHANGED. Name page 2325 heads him «Преподобный Фома Малеин» and lists «День памяти: 7 июля» and no other day. THE READINGS BEHIND id2325 WERE NOT OPENED; this row rests on the day line, the name page and the hymns. THREE HYMNS TAKEN, AND TWO OF THEM ARE JOINT. The day page prints «Тропарь преподобных Фомы и Акакия» twice, in глас 4 and глас 1, and the second names both men in its text — «Фома чудесы, Акакий же послушанием». On the precedent of the joint hymns of the venerable fathers of Moscow, a joint hymn goes in each named man’s folder; here it goes only in this one, because the Acacius of the pair is `acacius-the-obedient`, whose russian row is already venerated on another day and which this batch therefore does not touch at all. The third is «Кондак преподобного Фомы», proper to him. The fourth heading under the pair, «Кондак преподобного Акакия», was NOT taken. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT: «Прп. Акакия , о котором повествуется в Лествице (VI).» is `acacius-the-obedient`, which already carries a VENERATED russian row on the Julian 29 ноября, and «Прп. Евфросинии, в миру Евдокии , кн. Московской (1407).» is `euphrosyne-of-moscow`, which already carries one on the Julian 17 мая, the day of her tonsure. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled between them, so nothing was written for either and their hymns on this page were not copied."
     },
     {
       "church": "romanian",
@@ -89,6 +104,54 @@
       },
       "english": {
         "text": "In you, father, what was made after the image was saved with diligence; for taking up the cross you followed Christ, and by your labour you taught us to look past the flesh, which passes away, and to care for the soul, which is a thing immortal. Therefore your spirit rejoices together with the angels, most venerable father Thomas.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Тропарь преподобных Фомы и Акакия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us ever according to Thy gentleness, take not Thy mercy from us, but by their prayers order our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Светила богосиянная миру/ и иноков одушевленный зари,/ Фома чудесы, Акакий же послушанием,/ возсиясте светло;/ сих, яко имущих дерзновение к Богу,/ молитвами во бранех пособствовати молим,/ да просят от Христа Бога даровати прощение согрешений/ чтущим их святую память.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Ин тропарь преподобных Фомы и Акакия», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lamps shining with God's own light upon the world and living dawns of monks, Thomas by wonders and Acacius by obedience, ye shone out brightly. Having boldness before God, we pray you to help us by your prayers in our battles, that ye may ask of Christ God the forgiveness of sins for those who honour your holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Велию победу мужески показал еси,/ отонудуже Божественною любовию разгоревся,/ царя тленнаго и вся красная преобидел еси,/ на горе Малейстей вселение совершив,/ от неяже в Небесная/ возшел еси к Царю царей, Фомо,// моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Кондак преподобного Фомы», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A great victory didst thou show forth manfully, and thereafter, set alight with divine love, thou didst despise a corruptible king and all things fair, and madest thy dwelling upon the mountain of Maleon, whence thou didst ascend into the heavens to the King of kings. O Thomas, pray without ceasing for us all.",
         "rendered": "site"
       }
     }

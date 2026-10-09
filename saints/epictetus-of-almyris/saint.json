@@ -11,6 +11,11 @@
       "form": "Епиктет",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. јул ст. ст., „Преп. муч. Епиктет и Астион“ — „Преп. муч.“ is the rank and comes off, „и Астион“ is the other name the heading enumerates, and the bare forename is left. «teacher of Astion» in the display name is the corpus’s own and is this entry’s own first sentence besides. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Епиктет», so there is no fold — worth having measured, the corpus keeping an `epictetus-the-wonderworker` as well."
+    },
+    {
+      "form": "Епиктет Алмирисский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 782, «Епиктет Алмирисский, …», with the rank words after the last comma left off. The day line gives the name in the genitive only. `fk.mjs` returns no other holder for the folded form."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Прмчч. Епиктета пресвитера и Астиона монаха (290).»",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry, «Прмчч. Епиктета пресвитера и Астиона монаха (290).», and this folder’s man — the presbyter of the pair, with the same epithet of Almyris the folder’s own slug carries. A DIFFERENT DAY FROM THE ROMANIAN ROW AND THE ROW IS NOT MOVED: doxologia.ro keeps the pair on 8 iulie and the Охридски пролог on 7. јул ст. ст., which is this day; one row per church is the schema, so the russian row stands here and the romanian row stays on the 8th. THE YEAR IS NEW AND `dates` IS NOT TOUCHED: this line closes «(290)», a flat year, where the folder carries «under Diocletian» off doxologia.ro, which marked the martyrdom believed rather than recorded. 290 falls inside that reign, so nothing already held is contradicted, and whether the folder should take the year is an author question in the report. `types` UNCHANGED. THE READING life4176 WAS NOT OPENED; name page 782 lists «День памяти: 7 июля» and no other day. No hymn on the day page stands under either name. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT: «Прп. Акакия , о котором повествуется в Лествице (VI).» is `acacius-the-obedient`, which already carries a VENERATED russian row on the Julian 29 ноября, and «Прп. Евфросинии, в миру Евдокии , кн. Московской (1407).» is `euphrosyne-of-moscow`, which already carries one on the Julian 17 мая, the day of her tonsure. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled between them, so nothing was written for either and their hymns on this page were not copied."
     },
     {
       "church": "romanian",

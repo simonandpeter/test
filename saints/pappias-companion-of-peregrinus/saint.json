@@ -10,6 +10,11 @@
       "form": "Παππίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Ιουλίου, «Άγιοι Περεγρίνος, Λουκιανός, Πομπηίος, Ησύχιος, Παππίας, Σατορνίνος και Γερμανός», with the rank word left off."
+    },
+    {
+      "form": "Папий Диррахийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1730, «Папий Диррахийский, …», with the rank words after the last comma left off. The day line gives the name in the genitive only. `fk.mjs` returns no other holder for the folded form."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Мчч. Перегрина , Лукиана , Помпея , Исихия , Папия , Саторнина и Германа (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, fifth name, and this folder’s man. SEVEN NAMES, SEVEN FOLDERS, AND THE CORPUS HELD ALL SEVEN. The reading life4175 WAS OPENED and is three paragraphs: they were Italians by birth who suffered for Christ under the emperor Trajan at the city of Dyrrachium on the shore of the Adriatic; being present at the torments of the bishop Astius, crucified by the Romans, they openly praised the courage and the firmness of the confessor, were seized for it and drowned in the sea; their bodies, carried ashore by the waves, were hidden there in the sand by Christians, and ninety years later the martyrs appeared to the bishop of Alexandria with a command to bury them and raise a church over them. That is the same company, the same place and the same bishop Astius the corpus’s `astius-of-dyrrachium` stands on, and the same menologion day the folders’ greek rows already keep. `dates` UNCHANGED throughout: the line’s «(II)» is the second century, which is what the reign of Trajan already gives these folders. The ninety years, the Adriatic and the sand are the reading’s and are recorded here rather than written into any field. No hymn on the day page stands under any of the seven names. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT: «Прп. Акакия , о котором повествуется в Лествице (VI).» is `acacius-the-obedient`, which already carries a VENERATED russian row on the Julian 29 ноября, and «Прп. Евфросинии, в миру Евдокии , кн. Московской (1407).» is `euphrosyne-of-moscow`, which already carries one on the Julian 17 мая, the day of her tonsure. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled between them, so nothing was written for either and their hymns on this page were not copied."
     },
     {
       "church": "romanian",
