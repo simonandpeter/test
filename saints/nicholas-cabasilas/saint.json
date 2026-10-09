@@ -11,6 +11,11 @@
       "form": "Νικόλαος Καβάσιλας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιουνίου, «Άγιος Νικόλαος ο Καβάσιλας», with the rank word left off."
+    },
+    {
+      "form": "Николай Кавасила",
+      "lang": "ru",
+      "note": "Read off his name page title, «Николай Кавасила» (page 14533), which is also the string behind his place in the day line and carries no rank word to strip."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's romanian and greek rows carry. The day line marks him «(Эллад.)», a commemoration of the Church of Greece which the Russian calendar keeps, and dates him «(ок. 1397)», within the interval this folder already records. days.pravoslavie.ru gives him NO life page: his name page 14533 heads «День памяти: 20 июня», offers two icons under «Иконы» and carries no prose, so this upgrade is a row and a name form and nothing else. The icons were not opened and no life paragraph was added."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Прав. Николая Кавасилы (ок. 1397) (Эллад.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,62 @@
+{
+  "slug": "leucius-of-vruntisiopolis",
+  "display_name": "Leucius of Vruntisiopolis",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Левкий Александрийский, Врунтисиопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 20 июня ст. ст., «Святитель Левкий Александрийский, Врунтисиопольский, епископ, исповедник» (name page 1336), with the rank word, the see word and the grade word left off; both epithets are the calendar's own. His life page gives «Евтропий» as the name he was baptised with and «Левкий» as the name foretold him in a vision."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "The century the day line gives: «Свт. Левкия исп., еп. Врунтисиопольского (V).». His life page states no year at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1355 heads «День памяти: 20 июня» and names no other day. He is none of the three Leucius folders this corpus already holds — not the martyr of Caesarea of 249 to 251, not the companion of Peter and Severus, and not the abbot of Volokolamsk of 1492: this man is an Alexandrian, bishop first of Alexandria and then the apostle of a city in Italy, and the calendar grades him исповедник, a confessor."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Свт. Левкия исп., еп. Врунтисиопольского (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

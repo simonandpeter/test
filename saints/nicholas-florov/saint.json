@@ -1,0 +1,61 @@
+{
+  "slug": "nicholas-florov",
+  "display_name": "Nicholas (Florov)",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Николай (Флоров)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 20 июня ст. ст., «Николай (Флоров), иерей, исповедник» (name page 15018), with the rank and grade words left off; the surname is part of the name and stays. The line itself, «Св. Николая исп., пресвитера (1933).», gives the forename in the genitive and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 20 июня ст. ст.: «Св. Николая исп., пресвитера (1933).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 20 июня» (page 15018) and carries no prose at all. The «26 января» is the synaxis of the new martyrs and confessors of Russia, a synaxis and not a second feast, and this folder renders on 20 июня ст. ст. only. He is graded «Св.» and «исп.» and not «Сщмч.», so he is recorded as a confessor and not as a martyr."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Св. Николая исп., пресвитера (1933).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
