@@ -1,0 +1,68 @@
+{
+  "slug": "george-lavrov",
+  "display_name": "George (Lavrov)",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Георгий (Лавров)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Георгий (Лавров), архимандрит, исп.» (name page 9168), with the rank and grade words left off; his life page gives «Лавров Герасим Дмитриевич» as his name in the world and «Георгий» as his name in religion."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1867,
+      "latest": 1868,
+      "display": "1867 or 1868",
+      "basis": "attested",
+      "note": "His life page life4793 writes the year with its own question mark: «родился 28 февраля 1868 (1867?) года в Елецком узде Орловской губернии». Both readings are the page's and neither was preferred."
+    },
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "His life page life4793: «21 июня (4 июля н. ст.) 1932 года после причащения Святых Таин отец Георгий скончался». The day line gives the year alone, «Прп. Георгия исп (1932).»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life4793 heads «Дни памяти: 26 января (Новомуч.) , 21 июня , 28 сентября». The 26 января is the synaxis of the new martyrs and the 28 сентября is a further day the 21 июня page does not repeat; the day that listed him is 21 июня, which is also the day of his death, and this folder renders on it alone. The line and the name link grade him «прп.» and «исп.», venerable and a confessor, and he died of cancer in exile and not by violence; his life page's own title calls him «Преподобномученик», a venerable-martyr, which contradicts both the line and its own narrative, and the line was followed."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Прп. Георгия исп (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

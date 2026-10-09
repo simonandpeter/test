@@ -11,6 +11,11 @@
       "form": "Јулије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 21. јун ст. ст., „Преподобни Јулије и Јулијан“ — Преподобни is the rank and comes off, and the first of the two bare forenames is left. «of Aegina» in the display name is the corpus’s own off saint.gr and this heading does not have it; „презвитер“ is in the body and not in the heading, so it was never a candidate for the form. **The fold is deliberate and forced**: `foldchk.py` returns `julius-the-veteran`, `sr`, for «Јулије», so this is the second folder on the string and **the first time the gate will print a row for it at all**, one holder being below its threshold. The heading offers nothing to break it with — one rank word over two bare forenames. A `READ_FOLDS` key is added for it in the same commit."
+    },
+    {
+      "form": "Иулий Мирмидонянин",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Иулий Мирмидонянин, пресвитер», with the rank word left off. «Мирмидонянин» is the calendar's own epithet for both brothers and is kept."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's greek and serbian rows carry. The one life page days.pravoslavie.ru gives the two brothers, life1368, carries no «День памяти» line of its own, and the day page is what puts them here. That page makes them natives of «Мирмидония», where saint.gr has them born on Aegina; the identification of the two readings is the one the corpus had already made and written into this folder's serbian reading — a presbyter and a deacon who were brothers, sent out together, and who ended near Mediolanum. The Russian page puts their repose in the first half of the fifth century, where this folder records years off saint.gr in the fourth; the dates were left as they stood."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Прпп. Иулия пресвитера и Иулиана диакона (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

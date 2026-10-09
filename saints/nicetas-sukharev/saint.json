@@ -1,0 +1,59 @@
+{
+  "slug": "nicetas-sukharev",
+  "display_name": "Nicetas (Sukharev)",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Никита (Сухарев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Никита (Сухарев), мч.» (name page 14464), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Мч. Никиты (1942).», gives the forename in the genitive and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 21 июня ст. ст.: «Мч. Никиты (1942).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 21 июня» (page 14464) and carries no life; under «Сайт прихода» it names a parish, «Храм вмч. Никиты на Швивой (Вшивой) горке, за Яузой г. Москва (Московская епархия (городская))», and nothing more. The «26 января (Новомуч.)» his name page lists beside it is the synaxis of the new martyrs and confessors of Russia, a synaxis and not a second feast, and this folder renders on 21 июня ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Мч. Никиты (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

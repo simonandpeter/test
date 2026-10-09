@@ -1,0 +1,61 @@
+{
+  "slug": "nicholas-rozanov",
+  "display_name": "Nicholas (Rozanov)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Николай (Розанов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Николай (Розанов), протоиерей, сщмч.» (name page 13728), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Сщмч. Алексия , Павла и Николая пресвитеров (1938).», gives the forename in the genitive and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 21 июня ст. ст.: «Сщмч. Алексия , Павла и Николая пресвитеров (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 21 июня» (page 13728) and carries no prose at all. The «26 января (Новомуч.)» his name page lists beside it is the synaxis of the new martyrs and confessors of Russia, a synaxis and not a second feast, and this folder renders on 21 июня ст. ст. only. The corpus holds five other folders whose stored forms carry «Розанов» — a Basil, a Sergius and three Demetriuses — and not one of them is a Nicholas."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Сщмч. Алексия , Павла и Николая пресвитеров (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}
