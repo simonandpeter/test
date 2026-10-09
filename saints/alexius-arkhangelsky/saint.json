@@ -1,0 +1,61 @@
+{
+  "slug": "alexius-arkhangelsky",
+  "display_name": "Alexius (Arkhangelsky)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Алексий (Архангельский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 июня ст. ст., name page 13725, «Алексий (Архангельский), иерей, сщмч.», with the office and the rank words left off. The surname in brackets is part of the name the calendar's own link gives and is kept; the day line gives the forename alone and in the genitive."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Сщмч. Алексия пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry. His name page, 13725, heads itself «Дни памяти: 26 января (Новомуч.) , 13 июня» — the January day is the synaxis of the new martyrs and confessors, not a second proper feast, and the schema keeps one feast to a church, so it is recorded here and he does not render on it. THE CALENDAR PRINTS NO LIFE PAGE and no hymn for him; the line and the name link are the whole of the source. The corpus already keeps five other folders whose surname is Arkhangelsky — `alexander-arkhangelsky`, three Basils and `chionia-arkhangelskaya` — and none of them is an Alexius; nor is he any of the corpus's Alexius presbyters of 1918, whose days are 14, 22, 28 and 30 августа. Not checked: azbyka.ru."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 iunie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Ιουνίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 June 2026 (9 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 13 июня ст. ст.: «Сщмч. Алексия пресвитера (1918).»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

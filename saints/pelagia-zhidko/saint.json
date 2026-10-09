@@ -1,0 +1,60 @@
+{
+  "slug": "pelagia-zhidko",
+  "display_name": "Pelagia (Zhidko)",
+  "names": [
+    {
+      "form": "Пелагия (Жидко)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 июня ст. ст., name page 9904, «Пелагия (Жидко), инокиня, мц.», with the state of life and the rank word left off. The surname in brackets is part of the name the calendar's own link gives and is kept; the day line gives the forename alone and in the genitive."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Мц. Пелагии (1944).»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's ninth and last entry. Her name page, 9904, heads itself «Дни памяти: 26 января (Новомуч.) , 13 июня» — the January day is the synaxis of the new martyrs and confessors, not a second proper feast, and the schema keeps one feast to a church, so it is recorded here and she does not render on it. THE CALENDAR PRINTS NO LIFE PAGE and no hymn for her; the line and the name link are the whole of the source. «Инокиня» is read as `monastic` and not as an `office`, the locale packs carrying no word for it. No folder in the corpus carries the surname Жидко. Not checked: azbyka.ru."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 iunie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Ιουνίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 June 2026 (9 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1944,
+      "latest": 1944,
+      "display": "1944",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 13 июня ст. ст.: «Мц. Пелагии (1944).»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

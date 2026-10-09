@@ -1,0 +1,62 @@
+{
+  "slug": "john-of-bithynia",
+  "display_name": "John of Bithynia",
+  "names": [
+    {
+      "form": "Иоанн Вифинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 июня ст. ст., name page 966, «Иоанн Вифинский, прп.», with the rank word left off. The line itself declines the name and gives it without the epithet («сына ее Иоанна»); the epithet is the name page's own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Прп. Анны (826) и сына ее Иоанна (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry, one line for a mother and her son, and he has his own name link, page 966, titled «Иоанн Вифинский, прп.» with «День памяти: 13 июня» and no other day — so the line names him and he is a folder of his own. HIS MOTHER IS ALREADY IN THE CORPUS AND IS NOT UPGRADED HERE: `anna-renamed-euphemianos` carries a venerated russian row on 29 октября whose feast note already records this June day, so nothing is owed on her row; the 29 October reader wrote that no folder was made for the son because that day's line named only her, and this day's line does name him. SHE IS NOT `anna-of-larissa`, whom the corpus keeps on this same menologion day from the Greek and Serbian books: that woman is an orphan of Larissa who fled to a desert island of the Adriatic and bore her son there, where this one is the daughter of a deacon of the Blachernae at Constantinople, a widow who took a man's habit under the name Евфимиан and died in 826 — two different stories under one menologion number, and the corpus already keeps the two Annas apart. The day page prints no hymn for either of them. Not checked: azbyka.ru."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 iunie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Ιουνίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 June 2026 (9 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "The day line sets the century against his name and the year 826 against his mother's: «Прп. Анны (826) и сына ее Иоанна (IX).». No year of his own is given anywhere the calendar prints, and none is inferred."
+    }
+  },
+  "related": [
+    "anna-renamed-euphemianos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

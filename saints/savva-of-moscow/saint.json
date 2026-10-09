@@ -1,0 +1,113 @@
+{
+  "slug": "savva-of-moscow",
+  "display_name": "Savva of Moscow",
+  "names": [
+    {
+      "form": "Савва Московский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 июня ст. ст., name page 1896, «Савва Московский, прп.», with the rank word left off. The line itself declines the name («Саввы»)."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Прпп. Андроника (1395), Саввы (XV), иконописцев Московских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, one line for two men, and the century XV stands against his name with no year; the year in the life page, «около 1410 г.», is where `dates` comes from. He is NOT `savva-of-storozhevsk`, who is the other disciple of Sergius of this name: that folder's feasts are 3 December and the 10 August finding of his relics, and its man was abbot of the Storozhi house at Zvenigorod, while this one succeeded his own teacher as abbot of the Spaso-Andronikov monastery at Moscow. Of the day page's four hymns three name him and are taken; the fourth, «Ин тропарь преподобного Андроника Московского», names his teacher alone and is not his. Not checked: azbyka.ru."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 iunie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Ιουνίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 June 2026 (9 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1410,
+      "latest": 1410,
+      "display": "about 1410",
+      "basis": "traditional",
+      "note": "His life page, life6815, closes «С миром отошел ко Господу около 1410 г.»; the day line gives only the century, «XV». The «около» is kept as `about`."
+    }
+  },
+  "related": [
+    "andronicus-of-moscow"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Плоды добродетелей на земли принесше,/ преподобнии отцы,/ в Небесных чертозех ныне благоухаете, яко райстии цвети,/ и лицем к лицу зрите Пресвятую Троицу,/ Юже дерзновенно молите/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Тропарь преподобных Андроника, Саввы и Александра Московских, Даниила Черного, Андрея Рублева»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having brought forth the fruits of the virtues upon earth, O venerable fathers, you now breathe a sweet fragrance in the chambers of heaven like the flowers of paradise, and you look upon the Most Holy Trinity face to face; pray to her with boldness that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "От юности своея, преподобнии отцы Андрониче и Савво, / в пустыни вселистеся Сергия великаго, / того житию последующе, / плоды смирения и послушания возрастили есте, / сего ради сподобившеся быти строители и первоначальники / обетныя обители святителя Алексия, / с нимже испросите у Христа Бога верным людем здравие и спасение / и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Ин тропарь преподобных Андроника и Саввы Московских»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From your youth, O venerable fathers Andronicus and Savva, you settled in the wilderness of the great Sergius and followed his manner of life, and you made the fruits of humility and of obedience to grow; and therefore you were counted worthy to be the builders and the first heads of the vowed monastery of the hierarch Alexis. Together with him ask of Christ God health and salvation for the faithful people, and great mercy for our souls.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Вас молим, преподобнии отцы наши,/ телом почивающий на земли,/ духом же Божию престолу предстоящий:/ молитеся о граде Москве/ и о всех, почитающих честную память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Кондак преподобных Андроника, Саввы и Александра Московских, Даниила Черного, Андрея Рублева»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "We entreat you, our venerable fathers, who rest in body upon the earth and in spirit stand before the throne of God: pray for the city of Moscow and for all who honour your precious memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

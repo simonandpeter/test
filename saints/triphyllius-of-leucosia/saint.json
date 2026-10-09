@@ -17,6 +17,11 @@
       "form": "Трифилије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 13. јун ст. ст., „Свети Трифилије, епископ Леквусије Кипарске“ — Свети is not a rank, and „епископ Леквусије Кипарске“ is the rank with its see, which `types`, `office` and the display name already carry between them; all of it comes off and the bare forename is left. `foldchk.py` holds no folder on «Трифилије», so there is no fold."
+    },
+    {
+      "form": "Трифиллий Левкусийский (Кипрский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 13 июня ст. ст., name page 2123, «Святитель Трифиллий Левкусийский (Кипрский), епископ», with the rank word Святитель and the office епископ left off. His life page spells the epithet differently, «Левкуссийский» with a double с; the name link's spelling is the one stored."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Свт. Трифиллия , еп. Левкусии Кипрской (ок. 370).»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's third entry, quoted with the space the page prints before its comma. The same menologion number this folder's romanian, greek and serbian rows already carry, so there is no second day and no note is owed. The line gives «ок. 370» and the life «около 370 года»; the folder already holds `death` 370 flat off doxologia and `dates` was NOT touched, although this book makes the year an approximation where doxologia states it. A DISAGREEMENT BETWEEN SOURCES IS RECORDED AND NOT RESOLVED: this life opens «родился в Константинополе», where saint.gr says his birthplace is nowhere recorded and infers Trimythous or Leucosia from his associations. No `locations` were written. Both of the day page's hymns under his name are taken: «Тропарь святителя Трифиллия» глас 4, which is THE COMMON OF A HIERARCH — «Правило веры и образ кротости» — with his name set in it, and «Кондак святителя Трифиллия» глас 8, which is proper to him and names Leucosia. life1296 was READ WHOLE. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",
@@ -113,6 +128,38 @@
         "text": "Having the zeal of faith, all-blessed one, you brought forth ripe fruits; for you put to shame the ranks of the enemies and slew Belial, O Triphyllios. Venerable father, entreat Christ our God to grant us his great mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему/ Яже вещей Истина./ Сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче Трифиллие,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Тропарь святителя Трифиллия»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of meekness, a teacher of abstinence, has the Truth of things shown you to your flock. Therefore have you gained by humility the things that are on high, and by poverty riches, O father Triphyllius. Entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Изрядством жития чистоту девства прием, Трифиллие,/ первопрестольник показался еси Левкусии/ и явился еси тем провозвеститель и богоразумия наставник./ Сего ради радостно взываем ти:// радуйся, святителей украшение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Кондак святителя Трифиллия»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the excellence of your life you received the purity of virginity, O Triphyllius, and you were shown to be the first to sit upon the throne of Leucosia, and so a herald to them and a teacher of the knowledge of God. Therefore we cry out to you with joy: rejoice, adornment of hierarchs.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
     }
   ]
 }
