@@ -16,6 +16,11 @@
       "form": "Февронија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 25. јун ст. ст., „Преподобна мученица Февронија“ — Преподобна and мученица are both rank words and §6 takes both off; the bare forename is what is left, and the heading gives her no place. The «of Sivapol» of the display name is the corpus’s own, off the city both other books name, and §10 reserves it. `foldchk.py` returns NO FOLDER HOLDS THIS FORM and `.tmp/sr-foldpred.mjs` returns no other holder of the gate’s folded key, **which is the measurement worth keeping on a day whose own list offered a second Fevronia**: `fevronia-of-murom` is kept on this very menologion number by the Romanian and Greek calendars and carries **no `sr` form at all**, so the fold that looked certain is a fold of none. No `READ_FOLDS` key is owed."
+    },
+    {
+      "form": "Феврония Сирская",
+      "lang": "ru",
+      "note": "Read out of the name link behind her place in days.pravoslavie.ru's line for 25 июня ст. ст., «Феврония Сирская, дева, прмц.» (name page 2697), with the rank and grade words left off. The epithet the link gives is «Сирская», the Syrian, where this folder's slug and its other three calendars call her of Sivapol; the line itself, «Прмц. Февронии девы (ок. 304).», gives the forename in the genitive and «девы» and no epithet at all."
     }
   ],
   "sex": "female",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion day this folder's Romanian, Greek and Serbian rows already carry, so there is no second day and no note of one is owed. Her life page life1392 heads «День памяти: 25 июня» and lists no other day. The day's line dates her «ок. 304», about 304, where this folder records 310 off the Охридски пролог and saint.gr dates the troop reaching the monastery to 288; the field was left as it stood and the three readings are now all on the page. The identification is the city: the Russian life has her brought up «в монастыре в городе Сиваполе (Ассирийская область)», which is the name in this folder's slug, with the same abbess Вриенна her aunt, the same Иерия, the same Лисимах, Селин and Прим, and the same death of the persecutor against a marble column. The day prints a second Феврония, the princess of Murom, and she is the corpus's other folder of the name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июня ст. ст. — «Прмц. Февронии девы (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260625.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -107,6 +122,38 @@
       },
       "english": {
         "text": "As a sweet-breathing rose of the ascetic life you breathed upon the world the fragrance of your contest, running with unchecked longing after the fragrance of the myrrh of Christ. Therefore the Lord gave you wonderful glory as virgin and venerable and martyr, Fevronia; intercede with him for those who cry to you: rejoice, honoured venerable-martyr.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Агница Твоя, Иисусе, Феврония/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою;/ но яко жертву непорочную приими мя,/ с любовию пожершуюся Тебе.// Тоя молитвами, яко Милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июня ст. ст. — «Тропарь преподобномученицы Февронии», глас 4. The common of a virgin-martyr with her own name set into it, «Агница Твоя, Иисусе, Феврония»; a common printed under one saint’s name is that saint’s service.",
+        "url": "https://days.pravoslavie.ru/Days/20260625.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb, O Jesus, Fevronia, crieth out with a great voice: Thee, my Bridegroom, do I love, and seeking Thee do I suffer; I am crucified with Thee and buried with Thee in Thy baptism, and I suffer for Thy sake, that I may reign in Thee; and I die for Thee, that I may live with Thee. But receive me as a spotless sacrifice, offered to Thee in love. By her prayers, as Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Женише мой, сладчайший Христе, -/ взываше Феврония, -/ не трудно ми тещи во след Тебе,/ ибо сладость любве Твоея душу мою надеждею впери/ и красота милости Твоея сердце мое услади/ испити чашу страданий по Тебе,/ да достойну мя в чертозе с мудрыми девами/ ликовствовати о Тебе сопричтеши./ Темже, преподобная страстотерпице,/ почитающе подвиги трудов твоих, молим тя:// моли не затворитися и нам чертога дверем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июня ст. ст. — «Кондак преподобномученицы Февронии», глас 6. Proper to her: it puts the words in her own mouth and names her, «взываше Феврония».",
+        "url": "https://days.pravoslavie.ru/Days/20260625.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "My Bridegroom, O sweetest Christ — so cried Fevronia — it is no hard thing for me to run after Thee: for the sweetness of Thy love hath winged my soul with hope, and the beauty of Thy mercy hath made it sweet to my heart to drink the cup of sufferings for Thy sake, that Thou mayest count me worthy to rejoice with the wise virgins in the bridal chamber. Therefore, venerable passion-bearer, honouring the struggles of thy labours, we pray thee: pray that the doors of the bridal chamber be not shut against us also.",
         "rendered": "site"
       }
     }

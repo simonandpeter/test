@@ -1,0 +1,51 @@
+{
+  "slug": "basil-militsyn",
+  "display_name": "Basil (Militsyn)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Милицын)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 25 июня ст. ст., «Василий (Милицын), иерей, сщмч.» (name page 13735), with the grade and rank words left off; the surname is part of the name and stays, and the parentheses are the calendar's own. The line itself, «Сщмч. Василия пресвитера (1918).», gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 25 июня» (page 13735) and carries no prose at all; the «26 января» is the synaxis of the new martyrs and confessors of Russia and is not a second feast. The day page prints two lines reading «Сщмч. Василия пресвитера» with nothing but the year to tell them apart, 1918 and 1940, and the two name links behind them give two surnames, «Милицын» and «Протопопов». No folder of this corpus held either surname before today (`grep -rl` on both, 9 October 2026), and no Basil folder folds onto either stored form."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июня ст. ст. — «Сщмч. Василия пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260625.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 8 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

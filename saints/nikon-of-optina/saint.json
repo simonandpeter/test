@@ -6,14 +6,29 @@
       "form": "Nicon de la Optina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Nicon de la Optina»."
+    },
+    {
+      "form": "Никон (Беляев) Оптинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 25 июня ст. ст., «Никон (Беляев) Оптинский, исповедник, прп.» (name page 6993), with the grade and rank words left off; the surname in parentheses is the calendar's own and stays. The line itself, «Прп. Никона Оптинского, исповедника (1931).», gives name and epithet and grade in the genitive and no surname."
     }
   ],
   "sex": "male",
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life4643 and his name page 6993 both head «Дни памяти: 26 января (Новомуч.) , 25 июня , 11 октября (Оптин.)». The first is the synaxis of the new martyrs and confessors of Russia and the third the synaxis of the Optina elders; neither is a second feast, and the day page that listed him is 25 июня, which the life gives as the day of his repose, «25 июня/8 июля 1931 года». That is the same menologion day this folder's Romanian row already carries off doxologia, which printed no life for him at all; the Russian page is a full life and it is where the dates in this folder now come from. The day page prints no hymn under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июня ст. ст. — «Прп. Никона Оптинского, исповедника (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260625.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -42,5 +57,26 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life page life4643: «родился 26 сентября 1888 года в Москве»."
+    },
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life page life4643: «В самый день его блаженной кончины, 25 июня/8 июля 1931 года, он причастился»; the day line gives the year as (1931). The folder held no date of any kind until today, doxologia.ro having printed no life for him."
+    }
   }
 }

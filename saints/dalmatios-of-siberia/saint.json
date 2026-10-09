@@ -6,6 +6,11 @@
       "form": "Δαλμάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Όσιος Δαλμάτιος ο εκ Σιβηρίας», with the rank words left off. The page gives the name in the world separately, «κατά κόσμο Δημήτριος Ιβάνοβιτς Μοκρίνσκιϋ», which is a Greek rendering of a Russian name and is not taken as a name form here."
+    },
+    {
+      "form": "Далмат Исетский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 25 июня ст. ст., «Далмат Исетский, прп.» (name page 14722), with the rank word left off. The epithet is the river Исеть, where the Greek line that made this folder has only «ο εκ Σιβηρίας»; the line itself, «Прп. Далмата Исетского (1697).», gives both name and epithet in the genitive."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "julian",
+        "note": "**The identification is read and not reasoned: the name in the world.** This folder's own life, written off saint.gr, says he «was called Demetrius Ivanovich Mokrinsky in the world», was born at Tobolsk, lived as an ascetic in the monastery of Nevyansk in Siberia and has his relics at Kurgan. The article the Russian calendar's own name page 14722 links, Владимир Басенков's «Преподобный Далмат Исетский» at pravoslavie.ru/132437.html, read today, says he was «в Крещении Дмитрий», the son of the Cossack ataman «Иван Мокринский», that he was tonsured «в Невьянском монастыре с именем Далмат» in 1642, and that his monastery stands «в Курганской области». The surname, the monastery of tonsure and the place of the relics are three uncommon proper names agreeing, and the name in the world is the one that settles it. **The years do not agree and neither was preferred.** The day's line and the article both give 1697 for his repose, the article adding that he was born in 1594 and lived more than a hundred years; saint.gr gives 1724, which is what this folder's `dates` records, basis `attested`. The field was left as it stood and both readings are now on the page; which is right is the author's. His name page heads «Дни памяти: 10 июня (Сибир.) , 25 июня , 24 июля (обретение мощей)»: the first is the synaxis of the Siberian saints, the third a finding of relics, and the day page that listed him is 25 июня. The day page prints no hymn under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июня ст. ст. — «Прп. Далмата Исетского (1697).»",
+        "url": "https://days.pravoslavie.ru/Days/20260625.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
