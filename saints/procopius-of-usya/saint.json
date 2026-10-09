@@ -10,13 +10,28 @@
       "form": "Προκόπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιουλίου, «Άγιος Προκόπιος του Ούσια Βόλογκντα», with the rank word and the place left off."
+    },
+    {
+      "form": "Прокопий Устьянский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1846, «Праведный Прокопий Устьянский», with the rank word «Праведный» at the head left off. `fk.mjs` returns no other holder."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Прав. Прокопия Устьянского (XVII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and this folder’s man: the same menologion day its Greek row already keeps, the same epithet of the Usya. THE FOLDER’S FIRST DATE OF ANY KIND IS STILL NOT WRITTEN: `dates` is null, saint.gr having given him none, and this line gives «(XVII)», the seventeenth century — a century and not a year, and the question whether the folder should take it is in the report rather than answered here, since `upgrade.py` would replace the whole field and no reader of this block has been told to write a first date on a Roman numeral. `types` UNCHANGED — the line and the name page both grade him «Прав.»/«Праведный», righteous, where the folder holds `fool-for-christ` off saint.gr, and neither was removed nor added. THE READING id1846 WAS NOT OPENED. Name page 1846 heads him «Праведный Прокопий Устьянский» and lists «День памяти: 8 июля» and no other day. Two hymns taken, both headed with his epithet. Both turn on the FINDING of his relics rather than on a life — «чтим честных мощей твоих явление», we honour the appearing of thy honourable relics, and «твое честное явление празднующих» — and the troparion is the common of a wonderworker with his name set into it, which is his service and is copied whole. The folder’s first hymns of any kind. THREE DIFFERENT PROCOPII STAND ON THIS ONE DAY and the corpus already held all three: the great-martyr of Caesarea in Palestine (303), the fool-for-Christ of Veliky Ustyug (1303) and the righteous one of Usya (XVII). Each has a name page of its own — 1844, 1847, 1846 — each listing «День памяти: 8 июля» and no other day, and the hymn headings on the day page keep them apart by the same epithets. No row was written on a bare forename anywhere here. THE DAY IS MOSTLY ICONS AND ALL OF THEM ARE LEFT OUT: the appearing of the Kazan icon at Kazan in 1579, the sign from the Annunciation icon at Ustyug in 1290, the Jacobstadt icon, and one line that lists FIFTEEN honoured copies of the Kazan icon by city and year with a name link and a reading behind each. Five of the day’s eight entries are that, and none of them is a folder; their hymns — two for the Kazan icon with a величание, one for the Tambov copy and one for the Ustyug Annunciation — were not copied."
     },
     {
       "church": "romanian",
@@ -49,5 +64,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Божественною благодатию просветився,/ и по смерти даруеши исцеления/ притекающим к тебе, премудре Прокопие,/ темже и мы ныне чтим честных мощей твоих явление,/ веселящее вкупе души и телеса./ Тем вси вопием:/ слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Тропарь праведного Прокопия Устьянского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine grace, after death also thou grantest healings to those who run to thee, O most wise Procopius; wherefore we now honour the appearing of thy honourable relics, which gladdens souls and bodies together. Therefore we all cry out: glory to Him that gave thee strength; glory to Him that crowned thee; glory to Him that worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Верою и любовию/ твое честное явление празднующих, блаженне,/ сохрани и соблюди от веяния злобы и соблазна змиина,/ имаши бо дерзновение ко Владыце всех, Христу Богу./ Егоже моли спасти православныя люди,/ молящия тя, да вси вопием ти:/ радуйся, отче Прокопие,/ всея Российский земли удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Кондак праведного Прокопия Устьянского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guard and keep those who with faith and love keep the feast of thy honourable appearing, O blessed one, from the breath of malice and from the serpent's snare; for thou hast boldness before Christ God, the Master of all. Pray Him to save the Orthodox people who pray to thee, that we may all cry out to thee: rejoice, O father Procopius, adornment of the whole Russian land.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

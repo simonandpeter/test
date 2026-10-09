@@ -1,0 +1,65 @@
+{
+  "slug": "theodore-raspolov",
+  "display_name": "Theodore (Raspolov)",
+  "names": [
+    {
+      "form": "Феодор (Располов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13744, «Феодор (Располов), иерей, сщмч.», with the two rank words after the comma left off. The day line gives only the bare forename in the genitive, so the surname is the name link’s and is stored with it. `fk.mjs` returns no holder for the folded form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line prints for the pair, «(1918)». No year of birth, no age and no place is given on either the day page or the name page, and no life page exists."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Сщмчч. Феодора и Николая пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. TWO NAMES, SO TWO FOLDERS, and the corpus held neither. THE CALENDAR GIVES NO LIFE: the line links to the two names and to no reading, and name page 13744 prints the heading, «Дни памяти: 26 января (Новомуч.) , 8 июля» and nothing else. `new-martyr` rests on the 26 января synaxis the page itself labels «(Новомуч.)» standing beside this day, which is his own, together with «sщмч.» grading him a martyr on both line and page; THE 26 ЯНВАРЯ DAY PAGE WAS NOT OPENED, nor the other days his page lists. `office` is «Priest», the page’s «иерей», which is one of the words the four locale packs carry. A `related` row to the other priest of the line WAS NOT WRITTEN AS AN IDENTIFICATION of anything beyond that: the two share a line and a year and the calendar says nothing else of either, and sharing a day is not a relation — but each life names the other and links it, so the row is owed by `life-links` and is written for that reason and recorded here as such. No hymn on the day page stands under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 21 iulie, the civil day of this Julian 8 July (9 October 2026); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 21 Ιουλίου, the civil day of this Julian 8 July (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 July 2026, the civil day of this Julian 8 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "nicholas-bryantsev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
