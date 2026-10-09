@@ -37,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's romanian and greek rows carry. The day line marks the entry «(Рум.)», a Romanian commemoration the Russian calendar keeps, names him metropolitan of Wallachia and dates him 1834, which is the year this folder already records. days.pravoslavie.ru gives him NO life page: his name page 14467 is headed with the bare forename «Григорий», shows one icon and carries no prose. NO ru NAME FORM WAS WRITTEN — the bare «Григорий» already has holders in this corpus, and storing it would widen a fold for a word that tells nobody apart. The icon was not opened."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Свт. Григория , митр. Валашского (1834) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

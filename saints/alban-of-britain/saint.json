@@ -15,6 +15,11 @@
       "form": "Αλβανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Ιουνίου, «Άγιος Αλβανός πρωτομάρτυς Βρεταννίας», with the rank word and the country left off. The page prints the Latin form «Alban» beside it in brackets."
+    },
+    {
+      "form": "Албан Британский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 22 июня ст. ст., whose whole string is «Албан Первомученик Британский, мч.» (name page 14768). The trailing grade word and the grade word «Первомученик», protomartyr, standing inside the string were both left off, the row being stored bare of rank; the whole string is recorded here because dropping a word from the middle of a name is a reading and not a rule."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not on the Moscow Patriarchate’s list for 23 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The menologion number this folder's romanian row also carries; its greek row stands on 17 June and its serbian on 23 August, and those are those calendars' own days for him and not further Russian feasts. days.pravoslavie.ru gives him NO life page: his name page 14768 heads «День памяти: 22 июня» and under «Статья на Православие.Ru» offers a link to a site essay with four sentences of its opening, which is an essay on this site and not the calendar's own life page and was not opened. So this upgrade is a row and a name form. The day line dates him «(III - нач. IV вв.)», the third to the beginning of the fourth century, which is inside the interval this folder already records; the dates were left as they stood."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Мч. Албана Британского (III - нач. IV вв.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

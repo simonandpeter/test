@@ -1,0 +1,60 @@
+{
+  "slug": "theodore-smirnov-22-june",
+  "display_name": "Theodore (Smirnov, 22 June)",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Феодор (Смирнов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 22 июня ст. ст., «Феодор (Смирнов), диакон, сщмч.» (name page 14466), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Сщмчч. Феодора и Гавриила диаконов (1938).», gives the forenames in the genitive and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 22 июня ст. ст.: «Сщмчч. Феодора и Гавриила диаконов (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 22 июня» (page 14466) and carries no prose at all; the «26 января» is the synaxis of the new martyrs and is not a second feast, so this folder renders on 22 июня ст. ст. only. The corpus already holds `theodore-of-penza`, whose stored Russian form folds onto the same key: that man is bishop of Penza, named with his companions on the Russian 22 августа ст. ст. under the year 1937 in the line «Сщмчч. Феодора, еп. Пензенского и с ним Василия и Гавриила пресвитеров (1937)», and that folder cites no name page of this calendar. This man is a DEACON, dated 1938, on a day two months earlier, and his own page lists 22 июня and nothing else. The two surnames of this day's line are the same two that stand in that Penza line, which is the one thing about this pair that could be a coincidence and could not be settled here; azbyka.ru was not read."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Сщмчч. Феодора и Гавриила диаконов (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 5 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
