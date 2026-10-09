@@ -1,0 +1,129 @@
+{
+  "slug": "andronicus-of-moscow",
+  "display_name": "Andronicus of Moscow",
+  "names": [
+    {
+      "form": "Андроник Московский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 июня ст. ст., name page 195, «Андроник Московский, игумен», with the office word left off. The line itself declines the name («Андроника») and gives no epithet of its own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Прпп. Андроника (1395), Саввы (XV), иконописцев Московских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, one line for two men called icon painters of Moscow, and the year 1395 stands against his name. The corpus keeps no other folder for him: seven Andronicus folders exist and none is an abbot of Moscow, and the only places the Spaso-Andronikov monastery is named in the corpus are the lives of `andrei-rublev` and `serapion-of-novgorod`, neither of which is this man. The calendar prints NO LIFE PAGE for him — his name link, page 195, carries the heading, «День памяти: 13 июня» and nothing else — so the only connected words the source gives about him are the day page's four hymns and the opening sentence of his disciple's life page. All four hymns name him and all four are taken: the joint troparion and kontakion of five men («Андроника, Саввы и Александра Московских, Даниила Черного, Андрея Рублева»), the joint troparion of the two of them, and one troparion under his name alone. Not checked: azbyka.ru."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 iunie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Ιουνίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 June 2026 (9 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1395,
+      "latest": 1395,
+      "display": "1395",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 13 июня ст. ст.: «Прпп. Андроника (1395), Саввы (XV), иконописцев Московских.». The year stands against his name and the century against his disciple's."
+    }
+  },
+  "related": [
+    "savva-of-moscow"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Плоды добродетелей на земли принесше,/ преподобнии отцы,/ в Небесных чертозех ныне благоухаете, яко райстии цвети,/ и лицем к лицу зрите Пресвятую Троицу,/ Юже дерзновенно молите/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Тропарь преподобных Андроника, Саввы и Александра Московских, Даниила Черного, Андрея Рублева»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having brought forth the fruits of the virtues upon earth, O venerable fathers, you now breathe a sweet fragrance in the chambers of heaven like the flowers of paradise, and you look upon the Most Holy Trinity face to face; pray to her with boldness that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "От юности своея, преподобнии отцы Андрониче и Савво, / в пустыни вселистеся Сергия великаго, / того житию последующе, / плоды смирения и послушания возрастили есте, / сего ради сподобившеся быти строители и первоначальники / обетныя обители святителя Алексия, / с нимже испросите у Христа Бога верным людем здравие и спасение / и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Ин тропарь преподобных Андроника и Саввы Московских»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From your youth, O venerable fathers Andronicus and Savva, you settled in the wilderness of the great Sergius and followed his manner of life, and you made the fruits of humility and of obedience to grow; and therefore you were counted worthy to be the builders and the first heads of the vowed monastery of the hierarch Alexis. Together with him ask of Christ God health and salvation for the faithful people, and great mercy for our souls.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Безмолвие от юности возлюбив,/ на гору Маковец пришел еси, Андрониче блаженне,/ обитель общаго жития устроил еси в земнем граде Москве,/ во обители Небеснаго града ныне ликовствуеши,/ молися Христу Богу/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Ин тропарь преподобного Андроника Московского»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved stillness from your youth, you came to the hill of Makovets, O blessed Andronicus, and you set up a monastery of the common life in the earthly city of Moscow; and now you keep festival in the dwellings of the heavenly city. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 1"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Вас молим, преподобнии отцы наши,/ телом почивающий на земли,/ духом же Божию престолу предстоящий:/ молитеся о граде Москве/ и о всех, почитающих честную память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Кондак преподобных Андроника, Саввы и Александра Московских, Даниила Черного, Андрея Рублева»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "We entreat you, our venerable fathers, who rest in body upon the earth and in spirit stand before the throne of God: pray for the city of Moscow and for all who honour your precious memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -16,6 +16,11 @@
       "form": "Аквилина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 13. јун ст. ст., „Света мученица Аквилина“ — Света is not a rank and мученица is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. `foldchk.py` holds no folder on «Аквилина», so there is no fold."
+    },
+    {
+      "form": "Акилина Старшая, Библская (Финикийская)",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 13 июня ст. ст., name page 2375, «Акилина Старшая, Библская (Финикийская), мц.», with the rank word left off. Старшая, the elder, is kept because it is what the calendar uses to tell her from the other Aquilina; the line itself gives the forename alone and in the genitive."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Мц. Акилины (293).»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's first entry. The same menologion number this folder's romanian, greek and serbian rows already carry, so there is no second day and no note is owed. The line gives 293, the year the folder already holds off the Охридски пролог, and the Russian life repeats it in words, «(+ 293)»; `dates` was not touched. Her life page, life1294, was READ WHOLE and tells the passion the folder already holds from three books; the one thing it adds is the translation of her relics to Constantinople into a church built in her honour, which is the new paragraph. Two of the day page's eight hymns are taken: «Тропарь мученицы Акилины» глас 4, which is THE COMMON OF A WOMAN MARTYR with her name set in it — the folder already holds the same common in Romanian from doxologia and this is the Slavonic of it — and «Кондак мученицы Акилины» глас 2, which is proper to her. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",
@@ -124,6 +139,38 @@
         "text": "You, O virgin Aquilina, hallowed by the sprinkling of your own blood and crowned with the martyrs' garlands, your bridegroom Christ, who wells up eternal life, has given for healing and salvation to those hard pressed by sickness who run to you in faith.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Агница Твоя, Иисусе, Акилина/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою,/ но яко жертву непорочную приими мя,/ с любовию пожершуюся Тебе.// Тоя молитвами, яко Милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Тропарь мученицы Акилины»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your lamb, O Jesus, Aquilina, cries out with a loud voice: you, my Bridegroom, do I love, and seeking you I suffer, and I am crucified with you and buried with you in your baptism; and I suffer for your sake, that I may reign in you, and I die for you, that I may live with you. Receive me then as a sacrifice without blemish, who with love have offered myself to you. At her prayers, as you are merciful, save our souls.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Девства твоего добротами предочистивши душу твою,/ на высоту мучением востекла еси,/ Акилино всечестная,/ любовию Жениха твоего Христа уязвившися,/ Емуже со Ангелы предстоиши, веселящися,// с нимиже не престай моляся о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Кондак мученицы Акилины»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having cleansed your soul beforehand with the beauties of your virginity, you ascended to the height by martyrdom, O all-honoured Aquilina, wounded with love for Christ your Bridegroom, before whom you stand with the angels and rejoice; cease not to pray together with them for us all.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
     }
   ],
   "text": {

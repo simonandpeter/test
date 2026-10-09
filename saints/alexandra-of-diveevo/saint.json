@@ -11,6 +11,11 @@
       "form": "Αλεξάνδρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιουνίου, «Οσία Αλεξάνδρα Ηγουμένη και θεμελιώτρια της Μονής Ντιβέεβο», with the rank word and the office left off."
+    },
+    {
+      "form": "Александра (Мельгунова) Дивеевская",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 13 июня ст. ст., name page 14272, «Александра (Мельгунова) Дивеевская, прп.», with the rank word left off. The surname in brackets is part of the name the calendar's own link gives and is kept; the line itself gives the forename and the epithet only, and in the genitive."
     }
   ],
   "sex": "female",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июня ст. ст. — «Прп. Александры Дивеевской (1789).»",
+        "url": "https://days.pravoslavie.ru/Days/20260613.html",
+        "year": 2026
+      },
+      "note": "The day's second entry. The same menologion number this folder's romanian and greek rows already carry, so there is no second day and no note is owed. The line gives 1789, the year the folder already holds off doxologia's life; `dates` was not touched. THE CALENDAR PRINTS NO LIFE PAGE for her — her name link, page 14272, has no Житие beside it — AND NO HYMN UNDER HER NAME. Four hymns on this day name an «Александр»: they are the joint troparion and kontakion of the five icon painters of Moscow, and that Alexander is one of those men and NOT this woman; none of the four is recorded here. This upgrade adds the day and the `ru` name form only. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",
