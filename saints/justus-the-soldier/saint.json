@@ -11,6 +11,11 @@
       "form": "Ιούστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιος Ιούστος», with the rank word left off."
+    },
+    {
+      "form": "Иуст Римский",
+      "lang": "ru",
+      "note": "Name page 1150 of days.pravoslavie.ru is «Иуст Римский, мч.»; the rank is stripped. The day line declines him as «Иуста» with no epithet at all, so the name page is where «Римский» is read."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Мч. Иуста (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's second entry and the same menologion day as the folder's Romanian and Greek rows. The identification is the Roman soldier and the name of the official: this reading, life4237, has «Святой мученик Иуст был римским воином-язычником», a vision of the Life-giving Cross, the giving away of his property, and his arrest «по приказу сановника Магнезия» — and the folder was written off doxologia.ro's «ostaș roman în armata tribunului Claudiu pe vremea împăratului Magnențiu». The same soldier, the same name in the same place in the story. THE CENTURIES CANNOT BOTH BE RIGHT AND `dates` IS UNCHANGED: this line and this reading both close «(I в.)», the first century, where the folder holds 350–353, which is the reign doxologia named. The Russian reading also makes Magnesius an official rather than an emperor. Both disagreements are recorded and neither is resolved. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

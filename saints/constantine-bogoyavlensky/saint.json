@@ -1,0 +1,61 @@
+{
+  "slug": "constantine-bogoyavlensky",
+  "display_name": "Constantine (Bogoyavlensky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Константин (Богоявленский)",
+      "lang": "ru",
+      "note": "Name page 13749 of days.pravoslavie.ru is «Константин (Богоявленский), иерей, сщмч.»; the grade «иерей» and the rank are stripped and the surname kept, as BRIEF-RUSSIAN asks, the day line itself giving only «Константина пресвитера». `fk.mjs` on the stored string returns NONE: the corpus keeps six Bogoyavlensky folders and no Constantine among them."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The day line closes «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Сщмч. Константина пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page behind it. «иерей» on the name page is the priestly grade and «пресвитера» on the line the same word, so `presbyter` and the office `Priest` are read and not assumed; `Priest` is a string the four locale packs already carry. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE OF THE NEW MARTYRS WAS NOT OPENED. No folder held him. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 27 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 27 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 July 2026 (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

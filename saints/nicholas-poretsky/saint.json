@@ -1,0 +1,61 @@
+{
+  "slug": "nicholas-poretsky",
+  "display_name": "Nicholas (Poretsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Николай (Порецкий)",
+      "lang": "ru",
+      "note": "Name page 14292 of days.pravoslavie.ru is «Николай (Порецкий), протоиерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Николая пресвитера». `fk.mjs` on the stored string returns NONE and no folder in this corpus carries «Порецкий» in any form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "The day line closes «(1933)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Сщмч. Николая пресвитера (1933).»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's ninth and last entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page behind it. THE TWO HALVES OF THE SOURCE GRADE HIM DIFFERENTLY: the line says «пресвитера», presbyter, and the name page «протоиерей», archpriest. `presbyter` and the office `Priest` are taken, those being the words the locale packs carry; «протоиерей» is recorded here and nowhere else, an `office` string absent from the four packs being a translation a reader may not invent. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 27 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 27 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 July 2026 (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

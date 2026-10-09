@@ -1,0 +1,49 @@
+{
+  "slug": "john-of-merv",
+  "display_name": "John of Merv",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Иоанн Мервский",
+      "lang": "ru",
+      "note": "Name page 10110 of days.pravoslavie.ru is «Иоанн Мервский, мч.»; the rank is stripped. The day line declines him as «Иоанна Мервского» and gives nothing else."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Мч. Иоанна Мервского.»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry, and THE LINE IS ALL THERE IS: «Мч. Иоанна Мервского.» with no year, no life page behind it and no reading anywhere on the site that the day page links. Name page 10110 repeats the heading and nothing more. NO `dates`: the line gives no year and no century, and Merv, the city in what is now Turkmenistan, dates nobody by itself. No folder held him — `fk.mjs` on «Иоанн Мервский» returns NONE and no folder in this corpus carries «Мервский» in any form. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 27 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 27 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 July 2026 (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
