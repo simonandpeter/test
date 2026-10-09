@@ -16,6 +16,11 @@
       "form": "Јован Иверски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, which is not a rank but the epithet \"the Iberian\" that the heading sets after all four names and that the entry's first sentence confirms belongs to all four, they being the founders of the Iberian monastery. **Reading it as distributing over the four is this day's naming decision, and the alternative was measured**: bare forenames would have put «Јован» into a fold of **eight** folders, «Јевтимије» into one with `euthymius-of-dimitsana` and «Георгије» into one with `george-of-mytilene`, where all four kept forms fold with nothing at all. The Romanian forms on these folders already carry the epithet — «Ioan Ivirul», «Eftimie Ivirul», «Gheorghe Ivirul», «Gavriil Ivirul» — where the Greek ones do not, so the fuller reading is the one two calendars support. BRIEF-SERBIAN.md §6's \"one form, the fullest\" decides it. Athanasius's lavra and the 998 are in the body."
+    },
+    {
+      "form": "Иоанн Святогорец, Иверский (Афонский)",
+      "lang": "ru",
+      "note": "Name page 1013 is «Иоанн Святогорец, Иверский (Афонский), прп.»; the rank is stripped and the rest kept whole, parentheses and all. The day line declines the two of them together as «Иоанна … и Гавриила … Святогорцев»."
     }
   ],
   "sex": "male",
@@ -33,17 +38,27 @@
   "dates": {
     "death": {
       "earliest": 998,
-      "latest": 1003,
-      "display": "998–1003",
+      "latest": 998,
+      "display": "998",
       "basis": "traditional",
-      "note": "doxologia.ro's life, as the folder's own life has it: «He fell asleep in peace between the years 998 and 1003.»"
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 13 May: „Упокојио се 998. године.“ Neither doxologia.ro's line for 13 mai nor saint.gr's gave him any year, although the same two pages dated his companions — Euthymius 1028, George 1066, Gabriel 1028 — and this book agrees exactly with the first two of those three. No birth is printed."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Прпп. Иоанна (998) (Груз.) и Гавриила (X) (Груз.) Святогорцев.»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry, two Georgians on one line and both folders already held. Name page 1013 is «Иоанн Святогорец, Иверский (Афонский), прп.» and the reading life6627 identifies him beyond doubt: father of Euthymius the New of Athos, founder and abbot of the Iviron house on Athos, reposed 14 January 998 — the 998 this folder already carries, off the Ohrid Prologue, and the Euthymius its `related` already names. The folder's other three rows stand on the Julian 13 May with the other founders; this row stands on the 12 July the day page gives, one row per church and nothing moved. `dates` unchanged. The reading adds a day, 14 January, which this day page does not repeat; it is recorded here and not made a feast. No hymn on the day page under his name."
     },
     {
       "church": "romanian",
@@ -92,14 +107,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 998,
-      "latest": 998,
-      "display": "998",
-      "basis": "traditional",
-      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 13 May: „Упокојио се 998. године.“ Neither doxologia.ro's line for 13 mai nor saint.gr's gave him any year, although the same two pages dated his companions — Euthymius 1028, George 1066, Gabriel 1028 — and this book agrees exactly with the first two of those three. No birth is printed."
-    }
   }
 }
