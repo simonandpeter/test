@@ -16,6 +16,11 @@
       "form": "Јован",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 21. јул ст. ст., „Преп. Симеон и Јован.“ — «Преп.» is the rank word and is left off by §6, and the heading is one rank over TWO BARE FORENAMES with no see, no city and no by-name among them, so there is nothing on the page to break a fold with and the bare forename is the whole of the form. The companionship this corpus keeps in the English display name is no part of what the book calls him. The form is the nominative the heading itself prints; the body prints it again. **The fold this makes is read in this batch’s commit message**, and it is the deeper of the day’s two for Simeon."
+    },
+    {
+      "form": "Иоанн Палестинский",
+      "lang": "ru",
+      "note": "Name page 998 of days.pravoslavie.ru is «Иоанн Палестинский, прп.»: the rank is stripped and the province kept, the bare forename being the string ninety-eight folders of this corpus already fold onto. `fk.mjs` on the stored string returns `john-son-of-cleopatra` and `john-with-minas-and-david`, which is the read key `иоанн палестинский` of two holders; this form makes it three and the key was rewritten at that width."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Прпп. Симеона , Христа ради юродивого, и Иоанна , спостника его (ок. 590).»",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "note": "The day's second entry, the second half of a line shared with Simeon, and the same menologion day as the folder's Romanian, Greek and Serbian rows. «Прпп.» is the `venerable` the folder's `types` already carry and «спостника его», his fellow-faster, is what the display name already says. `dates` UNCHANGED and the conflict is Simeon's: this line gives «ок. 590» against the folder's «c. 518» off saint.gr, and nothing read reconciles them. THE CALENDAR GIVES AN EPITHET THE DISPLAY NAME DOES NOT CARRY, «Палестинский», and the folder was not renamed. The reading life4282 was NOT opened. TWO HYMNS TAKEN, both joint with Simeon and stored in both folders, the troparion being the common of venerable fathers. THE RUSSIAN FORM WIDENS A READ FOLD FROM TWO HOLDERS TO THREE and the key in `scripts/corpus-gate.mjs` was replaced at the wider width in the same commit, the narrower key's reading carried forward inside it."
     },
     {
       "church": "romanian",
@@ -141,6 +156,38 @@
       },
       "english": {
         "text": "Having finished your life in piety and in faith, and been shown pure vessels of the Trinity, Simeon and John, God-bearers of all praise, ask now that forgiveness and peace be sent down richly upon our souls, all-blessed fathers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Тропарь преподобных Симеона и Иоанна», глас 4 — the common of venerable fathers, printed whole under the two names and naming neither",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to Thy gentleness, withdraw not Thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Во плоти явльшася безплотнаго и добродетельми премирно просиявшаго,/ Симеона равноангельнаго и богоноснаго восхвалим,/ с нимже Иоанна приснопамятнаго, верою и любовию,// яко молящияся Господу непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Кондак преподобных Симеона и Иоанна», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise with faith and love Simeon the God-bearer, equal to the angels, who appeared in the flesh as one bodiless and shone with virtues above the world, and with him John of ever-blessed memory, for they pray unceasingly to the Lord for us all.",
         "rendered": "site"
       }
     }
