@@ -7,6 +7,11 @@
       "form": "Moise",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 iunie, «Sfântul Cuvios Moise de la Optina»."
+    },
+    {
+      "form": "Моисей Оптинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 16 июня ст. ст., «Моисей Оптинский, прп.», with the rank word and the grade word left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder’s other venerated row or rows already carry, so there is no second day. The day page prints NO hymn under his name, and his life page life4641 was NOT opened: the row rests on the day line, which dates him 1862, and on the name link behind it, which gives him the venerable’s grade this folder already carries."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июня ст. ст. — «Прп. Моисея Оптинского (1862).»",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

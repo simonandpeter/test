@@ -1,0 +1,9 @@
+# Mstislav the Brave of Novgorod
+
+days.pravoslavie.ru’s calendar names him on 14 июня ст. ст. and the line is the whole of its prose about him: «Блгв. кн. Мстислава Храброго, во св. Крещении Георгия, Новгородского (1180).» It gives the forename in the genitive, the class «благоверный князь», the epithet Храбрый, the name Георгий he was given in holy baptism, the city Новгород and the year 1180. The name link behind his place in the line supplies the calendar’s own nominative, «Мстислав (в крещении Георгий) Храбрый, Новгородский, князь», and that page heads «День памяти: 14 июня» and carries no text at all. There is no life page for him anywhere on this calendar.
+
+What the calendar does carry under his name is a troparion and a kontakion, and they are the only connected sentences the source has about him. The troparion says that from his youth he was shown to be a vessel chosen of God, that he was reared in piety and kept the faith undefiled, and it asks him to pray that the Russian land be kept. The kontakion says that he lived most wisely in his princedom in the great city of Novgorod, that he was an ever-blossoming good fruit unto God, that he received life eternal, that his body was glorified with incorruption on earth, and that those who pray to him stand before his icon. Those are the hymns’ words and not a life, and nothing beyond them is asserted here.
+
+Of what a reader would want next the calendar says nothing: no parents, no reign, no battle, no death-place and no age. Nothing here is reasoned from the epithet or from the year.
+
+*After the Православный церковный календарь of the Сретенский monastery for 14 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260614.html) and [his name page](https://days.pravoslavie.ru/name/1581.html); read 9 October 2026.*

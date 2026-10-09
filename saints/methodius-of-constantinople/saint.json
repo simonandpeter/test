@@ -17,6 +17,11 @@
       "form": "Методије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 14. јун ст. ст., „Свети Методије, патријарх цариградски“ — Свети is not a rank and „патријарх цариградски“ is the rank with its see, which `types`, `office` and the display name already carry between them; all of it comes off and the bare forename is left. **The fold is deliberate**: `foldchk.py` returns `methodius-of-moravia`, `sr`, for «Методије», so this is the second folder on the string. The heading offers nothing fuller than the see, which §6 takes off, so there is nothing left to break the fold with; the two are told apart by their sees and their days."
+    },
+    {
+      "form": "Мефодий Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 14 июня ст. ст., «Святитель Мефодий Константинопольский, патриарх» (name page 1524), with the rank word and the grade word left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder’s romanian, greek and serbian rows already carry, so there is no second day. His life page heads «День памяти: 14 июня» and names no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июня ст. ст. — «Свт. Мефодия , патриарха Константинопольского (846).»",
+        "url": "https://days.pravoslavie.ru/Days/20260614.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -133,6 +148,38 @@
       },
       "english": {
         "text": "Having lit up the Church with the dogmas of true religion, you drove off the mist of the heresies, O hierophant Methodius, preaching to all that Christ is to be depicted.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему/ Яже вещей Истина./ Сего ради стяжал еси смирением высокая,/ нищетою богатая,/ святителю Мефодие,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Мефодия», глас 4, under «Молитвы» on the day page for 14 июня ст. ст.. It is the common of a hierarch, printed under his name with his name in the vocative, «святителю Мефодие», and is therefore his own service.",
+        "url": "https://days.pravoslavie.ru/Days/20260614.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things hath revealed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore hast thou attained the heights by humility, and riches by poverty. O hierarch Methodius, pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "На земли подвизался еси, яко безплотный,/ и Небеса наследовал еси, Мефодие,/ яко изъяснивый в концех икон поклонение,/ в трудех бо и болезнех вящше пребыв,/ не престал еси дерзновением,// обличая отметающияся иконы Христовы.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Мефодия», глас 2, under «Молитвы» on the day page for 14 июня ст. ст.. It names him in the vocative, «Мефодие», and names the deed that is his own — the setting forth of the veneration of the icons — so it is his proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260614.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst struggle upon earth as one bodiless, and hast inherited the heavens, O Methodius, for thou didst set forth to the ends of the earth the veneration of the icons; abiding the more in labours and in sicknesses, thou didst not cease from rebuking boldly them that cast away the icon of Christ.",
         "rendered": "site"
       }
     }

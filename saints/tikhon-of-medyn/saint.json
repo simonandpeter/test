@@ -1,0 +1,94 @@
+{
+  "slug": "tikhon-of-medyn",
+  "display_name": "Tikhon of Medyn",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Тихон Медынский, Калужский",
+      "lang": "ru",
+      "note": "Read out of the title of his second life page, «Преподобный Тихон Медынский, Калужский и преподобный Никифор Калужский» (life1325), which is the fullest nominative the calendar gives him, with the rank word left off. The name link on the day page has «Преподобный Тихон, Калужский чудотворец», which carries less of the name and a rank word besides; the day line itself gives the name in the genitive, «Тихона Медынского, Калужского»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "traditional",
+      "note": "The year the day line ends with, «Прп. Тихона Медынского, Калужского (1492).», and which his second life page states in words: «скончался в 1492 году, приняв великую схиму». The fuller reading places him in the fifteenth century and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His fuller life page heads «День памяти: 16 июня» and names no other day. The all-Russian celebration of his memory was established at the council of 1584, which both readings state. The corpus holds no other folder whose stored forms carry Медынский, and the three other Tikhon folders of this corpus stand on other days."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июня ст. ст. — «Прп. Тихона Медынского, Калужского (1492).»",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 29 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко светильник пресветлый,/ явился еси в Российстей земли,/ преподобне отче наш Тихоне,/ в пустыни вселився,/ в нейже преходя жестокое жительство,/ яко безплотен, пожил еси,/ сего ради и чудес дарованием обогати тя Бог./ Тем и мы, притекающе к мощем твоим, умильно глаголем:/ отче преподобне,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Тихона Калужского», глас 4, under «Молитвы» on the day page for 16 июня ст. ст.. It names him in the vocative, «преподобне отче наш Тихоне», and names the relics the monastery keeps, so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most radiant lamp wast thou shown forth in the Russian land, O our venerable father Tikhon. Thou didst go to dwell in the wilderness, and passing there a hard manner of life thou didst live as one bodiless; and for this God enriched thee with the gift of wonders. Wherefore we also, running to thy relics, say with compunction: O venerable father, pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Отечества удалився, преподобне,/ в пустыню вселился еси,/ идеже жестокое житие твое показал еси/ и, многих добродетельми удивив,/ дарование чудес от Христа приял еси./ Темже поминай нас, чтущих память твою, да зовем ти:// радуйся, преподобне Тихоне, отче наш.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Тихона Калужского», глас 8, under «Молитвы» on the day page for 16 июня ст. ст.. It names him in the vocative, «преподобне Тихоне, отче наш», so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gone far from thy fatherland, O venerable one, thou didst go to dwell in the wilderness, where thou didst show forth thy hard manner of life; and having astonished many by thy virtues, thou didst receive from Christ the gift of wonders. Therefore remember us who honour thy memory, that we may cry to thee: Rejoice, O venerable Tikhon, our father.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

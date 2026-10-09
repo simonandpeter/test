@@ -12,6 +12,11 @@
       "form": "Евтропије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 16. јун ст. ст., „Свети мученици Тигрије и Евтропије“, where it is the second and last of the two names — „Свети мученици“ stands at the head of the pair and comes off, and the heading gives him no epithet and no city, so the bare forename is all there is; the body’s „чтец“ is a rank with no type in this vocabulary and is not built onto the form. **The fold is deliberate and forced**: `foldchk.py` returns `euprepius-of-arabia` and `eutropius-of-cappadocia`, both `sr`, for «Евтропије», so this is the third folder on the string. The heading gives one word and offers nothing to break the fold with, and the «companion of Tigrius» of the display name is the corpus’s own disambiguation and not anything this book prints; the three are told apart by their days and their companions."
+    },
+    {
+      "form": "Евтропий Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 16 июня ст. ст., «Евтропий Константинопольский, чтец, мч.», with the rank word and the grade word left off. The line itself gives the name in the genitive."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder’s serbian row carries; its greek row stands on 12 January, which is the Greek calendar’s own day for the pair and not a second Russian feast. The line enumerates two names and the corpus keeps two folders, which is the whole of the company. The day page prints no hymn for either."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июня ст. ст. — «Сщмч. Тигрия пресвитера и мч. Евтропия чтеца (404).»",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

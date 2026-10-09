@@ -1,0 +1,94 @@
+{
+  "slug": "tikhon-of-lukh",
+  "display_name": "Tikhon of Lukh",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Тихон Луховский, Костромской",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 16 июня ст. ст., «Преподобный Тихон Луховский, Костромской», with the rank word and the grade word left off. The line itself gives the name in the genitive."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1503,
+      "latest": 1503,
+      "display": "16 June 1503",
+      "basis": "traditional",
+      "note": "Both of his life pages state the day and the year in words: «Скончался преподобный Тихон 16 июня 1503 года», and the day line ends «(1503)». The calendar gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian",
+        "note": "Both of his life pages head «Дни памяти: 16 июня , 26 июня (Обретение мощей)». The second is the finding of his relics, which is a feast and not a second commemoration of the man, so this folder renders on 16 июня ст. ст. only. The corpus holds no other folder whose stored forms carry Луховский."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июня ст. ст. — «Прп. Тихона Луховского, Костромского чудотворца (1503).»",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 29 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Желанием духовным в пустыню вселился еси/ и, тамо невозвратно шествовав Божественными стезями,/ достигл еси в Небесныя обители,/ и ныне со Ангелы предстоиши/ у Престола всех Царя Христа Бога,/ Емуже прилежно молися/ помиловати град сей и люди,/ верою празднующия пречестную память твою,// Тихоне преподобне, отче наш.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь преподобного Тихона Луховского», глас 4, under «Молитвы» on the day page for 16 июня ст. ст.. It names him in the vocative, «Тихоне преподобне, отче наш», and asks mercy for the city that keeps his memory, so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With spiritual longing didst thou go to dwell in the wilderness, and walking there without turning back by the divine paths thou didst reach the heavenly mansions; and now with the angels thou standest before the throne of Christ God, the King of all. Pray thou earnestly to Him to have mercy on this city and on the people who in faith keep thy most honourable memory, O venerable Tikhon, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Христовою любовию уязвився, преподобне,/ во след Его невозвратно шествовал еси,/ постом и воздержанием плотския страсти умертвил еси,/ бдением же и молитвами вселукаваго врага до конца низложил еси/ и слезами, яко елеем, свещу светлу себе уготовал еси;/ темже в Небесныя обители невозбранно вшел еси,/ идеже, радуяся, Господеви предстоиши,/ Емуже прилежно молися, молим тя,/ яко да милостив нам будет в День страшнаго Его пришествия,/ и да не пребудем и мы вне чертога Христова,/ но да сподобит ны одесную Себе стати/ молитвами твоими, преподобне, да зовем ти:/ радуйся, Богомудре отче наш Тихоне.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак преподобного Тихона Луховского», глас 8, under «Молитвы» on the day page for 16 июня ст. ст.. It names him in the vocative, «Богомудре отче наш Тихоне», so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wounded with the love of Christ, O venerable one, thou didst follow after Him without turning back; by fasting and abstinence thou didst put to death the passions of the flesh, and by vigil and prayers thou didst utterly cast down the all-cunning enemy, and with thy tears, as with oil, thou didst make ready for thyself a bright lamp. Therefore didst thou enter unhindered into the heavenly mansions, where thou standest rejoicing before the Lord. Pray thou earnestly to Him, we beseech thee, that He may be merciful to us in the day of His dread coming, and that we too may not be left outside the bridal chamber of Christ, but that He may count us worthy to stand at His right hand by thy prayers, O venerable one, that we may cry to thee: Rejoice, O our father Tikhon, wise in God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
