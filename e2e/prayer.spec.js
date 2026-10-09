@@ -543,6 +543,23 @@ const WITH_SAME_DAY = HYMNED.findIndex((card) => {
 });
 
 /**
+ * The same premise, **and an icon in the company**: the one test that counts
+ * plates needs a saint who can be given one, and `WITH_SAME_DAY` does not
+ * promise that. Whose day comes first in the hymnal moves with every reading
+ * wave, so on 2026-10-09 it landed on a company with no icon between them and
+ * the plate count was 0 on the runner while the fixture's own premise still
+ * held. Capped at `SAME_DAY_MAX` so every member of the company is drawn, which
+ * is what makes the icon's presence in the data an icon on the page.
+ */
+const WITH_SAME_DAY_ICON = HYMNED.findIndex((card) => {
+  const iso = dayOf(card.slug, CHURCH);
+  if (iso === null) return false;
+  const company = (INDEX.get(iso) ?? []).filter((e) => e.church === CHURCH);
+  if (company.length < 2 || company.length > SAME_DAY_MAX) return false;
+  return company.some((e) => CARDS.find((c) => c.slug === e.slug)?.image);
+});
+
+/**
  * A hymned saint the Russian and Greek calendars put on different civil days —
  * an Old Calendar feast, which is what makes "the same day" a question the page
  * has to answer rather than a date it can read off.
@@ -1715,8 +1732,9 @@ test('below the desk the margins open on the names and keep the door they had', 
   await phone(page);
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  // Stepped to off the manifest: see `WITH_SAME_DAY`.
-  await goTo(page, WITH_SAME_DAY);
+  // Stepped to off the manifest: see `WITH_SAME_DAY_ICON`.
+  expect(WITH_SAME_DAY_ICON, 'the corpus holds a hymned saint with an icon in his company').toBeGreaterThanOrEqual(0);
+  await goTo(page, WITH_SAME_DAY_ICON);
   await expect(page.locator('#hy-sameday .index-card.is-row').first()).toBeVisible();
 
   await expect(page.locator('.index-foot input[name="layout"][value="rows"]')).toBeChecked();
