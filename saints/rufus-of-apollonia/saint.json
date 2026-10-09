@@ -1,0 +1,68 @@
+{
+  "slug": "rufus-of-apollonia",
+  "display_name": "Rufus of Apollonia",
+  "names": [
+    {
+      "form": "Руф Аполлониадский (Македонский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1885, «Руф Аполлониадский (Македонский), мч.», with the rank word after the comma left off. The day line gives the name in the genitive, and the epithet «Македонских» in the plural for the whole company; the singular epithets here are the name page’s own and the bracketed «(Македонский)» is kept as it prints it. `fk.mjs` returns no holder for the folded form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 283,
+      "latest": 284,
+      "display": "283–284",
+      "basis": "traditional",
+      "note": "The reign the company’s reading names, «при императоре Нумериане (283-284)», which is the same reign and the same interval the six companion folders already carry off saint.gr. It is said of the six Athenians in the sentence before his, and he is «вместе с ними», put to the sword together with them. The day line gives only «(III-IV)», the third to fourth century, which is wider and narrows nothing; no year of death is stated for anyone in this company and none is written."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Исавра диакона, Иннокентия , Филикса , Ермия , Василия , Перегрина , Руфа и Руфина Македонских (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry, seventh name, AND ONE OF THE TWO NAMES OF ITS EIGHT THE CORPUS DID NOT ALREADY HOLD. The corpus keeps the six Athenians of Apollonia off saint.gr’s and doxologia.ro’s 17 June, where the company is six and these two magistrates are not named; this calendar prints eight, and the reading’s second sentence is their whole account. A DIFFERENT DAY FROM THIS FOLDER’S OTHER ROWS, AND NO ROW IS MOVED. saint.gr and doxologia.ro keep the company of Apollonia on 17 June and this calendar keeps it on 6 июля ст. ст.; one attestation row per church is the schema, so the russian row stands on the russian day and the greek and romanian rows were left exactly as they are. THE RUSSIAN LINE NAMES EIGHT WHERE THE GREEK NAMES SIX. The reading life4167 was opened and is two sentences: «Святые мученики Исавр диакон, Иннокентий, Филикс, Ермий, Василий, Перегрин - афиняне, пострадавшие за Христа в македонском городе Аполлонии при императоре Нумериане (283-284). Вместе с ними были усечены уверовавшие во Христа два градоначальника - Руф и Руфин.» — Athenians who suffered at the Macedonian city of Apollonia under Numerian, and with them two city magistrates who had come to believe, Rufus and Rufinus. Those two are new folders in this batch, `rufus-of-apollonia` and `rufinus-of-apollonia`, and the whole company is joined by `related`. `dates` UNCHANGED, and nothing is owed: the reign this reading names, «Нумериане (283-284)», is the same reign and the same interval saint.gr gave, so the two books agree; the line’s own «(III-IV)» is wider than either and narrows nothing. `types` UNCHANGED. No hymn on the day page stands under any of these eight names, and azbyka.ru was not read. `office` was NOT written: «градоначальника», a city magistrate, is in the reading and in this row and in the life, and the four locale packs carry no such word. azbyka.ru was not read, and no life page of his own exists — name page 1885 links to none."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked for him: doxologia.ro keeps this company on 17 iunie and names six, not eight, and his name is not among them; its 19 iulie, the civil day of this Julian 6 July, was not read (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked for him: saint.gr’s 17 Ιουνίου names the six Athenians and not these two magistrates, as the six folders’ own greek notes record; its 19 Ιουλίου was not read (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 July 2026, the civil day of this Julian 6 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "isaurus-the-deacon",
+    "innocent-of-apollonia",
+    "felix-of-apollonia",
+    "hermias-companion-of-isaurus",
+    "basil-companion-of-isaurus",
+    "peregrinus-of-apollonia",
+    "rufinus-of-apollonia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
