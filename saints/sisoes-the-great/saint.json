@@ -16,6 +16,11 @@
       "form": "Сисоје Велики",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 6. јул ст. ст., „Преп. Сисоје Велики“ — „Преп.“ is the rank and comes off, and „Велики“ is **kept**, because §5 is explicit that it is not a rank but the epithet «the Great», as it was kept on Paisius on 19 June. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for both «Сисоје Велики» and the bare «Сисоје», so **the choice was made on the rule and not on the fold**, the corpus’s own `sisoes-the-russian` holding no Serbian form of the name at all. Measured either way."
+    },
+    {
+      "form": "Сисой Великий",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2027, «Сисой Великий, прп.», with the rank word after the comma left off. «Великий» is the epithet the display name already carries and not a rank. `fk.mjs` returns no other holder for «великии сисои», the Caves schemamonk’s form being «Сисой, схимник Печерский»."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Прп. Сисоя Великого (429).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and this folder’s man: the same menologion day its Romanian, Greek and Serbian rows already keep, the same epithet «Великий», and 429, which is exactly the year this folder’s `dates` already carry off the Охридски пролог — the first of the four books to agree with another on a year for him. `dates` and `types` UNCHANGED. Name page 2027 heads him «Сисой Великий, прп.» and lists «День памяти: 6 июля» and no other day. THE READING life4163 BEHIND THE LINE WAS NOT OPENED; this row rests on the day line, the name page and the four hymns. The day page prints four headings under his name — two troparia and two kontakia — and all four are taken; the second troparion is the common of a venerable with his name set into it and is his, which is why it is copied whole. The second Sisoes of this same day, the schemamonk of the Kyiv Caves, is `sisoes-the-russian` and takes its own row in this batch; the two are kept apart exactly as this folder’s greek note already keeps them apart."
     },
     {
       "church": "romanian",
@@ -91,6 +106,70 @@
       },
       "english": {
         "text": "A dweller of the desert and an angel in the body and a worker of wonders you were shown to be, God-bearing father Sisoes; by fasting, by vigil and by prayer you received heavenly gifts, and you heal the sick and the souls of those who run to you in faith. Glory to Him who gave you strength; glory to Him who crowned you; glory to Him who works healing for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Плотския страсти умертвив воздержанием,/ миру распялся еси и, в пустыни живый,/ всех похотей отсечением/ Ангел земный и Небесный человек показался еси,/ сего ради тя, яко наставника иноком,/ поем, Сисое отче наш, и просим:/ моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Тропарь преподобного Сисоя Великого», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having put the passions of the flesh to death by abstinence, thou wast crucified to the world; and living in the wilderness, by the cutting off of every desire thou wast shown an earthly angel and a heavenly man. Therefore we sing of thee as a guide to monks, O Sisoes our father, and we ask: pray Christ God to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, Богоносе отче наш Сисое,/ постом, бдением, молитвою Небесная дарования приим,/ исцелявши недужныя и души верою притекающих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Ин тропарь преподобного Сисоя Великого», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness and an angel in the body and a wonderworker wast thou shown to be, our God-bearing father Sisoes: by fasting, by vigil and by prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that run to thee with faith. Glory to Him that gave thee strength; glory to Him that crowned thee; glory to Him that worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Подвизався, Ангел на земли виден был еси,/ озаряли, преподобне, помышления верных Богознаменьми всегда./ Темже тя верою, Сисое, почитаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Кондак преподобного Сисоя Великого», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having striven, thou wast seen as an angel upon the earth, and ever didst thou enlighten the thoughts of the faithful, O venerable one, by signs from God. Therefore with faith, O Sisoes, do we honour thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко безплотным единожитель/ и всем преподобным сопричастник,/ постническими труды и бдении молитвенными непрестанно себе вооружая, мудре,/ тем и дар приял еси от Бога/ исцеляти недуги и прогоняти бесы./ Того ради вопием ти:/ радуйся, отче наш Сисое преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Ин кондак преподобного Сисоя Великого», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one who dwelt with the bodiless and a partaker with all the venerable, arming thyself without ceasing by ascetic labours and prayerful vigils, O wise one, thou didst receive thereby the gift from God to heal sicknesses and to drive out demons. Wherefore we cry to thee: rejoice, O Sisoes our venerable father.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,63 @@
+{
+  "slug": "tikhon-sokolovsky",
+  "display_name": "Tikhon Sokolovsky",
+  "names": [
+    {
+      "form": "Тихон Соколовский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2120, «Тихон Соколовский, прп.», with the rank word after the comma left off. The day line gives all three names in the genitive with the epithet in the plural, «Соколовских»; the singular is the name page’s own. `fk.mjs` returns no holder for the folded form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "traditional",
+      "note": "The century the day line prints for the three brothers, «(XVI)». The reading behind the line says «в VI веке» instead, the sixth century, which is nine hundred years earlier and is recorded in the attestation note and in the life without being used; the line is what this folder’s row quotes and the century is taken from it. No year of birth, no year of death and no age is given anywhere, and none is written."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Прпп. Тихона , Василия и Никона Соколовских (XVI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry, «Прпп. Тихона , Василия и Никона Соколовских (XVI).» — three names, so three folders, and the corpus held none of them. The reading life6499 was opened and is three sentences for all three: «Братья по плоти, жили и подвизались в VI веке. На древней иконе в церкви села Соколове (Московская губерния, Звенигородский уезд) они изображены в схимническом одеянии; погребены они в Соколовой роще.» — brothers in the flesh, depicted on an ancient icon in the church of the village of Sokolovo in the Zvenigorod district of the Moscow governorate in the garb of the great schema, and buried in the Sokolov grove. THE TWO HALVES OF THE SOURCE DISAGREE ON THE CENTURY: the day line says «(XVI)» and the reading says «в VI веке». `dates` is written from the day line, which is what this row quotes, and the reading’s «VI» is recorded here and in the life and used for nothing; the conflict is in the report. `types` is `venerable` alone, on «Прпп.»; the schema garb is a thing the icon shows and not a rank the calendar gives, so no `monk` was written on it. NO `locations`: a village, a district and a governorate in a narrative are not coordinates, and a hundred-year interval on a located saint is what `map-span.test.mjs` exists to stop. The day page prints nineteen hymn headings and none under any of the three names. The name pages — 2120, 388 and 1646 — each list «День памяти: 6 июля» and no other day, and each links only to this one reading. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 19 iulie, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 19 Ιουλίου, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 July 2026, the civil day of this Julian 6 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "basil-sokolovsky",
+    "nikon-sokolovsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

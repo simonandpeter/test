@@ -1,0 +1,61 @@
+{
+  "slug": "euthymius-lyubovichev",
+  "display_name": "Euthymius (Lyubovichev)",
+  "names": [
+    {
+      "form": "Евфимий (Любовичев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14289, «Евфимий (Любовичев), иеромонах, прмч.», with the two rank words after the comma left off. The day line gives only the bare forename in the genitive, «Евфимия», so the surname is the name link’s and is stored with it, which is what this corpus’s twentieth-century Russian forms do. `fk.mjs` returns no holder for «евфимии любовичев»; the corpus’s twenty-nine other Euthymius folders carry no such surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "The year the day line prints after his name, «(1931)». No year of birth, no age and no place is given on either the day page or the name page, and no life page exists."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Прмч. Евфимия (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s twelfth entry. THE CALENDAR GIVES NO LIFE: the line links to his name and to no reading, and name page 14289 prints the heading, «Дни памяти: 26 января (Новомуч.) , 6 июля» and nothing else. `new-martyr` rests on that first day — the synaxis of the new martyrs and confessors of Russia, which the page itself labels «(Новомуч.)» — standing beside this one, which is his own, together with «прмч.» grading him a martyr on both the line and the page. The 26 января day page WAS NOT OPENED. `hieromonk` is the page’s «иеромонах»; no `office` was written, the four locale packs carrying no such word and `hieromonk` being in the corpus’s own `types` vocabulary. No hymn on the day page stands under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 19 iulie, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 19 Ιουλίου, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 July 2026, the civil day of this Julian 6 July (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

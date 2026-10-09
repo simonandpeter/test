@@ -11,6 +11,11 @@
       "form": "Σισώης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουλίου, «Όσιος Σισώης», with the rank word left off; the day's other entry of the name is «Όσιος Σισώης ο μεγάλος»."
+    },
+    {
+      "form": "Сисой, схимник Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2029, «Преподобный Сисой, схимник Печерский», with the rank word «Преподобный» at the head left off. «схимник» is kept, as `alexios-the-recluse-of-kyiv` keeps «затворник»: it is what distinguishes him from the Sisoes the Great of the same day, whose stored form is «Сисой Великий». `fk.mjs` returns no other holder."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Прп. Сисоя , схимника Печерского (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s eighth entry. THIS IS AN IDENTIFICATION AND IT IS REPORTED AS ONE. This folder was made from saint.gr’s second, bare «Όσιος Σισώης» of 6 Ιουλίου, which says only «ήταν Ρώσος μοναχός και κοιμήθηκε εν ειρήνη τον 18ο αιώνα μ.Χ.» — a Russian monk who reposed in peace in the eighteenth century. This calendar prints exactly two Sisoes on this day, the Great and «Прп. Сисоя , схимника Печерского (XIII)», a schemamonk of the Kyiv Caves of the thirteenth century; the readings life4164 and life6851 behind id2029 were both opened and say he was a schemamonk and a faster whose relics lie in the Far (Theodosian) caves, and that he is remembered in the common service of the venerable fathers of the Caves together with Gregory the Faster. SAME DAY, SAME NAME, SAME NATIONALITY, AND THE CENTURY DISAGREES — XIII here against saint.gr’s eighteenth. The row is written on the first three and `dates` is NOT touched: the folder keeps the eighteenth century it was made with, and whether saint.gr’s century is simply wrong is an author question in the report, not something settled here. `types` UNCHANGED. His name page 2029 lists a second day, «28 августа (Печер.(Д))», the synaxis of the fathers of the Far Caves, which is a company and not a second memory of his own, and the Russian row therefore stands on 6 июля alone. The day page prints two headings under his name, a troparion which is the common of a venerable with his name set into it and a kontakion proper to him, and both are taken — the folder’s first hymns of any kind."
     },
     {
       "church": "romanian",
@@ -59,5 +74,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, Богоносе отче наш Сисое,/ постом, бдением, молитвою Небесная дарования приим,/ исцеляеши недужныя и души верою притекающих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Тропарь преподобного Сисоя, схимника Печерского, в Дальних пещерах», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness and an angel in the body and a wonderworker wast thou shown to be, our God-bearing father Sisoes: by fasting, by vigil and by prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that run to thee with faith. Glory to Him that gave thee strength; glory to Him that crowned thee; glory to Him that worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Сисое чудне,/ на страсти вельми подвизавыйся/ и постом и мощными молитвами сия успивый,/ благодать от Христа приял еси/ в страстех бедствующим пособствовати./ Тем и наша страсти плоти и духа исцели, молимся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Кондак преподобного Сисоя, схимника Печерского, в Дальних пещерах», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O wondrous Sisoes, who didst strive mightily against the passions and didst lull them to sleep by fasting and by strong prayers, thou hast received grace from Christ to help those who are in peril from the passions. Heal therefore, we pray, our own passions of flesh and of spirit.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -1,0 +1,68 @@
+{
+  "slug": "theodore-bogoyavlensky-6-july",
+  "display_name": "Theodore (Bogoyavlensky, 6 July)",
+  "names": [
+    {
+      "form": "Феодор (Богоявленский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9249, «Феодор (Богоявленский), иеромонах, сщмч.», with the two rank words after the comma left off. THE FORM IS A FOLD OF THREE: `theodore-bogoyavlensky` and `theodore-bogoyavlensky-27-september` already store the identical string, and the `READ_FOLDS` key written for that pair is REPLACED in this same commit by a three-holder key whose reading names all three. The three are the confessor priest of 1933 kept on the Julian 28 January, the hieromartyr priest of 1937 kept on 27 September, and this hieromonk of 1943 kept on 6 July; rank, year and day differ in all three, nothing read links them, and no row claims any two are one man."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1905,
+      "latest": 1905,
+      "display": "1905",
+      "basis": "attested",
+      "note": "The reading states the day: «родился 26 декабря 1905 года в Тегеране»."
+    },
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
+      "basis": "attested",
+      "note": "The year the day line prints after his name, «(1943)», and the day the reading gives: «скончался в тюрьме в городе Балашове 19 июля 1943 года»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Прмч. Феодора (1943).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s thirteenth and last entry. A THIRD MAN OF ONE NAME, and the calendar itself separates all three. `theodore-bogoyavlensky` is the confessor priest who died in 1933, kept on the Julian 28 January; `theodore-bogoyavlensky-27-september` is the hieromartyr priest of 1937, kept on 27 September; this one is name page 9249, «Феодор (Богоявленский), иеромонах, сщмч.», a HIEROMONK who died in 1943, kept on 6 июля and on 26 января with the new martyrs. Rank, year and day differ in each case, and no row claims any two are one man. The two-holder `READ_FOLDS` key for this string is replaced by a three-holder one in this same commit. THE GRADE IS NOT THE SAME IN ALL THREE PLACES: the day line says «Прмч.» and the reading is titled «Преподобномученик Феодор (Богоявленский)», both of which are `venerable-martyr`, while the name link says «sщмч.», hieromartyr. Two of three are taken and the third is recorded here; `hieromartyr` was not written. `new-martyr` rests on the 26 января synaxis the name page labels «(Новомуч.)» and on the reading’s closing sentence, «Причислен к лику святых Новомучеников и Исповедников Российских на Юбилейном Архиерейском Соборе … в августе 2000 года». The 26 января day page WAS NOT OPENED. The reading life4922 was opened and is long; the extractor cut 38,849 characters out of the middle, and the tonsure, the ordinations and the 1933 arrest were read back out of the cached page itself rather than inferred. NO `locations`: Tehran, Saint Petersburg, Saratov, Moscow, Zavidovo, Vostryakovo and Balashov are seven places in one narrative and none is a coordinate this folder claims. No `office` was written — `hieromonk` is in `types` and the locale packs carry no fuller word. No hymn on the day page stands under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 19 iulie, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 19 Ιουλίου, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 July 2026, the civil day of this Julian 6 July (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
