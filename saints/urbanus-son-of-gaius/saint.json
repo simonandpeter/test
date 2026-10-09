@@ -10,6 +10,11 @@
       "form": "Ουρβανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Ιουνίου, which prints the company as «Άγιοι Ευστόχιος ο Πρεσβύτερος, Γάϊος ο ανεψιός του, και τα παιδιά αυτού Λολλία, Πρόβη και Ουρβανός»; the form above is this member's bare name, with the rank word and the relationship left off."
+    },
+    {
+      "form": "Урван Садонский, Анкирский",
+      "lang": "ru",
+      "note": "Read out of the name link behind this place in days.pravoslavie.ru's line for 23 июня ст. ст., «Урван Садонский, Анкирский, мч.», with the grade word left off; both epithets are the calendar's own. The calendar writes the form in the masculine, which is the reading recorded in this folder's russian row."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's other venerated rows carry. The one life page days.pravoslavie.ru gives the company, life1381, heads «День памяти: 23 июня» and names no other day; it was read whole and its account agrees with what this folder already carries — the pagan priest converted and baptised by the bishop of Antioch, the nephew and his whole household won at Lystra, the governor at Ancyra, and the beheading under Maximian — so no paragraph was added. ONE DISAGREEMENT BETWEEN SOURCES IS RECORDED AND NOT RESOLVED: the Russian calendar gives all five names in the masculine and calls the three of the household «отроков», lads, where the sources behind this corpus's display names make two of them daughters of the nephew. The identification rests on the company, the kinship, Lystra, Ancyra, the day and the number of names, and not on the gender of the forms; the display names were left as they stood. The day line closes «и иных», and with others, who are not named, so no further folder follows from it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июня ст. ст. — «Мчч. Евстохия , Гаия , Провия , Лоллия , Урвана и иных (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260623.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

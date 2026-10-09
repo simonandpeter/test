@@ -1,0 +1,9 @@
+# Peter (Smorodintsev)
+
+days.pravoslavie.ru’s calendar for 23 июня ст. ст. names two presbyters on one line, «Сщмчч. Александра , Петра пресвитеров (1918).», and he is the second of them. The line gives the forenames in the genitive, one grade-class word and one rank word for the two together, and one year, and it gives no surname to either. The name link behind his place in it supplies the calendar’s own nominative with the surname and the grade, «Петр (Смородинцев), иерей, сщмч.» (name page 13733), and that is where the name form in this folder is read from.
+
+His name page carries nothing else: «Дни памяти: 26 января (Новомуч.) , 23 июня» and then no life, no article, no place of service and no account of his death in 1918. Nothing is supplied for that here — not a diocese, not an age, and not the manner of his death. The corpus holds no other folder whose stored forms carry «Смородинцев». The calendar gives him the bare forename «Петр» in the line, which eleven folders of this corpus already share; the surname off the name link is what this folder stores instead.
+
+The line’s «Сщмчч.» makes him a hieromartyr and «пресвитеров» a presbyter, and the name link gives the rank as «иерей». The second day his name page lists is the synaxis of the new martyrs and confessors of Russia, which is a synaxis and not a second feast, so he renders on 23 июня ст. ст. only. He is given no relation to the other presbyter of his line: they share a line, a grade word and a year, and the calendar prints nothing that says they died in one place or knew one another.
+
+*After the Православный церковный календарь of the Сретенский monastery for 23 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260623.html) and [his name page](https://days.pravoslavie.ru/name/13733.html); read 9 October 2026.*

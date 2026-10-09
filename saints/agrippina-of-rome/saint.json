@@ -16,6 +16,11 @@
       "form": "Агрипина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 23. јун ст. ст., „Света мученица Агрипина“ — Света is not a rank and мученица is the rank, which `types` already carries, and §6 takes both off; the bare forename is what is left. `foldchk.py` returns NO FOLDER HOLDS THIS FORM, and `.tmp/sr-foldpred.mjs` — which asks the gate’s own `nameKeys` what a form would fold onto before it is written — returns no other holder for the key either, so the fold is clear on both instruments and no `READ_FOLDS` key is owed. **The spelling is the measurement worth keeping**: this folder’s Romanian form is «Agripina» with one p and its Greek form «Αγριππίνα» with two, and the Prologue prints one п, so the Serbian form sides with the Romanian spelling against the Greek. Copied as printed; nothing is transliterated."
+    },
+    {
+      "form": "Агриппина Римляныня",
+      "lang": "ru",
+      "note": "Read out of the name link behind her place in days.pravoslavie.ru's line for 23 июня ст. ст., «Агриппина Римляныня, мц.», with the grade word left off. «Римляныня», the Roman woman, is the calendar's own epithet; the folder already held «Агрипина» with one п off another calendar, and this form is the fuller one and spells it with two."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's three other venerated rows carry. Her life page life1380 heads «День памяти: 23 июня» and names no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июня ст. ст. — «Мц. Агриппины (253-259).»",
+        "url": "https://days.pravoslavie.ru/Days/20260623.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -105,6 +120,38 @@
       },
       "english": {
         "text": "Made strong by the divine Spirit, you played the man with a noble mind, Agrippina, sweet savour of virginity; and so, glorified by the grace of Christ, you pour out springs of wonders to the ends of the earth. Glorious martyr, entreat Christ our God that great mercy may be given us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Агница Твоя, Иисусе, Агрипина/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою;/ но яко жертву непорочную приими мя,/ с любовию пожершуюся Тебе.// Тоя молитвами, яко Милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июня ст. ст. — «Тропарь мученицы Агриппины», глас 4. The common troparion of a virgin-martyr — «Агница Твоя, Иисусе» — with her name set in it, printed under her name.",
+        "url": "https://days.pravoslavie.ru/Days/20260623.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb, O Jesus, Agrippina, cries out with a loud voice: Thee, my Bridegroom, I love, and seeking Thee I contend, and am crucified and buried with Thee in Thy baptism; I suffer for Thy sake, that I may reign in Thee, and I die for Thee, that I may live with Thee. Receive me as a spotless sacrifice, offered to Thee with love. At her prayers, as Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Светлых подвиг твоих светоносный наста день,/ воньже почитающи сих, Божественная Церковь/ вся созывает весело вопити тебе:/ радуйся, дево и мученице,// Агрипино всечестная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июня ст. ст. — «Кондак мученицы Агриппины», глас 4. Proper to her: «Агрипино всечестная» in the vocative, and the page spells the name with one п here as the folder already did.",
+        "url": "https://days.pravoslavie.ru/Days/20260623.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The light-bearing day of thy radiant struggles is come, on which the divine Church, honouring them, calls all together to cry out to thee with gladness: rejoice, virgin and martyr, all-honoured Agrippina.",
         "rendered": "site"
       }
     }
