@@ -38,6 +38,33 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
+**The Russian reading wave, stopped 9 October 2026 at the author's word.**
+Nothing is in flight: no reader is running, no branch is unmerged, the tree is
+clean and `136b1f37` is green and deployed. `../ro-run/FINDINGS.md` is the
+record, one section per merged wave with its verification; `../ro-run/BRIEF-RUSSIAN.md`
+and `BRIEF-ADDENDUM.md` are binding on the next reader. Measure the state with
+`node scripts/ship-gate-days.mjs`, never from here.
+
+Three things block work rather than wait on it:
+
+- **One author ruling governs twenty-five withheld saints.** For a saint who
+  already holds a russian row on another day whose second memory falls on the
+  day in hand, BRIEF-RUSSIAN §4 forbids a draft while BRIEF.md §4 sanctions a
+  second-day note. Readers withhold rather than choose, which is right, and
+  about forty hymn blocks are withheld with them. Julian 06-30, the synaxis of
+  the Twelve, is *entirely* this question: eleven of the twelve already carry a
+  row elsewhere and only `matthias-the-apostle` is undocumented.
+- **Three folders carry two `romanian` attestation rows** —
+  `andrew-the-first-called`, `philip-the-apostle`, `matthew-the-apostle`.
+  `upgrade.py` asserts one row per church, so any Russian upgrade on those three
+  crashes. The gate is green over it.
+- **`jude-the-apostle`'s stored `ru` form is truncated** mid-parenthesis,
+  `'Иуда Иаковлев (Леввей'`. Closing it means reading the source page.
+
+**An instrument exists when `ls .tmp` prints it.** Four were reported promoted
+in two days without being promoted; `para.py` is the one still missing.
+
+
 **The calendar's two monthly views are one drawing** (`1aaed1fd`, `facb0608`).
 The phone keeps its week rail and the toggle that opens the month; the month it
 opens into is the desk's month, stepped up and down from two marks above and
