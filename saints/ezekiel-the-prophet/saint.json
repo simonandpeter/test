@@ -16,6 +16,11 @@
       "form": "Језекиљ",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 21. јул ст. ст., „Св. пророк Језекиљ“ — «Св.» is “saint” and «пророк» the rank, both left off by §6, and the heading **has no closing punctuation and no by-name at all**, so the bare forename is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` and `sr-foldpred.mjs` `new key, other holders: 0 (none)`, which makes this **the only form of this day that lands in no fold**. The Serbian vernacular differs from the Romanian Iezechiel and the Greek Ιεζεκιήλ this folder already holds, and nothing is transliterated."
+    },
+    {
+      "form": "Иезекииль",
+      "lang": "ru",
+      "note": "Name page 909 of days.pravoslavie.ru is «Иезекииль, пророк»: every word beside the name is the rank, so the form is bare. `fk.mjs` on the stored string returns NONE — no other folder in this corpus holds any form folding to «иезекииль» — so the bare form widens no fold."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Пророка Иезекииля (VI до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the same menologion day as the folder's Romanian and Serbian rows; the Greek row stands on the revised 23 July and is untouched, one row per church. «Пророка» is the `prophet` the folder's `types` already carry. `dates` UNCHANGED and the two sources AGREE: this line gives «VI до Р.Х.», the sixth century before Christ, which is the interval the folder already holds off saint.gr. The reading life4281 was NOT opened, the folder's life being already written from the Greek. THREE HYMNS TAKEN where the folder had none of this calendar's; the folder's three existing hymns are its Greek ones and none was touched."
     },
     {
       "church": "romanian",
@@ -122,6 +137,54 @@
       },
       "english": {
         "text": "Lit up by the shining of God, you received the grace of prophecy, painting beforehand in figures what was to come upon the world, having foreseen the Virgin as the gate no man passes through, out of whom the Word shone as a shepherd in the world, Ezekiel, prophet of God, and redeemed us from the curse.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Пророче Божий Иезекииле,/ предзревый затворенная Духом врата/ и Плотоносца, во исходе сих, Единаго сказавый Бога,/ Того моли, молимся,/ да отверзет дверь милости Своей/ и спасет души благочестно поющих память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Тропарь пророка Иезекииля», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O Ezekiel, prophet of God, who didst foresee in the Spirit the gate that was shut, and didst declare that He who came forth from it bearing flesh is the one God: entreat Him, we pray, that He may open the door of His mercy and save the souls of those who devoutly sing thy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Пророка Твоего Иезекииля память, Господи, празднующе,/ тем Тя молим:/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Ин тропарь пророка Иезекииля», глас 2 — the page's second troparion, headed «Ин тропарь»",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of Thy prophet Ezekiel, O Lord, through him we entreat Thee: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Божий явился еси пророк,/ Иезекииле чудне,/ воплощение Господне всем провозвестил еси,/ Сего Агнца и Зиждителя,// Сына Божия, явльшася во веки.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Кондак пророка Иезекииля», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth as a prophet of God, O wondrous Ezekiel, and didst proclaim to all the incarnation of the Lord, this Lamb and Maker, the Son of God, made manifest unto the ages.",
         "rendered": "site"
       }
     }

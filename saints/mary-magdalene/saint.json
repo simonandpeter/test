@@ -16,6 +16,11 @@
       "form": "Марија Магдалина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 22. јул ст. ст., „Марија Магдалина.“ — **and nothing at all had to be stripped from it**, which is rare in this wave: the heading carries no Св., no Света and no rank word, so the form is the heading entire, less its full stop. The by-name is kept by §6 and is load-bearing: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the two words together and five sr holders for the bare «Марија». The Serbian vernacular differs from the Greek Μαρία and the Romanian Maria Magdalena this folder already holds, and nothing is transliterated."
+    },
+    {
+      "form": "Мария Магдалина",
+      "lang": "ru",
+      "note": "Name page 2598 of days.pravoslavie.ru is «Святая равноапостольная Мария Магдалина»: «Святая» and «равноапостольная» are both rank words and are stripped. `fk.mjs` on the stored string returns NONE; the folder's Serbian «Марија Магдалина» folds elsewhere and the bare «Мария» was out of the question."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июля ст. ст. — «Мироносицы равноап. Марии Магдалины (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260722.html",
+        "year": 2026
+      },
+      "note": "The day's first entry and the same menologion day as the folder's Romanian, Greek and Serbian rows. «равноап.» is the `equal-to-the-apostles` the folder's `types` already carry; «Мироносицы», myrrh-bearer, has no slug in this corpus's `types` vocabulary and nothing was added for it. NO `dates` WERE WRITTEN: the line's «(I)» is the first century and would be this folder's first date of any kind, and this wave has declined to write a first date off a bare Roman numeral on a line — the standing author question. The reading id2598 was NOT opened, the folder's life being already written. TWO HYMNS TAKEN where the folder had none of this calendar's; its three existing hymns are the Greek and Romanian ones and none was touched."
     },
     {
       "church": "romanian",
@@ -136,6 +151,38 @@
       },
       "english": {
         "text": "God who is above all being, coming into the world in the flesh, received you, myrrh-bearer, as a true disciple, since you had set all your desire upon him; and so you worked very many healings. And now, having passed over into the heavens, you intercede at every hour for the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Христу, нас ради от Девы рождшемуся,/ честная Магдалино Марие, последовала еси,/ Того оправдания и законы хранящи./ Темже днесь всесвятую твою память празднующе,/ грехов разрешение// молитвами твоими приемлем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июля ст. ст. — «Тропарь равноапостольной Марии Магдалины», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260722.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst follow Christ, who for our sake was born of the Virgin, O honoured Mary Magdalene, and didst keep His ordinances and His laws. Therefore, keeping today thy all-holy memory, by thy prayers we receive the forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Предстоящи, преславная, у Креста Спасова со иными многими,/ и Матери Господни состраждущи, и слезы точащи,/ сие в похвалу приношаше, глаголющи:/ что сие есть странное чудо?/ Содержай всю тварь пострадати изволи.// Слава державе Твоей.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июля ст. ст. — «Кондак равноапостольной Марии Магдалины», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260722.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Standing with many others at the Saviour's Cross, O most glorious one, and suffering with the Mother of the Lord, and pouring forth tears, thou didst offer this in praise, saying: what strange wonder is this? He who upholds the whole creation has willed to suffer. Glory to Thy dominion.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,61 @@
+{
+  "slug": "michael-nakaryakov",
+  "display_name": "Michael (Nakaryakov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Михаил (Накаряков)",
+      "lang": "ru",
+      "note": "Name page 9690 of days.pravoslavie.ru is «Михаил (Накаряков), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Михаила пресвитера». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The day line closes «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июля ст. ст. — «Сщмч. Михаила пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260722.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line says «пресвитера» and name page 9690 «иерей», priest, which agree, so `presbyter` and the office `Priest` are both the source's own words. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: `ls -d saints/*nakaryakov*` is empty and a Cyrillic grep for «Накаряков» over every `saint.json` returns nothing. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 4 august (10 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 4 Αυγούστου (10 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 August 2026 (10 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -5,6 +5,11 @@
     {
       "form": "Св. Виктор",
       "lang": "sr"
+    },
+    {
+      "form": "Виктор Марсельский",
+      "lang": "ru",
+      "note": "Name page 14897 of days.pravoslavie.ru is «Виктор Марсельский, мч.»: the rank is stripped and the city kept, the bare forename standing over twenty-three folders in this corpus. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not on the Moscow Patriarchate’s list for 23 August (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Мч. Виктора Марсельского (ок. 290 г.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "note": "The day's third entry. THE IDENTIFICATION IS THE EPITHET AND NOT THE DAY, AND IT IS THE HARDEST READING OF THIS DAY. The line names «Виктора Марсельского», Victor of Marseille, with «ок. 290 г.», which falls inside the third century this folder already holds off the Ohrid Prologue; this folder is the corpus's only Victor of Marseille, and no other of the twenty-three Victor folders carries the city. The folder's one venerated row is SERBIAN and stands on the Julian 23 августа, a different menologion day, so this russian row stands on this day and nothing was moved — one attestation row per church. THE CORPUS ALSO HOLDS `victor-21-july`, a bare «Άγιος Βίκτωρ ο Στρατιώτης» off saint.gr's revised 21 July whose own page says «Δεν έχουμε λεπτομέρειες για τον βίο», with no year and no place, and it may well be this same soldier of Marseille on this same menologion day. NOTHING WAS DONE TO IT: it keeps its undocumented russian row, no row was moved and no folder merged, because the row this line asks for belongs on the man the line names whichever way that question falls, and the merge is the author's. `dates` UNCHANGED — «ок. 290 г.» is a hedged year inside the century already stored, and replacing a century with a hedged year is not a reading this line forces. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

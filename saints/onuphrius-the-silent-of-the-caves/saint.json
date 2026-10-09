@@ -11,6 +11,11 @@
       "form": "Ονούφριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Ιουλίου, «Όσιος Ονούφριος ο σιωπηλός εν τω Σπηλαίω», with the rank word and the bynames left off."
+    },
+    {
+      "form": "Онуфрий Печерский, Молчаливый",
+      "lang": "ru",
+      "note": "Name page 1674 of days.pravoslavie.ru is «Онуфрий Печерский, Молчаливый», which carries no rank word at all, so the whole heading is the form. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The page calls him a Russian ascetic, so this is the row a later reader will most want."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Прпп. Онуфрия молчаливого и Онисима затворника, Печерских (XII-XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, a line shared with Onesimus the Recluse, and the same menologion day as the folder's Greek row. This is the row the folder's own Greek note said a later reader would most want: saint.gr calls him a Russian ascetic and did not know his calendar. «Прпп.» is the `venerable` the folder's `types` already carry and «молчаливого» is the silence the display name already says. `dates` UNCHANGED and the two sources DO NOT QUITE AGREE: this line gives «(XII-XIII)», the twelfth or the thirteenth century, where the folder holds the twelfth alone off saint.gr; the wider interval is this calendar's and the narrower the folder's, and widening a stated century on the strength of a second source was not done. The reading life4283 was NOT opened. TWO HYMNS TAKEN where the folder had none of any calendar, both of them joint with Onesimus and both naming him; NO `related` ROW TO HIM WAS ADDED, a hymn not being a life. His companion `onesimus-of-the-caves` ALREADY CARRIES A VENERATED RUSSIAN ROW ON THE JULIAN 4 октября and was withheld entirely under the unresolved §4 conflict."
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Преблаженнии и Богоноснии отцы наши Онуфрие и Онисиме,/ яко стяжавшии дерзновение ко Господу/ равноангельным своим житием,/ егоже ради обогати Христос нетлением и чудесы мощи ваша,/ молим вас прилежно:/ испросите душам нашим очищение/ и велию и богатую милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Тропарь преподобных Онуфрия молчаливого и Онисима затворника, Печерских, в Ближних пещерах», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Most blessed and God-bearing fathers of ours, Onuphrius and Onesimus, who gained boldness before the Lord by your life equal to the angels, for whose sake Christ enriched your relics with incorruption and with wonders: earnestly we entreat you, ask cleansing for our souls, and great and abundant mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Богатство благодати и сыноположения/ стяжавше многими подвиги и добродетельми,/ ихже ради Христос всели души ваша в Небесная селения Своя,/ даровав благодать нетления и чудес мощем вашим,/ к нимже притекающе, вопием:/ радуйтеся, Онуфрие и Онисиме, отцы наши,/ ликов иночествующих похвало и удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июля ст. ст. — «Кондак преподобных Онуфрия молчаливого и Онисима затворника, Печерских, в Ближних пещерах», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260721.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained the riches of grace and of adoption by many labours and virtues, for whose sake Christ settled your souls in His heavenly dwellings and granted your relics the grace of incorruption and of wonders: running to them we cry, rejoice, Onuphrius and Onesimus, our fathers, the praise and the adorning of the ranks of monastics.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
