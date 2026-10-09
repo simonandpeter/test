@@ -40,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion day this folder's Romanian, Greek and Serbian rows already carry, so there is no second day and none is noted. The line is the joint feast of the two, «Славных и всехвальных первоверховных апостолов Петра и Павла (67).», and the day page's two hymns are joint likewise; both are written on both folders. **NO RUSSIAN NAME FORM WAS STORED AND THAT IS DELIBERATE.** The name link gives «Апостол Петр» and «Апостол Павел», and stripping the rank word leaves a bare forename which this corpus already holds many times over — «Петр» alone has eleven holders and «Павел» more — so storing it would widen a fold for no gain, the calendar having given no epithet and no surname to either apostle. Withholding the form is the answer the previous Russian block took three times on 22 июня. **A YEAR IS WRITTEN WHERE THE FOLDER HAD NONE.** The line's «(67)» is the only year any of this folder's four sources has given, and it is recorded as a traditional death year for both apostles with the line quoted; no other calendar here dates them at all. The index of lives this calendar links was NOT read whole — this folder's life is already written out of its other sources — and that is said plainly rather than claimed otherwise."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июня ст. ст. — «Славных и всехвальных первоверховных апостолов Петра и Павла (67).»",
+        "url": "https://days.pravoslavie.ru/Days/20260629.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -137,9 +147,50 @@
         "rendered": "site"
       },
       "model": "Τοὺς ἀσφαλεῖς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Апостолов первопрестольницы/ и вселенныя учителие,/ Владыку всех молите/ мир вселенней даровати// и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июня ст. ст. — «Тропарь апостолов», глас 4. Joint to the two apostles, as the day is: the title names neither and the text addresses the pair. This folder already holds the Greek and the Romanian copies of the same two hymns, and the English here is the rendering those already carry, the Slavonic saying what they say.",
+        "url": "https://days.pravoslavie.ru/Days/20260629.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "First-enthroned of the Apostles and teachers of the whole world, intercede with the Master of all things that He grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твердыя и боговещанныя проповедатели,/ верх апостолов Твоих, Господи,/ приял еси в наслаждение благих Твоих и покой:/ болезни бо онех и смерть приял еси паче всякаго всеплодия,// Едине, сведый сердечная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июня ст. ст. — «Кондак апостолов», глас 2. Joint to the two apostles, as the day is: the title names neither and the text addresses the pair. This folder already holds the Greek and the Romanian copies of the same two hymns, and the English here is the rendering those already carry, the Slavonic saying what they say.",
+        "url": "https://days.pravoslavie.ru/Days/20260629.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The sure and God-inspired heralds, the chief of Thy disciples, Thou hast taken to Thyself, O Lord, into the enjoyment of Thy good things and into rest; for Thou didst accept their labours and their death above every whole burnt offering, O Thou who alone knowest the secrets of the heart.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 67,
+      "latest": 67,
+      "display": "67",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind until today and none of its other three calendars gives one. days.pravoslavie.ru prints the year in the joint line for 29 июня ст. ст.: «Славных и всехвальных первоверховных апостолов Петра и Павла (67).». It is the year of the joint feast of the two apostles and is recorded as traditional for both."
+    }
   }
 }

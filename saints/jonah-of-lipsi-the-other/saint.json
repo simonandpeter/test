@@ -1,0 +1,49 @@
+{
+  "slug": "jonah-of-lipsi-the-other",
+  "display_name": "Jonah of Lipsi (the other)",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Иона Липсийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 29 июня ст. ст., «Иона Липсийский, (другой), мч.» (name page 14287), with the grade word left off. The line itself, «Прмчч. Неофита, Ионы, Неофита, Ионы и Парфения Липсийских.», gives the five forenames in the genitive and one epithet for all of them; the name link gives the epithet to each man separately, and that is the form stored. Where the link carries «(другой)», the other, that is the calendar's editorial mark telling two men of one name apart and is not part of the name, so it is not stored."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page 14287 carries the name, the grade «мч.» and «День памяти: 29 июня», and no prose at all. He is the fourth of the five the line names, and the line’s own grade for the five together is «Прмчч.», venerable-martyrs, which is what `types` records; the name link’s «мч.» is the same grade unraised and is recorded here. The line gives no year and no reign, so this folder has no `dates`. The calendar distinguishes the two Neophytus and the two Jonah with «(другой)» inside one name link of each pair — on name page 14285 for Neophytus and 14287 for Jonah, which is the first of the one pair and the second of the other in the line’s own order. That marker is not part of a name, so the two folders of each pair store the same Russian form and a fold key naming both holders is written in this commit."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июня ст. ст. — «Прмчч. Неофита, Ионы, Неофита, Ионы и Парфения Липсийских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260629.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 12 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

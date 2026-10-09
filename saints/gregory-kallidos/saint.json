@@ -1,0 +1,59 @@
+{
+  "slug": "gregory-kallidos",
+  "display_name": "Gregory (Kallidos) of Heraclea",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Григорий (Каллидос)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 29 июня ст. ст., «Святитель Григорий (Каллидос), митрополит Ираклийский и Редестосский» (name page 14281), with the rank word at the head of the string and the rank word standing inside it both left off, and with the two sees left off as well: the link joins them with «и» and a name form is not a clause. The surname in parentheses is the calendar's own and stays. The line itself, «Свт. Григория, митр. Ираклийского (1925) (Конст.).», gives the forename in the genitive, one see abbreviated, and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1925,
+      "latest": 1925,
+      "display": "1925",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 29 июня ст. ст.: «Свт. Григория, митр. Ираклийского (1925) (Конст.).». The calendar gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page 14281 heads «День памяти: 29 июня» and lists no other day. The line’s trailing «(Конст.)» marks him a saint of the Church of Constantinople, which this calendar prints alongside its own; it is a note on the entry and not a second day. No folder of this corpus held the surname «Каллидос» or the see «Ираклийский» before today (`grep -rl`, 9 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июня ст. ст. — «Свт. Григория, митр. Ираклийского (1925) (Конст.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260629.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 12 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
