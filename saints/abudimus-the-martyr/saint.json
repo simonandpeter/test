@@ -11,6 +11,11 @@
       "form": "Αβούδιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Ιουλίου, «Άγιος Αβούδιμος», with the rank word left off. The summary verse over the notice has the dative «Ἀβουδίμῳ»."
+    },
+    {
+      "form": "Авудим Тенедосский",
+      "lang": "ru",
+      "note": "Name page 42 of days.pravoslavie.ru is «Авудим Тенедосский, мч.»; the rank is stripped and the epithet kept. The day line declines him as «Авудима» with no epithet."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июля ст. ст. — «Мч. Авудима (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260715.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. The folder's GREEK row already stands on this very menologion day, the 15th, and its Romanian row on the 16th — one row per church and neither moved. Name page 42 is «Авудим Тенедосский, мч.», and TENEDOS IS WHAT THIS CALENDAR ADDS: the folder's display name is the bare «Abudimus» because neither doxologia nor saint.gr gave him a place. It is recorded here and the folder was NOT renamed. `dates` UNCHANGED: the line gives «(IV)» where the folder holds 303–305 off doxologia.ro's own words, and the century contains that interval rather than contradicting it. NO READING: the day page links no life page for this entry, and the day page prints no hymn under his name."
     },
     {
       "church": "romanian",
