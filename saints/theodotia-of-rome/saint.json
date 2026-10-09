@@ -1,0 +1,62 @@
+{
+  "slug": "theodotia-of-rome",
+  "display_name": "Theodotia of Rome",
+  "names": [
+    {
+      "form": "Феодотия Римская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2720, «Феодотия Римская, мц.», with the rank word after the comma left off. The day line gives «Мчч. Феодота и Феодотии», the bare forename in the genitive, so the epithet is read from the name link. `fk.mjs` returns no holder for «римская феодотия»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 108,
+      "latest": 108,
+      "display": "108",
+      "basis": "traditional",
+      "note": "The year the day line prints for the pair: «Мчч. Феодота и Феодотии (108).» Neither her name page nor his gives anything further, and no life page exists for either."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Мчч. Феодота и Феодотии (108).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. THE CALENDAR GIVES NO LIFE: the line links to the two names and to no reading, and name page 2720 prints the title and «День памяти: 4 июля» and nothing else. She is named in one breath with the martyr Theodotus, whose name page 2222 gives him the same epithet «Римский» and the same single day; that man is the folder `theodotus-martyr-4-july`, which the Greek calendar already keeps on this menologion day, and a `related` row joins them both ways. `theodotia-of-asia` was read before this folder was made and is a different woman — a venerable of the Julian 1 November whose name page lists that day and no other. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 July 2026, the civil day of this Julian 4 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "theodotus-martyr-4-july"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Tatiana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 iulie, «Sfinții Țari Mucenici Romanov: Nicolae și Alexandra și fiii lor Olga, Tatiana, Maria, Anastasia și Alexei», with the rank words left off."
+    },
+    {
+      "form": "Татиана (Романова)",
+      "lang": "ru",
+      "note": "The nominative on days.pravoslavie.ru’s name link for this folder’s place in the day line, «Татиана (Романова), великая княжна, страстотерпица», with the rank words after the comma left off. The day line itself declines the name into the genitive and gives no surname, so the surname is read from the name link and is part of the form. `fk.mjs` returns no other holder for it."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Страстотерпцев Императора Николая II, Императрицы Александры , царевича Алексия , великих княжен Ольги , Татианы , Марии , Анастасии и страстотерпца праведного Евгения врача (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, a single line for eight sufferers. This Julian 4 July is the civil 17 July, which is the day this folder’s Romanian row already keeps, so the two rows are the same commemoration reckoned in the two styles and neither was moved. `dates` unchanged — the line’s year, 1918, is the year the folder already holds. The line names an eighth sufferer beside the seven of the family, the court physician, who is now the folder `eugene-botkin`. The reading behind the line, life4872, WAS OPENED, for that man’s folder; it is the family’s own story and nothing in it was taken into this folder. The day page prints four hymns and a величание under the two headings of the royal passion-bearers; the величание is of a kind this corpus does not store (`schema` allows troparion and kontakion only) and was left. The name link behind this folder’s place in the line gives «Татиана (Романова), великая княжна, страстотерпица», Tatiana (Romanova), grand duchess, passion-bearer, which is where the stored form comes from."
     },
     {
       "church": "romanian",
@@ -79,6 +94,54 @@
         "text": "Today the right-believing people come to bow down with glory before the seven honoured Martyr-Tsars, the much-suffering, who made themselves a living church of Christ: Nicholas and Alexandra, Alexei, Olga, Tatiana, Maria and Anastasia. For these, fearing neither chains nor sufferings of many kinds, enduring death and the tearing of their holy bodies at the hands of those who fought against God, have won boldness in prayer before the Heavenly King and Master. And so with love we cry out to them: O holy much-suffering Martyr-Tsars, heed the voice of repentance and the tears of the people, showing the Russian land to be a planting that has truly put out the love of the right Christian faith; guard the country from war among ourselves, and ask of God peace for the whole world and great mercy for our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Днесь, благовернии людие, светло почтим/ седмерицу честную царственных страстотерпец,/ Христову едину домашнюю Церковь:/ Николая и Александру,/ Алексия, Ольгу, Татиану, Марию и Анастасию./ Тии бо, уз и страданий многоразличных не убоявшеся,/ от богоборных смерть и поругание телес прияша/ и дерзновение ко Господу в молитве улучиша./ Сего ради к ним с любовию возопиим:/ о святии страстотерпцы,/ гласу покаяния и стенанию народа нашего вонмите,/ землю Российскую в любви к Православию утвердите,/ от междоусобныя брани сохраните,/ мир мирови у Бога испросите// и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Тропарь царственных страстотерпцев», глас 4 — the troparion of the royal passion-bearers, which names the seven of the family one by one",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today, O right-believing people, let us brightly honour the honourable seven of the royal passion-bearers, the one household Church of Christ: Nicholas and Alexandra, Alexis, Olga, Tatiana, Maria and Anastasia. For they, not fearing bonds and sufferings of many kinds, received death and the dishonouring of their bodies at the hands of the fighters against God, and obtained boldness before the Lord in prayer. Therefore let us cry out to them with love: O holy passion-bearers, hearken to the voice of our people’s repentance and groaning, establish the Russian land in love for Orthodoxy, keep it from civil strife, obtain peace for the world from God, and great mercy for our souls.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Избраннии Царем царствующих и Господем господствующих/ от рода царей Российских,/ благовернии мученицы,/ муки душевныя и смерть телесную за Христа приимшии/ и венцы Небесными увенчавшиися,/ к вам, яко покровителем нашим милостивым,/ с любовию благодарне вопием:/ радуйтеся, царственнии страстотерпцы,// за Русь Святую пред Богом усерднии молитвенницы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Кондак царственных страстотерпцев», глас 8 — the kontakion of the royal passion-bearers",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chosen by the King of kings and the Lord of lords out of the line of the Russian tsars, O right-believing martyrs, who received sufferings of soul and death of body for Christ and were crowned with heavenly crowns: to you, as to our merciful protectors, we cry out with love and thanksgiving: rejoice, O royal passion-bearers, fervent intercessors before God for Holy Russia.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Надежда царя мученика/ с царицею и чады и слуги укрепи,/ и к Твоей любви окрыли, будущий им покой предвозвестивши,/ тех молитвами, Господи, помилуй нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Ин кондак святым Царственным мученикам», глас 6 — a second kontakion of the royal passion-bearers",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Hope strengthened the tsar-martyr with his queen and his children and his servants, and gave them wings for thy love, foretelling to them the rest that was to come. By their prayers, O Lord, have mercy on us.",
+        "rendered": "site"
+      },
+      "tone": "Глас 6"
     }
   ],
   "text": {

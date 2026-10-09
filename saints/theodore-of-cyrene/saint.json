@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιουλίου, «Άγιος Θεόδωρος επίσκοπος Κυρήνης της Λυβύης», with the rank word and the see left off."
+    },
+    {
+      "form": "Феодор Киринейский",
+      "lang": "ru",
+      "note": "The name and the see out of days.pravoslavie.ru’s name page 2193, «Святитель Феодор, епископ Киринейский, сщмч.», with the rank word before the name and the two words after it left off; the day line gives the same two words in the genitive, «Сщмч. Феодора , еп. Киринейского». `fk.mjs` returns no other holder for «киринеискии феодор»."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Сщмч. Феодора , еп. Киринейского (310).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry, and this folder’s man: the same menologion day its Greek row keeps, the same grade of hieromartyr and the same see. `dates` NOT CHANGED, and the two readings do not agree: this folder holds «under Diocletian (284–304)» as a floruit off the Greek page, and the Russian line gives the year 310, which falls outside that interval — six years after Diocletian’s abdication, inside the persecution that outlived him. Both readings are recorded and neither was altered; the discrepancy is an open question in the reader’s report. The reading life4157 behind the line WAS NOT OPENED. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

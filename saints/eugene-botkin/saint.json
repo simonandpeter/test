@@ -1,0 +1,64 @@
+{
+  "slug": "eugene-botkin",
+  "display_name": "Eugene (Botkin)",
+  "names": [
+    {
+      "form": "Евгений (Боткин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14918, «Евгений (Боткин), врач, страстотерпец», with the two words after the comma left off. The day line gives the forename alone with his trade — «страстотерпца праведного Евгения врача (1918)» — so the surname is read from the name link and is part of the form; the reading the line links spells it out in prose as «доктор Евгений Боткин». `fk.mjs` returns no holder for «боткин евгении»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "passion-bearer",
+    "righteous",
+    "physician"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line gives the whole company: «…и страстотерпца праведного Евгения врача (1918).» The reading life4872 puts the shooting at Yekaterinburg and names him among those killed with the family. No year of birth is given on either page and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Страстотерпцев Императора Николая II, Императрицы Александры , царевича Алексия , великих княжен Ольги , Татианы , Марии , Анастасии и страстотерпца праведного Евгения врача (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, in which he is the eighth and last sufferer named, after the seven of the imperial family: «…и страстотерпца праведного Евгения врача (1918).» `types` are the line’s own three words — «страстотерпца», «праведного», «врача». Name page 14918 lists «Дни памяти: 26 января (Новомуч.) , 4 июля»; the 26 января page was NOT read, and no `new-martyr` type was written, the line grading him a passion-bearer and not a martyr. NO HYMN WAS TAKEN: the day page prints four hymns and a величание for the royal passion-bearers, and every one of them addresses the seven of the family — «седмерицу честную царственных страстотерпец» — or the tsar with his wife, his children and his servants; none is printed under his name. The reading behind the line, life4872, is the family’s and names him twice, which is where this folder’s life comes from. `related` to `nicholas-ii` both ways, on that reading’s own sentences. No folder was found for him: `grep -ril botkin saints/` returns nothing and the corpus’s fifteen `eugene-` folders are other men."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 July 2026, the civil day of this Julian 4 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "nicholas-ii"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

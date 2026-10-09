@@ -1,0 +1,61 @@
+{
+  "slug": "sava-trlajic",
+  "display_name": "Sava Trlajić",
+  "names": [
+    {
+      "form": "Савва (Трлаич)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14512, «Святитель Савва (Трлаич), епископ Горнокарловацкий, сщмч.», with the rank word before the name and the see and grade after it left off. The day line gives the forename alone in the genitive, «Саввы , еп. Горнокарловацкого», so the surname is read from the name link and is part of the form. The Serbian spelling of his name is not on either page and is not invented here. `fk.mjs` returns no holder for «савва трлаич»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмчч. Саввы , еп. Горнокарловацкого (1941) (Серб.).» Neither page gives a year of birth and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Сщмчч. Саввы , еп. Горнокарловацкого (1941) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry, printed with the plural abbreviation of the hieromartyrs over the one name it then gives, and marked «(Серб.)» — a saint of the Serbian church which the Russian calendar keeps. THE CALENDAR GIVES NO LIFE: name page 14512 prints the title, «День памяти: 4 июля», a link to icons and a link to an article on Православие.Ru, and no reading. `new-martyr` was NOT written: the line grades him «Сщмч.» only, and his name page lists no «26 января (Новомуч.)» day beside his own, unlike the Russian new martyrs of the same decades. `office` is «епископ» reduced to the word the four locale packs carry; the see, Горнокарловацкий, is in the display name and in the life. No folder was found for him: `grep` over the corpus for Karlovac in Cyrillic and in Latin returns nothing, and the six `sava-` folders are Serbian saints of other centuries."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs, which is the Serbian source this corpus reads. He is a bishop of the Serbian church and that source is the one that would know him, but it was not opened for this draft (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
