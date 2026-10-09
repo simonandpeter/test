@@ -1,0 +1,61 @@
+{
+  "slug": "john-steblin-kamensky",
+  "display_name": "John (Steblin-Kamensky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Стеблин-Каменский)",
+      "lang": "ru",
+      "note": "Name page 9643 of days.pravoslavie.ru gives the surname the day line omits. The grade and the rank are stripped and the surname kept, as BRIEF-RUSSIAN §3 asks. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "attested",
+      "note": "The day line closes «(1930)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Сщмчч. Александра , Георгия , Кирилла , Иоанна , Сергия и Феодора пресвитеров, прмчч. Тихона , Георгия и мчч. Евфимия и Петра (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry carries TEN NAMES ON ONE LINE and is written as ten folders, one per man, the line naming each by forename and the name pages adding the surnames. THE LINE AND THE NAME PAGES DO NOT AGREE ON THREE OF THE TEN GRADES, and where they differ the name page is taken, being the statement about the man rather than about the group, and the line is recorded here: the line puts Cyril among the «сщмчч. … пресвитеров» where name page 14741 is «Кирилл (Вязников), иеромонах, прмч.», and it puts Tikhon and the second George among the «прмчч.» where name pages 9184 and 9206 are «Тихон (Кречков), архимандрит, сщмч.» and «Георгий (Пожаров), иеромонах, сщмч.» NO LIFE PAGE: the day page links none for this entry, so the line and the ten name pages are the whole of the record for every one of them. NO `related` ROWS WERE WRITTEN among the ten: the line groups them and gives them one year, but nothing read says they suffered together, and BRIEF-RUSSIAN §2 is explicit that sharing a day is not a relation. `new-martyr` is written on all ten as this corpus writes it for this calendar's twentieth-century entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. The day page prints no hymn under any of the ten names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 2 august (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 2 Αυγούστου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 August 2026 (9 October 2026)."
+    }
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}
