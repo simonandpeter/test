@@ -21,6 +21,11 @@
       "form": "Акила",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 14. јул ст. ст., „Св. апостол Акила.“ — „Св.“ is not a rank and „апостол“ is the rank `types` already carries, so the bare forename is the whole form; the heading gives no by-name, no see and no place. `foldchk.py` returns **no holder** and `sr-foldpred.mjs` predicts a new key with no other holder — which is a surprise worth recording, the corpus holding four Aquila folders, because none of the other three stores a Serbian form. **The string therefore folds with nobody while the day-number collides with `aquila-14-july` exactly**, and the two facts are independent: a fold is a name and a collision is a day."
+    },
+    {
+      "form": "Акила",
+      "lang": "ru",
+      "note": "Name page 96 of days.pravoslavie.ru is «Святой Акила, апостол от 70-ти»: every word beside the name is the rank, so the form is bare. The same string is already this folder's Serbian form and `fk.mjs` returns this folder alone for «акила», so the bare form widens no fold."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Ап. от 70-ти Акилы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the rank settles which Aquila: «Ап. от 70-ти», apostle of the Seventy, which is the `apostle` this folder's `types` already carry — and NOT `aquila-14-july`, the bare «Άγιος Ακύλας» saint.gr keeps as a martyr on the same revised day with no further word, which is left exactly as it stands. This folder's SERBIAN row already stands on this very menologion day, the Julian 14 July, and its Romanian and Greek rows on the revised 13 February — one row per church and nothing moved. `dates` unchanged; the folder has none and the line's «(I)» would be its first, off a Roman numeral. The reading id96 was NOT opened. Two hymns taken, a troparion and a kontakion, where the folder had none."
     },
     {
       "church": "romanian",
@@ -118,6 +133,38 @@
       },
       "english": {
         "text": "Having loved Christ and been enlightened in mind, united in the faith and in an honourable marriage, Aquila and Priscilla were heads of a church in their own house, and fellow workers and protectors of Paul the light-giver. Therefore let us honour them and imitate them.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Апостоле святый Акило,/ моли Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Тропарь апостола Акилы», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle Aquila, pray to the merciful God that He may grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко велие солнце, Церковь тя стяжавши,/ славне Акило,/ светлостьми учения твоего просвещает/ верно чтушия тя,// Господень апостоле.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Кондак апостола Акилы», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a great sun the Church has gained thee, O glorious Aquila, and with the brightness of thy teaching it enlightens those who faithfully honour thee, O apostle of the Lord.",
         "rendered": "site"
       }
     }

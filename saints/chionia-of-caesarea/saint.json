@@ -1,0 +1,58 @@
+{
+  "slug": "chionia-of-caesarea",
+  "display_name": "Chionia of Caesarea",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Хиония Кесарийская (Палестинская)",
+      "lang": "ru",
+      "note": "Name page 2750 of days.pravoslavie.ru is «Хиония Кесарийская (Палестинская), мц.»; the rank is stripped and the rest kept whole, parentheses and all. The day line declines her as «Хионии» with no epithet. `fk.mjs` returns NONE: the corpus keeps `chionia-of-aquileia`, burnt at Aquileia about 304 and kept on the Julian 16 April, and `chionia-arkhangelskaya`, a confessor of 1945 on the Julian 4 October, and neither is she."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 308,
+      "display": "308",
+      "basis": "traditional",
+      "note": "The day line closes «(308)» and the reading states it flat: «В 308 году сестры Алевтина и Хиония после безжалостных истязаний были сожжены». No year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июля ст. ст. — «Мч. Павла и мцц. Алевтины (Валентины) и Хионии (308).»",
+        "url": "https://days.pravoslavie.ru/Days/20260716.html",
+        "year": 2026
+      },
+      "note": "The day's second entry carries three names and THIS IS THE ONLY ONE OF THE THREE THIS BATCH WRITES; the other two are withheld and named in the report. The reading life4244 is four sentences: the three came from EGYPT, were brought to Caesarea in Palestine under Maximinus (305–313), confessed Christ without fear of the governor, and in 308 «сестры Алевтина и Хиония» were burned after merciless torments while Paul was beheaded — so Chionia and Alevtina are SISTERS by this reading. The other two are withheld because the corpus already keeps `valentina-of-caesarea` and `paul-with-valentina-and-ennatha` with VENERATED russian rows on the Julian 10 февраля, both of the same Caesarea and the same year 308, and the second folder's own Romanian note has already read doxologia's second day for him, 18 iulie with a Valentina and 308, as that February pair — so this day may be a second memory of the two of them, which BRIEF-RUSSIAN §4 forbids drafting, or two further people, which nothing read settles. NO FOLDER HOLDS A CHIONIA OF CAESAREA, which is why she alone is written. The day page prints no hymn under any of the three names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 July 2026 (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -16,6 +16,11 @@
       "form": "Иларије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Св. муч. Прокл и Иларије.“ — „Св. муч.“ is the rank and the second of the two bare forenames the heading enumerates is the whole of the form; «companion of Proclus» in the display name is the corpus’s own. `foldchk.py` returns `hilary-of-poitiers`, `sr`, and `sr-foldpred.mjs` predicts that one other holder, so this is the second folder on the form and the heading offers nothing to break it with."
+    },
+    {
+      "form": "Иларий Калиптский",
+      "lang": "ru",
+      "note": "Name page 925 is «Иларий Калиптский, мч.»; the rank is stripped. The day line declines him as «Илария» without the epithet."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Мчч. Прокла и Илария (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The same first entry, the second of its two names, and the folder's Romanian, Greek and Serbian rows already stand on this menologion day. Name page 925 is «Иларий Калиптский, мч.». No `dates` were written: the line's «(II)» would be the folder's first and is a Roman numeral. The reading life4220 was NOT opened. The day's single kontakion names Proclus and Hilary together and stands in both folders."
     },
     {
       "church": "romanian",
@@ -125,6 +140,22 @@
       },
       "english": {
         "text": "Your martyrs, O Lord, in their contending received from you our God the crown of incorruption; for having your strength they brought down the tyrants, and shattered the powerless insolence of the demons. By their entreaties, Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко денница звезда, возсия/ мучеников Прокла и Илария/ честное страдание,/ предозаряющи нас чудес светлостьми./ Темже празднуем память вашу:/ Христа Бога молите,// да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Кондак мучеников Прокла и Илария», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like the morning star, the honourable suffering of the martyrs Proclus and Hilary has shone forth, enlightening us beforehand with the brightness of wonders. Therefore we keep your memory: pray to Christ God that He may save our souls.",
         "rendered": "site"
       }
     }

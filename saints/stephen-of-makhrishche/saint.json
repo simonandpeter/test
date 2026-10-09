@@ -12,6 +12,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιουλίου, «Όσιος Στέφανος ηγούμενος της Μονής Μάχριστσκ», with the rank word and the office left off. No Slavonic or Russian form is recorded because the page prints none; it writes the monastery in Greek letters as «Μάχριστσκ»."
+    },
+    {
+      "form": "Стефан Махрищский",
+      "lang": "ru",
+      "note": "Name page 2058 of days.pravoslavie.ru is «Преподобный Стефан Махрищский»; the rank is stripped. The day line declines him as «Стефана Махрищского»."
     }
   ],
   "dates": {
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian saint, so a Russian row is likely to be findable, but it has not been looked for."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Прп. Стефана Махрищского (1406).»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry and the same menologion day as the folder's Greek row. THE YEAR AGREES EXACTLY: the line closes «(1406)» and the folder holds 1406 off saint.gr's «Οσιος Στεφανος Ηγουμενος Της Μονης Μαχριστσκ (; - 1406)», and the Makhrishche of the display name and of the folder's `office` is the «Махрищский» of the line. `dates` unchanged. The reading id2058 was NOT opened. Two hymns taken, a troparion and a kontakion, where the folder had none."
     },
     {
       "church": "romanian",
@@ -60,5 +75,39 @@
   },
   "related": [
     "cyril-of-belozersk"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Православия ревнителю,/ благочестия наставниче и чистоты,/ ищущим спасения путеводительный светильниче,/ монашествующих Богодухновенное удобрение,/ преподобнаго Сергия духовный собеседниче,/ Стефане премудре,/ ученьми и добродеяньми твоими души просветил еси/ и пустыни населил еси,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Тропарь преподобного Стефана Махрищского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O zealot of Orthodoxy, teacher of piety and of purity, guiding lamp for those who seek salvation, God-inspired adornment of monastics, spiritual companion of the venerable Sergius, most wise Stephen: by thy teachings and thy good deeds thou didst enlighten souls and didst people the wilderness. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Чистотою душевною божественно вооружився,/ блаженную жизнь совершил еси,/ в пустыню, яко во град, вселився,/ благодать приял еси от Бога/ исцеляти недуги приходящим к честней твоей раце/ и всех возвышати к Божественней высоте,/ темже, имея дерзновение ко Святей Троице,/ поминай нас, чтущих память твою, да зовем ти:/ радуйся, преподобне Стефане, постником удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Кондак преподобного Стефана Махрищского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Armed divinely with purity of soul, thou didst accomplish a blessed life, settling in the wilderness as in a city; and thou didst receive grace from God to heal the sicknesses of those who come to thy honourable shrine and to raise all to the divine height. Therefore, having boldness before the Holy Trinity, remember us who honour thy memory, that we may cry to thee: rejoice, venerable Stephen, adornment of the fasters.",
+        "rendered": "site"
+      }
+    }
   ]
 }

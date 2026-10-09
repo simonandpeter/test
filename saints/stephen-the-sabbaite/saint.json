@@ -16,6 +16,11 @@
       "form": "Стефан Саваит",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 13. јул ст. ст., „Преп. Стефан Саваит.“ — „Преп.“ is the rank, which `types` already carries, and „Саваит“ is a **by-name and not a see**: the body says in so many words that it is what he was called after the monastery he struggled in, „по чему је и прозван Саваит“, so §6 keeps it. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder — and the by-name is what keeps it so, a bare «Стефан» folding with a great many men."
+    },
+    {
+      "form": "Стефан Савваит",
+      "lang": "ru",
+      "note": "Name page 2068 of days.pravoslavie.ru is «Стефан Савваит, прп.»; the rank is stripped. The day line declines him as «Стефана Савваита». The by-name is kept because a bare «Стефан» is held by thirteen folders in this corpus, and it is kept even though it folds onto `stephen-the-sabaite`, which is keyed."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июля ст. ст. — «Прп. Стефана Савваита (794).»",
+        "url": "https://days.pravoslavie.ru/Days/20260713.html",
+        "year": 2026
+      },
+      "note": "The day's third entry and the same menologion day as the folder's Romanian, Greek and Serbian rows. THE YEAR DECIDES IT: the line closes «(794)», which is exactly this folder's `death`, read off doxologia.ro — and 794 is the figure that tells this man from `stephen-the-sabaite`, the writer of canons the same calendar keeps on 28 октября with «(IX)» and a death of 807. `dates` unchanged. The reading life4229 was NOT opened. One troparion taken, in глас 5, where the folder had two already. AND THE FORM ADDED HERE FOLDS ONTO THAT OTHER FOLDER: «Стефан Савваит», with two в, is already `stephen-the-sabaite`'s own russian form, so the fold «савваит стефан» goes from one holder to two and is keyed in this commit. The corpus already keeps «саваит стефан», with one в, as a read key over the same two folders, and that key's open question — whether the two are one man — stands untouched here; nothing was merged."
     },
     {
       "church": "romanian",
@@ -121,6 +136,22 @@
       },
       "english": {
         "text": "Having virtue for a divine crown, you crowned the Church of Christ splendidly in words and in deeds; for you were shown, father Stephen, a hierarch and a wise speaker of God, a lyre of divine songs. Therefore crown us too with your radiance.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Воздержанием житие украси и страсти умертвив,/ посрамил еси вражия прилоги, отче Стефане,/ и преложися к Богу, чудотворец показася,/ в вечней славе со Ангелы ликуя,/ с ними же моли помиловати души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июля ст. ст. — «Тропарь преподобного Стефана Савваита», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260713.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst adorn thy life with abstinence, and putting the passions to death thou didst put the enemy’s assaults to shame, O father Stephen; and passing over to God thou wast shown to be a wonderworker, rejoicing with the angels in eternal glory. With them pray that our souls may be shown mercy.",
         "rendered": "site"
       }
     }

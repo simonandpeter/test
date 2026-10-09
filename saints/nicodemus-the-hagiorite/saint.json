@@ -10,6 +10,11 @@
       "form": "Nicodim Aghioritul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 iulie, «Sfântul Cuvios Nicodim Aghioritul», with the rank words left off."
+    },
+    {
+      "form": "Никодим Святогорец",
+      "lang": "ru",
+      "note": "Name page 1630 of days.pravoslavie.ru is «Никодим Святогорец, прп.»; the rank is stripped. The day line declines him as «Никодима Святогорца»."
     }
   ],
   "sex": "male",
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Прп. Никодима Святогорца (1809).»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry and the same menologion day as the folder's Romanian and Greek rows. THE YEAR AGREES EXACTLY: the line closes «(1809)» and the folder holds a death of 1809 off saint.gr, which dates it to 14 July — this very day. «Святогорец» is the Hagiorite of the display name. `dates` unchanged. The reading life4135 was NOT opened. FIVE HYMNS ARE PRINTED UNDER HIS NAME AND THREE WERE TAKEN. The day page prints two troparia in глас 3 and two kontakia in глас 8 which are the SAME TEXT twice over: the two troparia differ only in the final verse separator, and the two kontakia in that and in one letter, «озаряеши» against «озарявши». One of each pair is taken, the first as the page prints it, and the doubling is recorded here rather than stored twice; the «Ин тропарь» in глас 1 is a different text and is taken as well. The troparion names no one else; the Stephen of Makhrishche troparion on the same page names the venerable Sergius, which is a hymn text and not a life."
     },
     {
       "church": "romanian",
@@ -108,5 +123,55 @@
     "thomas-defourkinos",
     "troadius",
     "veronica-of-caesarea-philippi"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Мудрости благодатию, отче, украшенный,/ труба богогласная показался еси Духа/ и добродетелей наставник, Никодиме Богоглаголивый,/ всем бо подаеши спасительная учения,/ жития чистаго показуя сияние/ богатством Божественных твоих словес,// имиже, яко свет, мирови возсиял еси.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Тропарь преподобного Никодима Святогорца», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the grace of wisdom, O father, thou wast shown to be a God-voiced trumpet of the Spirit and a teacher of the virtues, O Nicodemus who speakest of God; for thou givest saving teachings to all, showing the radiance of a pure life by the riches of thy divine words, through which thou hast shone upon the world as a light.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Светило Афонское, и Наксии отрасль,/ и Церкве всея богодухновеннаго учителя,/ Никодима, вернии, да почтим,/ иже, исполнялся мудрости Божественный,/ учения бо небесная и обильная изливает вопиющим:/ слава прославльшему тя Христу,/ слава венчавшему тя,/ слава подающему тобою нам помощь.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Ин тропарь преподобного Никодима Святогорца», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour the luminary of Athos and offshoot of Naxos, the God-inspired teacher of the whole Church, Nicodemus, who being filled with divine wisdom pours out heavenly and abundant teachings upon those who cry: glory to Christ who glorified thee, glory to Him who crowned thee, glory to Him who through thee gives us help.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко таинника изряднейшаго добродетельнаго жития и благочестия,/ богоноснаго учителя Православия, празднует тя Церковь,/ с Небес бо дарования приемый,/ озаряеши Божественными твоими писании вопиющих ти:// радуйся, отче Никодиме.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Кондак преподобного Никодима Святогорца», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church keeps thy feast as a most excellent initiate of the virtuous life and of piety and a God-bearing teacher of Orthodoxy; for having received gifts from heaven thou dost illumine by thy divine writings those who cry to thee: rejoice, O father Nicodemus.",
+        "rendered": "site"
+      }
+    }
   ]
 }

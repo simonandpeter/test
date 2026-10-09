@@ -16,6 +16,11 @@
       "form": "Дије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. јул ст. ст., „Преп. Дије.“ — «Преп.» is the rank word and is left off by §6. The form is the Serbian vernacular and not the Greek Δίος or the Romanian Die this folder already holds; the body prints the same nominative a second time, „И поживе св. Дије тачно још 15 година, и настави многе на пут спасења, многе исцели, многима поможе у разним бедама и невољама, па најзад предаде душу своју Господу, коме целога живота верно послужи.“, so nothing is restored by a reader here. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` and `sr-foldpred.mjs` `new key, other holders: 0 (none)`. **Four characters, so it is inside duplicate detection and not under its floor.**"
+    },
+    {
+      "form": "Дий Константинопольский",
+      "lang": "ru",
+      "note": "Name page 592 of days.pravoslavie.ru is «Дий Константинопольский, игумен»; the grade is stripped and the epithet kept. The day line declines him as «Дия» with no epithet at all."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Прп. Дия (ок. 430).»",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "note": "The day's second entry and the same menologion day as the folder's Romanian, Greek and Serbian rows. `dates` UNCHANGED: the line's «(ок. 430)» is hedged where the folder holds a flat 430 off the Ohrid Prologue, and it is the same year. THE EPITHET IS NOT THE FOLDER'S: name page 592 is «Дий Константинопольский, игумен», of Constantinople, where the display name has Antioch. Nothing read reconciles the two cities; the difference is recorded here and the folder was NOT renamed. «игумен» is the `abbot` already in `types`. The reading life4265 was NOT opened. TWO HYMNS TAKEN and the first is THE VENERABLE WONDERWORKER'S COMMON, «Пустынный житель, и в телеси Ангел», printed with his name set into it — the same common this wave copied for the two Sisoes folders on 6 July, and the page spells it «исцелявши» as it did there."
     },
     {
       "church": "romanian",
@@ -123,6 +138,38 @@
       },
       "english": {
         "text": "Armed by God with purity of soul, and handling unceasing prayer as a spear, you cut mightily through the phalanxes of the demons, Dios, our wonderworking father, interceding without ceasing for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, Богоносе отче наш Дие:/ постом, бдением, молитвою Небесная дарования приим,/ исцелявши недужныя и души верою притекающих ти./ Слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Тропарь преподобнаго Дия», глас 1 — the venerable wonderworker’s common, printed whole under his name with his name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness and an angel in the body and a wonderworker wast thou shown to be, O God-bearing father Dius: by fasting, by vigil and by prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who run to thee with faith. Glory to Him who gave thee strength, glory to Him who crowned thee, glory to Him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Чистотою души божественне вооружився,/ непрестанную молитву, яко копие, приим державно,/ разсекл еси демонов полки,/ чудотворче, отче наш Дие,/ моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Кондак преподобнаго Дия», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Armed divinely with purity of soul, and taking unceasing prayer mightily as a spear, thou didst cut through the ranks of the demons, O wonderworker, our father Dius: pray unceasingly for us all.",
         "rendered": "site"
       }
     }

@@ -26,6 +26,11 @@
       "form": "Голиндуха",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Св. мученица Голиндуха.“ — „Св.“ is not a rank and „мученица“ is the rank `types` already carries, so the bare forename is the whole form. **Her baptismal name Марија is not stored**: the body gives it, the heading does not, and §4 and §6 together make a stored form the heading’s and not the body’s. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder — had Марија been taken off the body it would have folded with a great many women, which is the second reason not to take it."
+    },
+    {
+      "form": "Голиндуха Персидская",
+      "lang": "ru",
+      "note": "Name page 2448 is «Голиндуха (в крещении Мария) Персидская, исповедница»: the rank is stripped, and the parenthetical «в крещении Мария», in baptism Maria, is a clause about a second name and not part of this one, so it is recorded in the row note and not in the form. The folder already holds «Maria» as a Romanian and a Greek form."
     }
   ],
   "sex": "female",
@@ -44,8 +49,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Прав. Вероники Палестинской (I) Мц. Голиндухи , во св. Крещении Марии (591).»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The second woman of the day's third entry. Name page 2448 is «Голиндуха (в крещении Мария) Персидская, исповедница» — the Persia of the display name, the Maria this folder already stores as a Romanian and a Greek form, and a grade of `confessor` the `types` do not carry and which was NOT added, the Serbian row's own book calling her a martyr as this line does. THE YEARS DISAGREE AND `dates` IS UNCHANGED: the line closes «(591)» where the folder holds 587 off the Ohrid Prologue, read as its own figure. The reading life4224 was NOT opened and the day page prints no hymn under her name."
     },
     {
       "church": "romanian",

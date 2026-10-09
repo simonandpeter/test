@@ -11,13 +11,28 @@
       "form": "Ονήσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιουλίου, «Όσιος Ονήσιμος ο θαυματουργός», with the rank word left off."
+    },
+    {
+      "form": "Онисим Магнезийский",
+      "lang": "ru",
+      "note": "Name page 1666 of days.pravoslavie.ru is «Онисим Магнезийский, прп., исповедник»; both grades are stripped. The day line gives the place as a clause, «иже в Магнезии», and the name page as an epithet, which is the form stored."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июля ст. ст. — «Прп. Онисима чудотворца, иже в Магнезии (ок. 284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260714.html",
+        "year": 2026
+      },
+      "note": "The day's third entry and the same menologion day as the folder's Greek row. Name page 1666 is «Онисим Магнезийский, прп., исповедник» — the Magnesia of the line's «иже в Магнезии», in Magnesia — and «чудотворца» on the line is the `wonderworker` of the display name, while `venerable` is already in `types`. A grade of `confessor` stands on the name page and was NOT added: the line does not repeat it and no reading exists to read it from. NO READING AT ALL: the day page links no life page for this entry. `dates` unchanged — the folder has none, and «(ок. 284-305)» is a hedged span of a reign and would be its first. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

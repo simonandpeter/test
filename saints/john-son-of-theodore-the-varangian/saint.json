@@ -1,0 +1,79 @@
+{
+  "slug": "john-son-of-theodore-the-varangian",
+  "display_name": "John, son of Theodore the Varangian",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Иоанн Печерский, Киевский",
+      "lang": "ru",
+      "note": "Name page 1000 of days.pravoslavie.ru is headed «Иоанн Печерский, Киевский, отрок». «отрок», a child, stands where the calendar puts a rank and is left out of the form and recorded here; the epithet «Печерский» is the calendar's own, the story being told in the Paterikon of the Kyiv Caves, and he was no monk of that house. The day line declines him as «сына его Иоанна»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 983,
+      "latest": 983,
+      "display": "983",
+      "basis": "traditional",
+      "note": "The day line closes «(983)», which is the year kept here. life4222 offers 12 July 978 as an alternative for the same deaths and that disjunction is recorded and not used."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Мчч. Феодора варяга и сына его Иоанна , в Киеве (983).»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry names father and son on one line and this is the son. Readings life6877 and life4222 behind index id2180 were both read; neither gives him a life apart from his father's. The day's single troparion names them both and stands in both folders."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 25 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 25 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 July 2026 (9 October 2026)."
+    }
+  ],
+  "related": [
+    "theodore-the-varangian"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Страстотерпцы Господни,/ Феодоре со Иоанном отроком, славнии!/ Блаженна земля Русская, напившаяся кровьми вашими,/ и радуется отечество наше,/ в немже вы первии, идолы посрамивше,/ Христа со дерзновением исповедаете/ и за Него пострадаете./ Того, яко Блага, молите,/ до скончания века в стране нашей Церковь Православную непоколебиму утвердити/ и всех русских людей во истинней вере и благочестии сохранити.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Тропарь мучеников Феодора варяга и сына его Иоанна», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Passion-bearers of the Lord, glorious Theodore with the youth John! Blessed is the Russian land, watered with your blood, and our fatherland rejoices, in which you were the first to put the idols to shame and to confess Christ with boldness and to suffer for Him. Pray to Him, as to the Good One, that to the end of the age He may establish the Orthodox Church unshaken in our country and keep all the Russian people in the true faith and in godliness.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

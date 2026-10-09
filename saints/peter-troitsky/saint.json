@@ -1,0 +1,60 @@
+{
+  "slug": "peter-troitsky",
+  "display_name": "Peter (Troitsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Петр (Троицкий)",
+      "lang": "ru",
+      "note": "Name page 13750 of days.pravoslavie.ru is «Петр (Троицкий), диакон, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Петра диакона». THE SURNAME IS WHAT KEEPS THIS FORM OUT OF A FOLD: eleven folders in this corpus share a bare «Петр», and `fk.mjs` on «Петр (Троицкий)» returns NONE — the ten Troitsky folders the corpus keeps carry other forenames."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июля ст. ст. — «Сщмч. Петра диакона (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260715.html",
+        "year": 2026
+      },
+      "note": "The day's fifth and last entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page behind it. «диакон» on the name page and «диакона» on the line are the `deacon` in `types`; NO `office` was written, the word being absent from the four locale packs, which is the reading the twentieth-century deacons of the Julian 10 July were given. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 28 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 28 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 July 2026 (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

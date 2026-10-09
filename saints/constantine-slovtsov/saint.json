@@ -1,0 +1,61 @@
+{
+  "slug": "constantine-slovtsov",
+  "display_name": "Constantine (Slovtsov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Константин (Словцов)",
+      "lang": "ru",
+      "note": "Name page 13752 of days.pravoslavie.ru gives the surname the day line omits. The grade and the rank are stripped and the surname kept, as BRIEF-RUSSIAN §3 asks. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The day line closes «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Сщмч. Константина пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page behind it. «иерей» on the name page and «пресвитера» on the line are the `presbyter` and the office `Priest`, a string the four locale packs carry. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 2 august (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 2 Αυγούστου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 August 2026 (9 October 2026)."
+    }
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

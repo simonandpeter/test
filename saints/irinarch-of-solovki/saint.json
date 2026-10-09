@@ -1,0 +1,115 @@
+{
+  "slug": "irinarch-of-solovki",
+  "display_name": "Irinarch of Solovki",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "office": "Abbot of Solovki",
+  "names": [
+    {
+      "form": "Иринарх Соловецкий",
+      "lang": "ru",
+      "note": "Name page 1088 of days.pravoslavie.ru is «Иринарх Соловецкий, игумен»; the grade is stripped and the epithet kept. The day line declines him as «Иринарха Соловецкого». `fk.mjs` returns NONE: the corpus keeps `irenarchus` as «Иринарх Севастийский» on the Julian 28 ноября and `irenarchus-the-recluse` as «Иринарх Ростовский» on the Julian 13 января, and the epithet tells all three apart."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1628,
+      "latest": 1628,
+      "display": "1628",
+      "basis": "attested",
+      "note": "The day line closes «(1628)» and the reading gives the day as well: «Преставился святой 17 июля 1628 года», which is the day the calendar keeps him on. No year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июля ст. ст. — «Прп. Иринарха Соловецкого (1628).»",
+        "url": "https://days.pravoslavie.ru/Days/20260717.html",
+        "year": 2026
+      },
+      "note": "The day's second entry. No folder held him: two other men of the name stand on other days with other epithets, `irenarchus` the martyr of Sebasteia and `irenarchus-the-recluse` of Rostov, and `fk.mjs` on the stored form returns NONE. The reading life4251 was read whole. «игумен» on the name page is the `abbot` in `types` and the `office` Abbot of Solovki, a string the four locale packs already carry for `zosimas-of-solovki`. Three hymns taken, two troparia and a kontakion. THREE OTHER FOLDERS ARE NAMED IN THE LIFE AND EACH GETS A RELATED ROW IN BOTH DIRECTIONS, and the reading's own days settle all three against this corpus: Zosimas «память 17 апреля» and this corpus keeps him on the Julian 17 April, Sabbatius «память 27 сентября» and 27 September, Eleazar «память 13 января» and 13 January. The abbot Antony whom he succeeded in 1614 has no folder and is named without a link."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 30 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 30 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 July 2026 (9 October 2026)."
+    }
+  ],
+  "related": [
+    "zosimas-of-solovki",
+    "sabbatius-of-solovki",
+    "eleazar-of-anzersky"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Постническое по Бозе житие возлюбив,/ вся плотская мудрования духу покорил еси/ и воздержанием страсти умертвил еси,/ во трудех, и бдениих, и молитвах образ быв добродетели,/ тем монашескаго жития наставник показался еси,/ отче преподобне Иринарше./ Моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июля ст. ст. — «Тропарь преподобного Иринарха Соловецкого», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260717.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved the ascetic life according to God, thou didst subject all the reasonings of the flesh to the spirit and didst put the passions to death by abstinence; and being a pattern of virtue in labours, in vigils and in prayers, thou wast shown to be a teacher of the monastic life, O venerable father Irinarch. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Бодростию ума жизнь твою управляя,/ прилежанием Бога взыскуя,/ отонудуже и стаду монахов предстатель показался еси,/ и, благодать прием целити души и телеса/ приходящим с верою к честному гробу твоему,/ Иринарше, отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июля ст. ст. — «Ин тропарь преподобного Иринарха Соловецкого», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260717.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Governing thy life by the wakefulness of thy mind and seeking God with diligence, thou wast shown thereby to be a leader of a flock of monks; and having received grace to heal the souls and the bodies of those who come with faith to thy honourable tomb, O Irinarch our father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Чистотою душевною Божественныя благодати дары стяжав,/ блаженную жизнь совершил еси,/ и путь ко спасению всем указал еси,/ и богомудрый начальник монахов явился еси./ Темже имея дерзновение ко Святей Троице,/ поминай нас, чтущих память твою, да зовем ти:/ радуйся, преподобне Иринарше, монашествующих похвало.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июля ст. ст. — «Кондак преподобного Иринарха Соловецкого», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260717.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained the gifts of divine grace by purity of soul, thou didst accomplish a blessed life, and didst show the way of salvation to all, and wast shown to be a God-wise leader of monks. Therefore, having boldness before the Holy Trinity, remember us who honour thy memory, that we may cry to thee: rejoice, venerable Irinarch, boast of monastics.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

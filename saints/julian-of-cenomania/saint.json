@@ -1,0 +1,60 @@
+{
+  "slug": "julian-of-cenomania",
+  "display_name": "Julian of Cenomania",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Иулиан Кеноманийский",
+      "lang": "ru",
+      "note": "Name page 1139 of days.pravoslavie.ru is headed «Святитель Иулиан Кеноманийский, епископ»; the rank and the grade are stripped and the by-name kept. The day line declines him as «Иулиана , еп. Кеноманийского»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The day line closes «(I)» and the reading ends «Святитель скончался глубоким старцем (I)» — he died a very old man, first century. No year anywhere, and the century is the whole of what the source gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июля ст. ст. — «Свт. Иулиана , еп. Кеноманийского (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260713.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. No folder held him: the corpus keeps twenty-odd men named Julian and none on this menologion day, none a bishop of Cenomania and none made bishop by the apostle Peter — `fk.mjs` on «Иулиан Кеноманийский» returns NONE. THE SOURCE PLACES CENOMANIA IN ITALY, NOT IN GAUL: the reading has Peter send him «в Галлию», to Gaul, and then has him arrive at «Кеноманию (район реки По на севере нынешней Италии)» and settle outside «вероятно, Кремона». That is the source's own gloss and its own hedge, it is quoted in the life and NO `locations` were written from it. The reading's other hedge, that he may be the Simon called the leper, is likewise given as an opinion and is quoted as one. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 26 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 26 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 July 2026 (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

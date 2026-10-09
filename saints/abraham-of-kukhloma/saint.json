@@ -11,6 +11,11 @@
       "form": "Αβραάμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιουλίου, «Όσιος Αβραάμ του Κουκχλόμα», with the rank word and the byname left off. The byname is the page's own Greek spelling of a Russian place and the display name's «Kukhloma» is that spelling carried into English letters; the page itself says nothing about the place."
+    },
+    {
+      "form": "Аврамий Галичский, Чухломской, Городецкий",
+      "lang": "ru",
+      "note": "Name page 33 of days.pravoslavie.ru is «Аврамий Галичский, Чухломской, Городецкий, игумен, прп.»; the grade and the rank are stripped and all three epithets kept in the page's order. The day line gives two of the three. The hymns spell the forename «Авраамие» and «Авраамие Богоносне» in the vocative; the nominative the name page prints is «Аврамий» with one а and is what is stored. `fk.mjs` returns NONE."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The page calls him a Russian monk, so this is the row a later reader will most want."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Прп. Аврамия Галичского, Чухломского (1375).»",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "note": "The day's second entry and the same menologion day as the folder's Greek row. Name page 33 is «Аврамий Галичский, Чухломской, Городецкий, игумен, прп.» — THREE epithets where the display name has one, Kukhloma, which is the «Чухломской» of the line in another romanisation; Galich and Gorodets are recorded here and the folder was NOT renamed. «игумен» is an `abbot` the folder's `types` do NOT carry and it was NOT added, the line not repeating it and the folder's own `types` being `venerable, monk` off saint.gr. NO `dates`: the folder has none and the line's «(1375)» would be its first; the two hymns, headed «на преставление», on his repose, do not date it. The reading life4274 was NOT opened. Two hymns taken where the folder had none. Both name the monastery of the venerable Sergius, which is a hymn text and NOT a `related` row. NO RUSSIAN NAME FORM WAS WRITTEN: name page 946 is «Пророк Илия», every word beside the name being the rank, so the only form the calendar offers is the bare «Илия» — and `fk.mjs` shows «илия» already held by three folders on a collision row the gate prints UNREAD. Adding a fourth holder would widen a fold nobody has read, on the strength of a form that distinguishes nothing, so the form is withheld and named in the report — the same refusal made for `serapion-the-new` on 13 июля. The display name’s «Тишбитянин» is in no heading this calendar prints and was not invented into a form."
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От мирскаго мятежа изшед,/ в тихое пристанище, преподобнаго Сергия обитель, притекл еси,/ и тамо равноангельное житие пожив,/ во страну Галичскую пришел еси,/ идеже веру Христову насаждая/ и новокрещенныя люди от суеверий поганских очищая,/ многи и велики подвиги подъял еси/ и, обители четыри создав,/ иноков лики добре упасл еси/ и ко Христу Спасу привел еси,/ Егоже моли, преподобне отче Авраамие, спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Тропарь на преставление преподобного Аврамия Галичского, Чухломского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gone out from the tumult of the world, thou didst run to a quiet haven, the monastery of the venerable Sergius, and having lived there a life equal to the angels thou didst come into the land of Galich, where, planting the faith of Christ and cleansing the newly baptised people of pagan superstitions, thou didst take up many and great labours; and having founded four monasteries thou didst shepherd the ranks of the monks well and didst bring them to Christ the Saviour. Pray to Him, venerable father Abraham, to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Во обители Сергия преподобнаго житию иноческому добре навык,/ вящшаго ради безмолвия и подвига/ в пустыню удалитися возжелел еси,/ и, Духом Божиим водимь,/ в пределы земли Галичския пришел еси,/ и тамо в пустыни икону Матере Господни чудесно обрел еси,/ с Неюже великая и славная совершив,/ даже до предел Чухломских достигл еси/ и отсюду в райския обители вселился еси,/ Авраамие Богоносне, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Кондак на преставление преподобного Аврамия Галичского, Чухломского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having learned the monastic life well in the monastery of the venerable Sergius, thou didst desire for the sake of greater silence and struggle to withdraw into the wilderness; and led by the Spirit of God thou didst come into the borders of the land of Galich, and there in the wilderness thou didst wondrously find the icon of the Mother of the Lord, and having accomplished great and glorious things with her thou didst reach the borders of Chukhloma, and from there thou didst pass into the mansions of paradise, O God-bearing Abraham our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

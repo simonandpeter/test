@@ -1,0 +1,101 @@
+{
+  "slug": "simon-of-volom",
+  "display_name": "Simon of Volom",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Симон Воломский, Устюжский",
+      "lang": "ru",
+      "note": "Name page 2013 of days.pravoslavie.ru is headed «Священномученик Симон Воломский, Устюжский»; the rank is stripped and the two epithets kept. The day line declines him as «Симона Воломского» without the second epithet."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1586,
+      "latest": 1586,
+      "display": "1586",
+      "basis": "traditional",
+      "note": "Both readings give it flat: «родился в 1586 г. в крестьянской семье» and «родился в 1586 году»."
+    },
+    "death": {
+      "earliest": 1641,
+      "latest": 1641,
+      "display": "1641",
+      "basis": "traditional",
+      "note": "The day line closes «(1641)»; life6846 has «мученически скончался в 1641 г.» and life4223 «был злодейски убит в своем монастыре 12 июля 1641 года», the day the calendar keeps him on."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Прп. Симона Воломского (1641).»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry. No folder held him: `ls -d saints/simon*` returns eleven, of which `simon-of-soyga` (Julian 24 ноября 1562) and `simon-of-yurievets` (4 ноября 1584) are the two this calendar already keeps, both other men on other days. Index id2013 lists two readings and both were read, life6846 and life4223. The two hymns on the day page under his name are taken. The three gradings the source gives him disagree and the disagreement is in the life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 25 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 25 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 July 2026 (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От юности твоея вперив ум твой к Богу, блаженне Симоне,/ мира же отвергся, вселился еси в пустыню непроходимую,/ и тамо, от Господа укрепляемь,/ в молитвах и пощениих доблественне пожил еси,/ и жизнь твою страдальчески/ убиением от сынов противления скончал еси./ Сего ради со преподобными и мученики венчался еси,/ с ними же и ныне предстоиши Престолу Пресвятыя Троицы./ Сию моли, молим тя,/ оставление подати согрешений наших/ и даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Тропарь преподобного Симона Воломского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having set thy mind upon God from thy youth, blessed Simon, and having renounced the world, thou didst settle in a trackless wilderness, and there, strengthened by the Lord, thou didst live valiantly in prayer and fasting, and didst end thy life as a sufferer, slain by the sons of disobedience. Therefore wast thou crowned together with the venerable and the martyrs, and with them thou standest now before the throne of the Most Holy Trinity. Entreat it, we pray thee, to grant the forgiveness of our sins and to give us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Возложив себе Богу, паче всех возлюбленному,/ от юности, преподобномучениче, Тому от всея души любовию последовал еси,/ мира же тленная ни во что же вменив,/ и в непроходимую пустыню вселился еси,/ и в ней добре противу невидимаго врага подвизався,/ и, яко светозарное солнце, во вся концы возсиял еси,/ и от человеков ненавистных нуждную смерть, и мечное посечение,/ и ножи разбодение, и огненное опаление приял еси,/ и, радуяся, пришел еси к Небесным чертогом./ И ныне со Безплотными лики Владычнему Престолу предстоя,/ поминай нас, чтущих память твою, да зовем ти:/ радуйся, Симоне преподобне, пустынный жителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Кондак преподобного Симона Воломского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having given thyself from thy youth to God, who is beloved above all things, O venerable martyr, thou didst follow Him with all thy soul in love; and counting the corruptible things of the world as nothing, thou didst settle in a trackless wilderness, and there didst contend well against the unseen enemy, and like a radiant sun thou didst shine upon every quarter; and from hateful men thou didst receive a violent death — the stroke of the sword, the piercing of knives and the burning of fire — and rejoicing thou didst come to the heavenly mansions. And now, standing with the bodiless choirs before the Master’s throne, remember us who honour thy memory, that we may cry to thee: rejoice, venerable Simon, dweller of the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

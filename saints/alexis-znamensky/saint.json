@@ -1,0 +1,61 @@
+{
+  "slug": "alexis-znamensky",
+  "display_name": "Alexis (Znamensky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Алексий (Знаменский)",
+      "lang": "ru",
+      "note": "Name page 14293 of days.pravoslavie.ru gives the surname the day line omits. The grade and the rank are stripped and the surname kept, as BRIEF-RUSSIAN §3 asks. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Сщмч. Алексия пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page behind it. THE TWO HALVES OF THE SOURCE GRADE HIM DIFFERENTLY — the line says «пресвитера», presbyter, and the name page «протоиерей», archpriest; `presbyter` and the office `Priest` are taken, those being the words the locale packs carry, and «протоиерей» is recorded and nowhere written. `new-martyr` as elsewhere on this day, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him — the corpus keeps `john-znamensky` and no Alexis of the name. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 2 august (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 2 Αυγούστου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 August 2026 (9 October 2026)."
+    }
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

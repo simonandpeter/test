@@ -16,6 +16,11 @@
       "form": "Вероника",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Св. Вероника.“ — „Св.“ is not a rank and there is nothing else in the heading, so the bare forename is the whole of what this calendar gives her; «of Caesarea Philippi» in the display name is the corpus’s own and is not in this book at all. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder."
+    },
+    {
+      "form": "Вероника",
+      "lang": "ru",
+      "note": "Name page 10120 is «Праведная Вероника» and the day line declines her as «Вероники Палестинской». The bare forename is stored because «Палестинская» stands in the line and not on the name page, and it is the one word this corpus already renders as Caesarea Philippi; `fk.mjs` returns this folder alone for «вероника», the same string already being its Serbian form, so the bare form widens no fold."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Прав. Вероники Палестинской (I) Мц. Голиндухи , во св. Крещении Марии (591).»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The day's third entry carries two women on one line and this is the first. Name page 10120 is «Праведная Вероника», which is the `righteous` this folder's `types` already hold, and the line's «(I)» the first century; the folder's Romanian, Greek and Serbian rows all stand on this same menologion day. `dates` unchanged — the folder has none and a Roman numeral would be its first. The line calls her «Палестинская» where the display name has Caesarea Philippi, the city of the woman with the issue of blood, which is in Palestine; no rename. The reading id10120 was NOT opened and the day page prints no hymn under her name."
     },
     {
       "church": "romanian",

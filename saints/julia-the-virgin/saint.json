@@ -11,6 +11,11 @@
       "form": "Јулија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 16. јул ст. ст., „Св. муч. Јулија девица.“ — „Св.“ is not a rank, „муч.“ and „девица“ are the two ranks `types` already carries, and the bare forename is what is left; «the Virgin» in the display name is the corpus’s own rendering of the second of those ranks and §6 keeps a rank out of a stored form. `foldchk.py` returns `julia-of-ancyra`, `sr`, and `sr-foldpred.mjs` predicts that one other holder, so this is the second folder on the form and the heading offers nothing but ranks to break it with."
+    },
+    {
+      "form": "Иулия Карфагенская, Корсиканская",
+      "lang": "ru",
+      "note": "Name page 2537 of days.pravoslavie.ru is «Иулия Карфагенская, Корсиканская, дева, мц.»; the rank and «дева» are stripped and both epithets kept in the page's order. The day line declines her as «Иулии девы» with no epithet."
     }
   ],
   "sex": "female",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июля ст. ст. — «Мц. Иулии девы (ок. 440 или 613).»",
+        "url": "https://days.pravoslavie.ru/Days/20260716.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry and the same menologion day as the folder's Romanian and Serbian rows; the Greek calendar does not keep her, as the folder's own `dates` note records. Name page 2537 is «Иулия Карфагенская, Корсиканская, дева, мц.» — Carthage and Corsica, two epithets where the folder had none, and «дева» is the `virgin` in `types`. Nothing read says how the two places stand to one another. The folder's display name is the bare «Julia the Virgin» because doxologia gave a rank and a name only; the two epithets are recorded here and the folder was NOT renamed. `dates` UNCHANGED, AND THE LINE IS WHY: it prints «(ок. 440 или 613)», about 440 OR 613, a disjunction of two hedged years a hundred and seventy years apart, where the folder holds the sixth century off the Ohrid Prologue's unhedged „Чесно пострада у VI столећу“ — which contains the later of the two and not the earlier. A disjunction is not an interval. The reading life4246 was NOT opened. The day page prints no hymn under her name."
     },
     {
       "church": "romanian",

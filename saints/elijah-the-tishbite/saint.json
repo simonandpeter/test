@@ -26,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Пророка Илии (IX до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "note": "The day's first entry and the same menologion day as the folder's Romanian, Greek and Serbian rows. The rank is the `prophet` the folder's `types` already carry. NO `dates`: the line gives «(IX до Р.Х.)», the ninth century before Christ, which would be this folder's first date of any kind and is a Roman numeral with an era attached; no reader of this wave has been told to write a first date off one, and a negative interval is a shape this corpus has not been shown to hold. The reading id946 was NOT opened. TWO HYMNS TAKEN where the folder had none of this calendar's, and A THIRD BLOCK WAS LEFT: the page prints «Величание» under his name, a magnification, and this corpus's `kind` vocabulary holds only troparion and kontakion — the same refusal made for `vladimir-the-great` on 15 июля. The troparion names Elisha, which is a hymn text and NOT a `related` row."
     },
     {
       "church": "romanian",
@@ -122,6 +132,38 @@
       },
       "english": {
         "text": "Prophet and foreseer of the great works of God, Elijah of the great name, who by your word stayed the rain-pouring clouds, intercede for us before the only lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Во плоти Ангел,/ пророков основание,/ вторый Предтеча пришествия Христова, Илия славный,/ свыше пославый Елиссееви благодать/ недуги отгоняти/ и прокаженныя очищати,// темже и почитающим его точит исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Тропарь пророка Илии», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "An angel in the flesh, the foundation of the prophets, the second forerunner of the coming of Christ, glorious Elijah, who didst send down from above the grace to Elisha to drive away sicknesses and to cleanse lepers: therefore he pours out healings also upon those who honour him.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Пророче и провидче великих дел Бога нашего,/ Илие великоимените,/ вещанием твоим уставивый водоточныя облаки,// моли о нас Единаго Человеколюбца.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Кондак пророка Илии», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O prophet and seer of the great works of our God, Elijah of great name, who by thy word didst stay the water-bearing clouds: pray for us to the only Lover of mankind.",
         "rendered": "site"
       }
     }

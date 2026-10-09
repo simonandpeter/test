@@ -16,6 +16,11 @@
       "form": "Кирик",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 15. јул ст. ст., „Св. муч. Кирик и Јулита.“ — „Св. муч.“ is the rank, which `types` already carries, and the heading enumerates two bare forenames with no by-name, no place and no kinship in them; «son of Julitta» in the display name is the corpus’s own. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder, which on a five-letter bare forename is the second piece of luck this range has had and is **the opposite of what the day’s other form got**."
+    },
+    {
+      "form": "Кирик Тарсийский",
+      "lang": "ru",
+      "note": "Name page 1220 of days.pravoslavie.ru is «Кирик Тарсийский, младенец, мч.»; the rank and «младенец» are stripped and the epithet kept. The day line declines him as «Кирика» with no epithet at all."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июля ст. ст. — «Мчч. Кирика и Иулитты (ок. 305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260715.html",
+        "year": 2026
+      },
+      "note": "The day's first entry, two names on one line, and the same menologion day as the folder's Romanian, Greek and Serbian rows. Name page 1220 is «Кирик Тарсийский, младенец, мч.» — Tarsus, which the display name does not carry and which is recorded here rather than used to rename, and «младенец», an infant, which is the child the folder's own `dates` note describes as suffering before his mother. `dates` UNCHANGED: the line's «(ок. 305)» is hedged where the folder holds a flat 304 off the Ohrid Prologue, and the two are a year apart. The reading life4241 was NOT opened. THE FOUR HYMNS ARE JOINT AND STAND IN BOTH FOLDERS, which is this run's standing treatment: three of them name mother and son together, and the fourth, «Ин тропарь» in глас 4, is THE MARTYRS' COMMON — «Мученицы Твои, Господи, во страданиих своих венцы пришла нетленныя от Тебе, Бога нашего» — printed under their names, which BRIEF.md §4 says is their service and is copied whole. «пришла» where the common ordinarily has «прияша» IS THE PAGE OWN SPELLING, and it is copied as printed."
     },
     {
       "church": "romanian",
@@ -113,6 +128,70 @@
       },
       "english": {
         "text": "Julitta, the fair martyr of Christ, together with Cyricus her three-year-old lamb, stood brightly before the judge's seat, preaching with courage the name of Christians; neither of them was dismayed at the threats of the tyrants, and now, crowned, they rejoice in the heavens, standing before Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко лоза благоплодная, Иулитто честная,/ грозд зрел принесла еси Цареви, всех Богу,/ сына твоего Кирика славнаго,/ мучением того богатно украсивши/ и твоею кровию навершивши,/ тем и дарова тебе Вышний возмездие в Вышних,/ идеже ликующе, помяните нас, мученицы терпеливодушнии.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июля ст. ст. — «Тропарь мучеников Кирика и Иулитты», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260715.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a fruitful vine, O honoured Julitta, thou didst bring a ripe cluster to the King and God of all — thy glorious son Cyricus — adorning him richly with his martyrdom and completing it with thy own blood. For this the Most High gave thee thy reward on high, where, rejoicing, remember us, O martyrs of patient soul.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы пришла нетленныя от Тебе, Бога нашего:/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июля ст. ст. — «Ин тропарь мучеников Кирика и Иулитты», глас 4 — the martyrs’ common, printed whole under their two names on this day and copied as the page has it",
+        "url": "https://days.pravoslavie.ru/Days/20260715.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their sufferings received incorruptible crowns from Thee our God; for having Thy strength they cast down the persecutors and crushed also the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Во объятиих носящи христомученица Иулитта Кирика,/ на подвизе мужески веселящися, взываше:/ Христос есть мучеников похвала.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июля ст. ст. — «Кондак мучеников Кирика и Иулитты», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260715.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Carrying Cyricus in her arms, Julitta the martyr of Christ, rejoicing manfully in the contest, cried out: Christ is the boast of the martyrs.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Жертва приятна, Богови приносима,/ и свидетель верен Христов являемь,/ с материю пострадал еси Иулиттою, Кириче славне,/ с неюже Христа Бога молити не престай о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 июля ст. ст. — «Ин кондак мучеников Кирика и Иулитты», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260715.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown to be a sacrifice acceptable and offered to God and a faithful witness of Christ, thou didst suffer with thy mother Julitta, O glorious Cyricus; cease not to pray with her to Christ God for us all.",
         "rendered": "site"
       }
     }

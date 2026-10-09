@@ -16,6 +16,11 @@
       "form": "Гаврил Иверски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, which is the epithet \"the Iberian\" the heading sets after all four names and which the entry's first sentence confirms belongs to all four. **His is the name the epithet stands immediately after**, so it is the one of the four where the reading needs least argument; it was read as distributing over all four for the reason given on his companions' forms. Measured: a bare «Гаврил» would have folded with nothing, so for him the kept epithet buys consistency with his three companions rather than a fold avoided. The icon is in the body and the book gives him no year."
+    },
+    {
+      "form": "Гавриил Святогорец, Иверский (Афонский)",
+      "lang": "ru",
+      "note": "Name page 451 is «Гавриил Святогорец, Иверский (Афонский), прп.»; the rank is stripped and the rest kept whole."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Прпп. Иоанна (998) (Груз.) и Гавриила (X) (Груз.) Святогорцев.»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The second Georgian of the day's fifth entry. Name page 451 is «Гавриил Святогорец, Иверский (Афонский), прп.» and the reading life6517 is the Gabriel of the Portaitissa: a hermit of Iveria near the Iviron house who was bidden by the Mother of God to walk on the sea and receive her icon, which is the man this folder keeps. ITS OWN PAGE PRINTS BOTH DAYS — «Дни памяти: 13 мая , 12 июля» — the first being the Julian day the folder's other three rows already stand on and the second the day page that listed him, so the two books agree and no day moved. THE CENTURY DISAGREES AND `dates` IS UNCHANGED: the line gives «(X)» where the folder holds 1028 off doxologia.ro. No hymn on the day page under his name."
     },
     {
       "church": "romanian",

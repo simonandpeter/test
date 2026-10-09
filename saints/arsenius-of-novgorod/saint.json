@@ -12,6 +12,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Αρσένιος του Νόβγκοροντ, ο διά Χριστόν σαλός», with the rank word left off. No Russian form is recorded: saint.gr prints none, and inventing one is not this reader's to do."
+    },
+    {
+      "form": "Арсений Новгородский",
+      "lang": "ru",
+      "note": "Name page 6740 is «Арсений Новгородский, прп., Христа ради юродивый»; both ranks are stripped. The day line declines him as «Арсения Новгородского»."
     }
   ],
   "dates": {
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his own day; it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Прп. Арсения Новгородского (1570).»",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry. The folder exists on saint.gr's revised 8 May and is the same man: its own `dates` note quotes saint.gr saying he reposed in peace «στις 12 Ιουλίου του 1570», which is this Julian day and this line's «(1570)» exactly, and the fool for Christ of Novgorod is what both call him. Name page 6740 is «Арсений Новгородский, прп., Христа ради юродивый», the `venerable` and `fool-for-christ` the folder's `types` already carry. `dates` unchanged, the years agreeing. The reading life1018 was NOT opened. Two hymns taken, a troparion and a kontakion, the folder having had none."
     },
     {
       "church": "romanian",
@@ -60,5 +75,39 @@
   },
   "related": [
     "pimen-of-verny"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Божественною любовию разгоревся,/ вся мирская пристрастия отринул еси,/ крест же Христов на рамо взем,/ во след Его изволил еси ходити,/ отечество твое оставив,/ Великаго Новаграда достигл еси/ и, работая Богови невозвратным помыслом,/ дарования чудотворений сподобился еси./ Темже, чтутце тя, преподобне Арсение, вопием:/ слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Тропарь преподобного Арсения Новгородского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled with divine love, thou didst cast off every worldly attachment, and taking the cross of Christ upon thy shoulder thou didst choose to walk after Him; leaving thy fatherland, thou didst reach Great Novgorod, and serving God with a mind that never turned back, thou wast granted the gift of wonderworking. Therefore, honouring thee, O venerable Arsenius, we cry: glory to Him who gave thee strength, glory to Him who crowned thee, glory to Him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Тяжелоносныя волны тимения отгна,/ и вся плотская двизания/ и, похоти палящия нивочтоже вменив,/ взем крест и пойде вслед Христа,/ Имже наставляемь, лукавыя сети до конца раздра/ и под ногами предложи,/ молимтися, преподобне отче Арсение,/ избави нас от належащих на ны соблазн,/ ты бо еси Великому Новуграду похвала и утверждение и сущим в печалех радость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июля ст. ст. — «Кондак преподобного Арсения Новгородского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260712.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "He drove off the heavy waves of the mire and all the motions of the flesh, and counting the burning passions as nothing he took up the cross and went after Christ; and guided by Him he tore the snares of the evil one utterly and laid them under his feet. We pray thee, venerable father Arsenius, deliver us from the temptations that press upon us, for thou art the praise and the strengthening of Great Novgorod and a joy to those in sorrow.",
+        "rendered": "site"
+      }
+    }
   ]
 }

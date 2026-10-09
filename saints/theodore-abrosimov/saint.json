@@ -1,0 +1,60 @@
+{
+  "slug": "theodore-abrosimov",
+  "display_name": "Theodore (Abrosimov)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Феодор (Абросимов)",
+      "lang": "ru",
+      "note": "Name page 13814 of days.pravoslavie.ru gives the surname the day line omits. The grade and the rank are stripped and the surname kept, as BRIEF-RUSSIAN §3 asks. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "The day line closes «(1940)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июля ст. ст. — «Прмч. Феодора (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260720.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page behind it. «послушник» is the office `Novice`, which the addendum names as one of the three grades the four locale packs carry; NO `monk` WAS WRITTEN IN `types`, a novice not being a monk, and the corpus's `types` vocabulary has no word for one. «Прмч.» is the `venerable-martyr`. `new-martyr` as elsewhere on this day, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 2 august (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 2 Αυγούστου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 August 2026 (9 October 2026)."
+    }
+  ],
+  "office": "Novice",
+  "text": {
+    "life": "life.md"
+  }
+}
