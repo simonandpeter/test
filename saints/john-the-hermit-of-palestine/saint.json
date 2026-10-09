@@ -1,0 +1,60 @@
+{
+  "slug": "john-the-hermit-of-palestine",
+  "display_name": "John the Hermit of Palestine",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Иоанн Отшельник",
+      "lang": "ru",
+      "note": "Read off the title of his life page, «Преподобный Иоанн Отшельник» (life1349), with the rank word left off. The name link behind his place in the day line (name page 994) carries the string «Иоанн Отшельник. Палестинский, прп.», which has the source's own full stop after «Отшельник» and then the epithet «Палестинский»; the punctuation was not altered to fold the epithet into one name form, and both strings are recorded here."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line «Прп. Иоанна отшельника (VI).» and life1349: «Преподобный Иоанн Отшельник преставился в VI веке в глубокой старости»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1349 heads «День памяти: 19 июня» and names no other day. He is not the corpus's `john-the-hermit-of-crete`, who is the Cretan hermit of the ninety-nine ascetics kept by saint.gr on 7 October; this man laboured in Palestine, in a cave near Jerusalem, and the Russian book gives him the sixth century."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Прп. Иоанна отшельника (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 2 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

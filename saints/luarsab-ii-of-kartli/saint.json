@@ -1,0 +1,67 @@
+{
+  "slug": "luarsab-ii-of-kartli",
+  "display_name": "Luarsab II of Kartli",
+  "types": [
+    "king",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Луарсаб II Карталинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Луарсаб II Карталинский, царь, мч.» (name page 1371), with the rank and grade words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1587,
+      "latest": 1587,
+      "display": "1587",
+      "basis": "attested",
+      "note": "His life page life1370: «Святой мученик благоверный царь Грузинский Луарсаб II родился в 1587 году.»"
+    },
+    "death": {
+      "earliest": 1622,
+      "latest": 1622,
+      "display": "1622",
+      "basis": "attested",
+      "note": "The year both the day line «Мчч. Арчила II, царя Иверского (744), и Луарсаба II, царя Карталинского (1622) (Груз.).» and his life page give: «принял мученическую смерть в 1622 году на 35 году своей жизни»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1370 heads «День памяти: 21 июня» and names no other day. The day line marks the entry «(Груз.)», a Georgian commemoration the Russian calendar keeps, and names him on one line with a king of a different century, which is the calendar's own arrangement and not a companionship."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Мчч. Арчила II, царя Иверского (744), и Луарсаба II, царя Карталинского (1622) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

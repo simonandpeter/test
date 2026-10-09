@@ -1,0 +1,100 @@
+{
+  "slug": "anthony-of-dymsk",
+  "display_name": "Anthony of Dymsk",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Антоний Дымский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 24 июня ст. ст., «Преподобный Антоний Дымский», with the rank word «Преподобный» left off. The line itself gives the two epithets «Дымского, Новгородского»; the name link gives the first of them only, and the stored form is the link's."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1157,
+      "latest": 1157,
+      "display": "about 1157",
+      "basis": "traditional",
+      "note": "Both readings on the index page id211 say «родился в Hовгоpоде около 1157 года», about the year 1157."
+    },
+    "death": {
+      "earliest": 1224,
+      "latest": 1224,
+      "display": "24 June 1224",
+      "basis": "attested",
+      "note": "The first reading on id211: «преставился 24 июня 1224 года»; the second gives the same day and year. The day line gives the year alone, «Прп. Антония Дымского, Новгородского (1224).»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 6,
+        "calendar": "julian",
+        "note": "Both of the readings the index page id211 carries head «Дни памяти: 17 января , 24 июня», and the first of them says in terms why: «Память преподобного Антония чтится 17 января, вероятно в день обретения мощей» — the January day is probably the day his relics were found, in 1330, and the June day is the day of his death. One row per church is the schema; the day that listed him is 24 июня, and the January day is recorded here. The two readings disagree on one point, and neither was preferred: the first has him tonsured at the Khutyn monastery and made abbot after its founder's death in 1192, the second has the founder appoint him in his own place while dying."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июня ст. ст. — «Прп. Антония Дымского, Новгородского (1224).»",
+        "url": "https://days.pravoslavie.ru/Days/20260624.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 7 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Добродетелей ревнителю, / пустынный житель, / подвижник веры Христа Бога нашего, / пощением и труды умертвивый плотская вожделения, / тезоимените великому Антонию, / егоже житию поревновал еси / и во егоже имя Божественный храм воздвигл еси, / купно с ним, преподобне Антоние, моли Спасителя всех, / да и нас сотворит победители плотских похотей / и храмы Духа Святаго, / по велицей Его милости.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июня ст. ст. — «Тропарь преподобного Антония Дымского», глас 4. Proper to him: «отче Антоние» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260624.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Zealot of the virtues, dweller of the wilderness, ascetic of the faith of Christ our God, who by fasting and by labours didst put to death the desires of the flesh, namesake of the great Antony, whose life thou didst emulate and in whose name thou didst raise a divine temple: together with him, venerable Anthony, pray to the Saviour of all, that He make us also victors over the lusts of the flesh and temples of the Holy Spirit, according to His great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Сверстник и подражатель преподобному Варлааму,/ послушание к нему истинное стяжав,/ достоин явился ему преемник,/ упасши до времене стадо его,/ добродетелем же его поревновав,/ в туюжде меру возраста достигл еси,/ безмолвие пустынное возлюбив,/ и угоден Господеви показался еси,/ первоначальный быв пустыни при езере Дымском,/ тем ти вопием:/ с преподобным Варлаамом, отче Антоние, моли о нас Бога,/ да даст нам такожде угодити Ему, якоже и ты,/ образе послушания и безмолвия тихий рачителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июня ст. ст. — «Кондак преподобного Антония Дымского», глас 6. Proper to him, and it names the iron hat and the lake his life page gives him.",
+        "url": "https://days.pravoslavie.ru/Days/20260624.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Coeval and imitator of the venerable Barlaam, having gained true obedience to him, thou wast shown a worthy successor to him, shepherding his flock for a time; and emulating his virtues thou didst attain the same measure of growth. Loving the stillness of the wilderness, thou wast shown pleasing to the Lord and wast the first founder of a desert place by the Dymsky lake. Therefore we cry to thee: with the venerable Barlaam, father Anthony, pray God for us, that He give us also to please Him as thou didst, O pattern of obedience and quiet lover of silence.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

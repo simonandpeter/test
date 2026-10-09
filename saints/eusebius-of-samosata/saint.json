@@ -16,6 +16,11 @@
       "form": "Јевсевије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 22. јун ст. ст., „Свештеномученик Јевсевије, епископ самосатски“ — Свештеномученик is the rank and „епископ самосатски“ is a second rank and the see, and §6 takes both off, as this folder’s Romanian note already says in its own words. The bare forename is what is left. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јевсевије», **which is the most surprising measurement of the day**: the corpus keeps a dozen Eusebius folders and this is the first `sr` form of the name on any of them, so a name that looks like a certain fold is not one. Measured, not suspected."
+    },
+    {
+      "form": "Евсевий Самосатский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 22 июня ст. ст., «Евсевий Самосатский, сщмч.», with the grade word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's three other venerated rows carry. His life page life1375 heads «День памяти: 22 июня» and names no other day; it was read whole and its account agrees with what this folder already carries — Nicaea, the act of the council for Meletius of Antioch, the two hands held out to Constantius, Julian, the Arian sent to Samosata, Gratian's recall, the roof-tile at Doliche, the forgiving of the woman and the nephew who followed him — so no paragraph was added and the kontakion is what this upgrade brings. That page dates his death about 380, inside the interval this folder already records."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Сщмч. Евсевия , еп. Самосатского (380).»",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -115,6 +130,22 @@
       },
       "english": {
         "text": "Lit up by the light of the Spirit's wisdom, you made plain to us the word of piety, O glorious Eusebius; for having served as a hierarch piously before the Trinity, you contended with a godly mind and brought down error. And now, father, entreat that all may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Благочестно во святительстве пожив/ и мучения путь прошед,/ идольския угасил еси жертвы, святителю Евсевие,/ но яко имеяй дерзновение ко Христу Богу,// моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Кондак священномученика Евсевия», глас 4. Proper to him — «святителю Евсевие» in the vocative — and the only hymn this day page prints for anybody.",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived in piety in the hierarchy and passed through the way of martyrdom, thou didst quench the sacrifices of the idols, hierarch Eusebius; and having boldness before Christ God, pray that our souls may be saved.",
         "rendered": "site"
       }
     }

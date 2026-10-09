@@ -1,0 +1,61 @@
+{
+  "slug": "basil-smirnov-18-june",
+  "display_name": "Basil (Smirnov, 18 June)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Василий (Смирнов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 18 июня ст. ст., «Василий (Смирнов), протоиерей, сщмч.» (name page 9285), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Сщмчч. Василия , Александра , Василия и Сергия пресвитеров (1938).», gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 18 июня ст. ст.: «Сщмчч. Василия , Александра , Василия и Сергия пресвитеров (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 18 июня» (page 9285) and carries no prose at all; the «26 января» is the synaxis of the new martyrs and is not a second feast. The corpus already holds `basil-presbyter-martyr-1937-22-august`, whose stored Russian form folds onto the same key: that man is a presbyter of the Penza diocese, named with bishop Феодор on the Russian 22 августа ст. ст. under the year 1937, and his folder was written off azbyka.ru and cites no name page. This man's own page lists 18 июня and nothing else, so the calendar keeps the two as two entries; whether they are two men is an open question and azbyka.ru was not read for either."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Сщмчч. Василия , Александра , Василия и Сергия пресвитеров (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 1 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "office": "Archpriest",
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

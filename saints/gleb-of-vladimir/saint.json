@@ -1,0 +1,93 @@
+{
+  "slug": "gleb-of-vladimir",
+  "display_name": "Gleb of Vladimir",
+  "types": [
+    "prince"
+  ],
+  "office": "Prince",
+  "names": [
+    {
+      "form": "Глеб Владимирский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 20 июня ст. ст., «Глеб Владимирский, князь» (name page 517), with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1174,
+      "latest": 1175,
+      "display": "1174 or 1175",
+      "basis": "attested",
+      "note": "The two years the source itself gives. The day line says «Блгв. кн. Глеба Владимирского (сына св. Андрея Боголюбского) (1175).», and his life page life1358 says «Скончался благоверный князь Глеб в 1174 году, в девятнадцатилетнем возрасте». Neither was preferred over the other."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1358 heads «День памяти: 20 июня» and names no other day. He is not the corpus's `gleb-prince-and-passion-bearer`, the son of Vladimir killed in 1015 whose russian row stands on 5 September: this is the youngest son of the prince of Vladimir, dead at nineteen about 1174, whose veneration the life page says was established in 1702. The day line gives the father's name in a parenthesis and the day page carries three hymns for him, and he is not an entry of this day; no row was written on his folder."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Блгв. кн. Глеба Владимирского (сына св. Андрея Боголюбского) (1175).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Днесь светло красуется славнейший град Владимир,/ имея в себе пребогатое сокровище —/ чудоточащия честныя мощи благовернаго князя Глеба,/ имиже украшался и хваляся,/ вселенную всю созывает к веселию/ и велегласно вопиет:/ о Владыко Христе,/ даровавый таковую благодать угоднику Твоему,/ его молитвами помилуй нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Тропарь святого благоверного князя Глеба Владимирского», глас 4. Proper to him: «благовернаго князя Глеба» and the city of Vladimir, whose patron his life page calls him.",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the most glorious city of Vladimir is brightly adorned, having within it a most rich treasure — the wonder-pouring honoured relics of the right-believing prince Gleb; adorned and boasting in them, it calls the whole world to gladness and cries aloud: O Master Christ, who hast given such grace to Thy servant, by his prayers have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Взбранному и крепкому в праведницах,/ православною мудростию сияющему великому чудотворцу,/ благодарственная восписуем ти, благоверный княже Глебе:/ яко имея дерзновение у Престола Христова,/ верою чтущих тя, град и люди сохраняй молитвами твоими:/ ты бо еси земли Российския похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Кондак святого благоверного князя Глеба Владимирского», глас 8. Proper to him: «благоверный княже Глебе» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To thee, the chosen and the strong among the righteous, the great wonderworker shining with Orthodox wisdom, we write our thanksgiving, right-believing prince Gleb: having boldness before the throne of Christ, keep by thy prayers the city and the people who honour thee in faith, for thou art the praise and the strengthening of the Russian land.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

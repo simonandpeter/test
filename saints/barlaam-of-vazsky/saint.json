@@ -3,13 +3,19 @@
   "display_name": "Barlaam of Vazsky",
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "monk"
   ],
   "names": [
     {
       "form": "Βαρλαάμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουνίου, «Όσιος Βαρλαάμ ο Βάζσκυ», with the rank word and the epithet left off. The epithet the page prints is «ο Βάζσκυ»; the English form of it in the display name is a rendering of that spelling and of nothing else."
+    },
+    {
+      "form": "Варлаам Пинежский, Важский, Шенкурский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 19 июня ст. ст., «Варлаам Пинежский, Важский, Шенкурский, прп.», with the grade word left off; all three epithets are the calendar's own and are kept."
     }
   ],
   "dates": {
@@ -24,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's greek row carries. His life page life6479 heads «День памяти: 19 июня» and names no other day. The Russian line gives him three epithets where the Greek page gave one, and the same year of death, 1462."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Прп. Варлаама Пинежского, Важского, Шенкурского (1462).»",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Иже к добродетелем прилежанием взыграния плоти обуздал еси,/ благими нравы душу свою украсив,/ от земных Христу превозведе ум свой,/ тем от Него исцелением струя независтна явися,/ притекающим верою к тебе и любезно зовущим:/ Варлааме, отче наш,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Тропарь преподобного Варлаама Важского, Шенкурского», глас 3. Proper to him: «Варлааме, отче наш» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By diligence in the virtues thou didst bridle the leapings of the flesh and adorn thy soul with good manners; from the things of earth thou didst raise thy mind to Christ, and thereby wast shown a stream of healing that grudges nothing to those who run to thee in faith and call out with love: Barlaam our father, pray to Christ God that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко звезда светозарная,/ от Великаго Новаграда пришед,/ в чужих, яко в западных странах, зайде,/ от восток чудес, яко солнце, возсия,/ темже, иже во тьме и сени смертней, в недузех лежащии,/ свет исцеления от тебе приемлюще,/ с нами, чады твоими, непрестанно вопиют ти:/ радуйся, Богомудре Варлааме, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Кондак преподобного Варлаама Важского, Шенкурского», глас 8. Proper to him, and it names Great Novgorod, which his life page gives as the city he came from — «Богомудре Варлааме, отче наш».",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a bright-shining star thou didst come from Great Novgorod and set in a strange country, as in the lands of the west, and from the east thou didst shine out like the sun in wonders. Therefore those who lie sick in darkness and the shadow of death, receiving from thee the light of healing, cry out to thee unceasingly together with us, thy children: rejoice, Barlaam our father, wise in God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

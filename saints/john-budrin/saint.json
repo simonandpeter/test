@@ -1,0 +1,61 @@
+{
+  "slug": "john-budrin",
+  "display_name": "John (Budrin)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Будрин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Иоанн (Будрин), иерей, сщмч.» (name page 13729), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Сщмч. Иоанна пресвитера (1918).», gives the forename in the genitive and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 21 июня ст. ст.: «Сщмч. Иоанна пресвитера (1918).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 21 июня» (page 13729) and carries no prose at all. The «26 января (Новомуч.)» his name page lists beside it is the synaxis of the new martyrs and confessors of Russia, a synaxis and not a second feast, and this folder renders on 21 июня ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Сщмч. Иоанна пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

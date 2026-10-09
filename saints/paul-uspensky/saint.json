@@ -1,0 +1,61 @@
+{
+  "slug": "paul-uspensky",
+  "display_name": "Paul (Uspensky)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Павел (Успенский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Павел (Успенский), иерей, сщмч.» (name page 9750), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Сщмч. Алексия , Павла и Николая пресвитеров (1938).», gives the forename in the genitive and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 21 июня ст. ст.: «Сщмч. Алексия , Павла и Николая пресвитеров (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "A discrepancy in the source, recorded and not resolved: the day page for 21 июня ст. ст. prints him in its line of three presbyters and links his name to page 9750, but THAT PAGE HEADS «Дни памяти: 17 января , 26 января (Новомуч.)» AND DOES NOT LIST 21 июня. The 26 января is the synaxis of the new martyrs; the 17 января is a proper day of its own, and it is four months from this one, so it is not the style conversion. BRIEF.md §8's rule is that the attestation's day is the day page that listed him, and this row follows it; but either the calendar keeps one man on two days without saying so on his own page, or the day page's link points at the wrong page. The corpus holds no folder whose stored forms carry «Успенский» with the forename Павел, and no folder of any Paul with a venerated russian row on 17 января, so nothing is duplicated by this row as it stands."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Сщмч. Алексия , Павла и Николая пресвитеров (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

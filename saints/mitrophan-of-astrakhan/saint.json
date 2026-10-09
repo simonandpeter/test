@@ -1,0 +1,62 @@
+{
+  "slug": "mitrophan-of-astrakhan",
+  "display_name": "Mitrophan of Astrakhan",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "hieromartyr"
+  ],
+  "office": "Archbishop",
+  "names": [
+    {
+      "form": "Митрофан Астраханский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 23 июня ст. ст., whose whole string is «Святитель Митрофан, архиепископ Астраханский, сщмч.» (name page 13588). The rank word «Святитель», the office word «архиепископ» standing inside the string and the trailing grade word were left off, the row being stored bare of rank; the whole string is recorded here, and the bare «Митрофан» was not stored because that string already has holders in this corpus."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 23 июня ст. ст.: «Сщмч. Митрофана , архиеп. Астраханского (1919).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 23 июня» (page 13588) and carries no life. The «26 января (Новомуч.)» his name page lists beside it is the synaxis of the new martyrs and confessors of Russia, a synaxis and not a second feast, and this folder renders on 23 июня ст. ст. only. His name page lists two parish sites under «Сайты приходов», and both are churches of Mitrophan of Voronezh, a different saint whose forename the site matches on; neither says anything about this man. The corpus holds seven other folders of this forename and none of them is an archbishop of Astrakhan."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июня ст. ст. — «Сщмч. Митрофана , архиеп. Астраханского (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20260623.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 6 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

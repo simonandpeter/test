@@ -1,0 +1,61 @@
+{
+  "slug": "menas-of-polotsk",
+  "display_name": "Menas of Polotsk",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Мина Полоцкий",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 20 июня ст. ст., «Святитель Мина Полоцкий, епископ» (name page 1537), with the rank word and the see word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1116,
+      "latest": 1116,
+      "display": "1116",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 20 июня ст. ст.: «Свт. Мины , еп. Полоцкого (1116).». His life page gives no year of death and dates only his consecration, 13 December 1105."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1362 heads «Дни памяти: 8 июня (Белорус.) , 8 июня , 20 июня». The 8 июня entries are the synaxis of the saints of Belarus and a second commemoration the day page for this day does not repeat; the day that listed him is 20 июня, and this folder renders on it alone. The corpus holds eight other folders of this name and none of them is a bishop of Polotsk."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Свт. Мины , еп. Полоцкого (1116).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

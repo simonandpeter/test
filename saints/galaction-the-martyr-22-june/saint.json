@@ -20,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's greek row carries. The one life page days.pravoslavie.ru gives the company, life1377, is titled «Святые мученики Галактион, Иулиания и Сатурнин» and heads «День памяти: 22 июня»; its whole text is one sentence — Galaction was drowned in the sea for confessing Christ, and Juliana was burned together with her son Saturninus — which is what this folder already carries, so no paragraph was added. NO ru NAME FORM WAS WRITTEN: the calendar's name link gives a bare forename, and that string already has a holder among the corpus's folders, so storing it would widen a fold for the sake of a word the day line gives in the genitive anyway. The day page's own line names two of the three; the son is named only in the life page's title and text and gets no row here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Мчч. Галактиона и Иулиании .»",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

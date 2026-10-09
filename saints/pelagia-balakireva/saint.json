@@ -1,0 +1,59 @@
+{
+  "slug": "pelagia-balakireva",
+  "display_name": "Pelagia (Balakireva)",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Пелагия (Балакирева)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s place for Pelagia (Balakireva) in the line for 17 июня ст. ст., «Пелагия (Балакирева), мц.» (name page 13727), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Мц. Пелагии (1943).», gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in her line for 17 июня ст. ст.: «Мц. Пелагии (1943).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "julian",
+        "note": "Her name page heads «Дни памяти: 26 января (Новомуч.) , 17 июня» (page 13727). The «26 января (Новомуч.)» is the synaxis of the new martyrs and confessors of Russia, a synaxis and not a second feast, and this folder renders on 17 июня ст. ст. only. The name page carries no prose at all beyond that heading."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июня ст. ст. — «Мц. Пелагии (1943).»",
+        "url": "https://days.pravoslavie.ru/Days/20260617.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 30 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 30 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

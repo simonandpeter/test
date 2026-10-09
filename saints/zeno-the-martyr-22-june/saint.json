@@ -16,6 +16,11 @@
       "form": "Зинон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 22. јун ст. ст., „Свети мученик Зинон и Зина“ — Свети is not a rank and мученик is the rank, which `types` already carries; both come off and the first of the two bare forenames is left. The «(22 June)» of the display name is the corpus’s own disambiguation and §10 reserves it. „официр римски“ is in the body and was never a candidate for the form. **The fold is deliberate, forced, and now the widest this wave has written**: `foldchk.py` returns six folders for «Зинон» — `zeno-20-april`, `zeno-companion-of-eudoxius`, `zeno-companion-of-peleus`, `zeno-of-diospolis`, `zeno-of-ikalto` and `zeno-of-nicomedia`, four of them `sr` and three `ru`, with `zeno-companion-of-peleus` holding the string in both languages — so this folder is the seventh, past the five of «Јулијан» yesterday. The heading offers nothing to break it with, and the folder has no by-name to offer either: its own display name disambiguates **by the day**, which is what a calendar that prints nothing but a name leaves you. A `READ_FOLDS` key is added for it in the same commit."
+    },
+    {
+      "form": "Зинон Филадельфийский (Аравийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 22 июня ст. ст., «Зинон Филадельфийский (Аравийский), мч.», with the grade word left off; the folder already held the bare forename in Cyrillic off another calendar and this form is the fuller one, carrying both epithets."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's other venerated rows carry. The one life page days.pravoslavie.ru gives the two, life1376, heads «День памяти: 22 июня» and names no other day; it puts them at Philadelphia in Arabia and dates the end to 304, as this folder already has it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Мчч. Зинона и Зины (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

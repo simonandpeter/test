@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-krutitsky",
+  "display_name": "Alexander (Krutitsky)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Александр (Крутицкий)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 18 июня ст. ст., «Александр (Крутицкий), иерей, сщмч.» (name page 9428), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Сщмчч. Василия , Александра , Василия и Сергия пресвитеров (1938).», gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 18 июня ст. ст.: «Сщмчч. Василия , Александра , Василия и Сергия пресвитеров (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 18 июня» (page 9428) and carries no life: under «Статья на Православие.Ru» it offers a link to a site essay on the new martyrs of the Щелково country with one general opening sentence, which is an essay on this site and not the calendar's own life page, and it was not opened. The «26 января» is the synaxis of the new martyrs and is not a second feast."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Сщмчч. Василия , Александра , Василия и Сергия пресвитеров (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 1 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "office": "Priest",
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

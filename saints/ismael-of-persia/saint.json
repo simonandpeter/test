@@ -16,6 +16,11 @@
       "form": "Исмаил",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 17. јун ст. ст., „Свети мученици Мануил, Савел и Исмаил“, where it is the third of the three names — „Свети мученици“ stands at the head of the three and comes off, and the heading gives him no epithet and no country, so the bare forename is what the source gives; the «of Persia» of the display name is the corpus’s own disambiguation and not anything this heading prints. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Исмаил», so there is no fold — and the same was measured for his two brothers’ forms on the same run, all three clear."
+    },
+    {
+      "form": "Исмаил Персиянин, Халкидонский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 17 июня ст. ст., «Исмаил Персиянин, Халкидонский, мч.», with the grade word left off. The line itself gives the forename in the genitive and neither epithet."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's romanian, greek and serbian rows already carry. The one life page days.pravoslavie.ru gives the three brothers, life1331, heads «День памяти: 17 июня» and names no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июня ст. ст. — «Мчч. Мануила , Савела и Исмаила (362).»",
+        "url": "https://days.pravoslavie.ru/Days/20260617.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -125,6 +140,38 @@
       },
       "english": {
         "text": "The three divine martyrs out of Persia took up the Cross and did not flinch at the punishments, but in the arena proclaimed God, one in unity and three in person.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июня ст. ст. — «Тропарь мучеников», глас 4. The day page prints it for the three brothers together and names none of them: it is the common troparion of martyrs, and in Church Slavonic the same hymn this folder already carries in Romanian and in Greek. The English here is the corpus's own rendering of that common.",
+        "url": "https://days.pravoslavie.ru/Days/20260617.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength, they cast down the tormentors and broke also the feeble insolence of the demons. At their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Верою Христовою уязвлени, всеблаженнии,/ и Сего верно испивше чашу,/ персская служения и дерзость на землю низложисте,/ Троицы равночисленнии,// молитвы творяще о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июня ст. ст. — «Кондак мучеников», глас 2. Printed for the three brothers together; «Троицы равночисленнии» — equal in number to the Trinity — is proper to them, and «персская служения» to their country.",
+        "url": "https://days.pravoslavie.ru/Days/20260617.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wounded with the faith of Christ, all-blessed ones, and having faithfully drunk His cup, ye cast down to the earth the Persian worship and its insolence; equal in number to the Trinity, ye make your prayers for us all.",
         "rendered": "site"
       }
     }

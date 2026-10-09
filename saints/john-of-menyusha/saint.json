@@ -1,0 +1,79 @@
+{
+  "slug": "john-of-menyusha",
+  "display_name": "John of Menyusha",
+  "types": [
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Иоанн Менюжский, Новгородский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 24 июня ст. ст., «Иоанн Менюжский, Новгородский», which carries no rank word to strip; both epithets are the calendar's own."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1566,
+      "latest": 1569,
+      "display": "between 1566 and 1569",
+      "basis": "traditional",
+      "note": "The interval days.pravoslavie.ru prints in their line for 24 июня ст. ст.: «Правв. отроков Иакова и Иоанна Менюжских, Новгородских (1566-1569).». Their life page life1390 gives no year for the death at all; it dates only the finding of the relics, between 1682 and 1689."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 6,
+        "calendar": "julian",
+        "note": "Their one life page life1390 heads «День памяти: 24 июня» and names no other day. The line names two children and the calendar gives them one life and one troparion between them; this corpus keeps the two folders the line enumerates."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июня ст. ст. — «Правв. отроков Иакова и Иоанна Менюжских, Новгородских (1566-1569).»",
+        "url": "https://days.pravoslavie.ru/Days/20260624.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 7 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "related": [
+    "james-of-menyusha"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Болезньми святых праведных отроков/ Иакова и Иоанна,/ имиже о Тебе пострадаша,/ умолен буди, Господи,/ и вся наша болезни исцели,/ Человеколюбие, молимся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июня ст. ст. — «Тропарь праведных отроков Иакова и Иоанна Менюжских», глас 1. The one hymn the day page prints for them, naming both: «праведнии отроцы» in its title and «Иакове и Иоанне» in its text. It is copied into both folders, the page printing it for the two together.",
+        "url": "https://days.pravoslavie.ru/Days/20260624.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the sufferings of the holy righteous youths James and John, which they endured for Thee, be Thou entreated, O Lord, and heal all our sicknesses, O Lover of mankind, we pray.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

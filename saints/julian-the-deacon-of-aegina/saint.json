@@ -11,6 +11,11 @@
       "form": "Јулијан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 21. јун ст. ст., „Преподобни Јулије и Јулијан“ — Преподобни is the rank and comes off, and the second of the two bare forenames is left. «of Aegina» and «the Deacon» are the corpus’s own, off saint.gr, and „ђакон“ is in the body and not the heading. **The fold is deliberate, forced, and the widest this wave has written**: `foldchk.py` returns four `sr` holders for «Јулијан» — `julian-companion-of-pamphilus`, `julian-of-antinoopolis`, `julian-of-samosata` and `julian-presbyter-of-ancyra` — so this folder is the fifth on the string, and the heading offers nothing at all to break it with. **The same day shows the other outcome**: the day’s first entry is also a Јулијан and its heading gives Тарсанин, which was kept, and that folder folds with nobody. One heading gave a by-name and one did not, and the two forms went different ways for that reason alone. A `READ_FOLDS` key is added for this one in the same commit."
+    },
+    {
+      "form": "Иулиан Мирмидонянин",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Иулиан Мирмидонянин, диакон», with the rank word left off. «Мирмидонянин» is the calendar's own epithet for both brothers and is kept."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's greek and serbian rows carry. The one life page days.pravoslavie.ru gives the two brothers, life1368, carries no «День памяти» line of its own, and the day page is what puts them here. That page makes them natives of «Мирмидония», where saint.gr has them born on Aegina; the identification of the two readings is the one the corpus had already made and written into this folder's serbian reading — a presbyter and a deacon who were brothers, sent out together, and who ended near Mediolanum. The Russian page puts their repose in the first half of the fifth century, where this folder records years off saint.gr in the fourth; the dates were left as they stood."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Прпп. Иулия пресвитера и Иулиана диакона (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

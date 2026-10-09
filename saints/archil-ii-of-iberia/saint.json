@@ -1,0 +1,60 @@
+{
+  "slug": "archil-ii-of-iberia",
+  "display_name": "Archil II of Iberia",
+  "types": [
+    "king",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Арчил II Иверский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 21 июня ст. ст., «Арчил II Иверский, царь, мч.» (name page 281), with the rank and grade words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 744,
+      "latest": 744,
+      "display": "20 March 744",
+      "basis": "attested",
+      "note": "His life page life1369: «20 марта 744 года святой царь Арчил был предан мученической смерти через усечение.» The day line gives the year alone, «Мчч. Арчила II, царя Иверского (744), и Луарсаба II, царя Карталинского (1622) (Груз.).»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1369 heads «День памяти: 21 июня» and names no other day, although the same page puts his death on 20 марта. The day line marks the entry «(Груз.)», a Georgian commemoration the Russian calendar keeps. This corpus refused him once before, on a Serbian day, for want of a source that gave him a life; this page gives one."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 июня ст. ст. — «Мчч. Арчила II, царя Иверского (744), и Луарсаба II, царя Карталинского (1622) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260621.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

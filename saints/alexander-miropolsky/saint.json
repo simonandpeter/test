@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-miropolsky",
+  "display_name": "Alexander (Miropolsky)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Александр (Миропольский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 23 июня ст. ст., «Александр (Миропольский), протоиерей, сщмч.» (name page 13731), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Сщмчч. Александра , Петра пресвитеров (1918).», gives the forename in the genitive and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 23 июня ст. ст.: «Сщмчч. Александра , Петра пресвитеров (1918).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 23 июня» (page 13731) and carries no life. The «26 января (Новомуч.)» his name page lists beside it is the synaxis of the new martyrs and confessors of Russia, a synaxis and not a second feast, and this folder renders on 23 июня ст. ст. only. The corpus holds no other folder whose stored forms carry «Миропольский»."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июня ст. ст. — «Сщмчч. Александра , Петра пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260623.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 6 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

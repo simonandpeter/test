@@ -16,6 +16,11 @@
       "form": "Зина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 22. јун ст. ст., „Свети мученик Зинон и Зина“ — the second of the two bare forenames, with Свети and мученик off. „слуга“ is in the body and not in the heading, so it was never a candidate; the «(22 June)» of the display name is the corpus’s own. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Зина», so there is no fold — **and the contrast with his master on the same heading is the measurement worth keeping**: «Зинон» has six holders and «Зина» has none, two names four letters apart out of one line, so a fold is a fact about the corpus and never about how common a name looks. The folder’s Romanian form is «Zina», the same name in Latin letters, off doxologia’s «Sfântul Mucenic Zina»."
+    },
+    {
+      "form": "Зина Филадельфийский (Аравийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 22 июня ст. ст., «Зина Филадельфийский (Аравийский), мч.», with the grade word left off; the folder already held the bare forename in Cyrillic off another calendar and this form is the fuller one, carrying both epithets."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's other venerated rows carry. The one life page days.pravoslavie.ru gives the two, life1376, heads «День памяти: 22 июня» and names no other day; it puts them at Philadelphia in Arabia and dates the end to 304, as this folder already has it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июня ст. ст. — «Мчч. Зинона и Зины (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260622.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

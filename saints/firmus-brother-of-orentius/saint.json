@@ -16,6 +16,11 @@
       "form": "Фирмос",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 24. јун ст. ст., „Свети мученуци Орентије, Фарнакије, Ерос, Фирмос, Фирмин, Кириак и Лонгин“ — Свети is not a rank and the misprinted мученуци is the rank, which `types` already carries; what is left is one of seven bare forenames, all seven in the nominative, with no see, no place and no by-name to break a fold with. The «brother of Orentius» of the display name is the corpus’s own and §10 reserves it. **The spelling is this book’s own and is copied as printed**: it writes Фирмос where the Greek page has «Φίρμος» and the corpus display name is Firmus; nothing is transliterated and nothing is regularised against its brother’s Фирмин. `foldchk.py` returns NO FOLDER HOLDS THIS FORM and `.tmp/sr-foldpred.mjs` returns no other holder of the gate’s folded key, so there is no fold and no `READ_FOLDS` key is owed."
+    },
+    {
+      "form": "Фирмос Апсарский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 24 июня ст. ст., «Фирмос Апсарский, мч.», with the grade word left off. The epithet is the place of his own death as that page gives it, and it is the calendar's own."
     }
   ],
   "related": [
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's serbian row carries; the greek row — and the romanian one where this folder has it — stand on 25 June, which is those calendars' own day for the company and not a second Russian feast. The one life page days.pravoslavie.ru gives the seven brothers, life1387, heads «День памяти: 24 июня» and names no other day; it was read whole. The day line calls them «семи братий», the seven brothers, and enumerates all seven, and this corpus keeps seven folders, so the company is complete."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июня ст. ст. — «Мчч. семи братий: Орентия , Фарнакия , Ероса , Фирмоса , Фирмина , Кириака и Лонгина (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260624.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

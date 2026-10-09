@@ -16,6 +16,11 @@
       "form": "Методије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 20. јун ст. ст., „Свештеномученик Методије, епископ патарски“ — Свештеномученик is the rank and „епископ патарски“ is a second rank and the see, and §6 takes both off, as the folder’s Romanian and Greek notes already say in their own words. The bare forename is what is left and the heading offers nothing else. **The fold is deliberate and forced**: `foldchk.py` returns `methodius-of-constantinople` and `methodius-of-moravia`, both `sr`, for «Методије», so this is the third folder on the string, and the three are a patriarch, an apostle of the Slavs and this bishop of Patara. `corpus-gate.mjs` prints the row and a `READ_FOLDS` key is added for it in the same commit, writing the row and registering the fold being two acts."
+    },
+    {
+      "form": "Мефодий Патарский, Олимпийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 20 июня ст. ст., «Святитель Мефодий Патарский, Олимпийский, епископ, сщмч.», with the rank word, the see word and the grade word left off; both epithets are the calendar's own."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's three other venerated rows carry. His life page life1353 heads «День памяти: 20 июня» and names no other day. That page gives the year of his death as 312, where this folder records 311; the dates were left as they stood and the disagreement is written into the life."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Сщмч. Мефодия , еп. Патарского (312).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -106,6 +121,38 @@
       },
       "english": {
         "text": "You were shown, O wise Methodius, an unshaken pillar of the Church of Christ and an ever-shining lamp of the whole world; you gave light to the world by your martyrdom, and you broke the darkness of the idols, O blessed one. Therefore intercede boldly with Christ, that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Кровь твоя, мудре, тайно вопиет от земли,/ якоже Авелева к Богу,/ богомудре святителю Мефодие,/ ясно проповедавый Божие вочеловечение./ Темже и посрамил еси Оригенову лесть,/ и преставился еси в Небесный чертог./ Моли Христа Бога,// да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Тропарь священномученика Мефодия», глас 1. Proper to him: «богомудре святителю Мефодие» in the vocative, and it names Origen, whom his life page makes the heresy he fought.",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy blood, O wise one, cries out secretly from the earth as Abel's did to God, hierarch Methodius wise in God, who didst plainly preach the becoming man of God. Therefore thou didst put Origen's deceit to shame, and didst pass over into the heavenly chamber. Pray to Christ God that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Священнотаинник Святыя Троицы,/ и яже паче ума повелений Божественных проповедник,/ и православным утверждение был еси, Мефодие,/ злославныя обличил еси смыслы,/ правоверия ради кровию твоею священномученик явлься,/ и Христу со Ангелы предстоя,// моли спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Кондак священномученика Мефодия», глас 4. Proper to him: «Мефодие» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a minister of the holy mysteries of the Trinity, a preacher of the divine commandments that are beyond understanding, and a strengthening of the Orthodox, O Methodius; thou didst reprove the minds of the ill-believing, and, being shown a hieromartyr by thy blood for the right faith, standing now before Christ with the angels, pray that we may be saved.",
         "rendered": "site"
       }
     }

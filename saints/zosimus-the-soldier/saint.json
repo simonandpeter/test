@@ -16,6 +16,11 @@
       "form": "Зосим",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. јун ст. ст., „Свети мученик Зосим“ — Свети is not a rank and мученик is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives, and «the Soldier» of the display name is the corpus’s own disambiguation off another book. **The fold is deliberate and forced**: `foldchk.py` returns `zosimas-of-palestine` and `zosimas-of-solovki`, both `sr`, for «Зосим», so this is the third folder on the string, and the heading offers nothing to break it with."
+    },
+    {
+      "form": "Зосима Аполлониадский, Кононейский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 19 июня ст. ст., «Зосима Аполлониадский, Кононейский, мч.», with the grade word left off. The folder already held «Зосим» off another calendar; the Russian form is the fuller one and carries both epithets."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's greek and serbian rows carry. His life page life1347 heads «День памяти: 19 июня» and names no other day. The Russian line dates him «(ок. 89-117)», the reign of Trajan, which is the reign this folder already records; its own dates were left as they stood."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Мч. Зосимы (ок. 89-117).»",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

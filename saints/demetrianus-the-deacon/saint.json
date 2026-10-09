@@ -16,6 +16,11 @@
       "form": "Димитријан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 20. јун ст. ст., „Свети мученици Аристокл, Димитријан и Атанасије“ — the second of the three bare forenames, with Свети and мученици off. „ђакон“ is in the body and not in the heading, so it was never a candidate for the form; «the Deacon» of the display name is the corpus’s own, off saint.gr’s heading. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Димитријан», which is worth having measured: the corpus keeps five Demetrianus folders, and none of them had an `sr` form at all."
+    },
+    {
+      "form": "Димитриан (Димитрий) Саламинский (Кипрский), диакон",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 20 июня ст. ст., «Димитриан (Димитрий) Саламинский (Кипрский), диакон, сщмч.», with the grade and rank words left off; the parenthetical form and the epithets are the calendar's own."
     }
   ],
   "dates": {
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's serbian row carries; its greek row stands on 23 June, which is that calendar's own day for the company and not a second Russian feast. The one life page days.pravoslavie.ru gives the three, life1352, heads «День памяти: 20 июня» and names no other day; it was read whole and its account agrees with what this folder already carries — Tamassos, the flight to the cave, the light and the command to return, the meeting at the church of the apostle Barnabas, the preaching at Salamis, the fire that did not touch two of them, and the beheading about 306 — so no paragraph was added. It names the persecution as that of Maximian Galerius, 305 to 311, and heads all three «Саламинский (Кипрский)» where this corpus has read the presbyter's own town, Tamassos, into the display names."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Мчч. Аристоклия пресвитера, Димитриана диакона и Афанасия чтеца (ок. 306).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

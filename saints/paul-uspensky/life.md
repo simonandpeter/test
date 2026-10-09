@@ -1,0 +1,9 @@
+# Paul (Uspensky)
+
+days.pravoslavie.ru’s calendar for 21 июня ст. ст. prints him in the line «Сщмч. Алексия , Павла и Николая пресвитеров (1938).», and the name link behind his place in it supplies the calendar’s own nominative with the surname, «Павел (Успенский), иерей, сщмч.» (name page 9750). That is where the name form in this folder is read from; the line gives the forename in the genitive and no surname at all.
+
+One thing in the source has to be said plainly, and it is not resolved here. The day page prints him in this line of three presbyters and links his name to page 9750 — but that page heads «Дни памяти: 17 января , 26 января (Новомуч.)» and does not list 21 июня at all. The 26 января is the synaxis of the new martyrs; the 17 января is a proper day of its own, four months from this one, so it is not the conversion between the two styles. Either the calendar keeps one man on two days without saying so on his own page, or the day page’s link points at the wrong page. The rule followed here is that the attestation’s day is the day page that listed him, so this folder stands on 21 июня; and the corpus holds no folder of a Paul with that surname, and none of any Paul on the Russian 17 января, so nothing is doubled by it as it stands.
+
+Apart from that, the page carries nothing: no life, no place of service and no account of his death in 1938. The line’s «Сщмчч.» makes him a hieromartyr and «пресвитеров» a presbyter, and the name link repeats the rank as «иерей». He is given no relation to the two others on his line, who share with him a line, a grade word and a year and nothing the calendar states.
+
+*After the Православный церковный календарь of the Сретенский monastery for 21 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260621.html) and [his name page](https://days.pravoslavie.ru/name/9750.html); read 9 October 2026.*

@@ -16,6 +16,11 @@
       "form": "Аристокл",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 20. јун ст. ст., „Свети мученици Аристокл, Димитријан и Атанасије“ — Свети is not a rank and мученици is the rank, which `types` already carries; both come off and the first of the three bare forenames is left, which is all the heading gives him. «of Tamassos» in the display name is the corpus’s own disambiguation off another book and is not in this heading. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Аристокл», so there is no fold — worth having measured, the corpus keeping an `aristocles-of-moscow` and an `aristocleus-of-tamassos` whose slugs are one letter apart."
+    },
+    {
+      "form": "Аристоклий Саламинский (Кипрский), пресвитер",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 20 июня ст. ст., «Аристоклий Саламинский (Кипрский), пресвитер, сщмч.», with the grade and rank words left off; the parenthetical form and the epithets are the calendar's own."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's serbian row carries; its greek row stands on 23 June, which is that calendar's own day for the company and not a second Russian feast. The one life page days.pravoslavie.ru gives the three, life1352, heads «День памяти: 20 июня» and names no other day; it was read whole and its account agrees with what this folder already carries — Tamassos, the flight to the cave, the light and the command to return, the meeting at the church of the apostle Barnabas, the preaching at Salamis, the fire that did not touch two of them, and the beheading about 306 — so no paragraph was added. It names the persecution as that of Maximian Galerius, 305 to 311, and heads all three «Саламинский (Кипрский)» where this corpus has read the presbyter's own town, Tamassos, into the display names."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 июня ст. ст. — «Мчч. Аристоклия пресвитера, Димитриана диакона и Афанасия чтеца (ок. 306).»",
+        "url": "https://days.pravoslavie.ru/Days/20260620.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
