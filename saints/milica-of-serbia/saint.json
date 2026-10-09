@@ -1,0 +1,64 @@
+{
+  "slug": "milica-of-serbia",
+  "display_name": "Milica of Serbia",
+  "types": [
+    "princess",
+    "monastic"
+  ],
+  "office": "Princess",
+  "names": [
+    {
+      "form": "Милица",
+      "lang": "ru",
+      "note": "Name page 2617 of days.pravoslavie.ru is «Святая Милица, княгиня Сербская»: «Святая» is \"saint\", «княгиня» is the princely rank and «Сербская» stands in the heading as an attribute of that rank, so the form is bare — the reading made for `olga-of-kyiv` on the Julian 11 July. The two monastic names, Eugenia and Euphrosyne, are in the row note. `fk.mjs` returns NONE for «милица»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1405,
+      "latest": 1405,
+      "display": "1405",
+      "basis": "traditional",
+      "note": "The day line closes «(1405)» and life4270 gives the day: «Скончалась в этом монастыре схимницей 11 ноября 1405 года». No year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Прав. Стефана Высокого, деспота Сербского (1427) и матери его Милицы (1405).»",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry carries a mother and a son; the son is `stefan-the-tall` and is upgraded, and this is the mother, whom no folder held — `fk.mjs` on «Милица» returns NONE, and `militsa-kuvshinova` is a twentieth-century namesake. Index id2617 lists TWO readings and both were read, life6935 and life4270, AND THEY NAME DIFFERENT MONASTERIES for her tonsure: «в Жупаневачский монастырь около Крушевака с именем Евгении» in 1393 against «Основала женский монастырь Любостинь, в котором постриглась с именем Евгения». The monastic name agrees and the house does not, and both are in the life. HER OWN PAGE PRINTS A SECOND DAY: «Дни памяти: 19 июля , 30 августа (Серб.)», and the second is labelled Serbian; this row stands on the 19th, which is the day page that listed her, and the 30 August is recorded here and not made a feast. The two monastic names, Eugenia at her tonsure and Euphrosyne at the great schema, are in the life. The day page prints no hymn under her name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 1 august (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 1 Αυγούστου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 August 2026 (9 October 2026)."
+    }
+  ],
+  "related": [
+    "lazar-of-serbia",
+    "stefan-the-tall"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

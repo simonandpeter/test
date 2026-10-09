@@ -7,6 +7,11 @@
       "form": "Стеван Високи",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. јул ст. ст., „Спомен Стевана Високог,“, with «Спомен» — the book’s word for a commemoration — left off. **THE HEADING PRINTS THE NAME IN THE GENITIVE AND THE NOMINATIVE IS RESTORED, WHICH IS GRAMMAR AND NOT TRANSLITERATION, AND IS FLAGGED HERE RATHER THAN PASSED OVER.** «Спомен» governs the genitive and the body names him nowhere again, so no nominative is printed on the page: Стевана Високог → Стеван Високи, the forename shedding its -a and the by-name its definite -ог for -и. **The by-name is kept, and §6 is why**: a bare Стеван or Стефан would have folded onto the thirteen folders the gate already reads under «стефан», and the by-name is the whole of what keeps this form out of that fold. `sr-foldnew.mjs` answered `keys: 2` with `holders: 0 (none)` for both, and `foldchk.py` `NO FOLDER HOLDS THIS FORM` for the form and for the bare forename alike. No Romanian, Greek or Russian form is written: none of those books was opened for him."
+    },
+    {
+      "form": "Стефан Лазаревич Новый (Высокий), Сербский",
+      "lang": "ru",
+      "note": "Name page 2057 of days.pravoslavie.ru is «Стефан Лазаревич Новый (Высокий), Сербский, король»; the rank is stripped and the patronymic surname and both epithets kept whole, parentheses and all. The day line gives him as «Стефана Высокого, деспота Сербского». The folder already holds the Serbian «Стеван Високи» and `fk.mjs` returns NONE for this longer string."
     }
   ],
   "dates": {
@@ -19,13 +24,24 @@
     }
   },
   "related": [
-    "lazar-of-serbia"
+    "lazar-of-serbia",
+    "milica-of-serbia"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 19 июля ст. ст., which is the page for this menologion number."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Прав. Стефана Высокого, деспота Сербского (1427) и матери его Милицы (1405).»",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry carries a mother and a son and this is the son; the mother is the new folder `milica-of-serbia`. The folder's SERBIAN row already stands on this very menologion day, the Julian 19 July, off the Ohrid Prologue, and its own `dates` note quotes that book's „скончао 19. јула 1427. године“ — the same day and the same «(1427)» this line closes with. `dates` UNCHANGED. ONE `types` ROW ADDED, READ AND NOT ASSUMED: the folder's `types` was EMPTY, and `righteous` is written off the line's own «Прав.» and off the troparion's «святый праведный деспоте Стефане». NO `king` AND NO `prince` WAS ADDED, although name page 2057 is «Стефан Лазаревич Новый (Высокий), Сербский, король», king, and the two hymns are headed «блаженного Стефана, короля Сербского» while the day line calls him «деспота Сербского», despot: three grades in one source and no `office` string in the locale packs for either of the other two, so only the rank all three share is written. The reading life4269 was NOT opened. Two hymns taken where the folder had none."
     },
     {
       "church": "romanian",
@@ -55,5 +71,42 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "types": [
+    "righteous"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "С высоты восприяв увещание,/ отечеству твоему был еси предстатель и просветитель,/ святый праведный деспоте Стефане,/ супостаты побеждали, и люди своя просвещали,/ и многия храмы устроили,/ сего ради чтуще тя, молим:/ моли Христа Бога о спасении народа сербскаго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Тропарь блаженного Стефана, короля Сербского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received admonition from on high, thou wast a protector and an enlightener of thy fatherland, O holy righteous despot Stefan: thou didst conquer the adversaries, and enlighten thy people, and build many churches. Therefore honouring thee we pray: pray to Christ God for the salvation of the Serbian people.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Вернаго Твоего воина Стефана Высокаго возлюбив,/ низпослал еси ему силы благодати, Христе Боже,/ во еже уведети тайны Небесныя/ и ревновати о славе Твоей,/ ейже кланяющеся и мы,/ всегда молим Тя:/ помилуй нас, Спасе, во Царствии Твоем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Кондак блаженного Стефана, короля Сербского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Stefan the Tall, Thy faithful soldier, Thou didst send down upon him the powers of grace, O Christ God, that he might know the heavenly mysteries and be zealous for Thy glory; and we too, bowing before it, pray Thee always: have mercy on us, O Saviour, in Thy kingdom.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

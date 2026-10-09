@@ -16,6 +16,11 @@
       "form": "Макрина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. јул ст. ст., „Преп. Макрина.“ — «Преп.» is the rank word and is left off by §6, and the heading gives no epithet and no by-name at all, so the bare forename is the whole of the form. **The heading offers nothing to tell her from her grandmother**, which is why `foldchk.py` returns `[(’macrina-the-elder’, ’sr’)]` for this string and why the fold is read in this batch’s commit message rather than avoided: there is no fuller Serbian form on the page to reach for."
+    },
+    {
+      "form": "Макрина Каппадокийская, Новая, Младшая",
+      "lang": "ru",
+      "note": "Name page 2580 of days.pravoslavie.ru is «Макрина Каппадокийская, Новая, Младшая, прп.»; the rank is stripped and the three epithets kept in the page's order. The day line declines her as «Макрины , сестры свт. Василия Великого» and gives no epithet at all."
     }
   ],
   "sex": "female",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Прп. Макрины , сестры свт. Василия Великого (380).»",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "note": "The day's first entry and the same menologion day as the folder's Romanian, Greek and Serbian rows. Name page 2580 is «Макрина Каппадокийская, Новая, Младшая, прп.» — Cappadocia, and «Новая» and «Младшая», the New and the Younger, which tell her from her grandmother of the same name; the display name tells her by her brother instead and was NOT changed. `dates` UNCHANGED, AND THE YEARS DISAGREE BY ONE: the line closes «(380)» where the folder holds 379 off saint.gr's heading «(324 - 379)». The reading life4264 was NOT opened, nor id373, which is Basil's own page and is linked here only because the line names him as her brother; NO ROW WAS WRITTEN FOR BASIL, the entry being hers. THREE HYMNS TAKEN and the second of them is THE VENERABLE WOMAN'S COMMON, «В тебе, мати, известно спасеся», printed with her name set into it, which BRIEF.md §4 says is her service and is copied whole."
     },
     {
       "church": "romanian",
@@ -126,6 +141,54 @@
       },
       "english": {
         "text": "In you, mother, the image of God was kept exactly; for you took up the cross and followed Christ, and by your deeds you taught that the flesh is to be overlooked, since it passes away, and that the soul is to be cared for, being a thing immortal. Therefore your spirit rejoices with the angels, venerable Macrina.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Жениха твоего смерть видевши,/ разсмотрела еси тленную жизнь и суетие мира,/ отвсюду вину приимши,/ Нетленному Обручнику уневестилася еси,/ постом и смирением любовь Того постигающи./ Тем ныне радуется со Ангелы, преподобная Макрино, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Тропарь преподобной Макрины, сестры святителя Василия Великого», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeing the death of thy bridegroom, thou didst look upon the corruptible life and the vanity of the world, and taking occasion from every side thou wast betrothed to the incorruptible Bridegroom, attaining His love by fasting and humility. Therefore thy spirit now rejoices with the angels, O venerable Macrina.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В тебе, мати, известно спасеся, еже по образу:/ приимши бо Крест, последовала еси Христу/ и, деющи, учила еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней./ Темже и со Ангелы срадуется, преподобная Макрино, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Ин тропарь преподобной Макрины, сестры святителя Василия Великого», глас 8 — the venerable woman’s common, printed whole under her name with her name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, that which is according to the image was surely saved: for taking up the cross thou didst follow Christ, and by thy deeds thou didst teach us to despise the flesh, for it passes away, but to care for the soul, a thing immortal. Therefore thy spirit rejoices with the angels, O venerable Macrina.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Бога Благаго всем сердцем возлюбила еси,/ Макрино преподобная,/ и, Сего Крест Честный на рамо приемыш,/ усердно последовала еси Ему,/ отонудуже согрешений обрела еси прощение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Кондак преподобной Макрины, сестры святителя Василия Великого», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst love the good God with all thy heart, O venerable Macrina, and taking His honourable cross upon thy shoulder thou didst follow Him eagerly; whence thou didst find forgiveness of sins.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,94 @@
+{
+  "slug": "roman-of-ryazan",
+  "display_name": "Roman of Ryazan",
+  "types": [
+    "prince",
+    "martyr"
+  ],
+  "office": "Prince",
+  "names": [
+    {
+      "form": "Роман Олегович, Рязанский",
+      "lang": "ru",
+      "note": "Name page 1875 of days.pravoslavie.ru is «Благоверный князь мученик Роман Олегович, Рязанский»; the rank, the grade and the second rank are stripped and the patronymic and the epithet kept. The day line puts the patronymic in parentheses, «Романа (Олеговича) Рязанского», and the name page does not; it is kept because it is part of the name and not a clause about one. `fk.mjs` returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1270,
+      "latest": 1270,
+      "display": "1270",
+      "basis": "traditional",
+      "note": "The day line closes «(1270)» and both readings state it: «(+ 1270 г.)» and «Это произошло в 1270 году». No year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Блгв. кн. Романа (Олеговича) Рязанского (1270).»",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry. No folder held him — `fk.mjs` on the stored form returns NONE and the three Roman folders this corpus keeps are a twentieth-century presbyter, Roman Medved and `roman-the-venerable`. Index id1875 lists TWO readings and both were read, life6809 and life4267; the second is the fuller and the two agree, the second adding the khan's choice put to him — martyrdom or the Tatar faith — the list of the mutilations, the chronicle's sentence, and the Ryazan procession kept since 1854 and the church consecrated there in 1861. Two hymns taken. The chronicle quoted in the life names a kinsman, the great prince Michael Vsevolodovich of Chernigov, inside its own Church Slavonic sentence; it is quoted as the reading prints it and NO `related` row was written from a quotation."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 1 august (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 1 Αυγούστου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 August 2026 (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Мученьми странноужасными/ и доблестию терпения/ всех преудивил еси, княже Романе:/ честных бо членов твоих по составом резание/ и всего телесе твоего раздробление/ претерпел еси за веру Христову./ Темже и возшел еси к Престолу Царя Христа Бога/ и явился еси новый предстатель Церкве Рязанский./ Молися убо ко Господу,/ да мир и благоденствие дарует граду нашему,/ и испроси у Него милость и спасение/ чтущим священную память твою, многострадальна.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Тропарь мученика благоверного князя Романа, Рязанского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By torments strange and dreadful and by the courage of thy patience thou didst astonish all, O prince Roman: for thou didst endure for the faith of Christ the cutting of thy honourable limbs joint from joint and the dismembering of thy whole body. Therefore thou didst go up to the throne of Christ the King and God, and wast shown to be a new protector of the church of Ryazan. Pray then to the Lord that He grant peace and prosperity to our city, and ask of Him mercy and salvation for those who honour thy sacred memory, O much-suffering one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Оклеветанный пред ханом в хулении зловерия его,/ дерзновенно предстал еси судищу нечестивому;/ убоявся же Страшнаго Суда Христова,/ ханское повеление и страх поплевал еси, святый Романе./ Телом, яко розга, режемый,/ в страданиих уподобился еси Иакову Персянину/ и явился еси великомученик изрядный,/ столп и утверждение Церкви Рязанстей,/ заступник и воевода Российский преславный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Кондак мученика благоверного князя Романа, Рязанского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Slandered before the khan as having blasphemed his false belief, thou didst stand boldly before the impious judgement seat; and fearing the dread judgement of Christ, thou didst spit upon the khan’s command and upon fear, O holy Roman. Cut in the body like a branch, thou didst become in thy sufferings like James the Persian, and wast shown to be an excellent great martyr, a pillar and a strengthening of the church of Ryazan, a defender and a most glorious captain of Russia.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

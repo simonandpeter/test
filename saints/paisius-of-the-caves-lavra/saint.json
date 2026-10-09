@@ -10,13 +10,28 @@
       "form": "Παΐσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουλίου, «Όσιος Παΐσιος της Λαύρας των Σπηλαίων», with the rank word and the byname left off."
+    },
+    {
+      "form": "Паисий Печерский",
+      "lang": "ru",
+      "note": "Name page 1710 of days.pravoslavie.ru is «Преподобный Паисий Печерский»; the rank is stripped. The day line declines him as «Паисия Печерского». The hymns' «в Дальних пещерах» is in the row note and not in the form, the name page not printing it."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Прп. Паисия Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry and the same menologion day as the folder's Greek row. Name page 1710 is «Преподобный Паисий Печерский» — the Caves of the display name — and the hymns add «в Дальних пещерах», in the Far Caves. `dates` UNCHANGED: the folder has none and the line's «(XIV)» would be its first, off a Roman numeral. The reading id1710 was NOT opened. Two hymns taken where the folder had none, and the troparion sets him beside the Paisius «великаго во отцех», great among the fathers, who is Paisius the Great of Egypt; that is a hymn text and NO `related` row was written from it."
     },
     {
       "church": "romanian",
@@ -49,5 +64,39 @@
   },
   "related": [
     "mercurius-the-faster"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Великаго во отцех подражая Паисия,/ якоже он в пустыню, тако и ты в пещеру вселился еси,/ идеже труды прилагая, блаженне, ко трудом,/ и псаломскому пению выну прилежал еси,/ моли о нас, поющих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Тропарь преподобного Паисия Печерского, в Дальних пещерах», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating the Paisius who was great among the fathers, thou didst settle in a cave as he in the wilderness, and there, blessed one, adding labours to labours, thou wast ever intent upon the singing of the psalms: pray for us who sing of thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Всею душею и помышлением, Паисие, Христа возлюбив,/ Тому вседушне вся дни живота твоего служил еси, Богомудре,/ тем по кончине твоей/ наследил еси радость и вечное наслаждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июля ст. ст. — «Кондак преподобного Паисия Печерского, в Дальних пещерах», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260719.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Christ with all thy soul and all thy mind, O Paisius, thou didst serve Him with thy whole soul all the days of thy life, O God-wise one; and therefore after thy end thou didst inherit joy and everlasting delight.",
+        "rendered": "site"
+      }
+    }
   ]
 }
