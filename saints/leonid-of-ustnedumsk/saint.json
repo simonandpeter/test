@@ -1,0 +1,101 @@
+{
+  "slug": "leonid-of-ustnedumsk",
+  "display_name": "Leonid of Ustnedumsk",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Леонид Устьнедумский",
+      "lang": "ru",
+      "note": "Name page 1343 of days.pravoslavie.ru is «Преподобный Леонид Устьнедумский»; the rank is stripped and the epithet kept as the page writes it, in one word. Both readings head themselves «Преподобный Леонид Усть-Недумский» with a hyphen, which is recorded here and not stored. The day line declines him as «Леонида Устьнедумского». `fk.mjs` returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1551,
+      "latest": 1551,
+      "display": "1551",
+      "basis": "traditional",
+      "note": "ONE OF THE TWO READINGS ONLY. life6698: «Леонид родился в 1551 году в Новгородской области, Пошенского уезда в Щекинской веси». life4252 gives no year of birth and puts him in another province, and both ages at death — the 105th year and the 100th — are recorded in the life and used for nothing."
+    },
+    "death": {
+      "earliest": 1654,
+      "latest": 1654,
+      "display": "1654",
+      "basis": "attested",
+      "note": "The day line closes «(1654)» and both readings give the day: «скончался в 1654 г. 17 июля» and «Скончался преподобный Леонид на сотом году жизни 17 июля 1654 года», which is the day the calendar keeps him on."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июля ст. ст. — «Прп. Леонида Устьнедумского (1654).»",
+        "url": "https://days.pravoslavie.ru/Days/20260717.html",
+        "year": 2026
+      },
+      "note": "The day's third entry. No folder held him: twelve folders carry the name Leonid or Leonidas and none on this day or with this epithet, and `fk.mjs` on the stored form returns NONE. Index id1343 lists TWO readings and both were read, life6698 and life4252, AND THEY DISAGREE IN FOUR PLACES: the province of his birth (Novgorod and the Poshensky district against Vologda and the Poshekhonsky), the years at Kozheozersk (one against about three), the metropolitan of Rostov who blessed the church (Varlaam against Filaret), and his age at death (the 105th year against the 100th). Every disagreement is in the life and none of them is resolved. `hieromonk` is read off «посвященный в иеромонаха» and «был посвящен в сан иеромонаха», which both readings say; `abbot` off his founding and heading the house. NO `office`: «иеромонах» is absent from the four locale packs, and the house he founded has no office string either. Two hymns taken. The Mother of God, the metropolitans, the superior Korniliy and the archimandrite Arseny are named without links, no folder holding any of them as this reading gives them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 30 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 30 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 July 2026 (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Божественною любовию и житием духовным/ от юности распалився, преподобне,/ и вся, яже в мире красная, возненавидев,/ Христа единаго от души возлюбил еси, отче,/ легкое иго на рамо взем,/ Божественным Промыслом и Пречистыя Богородицы чудным явлением направляемь/ достиже пустыни/ и в ней многолетне подвизался еси/ в трудех многих и слезах,/ всяким злостраданием плоть свою изнуряя./ Отонудуже Бог, твоя труды видев,/ умножи тебе чада в пустыни./ Но яко имея дерзновение к Богу,/ моли о нас, рабех твоих, отче преподобне Леониде,/ да избавит нас от всех навет вражиих/ и спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июля ст. ст. — «Тропарь преподобного Леонида Устьнедумского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260717.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled from thy youth with divine love and with a spiritual life, O venerable one, and hating all that is fair in the world, thou didst love Christ alone from thy soul, O father, and taking the easy yoke on thy shoulder, guided by divine providence and by the wondrous appearing of the most pure Mother of God, thou didst reach the wilderness and didst labour in it many years in many toils and tears, wearing out thy flesh with every hardship. Whence God, seeing thy labours, multiplied thy children in the wilderness. But having boldness before God, pray for us thy servants, O venerable father Leonid, that He may deliver us from all the snares of the enemy and save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Все свое умножив желание и к Богу вперив/ и Тому невозвратно от души последовав,/ в пустыню вселися и в ней многия труды в Бозе показал еси./ В непроходных местех источники водныя ископал еси/ и умертвил еси подвиги твоими телесная мудрования,/ многим путь был еси ко спасению./ Темже молим тя:/ спаси нас и яже собра, мудре, да зовем ти:/ радуйся, Леониде преподобне, пустынный жителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 июля ст. ст. — «Кондак преподобного Леонида Устьнедумского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260717.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having increased all thy desire and winged it towards God, and having followed Him from thy soul without turning back, thou didst settle in the wilderness and didst show many labours in God there. In trackless places thou didst dig channels of water, and by thy struggles thou didst put to death the reasonings of the body, and to many thou wast a way to salvation. Therefore we pray thee: save us and those whom thou didst gather, O wise one, that we may cry to thee: rejoice, venerable Leonid, dweller of the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
