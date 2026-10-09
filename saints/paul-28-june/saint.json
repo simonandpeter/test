@@ -4,7 +4,8 @@
   "sex": "male",
   "types": [
     "physician",
-    "venerable"
+    "venerable",
+    "monk"
   ],
   "names": [
     {
@@ -16,13 +17,28 @@
       "form": "Павле",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s third heading for the Julian 28 June, „Преподобни Павле Лекар.“ — both words of the heading’s title left off. Преподобни is `venerable`, added to `types` by this reading; **Лекар is a rank word too and not an epithet** — BRIEF-SERBIAN.md §5 maps Лекар to `physician`, which this folder already carried off the Greek line — so §6 strips it as well and what is left is the single word Павле. That is the shape §6 warns about and it folds: five other folders already store a bare Павле. The fold is in this commit’s FINDINGS and in `READ_FOLDS`. The heading offers nothing else; Коринћанин, a Corinthian, is in the body and not in the heading."
+    },
+    {
+      "form": "Павел Коринфянин",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 28 июня ст. ст., «Павел Коринфянин, прп.» (name page 1688), with the rank word left off. The epithet the link gives is the city, «Коринфянин», where the line gives the trade, «врача»; the stored form is the link's, and the line itself, «Прп. Павла врача (VII).», gives both name and trade in the genitive."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion day this folder's Greek and Serbian rows already carry, so there is no second day; his life page life1412 heads «День памяти: 28 июня» and lists no other. **The centuries disagree and neither was preferred.** The line here reads «Прп. Павла врача (VII).», the seventh century, where this folder's `floruit` is the eighth off the Охридски пролог's «Живео у VIII веку.»; the Russian life page gives no century and no year of its own, only that he died «70-ти с лишним лет», over seventy years old. The field was left as it stood and both readings are now on the page. **The identification is the trade and the city, not the name.** This calendar's name link calls him «Павел Коринфянин», Paul the Corinthian, and the life opens «Преподобный Павел, врач из города Коринфа» — a physician of the city of Corinth, which is the `physician` this folder already carries off saint.gr and the Prologue, on the same menologion day. The day page prints no hymn under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июня ст. ст. — «Прп. Павла врача (VII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260628.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

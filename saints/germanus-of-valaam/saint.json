@@ -11,6 +11,11 @@
       "form": "Γερμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιουνίου, «Όσιοι Σέργιος και Γερμανός οι θαυματουργοί οι εν Βαλάμη», with the rank word, the epithet and the island left off."
+    },
+    {
+      "form": "Герман Валаамский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 28 июня ст. ст., «Герман Валаамский, прп.» (name page 507), with the rank word left off. The line itself, «Прпп. Сергия и Германа, Валаамских чудотворцев (XIV).», gives the two forenames in the genitive and one epithet for the pair; the name link gives the epithet to each of them separately, and that is the form stored."
     }
   ],
   "dates": {
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr makes them founders on Lake Ladoga, so a Russian row is likely to exist, but nothing was read for it here."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion day this folder's Greek row already carries, so there is no second day of this calendar's own. Their shared life page life1411 heads «Дни памяти: 28 июня , 11 сентября»; the day page that listed them is 28 июня and that is this row. **11 сентября ст. ст. is among the Julian days BRIEF-RUSSIAN §4 lists as already worked, and this folder's russian row was still `undocumented` when this day was read**, so either that day's page does not print them or the reading was missed; the 11 сентября page was not opened here and nothing is claimed about it. The Russian page agrees with the folder on both years it has — «поселились на Валаамском острове в 1329 году» and «преставились около 1353 года» — so nothing was changed. The line dates the pair «(XIV)», the fourteenth century. The day page carries three hymns for the two of them and all three are joint; the same three are written on both folders."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июня ст. ст. — «Прпп. Сергия и Германа, Валаамских чудотворцев (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260628.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +74,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Евангелия Христова истиннии послушницы/ явистеся, преподобнии,/ мир и вся, яже в нем, яко не сущая,/ преобидевше любве ради Христовы,/ и в морский остров вселистеся,/ и трудолюбно в нем противу козней невидимых врагов подвизастеся,/ постом, бдением же и всенощным стоянием/ плоти своя духу мудре повинули есте./ Сего ради от Вседержительныя десницы достойныя венцы прияли есте,/ и ныне Пресвятей Троице предстояще, молитеся,/ всеблаженнии отцы Сергие и Германе,/ сохранитися в мире отечеству нашему// и спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июня ст. ст. — «Тропарь преподобных», глас 4. Joint to the two of them: the vocative is dual, «всеблаженнии отцы Сергие и Германе», and the day page prints the pair on one line. The same three hymns stand on both folders for that reason.",
+        "url": "https://days.pravoslavie.ru/Days/20260628.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "True disciples of the Gospel of Christ were ye shown to be, O venerable ones, counting the world and all that is in it as nothing for the love of Christ; and ye settled on an island of the sea and contended laboriously there against the wiles of the unseen enemies, and by fasting, by vigil and by standing through the night ye wisely made your flesh obedient to the spirit. Wherefore ye received worthy crowns from the right hand of the Almighty; and now, standing before the Most Holy Trinity, pray, O all-blessed fathers Sergius and Germanus, that our homeland be kept in peace and our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "От мирския молвы бегающе, безмолвия и благочестия рачители,/ в тихое пристанище Валаама от востока приидосте,/и в нем Евангельски Христу добродетельми последовавше, на верх совершенства востеклй есте:/и ныне в торжестве премирном Богозрением наслаждающиеся,/ всеблаженнии отцы Сергие и Германе, Человеколюбца Бога молите,/ еже спасти всех нас, благочестно вас почитающих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июня ст. ст. — «Тропарь преподобных Сергия и Германа Валаамских», глас 1. Joint to the two of them, and the only one of the three whose title names them, «Тропарь преподобных Сергия и Германа Валаамских». It names Valaam and the coming from the east.",
+        "url": "https://days.pravoslavie.ru/Days/20260628.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fleeing the clamour of the world, O lovers of silence and of piety, ye came from the east to the quiet haven of Valaam, and following Christ there in the virtues after the manner of the Gospel ye rose to the height of perfection; and now, delighting in the vision of God at the feast above the world, O all-blessed fathers Sergius and Germanus, pray to God the Lover of mankind that He save us all who honour you in piety.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От мирскаго жития изшедше,/ отвержением мира Христу последовасте,/ и достигосте великаго Нева езера,/ и, в нем на острове Валааме всельшеся,/ равноангельное житие пожили есте,/ отонудуже веселящеся прешли есте к Небесным чертогом./ И ныне со Ангелы Владычню Престолу предстояще,/ поминайте нас, чад своих,/ яже собрали есте, богомудрии,/ да радостно от души вопием:// радуйтеся, Сергие и Германе, отцы преблаженнии.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июня ст. ст. — «Кондак преподобных», глас 4. Joint to the two of them: the vocative is dual, «радуйтеся, Сергие и Германе, отцы преблаженнии», and it names lake Neva and the island.",
+        "url": "https://days.pravoslavie.ru/Days/20260628.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gone out from the life of the world, by the renouncing of the world ye followed Christ, and ye came to the great lake of Neva, and settling on the island of Valaam in it ye lived a life equal to the angels, and thence ye passed rejoicing to the mansions of heaven. And now, standing with the angels before the Master’s throne, remember us, your children, whom ye have gathered, O wise in God, that we may cry joyfully from the soul: Rejoice, O Sergius and Germanus, most blessed fathers.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
