@@ -1,0 +1,61 @@
+{
+  "slug": "ardalion-ponomarev",
+  "display_name": "Ardalion (Ponomarev)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monk"
+  ],
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Ардалион (Пономарев)",
+      "lang": "ru",
+      "note": "Name page 14515 of days.pravoslavie.ru is «Ардалион (Пономарев), архимандрит, прмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Ардалиона». `fk.mjs` returns NONE: the corpus keeps `ardalion-the-mime`, the martyr of the Julian 14 April whose own form is the bare «Ардалион», and the surname is what keeps the two apart."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июля ст. ст. — «Прмч. Ардалиона (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260716.html",
+        "year": 2026
+      },
+      "note": "The day's ninth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page behind it. «архимандрит» is the `office` Archimandrite, which all four locale packs carry, and `monk` is in `types` because `archimandrite` is not in this corpus's `types` vocabulary. «Прмч.» is the `venerable-martyr`. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. NOT TO BE CONFUSED WITH `ardalion-the-mime`, the actor martyred under Maximian Galerius and kept by this same calendar on 14 апреля. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 July 2026 (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

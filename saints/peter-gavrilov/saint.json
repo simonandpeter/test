@@ -1,0 +1,73 @@
+{
+  "slug": "peter-gavrilov",
+  "display_name": "Peter (Gavrilov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Петр (Гаврилов)",
+      "lang": "ru",
+      "note": "Name page 9759 of days.pravoslavie.ru is «Петр (Гаврилов), иерей, сщмч.»; the grade and the rank are stripped and the surname kept. THE SURNAME IS WHAT KEEPS THIS FORM OUT OF A FOLD, eleven folders in this corpus sharing a bare «Петр», and `fk.mjs` on the stored string returns NONE. The reading calls him «протоиерей», archpriest, where the name page says «иерей»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "The reading: «Священномученик Петр родился в 1870 году в деревне Уткино Мамадышского уезда Казанской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)» and the reading gives the day of the shooting as 29 июля 1937, the civil date of this Julian day in that year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июля ст. ст. — «Иакова , архиеп. Барнаульского, и с ним сщмчч. Петра и Иоанна пресвитеров, прмч. Феодора (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260716.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry, which carries FOUR names on one line and is written as four folders, one per man, the line naming each. AND THE DAY PAGE'S OWN HTML IS BROKEN HERE: it prints a seventh entry consisting of the single word «Cщмч.» — with a Latin C — and then begins the eighth with «Иакова , архиеп. Барнаульского», so the rank has been split off its own sentence and the line counted twice. That is the third such defect this wave has recorded, after «@2[Аввакума]» on 6 июля and the unresolved name-link template on 11 июля, and it is the source's and not the scrape's. THE READING NAMES FIVE AND THE LINE NAMES FOUR: life4809 is headed for the archbishop, the two priests, the monk Theodore AND «мученик Иоанн (Протопопов)», a layman shot on 4 August 1937 — eight days after the others — whom the day line does not name and for whom the page gives no name link. NO FOLDER WAS MADE FOR HIM and he is named in the report. The reading also gives the days as «26 января (Новомуч.) , 16 июля»; the first is the synaxis of the New Martyrs and WAS NOT OPENED. `new-martyr` is written on all four. The day page prints no hymn under any of these names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 July 2026 (9 October 2026)."
+    }
+  ],
+  "related": [
+    "james-maskaev",
+    "john-mozhirin",
+    "theodore-nikitin"
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

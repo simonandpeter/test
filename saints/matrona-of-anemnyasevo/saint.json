@@ -1,0 +1,93 @@
+{
+  "slug": "matrona-of-anemnyasevo",
+  "display_name": "Matrona of Anemnyasevo",
+  "types": [
+    "confessor",
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Матрона (Белякова) Анемнясевская",
+      "lang": "ru",
+      "note": "Name page 9926 of days.pravoslavie.ru is «Матрона (Белякова) Анемнясевская, исп.»; the rank is stripped and the surname and the epithet kept. The day line declines her as «Матроны Анемнясевской». The two hymns on the page add a second epithet, «Касимовской», which is in the row note and not in the form, the name page not printing it."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1936,
+      "latest": 1936,
+      "display": "1936",
+      "basis": "attested",
+      "note": "The day line closes «(1936)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июля ст. ст. — «Блж. Матроны Анемнясевской, исп (1936).»",
+        "url": "https://days.pravoslavie.ru/Days/20260716.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry. NO LIFE PAGE: the day page links none for her, so the line, the name page and HER TWO HYMNS are the whole of the record, and the hymns are where most of it is. «Блж.» maps to `fool-for-christ` or to `righteous` and the brief asks which: nothing read calls her a fool for Christ, and the hymns call her «блаженная старица», a blessed eldress, bedridden, blind and an infant in body, so `righteous` is taken and `fool-for-christ` is not. «исп» is the `confessor`. NO `new-martyr`: this calendar grades her a confessor and not a martyr, and nothing read says how she died. The hymns name the Ryazan land and Kasimov; no `locations` were written from a hymn. No folder held her — `fk.mjs` returns NONE and no folder in this corpus carries «Белякова» or «Анемнясевская» in any form."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 iulie (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Ιουλίου (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 July 2026 (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко зарница небеснаго огня возсия в рязанстей стране блаженная старица святая Матрона, еяже память днесь творяще, воспоим Христа Бога, моляще Его даровати нам тоя предстательством в болезнех, бедах и скорбех терпение, и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июля ст. ст. — «Тропарь блаженной Матроны Анемнясевской, Касимовской», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260716.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a flash of heavenly fire the blessed eldress, holy Matrona, shone forth in the land of Ryazan; and keeping her memory today let us sing to Christ God, praying Him to grant us by her intercession patience in sicknesses, troubles and sorrows, and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В немощех силу, в слепоте очи нетленныя обрела еси, пребывающи на одре болезни, всюду яко птица духом носилася еси, младенствующи телом, была еси мати скорбящим и обруеваемым. Темже чтущих твою память не остави в молитвах, и помоги нам избавися от грехов покаянием, и улучити с тобою Царство Небесное.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июля ст. ст. — «Кондак блаженной Матроны Анемнясевской, Касимовской», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260716.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In weakness thou didst find strength, and in blindness incorruptible eyes; and abiding on a bed of sickness thou wast borne everywhere in spirit like a bird, and being an infant in body thou wast a mother to the sorrowing and the storm-tossed. Therefore forsake not in thy prayers those who honour thy memory, and help us to be delivered from our sins by repentance and to obtain the heavenly kingdom with thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
