@@ -16,6 +16,11 @@
       "form": "Александар",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 3. јул ст. ст., „Преп. Александар“ — „Преп.“ is the rank and comes off, and the heading gives nothing else at all: no by-name, no see, no place. **The fold is deliberate and it is the deepest of this range**: `foldchk.py` returns `alexander-companion-of-antonina`, `alexander-companion-of-thalaleus`, `alexander-of-alexandria`, `alexander-of-cartagena` and `alexander-of-side`, all `sr`, for «Александар», so this is the **sixth** folder on the string. There is nothing in the heading to break it with — «the Sleepless» of the display name is the corpus’s own rendering of saint.gr’s Ακοίμητος, and „Неусипајушчих“ in the body names the monastery and not the man. A by-name is kept only where the heading itself gives one, which is the 18 June rule applied in the direction that costs."
+    },
+    {
+      "form": "Александр Константинопольский",
+      "lang": "ru",
+      "note": "The calendar’s nominative from name link 112, «Преподобный Александр Константинопольский», with the rank word at the head left off. The day’s own line gives the name in the genitive with the monastery instead of the city. `fk.mjs` returns no other holder for the form."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Прп. Александра , обители \"Неусыпающих\" первоначальника (ок. 430).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and this folder’s man beyond doubt: the line names him the first founder of the monastery of the Unsleeping Ones, which is the epithet this folder’s display name carries, and gives «ок. 430», about 430, which is the year the folder already holds off saint.gr. `dates` unchanged. THE DAY IS THIS FOLDER’S SERBIAN DAY AND NOT ITS GREEK ONE: its Serbian row keeps him on the Julian 3 July and its Greek row on 15 January, and this row joins the Serbian. Name link 112 gives him the epithet «Константинопольский». The life index id112 WAS NOT OPENED. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

@@ -6,6 +6,11 @@
       "form": "Μωκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιοι Μάρκος και Μωκιανός», with the rank word left off."
+    },
+    {
+      "form": "Мокий (Мокиан)",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link 1580, «Мокий (Мокиан), мч.», with the rank word left off; the day’s line gives «Мокия», the first of the two readings in the genitive. `fk.mjs` returns no other holder for «мокиан мокии». The parenthesis is the page’s second reading of the name and not a surname, and it is kept because it is what the page prints and because it is the form this folder’s display name was read from."
     }
   ],
   "types": [
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Мчч. Мокия и Марка (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, the same pair this folder already keeps with `mark-companion-of-mokianos`: the same menologion day as its Greek row, and «(IV)», the fourth century. `dates` WAS NOT WRITTEN WHERE THERE IS NONE: the folder has no `dates` object, and the century here comes from a day line whose life page, life4148, WAS NOT OPENED; it is recorded in this note and nowhere else. The entry’s two life links are the same URL twice, which is the page’s own doing. The day page prints no hymn under either name. The calendar’s name link gives «Мокий (Мокиан)», which is this folder’s own two readings of the name side by side."
     },
     {
       "church": "romanian",

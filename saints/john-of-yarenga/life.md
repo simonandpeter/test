@@ -1,0 +1,11 @@
+# John of Yarenga
+
+The Православный церковный календарь of the Сретенский monastery keeps the two monks of Yarenga together on 3 июля ст. ст. and gives them one reading between them. They lived in the sixteenth century, monks of the Transfiguration monastery of Solovki at the time when its abbot was the man the reading calls «святой Филипп», afterwards metropolitan of Moscow. Under his guidance they kept a strict rule of fasting and prayer, did the abbot’s will in all things, and grew by degrees in the spiritual life.
+
+In 1561 the two were sent on the monastery’s business into the land of Tver. On the way back a storm caught them on the White Sea; the vessel was broken and both were drowned. Some while afterwards their bodies were found incorrupt a hundred and twenty versts from the monastery, at the mouth of the river Сосновка, and were laid in a chapel named for «Святитель и Чудотворец Николай» in the village of Яренга. Wonders soon confirmed their holiness, the sick were healed at their relics, and in time a monastery grew up on the place of their burial.
+
+In 1625 a monk of the Yarenga house, Илия Телов, reported the wonders at their tomb to the patriarch Филарет. The testimonies of healing were examined and confirmed, and on 2 July 1638 the relics were carried into the newly built church of the monastery. It was in honour of that translation, the reading says plainly, that the memory of the two of them was appointed for 3 July — which is the day this folder’s row keeps, and the calendar’s own account of why the day is theirs.
+
+The calendar sets him on three days: 8 июня for Novgorod, this one, and 9 августа for Solovki. One row to a church is the schema, so the other two are recorded in the row and he does not render on them. The day page prints a troparion under his name alone, a troparion of the translation of the relics of the two of them, and a kontakion it calls common to both; all three are in this folder. It prints a fourth, a troparion under the name of [Longinus of Yarenga](/saints/longinus-of-yarenga) alone, which is not this folder’s and was not taken.
+
+*After the Православный церковный календарь of the Сретенский monastery for 3 июля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260703.html) and [the life of the two of them](https://days.pravoslavie.ru/Life/life4145.htm); read 9 October 2026.*

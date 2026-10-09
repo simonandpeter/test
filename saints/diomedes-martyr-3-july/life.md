@@ -6,4 +6,6 @@ When Hyacinth had died a martyr they were brought out of the prison and led to t
 
 The page gives the company no city, no judge but the emperor, and no year but 98. It prints a separate distich for each, and the second name it gives in two forms: «Δολινδούχ (ή Γολινδούχ)», Dolindouch or Golindouch, and «Ευλάμπιος (ή Ευλαμπίδης)», Eulampius or Eulampides. Both variants are the source's, and neither is resolved here.
 
-*After saint.gr's calendar for 3 Ιουλίου — [the day](https://www.saint.gr/07/03/index.aspx) and [the life](https://www.saint.gr/668/saint.aspx); read 1 October 2026.*
+The Православный церковный календарь of the Сретенский monastery keeps four of the company on 3 июля ст. ст. — «Мчч. Диомида , Евлампия , Асклипиодота и мц. Голиндухи (II).» — the same menologion day as the Greek page this folder was made from, and marks them the second century where the Greek gives the year 98. The Russian line names four of the six and not all of them, it carries a name link for each of the four and no life page at all, and the day page prints no hymn under any of these names.
+
+*After saint.gr's calendar for 3 Ιουλίου — [the day](https://www.saint.gr/07/03/index.aspx) and [the life](https://www.saint.gr/668/saint.aspx); read 1 October 2026; and after the Православный церковный календарь of the Сретенский monastery for 3 июля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260703.html), read 9 October 2026.*

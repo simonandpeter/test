@@ -6,6 +6,11 @@
       "form": "Νικόδημος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουλίου, «Όσιος Νικόδημος της Λίμνης Κόζα», with the rank word left off."
+    },
+    {
+      "form": "Никодим Кожеезерский",
+      "lang": "ru",
+      "note": "The calendar’s nominative from name link 1627, «Преподобный Никодим Кожеезерский», with the rank word at the head left off; the day’s line gives the same in the genitive. `fk.mjs` returns no other holder for the form."
     }
   ],
   "types": [
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Прп. Никодима Кожеезерского (1640).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s twelfth entry, and this folder’s man: the same menologion day as its Greek row, the same epithet, and 1640, which is the year the folder already holds. `dates` and `types` unchanged. The life index id1627 WAS NOT OPENED, and what the paragraph below says of the City, the sea country and the Khozyuga wilderness comes from the four hymns the day page prints under his name, all four of which are taken here."
     },
     {
       "church": "romanian",
@@ -53,5 +68,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "От царствующаго града пресельник явися/ и яже в нем великия обители/ и, промышлением Божественнаго разума окормляемь,/ к морским странам устремися,/ вселися же в пустыню, уклоняяся мирския молвы,/ и силою Святаго Духа вооружился еси,/ крестным оружием враги своя прогоняя,/ постом и непрестанною молитвою жизнь свою совершая,/ сревнуя великим отцем Антонию, и Онуфрию, и Павлу Фивейскому,/ с нимиже Господеви молися, отче Никодиме,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Тропарь преподобного Никодима Кожеезерского», глас 8 — the first of two troparia the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth as a wanderer from the imperial city and from the great monastery that is in it, and, steered by the providence of the divine understanding, thou didst set out for the countries beside the sea; and thou didst settle in the wilderness, turning aside from the noise of the world. Thou wast armed with the power of the Holy Spirit, driving thine enemies away with the weapon of the Cross, and didst accomplish thy life in fasting and unceasing prayer, emulating the great fathers Anthony and Onuphrius and Paul of Thebes. Pray thou with them to the Lord, O father Nicodemus, that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Яко безплотен, отче, пожил еси на земли,/ смирением и в яме пребыванием с молитвами превозносящегося врага смирил еси,/ яко крин, воистинну процвел еси,/ избранный кинамон, и высокий кипарис,/ и плодовитая маслина, и финике сладкий,/ и кедр благоуханный, и валсам чистый,/ терние злострастия искоренил еси/ и жилище Всесвятаго Духа был еси,/ темже поминай память твою днесь празднующих, Никодиме чудотворче,/ да вси радостными гласы воспеваем Христа Бога нашего,/ Иже тебе даровавшаго исцелений благодать.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Ин тропарь преподобного Никодима Кожеезерского», глас 4 — the page’s own word is «Ин тропарь», another troparion",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one without a body, O father, thou didst live upon earth; by humility and by dwelling in a pit, together with thy prayers, thou didst humble the enemy who exalts himself. Truly thou didst blossom as a lily — chosen cinnamon, a tall cypress, a fruitful olive, a sweet palm, a fragrant cedar and pure balsam — and thou didst root out the thorns of evil passion and wast a dwelling-place of the all-holy Spirit. Remember, therefore, those who keep thy memory today, O wonderworker Nicodemus, that we may all sing with joyful voices unto Christ our God, who granted thee the grace of healings.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Пустыню, яко царский чертог,/ усердно возлюбил еси,/ в нейже жестокое показа житие много летным пребыванием,/ очистив свою душу и ум от страстей,/ и сего ради Святаго Духа предивно приятелище бысть, Никодиме преподобне,/ Егоже действием и чудесы обогатился еси,/ темже и мы почитаем подвиги твоя, всеблаженне,/ но, яко имеяй дерзновение ко Пресвятей Троице,/ молися непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Кондак преподобного Никодима Кожеезерского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The wilderness thou didst love earnestly as a royal chamber, and in it thou didst show a hard life by dwelling there many years, cleansing thy soul and thy mind of the passions; and therefore thou wast made a wondrous dwelling-place of the Holy Spirit, O venerable Nicodemus, and wast enriched by his working and by wonders. Wherefore do we also honour thy labours, O all-blessed one; but having boldness before the most holy Trinity, pray thou unceasingly for us all.",
+        "rendered": "site"
+      },
+      "tone": "Глас 2"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Укрепляемь силою Креста и благодатию,/ преобидев тленная и долу влекущая мудрования, отче,/ бесов посрамил еси,/ к Вышнему течение получил еси,/ устремился еси в Хозьюгу пустыню,/ Пресвятей Троице жилище был еси,/ Ейже предстоя, моли о нас, почитающих тя,/ да возопиим ти:/ радуйся, преблаженне Никодиме, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Ин кондак преподобного Никодима Кожеезерского», глас 8 — the page’s own word is «Ин кондак», another kontakion",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Strengthened by the power of the Cross and by grace, and despising the corruptible reasonings that drag a man downward, O father, thou didst put the demons to shame and didst gain thy course towards the Most High; thou didst set out for the wilderness of Khozyuga and wast a dwelling-place of the most holy Trinity. Standing before her, pray for us who honour thee, that we may cry to thee: Rejoice, O most blessed Nicodemus, our father.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    }
+  ]
 }
