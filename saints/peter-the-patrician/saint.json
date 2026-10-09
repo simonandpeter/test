@@ -11,6 +11,11 @@
       "form": "Петар патриције",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 1. јул ст. ст., „Преп. Петар патриције“ — Преп. is the rank and comes off, and „патриције“ is **kept**, because it is not a rank in §5’s table at all but the Byzantine patrician dignity, which distinguishes him rather than grading him and which this corpus already carries in his display name. §6 wants the fullest form the calendar gives and warns that a bare forename beside a fuller one is a fold: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Петар патриције» and `peter-of-bulgaria` and `peter-of-lampsacus`, both `sr`, for the bare «Петар», so keeping the dignity is what avoids a third folder on that string — measured, not supposed."
+    },
+    {
+      "form": "Петр Константинопольский, Олимпийский",
+      "lang": "ru",
+      "note": "The calendar’s nominative from name link 1776, «Петр Константинопольский, Олимпийский, прп.», with the rank word after the second comma left off; the comma between the two epithets is the page’s own, as in the 161 forms this corpus already stores that way. The day’s line gives only «Петра патрикия», in the genitive and without either epithet. `fk.mjs` returns no other holder for the form."
     }
   ],
   "types": [
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст. — «Прп. Петра патрикия (854).»",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and this folder’s man: the line grades him «Прп.», venerable, calls him the patrician, and prints 854 — the same day the folder’s Greek and Serbian rows keep him on and the earlier of the two years its `dates` already hold, which is saint.gr’s. `dates` therefore unchanged. Name page 1776 gives the two epithets the day line omits, «Константинопольский, Олимпийский», and «День памяти: 1 июля» with no second day. The life page behind the entry, life4134, WAS NOT OPENED, so nothing was added to the life from it. The day page prints no hymn under his name. A SEPARATE FOLDER, `peter-of-olympus`, EXISTS AND IS NOT THIS MAN: it is a martyr and ascetic the Greek calendar keeps on 28 Νοεμβρίου, related to Stephen the New, with no dates and no Russian witness; nothing was merged."
     },
     {
       "church": "romanian",

@@ -1,0 +1,59 @@
+{
+  "slug": "potitus-of-gargara",
+  "display_name": "Potitus of Gargara",
+  "names": [
+    {
+      "form": "Потит Гаргарский",
+      "lang": "ru",
+      "note": "The calendar’s own nominative, from name page 1830, «Потит Гаргарский, мч.», with the rank word left off; the day’s line gives it in the genitive, «Мч. Потита (II).» The epithet is the mountain his life has him withdraw to. `fk.mjs` returns no holder for the form and none for the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "The century the day line prints: «Мч. Потита (II).» The life adds the reign it sets him under — «при императоре Антонине (138-161)» — which is an interval inside that century and not a year of death; no year was inferred from it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст. — «Мч. Потита (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The life page behind it, life4133, is a reading of five paragraphs and not an index; his name page 1830 gives «День памяти: 1 июля» and no other day, so there is no second-day question here. No folder holds him: the three folders whose stored notes contain the letters «Потит» name him only as an entry of this day that the corpus did not then keep. The day page prints four hymns under two headings — the unmercenaries of Rome and Angelina of Serbia — and none under his name. The places his life names, Epirus and the mountain Гаргара, were NOT written into `locations`: the reading sets him in both and in «многие страны» besides, and `map-span.test.mjs` is the reason a vague saint stays off the map."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 14 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 14 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 July 2026, the civil day of this Julian 1 July (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

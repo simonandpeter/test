@@ -10,6 +10,11 @@
       "form": "Ангелина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 10. децембар ст. ст., „Преподобна Ангелина и свети Јован деспот.“ — «Преподобна» is the rank, which BRIEF-SERBIAN §5 reads as `venerable` and which comes off the stored form, so the bare forename is the whole of what the heading gives her. The body prints no surname and no see; it calls her «Мајка Ангелина», Mother Angelina, as the name the people use, and «Мајка» is not a name form either. Measured before it was written: the key is eight characters, above the width the gate indexes, and no other folder in the corpus holds this string, so it joins no fold."
+    },
+    {
+      "form": "Ангелина Сербская",
+      "lang": "ru",
+      "note": "The calendar’s nominative from name link 2386, «Блаженная Ангелина Сербская», with the rank word «Блаженная» left off; the day’s line gives it in the genitive with the title, «Ангелины , деспотиссы Сербской». `fk.mjs` returns no other holder for «ангелина сербская»."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст. — «Прав. Ангелины , деспотиссы Сербской (XVI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. This is the Serbian despotess the folder already keeps, and the Russian calendar keeps her on A DIFFERENT DAY from the Serbian row: 1 июля ст. ст. here, 10. децембар ст. ст. in the Охридски пролог. Two churches, two days, one row each — the schema’s shape, and no row was moved. Her century agrees: the line prints «(XVI)» and the folder holds the early sixteenth. The grade DIFFERS AT ONE WORD: this calendar writes «Прав.», righteous, where the folder’s `types` read venerable and monastic off the Serbian reading. `types` was NOT changed — one grade at two words is not a disagreement about the woman — and the difference is recorded here. Name page 2386 heads her «Блаженная Ангелина Сербская», a third grade again, and the life index behind the entry WAS NOT OPENED. The day page prints a troparion and a kontakion under her name, both taken below."
     },
     {
       "church": "romanian",
@@ -58,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В тебе, мати, известно спасеся, еже по образу,/ приимши бо крест, последовала еси Христу/ и, деющи, учила еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней./ Темже и со Ангелы срадуется, преподобная Ангелино, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст., «Тропарь праведной Ангелины, деспотиссы Сербской», глас 8 — the common of a venerable woman with her name set into its last line, which is how the page prints it",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, that which was made according to the image was surely saved; for taking up thy cross, thou didst follow Christ, and by thy deeds thou didst teach us to despise the flesh, for it passeth away, but to care for the soul, a thing immortal. Wherefore thy spirit, O venerable Angelina, rejoiceth together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Вышняго живота желающи сподобитися,/ нижнюю пищу тщательно оставила еси,/ и богатство твое расточила еси нищим,/ и Небесное богатство прияла еси,/ и по смерти нас освящавши,/ и чудеса твоя, всехвальная Ангелино, источаеши./ Темже твое успение святое почитаем, взывающе:/ радуйся, мати прехвальная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст., «Кондак праведной Ангелины, деспотиссы Сербской», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring to be accounted worthy of the life on high, thou didst diligently forsake the food below; thou didst scatter thy riches among the poor and didst receive the riches of heaven; and after thy death thou dost sanctify us and pour forth thy wonders, O all-praised Angelina. Wherefore we honour thy holy falling-asleep, crying out: Rejoice, O mother most praised.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -16,6 +16,11 @@
       "form": "Дамјан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 1. јул ст. ст., „Св. муч. Козма и Дамјан“ — Св. is not a rank, муч. is the rank, which `types` already carries, and „Козма и“ is the other man; all three come off and the bare forename is left, which is all the heading gives. «of Rome» is the corpus’s own disambiguation off two other books and is not in this heading. **The fold is deliberate and forced, and it is the wider of the two**: `foldchk.py` returns `damian-of-arabia`, `damian-of-esphigmenou` and `damian-the-healer`, all `sr`, for «Дамјан», so this is the fourth folder on the string, and the heading offers nothing to break it with."
+    },
+    {
+      "form": "Дамиан Римский",
+      "lang": "ru",
+      "note": "The calendar’s nominative from name link 574, «Дамиан Римский, бессребреник, мч.», with the two rank words left off; the day’s line gives it in the genitive. `fk.mjs` returns no other holder for «дамиан римскии»."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст. — «Бессребреников Космы и Дамиана , в Риме пострадавших (284).»",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the same two unmercenaries this folder already keeps: the Russian line sets them on the same menologion day as the folder’s Romanian, Greek and Serbian rows, says that they suffered at Rome, and prints 284, which is the earlier of the two years this folder’s `dates` already hold. `dates` therefore unchanged. The entry links to two name pages and to two life indexes, id1298 and id574, WHICH WERE NOT OPENED: the row rests on the day line, and the two hymns below are the day page’s. The calendar’s own epithet is «Римский», of Rome."
     },
     {
       "church": "romanian",
@@ -146,6 +161,38 @@
       },
       "english": {
         "text": "You who received the grace of healings spread health abroad upon those in need, glorious wonderworking physicians; and by your visitation cast down also the insolence of our enemies, healing the world by your wonders.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Святии безсребреницы и чудотворцы Космо и Дамиане,/ посетите немощи наша:// туне приясте, туне дадите нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст., «Тропарь бессребреников», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy unmercenaries and wonderworkers Cosmas and Damian, visit our infirmities: freely ye received, freely give unto us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Благодать приимше исцелений,/ простираете здравие сущим в нуждах, врачеве,/ чудотворцы преславнии,/ но вашим посещением ратников дерзости низложите,// мир исцеляюще чудесы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст., «Кондак бессребреников», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the grace of healings, ye stretch out health to those in need, O physicians and most glorious wonderworkers; but by your visitation cast down the insolence of the enemy, healing the world by your miracles.",
         "rendered": "site"
       }
     }
