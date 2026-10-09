@@ -16,6 +16,11 @@
       "form": "Јоана",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 27. јун ст. ст., „Света Јоана Мироносица“ — Света is not a rank and Мироносица is the rank, which §6 takes off and which this corpus has no type for, as the row records. The bare forename is what is left, and the «wife of Chuza» of the display name is the corpus’s own, off the body of this entry and of the other two books’ lines, and §10 reserves it. **The spelling is this book’s own and is copied as printed**: it writes Јоана with one н, where the Romanian form on this folder is «Ioana» and the Greek «Ιωάννα» with two; nothing is regularised and nothing is transliterated. `foldchk.py` returns NO FOLDER HOLDS THIS FORM and `.tmp/sr-foldpred.mjs` returns no other holder of the gate’s folded key, **which is worth the line on a name this common**: the corpus keeps dozens of Johns and this is its first Serbian Joanna, so no `READ_FOLDS` key is owed."
+    },
+    {
+      "form": "Иоанна Мироносица",
+      "lang": "ru",
+      "note": "Read out of the name link behind her place in days.pravoslavie.ru's line for 27 июня ст. ст., «Иоанна Мироносица» (name page 2515). The calendar's own nominative is name and epithet with no rank word in it; the line itself, «Прав. Иоанны мироносицы (I).», gives both in the genitive."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s Romanian, Greek and Serbian rows already carry, so there is no second day. Her life page life1404 heads «Дни памяти: 13 апреля , 27 июня»; 13 апреля is ten weeks earlier and is not the style conversion, the day page for it was not read, and nothing is claimed about it here beyond that the calendar lists it. The line grades her «Прав.», righteous, and dates her «(I)», the first century, which this folder records in no field, having none. The day page prints no hymn under her name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Прав. Иоанны мироносицы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -77,5 +92,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "types": [
+    "righteous"
+  ]
 }

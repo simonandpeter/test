@@ -16,6 +16,11 @@
       "form": "Георгије Иверски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, the epithet \"the Iberian\" the heading sets after all four names and which the entry's first sentence confirms belongs to all four. Measured: a bare «Георгије» would fold with `george-of-mytilene`, where this form folds with nothing. The heading prints no comma between Јевтимије and Георгије; that is the book's and is quoted as it stands rather than corrected. The translation of the Scriptures and the 1066 are in the body."
+    },
+    {
+      "form": "Георгий Иверский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 27 июня ст. ст., «Преподобный Георгий Иверский, Афонский» (name page 498), with the rank and grade words left off. The line itself, «Прп. Георгия Иверского, Афонского (1065).», gives the name in the genitive. The line gives him two epithets, «Иверского, Афонского»; the name link gives the same two and the stored form keeps the first, which is the one this folder’s display name and its other three calendars carry."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "julian",
+        "note": "**A different menologion day from this folder’s other three rows, and a third year.** Both of the readings off index page id498 head «Дни памяти: 13 мая , 27 июня» — the Romanian, Greek and Serbian rows here all stand on 13/5, and the day page that listed him is 27 июня, so that is this row; one attestation row per church is the schema and the 13 мая of this calendar is the same number as those, not a second day of its own. **The years now number three and none was preferred.** The day line gives «(1065)», the first reading «мирно отошел ко Господу в 1066 г.» and adds that he was buried on the Holy Mountain in the Iveron house on «24 мая 1067 г.», and this folder’s interval is 1066–1067 off doxologia and the Охридски пролог. 1065 falls outside it and nothing was changed. **The birth is offered a second reading too**: the first reading says «родился в 1009 (или 1014) г.» and the second «в 1009 году (по некоторым данным, в 1014 году)», where this folder records the flat 1014 off the Пролог. The field was left as it stood and whether to widen it to 1009–1014 is the author’s. The day page prints no hymn under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Прп. Георгия Иверского, Афонского (1065).»",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

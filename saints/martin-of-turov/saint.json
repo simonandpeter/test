@@ -1,0 +1,59 @@
+{
+  "slug": "martin-of-turov",
+  "display_name": "Martin of Turov",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Мартин Туровский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 27 июня ст. ст., «Преподобный Мартин Туровский» (name page 1489), with the rank and grade words left off. The line itself, «Прп. Мартина Туровского (после 1146).», gives the name in the genitive."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1146,
+      "latest": null,
+      "display": "after 1146",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s line gives «(после 1146)» and the first of his two readings «Скончался преподобный Мартин после 1146 года» — after 1146, which is a finding and not a year: the calendar says it does not know when he died, only that it was not before that. The upper bound is left open for that reason. The second reading says he lived a year more after his healing and dates the last of the four bishops he served to 1144–1146, and neither of those closes the bound."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "julian",
+        "note": "Both of his readings head «Дни памяти: 8 июня (Белорус.) , 8 июня , 27 июня». The day page that listed him is 27 июня and that is this row; **8 июня ст. ст. is twenty days earlier, so it is not the style conversion, and the reader of that day should be told — the parenthesis marks one of the two as the synaxis of the saints of Belarus.** No folder of a Martin of Turov existed before today and none carries a venerated russian row on 8 июня."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 июня ст. ст. — «Прп. Мартина Туровского (после 1146).»",
+        "url": "https://days.pravoslavie.ru/Days/20260627.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
