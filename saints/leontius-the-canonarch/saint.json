@@ -20,13 +20,28 @@
       "form": "Λεόντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιουνίου, «Όσιος Λεόντιος ο Κανονάρχης», with the rank word and the office left off."
+    },
+    {
+      "form": "Леонтий Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 18 июня ст. ст., «Леонтий Печерский, канонарх», with the office word «канонарх» left off; the office is in the display name and in the types."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's greek row carries. Its life page life1337 heads «Дни памяти: 18 июня , 28 августа (Печер.(Д))»; the 28 августа is the synaxis of the Kiev Caves saints of the Far Caves, a synaxis and not a second feast, and this folder renders on 18 июня ст. ст. only. The Russian line «Прп. Леонтия , канонарха Печерского (XIV).» and its life agree with the Greek page in every particular — the Caves, the voice, the office of canonarch, the dying young and the fourteenth century — which is what makes this an upgrade and not a folder."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Прп. Леонтия , канонарха Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +71,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Всечестный канонарше Леонтие,/ правилоначальный бывый в церкви/ и в правиле иночестем возсиявший светло,/ моли Христа Бога,/ да прегрешений оставление/ подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Тропарь преподобного Леонтия отрока, канонарха Печерского, в Дальних пещерах», глас 3. Proper to him: «Всечестный канонарше Леонтие» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "All-honoured canonarch Leontius, who wast the leader of the rule in the church and didst shine brightly in the monastic rule, pray to Christ God that He may grant our souls the remission of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Двоице святая,/ правилоначальная, бывшая в церкви/ и в правиле иночестем возсиявшая светло,/ всечестнии канонарси,/ молите Христа Бога,/ да прегрешений оставление подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Ин тропарь, общий, преподобным Геронтию и Леонтию канонархам, в Дальних пещерах почивающим», глас 3. The page marks it «общий», common, to the two canonarchs of the Far Caves, and it addresses them as a pair in the dual; it is his hymn as much as the other canonarch's.",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy pair, leaders of the rule in the church, who shone brightly in the monastic rule, all-honoured canonarchs, pray to Christ God that He may grant our souls the remission of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Канонаршествуя, честный канонарше Леонтие,/ и пение церковное поющим предводительствуя в церкви,/ уподобился воистинну Ангелом,/ поющим Бога на Небеси,/ ихже и житию подражая, и, с ними ликуя,/ поминай ны, любовию хвалящих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Кондак преподобного Леонтия отрока, канонарха Печерского, в Дальних пещерах», глас 1. Proper to him: «честный канонарше Леонтие» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Serving as canonarch, honoured canonarch Leontius, and leading in the church those who sing its chant, thou wast made truly like the angels who sing to God in heaven; imitating their life and rejoicing with them, remember us who praise thee with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Канонаршествующе, честнии канонарси,/ и пение церковное поющим предводительствующее в церкви,/ подобистеся воистинну Ангелом,/ поющим Бога на Небеси,/ ихже житию подражавше, / и, с ними ныне ликующе, / поминайте ны, любовию хвалящих вас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Ин кондак, общий, преподобным Геронтию и Леонтию канонархам, в Дальних пещерах почивающим», глас 1. The page marks it «общий», common, to the two canonarchs of the Far Caves, and it addresses them as a pair; it is his hymn as much as the other canonarch's.",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Serving as canonarchs, honoured canonarchs, and leading in the church those who sing its chant, ye were made truly like the angels who sing to God in heaven; having imitated their life and now rejoicing with them, remember us who praise you with love.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -11,6 +11,11 @@
       "form": "Θεόδουλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιουνίου, «Άγιος Λεόντιος και οι συν αυτώ Υπάτιος και Θεόδουλος», with the rank word left off."
+    },
+    {
+      "form": "Феодул Триполийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 18 июня ст. ст., «Феодул Триполийский, мч.», with the grade and rank words left off. The line itself gives the forename in the genitive and no epithet."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's other venerated rows already carry. The one life page days.pravoslavie.ru gives the three soldiers, life1335, heads «День памяти: 18 июня» and names no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Мчч. Леонтия , Ипатия и Феодула (70-79).»",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

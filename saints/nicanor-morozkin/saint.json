@@ -1,0 +1,60 @@
+{
+  "slug": "nicanor-morozkin",
+  "display_name": "Nicanor (Morozkin)",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Никанор (Морозкин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 18 июня ст. ст., «Никанор (Морозкин), архимандрит, прмч.» (name page 14274), with the grade and rank words left off; the surname is part of the name and stays. The line itself, «Прмч. Никанора (1938).», gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in his line for 18 июня ст. ст.: «Прмч. Никанора (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 26 апреля (Бут.) , 18 июня» (page 14274) and carries no prose at all. Both of the other two days are synaxes — the new martyrs and confessors of Russia on 26 января, and the Бутово synaxis on 26 апреля — and neither is a second feast; this folder renders on 18 июня ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 июня ст. ст. — «Прмч. Никанора (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260618.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 1 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "office": "Archimandrite",
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
