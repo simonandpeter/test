@@ -11,13 +11,28 @@
       "form": "Βαρνάβας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιουνίου, «Όσιος Βαρνάβας του ποταμού Βετολούγκα», with the rank word and the river left off."
+    },
+    {
+      "form": "Варнава Ветлужский",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 11 июня ст. ст., name page 6800, «Преподобный Варнава Ветлужский». The line declines both words («Варнавы Ветлужского»); the rank «Преподобный» is not stored with the form."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian monk, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Прп. Варнавы Ветлужского (1445)»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "note": "The day's second line, and the fullest the Russian calendar gives of him. The name link behind «Варнавы» is name page 6800, «Преподобный Варнава Ветлужский», and the index it heads, id6800, carries two readings of him; both were read whole. The longer, life1283, is what the paragraphs this upgrade adds rest on, and the shorter, life6484, is a précis of it which agrees in every particular it states. Both head «День памяти: 11 июня» and neither gives a second day, so nothing here is a second feast. The day page prints a troparion and a kontakion under his own name and both are taken. `dates` was null and now carries the death year the line and both readings give. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",
@@ -47,5 +62,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1445,
+      "latest": 1445,
+      "display": "1445",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 11 июня ст. ст. reads «Прп. Варнавы Ветлужского (1445)», and both readings behind id6800 say «скончался в глубокой старости 11 июня 1445 года». No birth year is given anywhere: the readings say only that he was in great old age, and that he had lived twenty-eight years on the Vetluga from 1417."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "\u0001",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Тропарь преподобного Варнавы Ветлужского»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled with spiritual longing and casting off the tumults of the world, thou didst join thyself diligently to God in love. Seeking him with thy whole soul, thou didst go out into the inner wilderness and didst settle by the waters, where, abiding many years in tears and labours, thou didst live the angelic life in much patience under the instruction of the divine wisdom, and didst gather a multitude of monks, O wise one. Do not leave them unvisited, O venerable Barnabas our father, but pray to the Most Holy Trinity to deliver us from all evils and to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "\u0001",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Кондак преподобного Варнавы Ветлужского»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth, O venerable one, thou didst wear thy flesh thin with fastings and prayers, and taking up thy cross thou didst follow Christ with zeal; and so thou didst finish thy course to the heights with joy, where thou standest with all the saints. And now visit thy flock, remembering those who honour thy all-holy memory, that we may all cry out to thee in thanksgiving: rejoice, O Barnabas wise in God, teacher of the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
