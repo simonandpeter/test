@@ -15,8 +15,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 июля ст. ст. — «Мч. Серапиона (II-III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260713.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry, and the identification is made on the folder's own terms. Its Greek note says of the eleven other men of the name in this corpus that «none is burned alive, and none is taken by a ruler named Aquila», and names the emperor Severus as all saint.gr gave it. This reading, life4231, has all three: «пострадал за Христа при императоре Севере (193-211)», «приведен на суд правителя Акилы», and «Брошенный в костер, он предал свою душу Богу». Same emperor, same judge by name, same fire. THE TWO BOOKS KEEP HIM ONE MENOLOGION DAY APART — saint.gr on 12 July, this calendar on the Julian 13 — which is not a style conversion and is not reconciled; one row per church, and the Greek row stands where it was. NO `dates`: the line gives «(II-III)» and the reading «(† ок. 205)», a Roman numeral pair and a hedged year, and this folder has no `dates` at all for either to become its first. NO RUSSIAN NAME FORM WAS WRITTEN. Name page 1963 is «Серапион, мч.» — the bare forename, every other word being the rank — and `fk.mjs` shows «серапион» already held by four folders on a collision row the gate prints UNREAD. Adding a fifth holder would widen a fold nobody has read, on the strength of a form that distinguishes nothing, so the form is withheld and named in the report instead. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
