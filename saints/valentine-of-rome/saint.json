@@ -6,6 +6,11 @@
       "form": "Ουαλεντίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Ουαλεντίνος ο Ιερομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Валентин Римлянин",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 337, «Валентин Римлянин, пресвитер, сщмч.», with both rank words after the comma left off — «пресвитер» is the rank `types` already carries. The day line gives «Валентина пресвитера», the forename and the rank in the genitive. `fk.mjs` returns no other holder for «валентин римлянин»; the corpus’s other Valentines are of Interamna, of Durostorum, of Caesarea and four twentieth-century Russians, none of them holding this form."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, sixth name. THIS IS A DIFFERENT DAY FROM THE FOLDER’S GREEK ROW AND THE ROW IS NOT MOVED: saint.gr keeps the presbyter of Rome on 14 Φεβρουαρίου and this calendar keeps him on 6 июля ст. ст., where it prints him inside the Roman company of Marius. One row per church is the schema, so the Russian row stands on the Russian day. Name page 337 heads him «Валентин Римлянин, пресвитер, сщмч.» and lists «День памяти: 6 июля» and NO OTHER DAY, so there is no second-day note to write and no question of the Interamna bishop, whom this corpus keeps separately as `valentine-of-interamna` and whom this calendar does not print here. The line is quoted exactly as the page prints it: the fourth name stands in the source’s own HTML as «@2[Аввакума]», an unresolved name-link template, which is why Аввакум alone of the seven carries no `/name/` link. The artefact is the page’s and not the scrape’s — it is in the cached HTML itself. The reading life4166 was opened. The Russian line and reading put the company at Rome under Claudius II (268–270) and close with 269, which falls inside the interval this folder already carries; `dates` UNCHANGED. The two names of the seven that the corpus did not hold — Кирин and Астерий — are new folders in this same batch, `cyrinus-companion-of-marius` and `asterius-of-rome`, and the whole company is joined by `related`. «иных многих» names nobody and takes no folder. The reading has the pagans behead «мужественного исповедника Валентина пресвитера» and, with him, the official Asterius whom he had converted; `asterius-of-rome` is a new folder in this batch and the two are joined by `related` both ways. `types` and `dates` UNCHANGED — the folder’s `hieromartyr, presbyter` is what «пресвитера» and «сщмч.» grade him here too, and its death interval is saint.gr’s reading of which Claudius, which this reading answers differently (Claudius II, 268–270, and 269 flat) WITHOUT the field being touched; that conflict is in the report."
     },
     {
       "church": "romanian",
@@ -57,7 +72,8 @@
   "related": [
     "proclus-companion-of-apollonius",
     "apollonius-companion-of-proclus",
-    "ephebius-companion-of-proclus"
+    "ephebius-companion-of-proclus",
+    "asterius-of-rome"
   ],
   "text": {
     "life": "life.md"

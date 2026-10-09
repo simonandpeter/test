@@ -1,0 +1,9 @@
+# Asterius of Rome
+
+The Православный церковный календарь of the Сретенский monastery names him last of the seven in its Roman company of 6 июля ст. ст., «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).» The company's reading gives him one sentence, and it is the whole of what the calendar says of him: the pagans beheaded the brave confessor Valentine the presbyter and, with him, the imperial official whom Valentine had brought to Christ.
+
+«Язычники обезглавили мужественного исповедника Валентина пресвитера и обращенного им в христианство императорского сановника Астерия» — so Asterius comes into the account as a man of the emperor's service who was converted by the priest he died beside. The same sentence says that the ascetics out of Persia who were living with them were arrested in the same hour and given over to torments, and by the emperor's command [Marius of Persia](/saints/marius-of-persia), [Audifax](/saints/audifax-son-of-marius) and [Abachum](/saints/abachum-son-of-marius) were beheaded in the year 269, while [Martha](/saints/martha-wife-of-marius) was drowned in the river.
+
+Of Asterius himself there is no further word, and no reading of his own: name page 286 heads him «Астерий Римлянин, мч.», Asterius the Roman, martyr, prints «День памяти: 6 июля» and links only to the company's life. His conversion, his office under the emperor and his beheading beside [Valentine of Rome](/saints/valentine-of-rome) are the three things said, and the year is the one the line closes with for them all.
+
+*After the Православный церковный календарь of the Сретенский monastery for 6 июля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260706.html), [the company's reading](https://days.pravoslavie.ru/Life/life4166.htm) and [his name page](https://days.pravoslavie.ru/name/286.html); read 9 October 2026.*

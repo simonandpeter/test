@@ -11,6 +11,11 @@
       "form": "Марта",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 6. јул ст. ст., „Св. муч. Марин и Марта,“ — Св. is not a rank and муч. is the rank, which `types` already carries; both come off, „Марин и“ is the other name the heading enumerates, and the bare forename is left. «wife of Marius of Persia» in the display name is the corpus’s own and is not in this heading. **The fold is forced and it is three deep, and one of the two holders is a folder this same reader wrote the form onto two days ago**: `foldchk.py` returns `martha-of-antioch`, whose «Марта» was written on 4 July, and `martha-sister-of-lazarus`, both `sr`. There is nothing in the heading to break it with, and the three are told apart by their display names, their days and their `types` as they were before."
+    },
+    {
+      "form": "Марфа Персиянка, Римская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2609, «Марфа Персиянка, Римская, мц.», with the rank word after the last comma left off. The day line gives the bare forename in the genitive, «Марфы». `fk.mjs` returns no other holder."
     }
   ],
   "sex": "female",
@@ -26,7 +31,9 @@
   "related": [
     "marius-of-persia",
     "audifax-son-of-marius",
-    "abachum-son-of-marius"
+    "abachum-son-of-marius",
+    "cyrinus-companion-of-marius",
+    "asterius-of-rome"
   ],
   "dates": {
     "death": {
@@ -40,8 +47,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, second name, and this folder’s woman: the same menologion day its Romanian and Serbian rows already keep, the same company. The line is quoted exactly as the page prints it: the fourth name stands in the source’s own HTML as «@2[Аввакума]», an unresolved name-link template, which is why Аввакум alone of the seven carries no `/name/` link. The artefact is the page’s and not the scrape’s — it is in the cached HTML itself. The reading life4166 was opened. The Russian line and reading put the company at Rome under Claudius II (268–270) and close with 269, which falls inside the interval this folder already carries; `dates` UNCHANGED. The two names of the seven that the corpus did not hold — Кирин and Астерий — are new folders in this same batch, `cyrinus-companion-of-marius` and `asterius-of-rome`, and the whole company is joined by `related`. «иных многих» names nobody and takes no folder. The reading adds the manner of her death, which neither of the other two books gave: «а святая Марфа утоплена в реке» — she was drowned in the river, where her husband and sons were beheaded. Name page 2609 heads her «Марфа Персиянка, Римская, мц.» and lists «День памяти: 6 июля» and no other day."
     },
     {
       "church": "romanian",

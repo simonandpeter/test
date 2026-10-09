@@ -1,0 +1,65 @@
+{
+  "slug": "cyrinus-companion-of-marius",
+  "display_name": "Cyrinus, companion of Marius",
+  "names": [
+    {
+      "form": "Кирин Римлянин",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1236, «Кирин Римлянин, мч.», with the rank word after the comma left off. The day line gives the bare forename in the genitive, «Кирина», so the epithet is read from the name link. `fk.mjs` returns no holder for «кирин римлянин»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 269,
+      "latest": 269,
+      "display": "269",
+      "basis": "traditional",
+      "note": "The year the day line closes with for the whole company, «(269)», and the year the reading states for the beheading of Marius, Audifax and Abachum, «в 269 году». The reading puts his own death one day before theirs — they came back to the prison and he had been executed «накануне» — and gives him no year of his own; nothing is subtracted for that day. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and the one man of its seven whom the corpus did not already hold under another name. The line is quoted exactly as the page prints it: the fourth name stands in the source’s own HTML as «@2[Аввакума]», an unresolved name-link template, which is why Аввакум alone of the seven carries no `/name/` link. The artefact is the page’s and not the scrape’s — it is in the cached HTML itself. The reading life4166 is the company’s and was opened: in it he is a prisoner who had borne many torments for the faith, whom the four Persians served in jail and whose body they drew out of the Tiber after his beheading. `cyrinus-of-rome` is NOT this man — that folder is the Cyrinus beheaded with Claudius and Antoninus at Rome in 304, kept by this same calendar on the Julian 7 June, and its own row quotes that day’s line; the year, the day and the company all differ. Name page 1236 lists «День памяти: 6 июля» and no other day. The day page prints nineteen hymn headings and none under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 19 iulie, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 19 Ιουλίου, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 July 2026, the civil day of this Julian 6 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "marius-of-persia",
+    "martha-wife-of-marius",
+    "audifax-son-of-marius",
+    "abachum-son-of-marius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

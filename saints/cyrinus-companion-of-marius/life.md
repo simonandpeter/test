@@ -1,0 +1,9 @@
+# Cyrinus, companion of Marius
+
+The Православный церковный календарь of the Сретенский monastery sets him inside the long Roman company of 6 июля ст. ст. The line reads «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).» — the martyrs Marius, Martha, Audifax, Abachum, Cyrinus, Valentine the presbyter, Asterius and many others with them at Rome. One reading serves the whole company, and in it Cyrinus is a prisoner: a man already held in one of the city's jails, who had borne many torments for the faith of Christ.
+
+Under the emperor Claudius II (268–270) [Marius of Persia](/saints/marius-of-persia) came out of Persia to Rome with his wife [Martha](/saints/martha-wife-of-marius) and their sons [Audifax](/saints/audifax-son-of-marius) and [Abachum](/saints/abachum-son-of-marius), to venerate the tombs of the apostles, and stayed to serve the imprisoned and to bury the executed. In one of the prisons they came upon the captive Cyrinus and served him with love, as one who had endured much for Christ.
+
+Returning to that prison afterwards they did not find him. He had been beheaded the day before and his body thrown into the Tiber, and the four of them drew it out of the river and gave it to the earth — «святые Марин, Марфа и их сыновья извлекли из реки тело святого мученика и предали его земле». Nothing else is told of him: not his city, not his rank, not what the torments were. The year the line closes with, 269, it gives to the whole company, and his own death stands a day before theirs.
+
+*After the Православный церковный календарь of the Сретенский monastery for 6 июля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260706.html), [the company's reading](https://days.pravoslavie.ru/Life/life4166.htm) and [his name page](https://days.pravoslavie.ru/name/1236.html); read 9 October 2026.*
