@@ -1,0 +1,60 @@
+{
+  "slug": "nicholas-zapolsky",
+  "display_name": "Nicholas (Zapolsky)",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Николай (Запольский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s place for him in the line for 14 июня ст. ст., «Николай (Запольский), диакон, сщмч.» (name page 11400), with the grade word and the rank word left off; the surname is part of the name and stays. The line itself gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints in the line for 14 июня ст. ст.: «Сщмч. Иосифа и Димитрия пресвитеров (1918) Сщмчч. Александра , Павла пресвитеров и Николая диакона (1938).» The line carries two years, 1918 for the first two names and 1938 for the last three, and his is the fifth of the five."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 14 июня» (page 11400). His name page also lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, which is a synaxis and not a second feast; this folder renders on 14 июня ст. ст. only. He is the one of the five whose name page carries any prose at all: a «Статья на Православие.Ru» heading and one paragraph. The corpus holds no other folder whose stored forms carry Запольский."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июня ст. ст. — «Сщмч. Иосифа и Димитрия пресвитеров (1918) Сщмчч. Александра , Павла пресвитеров и Николая диакона (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260614.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 27 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
