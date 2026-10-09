@@ -16,6 +16,11 @@
       "form": "Лукија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 6. јул ст. ст., „Св. муч. Лукија“ — Св. is not a rank and муч. is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. «of Rome, companion of Rix» in the display name is the corpus’s own disambiguation off two other books, and **this book calls that companion by another name entirely**, which is why none of it is built onto the form. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Лукија», so there is no fold."
+    },
+    {
+      "form": "Лукия Каппадокианка, Римская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2574, «Лукия Каппадокианка, Римская, дева, мц.», with the two rank words after the last comma left off — «дева» is the `virgin` the corpus’s `types` vocabulary carries. The epithet «Каппадокианка» is the page’s and is kept although the reading behind it makes her a native of Campania; the page is not corrected. `fk.mjs` returns no other holder."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мц. Лукии девы и с нею мчч. Рикса , Антония , Лукиана , Исидора , Диона , Диодора , Кутония , Ароноса (Ориона), Капика и Сатура (301).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and its first name: the same menologion day this folder’s Romanian, Greek and Serbian rows already keep, the same companion Rix, the same martyrdom at Rome. The reading life4169 was opened and is fuller than either book the folder already rests on: she is a native of the Italian region of Campania, taken captive young by Rix, a chief of one of the German tribes, and carried abroad; he first pressed her to the pagan rites, then came to revere her and gave her and her maidservants a house of their own, and asked her prayers before his campaigns. After twenty years, hearing that Diocletian had raised a persecution, she asked leave to go back to Italy; Rix, by then a Christian himself, left his palace and family and went with her to Rome, where both were put to the sword by the sentence of the prefect Elius. The line closes «(301)», which is the year `rix-the-vicar` already carries and one year outside this folder’s «about 300» off the Охридски пролог. `dates` UNCHANGED and the conflict is in the report: unlike the Prologue’s 301 for Rix, this 301 is stated of the entry that names her first, which may be the witness the earlier reading wanted. This book calls her companion «Рикс (Авций)», which is the Αύκειος the Prologue made an emperor of, and so joins the two readings the folder’s own note left unjoined — but it calls him a «царь», a king, where saint.gr makes him a vicar, and no `types` were changed on either folder for that. ELEVEN NAMES ON THE RUSSIAN LINE AGAINST FIFTEEN ON THE GREEK, AND THE TWO LISTS ARE READ AGAINST EACH OTHER NAME BY NAME. The corpus already keeps this company off saint.gr’s «Άγιοι Εικοσιτέσσερις Μάρτυρες» of the same menologion 6/7 and the same year 301, which enumerates fifteen and then says «και άλλοι εννέα», and nine others. The Russian line names Lucia, Rix and nine more. Eight of those nine answer to a Greek name of the fifteen and take that folder’s russian row; the ninth, Исидор, is a name the Greek list does not print and is a new folder, `isidore-companion-of-lucia`. The alignment is positional as well as onomastic: Greek «… Κοττύιος. Όρωνος, Παπικός, Σάτυρος» against Russian «… Кутония , Ароноса (Ориона), Капика и Сатура» is four consecutive names in the same order. The seven Greek names the Russian line does NOT print — Ανατολίας, Άπαμος, Απολλώνιος, Νέας, Παππιανός, Σερίνος, Βίκτωρ — keep their undocumented russian rows and were left exactly as they stand. `dates` UNCHANGED: this line’s 301 is the year the folder already carries. The reading life4169 was opened; it is one account for the whole company and names the nine only in the closing sentence. No hymn on the day page stands under any of these names."
     },
     {
       "church": "romanian",
@@ -77,7 +92,8 @@
     "life": "life.md"
   },
   "related": [
-    "rix-the-vicar"
+    "rix-the-vicar",
+    "isidore-companion-of-lucia"
   ],
   "dates": {
     "death": {

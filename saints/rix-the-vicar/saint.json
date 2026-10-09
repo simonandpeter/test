@@ -10,6 +10,11 @@
       "form": "Ρήξος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιοι Λουκία η παρθενομάρτυς, Ρήξος βικάριος και πολλοί άλλοι που μαρτύρησαν στην Κομπανία», with the rank word and the office left off."
+    },
+    {
+      "form": "Рикс (Авций) Сицилийский, Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1869, «Рикс (Авций) Сицилийский, Римский, царь, мч.», with the two rank words after the last comma left off. The bracketed second name and both epithets are the page’s own and are kept whole. `fk.mjs` returns no other holder."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мц. Лукии девы и с нею мчч. Рикса , Антония , Лукиана , Исидора , Диона , Диодора , Кутония , Ароноса (Ориона), Капика и Сатура (301).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, second name: the same menologion day this folder’s Greek row already keeps, the same company, the same year 301. `dates` UNCHANGED. THE CALENDAR GRADES HIM DIFFERENTLY FROM saint.gr AND NOTHING WAS CHANGED FOR IT: name page 1869 heads him «Рикс (Авций) Сицилийский, Римский, царь, мч.», a king, where saint.gr’s «Βικάριος» made him a vicar and this folder’s display name after it; `types` keeps `martyr` alone, as before, and no `prince` or `king` was added on a word the Russian page gives and the Greek contradicts. The bracketed «Авций» is the Αύκειος the Охридски пролог calls a barbarian emperor in `lucia-of-rome-companion-of-rix`’s note, so this page joins the two names the earlier reading left apart. The reading life4169 was opened: a chief of one of the German tribes who took Lucia captive, came to revere her, asked her prayers before his campaigns, became a Christian, left palace and family and went with her to Rome to be put to the sword by the prefect Elius. Name page 1869 lists «День памяти: 6 июля» and no other day. ELEVEN NAMES ON THE RUSSIAN LINE AGAINST FIFTEEN ON THE GREEK, AND THE TWO LISTS ARE READ AGAINST EACH OTHER NAME BY NAME. The corpus already keeps this company off saint.gr’s «Άγιοι Εικοσιτέσσερις Μάρτυρες» of the same menologion 6/7 and the same year 301, which enumerates fifteen and then says «και άλλοι εννέα», and nine others. The Russian line names Lucia, Rix and nine more. Eight of those nine answer to a Greek name of the fifteen and take that folder’s russian row; the ninth, Исидор, is a name the Greek list does not print and is a new folder, `isidore-companion-of-lucia`. The alignment is positional as well as onomastic: Greek «… Κοττύιος. Όρωνος, Παπικός, Σάτυρος» against Russian «… Кутония , Ароноса (Ориона), Капика и Сатура» is four consecutive names in the same order. The seven Greek names the Russian line does NOT print — Ανατολίας, Άπαμος, Απολλώνιος, Νέας, Παππιανός, Σερίνος, Βίκτωρ — keep their undocumented russian rows and were left exactly as they stand. `dates` UNCHANGED: this line’s 301 is the year the folder already carries. The reading life4169 was opened; it is one account for the whole company and names the nine only in the closing sentence. No hymn on the day page stands under any of these names."
     },
     {
       "church": "romanian",
@@ -54,7 +69,8 @@
     }
   ],
   "related": [
-    "lucia-of-rome-companion-of-rix"
+    "lucia-of-rome-companion-of-rix",
+    "isidore-companion-of-lucia"
   ],
   "text": {
     "life": "life.md"

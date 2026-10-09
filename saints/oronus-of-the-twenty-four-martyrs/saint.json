@@ -10,6 +10,11 @@
       "form": "Όρωνος",
       "lang": "el",
       "note": "Read out of saint.gr's own list of the Twenty-four Martyrs on the life page behind the line for 6 Ιουλίου, «Άγιοι Εικοσιτέσσερις Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Аронос (Орион) Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 260, «Аронос (Орион) Римский, мч.», with the rank word after the comma left off. The day line gives the name in the genitive only. `fk.mjs` returns no other holder for the folded form."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мц. Лукии девы и с нею мчч. Рикса , Антония , Лукиана , Исидора , Диона , Диодора , Кутония , Ароноса (Ориона), Капика и Сатура (301).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. This folder’s man is the Russian line’s «Аронос (Орион) Римский», seventh of the nine; the name page gives the second form «Орион» in brackets and it is kept in the stored form, against the Greek «Όρωνος» this folder was made from. ELEVEN NAMES ON THE RUSSIAN LINE AGAINST FIFTEEN ON THE GREEK, AND THE TWO LISTS ARE READ AGAINST EACH OTHER NAME BY NAME. The corpus already keeps this company off saint.gr’s «Άγιοι Εικοσιτέσσερις Μάρτυρες» of the same menologion 6/7 and the same year 301, which enumerates fifteen and then says «και άλλοι εννέα», and nine others. The Russian line names Lucia, Rix and nine more. Eight of those nine answer to a Greek name of the fifteen and take that folder’s russian row; the ninth, Исидор, is a name the Greek list does not print and is a new folder, `isidore-companion-of-lucia`. The alignment is positional as well as onomastic: Greek «… Κοττύιος. Όρωνος, Παπικός, Σάτυρος» against Russian «… Кутония , Ароноса (Ориона), Капика и Сатура» is four consecutive names in the same order. The seven Greek names the Russian line does NOT print — Ανατολίας, Άπαμος, Απολλώνιος, Νέας, Παππιανός, Σερίνος, Βίκτωρ — keep their undocumented russian rows and were left exactly as they stand. `dates` UNCHANGED: this line’s 301 is the year the folder already carries. The reading life4169 was opened; it is one account for the whole company and names the nine only in the closing sentence. No hymn on the day page stands under any of these names. Name page 260 heads him «Аронос (Орион) Римский, мч.» and lists «День памяти: 6 июля» and no other day."
     },
     {
       "church": "romanian",
@@ -55,7 +70,8 @@
   ],
   "related": [
     "lucia-of-rome-companion-of-rix",
-    "rix-the-vicar"
+    "rix-the-vicar",
+    "isidore-companion-of-lucia"
   ],
   "text": {
     "life": "life.md"
