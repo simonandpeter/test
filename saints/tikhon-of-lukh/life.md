@@ -1,0 +1,9 @@
+# Tikhon of Lukh
+
+days.pravoslavie.ru’s calendar names him on 16 июня ст. ст. as «Прп. Тихона Луховского, Костромского чудотворца (1503).», and the two readings behind the line agree word for word on most of him. In the world he was Тимофей, born within the bounds of the Lithuanian principality and in military service there. In 1482, unwilling to accept the union, he left Lithuania for Russia; he gave away everything he had, was tonsured with the name Тихон, and withdrew into the Луховские lands of the Костромская diocese. The town of Лух had then been given to the prince Феодор Бельский, with whom he had come out of Lithuania.
+
+He set up a cell on the bank at a place called Копытовка; and when two monks, Фотий and Герасим, came out to him in the wilderness, he moved three versts for their sake to an easier place. They got their food by the work of their hands: he copied books skilfully and was a good turner. Out of humility he never accepted the priesthood. He died on 16 June 1503 in such poverty that his disciples did not know what to bury him in, until, to their comfort, the bishop of Суздаль sent him a garment, and in that they laid him in the earth. Soon after his death a house grew on the place of his labours in honour of the hierarch Николай Чудотворец.
+
+In 1569 healings began at his tomb and his relics were found incorrupt; the calendar keeps that finding on 26 июня. The abbot Константин, who set them above the ground, was struck blind, and when his sight was given back he hid them in the earth again. From that time his veneration began, and a life of him with seventy wonders after his death was compiled in 1649.
+
+*After the Православный церковный календарь of the Сретенский monastery for 16 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260616.html) and [his lives](https://days.pravoslavie.ru/Life/id2117.htm); read 9 October 2026.*

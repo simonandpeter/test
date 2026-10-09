@@ -16,6 +16,11 @@
       "form": "Тигрије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 16. јун ст. ст., „Свети мученици Тигрије и Евтропије“, where it is the first of the two names — „Свети мученици“ stands at the head of the pair and comes off, and the heading gives him no epithet and no city, so the bare forename is what the source gives. The body adds „презвитер“, which is the `presbyter` the folder already holds and is not built onto the form. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Тигрије», so there is no fold."
+    },
+    {
+      "form": "Тигрий Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 16 июня ст. ст., «Тигрий Константинопольский, пресвитер, сщмч.», with the rank word and the grade word left off. The line itself gives the name in the genitive."
     }
   ],
   "dates": {
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder’s serbian row carries; its greek row stands on 12 January, which is the Greek calendar’s own day for the pair and not a second Russian feast. The shared life page life1324 heads «День памяти: 16 июня» and names no other day. The day page prints no hymn for either of the two."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июня ст. ст. — «Сщмч. Тигрия пресвитера и мч. Евтропия чтеца (404).»",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

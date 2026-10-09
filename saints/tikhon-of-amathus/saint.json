@@ -17,6 +17,11 @@
       "form": "Тихон",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 16. јун ст. ст., „Свети Тихон, епископ аматунтски“ — Свети is not a rank and „епископ аматунтски“ is a rank with its see, which `types`, `office` and the display name already carry between them; both come off and the bare forename is left. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Тихон», so there is no fold — although the corpus keeps several Tikhons under other scripts, which is why the exact string was measured and not reasoned about. The Serbian form is Тихон where the Greek the folder stores is «Τύχων» and the Romanian «Tihon», three spellings of the one man and none of them transliterated by me."
+    },
+    {
+      "form": "Тихон Амафунтский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 16 июня ст. ст., «Святитель Тихон Амафунтский, епископ», with the rank word and the grade word left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder’s other venerated row or rows already carry, so there is no second day. Its life page life1322 was NOT opened: the row rests on the day line, which dates him 425 as the folder already does, and on the name link behind it, and the three hymns the day page prints under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июня ст. ст. — «Свт. Тихона , еп. Амафунтского (425).»",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -124,6 +139,54 @@
       },
       "english": {
         "text": "Excelling, holy one, in ascesis dear to God, thou didst receive from on high the power of the Comforter, to pull down the idols of error, to save peoples, to drive off demons and to heal diseases. Therefore we honour thee as a friend of God, blessed Tychon.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Пустынный житель, и в телеси ангел,/ и чудотворец явился еси, богоносе отче наш Тихоне,/ постом, бдением, молитвою Небесная дарования приим,/ исцеляеши недужныя и души верою притекающих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,// слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Тропарь святителя Тихона Амафунтского», глас 1, under «Молитвы» on the day page for 16 июня ст. ст.. It names him in the vocative, «богоносе отче наш Тихоне», and is the common of a wilderness ascetic; it is the same text this folder already carries in Romanian and in Greek.",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dweller of the wilderness and angel in the body, thou wast shown to be a wonderworker also, O our God-bearing father Tikhon: by fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that run to thee in faith. Glory to Him that gave thee strength, glory to Him that crowned thee, glory to Him that worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "В постничестве, святе, боголюбезном пребыв,/ Утешителеву силу с высоты приял еси,/ идол низложити прелести, люди же спасти,/ демоны отгнати, недуги исцеляти./ Сего ради почитаем тя, яко Божия друга,// Тихоне блаженне.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак святителя Тихона Амафунтского», глас 3, under «Молитвы» on the day page for 16 июня ст. ст.. It names him in the vocative, «Тихоне блаженне», so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Abiding, O holy one, in a fasting beloved of God, thou didst receive power from on high to cast down the deceit of the idols, to save the people, to drive off the demons and to heal sicknesses. Therefore do we honour thee as a friend of God, O blessed Tikhon.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Иже Божественнаго Духа благодатию избран святитель явися/ и чудотворец показася предивен./ Яко солнце, чудесы сияя, Тихоне,/ память твоя пресветлая./ Темже зовем ти:/ радуйся, пресловущее миру светило.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин кондак святителя Тихона, епископа Амафунтского», глас 8, under «Молитвы» on the day page for 16 июня ст. ст.. A second kontakion, printed under his name and his see; it names him in the vocative, «Тихоне», so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chosen by the grace of the Divine Spirit, thou wast shown to be a hierarch and didst prove a most wondrous worker of wonders. Shining with miracles like the sun, O Tikhon, thy memory is most radiant. Therefore do we cry to thee: Rejoice, O light renowned throughout the world.",
         "rendered": "site"
       }
     }
