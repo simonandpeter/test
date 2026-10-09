@@ -6,6 +6,11 @@
       "form": "Ασκληπιάδης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιοι Θεόδοτος, Θεοδότη, Δολινδούχ, Διομήδης, Ευλάμπιος και Ασκληπιάδης», with the rank word left off."
+    },
+    {
+      "form": "Асклипиодот",
+      "lang": "ru",
+      "note": "The whole of the calendar’s name link 284, «Асклипиодот, мч.», with the rank word left off; the day’s line gives it in the genitive. `fk.mjs` returns no other holder. THE TWO NAMES ARE NOT THE SAME WORD: this folder’s display name is Asclepiades, read off the Greek page, and the Russian calendar writes Asclepiodotus. The company, the day and the position in the line are the same, so the man is treated as one and the difference in the display name is an author question in the report; nothing was renamed."
     }
   ],
   "types": [
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Мчч. Диомида , Евлампия , Асклипиодота и мц. Голиндухи (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, a company of four which is four of the six this folder already stands in: the Russian line names Диомид, Евлампий, Асклипиодот and the martyr Голиндуха on the same menologion day as this folder’s Greek row, and marks them «(II)», the second century, where the folder holds 98 off saint.gr. `dates` UNCHANGED — the century and the year do not contradict each other and the line is not the finer witness. The two further members the corpus keeps on this day, `theodotus-3-july` and `theodote-companion-of-theodotus`, ARE NOT NAMED BY THE RUSSIAN LINE and took nothing. The entry carries four name links and NO life page at all. The day page prints no hymn under any of these four names."
     },
     {
       "church": "romanian",

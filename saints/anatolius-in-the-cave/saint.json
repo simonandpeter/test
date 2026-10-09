@@ -14,8 +14,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Прпп. Анатолия (XII) и другого Анатолия затворника (XIII), Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry, AND IT NAMES TWO MEN OF ONE NAME while this corpus keeps one folder. The calendar is explicit that they are two: the line writes «Анатолия (XII) и другого Анатолия затворника (XIII)», it carries TWO SEPARATE NAME LINKS, 172 and 173, both titled «Анатолий Печерский, затворник», and the day page’s own hymn headings distinguish them as «Анатолия, в Ближних пещерах (XII)» and «другого Анатолия затворника, в Дальних пещерах (XIII)» — the Near Caves and the Far Caves, the twelfth century and the thirteenth. THIS FOLDER CANNOT BE TOLD TO BE EITHER ONE: it was made from the Greek 3 Ιουλίου, it has no dates, no Russian or Serbian witness, and `venerable` with no epithet but the cave. The row is written because both men are kept on this day and the day is therefore right whichever of them this folder is; NO `ru` NAME FORM WAS STORED, because «затворник», the recluse, belongs to the thirteenth-century man alone and storing it would decide the question; NO SECOND FOLDER WAS MADE, because making one would be to decide which of the two the existing folder already is; and THE TWO HYMNS THE DAY PAGE PRINTS WERE NOT COPIED, because their headings name both men and this folder is one. The whole of it is an author question in the report. The life page life6416 WAS NOT OPENED."
     },
     {
       "church": "romanian",

@@ -1,0 +1,113 @@
+{
+  "slug": "john-of-yarenga",
+  "display_name": "John of Yarenga",
+  "names": [
+    {
+      "form": "Иоанн Яренгский",
+      "lang": "ru",
+      "note": "The calendar’s own nominative from name link 1026, «Иоанн Яренгский, прп.», with the rank word left off; the day’s line gives the pair in the genitive, «Прп. Иоанна и Лонгина Яренгских». `fk.mjs` returns no holder for the form and none for the display name; the companion folder `longinus-of-yarenga` stores «Лонгин Яренгский» in exactly this shape."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1544,
+      "latest": 1561,
+      "display": "1544–1561",
+      "basis": "attested",
+      "note": "THE CALENDAR DISAGREES WITH ITSELF AND THE INTERVAL CARRIES BOTH READINGS, as the companion folder `longinus-of-yarenga` already does for the same two men. The day line for 3 июля ст. ст. gives «Прп. Иоанна и Лонгина Яренгских (1544-1545)»; the life it links says the two were drowned in the White Sea «В 1561 году». Seventeen years apart, nothing averaged and neither preferred. The 1638 translation of the relics and the 1625 report to the patriarch are later events and no year was taken from them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Прп. Иоанна и Лонгина Яренгских (1544-1545).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s tenth entry, naming two men. THE COMPANION IS ALREADY IN THE CORPUS AND WAS NOT TOUCHED: `longinus-of-yarenga` carries a venerated russian row on the Julian 16 октября, which BRIEF-RUSSIAN §4 leaves standing, and only a reciprocal `related` row was added to him. This folder is the other man of the pair and the corpus held nothing for him — `fk.mjs` empty on both forms, and `saints/*yareng*` matching only his companion. HIS NAME PAGE 1026 LISTS THREE DAYS: «Дни памяти: 8 июня (Новг.) , 3 июля , 9 августа (Солов.)» — a Novgorod commemoration, this one, and a Solovki one. One row per church is the schema, so the other two are recorded here and he renders on neither; the day this row keeps is the day page that printed him. The reading says why 3 July is theirs: the relics were carried into the monastery's new church on 2 July 1638 and the memory was appointed for the day after. The day page prints three hymns that are his, all three taken, and a fourth under the companion's name alone, which was not."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 16 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 16 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 July 2026, the civil day of this Julian 3 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "longinus-of-yarenga"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "От земли Возведый тя к вечным обителем/ соблюдает и по смерти невредимо тело твое, святе Иоанне,/ ты бо в целомудрии и чистоте жития, блаженне, пожил еси,/ не осквернив тело,/ темже со дерзновением моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Тропарь преподобного Иоанна Яренгского (Соловецкого)», глас 4 — the only hymn of this day printed under his name alone",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who raised thee from earth to the eternal mansions keeps thy body unharmed even after death, O holy John; for thou didst live, O blessed one, in chastity and purity of life and didst not defile thy body. Wherefore with boldness pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Яко звезды многосветлыя, от юности возсиявше,/ осветили есте сердца верных пренесением честных мощей ваших,/ добродетельми чудес ваших, во плоти яко бо Ангели на земли, показастеся,/ пощением насаждени бысте, яко древо при водах воздержания,/ напоени струями слез ваших, и скверну омысте,/ сего ради явистеся приятелище Божия Духа, Иоанне и Лонгине,/ молите Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Тропарь преподобных Иоанна и Лонгина Яренгских (перенесение мощей)», глас 8 — the hymn of the translation of the relics of the two of them together, which is the event the reading says their 3 July memory was set for; it names both, and both are in this corpus and are companions in the one reading",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining forth from your youth like stars of many lights, ye have lightened the hearts of the faithful by the translation of your honourable relics; by the virtues of your wonders ye were shown forth as angels upon earth in the flesh. Planted by fasting like a tree beside the waters of abstinence, watered by the streams of your tears, ye washed away all defilement, and therefore were shown to be a dwelling-place of the Spirit of God, O John and Longinus. Pray ye to Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Явистеся светильницы всесветлии, во плоти ангели,/ яко Живота древо райское,/ пощением, и бдением, и верою возращаеми, процвели есте./ Молитвами своими Небесную благодать приемше,/ врачеве же крепцыи явльшеся,/ исцеляете недужныя и души с верою прибегающих к раце мощей ваших,/ чудотворцы славнии, Иоанне и Лонгине,/ сего ради вси верою и любовию вопием:/ радуйтеся, поморстей стране похвало и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Кондак общий преподобных Иоанна и Лонгина Яренгских», глас 8 — the page's own word is «общий», the kontakion common to the two of them",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ye were shown forth as all-radiant lamps, as angels in the flesh; like the tree of life in paradise ye blossomed, increased by fasting and by vigil and by faith. Receiving the grace of heaven by your prayers, ye were shown to be mighty physicians, and ye heal the bodies and the souls of those who run with faith to the shrine of your relics, O glorious wonderworkers John and Longinus. Therefore do we all cry out with faith and love: Rejoice, O praise and confirmation of the land beside the sea.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

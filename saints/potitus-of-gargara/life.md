@@ -1,0 +1,11 @@
+# Potitus of Gargara
+
+The Православный церковный календарь of the Сретенский monastery keeps the martyr Potitus on 1 июля ст. ст. and gives him a reading of five short paragraphs. He suffered, it says, under the emperor Antoninus, whose reign it dates 138–161. His father was a pagan, but the boy came to know the Christian teaching at thirteen, believed in the true God and was baptised; and when his father learned of it he was greatly grieved and tried, first with kindness and then with threats, to turn him from the faith of Christ the Saviour.
+
+The attempts were in vain, and the father, struck by the firmness of his son’s faith, came himself to believe in the Son of God and became a Christian. Potitus then went through many countries preaching Christ, and by the power of God worked wonders. In the region called Epirus a woman of rank, «Кириакия», the wife of a senator, lay ill of leprosy; hearing of him she called him and asked to be healed. He told her that if she believed in Christ she would be well. She was baptised and was healed at once, and seeing the wonder her husband and all her household believed and were baptised too.
+
+After that he settled on the mountain Гаргара and lived in solitude among the birds and the beasts. There the servants of the emperor Antoninus found him, whose daughter was possessed; the demon said through the girl’s mouth that it would come out of her only when Potitus came. The young man was brought to the emperor, and at the saint’s prayer the sick girl was healed.
+
+Instead of thanks the emperor used him with inhuman cruelty. Antoninus ascribed his daughter’s healing to the pagan gods, and for confessing the faith of Christ firmly and refusing to sacrifice to them the saint’s tongue was torn out and he was blinded. After long torments he was beheaded. The calendar gives him no year, only the century its line prints, «(II)», and the day page carries hymns under two of its headings and none under his name.
+
+*After the Православный церковный календарь of the Сретенский monastery for 1 июля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260701.html) and [the life](https://days.pravoslavie.ru/Life/life4133.htm); read 9 October 2026.*

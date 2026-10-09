@@ -17,8 +17,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Мчч. Мокия и Марка (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, the same pair this folder already keeps with `mokianos`: the same menologion day as its Greek row, and «(IV)». `dates` WAS NOT WRITTEN WHERE THERE IS NONE, for the reason given on the companion folder — the century stands in this note only. The entry’s two life links are the same URL twice and that page WAS NOT OPENED. The day page prints no hymn under either name. NO `ru` NAME FORM WAS STORED. The calendar gives this man nothing but a bare forename, in the genitive inside a company line and again as the whole of his name link, with no epithet on either; and that bare forename already folds onto `mark-the-evangelist`, which already stores it. BRIEF-RUSSIAN §2's own case is the eleven folders sharing a bare «Петр», which the gate stops on. The form is withheld rather than made into a fold key asserting a reading of folders this day did not need, and it is named in the report for the author."
     },
     {
       "church": "romanian",

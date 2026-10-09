@@ -7,10 +7,16 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Βασίλειος Επίσκοπος Ριαζάν και Μουρώμ», with the rank word and the see left off."
+    },
+    {
+      "form": "Василий Рязанский и Муромский",
+      "lang": "ru",
+      "note": "Read off the calendar’s name link 387, «Святитель Василий, епископ Рязанский и Муромский», with the rank word at the head and the rank word «епископ» left off, which leaves the forename and the two sees. The day’s own line gives only «Василия , еп. Рязанского», in the genitive and with one see. `fk.mjs` returns no other holder for the form; a bare «Василий» was deliberately not stored, the corpus keeping a great many of that name and the gate already carrying fold keys for two of them."
     }
   ],
   "types": [
-    "bishop"
+    "bishop",
+    "hierarch"
   ],
   "dates": {
     "floruit": {
@@ -24,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Свт. Василия , еп. Рязанского (1295).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "THE ROW THE JUNE READER LEFT OWED, AND THIS IS THE DAY. The 10 июня line that reader found was «Обретение мощей», the finding of his relics, which is a feast and not a folder; name page 387 reads «Дни памяти: 10 июня (Обретение мощей) , 3 июля», so 3 июля is his own memory and the 10 июня is recorded here and not rendered. The man is this folder’s: the same menologion day as its Greek row, the same see, and the name page widens the see to «епископ Рязанский и Муромский», which is this folder’s `office` already. THE LINE PRINTS 1295 AND `dates` WAS NOT CHANGED: the folder holds «between the 13th and the 14th century» as a traditional reading, 1295 falls inside it, and the only witness to the year here is a day line whose life index, id387, WAS NOT OPENED — the year is recorded in this note and is an author question. `hierarch` WAS ADDED TO `types` on the line’s own «Свт.», beside the `bishop` the folder already had. The two hymns the June reader saw under «святителя Василия, епископа Рязанского» and could not place are printed again on this day page under the same heading; both are taken here."
     },
     {
       "church": "romanian",
@@ -55,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Первее в Муроме святительством почтен был еси,/ из негоже неправедно изгоняемь,/ на мантию, яко на легкий корабль, возшел еси,/ на немже паче естества, яко безплотен,/ по водам шествие творя,/ промышлением Вышняго и заступлением Богоматере управляемъ/ богоспасаемого града Рязани достигл еси /и в нем, архиерейства престол восприим,/ богоданную паству рязанскую добре упасл еси,/ святителю отче наш Василие,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Тропарь святителя Василия, епископа Рязанского», глас 4 — the two hymns the June reader of this corpus found under this heading on the 10 июня page and could not place, printed here again on his own day",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "First wast thou honoured with the episcopate in Murom, and being driven out of it unjustly, thou didst step upon thy mantle as upon a light ship, and upon it, beyond nature, as one without a body, thou didst make thy way over the waters; guided by the providence of the Most High and by the protection of the Mother of God, thou didst reach the God-saved city of Ryazan, and taking there the throne of the hierarchy thou didst shepherd well the flock of Ryazan given thee of God. O hierarch and our father Basil, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Яко многосветлая звезда, от града Мурома возсиял еси,/ святителю Василие,/ по водам же дошед до града нашего Рязани,/ Церковь Божию добре упасл еси,/ просвещая люди учением и житием твоим./ Поминай и ныне чада твоя, молим тя,/ наставниче наш добрый,/ и за ны Христу Богу и Пречистей Его Матери молися,/ да благодарною душею зовем ти:/ радуйся, угодниче Христов и теплый к Богу о нас молитвенниче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Кондак святителя Василия, епископа Рязанского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a star of many lights thou didst shine forth from the city of Murom, O hierarch Basil, and coming over the waters to our city of Ryazan thou didst shepherd well the Church of God, enlightening the people by thy teaching and by thy life. Remember now also thy children, we entreat thee, O our good instructor, and pray for us to Christ God and to his most pure Mother, that with a thankful soul we may cry to thee: Rejoice, O servant of Christ and fervent intercessor with God on our behalf.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    }
+  ]
 }

@@ -17,6 +17,11 @@
       "form": "Јувеналије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 2. јул ст. ст., „Св. Јувеналије патријарх Јерусалимски“ — Св. is not a rank, „патријарх“ is the rank, which `types` already carries, and „Јерусалимски“ is the see that rank governs and comes off with it, exactly as the folder’s Romanian and Greek forms were taken «with the rank word and the see left off». The bare forename is what the heading leaves, and «of Jerusalem» in the display name is the corpus’s own. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јувеналије», so there is no fold — worth having measured, the corpus keeping a `juvenal-of-alaska` and a `juvenal-of-narni` whom `sr-namesweep.mjs` prints directly beneath this man."
+    },
+    {
+      "form": "Иувеналий (Ювеналий) Иерусалимский",
+      "lang": "ru",
+      "note": "The calendar’s own nominative from name link 1130, «Святитель Иувеналий (Ювеналий) Иерусалимский, патриарх», with the rank word at the head and the rank word after the comma left off. The parenthesis is the calendar’s second spelling of the forename and not a surname; it is kept because the page prints it, as the corpus’s other parenthesised epithets are. The day’s own line gives the name in the genitive and with the other grade, «Свт. Иувеналия , архиеп. Иерусалимского». `fk.mjs` returns no holder for the form, nor for it with the parenthesis dropped."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 июля ст. ст. — «Свт. Иувеналия , архиеп. Иерусалимского (ок. 458).»",
+        "url": "https://days.pravoslavie.ru/Days/20260702.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and this folder’s man: the same menologion day its Romanian, Greek and Serbian rows already keep, the same see, and «ок. 458» — about 458 — which is the closing year of the floruit this folder already holds. `dates` therefore unchanged. THE GRADE DIFFERS AT ONE WORD: the day line writes «архиеп.», archbishop, where name page 1130 and this folder’s `office` both say patriarch; the folder was not changed and the difference is recorded here. That name page gives «День памяти: 2 июля» and no other day, so there is no second-day question. Its life page, life4140, WAS NOT OPENED and nothing in the life came from it. THE OTHER JUVENAL ON THIS MENOLOGION DAY IS NOT THIS MAN: `juvenal-of-alaska` is kept on 2/7 as well and the Russian line names the archbishop of Jerusalem; nothing was merged. The day page prints one hymn under his name, taken below."
     },
     {
       "church": "romanian",
@@ -133,6 +148,22 @@
         "rendered": "site"
       },
       "model": "Τῇ ὑπερμάχῳ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Брата Божия на престоле архиерейства преемниче,/ святаго града Иерусалима иерарше достохвальне,/ с богомудрыми отцы в Халкидоне изъяснил еси воплощение Сына Божия,/ пришедшаго мир обновити и обожити вся человеки,/ в Церкви Его с Ним сочетавшаяся,/ святителю отче Иувеналие,/ предстоя ныне во Царствии Отца светов,/ о почитающих тя любовию молися,/ да мир и милость Спасова будет с нами.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 июля ст. ст., «Тропарь святителя Иувеналия, патриарха Иерусалимского», глас 4 — his own and not a common: it names him, names his see, and names the council of Chalcedon at which the calendar has him speak",
+        "url": "https://days.pravoslavie.ru/Days/20260702.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O successor upon the throne of the hierarchy of the Brother of God, praiseworthy hierarch of the holy city of Jerusalem, with the God-wise fathers at Chalcedon thou didst set forth the incarnation of the Son of God, who came to renew the world and to deify all men who are joined to him in his Church. O hierarch and father Juvenal, standing now in the kingdom of the Father of lights, pray for those who honour thee with love, that the peace and the mercy of the Saviour may be with us.",
+        "rendered": "site"
+      }
     }
   ]
 }

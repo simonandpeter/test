@@ -6,9 +6,16 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Ιωάννης της Μόσχας», with the rank word left off."
+    },
+    {
+      "form": "Иоанн Московский",
+      "lang": "ru",
+      "note": "Read off the calendar’s name link 989, «Блаженный Иоанн, Христа ради юродивый, Московский», with the rank word at the head and the rank phrase «Христа ради юродивый» left off, which leaves the forename and the city; the phrase is a grade and is in `types` as `fool-for-christ`. The day’s own line gives the same in the genitive. `fk.mjs` returns no other holder for «иоанн московскии», and the bare «Иоанн» was deliberately not stored."
     }
   ],
-  "types": [],
+  "types": [
+    "fool-for-christ"
+  ],
   "dates": {
     "death": {
       "earliest": 1589,
@@ -21,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Блж. Иоанна , Христа ради юродивого, Московского (1589).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s eleventh entry, and this folder’s man: the same menologion day as its Greek row, the same city, and 1589, which is the year the folder already holds. `dates` unchanged. `fool-for-christ` WAS ADDED TO `types`, WHICH WERE EMPTY: the line does not leave the grade to be guessed at, it writes «Христа ради юродивого», the fool for Christ’s sake, which is the word BRIEF-RUSSIAN §6 maps to that type. The life index id989 WAS NOT OPENED, and what the paragraph below says of Vologda, Rostov and the irons comes from the five hymns the day page prints under his name, all five of which are taken here."
     },
     {
       "church": "romanian",
@@ -51,5 +68,87 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Иже Христа ради, волею оставив свое отечество — град Вологду/ и вся красная мира сего возненавидев,/ желанием духовным вселился еси во град Ростов/ и, яко в пустыни скитался в нем,/ гладом, и жаждею и безмерною тяготою плоть свою изнуряя,/ и работая Господеви день и нощь,/ в посте и молитве пребывая в притворе церковнем,/ власы же главы своей пеплом и смолою удручая,/ и, ревнуя Василию блаженному,/ пришел еси в царствующий град Москву/ и в целомудрии и терпении течение добре скончав,/ преселился еси к вечным обителем,/ чудес лучи испущая,/ преблаженне Иоанне, отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Тропарь блаженного Иоанна, Христа ради юродивого, Московского чудотворца», глас 8 — the first of three troparia the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For Christ’s sake thou didst willingly leave thine own country, the city of Vologda, and hating all the fair things of this world thou didst settle in spiritual longing in the city of Rostov, and didst wander in it as in a desert, wearing out thy flesh with hunger and thirst and an immeasurable burden, labouring for the Lord day and night, abiding in fasting and prayer in the porch of the church, and galling the hair of thy head with ashes and with pitch. Then, emulating the blessed Basil, thou didst come to the imperial city of Moscow, and having finished thy course well in chastity and patience thou didst pass over to the eternal mansions, sending forth the rays of wonders. O most blessed John, our father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Житие твое воздержанием и терпением,/ благоюроде Иоанне, украсил еси,/ и частыми молитвами и всенощным стоянием/ душу твою просветил еси,/ и обяза тело твое и власы, и кресты с веригами тяжкими,/ многа лета труждаяся до исхода души твоей,/ и прииде на твое преставление из Ростова града/ в царствующий град Москву,/ к Пресвятей Троице и Пречистей Божией Матери,/ и ту погребоша тя святителие,/ и ныне у гроба твоего точиши исцеления приходящим ти с верою./ Моли Бога прилежно с праведным Василием о православных людех./ Слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Ин тропарь блаженного Иоанна, Христа ради юродивого, Московского чудотворца», глас 4 — the page’s own word is «Ин тропарь», another troparion",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst adorn thy life with abstinence and patience, O blessed fool John, and thou didst enlighten thy soul with frequent prayers and with standing all the night through; and thou didst bind thy body and thy hair with crosses and with heavy irons, labouring many years until the departure of thy soul. For thy falling-asleep thou camest from the city of Rostov to the imperial city of Moscow, to the most holy Trinity and the most pure Mother of God, and there the hierarchs buried thee; and now at thy tomb thou pourest forth healings upon those who come to thee with faith. Pray earnestly to God, with the righteous Basil, for the Orthodox people. Glory to him who gave thee strength, glory to him who crowned thee, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Любве ради Христовы/ возненавидев мира сего вся прелестныя красоты,/ в мире живый, подвизася добре, яко ангел на земли,/ вечныя ради жизни,/ и, от земных достоинств таковых душу воскресив духом,/ плоть же поработив и повинув во всем духу, Христови распяся/ и к Божественней высоте пресветло взятся благодатию,/ прииде в Небесный чертог,/ идеже ныне, Пресвятей Троице со ангелы предстоя,/ во свете неизреченный радости веселишися, преблаженне Иоанне,/ тем благодарственно вопием ти:/ слава Избравшему тя в Руси, блаженне, устава изрядна,/ слава Укрепльшему тя в народе,/ слава молитвами твоими и нас Спасающему.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Ин тропарь блаженного Иоанна, Христа ради юродивого, Московского чудотворца», глас 1 — the third of the three, and the page writes «Ин тропарь» over this one too",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ thou didst hate all the deceiving beauties of this world, and living in the world thou didst strive well, as an angel upon earth, for the sake of the life eternal; and raising thy soul in spirit above such earthly dignities, enslaving thy flesh and making it subject in all things to the spirit, thou wast crucified with Christ and wast taken up most radiantly by grace to the divine height, and camest into the chamber of heaven. There standing now before the most holy Trinity with the angels, thou dost rejoice in the light of unspeakable gladness, O most blessed John. Therefore do we cry to thee with thanksgiving: Glory to him who chose thee in Russia, O blessed one, as an excellent rule; glory to him who strengthened thee among the people; glory to him who saves us also by thy prayers.",
+        "rendered": "site"
+      },
+      "tone": "Глас 1"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Иже Христа ради наложивый на себя мудростию юродство,/ образом буйства зрим от человек,/ умныма же крылома горе возлетая,/ все тело свое веригами обязал,/ яко злато многоценное, соблюдеся в народе,/ очистив ум от страстей,/ веселием духовным прешел еси море мятежнаго сего жития,/ обрете светлость жизни вечныя,/ молим тя, блаженне Иоанне,/ молися прилежно Христу Богу нашему/ сохранитися нам от всякаго навета/ и злых обстояний видимых и невидимых враг, да зовем ти:/ радуйся, многострадально, яко да молитвами твоими направляеми,/ предстоя присно с нами,/ в Троице славимому Богу поем Ему: аллилуйя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Кондак блаженного Иоанна, Христа ради юродивого, Московского чудотворца», глас 8 — the first of two kontakia the page prints under his name",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who for Christ’s sake didst take folly upon thyself in wisdom, and wast seen of men in the likeness of madness, didst fly on high upon the wings of the mind and didst bind thy whole body with irons; and like gold of great price thou wast kept among the people, having cleansed thy mind of the passions. With spiritual gladness thou didst cross the sea of this turbulent life and didst find the brightness of life eternal. We entreat thee, O blessed John, pray earnestly to Christ our God that we be kept from every snare and from the evil assaults of enemies seen and unseen, that we may cry to thee: Rejoice, O much-suffering one; so that, guided by thy prayers and having thee ever standing with us, we may sing to God glorified in Trinity: Alleluia.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Святое и пренепорочное понесл еси самовольное мучение,/ яко вено пречестное, принесл еси тело твое к Пресвятей Троице и Пречистеи Богородице/ и ту сотворил еси честное твое преставление./ Терпением твоим и смирением ангельский лики удивил еси/ и диавола мучителя посрамил еси,/ от человек отгонявши духи темныя,/ различная исцеления подавая./ Радуйся, благоюроде Иоанне, с блаженным Василием,/ и печаль нашу на радость преложи,/ молися прилежно стране Российстей от междоусобныя брани и от безбожных язык избавитися./ Радуйся, земли Российский удобрение и града нашего Москвы великое утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Кондак блаженного Иоанна, Христа ради юродивого, Московского чудотворца», глас 8 — the second of the two, and the page prints both under the same heading",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst bear a holy and all-blameless suffering of thine own will, and as a dowry most honourable thou didst bring thy body to the most holy Trinity and the most pure Mother of God, and there thou didst make thine honourable falling-asleep. By thy patience and thy humility thou didst astonish the choirs of angels and didst put to shame the devil the tormentor, driving the dark spirits away from men and granting healings of many kinds. Rejoice, O blessed fool John, together with the blessed Basil; turn our sorrow into gladness, and pray earnestly that the Russian land be delivered from civil strife and from godless nations. Rejoice, O adornment of the Russian land and great confirmation of our city of Moscow.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    }
+  ]
 }

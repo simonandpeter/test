@@ -16,6 +16,11 @@
       "form": "Јакинт",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 3. јул ст. ст., „Св. муч. Јакинт“ — Св. is not a rank and муч. is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives, and «the Chamberlain» of the display name is the corpus’s own disambiguation off the Greek page’s κουβικουλάριος. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јакинт», so there is no fold."
+    },
+    {
+      "form": "Иакинф Римский",
+      "lang": "ru",
+      "note": "The calendar’s nominative from name link 864, «Иакинф Римский, мч.», with the rank word left off; the day’s line gives «Мч. Иакинфа», the bare forename in the genitive. `fk.mjs` returns no other holder for «иакинф римскии»."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст. — «Мч. Иакинфа (108).»",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and this folder’s man: the same menologion day its Romanian, Greek and Serbian rows already keep, and 108, which is the year this folder’s `dates` already hold. `dates` unchanged. Name link 864 gives the epithet «Римский», of Rome, where this folder’s display name carries the office of chamberlain; the two are not in conflict and nothing was changed. The life page life4142 WAS NOT OPENED. The day page prints a troparion and a kontakion under his name, both taken."
     },
     {
       "church": "romanian",
@@ -123,6 +138,38 @@
         "rendered": "site"
       },
       "model": "Ἐπεφάνης σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Мученик Твой, Господи, Иакинф/ во страдании своем венец прият нетленный от Тебе, Бога нашего:/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощный дерзости;/ того молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Тропарь мученика Иакинфа», глас 4 — the common of a martyr with his name set into it, which is his and is copied whole",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Hyacinth, O Lord, in his suffering received an incorruptible crown from thee our God; for having thy strength he cast down the persecutors and broke also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Древо жизни посреде души своей,/ веру Твою, Христе, стяжавый Твой мученик,/ едемскаго рая честнейший бысть,/ древо прелести змиевы погубив дерзновенно духом,/ венчася славою Твоею, Многомилостиве.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 июля ст. ст., «Кондак мученика Иакинфа», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260703.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr, O Christ, who gained thy faith as the tree of life in the midst of his own soul, became more honourable than the paradise of Eden; for having boldly destroyed in spirit the tree of the serpent’s deceit, he was crowned with thy glory, O most merciful one.",
+        "rendered": "site"
+      },
+      "tone": "Глас 6"
     }
   ],
   "text": {

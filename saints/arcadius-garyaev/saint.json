@@ -1,0 +1,62 @@
+{
+  "slug": "arcadius-garyaev",
+  "display_name": "Arcadius (Garyaev)",
+  "names": [
+    {
+      "form": "Аркадий (Гаряев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13741, «Аркадий (Гаряев), иерей, сщмч.», with the two rank words after the comma left off. The day’s own line gives the name without the surname — «Сщмч. Аркадия пресвитера (1918).» — so the surname is read from the name link and is part of the form. `fk.mjs` returns no holder for the form and none for the display name; the bare «Аркадий» was deliberately not stored, since the corpus keeps more than a dozen of that name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Аркадия пресвитера (1918).» Neither page gives a year of birth and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 июля ст. ст. — «Сщмч. Аркадия пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260701.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. THE CALENDAR GIVES NO LIFE: the line links to his name and to no reading, and name page 13741 prints the title, «Дни памяти: 26 января (Новомуч.) , 1 июля», and nothing else. What the name page adds over the day line is the surname «Гаряев» and the grade «иерей», priest, where the day line says «пресвитера»; `office` is the name page’s word, which the four locale packs carry, and `presbyter` is in `types` off the day line. `new-martyr` was written on the ground that both his pages mark him a martyr and set the 26 января synaxis of the new martyrs beside his own day. The 26 января page was NOT read. No folder was found for him. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 14 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 14 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 July 2026, the civil day of this Julian 1 July (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
