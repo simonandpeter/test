@@ -7,6 +7,11 @@
       "form": "Gavriil Athonitul din Odessa",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 iulie, «Sfântul Cuvios Gavriil Athonitul din Odessa», with the rank words left off."
+    },
+    {
+      "form": "Гавриил Афонский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13502, «Гавриил Афонский, архимандрит, прп.», with the two rank words after the comma left off. `fk.mjs` returns no other holder for «афонскии гавриил»; `gabriel-of-kapsala` and the other twenty-five Gabriels carry no such form."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026). doxologia.ro says he was canonised by the Russian Church on 30 November 2017 with 22 July for his feast, but that page is not the Russian calendar and the Russian row is left as not read."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июля ст. ст. — «Прп. Гавриила Афонского, настоятеля афонского Ильинского скита (1901).»",
+        "url": "https://days.pravoslavie.ru/Days/20260709.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry, and this folder’s man: the line names the very office the folder’s `office` carries, «настоятеля афонского Ильинского скита», abbot of the Skete of the Prophet Elias on Athos, with the epithet «Афонский» the folder’s display name carries, and name page 13502 heads him «Гавриил Афонский, архимандрит, прп.» and lists «День памяти: 9 июля» and no other day. THE TWO ROWS FALL ON ONE CIVIL DAY AND NEITHER WAS MOVED: this Julian 9 July is the civil 22 July 2026, which is the day the folder’s Romanian row already keeps in the revised calendar, so the two rows are one commemoration in two styles. THE YEAR IS A REAL DISAGREEMENT AND `dates` IS NOT TOUCHED. This line closes «(1901)»; the folder carries `death` 1894 off doxologia.ro, whose own page then dates the consecration of the cathedral he built at Odessa to 1896, after that death, and does not reconcile the two — the folder’s existing note says so. The Russian year would reconcile it. Nothing was changed, and this is the clearest of the year questions in the report. THE READING life6519 WAS NOT OPENED, and `birth` 1849 was left exactly as it stands. No hymn on the day page stands under his name. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `pancratius-of-tauromenium` on 9 февраля (three hymns on this page left uncopied) and `cyril-of-gortyna` on 6 сентября (two hymns left uncopied). BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either."
     },
     {
       "church": "romanian",

@@ -18,13 +18,28 @@
       "form": "Теодор",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 9. јул ст. ст., „Св. Теодор еп. Едески, и други с њим“ — Св. is not a rank, „еп.“ is the rank, which `types` already carries, and „Едески“ is the see that rank governs and comes off with it; „и други с њим“ names nobody and is no part of his name. The bare forename is left. «of Edessa» in the display name is the corpus’s own. **The fold is forced and four deep before this day**: `foldchk.py` returns `theodore-boyar-of-chernigov`, `theodore-of-perga`, `theodore-of-vrsac` and `theodore-prince-of-yaroslavl`, all `sr`, for «Теодор», so this is the fifth folder on the string, and the heading offers no by-name to break it with — the see in it being a see."
+    },
+    {
+      "form": "Феодор Едесский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2183, «Святитель Феодор Едесский, епископ», with the rank word at the head and the rank after the comma left off — «епископ» is the `bishop` the folder’s `types` already carries and the see is in its `office`. `fk.mjs` returns no other holder for «едесскии феодор»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июля ст. ст. — «Свт. Феодора , еп. Едесского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260709.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and this folder’s man: the same menologion day its Serbian row already keeps, the same see of Edessa, and «(IX)», the ninth century, inside which the 848 this folder already carries off the Охридски пролог falls. `dates` and `types` UNCHANGED. His Greek row keeps 19 Ιουлίου and is NOT MOVED; one row per church. Name page 2183 heads him «Святитель Феодор Едесский, епископ» and lists «День памяти: 9 июля» and no other day. THE READING life4202 WAS NOT OPENED. FOUR HYMNS TAKEN, two troparia and two kontakia, all four headed with his see and none a common — the folder’s first hymns of any kind. They carry a story no field of this folder holds and none of it was written into one: the king Moavia whom he brought to the light of baptism and healed of blindness of body and of soul with dust from the tomb of Christ, the heretics he drove from the Church like wolves, his journey to the imperial city where he cleansed the sight of the empress Theodora’s eye with the same dust, and the martyrdom of Moavia for Christ at Babylon which he then strengthened. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `pancratius-of-tauromenium` on 9 февраля (three hymns on this page left uncopied) and `cyril-of-gortyna` on 6 сентября (two hymns left uncopied). BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either."
     },
     {
       "church": "romanian",
@@ -76,5 +91,71 @@
       "basis": "traditional",
       "note": "The folder’s first date of any kind; `dates` was null before this reading. The Охридски пролог for 9. јул ст. ст.: „Скончао 848. год.“ — he ended in the year 848. One book, one year, stated flat, and nothing is widened for want of a second year to widen against. The same entry says he was tonsured in his twentieth year and spent thirty-six years as a monk: those are an age and a duration, not dates, and **nothing is subtracted from 848 to reach either a birth or a year of tonsure**, though the two numbers together would plainly offer one. The reign of the emperor Michael and Theodora, in which the entry puts his election, is no source for a year (6 October 2026)."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Апостолом подражатель/ и божественных учений столп бысть,/ тем ко Христу притече,/ молением, блаженне, Моавия царя светом Крещения просвещена показа, Феодоре,/ и исповедания ради кровь свою излиял есть,/ исходатайствен тому явися венец от Христа Царя,/ Егоже моли спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июля ст. ст. — «Тропарь святителя Феодора, епископа Едесского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260709.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "An imitator of the apostles and a pillar of the divine teachings wast thou; thereby thou didst run to Christ, and by thy prayer, O blessed Theodore, didst show the king Moavia enlightened with the light of baptism; and he poured out his blood for his confession, and a crown from Christ the King was obtained for him. Pray Him to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Неволею паству святительскую приим,/ но волею подвигнувся о Божий Церкви,/ и перстию Христова гроба невернаго Моавия царя уверив,/ и с телесною слепотою вкупе и душевную ему исцелив, благоверна показа,/ с нимже и еретики от Божия Церкве, яко волки, отгнав,/ честный святителю Феодоре,/ моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июля ст. ст. — «Ин тропарь святителя Феодора, епископа Едесского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260709.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having taken the hierarch's flock unwillingly, yet willingly striving for the Church of God, thou didst bring the unbelieving king Moavia to faith with dust from the tomb of Christ, and healing him of blindness of body and of soul together didst show him a man of right belief; and with him thou didst drive the heretics from the Church of God like wolves. O honourable hierarch Theodore, pray that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко солнце, осиявая светлым житием, Феодоре, яве,/ вавилонскому царю явися чудесы/ и сего угодника Христу, святителю, показа,/ с нимже ныне Троице предстоя,/ нас поминай, светло торжествующих память твою, мудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июля ст. ст. — «Кондак святителя Феодора, епископа Едесского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260709.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out like the sun with the brightness of thy life, O Theodore, thou didst appear plainly to the king of Babylon by wonders and didst show him well-pleasing to Christ, O hierarch. Standing now with him before the Trinity, remember us who keep thy memory with brightness, O wise one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Благохотения ради/ просвещеннаго тобою по благодати чада, честнаго Моавия,/ животворящаго древа получения,/ подвигнуся во царствующий град,/ и тамо Христовою перстию доблей царице Феодоре ока зрение очисти,/ и оттуду с яселаемым сокровищем паки в Вавилоне честнаго Моавия по Христе на мучение утверди,/ сего ради ти вопием:/ радуйся, честный Феодоре,/ учениче Христов, пастуше добрый.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июля ст. ст. — «Ин кондак святителя Феодора, епископа Едесского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260709.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the good desire of the honourable Moavia, the child enlightened by thee through grace, to obtain the life-giving Wood, thou didst set out for the imperial city, and there with dust of Christ didst cleanse the sight of the eye of the valiant empress Theodora; and thence, with the treasure he longed for, thou didst again at Babylon strengthen the honourable Moavia for his martyrdom for Christ. Therefore we cry to thee: rejoice, O honourable Theodore, disciple of Christ and good shepherd.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
