@@ -1314,6 +1314,8 @@ test('the row is a filled stack: every column reaches the foot, and no saint twi
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
   await page.evaluate(() => document.fonts.ready);
+  // The sample below is the run's own cells, not the prefix the first paint deals.
+  await packedRow(page);
 
   const row = await page.evaluate(() => {
     const track = document.querySelector('[data-carousel-track]');
