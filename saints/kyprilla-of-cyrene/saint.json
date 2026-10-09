@@ -10,13 +10,28 @@
       "form": "Κυπρίλλα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιουλίου, «Αγίες Κυπρίλλα, Αρόα και Λούκια», with the rank word left off."
+    },
+    {
+      "form": "Кирилла (Киприлла) Киринейская",
+      "lang": "ru",
+      "note": "The whole of days.pravoslavie.ru’s name page 2558, «Кирилла (Киприлла) Киринейская, мц.», with the rank word after the comma left off. The parenthesis is the calendar’s own second spelling of the forename and not a surname, and it is kept because the page gives the name that way; the day line prints only «Кириллы», the bare forename in the genitive. `fk.mjs` returns no other holder for «киприлла кирилла киринеиская»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст. — «Мцц. Анны (ок. 304) и Кириллы (310).»",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, a line for two women, of whom this folder is the second. THE RUSSIAN DAY IS NOT THE GREEK ONE: this folder’s Greek row keeps her on 4 Ιουλίου and the Russian calendar prints her on 5 июля, one day later; the 4 июля page does not name her, and name page 2558 lists «День памяти: 5 июля» and no other day, so the Russian row is written on the day the Russian page gives and the Greek row was not touched. One row per church is the schema and neither day is a second feast of the other. The name page writes her «Кирилла (Киприлла) Киринейская, мц.», carrying both spellings of the forename itself. `dates` NOT CHANGED — the folder holds none, and the line’s 310 rests on a day line with no reading behind her name. The woman named first in the line is the martyr the calendar calls Анна and its own name page 2372 calls «Мученица Агния (Анна) Римская, дева»: that is `agnes-of-rome`, which already carries a venerated russian row on the Julian 21 января, and under BRIEF-RUSSIAN §4 it was LEFT ALONE and no row was drafted for her. The day page prints no hymn under either woman’s name."
     },
     {
       "church": "romanian",
