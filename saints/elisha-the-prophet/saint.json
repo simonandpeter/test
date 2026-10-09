@@ -16,6 +16,11 @@
       "form": "Јелисеј",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 14. јун ст. ст., „Свети пророк Јелисеј“ — Свети is not a rank and пророк is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. `foldchk.py` holds no folder on «Јелисеј», so there is no fold — and the Serbian vernacular form is nothing like the English Elisha, which is the false negative §7 of the brief warns about: the folder was found by the candidate scan’s menologion day and not by any reading of the name."
+    },
+    {
+      "form": "Елисей",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 14 июня ст. ст., «Пророк Елисей» (name page 764), with the rank word left off. The line itself gives the name in the genitive and the name page carries no surname and no epithet, so the form is bare; before it was stored no folder in the corpus held this key."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder’s romanian, greek and serbian rows already carry, so there is no second day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 июня ст. ст. — «Прор. Елисея (IX до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260614.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -117,6 +132,38 @@
       },
       "english": {
         "text": "You were shown a prophet of God, having received the double grace that was truly worthy of you, O blessed Elisha; for you became Elijah's tent-fellow, interceding with him unceasingly before Christ our God for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже во плоти Ангел/ и пророков начальнику свидетельствова, славный Елисее,/ дивны чудеса соделал еси, пророче,/ поспешеством Святаго Духа;/ силою Илииною исцелив водное естество,/ звери же погуби пожирающия,/ и Неемана очисти,/ и вдовича сына воскресил еси,/ и всем чтущим тя даруй благодать и исцеление.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Ин тропарь пророка Елисея», глас 4, under «Молитвы» on the day page for 14 июня ст. ст.. It addresses him in the vocative, «славный Елисее», so it is his own proper; the other troparion the page prints under his name is the prophet Елия’s and is not kept here.",
+        "url": "https://days.pravoslavie.ru/Days/20260614.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O glorious Elisha, who didst bear witness to him that was an angel in the flesh and the chief of the prophets, thou didst work wondrous miracles, O prophet, by the aid of the Holy Spirit: by the power of Elias thou didst heal the nature of the waters, and destroy the beasts that devoured, and cleanse Naaman, and raise the widow’s son; and to all that honour thee grant grace and healing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Пророк Божий явился еси,/ сугубую благодать прием,/ воистинну достойную тебе, Елиссее блаженне:/ Илии бо был еси совсельник,// с нимже Христу Богу молися непрестанно о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, «Кондак пророка Елисея», глас 2, under «Молитвы» on the day page for 14 июня ст. ст.. It names him in the vocative, «Елиссее блаженне», so it is his own proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260614.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a prophet of God, receiving the double portion of grace that was truly worthy of thee, O blessed Elisha; for thou wast the fellow-dweller of Elias: with him pray unceasingly to Christ God for us all.",
         "rendered": "site"
       }
     }
