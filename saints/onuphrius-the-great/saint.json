@@ -16,6 +16,11 @@
       "form": "Онуфрије Велики",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 12. јун ст. ст., „Преподобни Онуфрије Велики“ — Преподобни is the rank and comes off; Велики stays, because §5 of this wave’s brief is explicit that it is not a rank but the epithet «the Great», and it is what distinguishes him. `foldchk.py` holds no folder on either «Онуфрије Велики» or «Онуфрије», so the epithet is kept for fullness and not to break a fold."
+    },
+    {
+      "form": "Онуфрий Великий",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 12 июня ст. ст., name page 1671, «Онуфрий Великий, прп.». The line declines both words («Онуфрия Великого»); the rank «прп.» is not stored with the form."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Прп. Онуфрия Великого (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the same menologion number the folder's romanian, greek and serbian rows already carry, so there is no second day here. The line gives the century and no year; `dates` already holds 400 off the Охридски пролог and was not touched. The `ru` form is read out of the name link behind «Онуфрия», name page 1671, «Онуфрий Великий, прп.», whose own head gives «День памяти: 12 июня» and no other day. Three of the day page's fifteen hymns are taken for him: «Тропарь преподобных Онуфрия и Петра» глас 4, which is the common of venerable fathers — it names neither man and is printed under the two of them together, and both folders already carry the other in `related` in both directions, so it is recorded on both; «Тропарь преподобного Онуфрия Великого», whose glas field THE PAGE PRINTS EMPTY, so that row carries no `tone` at all; and «Кондак преподобного Онуфрия» глас 3. His Russian life page life1287 was linked and NOT READ: this folder already carries a life off doxologia.ro, saint.gr and the Охридски пролог, and this upgrade adds a day, a name form and the hymns only. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",
@@ -124,6 +139,53 @@
         "text": "A citizen of the desert, an angel in the body and a wonderworker were you shown to be, our God-bearing father Onuphrius: by fasting, by vigil and by prayer you received heavenly gifts, and you heal the sick and the souls of those who run to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who through you works healings for all.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Тропарь преподобных Онуфрия и Петра»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us ever according to thy gentleness, take not away thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Желанием духовным пустыни достигл еси, богомудре Онуфрие,/ и яко безплотен в ней многолетне подвизался еси трудолюбне,/ соревнуя пророкам Илии и Крестителю:/ и от руку ангельску таин божественных насладився,/ ныне во свете Святыя Троицы купно с ними веселишеся./ Моли спастися нам, твою память почитающим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Тропарь преподобного Онуфрия Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By spiritual longing thou didst reach the wilderness, O Onuphrius wise in God, and there for many years thou didst labour diligently as one without a body, vying with the prophets; and having been fed on the divine mysteries from the hand of an angel, thou dost now rejoice with them in the light of the Holy Trinity. Pray that we who honour thy memory may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Сиянием Духа Пресвятаго,/ Богомудре, просвещся,/ оставил еси яже в житии молвы,/ пустыню же достигл еси, преподобне отче,/ возвеселил еси иже над всеми Бога и Зиждителя,/ сего ради прославляет тя Христос, блаженне,// великий Дародатель.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Кондак преподобного Онуфрия»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the radiance of the Most Holy Spirit, O thou wise in God, thou didst leave behind the clamours of this life and didst reach the wilderness, O venerable father, and thou didst gladden God the Maker who is over all; wherefore Christ, the great giver of gifts, doth glorify thee, O blessed one.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
     }
   ],
   "text": {

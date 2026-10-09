@@ -16,6 +16,11 @@
       "form": "Варнава",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 11. јун ст. ст., „Свети Варнава апостол“ — Свети is not a rank and апостол is the `apostle` this corpus puts in `types`, so both come off and the bare personal name is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder, although `barnabas-of-the-vetluga` stands on this same menologion day in another calendar and will fold onto this string when somebody writes his Serbian form."
+    },
+    {
+      "form": "Варнава",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 11 июня ст. ст., name page 358, «Святой Варнава, апостол от 70-ти». The line gives the name in the genitive («Варнавы»); the rank «апостол от 70-ти» is not stored with the form."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Апостолов Варфоломея и Варнавы (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "note": "The day heads the two apostles of the day together in one line and gives only the century, «(I)»; it offers no year, no place and no account of his end. The name link behind «Варнавы» is name page 358, «Святой Варнава, апостол от 70-ти», which is where the stored `ru` form is read from: the line itself declines the name and the link adds the rank, and neither the declension nor the rank is stored. The day page's «Молитвы» block — which is where this calendar keeps its hymns, never on a life page — prints five, and three of them are his: a common of the apostles, a troparion sung to the two apostles of the day together which names and addresses him, and a kontakion proper to him. The two «Кондак апостола Варфоломея» are the other apostle's and were left. His Russian life page id358 was linked and NOT READ: this folder already carries a long life off doxologia.ro, saint.gr and the Охридски пролог, and this upgrade adds a day, a name form and the hymns only. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",
@@ -104,6 +119,54 @@
       },
       "english": {
         "text": "You were shown to be divine instruments of the Paraclete and revealers of the Word of God, O apostles who beheld God — Bartholomew, tent-fellow of the Twelve, and Barnabas, as a son of consolation. All-praised ones, ask Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Тропарь апостолов»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, pray to the merciful God, that he may grant unto our souls the remission of our transgressions.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Язык огнедохновен в силе Духа приемше,/ во плоти пришедшее Слово проповедаете всюду,/ Егоже ради ов во главу усечен,/ ов же камением побиен,/ и есте апостольскому лику украшение,/ Варфоломее и Варнаво,/ темже память вашу почитаем и просим:/ молите Христа Бога подати нам грехов оставление.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Ин тропарь апостолов Варфоломея и Варнавы»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received a tongue of fiery breath in the power of the Spirit, ye preach everywhere the Word that came in the flesh, for whose sake the one of you was beheaded and the other stoned with stones. Ye are the adornment of the apostolic choir, O Bartholomew and Barnabas; therefore do we honour your memory, and we ask: pray to Christ God to grant us the remission of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Господень был еси всеистинный служитель,/ апостолов же явился еси седмидесятих первый,/ озарил еси и с Павлом проповедь твою,/ всем возвещаяй Христа Спаса,/ сего ради песнопении// Божественную память твою, Варнаво, совершаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Кондак апостола Варнавы»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast the Lord's wholly true servant, and thou didst appear as the first of the seventy apostles; together with Paul thou didst make thy preaching shine out, proclaiming Christ the Saviour unto all. Therefore with hymns do we keep thy divine memory, O Barnabas.",
         "rendered": "site"
       }
     }

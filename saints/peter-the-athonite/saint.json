@@ -16,6 +16,11 @@
       "form": "Петар Атонски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 12. јун ст. ст., „Преподобни Петар Атонски“ — Преподобни is the rank and comes off, and the by-name Атонски stays. **THE FOLD IS DELIBERATELY AVOIDED**: `foldchk.py` returns `peter-of-bulgaria` and `peter-of-lampsacus`, both `sr`, for a bare «Петар», and nothing at all for «Петар Атонски». The heading gives the by-name, so §6’s rule to keep it decides the form and no third folder joins that string."
+    },
+    {
+      "form": "Петр Афонский",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar's line for 12 июня ст. ст., name page 1767, «Петр Афонский, прп.». The line declines both words («Петра Афонского»); the rank «прп.» is not stored with the form."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Прп. Петра Афонского (734)»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "note": "The day's second entry, and the same menologion number the folder's romanian, greek and serbian rows already carry, so there is no second day here. THE LINE GIVES 734 AND `dates` WAS NOT WRITTEN FROM IT: it is the first year any calendar has given this folder, the only witness to it is this day line, and the Russian life page behind it was not opened — so it is recorded here and in the life and nowhere else. The `ru` form is read out of the name link behind «Петра», name page 1767, «Петр Афонский, прп.». Three hymns are taken: «Тропарь преподобных Онуфрия и Петра» глас 4, which is the common of venerable fathers, names neither man, and is printed under the two of them together — both folders already carry the other in `related` in both directions, so it is recorded on both; «Тропарь преподобного Петра Афонского» глас 4; and «Кондак преподобного Петра» глас 2. His Russian life page life1288 was linked and NOT READ, this folder already carrying a life off three other calendars. Not checked: azbyka.ru."
     },
     {
       "church": "romanian",
@@ -141,6 +156,54 @@
         "text": "Having received the noetic and heavenly light in your heart, O Peter, you were shown to be a most radiant vessel of the undefiled Trinity, and you received the grace of wonders, crying: Alleluia.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Тропарь преподобных Онуфрия и Петра»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us ever according to thy gentleness, take not away thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Мир оставил еси, Петре, Господа ради своего/ и крест восприим на рамо свое,/ на гору достигл еси Афонскую,/ якоже древле фесвитянин Илия./ И в ней пребыв пощением, и молитвами, и бдением,/ Бога милостива творя,/ и Пречистую Богородицу Молебницу предлагая,/ сего ради вопием ти:/ моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Тропарь преподобного Петра Афонского»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst leave the world, O Peter, for thy Lord's sake, and taking thy cross upon thy shoulder thou didst reach the mountain of Athos, as the Tishbite prophet had done of old; and abiding there in fasting and prayers and vigil, making God merciful and setting forth the most pure Theotokos as thine intercessor, therefore do we cry to thee: pray to Christ God that he may save our souls.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Удалив себе человеческаго сожительства,/ в пещерах каменных и разселинах пожил еси,/ желанием Божественным и любовию, Петре, Господа твоего,/ от Негоже венец приял еси.// Моли непрестанно спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 июня ст. ст. — «Кондак преподобного Петра»",
+        "url": "https://days.pravoslavie.ru/Days/20260612.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having withdrawn thyself from the dwelling together of men, thou didst live in caves of stone and in clefts of the rock, out of divine longing and love for thy Lord, O Peter, from whom thou hast received a crown. Pray without ceasing that we may be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
     }
   ],
   "text": {
