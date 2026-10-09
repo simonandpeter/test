@@ -10,13 +10,28 @@
       "form": "Θεόδοτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιουλίου, «Άγιος Θεόδοτος», with the rank word left off."
+    },
+    {
+      "form": "Феодот Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2222, «Феодот Римский, мч.», with the rank word after the comma left off; the day line gives «Мчч. Феодота», the bare forename in the genitive, so the epithet is read from the name link. `fk.mjs` returns no other holder for «римскии феодот»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Мчч. Феодота и Феодотии (108).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and this folder’s man: the same menologion day its Greek row keeps and the same grade of martyr. The Greek page this folder rests on says only that Theodotus was martyred by the sword and names no country, no century, no year, no emperor and no judge, so nothing in it meets the Russian line and nothing in it contradicts it. `dates` NOT CHANGED and the folder still holds none: the year 108 rests on a day line, and the calendar offers no reading behind it — name page 2222 prints «Феодот Римский, мч.» and «День памяти: 4 июля» and nothing more. The line names a companion, Theodotia, whose name page 2720 gives her the same epithet and the same single day; she is the new folder `theodotia-of-rome` and a `related` row joins them both ways. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -46,5 +61,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theodotia-of-rome"
+  ]
 }

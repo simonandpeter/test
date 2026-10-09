@@ -1,0 +1,53 @@
+{
+  "slug": "demetrius-kazansky",
+  "display_name": "Demetrius (Kazansky)",
+  "names": [
+    {
+      "form": "Димитрий (Казанский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9556, «Димитрий (Казанский), иерей, сщмч.», with the two rank words after the comma left off. The day line gives the name without the surname — «Сщмч. Димитрия пресвитера (после 1937).» — so the surname is read from the name link and is part of the form. `fk.mjs` returns no holder for «димитрии казанскии»; the bare «Димитрий» was deliberately not stored, the corpus keeping many dozens of that name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Сщмч. Димитрия пресвитера (после 1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s tenth entry. THE CALENDAR GIVES NO LIFE: the line links to his name and to no reading, and name page 9556 prints the title and «Дни памяти: 26 января (Новомуч.) , 23 мая (Ростов.) , 4 июля» and nothing else. NO `dates` WERE WRITTEN: the line’s year is «после 1937», after 1937, which is not the claim that he died in 1937, and `lib/date-display.js` carries no form for it — the corpus’s own `display` strings run to «1937 or 1938» and «1937–1939» and to nothing open-ended. The reading is recorded here instead. `new-martyr` rests on the «26 января (Новомуч.)» day the name page sets beside his own, which is the general commemoration of the new martyrs of Russia; that page was NOT read, nor was the 23 мая synaxis of the saints of Rostov. `office` is the name page’s «иерей», priest, which the four locale packs carry, against the day line’s «пресвитера». No folder was found for him; the two `-kazansky` folders in the corpus are a Nicholas and a Sergius. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 July 2026, the civil day of this Julian 4 July (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

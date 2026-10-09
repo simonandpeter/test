@@ -1,0 +1,64 @@
+{
+  "slug": "barbara-yakovleva",
+  "display_name": "Barbara (Yakovleva)",
+  "names": [
+    {
+      "form": "Варвара (Яковлева)",
+      "lang": "ru",
+      "note": "The surname comes from the two readings the calendar links, which name her «Варвара Яковлева» and «сестра Варвара»; the day line gives «инокини Варвары», the grade and the bare forename in the genitive, and name page 2426 heads her «Святая преподобномученица Варвара» with no surname at all. The parenthesis follows the corpus’s habit for a Russian surname the day line withholds. `fk.mjs` returns no holder for «варвара яковлева»; the bare «Варвара» was deliberately not stored, the corpus already keeping it for `barbara-konkina` and the great martyr."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line gives the pair, and the readings put the night at «5 (18) июля 1918 г.» NO YEAR OF BIRTH was written: her own reading says «Преподобномученица инокиня Варвара совершила свой подвиг в возрасте тридцати пяти лет», in her thirty-fifth year, and subtracting that from 1918 would be an inference and not a reading. The age is recorded here instead."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст. — «Прмцц. вел. кн. Елисаветы и инокини Варвары (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry, a line for two women. Name page 2426 lists «Дни памяти: 26 января (Новомуч.) , 5 июля , 24 августа (Моск.)»; neither the synaxis of the new martyrs nor the Moscow synaxis was read, and `new-martyr` rests on the first of them standing beside her own day. Two readings behind the index id2426 were BOTH OPENED: life6476, which is hers, and life357, which is hers and the grand duchess’s together. `office` was NOT written: she is «инокиня», which the four locale packs have no word for. The day page prints three hymns, all three under the heading of the grand duchess alone, and NONE was taken into this folder. The grand duchess is `elizabeth-of-russia`, whose russian row this corpus already keeps on the Julian 28 сентября for the finding of her relics and whose row note already records this 5 июля as her repose; that row was LEFT ALONE, and only a reciprocal `related` row was added to her folder. No folder was found for this woman: `grep -ril yakovleva saints/` returns nothing and the corpus’s two `barbara-` folders are the great martyr and a nun of 1938."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 18 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 18 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 July 2026, the civil day of this Julian 5 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "elizabeth-of-russia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

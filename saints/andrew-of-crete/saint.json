@@ -17,6 +17,11 @@
       "form": "Андреј",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 4. јул ст. ст., „Св. Андреј архиеп. Критски“ — Св. is not a rank, „архиеп.“ is the rank, which `types` already carries, and „Критски“ is the see that rank governs and comes off with it, as the folder’s own Greek form was taken «with the rank words and the see left off» and as „Московски“, „Јерусалимски“ and „Цариградски“ came off Photius, Juvenal and Anatolius earlier in this range. **The fold that leaves is four deep and one of its members is a second Cretan Andrew, which is this day’s reading for the author to weigh**: `foldchk.py` returns `andrew-companion-of-paul`, `andrew-the-monk-martyr-of-crete` and `andrew-the-presbyter-confessor`, all `sr`, for «Андреј», and NO FOLDER HOLDS THIS FORM for «Андреј Критски». So keeping the see would have avoided the fold **and** would have told the two Cretan Andrews apart; it was still refused, because the see governs the rank and the rule strips it, and because this folder’s other two forms were taken the same way. Measured, not supposed, and said plainly rather than quietly settled."
+    },
+    {
+      "form": "Андрей Критский",
+      "lang": "ru",
+      "note": "The see and the name out of days.pravoslavie.ru’s name page 181, «Святитель Андрей, архиепископ Критский», with the two rank words left off; the day line gives the same two words in the genitive, «Свт. Андрея , архиеп. Критского». `fk.mjs` returns one other holder, `andrew-the-monk-martyr-of-crete`, the venerable-martyr of the Julian 17 October, and the fold is read in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Свт. Андрея , архиеп. Критского (740).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and this folder’s man: the same menologion day its Romanian, Greek and Serbian rows already keep, the same rank and see, and 740, which is one of the two years this folder’s `dates` already carry («712 or 740»). `dates` unchanged. Name page 181 heads him «Святитель Андрей, архиепископ Критский». The reading id181 behind the line WAS NOT OPENED. The day page prints two troparia under his name, both taken, and no kontakion. The stored Russian form «Андрей Критский» folds onto `andrew-the-monk-martyr-of-crete`, which already stores the identical string for a different man, and a `READ_FOLDS` key was written for the pair in the same commit."
     },
     {
       "church": "romanian",
@@ -133,6 +148,38 @@
         "text": "Sounding out the songs of God like a clear trumpet, you were shown to the world as a light seen from far off, shining with the light of the Trinity, O venerable Andrew. And so we all cry out to you: do not cease interceding for us all.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Христову Церковь цевницею языка твоего,/ песнословя умильно, возвеселил еси,/ богословием же Препетыя Троицы/ славу всем сказал еси ясно,/ тем тя, яко тайноглагольника, поем,/ Андрее, пастырю Критский,/ и величаем память твою,/ Христа славяще дивнаго во святых Своих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Тропарь святителя Андрея, архиепископа Критского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast gladdened the Church of Christ with the lyre of thy tongue, singing tenderly, and by thy theology of the all-praised Trinity thou hast declared her glory plainly to all; therefore we sing of thee as one who tells of the mysteries, O Andrew, shepherd of Crete, and we magnify thy memory, glorifying Christ who is wondrous in his saints.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему,/ Яже вещей истина./ Сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче Андрее,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Ин тропарь святителя Андрея, архиепископа Критского», глас 4 — the common of a hierarch with his name set into it, which is his and is copied whole",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; wherefore thou hast gained the heights by humility and riches by poverty. O father Andrew, pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 4"
     }
   ],
   "text": {

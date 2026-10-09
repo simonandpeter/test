@@ -1,0 +1,62 @@
+{
+  "slug": "gennadius-zdorovtsev",
+  "display_name": "Gennadius (Zdorovtsev)",
+  "names": [
+    {
+      "form": "Геннадий (Здоровцев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 11453, «Геннадий (Здоровцев), иерей, сщмч.», with the two rank words after the comma left off. The day line gives the name without the surname — «Сщмч. Геннадия пресвитера (1918).» — so the surname is read from the name link and is part of the form. `fk.mjs` returns no holder for «геннадии здоровцев»; the bare «Геннадий» was not stored, the corpus keeping eleven folders of that name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Сщмч. Геннадия пресвитера (1918).» Neither page gives a year of birth and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст. — «Сщмч. Геннадия пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. THE CALENDAR GIVES NO LIFE: the line links to his name and to no reading, and name page 11453 prints the title and «Дни памяти: 26 января (Новомуч.) , 5 июля» and nothing else. `new-martyr` rests on that first day, the general commemoration of the new martyrs of Russia, which was NOT read. `office` is the name page’s «иерей», priest, which the four locale packs carry, against the day line’s «пресвитера». The eleven `gennadius-` folders in the corpus were listed before this one was made and none is a twentieth-century Russian priest. The day page prints no hymn under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 18 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 18 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 July 2026, the civil day of this Julian 5 July (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

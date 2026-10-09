@@ -1,0 +1,9 @@
+# Sava Trlajić
+
+The Православный церковный календарь of the Сретенский monastery names him and gives no life. Its line for 4 июля ст. ст. reads «Сщмчч. Саввы , еп. Горнокарловацкого (1941) (Серб.).» — with the plural abbreviation of the hieromartyrs standing over the single name that follows it, and with the mark «(Серб.)», a saint of the Serbian church whom this Russian calendar keeps. The name page behind the line, 14512, heads him «Святитель Савва (Трлаич), епископ Горнокарловацкий, сщмч.» and prints «День памяти: 4 июля» and nothing of his life.
+
+So the calendar sets down a bishop of Gornji Karlovac killed in 1941, and gives him a surname the day line itself withholds. Below the day the name page carries a link to icons and a link to an article on Православие.Ru by the hieromonk Ignatius (Shestakov), headed «Жертвую головой, но свой народ не оставлю!» — I give my head, but I will not leave my people — with one sentence printed under the heading: «Во время пыток усташи заводили граммофон, из которого раздавалось песнопение ‘Елицы во Христа крестистеся – во Христа облекостеся’». During the torture, it says, the Ustaše set a gramophone playing the chant, as many as were baptised into Christ have put on Christ.
+
+That article was not opened for this folder, and the sentence of its teaser is the whole of what is read here. The Ohrid Prologue, which is the Serbian source this corpus reads and the one that would know a Serbian bishop best, was not consulted for him either, so the Serbian row of this folder stands undocumented. The day page prints no hymn under his name.
+
+*After the Православный церковный календарь of the Сретенский monastery for 4 июля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260704.html) and [his name page](https://days.pravoslavie.ru/name/14512.html), which name him and give no life; read 9 October 2026.*

@@ -1,0 +1,61 @@
+{
+  "slug": "agapitus-taube",
+  "display_name": "Agapitus (Taube)",
+  "names": [
+    {
+      "form": "Агапит (Таубе)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14468, «Агапит (Таубе), инок, исповедник», with the two words after the comma left off. The day line gives the bare forename in the genitive with the grade abbreviated, «Прп. Агапита исп (1936).», so the surname is read from the name link and is part of the form. `fk.mjs` returns no holder for «агапит таубе»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monastic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1936,
+      "latest": 1936,
+      "display": "1936",
+      "basis": "attested",
+      "note": "The year the day line prints for him: «Прп. Агапита исп (1936).» Neither page gives a year of birth and none was inferred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст. — «Прп. Агапита исп (1936).»",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry, printed with the grade clipped — «исп» for «исповедника», confessor, without its full stop. THE CALENDAR GIVES NO LIFE: the line links to his name and to no reading, and name page 14468 prints the title and «Дни памяти: 26 января (Новомуч.) , 5 июля» and nothing else. `types` are the line’s «Прп.» and that clipped word, with `monastic` on the name page’s «инок»; NO `new-martyr` was written, because neither page calls him a martyr — the calendar grades him a confessor, and the 26 января synaxis beside his day is recorded without being made a rank. `office` was NOT written: «инок» has no word in the four locale packs. The seven `agapitus-` folders in the corpus were listed before this one was made and none is a twentieth-century Russian monk. The day page prints no hymn under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 18 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 18 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 July 2026, the civil day of this Julian 5 July (9 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -21,6 +21,11 @@
       "form": "Атанасије Атонски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 5. јул ст. ст., „Преп. Атанасије Атонски“ — „Преп.“ is the rank and comes off, and „Атонски“ is **kept**, because it is a by-name standing directly on the name and not a see governed by a rank: there is no «archbishop of» for it to hang from, which is what made „Критски“, „Московски“, „Јерусалимски“ and „Цариградски“ come off earlier in this range. That is §6’s own «Аврамије Смоленски» case, and **it pays here where it cost on Andrew the day before**: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Атанасије Атонски» and `athanasius-of-attaleia` and `athanasius-once-a-magician`, both `sr`, for the bare «Атанасије», so keeping the by-name is what avoids a third folder on that string. Measured, not supposed. The baptismal „Аврамије“ this entry gives in a parenthesis is **not** written as a second `sr` form: §6 wants one form per folder, the fullest the calendar gives, and the folder already carries that name as a Romanian form off doxologia’s life."
+    },
+    {
+      "form": "Афанасий Афонский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 293, «Преподобный Афанасий Афонский», with the rank word left off; the day line gives the same two words in the genitive. `fk.mjs` returns no other holder for «афанасии афонскии»."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст. — «Прп. Афанасия Афонского (1000).»",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and this folder’s man: the same menologion day its Romanian, Greek and Serbian rows already keep, the same grade and the same mountain. `dates` NOT CHANGED, and the two readings do not agree: this folder holds 980, stated flat by the Охридски пролог for the same Julian day, and the Russian line gives 1000. Both are recorded and neither was altered; the discrepancy is an open question in the reader’s report. Name page 293 heads him «Преподобный Афанасий Афонский» and the reading id293 behind the line WAS NOT OPENED. The day page prints a troparion and a kontakion under his name, both taken, and they are the folder’s first Russian hymns."
     },
     {
       "church": "romanian",
@@ -144,6 +159,38 @@
         "text": "As the best of beholders of the bodiless natures and the truest of practical teachers, we your flock praise you and cry out: do not cease to entreat the Lord that those who cry to you be delivered from trials and from hard straits. Rejoice, Father Athanasius.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Еже во плоти житию твоему/ удивишася ангельстии чини:/ како с телом к невидимым сплетением изшел еси, приснославне,/ и уязвил еси демонские полки./ Отонудуже, Афанасие,/ Христос тебе воздаде богатыми дарованьми,/ сего ради, отче, моли/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст., «Тропарь преподобного Афанасия Афонского», глас 3 — the common of a venerable man with his name set into it, which is his and is copied whole",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The ranks of the angels marvelled at thy life in the flesh: how thou didst go forth with thy body to grapple with the unseen, O ever-glorious one, and didst wound the hosts of the demons. Wherefore, O Athanasius, Christ rewarded thee with rich gifts; therefore, O father, pray that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 3"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Яко невещественных существ зрителя изрядна/ и деятельна сказателя всеистинна,/ взывает тя стадо твое, Богоглагольниче:/ не оскудей, моля о рабех твоих,/ избавитися напастей и обхождений, вопиющим ти:/ радуйся, отче Афанасие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст., «Кондак преподобного Афанасия Афонского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an excellent beholder of the bodiless natures and a wholly truthful teller of what is done, thy flock calls upon thee, O speaker of God: do not grow weary of praying for thy servants, that they may be delivered from trials and from the assaults that beset them, as they cry out to thee: rejoice, O father Athanasius.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
     }
   ],
   "text": {

@@ -1,0 +1,116 @@
+{
+  "slug": "andrew-bogolyubsky",
+  "display_name": "Andrew Bogolyubsky",
+  "names": [
+    {
+      "form": "Андрей Боголюбский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 177 and of both its readings of him, «Святой благоверный князь Андрей Боголюбский», with the three rank words before the name left off. The day line gives «Блгв. вел. кн. Андрея Боголюбского», the same two words in the genitive. `fk.mjs` returns no holder for «андреи боголюбскии» and none for the display name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1110,
+      "latest": 1110,
+      "display": "1110",
+      "basis": "traditional",
+      "note": "life4155 opens «Святой благоверный князь Андрей Боголюбский (1110–1174)». The day line and the shorter reading life6418 give only the year of his death."
+    },
+    "death": {
+      "earliest": 1174,
+      "latest": 1174,
+      "display": "1174",
+      "basis": "attested",
+      "note": "The year the day line prints for him, «Блгв. вел. кн. Андрея Боголюбского (1174).», and which life6418 repeats: «Был убит в результате заговора царедворцев в 1174 году.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Блгв. вел. кн. Андрея Боголюбского (1174).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry. Name page 177 prints «День памяти: 4 июля» and no other day. Two readings stand behind the index id177 and both were opened: life6418, a paragraph, and life4155, a long reading capped by the tool at 9,000 characters from the middle. `types` is `prince` alone, on the line’s «Блгв. вел. кн.» — the calendar’s own grade for him; the three hymns the page prints under his name call him «страстотерпче» and say he received death from his own people for the love of Christ, and no `passion-bearer` type was written on a hymn’s word where the line does not use it. No `locations` were written. `andrew-prince-of-suzdal` was read before this folder was made and is a different man: a prince of Suzdal, Nizhny Novgorod and Gorodets, son of Constantine Vasilyevich, dead in 1365."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 17 iulie, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 17 Ιουλίου, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 July 2026, the civil day of this Julian 4 July (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Яко благоверен и праведен,/ за любовь Христа Бога от своих смерть приял еси,/ кровь свою пролияв,/ якоже прежде сродницы твой и страстотерпцы Борис и Глеб,/ ихже кровем совопиет и твоя кровь, святе, к Богу,/ якоже Авеля и Захарии праведных,/ благоверный страстотерпче, великий княже Андрее,/ с нимиже Христа Бога моли о стране нашей, еже Богоугодней быти/ и сыновом российским спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Тропарь благоверного великого князя Андрея Боголюбского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one right-believing and righteous, for the love of Christ God thou didst accept death at the hands of thine own, pouring out thy blood, as did thy kinsmen and passion-bearers Boris and Gleb before thee, with whose blood thy blood also cries out to God, O holy one, as did the blood of righteous Abel and Zachariah. O right-believing passion-bearer, great prince Andrew, pray with them to Christ God for our land, that it may be pleasing to God, and that the sons of Russia may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Еже во плоти житию твоему удивишася ангельстии чини:/ како с телом к невидимым сплетением изшел еси, преславне,/ и уязвил еси демонския полки./ Отонудуже, Андрее, Христос тебе воздаде богатыми дарованьми:/ сего ради, отче, моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Ин тропарь благоверного великого князя Андрея Боголюбского», глас 3 — the common of a venerable man with his name set into it, which is his and is copied whole",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The ranks of the angels marvelled at thy life in the flesh: how thou didst go forth with thy body to grapple with the unseen, O most glorious one, and didst wound the hosts of the demons. Wherefore, O Andrew, Christ rewarded thee with rich gifts; therefore, O father, pray that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 3"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "В мире сем благочестно и праведно пожив, молитвою, милостынею и благостраданием Богу угодил еси, сего ради и Бог по убиении твоем прослави тя нетлением и чудесы, Егоже, святе Андрее, моли сохранити отечество твое и всех людей, благочестно тебе почитающих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Кондак благоверного великого князя Андрея Боголюбского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived in this world piously and righteously, thou didst please God by prayer, by almsgiving and by thy good suffering; wherefore after thy slaying God also glorified thee with incorruption and with wonders. Pray him, O holy Andrew, to keep thy fatherland and all the people who piously honour thee.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

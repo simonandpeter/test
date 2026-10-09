@@ -6,4 +6,6 @@ The governor summoned him, and Theodore came before him accompanied by many Chri
 
 The page adds that his synaxis is held in the martyrium of the holy martyr Theodore at Rhesion. It prints no hymn under his name, and besides the account above it carries only the synaxarion couplet: «Eπί σκότους θανόντι τω Θεοδώρω, / Tο του Προφήτου πρώιμον φως ερράγη» — for Theodore, who died in darkness, the early light of the Prophet broke.
 
-*After saint.gr's calendar for 4 Ιουλίου — [the day](https://www.saint.gr/07/04/index.aspx) and [the life](https://www.saint.gr/1989/saint.aspx); read 1 October 2026.*
+The Православный церковный календарь of the Сретенский monastery keeps him sixth on 4 июля ст. ст. — «Сщмч. Феодора , еп. Киринейского (310).» — the same menologion day, the same grade of hieromartyr and the same see that the Greek page this folder was written from gives him, and its name page heads him «Святитель Феодор, епископ Киринейский, сщмч.» The one thing it adds is a year, 310, and that year does not sit inside the reign this folder records him under; both readings are kept as they stand and neither is preferred here. The calendar prints no hymn under his name, and the reading its line links was not opened.
+
+*After saint.gr's calendar for 4 Ιουλίου — [the day](https://www.saint.gr/07/04/index.aspx) and [the life](https://www.saint.gr/1989/saint.aspx); read 1 October 2026; and after the Православный церковный календарь of the Сретенский monastery for 4 июля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260704.html), read 9 October 2026.*

@@ -11,6 +11,11 @@
       "form": "Ανδρέας Ρουμπλιόβ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Άγιος Ανδρέας Ρουμπλιόβ ο Εικονογράφος», with the rank word left off."
+    },
+    {
+      "form": "Андрей Рублев",
+      "lang": "ru",
+      "note": "The nominative on days.pravoslavie.ru’s name link 187, «Андрей Рублев, иконописец, прп.», with the two words after the comma left off; the day line gives the same two words in the genitive. `fk.mjs` returns no other holder for «андреи рублев»."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст. — «Прп. Андрея Рублева, иконописца (XV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and this folder’s man: the venerable Andrei Rublev, iconographer, of the fifteenth century, which is the century this folder’s `dates` already place his death in, and the same menologion day its Romanian row keeps (its Greek row keeps him on 29 Ιανουαρίου instead, and was not touched). `dates` unchanged — the line gives «(XV)» and no year. Name page 187 heads him «Андрей Рублев, иконописец, прп.» The reading life6422 behind the line WAS NOT OPENED. The `[~]` mark the candidate script put on this line is wrong: it is a person. Four hymns were taken — a troparion and a kontakion of his own, and a troparion and a kontakion of the company of five venerable fathers of Moscow among whom the calendar numbers him, whose headings are quoted whole in the hymn sources."
     },
     {
       "church": "romanian",
@@ -81,5 +96,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Божественнаго света лучами облистаемый,/ преподобне Андрее,/ Христа познал еси, Божию Премудрость и Силу,/ и иконою Святыя Троицы всему миру проповедал еси/ Единство во Святей Троице,/ мы же со удивлением и радостию вопием ти:/ имеяй дерзновение ко Пресвятей Троице,// моли просветити души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Тропарь преподобного Андрея Рублева», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shone upon by the rays of the divine light, O venerable Andrew, thou didst know Christ, the Wisdom and the Power of God, and by thine icon of the Holy Trinity thou didst preach to the whole world the Unity in the Holy Trinity; and we cry out to thee with wonder and with joy: thou who hast boldness before the Most Holy Trinity, pray that our souls may be enlightened.",
+        "rendered": "site"
+      },
+      "tone": "Глас 3"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "От юности к Божественней красоте устремляяся,/ чудный иконописец в земли Российстей был еси,/ и богоносным твоим учителем поревновав,/ сиянием добродетелей украсился еси, преподобне Андрее,// темже и явися Церкве нашея похвала и радование.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Кондак преподобного Андрея Рублева», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Reaching out from thy youth towards the divine beauty, thou wast a wondrous painter of icons in the Russian land, and emulating thy God-bearing teachers thou wast adorned with the radiance of the virtues, O venerable Andrew; wherefore thou art shown forth as the praise and the gladness of our Church.",
+        "rendered": "site"
+      },
+      "tone": "Глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Плоды добродетелей на земли принесше,/ преподобнии отцы,/ в Небесных чертозех ныне благоухаете, яко райстии цвети,/ и лицем к лицу зрите Пресвятую Троицу,/ Юже дерзновенно молите/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Тропарь преподобных Андроника, Саввы и Александра Московских, Даниила Черного, Андрея Рублева», глас 2 — a hymn of the company of five whose heading names him last",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having brought forth the fruits of the virtues upon earth, O venerable fathers, you now give off a sweet fragrance in the chambers of heaven like the flowers of paradise, and you behold face to face the Most Holy Trinity; pray her boldly that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Глас 2"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "text": "Вас молим, преподобнии отцы наши,/ телом почивающий на земли,/ духом же Божию престолу предстоящий:/ молитеся о граде Москве/ и о всех, почитающих честную память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 июля ст. ст., «Кондак преподобных Андроника, Саввы и Александра Московских, Даниила Черного, Андрея Рублева», глас 3 — a hymn of the company of five whose heading names him last",
+        "url": "https://days.pravoslavie.ru/Days/20260704.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "We beseech you, our venerable fathers, who rest in body upon the earth and in spirit stand before the throne of God: pray for the city of Moscow and for all who honour your precious memory.",
+        "rendered": "site"
+      },
+      "tone": "Глас 3"
+    }
+  ]
 }

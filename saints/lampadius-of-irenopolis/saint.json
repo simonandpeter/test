@@ -16,6 +16,11 @@
       "form": "Лампад",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 5. јул ст. ст., „Преп. Лампад“ — „Преп.“ is the rank and comes off, and the heading gives nothing else; «of Irenopolis» in the display name is the corpus’s own and the place is in the body. The form is this book’s own short shape of the name, two syllables against saint.gr’s Λαμπαδός and doxologia’s «Lampadie», and it is **copied as printed and not transliterated or lengthened to match either**. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Лампад», so there is no fold."
+    },
+    {
+      "form": "Лампад Иринопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1329, «Лампад Иринопольский, прп.», with the rank word after the comma left off; the day line gives the same two words in the genitive. The folder’s Serbian form is the bare «Лампад». `fk.mjs` returns no other holder for «иринопольскии лампад»."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 июля ст. ст. — «Прп. Лампада Иринопольского (X).»",
+        "url": "https://days.pravoslavie.ru/Days/20260705.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and this folder’s man: the same menologion day its other rows keep, the same grade and the same see. `dates` NOT CHANGED — the folder holds none, and the line’s «(X)», the tenth century, rests on a day line with no reading behind it: the line links to his name and to no life, and name page 1329 prints «Лампад Иринопольский, прп.» and «День памяти: 5 июля» and nothing more. The reading is recorded here and was not written as a date. The day page prints no hymn under his name. azbyka.ru was not read."
     },
     {
       "church": "romanian",
