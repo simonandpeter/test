@@ -16,6 +16,11 @@
       "form": "Јуда",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. јун ст. ст., „Свети апостол Јуда“ — Свети is not a rank and апостол is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. **The by-names are in the body and are not built onto the form**: the entry says he is called „Јуда Јаковљев“ after his more notable brother, and also Левијем and Тадејем, and the «brother of the Lord» of the display name is not in this heading at all. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јуда», so there is no fold — which is worth having measured, the corpus keeping a `thaddeus-apostle-of-the-seventy` whom this very entry exists to tell him apart from."
+    },
+    {
+      "form": "Иуда Иаковлев (Леввей",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 19 июня ст. ст., «Иуда Иаковлев (Леввей, Фаддей), апостол из 12-ти», with the words of number and rank left off. The parenthetical second and third names are the calendar's own."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's three other venerated rows carry. His life page life1346 heads «Дни памяти: 19 июня , 30 июня (12 ап.)»; the 30 июня is the synaxis of the Twelve Apostles, a synaxis and not a second feast, and this folder renders on 19 июня ст. ст. only. life1346 was read and its account agrees with what this folder already carries — the descent from Joseph, the names Thaddaeus and Levvei, Edessa, the epistle, and the death about 80 in Armenia — so no paragraph was added and the four hymns are what this upgrade brings."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Апостола Иуды , брата Господня (ок. 80).»",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -123,6 +138,70 @@
       },
       "english": {
         "text": "Out of a glorious root thou didst rise for us, a branch given of God, eyewitness of the Lord, apostle and brother of God, all-wise herald of Christ, feeding the whole world with the fruits of thy words and teaching the Orthodox faith of the Lord as one initiated into grace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Христова тя сродника, о Иудо, ведуще и мученика тверда,/ священно восхваляем, прелесть поправша и веру соблюдша./ Темже днесь всесвятую твою память празднующе,// грехов разрешение молитвами твоими приемлем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Тропарь апостола Иуды», глас 1. The first of two troparia the page prints for him, and proper to him: «о Иудо» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Knowing thee, O Jude, to be Christ's kinsman and a steadfast martyr, we praise thee in holy song, for thou didst tread down delusion and keep the faith. Therefore, keeping today thy all-holy memory, we receive by thy prayers the loosing of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Чистоту душевную и житие непорочно стяжав,/ Пречистаго Света, нам приближшагося, быв по плоти брат и ученик,/ благочестия проповедник и языком учитель истинный,/ Иудо всехвальне,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Ин тропарь апостола Иуды, брата Господня», глас 1. The page marks it «Ин тропарь», another troparion, and heads it for the brother of the Lord; proper to him — «Иудо всехвальне».",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained purity of soul and a blameless life, thou wast after the flesh the brother and the disciple of the Most Pure Light who drew near to us, a preacher of piety and a true teacher of the nations. O all-praised Jude, pray to Christ God that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твердым умом избран ученик ты явился еси/ и столп необорим Церкве Христовы,/ языком проповедал еси слово Христово,/ веровати глаголя во Едино Божество;/ от Негоже прославився, приял еси дар исцелений,/ целити недуги притекающих к тебе,// апостоле Иудо всехвальне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Кондак апостола Иуды», глас 2. Proper to him: «апостоле Иудо всехвальне» in the vocative.",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By thy steadfast mind thou wast shown to be a chosen disciple and an unshaken pillar of the Church of Christ; thou didst preach the word of Christ to the nations, bidding them believe in one Godhead. Glorified by Him, thou didst receive the gift of healings, to heal the sicknesses of those who run to thee, O all-praised apostle Jude.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Павлу явлься собеседник, апостоле,/ с сим нам проповедь возвестил еси Божественный благодати,/ тайноглагольниче Иудо блаженне./ Сего ради вопием ти:/ не престай моляся о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Кондак апостола Иуды, брата Господня», глас 2. The page marks it «Ин кондак», another kontakion, and heads it for the brother of the Lord; proper to him — «тайноглагольниче Иудо блаженне».",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown to be Paul's companion in speech, O apostle, with him thou didst declare to us the preaching of the divine grace, O blessed Jude, speaker of mysteries. Therefore we cry to thee: cease not to pray for us all.",
         "rendered": "site"
       }
     }

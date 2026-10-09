@@ -1,0 +1,100 @@
+{
+  "slug": "paisius-of-hilandar",
+  "display_name": "Paisius of Hilandar",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Паисий Хилендарский (Афонский), Болгарский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 19 июня ст. ст., «Паисий Хилендарский (Афонский), Болгарский, прп.», with the grade word left off; the parenthetical «(Афонский)» and the epithet «Болгарский» are the calendar's own."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1722,
+      "latest": 1722,
+      "display": "1722",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life1350: «Преподобный Паисий Хилендарский родился в 1722 году в Банско в благочестивой семье.»"
+    },
+    "death": {
+      "earliest": 1701,
+      "latest": 1800,
+      "display": "18th century",
+      "basis": "traditional",
+      "note": "The century the day line gives — «Прп. Паисия Хилендарского, Болгарского (XVIII) (Болг.).» — because the life page says in terms that the time and the place of his repose are still unknown: «Время и место блаженной кончины преподобного до сих пор неизвестно.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian",
+        "note": "His life page life1350 heads «День памяти: 19 июня» and names no other day. The day line marks him «(Болг.)», a Bulgarian commemoration the Russian calendar keeps, and the life page says why the day is this one: the Bulgarian synod set his memory on 19 июня in 1962 because that is the day of Paisius the Great in the pan-Orthodox menologion. He is not the corpus's `paisius-of-trnava`, the abbot impaled near Čačak in 1814 whom the Ohrid Prologue keeps on 17 December."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Прп. Паисия Хилендарского, Болгарского (XVIII) (Болг.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 2 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 July 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Кирилла равноапостольнаго язык,/ защитив обновил еси/ и Патриарха Евфимия благословение Тройческое, предначав,/ исполнил еси./ Твоим бо трудом болгаром/ паки внятным их языком благочестие воспроповедася,/ и тобою первее начат Промысл Тройческий -/ дело освобождения рода Болгарскаго./ Сего ради тя почитаем,/ Паисие блаженне,/ и любовию совершаем честную память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Тропарь преподобного Паисия Хилендарского», глас 4. Proper to him: «Паисие блаженне» in the vocative, and it names his book and his tongue.",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst defend and renew the tongue of Cyril the Equal of the Apostles, and, making a beginning of it, didst fulfil the Trinitarian blessing of the patriarch Euthymius; for by thy labour piety was preached to the Bulgarians again in a tongue they could understand, and through thee the Providence of the Trinity first began the work of the freeing of the Bulgarian people. Therefore we honour thee, blessed Paisius, and keep thy honoured memory with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Во брань вступил еси не оружием,/ но книжицею малою, блаженне,/ никакоже устрашйвся силы врагов,/ но, зажег светильник посреде смертныя тьмы,/ победил еси в конец за люди твоя./ Сего ради вопием ти:/ радуйся, Паисие отче,/ деннице светлая болгарскаго новаго дне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Кондак преподобного Паисия Хилендарского», глас 8. Proper to him: «радуйся, Паисие отче, деннице светлая болгарскаго новаго дне», and the little book of the kontakion is the history his life page names.",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst enter the battle not with weapons but with a little book, O blessed one, in no way affrighted at the strength of the enemies; but having lit a lamp in the midst of the darkness of death, thou didst conquer at the last for thy people. Therefore we cry to thee: rejoice, father Paisius, bright morning star of the new Bulgarian day.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

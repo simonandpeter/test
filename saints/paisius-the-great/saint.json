@@ -16,6 +16,11 @@
       "form": "Пајсије Велики",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 19. јун ст. ст., „Преподобни Пајсије Велики“ — Преподобни is the rank and comes off, and „Велики“ is **kept**, because §5 is explicit that it is not a rank but the epithet «the Great»: it distinguishes him and does not grade him, which is exactly what §6 says a form should carry. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Пајсије Велики» and also for the bare «Пајсије», so neither form would have folded and the choice between them was made on the rule and not on the fold — which is the opposite case to the day before, where keeping a by-name was what avoided one."
+    },
+    {
+      "form": "Паисий Великий",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 19 июня ст. ст., «Преподобный Паисий Великий», with the rank word «Преподобный» left off, which is the whole of what the link adds to the line."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The same menologion number this folder's three other venerated rows carry. Its index page id1707 lists two lives, life6781 and life1348, and both were read; each heads «День памяти: 19 июня» and names no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Прп. Паисия Великого (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -115,6 +130,70 @@
       },
       "english": {
         "text": "The angel in the flesh, the crown of monastics, the fleshless man, the dweller of the heavens, the divine Paisius rejoices in his own memory, keeping the feast with us, and gives divine grace to those who labour for his sake; therefore let us honour him with much eagerness.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Пустынный житель, и в телеси ангел,/ и чудотворец показался еси, Богоносе отче наш Паисие:/ постом, бдением и молитвою Небесная дарования прием,/ исцеляеши недужныя и души верою притекающих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Тропарь преподобного Паисия Великого», глас 1. The common troparion of a desert-dweller — «Пустынный житель, и в телеси ангел» — with his name set in it, printed first of the two troparia under his name.",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness, an angel in the body and a wonderworker wast thou shown to be, our God-bearing father Paisius: by fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who come to thee in faith. Glory to Him who gave thee strength, glory to Him who crowned thee, glory to Him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Божественною любовию от юности распалаемь, преподобне,/ вся красная, ямсе в мире, возненавиде,/ Христа единаго возлюбил еси,/ сего ради в пустыню вселися,/ идеже сподобися Божественнаго посещения,/ Егоже неудобь зрети и ангельскима очима,/ паде, поклонися./ Великий же Дародатель, яко Человеколюбец, рече к тебе:/ не ужасайся, возлюбленный Мой,/ дела твоя угодна Мне,/ се даю тебе дар:/ о коем-либо грешнице помолишися,/ отпустятся ему греси./ Ты же в чистоте сердца твоего возгореся,/ прием воду и прикоснуся Неприкосновенному,/ умы нозе Его/ и, воду пив, даром чудес обогатися,/ болящия исцеляти, бесы от человек отгоняти/ и грешники от муки молитвою своею избавляти./ О преподобне отче Паисие,/ молю тя, да умолиши и о мне,/ якоже тебе Бог обетова,/ ибо от сих грешник первый аз есмь,/ да даст ми Господь время покаяния/ и простит мое согрешение,/ яко Благий и Человеколюбец,/ да со всеми и аз воспою Ему: аллилуйя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Тропарь преподобного Паисия Великого», глас 2. The second troparion the page prints under his name, and proper to him: it tells the vision, the promise of forgiveness for whatever sinner he prayed for, and the washing of the Lord's feet, and it closes in the first person singular.",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled from thy youth with divine love, O venerable one, thou didst hate all that is fair in the world and didst love Christ alone, and therefore didst settle in the wilderness, where thou wast granted a divine visitation. Unable to look upon Him whom even angelic eyes can hardly behold, thou didst fall down and worship; and the great Giver of gifts, as the Lover of mankind, said to thee: be not afraid, My beloved, thy works are pleasing to Me; behold, I give thee this gift, that for whatever sinner thou shalt pray, his sins shall be forgiven him. And thou, burning in the purity of thy heart, didst take water and touch the Untouchable and wash His feet; and having drunk that water thou wast enriched with the gift of wonders, to heal the sick, to drive the demons out of men, and by thy prayer to deliver sinners from torment. O venerable father Paisius, I pray thee, pray also for me, as God promised thee, for of these sinners I am the first, that the Lord may give me time for repentance and forgive my transgression, as He is good and the Lover of mankind, and that I too with all may sing to Him: alleluia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От млада званию Господа твоего последовал еси усердно, блаженне,/ вся, яже в мире красная, Его ради оставив./ Крест твой на рамена взем,/ вселился еси в пустыню,/ и, тамо ангельски пожив,/ тело твое постом и молитвами изнурил еси,/ и многим путь был еси ко спасению,/ вся возводя к Божественней высоте,/ Паисие преподобне,/ отцев и постников твердое основание.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Кондак преподобного Паисия Великого», глас 8. Proper to him: «Паисие преподобне, отцев и постников твердое основание».",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou didst follow thy Lord's calling with zeal, O blessed one, leaving for His sake all that is fair in the world. Taking thy cross upon thy shoulders thou didst settle in the wilderness, and living there as the angels live, thou didst wear out thy body with fasting and prayers, and wast a way of salvation to many, raising all to the divine height, O venerable Paisius, firm foundation of fathers and of those who fast.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Житейских молв оставлъ,/ безмолвное житие возлюбил еси,/ Крестителю подобяся всеми образы,/ с нимже тя почитаем,/ отче отцев Паисие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 июня ст. ст. — «Кондак преподобного Паисия Великого», глас 2. The second kontakion the page prints under his name; it is the common of a stillness-loving ascetic likened to the Forerunner, with his name in the last line — «отче отцев Паисие».",
+        "url": "https://days.pravoslavie.ru/Days/20260619.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having left the clamour of life, thou didst love the life of stillness, likening thyself in every way to the Baptist; and together with him we honour thee, Paisius, father of fathers.",
         "rendered": "site"
       }
     }
