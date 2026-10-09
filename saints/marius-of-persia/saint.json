@@ -11,6 +11,11 @@
       "form": "Марин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 6. јул ст. ст., „Св. муч. Марин и Марта,“ — Св. is not a rank and муч. is the rank, which `types` already carries; both come off, „и Марта“ is the other name the heading enumerates, and the bare forename is left. «of Persia, husband of Martha» in the display name is the corpus’s own disambiguation off doxologia and is not in this heading. **The form is this book’s own, „Марин“, against doxologia’s Latin «Marius» which the slug and display name follow, and it is copied as printed and not conformed to either.** `foldchk.py` returns `marinus-martyr-17-march`, `sr`, for «Марин», so this is the second folder on the string and the heading offers nothing to break it with."
+    },
+    {
+      "form": "Марин Персиянин, Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1455, «Марин Персиянин, Римский, мч.», with the rank word after the last comma left off. The day line gives the bare forename in the genitive, «Марина». `fk.mjs` returns no other holder."
     }
   ],
   "sex": "male",
@@ -20,7 +25,9 @@
   "related": [
     "martha-wife-of-marius",
     "audifax-son-of-marius",
-    "abachum-son-of-marius"
+    "abachum-son-of-marius",
+    "cyrinus-companion-of-marius",
+    "asterius-of-rome"
   ],
   "dates": {
     "death": {
@@ -34,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, first name, and this folder’s man: the same menologion day its Romanian and Serbian rows already keep, the same company of four Persians at Rome, the same emperor. The line is quoted exactly as the page prints it: the fourth name stands in the source’s own HTML as «@2[Аввакума]», an unresolved name-link template, which is why Аввакум alone of the seven carries no `/name/` link. The artefact is the page’s and not the scrape’s — it is in the cached HTML itself. The reading life4166 was opened. The Russian line and reading put the company at Rome under Claudius II (268–270) and close with 269, which falls inside the interval this folder already carries; `dates` UNCHANGED. The two names of the seven that the corpus did not hold — Кирин and Астерий — are new folders in this same batch, `cyrinus-companion-of-marius` and `asterius-of-rome`, and the whole company is joined by `related`. «иных многих» names nobody and takes no folder. Name page 1455 heads him «Марин Персиянин, Римский, мч.» and lists «День памяти: 6 июля» and no other day."
     },
     {
       "church": "romanian",

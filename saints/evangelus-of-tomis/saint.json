@@ -12,6 +12,11 @@
       "form": "Ευάγγελος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Ιουλίου, «Άγιος Ευάγγελος», with the rank word left off."
+    },
+    {
+      "form": "Евангел Томский (Кюстенджийский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 662, «Евангел Томский (Кюстенджийский), …», with the rank words after the last comma left off. The day line gives the name in the genitive only. `fk.mjs` returns no other holder for the folded form."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Мч. Евангела (ок. 284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and this folder’s man: the same menologion day its Romanian and Greek rows already keep, the same see. THE CALENDAR GIVES NO LIFE for him — the line links to his name and to no reading, and name page 662 prints «Святитель Евангел Томский (Кюстенджийский), епископ, сщмч.», «День памяти: 7 июля» and nothing else. The bracketed «(Кюстенджийский)» is the Turkish name of the city, Küstence, beside the ancient Tomis, and it is stored in the name form as the page prints it and used for nothing. `dates` UNCHANGED: the line’s «(ок. 284-305)» is Diocletian’s reign to the year, which is exactly the interval this folder already carries off doxologia.ro — the first independent witness to it. `types` and `office` UNCHANGED; this page grades him «sщмч.» where the line says «Мч.» and the folder holds `martyr, bishop`, and no `hieromartyr` was written on the name link alone. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT: «Прп. Акакия , о котором повествуется в Лествице (VI).» is `acacius-the-obedient`, which already carries a VENERATED russian row on the Julian 29 ноября, and «Прп. Евфросинии, в миру Евдокии , кн. Московской (1407).» is `euphrosyne-of-moscow`, which already carries one on the Julian 17 мая, the day of her tonsure. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled between them, so nothing was written for either and their hymns on this page were not copied."
     },
     {
       "church": "romanian",

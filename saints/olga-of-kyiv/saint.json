@@ -16,6 +16,11 @@
       "form": "Јелена",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 11. јул ст. ст., „Св. Јелена.“ — „Св.“ is not a rank and the bare forename is the whole of what is left; there is no by-name, no see and no toponymic in the heading to keep. **It is not the name the folder is called by**: this book gives „Јелена“ as the name and says «Olga» was hers before baptism, which is a reading for §10 and not a change a reader may make. `foldchk.py` returns `helen-the-empress`, `sr`, for the string and `sr-foldpred.mjs` predicts one other holder, the same folder, so this is the second folder on the form and the heading offers nothing whatever to break the fold with."
+    },
+    {
+      "form": "Ольга",
+      "lang": "ru",
+      "note": "The bare forename, and bare because every other word the calendar prints beside it is a rank. The day line reads «Равноап. Ольги , вел. кн. Российской, во св. Крещении Елены» and name page 2634 is headed «Святая равноапостольная великая княгиня Российская Ольга»: «равноапостольная» is the `equal-to-the-apostles` the folder’s `types` already carries, «великая княгиня» is the princely rank, and «Российская» stands in the line as an attribute of that rank and not of the name, so reordering the heading into «Ольга Российская» would be a form this corpus constructed and not one the page prints. The baptismal name Елена is in the row note. `fk.mjs` returns no other holder for «олга»."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Равноап. Ольги , вел. кн. Российской, во св. Крещении Елены (969).»",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and this folder’s woman: the same menologion day its Romanian, Greek and Serbian rows already keep, the same rank of equal-to-the-apostles, the same 969, which is EXACTLY the year this folder’s `dates` already carry off saint.gr. `dates` and `types` UNCHANGED. THE LINE GIVES HER BAPTISMAL NAME WHERE THE OTHER THREE CALENDARS DID NOT: «во св. Крещении Елены», in holy baptism Helen — which is the «Јелена» this folder already stores as its Serbian form and the «μετονομασθείσα Ελένη» of saint.gr’s heading, so three of the four books now say it. It is recorded here and NOT turned into a second Russian name form, a baptismal name in a genitive clause being a reading and not a form the page prints as a name. Name page 2634 heads her «Святая равноапостольная великая княгиня Российская Ольга» and lists «День памяти: 11 июля» and no other day. THE READING id2634 WAS NOT OPENED. SIX HYMNS TAKEN, four troparia and two kontakia, and the folder had three before — all three of those are the Romanian, Greek and Serbian texts and none is Russian, so these six are its first Russian ones. ONE OF THEM IS LABELLED BY THE PAGE ITSELF «Ин тропарь равноапостольной Ольги, еллинский», the Hellenic one: a Church Slavonic text the Russian calendar marks as rendering the Greek service, printed under her name among the rest. It is taken as the page prints it and the label is recorded in its citation; it is NOT the Greek apolytikion this folder already holds, which is a different text in a different language. THE DAY PRINTS SIX ENTRIES AND ONLY TWO ARE PEOPLE WHOSE OWN MEMORY IT IS. The first is «Воспоминание чуда вмц. Евфимии всехвальной, имже Православие утвердися (451)» — the remembrance of the MIRACLE of Euphemia the All-praised by which Orthodoxy was confirmed, at Chalcedon — which is a feast and not a person’s day; the woman is `euphemia-the-great-martyr`, whose venerated russian row already stands on the Julian 16 сентября and which already stores her «Евфимия Всехвальная», so the entry is refused twice over and her FOUR hymns on this page were not copied. The third is «Обретение мощей сщмч. Илариона , архиеп. Верейского (1998)», a finding of relics, likewise a feast; NO FOLDER HOLDS HIM, name page 9113 is «Сщмч. Иларион (Троицкий), архиепископ Верейский» and lists five days of which this one is labelled «(обретение мощей)», so his own memory falls outside this day and a later reader owes him the folder. The sixth is the Rzhev or Okovets and the Barkolabovo icons. AND THE DAY PAGE’S OWN HTML IS BROKEN ON THAT THIRD LINE: it prints the unresolved name-link template «⟦N:Сщмч. Иларион (Троицкий), архиепископ Верейский⟧» in the middle of the sentence, which splits the line in two for any reader of the text. That is the second such defect in this block, after «@2[Аввакума]» on the Julian 6 July, and it is the source’s and not the scrape’s."
     },
     {
       "church": "romanian",
@@ -122,6 +137,102 @@
       },
       "english": {
         "text": "You were shown the holy beginning of the divine faith in Russia, having come to the grace of the Saviour and brought your people into it, a true queen and one seized by God. Glorious Olga, entreat Christ our God that great mercy may be given us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Крилами богоразумия вперивши твой ум,/ возлетела еси превыше видимыя твари,/ взыскавши Бога и Творца всяческих,/ и, Того обретши, паки рождение Крещением прияла еси,/ древа животнаго наслаждающися, нетленна во веки пребываеши,// Ольго приснославная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Тропарь равноапостольной Ольги», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having winged thy mind with the wings of the knowledge of God, thou didst fly up above all visible creation, seeking God the Maker of all things; and having found Him thou didst receive a second birth by baptism, and delighting in the tree of life thou abidest incorrupt for ever, O ever-glorious Olga.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В тебе, Богомудрая Елено, известен спасения образ бысть в Русстей стране,/ яко, приимши баню святаго Крещения, последовала еси Христу,/ творящи же и учащи, еже оставити идольскую прелесть,/ восприяти же попечение о души, вещи безсмертней,/ темже и со Ангелы радуется, равноапостольная, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Ин тропарь равноапостольной Ольги», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O Helen wise in God, the pattern of salvation was made known in the Russian land; for having received the bath of holy baptism thou didst follow Christ, doing and teaching that men should leave the delusion of idols and take up the care of the soul, a thing immortal. Wherefore thy spirit rejoices with the angels, O equal of the apostles.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Оставивши лесть идольскую,/ последовала еси Христу, Безсмертному Жениху, Ольго Богомудрая,/ в Егоже чертозе радующися,/ непрестанно молися/ о чтущих верою и любовию святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Ин тропарь равноапостольной Ольги (второй)», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having left the deceit of idols thou didst follow Christ, the immortal Bridegroom, O Olga wise in God; and rejoicing in His bridal chamber, pray without ceasing for those who honour thy holy memory with faith and love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Святая равноапостольная избраннице Христова, княгине Ольго,/ народ твой словесным и чистым Христовым млеком напоившая,/ молися Милостиву Богу,/ да прегрешений оставление/ подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Ин тропарь равноапостольной Ольги, еллинский», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy chosen one of Christ, equal of the apostles, princess Olga, who gavest thy people the reasonable and pure milk of Christ to drink, pray the merciful God to grant our souls the forgiveness of our offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Воспоем днесь Благодетеля всех Бога,/ прославльшаго в России Ольгу богомудрую,/ да молитвами ея/ подаст душам нашим// грехов оставление.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Кондак равноапостольной Ольги», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing today of God the Benefactor of all, who has glorified in Russia Olga wise in God, that by her prayers He may grant our souls the forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Явися днесь благодать всех Бога,/ прославльши в Руси Ольгу Богомудрую,/ молитвами ей, Господи,/ людем подаждь/ грехом оставление.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Ин кондак равноапостольной Ольги», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the grace of the God of all has appeared, glorifying in Rus Olga wise in God. By her prayers, O Lord, grant Thy people the forgiveness of sins.",
         "rendered": "site"
       }
     }

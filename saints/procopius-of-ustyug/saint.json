@@ -16,6 +16,11 @@
       "form": "Прокопије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. јул ст. ст., „Св. Прокопије Јуродиви“ — Св. is not a rank, and „Јуродиви“ **is** the rank: §5 lists Христа ради јуродиви / Јуродиви as `fool-for-christ`, which this folder already carries in `types`, so it comes off and may not be kept to break a fold. The bare forename is what is left. «of Ustyug» in the display name is the corpus’s own, and „Устјужски“ in the body is a body and not a heading. **The fold is therefore shared with this same day’s first entry**, and was measured both ways: `foldchk.py` returns `procopius-of-sazava`, `sr`, for «Прокопије» and NO FOLDER HOLDS THIS FORM for «Прокопије Јуродиви». Three folders hold the string after this day."
+    },
+    {
+      "form": "Прокопий Устюжский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1847, «Прокопий Устюжский, Христа ради юродивый», with the words after the comma left off — «Христа ради юродивый» is the `fool-for-christ` the folder’s `types` already carries. `fk.mjs` returns no other holder; the two other Procopii of this same day store «Прокопий Устьянский» and «Прокопий (до мученичества Неаний) Кесарийский (Палестинский)»."
     }
   ],
   "dates": {
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Прав. Прокопия , Христа ради юродивого, Устюжского чудотворца (1303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and this folder’s man: the same menologion day its Greek and Serbian rows already keep, the same city of Veliky Ustyug, the same 1303, which is exactly the year this folder’s `dates` already carry off saint.gr — and the same manner of life, «Христа ради юродивого», which is the `fool-for-christ` the folder holds. `dates` and `types` UNCHANGED. THE CALENDAR GIVES NO LIFE PAGE for him: the line links to his name and to no reading, and name page 1847 prints «Прокопий Устюжский, Христа ради юродивый», «День памяти: 8 июля» and nothing else. SIX HYMNS TAKEN, which is the most any folder of this block has gained at once: four troparia and two kontakia, all six headed with his full epithet and none of them a common. They carry detail no field of this folder holds and none of it was written into one — the gift of prophecy, the deliverance of Veliky Ustyug from a dreadful earthquake and from fire and from sudden death, the myrrh drawn by his prayer from the honourable image of the Mother of God, and his body kept uncorrupted after death. The folder’s first hymns of any kind. THREE DIFFERENT PROCOPII STAND ON THIS ONE DAY and the corpus already held all three: the great-martyr of Caesarea in Palestine (303), the fool-for-Christ of Veliky Ustyug (1303) and the righteous one of Usya (XVII). Each has a name page of its own — 1844, 1847, 1846 — each listing «День памяти: 8 июля» and no other day, and the hymn headings on the day page keep them apart by the same epithets. No row was written on a bare forename anywhere here. THE DAY IS MOSTLY ICONS AND ALL OF THEM ARE LEFT OUT: the appearing of the Kazan icon at Kazan in 1579, the sign from the Annunciation icon at Ustyug in 1290, the Jacobstadt icon, and one line that lists FIFTEEN honoured copies of the Kazan icon by city and year with a name link and a reading behind each. Five of the day’s eight entries are that, and none of them is a folder; their hymns — two for the Kazan icon with a величание, one for the Tambov copy and one for the Ustyug Annunciation — were not copied."
     },
     {
       "church": "romanian",
@@ -74,5 +89,103 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Просветився Божественною благодатию, Богомудре,/ и весь разум и сердце от суетнаго мира сего к Зиждителю неуклонно возложив/ целомудрием и многим терпением,/ во временней жизни течение добре скончал еси/ и веру соблюл еси непорочну./ Темже и по смерти явися светлость жития твоего:/ источаеши бо чудесем источник неисчерпаемый/ верою притекающим ко святому твоему гробу,/ Прокопие всеблаженне,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Тропарь праведного Прокопия, Христа ради юродивого, Устюжского чудотворца», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine grace, O wise in God, and having laid all thy mind and heart unswervingly upon the Maker, away from this vain world, by chastity and by much patience thou didst finish well the course of this passing life and didst keep the faith undefiled. Wherefore after death also the brightness of thy life has appeared, for thou pourest out an unfailing fountain of wonders upon those who come with faith to thy holy tomb. O most blessed Procopius, pray Christ God to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "В терпении твоем от Бога мзду дарований пророчества/ приял еси, блаженне,/ молитвами, бдением и лощением/ тело свое изнурив,/ душу же возвысив на Небесная,/ Царя всех Христа Бога славы зрети сподобися/ и неувядаемым венцем увязеся./ Емуже с лики святых предстоя,/ за люди своя моление предлагая,/ тепле пролия слез источник,/ избавил еси град Великий Устюг и люди своя/ от труса страшнаго, и огня, и напрасныя смерти./ Темже и мы, к честней раце твоей припадающе, вопием ти:/ о Прокопие чудоносне,/ ходатай нам буди ко Господу/ во дни нашедших печалей, рабом твоим,/ и молися, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Ин тропарь праведного Прокопия, Христа ради юродивого, Устюжского чудотворца», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thy patience thou didst receive from God the reward of the gift of prophecy, O blessed one; by prayer, by vigil and by fasting thou didst wear out thy body and didst raise thy soul to the heavens, and wast counted worthy to behold Christ God the King of glory of all, and wast bound with an unfading crown. Standing before Him with the choirs of the saints, offering prayer for thy people and pouring out warm streams of tears, thou didst deliver the city of Veliky Ustyug and thy people from dreadful earthquake, from fire and from sudden death. Wherefore we also, falling down before thy honourable shrine, cry to thee: O Procopius, bearer of wonders, be our advocate before the Lord in the days of the sorrows that have come upon thy servants, and pray that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "От земли Воззвавый тя к вечным обителем/ соблюдает и по смерти неврежденно тело твое, святе,/ ты бо, в целомудрии и чистоте житие пожив, блаженне,/ не осквернил еси плоти нетлением смертным./ Темже тя любовию чтим, Прокопие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Ин тропарь праведного Прокопия, Христа ради юродивого, Устюжского чудотворца (второй)», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who called thee from the earth to the eternal mansions keeps thy body unharmed after death also, O holy one; for thou, O blessed one, having lived thy life in chastity and purity, didst not defile thy flesh with the corruption of death. Wherefore with love we honour thee, O Procopius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "В терпении твоем, святче Божий,/ от Господа мзду восприял еси/ и пожал еси ниву пищи райския,/ безсонным бдением и юродством тело твое изнурил еси/ и мудростию душу твою спасл еси,/ живота земнаго небрегл еси,/ но Небеснаго Царствия зрети возжелел еси,/ и Небеснаго Царя видети сподобился еси,/ и Тому поклонился еси./ Мы же, недостойный раби твой, ко гробу твоему умильно припадающе/ и сокрушенным сердцем взирающе на образ иконы твоей, сице вопием:/ о Прокопие чудный,/ ходатай буди и молитвенник ко Господу о рабех твоих/ и заступник граду нашему/ во дни нашедших печалей/ и молися ко Господу о спасении душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Ин тропарь праведного Прокопия, Христа ради юродивого, Устюжского чудотворца (третий)», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thy patience, O holy one of God, thou didst receive the reward from the Lord and didst reap the field of the food of paradise; by sleepless vigil and by folly thou didst wear out thy body and by wisdom didst save thy soul; thou didst make nothing of the earthly life, but didst long to behold the heavenly Kingdom, and wast counted worthy to see the heavenly King and to worship Him. And we, thine unworthy servants, falling down in tenderness before thy tomb and looking with a broken heart upon the form of thine icon, cry out thus: O wondrous Procopius, be an advocate and an intercessor before the Lord for thy servants and a defender of our city in the days of the sorrows that have come, and pray the Lord for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Христа ради юродством/ воздушная мытарства на руках ангельских неприкосновенно прешед,/ царскаго достигл еси престола/ и от Царя всех Христа Бога дар прием благодать исцелений,/ многими бо чудесы твоими и знамением страшным/ удивил еси град твой Великий Устюг:/ людем твоим милость испросив,/ миро от честнаго образа Пресвятыя Богородицы молитвою извел еси/ и недужным подал еси цельбы./ Тем же молим тя, чудоносче Прокопие:/ моли Христа Бога непрестанно подати грехов наших прощение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Кондак праведного Прокопия, Христа ради юродивого, Устюжского чудотворца», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By folly for Christ's sake thou didst pass untouched through the tollhouses of the air upon the hands of angels, and didst reach the royal throne, and from Christ God the King of all didst receive the gift of the grace of healings; for by thy many wonders and by a dreadful sign thou didst astonish thy city of Veliky Ustyug, and having begged mercy for thy people thou didst by prayer draw myrrh from the honourable image of the Most Holy Mother of God and gavest healing to the sick. Wherefore we pray thee, O wonder-bearing Procopius: pray Christ God without ceasing to grant the forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Верою память твою, блаженне, совершающих/ и любовию празднующих святое торжество твое/ соблюдай от всякия злобы и соблазна змиина,/ имаши бо дерзновение ко всех Владыце,/ Егоже моли избавится от бед рабом твоим, Богомудре Прокопие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Ин кондак праведного Прокопия, Христа ради юродивого, Устюжского чудотворца», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keep those who with faith observe thy memory, O blessed one, and with love keep thy holy feast, from every malice and from the serpent's snare; for thou hast boldness before the Master of all. Pray Him to deliver thy servants from their troubles, O Procopius, wise in God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

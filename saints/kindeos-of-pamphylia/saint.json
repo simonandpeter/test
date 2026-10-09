@@ -11,6 +11,11 @@
       "form": "Κινδέος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιουλίου, «Άγιος Κινδέος ο Πρεσβύτερος», with the rank words left off."
+    },
+    {
+      "form": "Киндей Сидский (Памфилийский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1202, «Киндей Сидский (Памфилийский), пресвитер, сщмч.», with the two rank words after the first comma left off. Both epithets and the brackets are the page’s own and are kept whole. `fk.mjs` returns no other holder."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июля ст. ст. — «Мч. Киндея пресвитера (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260711.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and this folder’s man: the same menologion day its Greek row already keeps, and name page 1202 heads him «Киндей Сидский (Памфилийский), пресвитер, сщмч.» — of Side in Pamphylia, which is the very town saint.gr gave this folder, «κωμόπολη Ταλμενία της Παμφυλίας Σίδης». The page lists «День памяти: 11 июля» and no other day. `dates` UNCHANGED: the line gives «(III-IV)», the third to fourth century, inside which the folder’s flat 290 falls — a century range cannot narrow a year, and the 290 is saint.gr’s own bracket which that page never says what it dates. `types` UNCHANGED: the line grades him «Мч.» and «пресвитера» where his name page says «sщмч.», and the folder’s `martyr, presbyter` is the line’s reading; no `hieromartyr` was written on the name link against the day line. THE READING life4216 WAS NOT OPENED. No hymn on the day page stands under his name. THE DAY PRINTS SIX ENTRIES AND ONLY TWO ARE PEOPLE WHOSE OWN MEMORY IT IS. The first is «Воспоминание чуда вмц. Евфимии всехвальной, имже Православие утвердися (451)» — the remembrance of the MIRACLE of Euphemia the All-praised by which Orthodoxy was confirmed, at Chalcedon — which is a feast and not a person’s day; the woman is `euphemia-the-great-martyr`, whose venerated russian row already stands on the Julian 16 сентября and which already stores her «Евфимия Всехвальная», so the entry is refused twice over and her FOUR hymns on this page were not copied. The third is «Обретение мощей сщмч. Илариона , архиеп. Верейского (1998)», a finding of relics, likewise a feast; NO FOLDER HOLDS HIM, name page 9113 is «Сщмч. Иларион (Троицкий), архиепископ Верейский» and lists five days of which this one is labelled «(обретение мощей)», so his own memory falls outside this day and a later reader owes him the folder. The sixth is the Rzhev or Okovets and the Barkolabovo icons. AND THE DAY PAGE’S OWN HTML IS BROKEN ON THAT THIRD LINE: it prints the unresolved name-link template «⟦N:Сщмч. Иларион (Троицкий), архиепископ Верейский⟧» in the middle of the sentence, which splits the line in two for any reader of the text. That is the second such defect in this block, after «@2[Аввакума]» on the Julian 6 July, and it is the source’s and not the scrape’s."
     },
     {
       "church": "romanian",

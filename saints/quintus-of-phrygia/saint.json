@@ -6,6 +6,11 @@
       "form": "Κόιντος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Κόιντος Ομολογητής και Θαυματουργός», with the rank words left off."
+    },
+    {
+      "form": "Коинт (Квинт) Фригийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1261, «Коинт (Квинт) Фригийский, мч.», with the rank word after the comma left off. The bracketed second form «Квинт» is the page’s own and is kept. `fk.mjs` returns no other holder."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мч. Коинта Фригийского (ок. 283).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and this folder’s man beyond doubt, on a different day from its Greek row. saint.gr keeps «Κόιντος» on 2 Μαρτίου and this calendar keeps him on 6 июля ст. ст.; one row per church is the schema, so the Russian row stands on the Russian day and the Greek row was not moved. The reading life4168 was opened and repeats, item for item, the detail this folder’s greek note already records off saint.gr: Phrygia, the village of Neolis — «Придя в Неолиду» — the governor Rufus whom he healed of possession after Rufus had pressed him to sacrifice, the men of the city of Kyme who seized and tortured him, the earthquake that threw down the idol temple, the new ruler Clearchus who had his shins broken, the healing by grace, and the ten further years he lived in service to his neighbours. SAME MAN, SAME ACCOUNT, TWO CALENDARS. THE YEAR IS A CONFLICT AND `dates` IS NOT TOUCHED: this folder carries `floruit` «3rd century» off saint.gr’s own century, and this calendar gives «(ок. 283)» on the line and «Преставился он в 283 году» flat in the reading. 283 lies inside the century already held, so nothing the folder says is contradicted; whether the folder should gain a death year of 283 is an author question in the report. `types` UNCHANGED — «мч.» here against the folder’s `confessor, wonderworker`, and the reading has him die in peace ten years after his torments, which is what the Greek grade reads; no `martyr` was added on the abbreviation alone. Name page 1261 heads him «Коинт (Квинт) Фригийский, мч.» and lists «День памяти: 6 июля» and no other day. No hymn on the day page stands under his name."
     },
     {
       "church": "romanian",

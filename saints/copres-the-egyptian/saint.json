@@ -11,6 +11,11 @@
       "form": "Коприје",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 9. јул ст. ст., „Преп. Патермутије и Коприје“ — „Преп.“ is the rank, which `types` already carries, „Патермутије и“ is the other name the heading enumerates, and the bare forename is left. «the Egyptian» in the display name is doxologia’s «Egipteanul» and is not in this heading, though the body of entry 3 says „Обојица беху Мисирци“ of its own pair. `foldchk.py` returned NO FOLDER HOLDS THIS FORM for «Коприје» before this day, **and this day writes it onto two folders** — this one off entry 4 and `copris-17-december` off entry 3 — so the fold is between the day’s own two entries, as with the two Procopii on 8 July, and **it is the source and not the reader that says the men are different**."
+    },
+    {
+      "form": "Коприй Египетский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1280, «Коприй Египетский, иеромонах», with the rank word after the comma left off. The identical string is stored on `copris-17-december` in this same batch, that being the venerable-martyr of the other entry of this same day, and a two-holder `READ_FOLDS` key is written in the same commit."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 июля ст. ст. — «Прпп. Патермуфия и Коприя Египетских (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260709.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, second name, and this folder’s man: the same menologion day its Romanian and Serbian rows already keep. Name page 1280 heads him «Коприй Египетский, иеромонах» — a hieromonk, where doxologia gave only «Cuvios» — and lists «День памяти: 9 июля» and no other day. THE READING life4201 WAS OPENED and is the fullest account any of the four books has given him: he was presbyter, an eyewitness of Patermuthius’s labours who wrote down his life and his wonders, and told his own life to the presbyter Rufinus, who passed it to Palladius bishop of Helenopolis, who set the story in his Лавсаик; and once, disputing with a Manichaean heretic and seeing he could not withstand him in words, he proposed that they build a great fire and go into it together so that the Lord Himself should judge whose faith was true — the heretic would not go first, Coprius went in and stood on the coals unharmed, the people threw the heretic in, he leapt out all burned and was caught and thrown back, and Coprius quieted the crowd and let him go. `dates` UNCHANGED: the line gives «(V)», the fifth century, where this folder carries «end of the 4th century» off the Охридски пролог, and the two abut rather than overlap — a conflict of one century boundary, recorded here and in the report and settled nowhere. `types` UNCHANGED; no `hieromonk` was added on the name page’s word alone. THE DAY PRINTS TWO ENTRIES, EACH NAMING A PATERMUTHIUS AND A COPRIUS, AND THEY ARE FOUR DIFFERENT MEN WITH FOUR NAME PAGES. The third entry is «Прмчч. Патермуфия , Коприя и мч. Александра (361-363).», the venerable-martyrs under Julian the Apostate, name pages 1744, 1281 and 107; the fourth is «Прпп. Патермуфия и Коприя Египетских (V).», the venerables of the fifth century, name pages 1745 and 1280. Each page lists «День памяти: 9 июля» and no other day, and the two pairs have a reading each, life4200 and life4201, BOTH OPENED. The corpus’s own folders divide the same way: `patermuthius-17-december`, `copris-17-december` and `alexander-17-december` are the martyr trio off saint.gr’s 17 December, and `copres-the-egyptian` is the venerable off doxologia.ro’s and the Охридски пролог’s 9 July. Only the venerable Patermuthius had no folder, and he is the arrival. BECAUSE THE RANK IS WHAT THE CALENDAR USES TO TELL THE PAIRS APART, the stored forms collide once the ranks are stripped, and TWO `READ_FOLDS` KEYS were written in the same commit for the two two-holder folds. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `pancratius-of-tauromenium` on 9 февраля (three hymns on this page left uncopied) and `cyril-of-gortyna` on 6 сентября (two hymns left uncopied). BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either."
     },
     {
       "church": "romanian",

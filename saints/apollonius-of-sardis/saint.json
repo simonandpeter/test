@@ -11,6 +11,11 @@
       "form": "Απολλώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιος Απολλώνιος από τις Σάρδεις», with the rank word and the city left off."
+    },
+    {
+      "form": "Аполлоний Иконийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 242, «Аполлоний Иконийский, мч.», with the rank word after the comma left off. The epithet is the city of his martyrdom, not of his birth, and the reading behind the line gives both; it is stored as the page prints it. `fk.mjs` returns no other holder."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Мч. Аполлония (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and this folder’s man: the same menologion day its Romanian and Greek rows already keep. THE EPITHET IS THE OTHER CITY AND THE READING RECONCILES THEM. Name page 242 heads him «Аполлоний Иконийский, мч.», of Iconium, where this folder’s own name and its Greek row say Sardis; the reading life4210 WAS OPENED and gives both — «Святой мученик Аполлоний происходил из города Сард, находившегося в Лидии», he came from Sardis in Lydia, and «Это произошло в Иконии», it happened at Iconium. One man, the city of his birth in one calendar and the city of his death in the other, and NOTHING WAS RENAMED. `dates` STILL NULL AND DELIBERATELY SO. The folder has never held a date; the line gives «(III)» and the reading closes «при императоре Декии (249-251) или Валериане (253-259)» — under Decius OR Valerian, two reigns offered as alternatives six years apart. A disjunction is not an interval, the source itself does not choose, and no `dates` object was written; the question is in the report. The reading also gives the manner: he refused to swear by the name of a mortal man, was long tortured and crucified. `types` UNCHANGED. No hymn on the day page stands under his name. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `anthony-of-the-caves` on 2 сентября (three hymns on this page left uncopied) and `silouan-of-the-kyiv-caves` on 10 июня — whose own row-note already records that his name page lists 10 июля as a day it did not read, and whose two hymns were taken there. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either. LEFT OUT of this day: «Положение честной ризы Господа нашего Иисуса Христа в Москве (1625)», the laying up of the Lord’s robe, which is a feast and not a person, with its troparion, kontakion and величание; and the Konevskaya icon with its two hymns."
     },
     {
       "church": "romanian",

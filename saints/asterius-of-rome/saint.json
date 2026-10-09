@@ -1,0 +1,66 @@
+{
+  "slug": "asterius-of-rome",
+  "display_name": "Asterius of Rome",
+  "names": [
+    {
+      "form": "Астерий Римлянин",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 286, «Астерий Римлянин, мч.», with the rank word after the comma left off. The day line gives the bare forename in the genitive, «Астерия». `fk.mjs` returns no holder for «астерии римлянин»; the corpus’s three other Asterius folders are of Laranda, of Thalaleus’s company and the venerable-martyr of 7 August, all on other days."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 269,
+      "latest": 269,
+      "display": "269",
+      "basis": "traditional",
+      "note": "The year the day line closes with for the whole company, «(269)», and the year the reading states for the beheading of the company, «в 269 году». The reading has him beheaded with Valentine the presbyter before the sentence that gives that year, and gives him no year of his own. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, its seventh name. The line is quoted exactly as the page prints it: the fourth name stands in the source’s own HTML as «@2[Аввакума]», an unresolved name-link template, which is why Аввакум alone of the seven carries no `/name/` link. The artefact is the page’s and not the scrape’s — it is in the cached HTML itself. The reading life4166 was opened and gives him one sentence — «Язычники обезглавили мужественного исповедника Валентина пресвитера и обращенного им в христианство императорского сановника Астерия» — an imperial official converted by Valentine the presbyter and beheaded with him. `valentine-of-rome` is that priest and takes its own russian row in this batch; the two are joined by `related` both ways. `types` is `martyr` alone: «мч.» is what both the line and the name page grade him, and «исповедника» in the reading is said of Valentine and not of him. The office under the emperor is in the reading’s word «сановника» and is not written as an `office`, the locale packs carrying no such word. Name page 286 lists «День памяти: 6 июля» and no other day. No hymn on the day page stands under his name. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 19 iulie, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 19 Ιουλίου, the civil day of this Julian 6 July (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 July 2026, the civil day of this Julian 6 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "valentine-of-rome",
+    "marius-of-persia",
+    "martha-wife-of-marius",
+    "audifax-son-of-marius",
+    "abachum-son-of-marius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

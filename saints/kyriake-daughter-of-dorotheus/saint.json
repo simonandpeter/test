@@ -16,6 +16,11 @@
       "form": "Недеља",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. јул ст. ст., „Св. великомуч. Недеља“ — Св. is not a rank and „великомуч.“ is the rank, which `types` already carries; both come off and the bare name is left. **The form is the Serbian vernacular, which is the word for Sunday**, and it is copied as the book prints it and **not transliterated into any form of «Kyriake»**, which is what the other two calendars give and what the slug and display name follow. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Недеља», so there is no fold — and the same distance that leaves no fold is why `sr-namesweep.mjs` could not find the folder from the name."
+    },
+    {
+      "form": "Кириакия (Недела) Никомидийская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2555, «Кириакия (Недела) Никомидийская, …», with the rank words after the last comma left off. The day line gives the name in the genitive only. `fk.mjs` returns no other holder for the folded form."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Мц. Кириакии (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry, and this folder’s woman: the same menologion day its Romanian, Greek and Serbian rows already keep, the same virgin martyr. Name page 2555 heads her «Кириакия (Недела) Никомидийская, мц.» and lists «День памяти: 7 июля» and no other day — and the bracketed «(Недела)» is exactly the Serbian «Недеља» this folder already stores, the two names the one day of the week, so the identification needs nothing beyond the page. THE READING life4177 WAS NOT OPENED. `dates` UNCHANGED: the line gives «(IV)», the fourth century, which overlaps rather than contradicts the folder’s «under Diocletian», and no interval was widened on a Roman numeral. `types` UNCHANGED — the line grades her «Мц.» where the folder holds `great-martyr, virgin` off the other three calendars, and nothing was removed on the shorter abbreviation. One hymn taken, «Тропарь мученицы Кириакии», whose text addresses her by the other name, «Недело преславная». TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT: «Прп. Акакия , о котором повествуется в Лествице (VI).» is `acacius-the-obedient`, which already carries a VENERATED russian row on the Julian 29 ноября, and «Прп. Евфросинии, в миру Евдокии , кн. Московской (1407).» is `euphrosyne-of-moscow`, which already carries one on the Julian 17 мая, the day of her tonsure. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled between them, so nothing was written for either and their hymns on this page were not copied."
     },
     {
       "church": "romanian",
@@ -97,6 +112,22 @@
       },
       "english": {
         "text": "Your ewe-lamb Kyriake cries out to You, Jesus, with a loud voice: You, my Bridegroom, I love, and seeking You I am in torment; I am crucified with You and buried with You in Your baptism; I suffer for You, that I may reign in You, and I die for You, that I may live in You. Receive me, then, as an unblemished sacrifice, who sacrifice myself to You in love. At her prayers, as the merciful One, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Одолением чудесным/ победила еси вражия силы до конца,/ Недело преславная,/ идоложрения бо тьму/ далече Креста честнаго светлостию прогнала еси./ Мученице всехвальная,/ Христу Богу молися/ даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Тропарь мученицы Кириакии», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By a wondrous overcoming thou didst conquer the powers of the enemy utterly, O most glorious Nedelya, for by the brightness of the honourable Cross thou didst drive far off the darkness of idol-worship. O martyr worthy of all praise, pray to Christ God to grant us great mercy.",
         "rendered": "site"
       }
     }

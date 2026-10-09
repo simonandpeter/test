@@ -16,6 +16,11 @@
       "form": "Прокопије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. јул ст. ст., „Св. вел. муч. Прокопије“ — Св. is not a rank and „вел. муч.“ is the rank, which `types` already carries; both come off and the bare forename is left, which is all this heading gives. «of Jerusalem, son of Theodosia» in the display name is the corpus’s own disambiguation off two other books, and „Неаније“, the name he bore before the Lord baptised him in the prison, is **not** written as a second form: §6 wants one form per folder, and the folder already carries that name in its older prose. **The fold is forced and it is shared with this same day’s other entry**: `foldchk.py` returns `procopius-of-sazava`, `sr`, for this string, and `procopius-of-ustyug` takes the same form from the day’s second heading, so three folders hold it after this day."
+    },
+    {
+      "form": "Прокопий (до мученичества Неаний) Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1844, with the rank word after the last comma left off. The parenthesis is the page’s own and is kept whole: it records the name Neanias he bore before his martyrdom, which is a reading and not a rank. `fk.mjs` returns no other holder."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Вмч. Прокопия (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and this folder’s man: the same menologion day its Romanian, Greek and Serbian rows already keep, the same rank of great-martyr. Name page 1844 heads him «Прокопий (до мученичества Неаний) Кесарийский (Палестинский), вмч.» — Procopius, called Neanias before his martyrdom, of Caesarea in Palestine — which is the same man this folder keeps as the son of Theodosia; `theodosia-mother-of-procopius` is NOT named on this day page and its undocumented russian row was not touched. THE READING life4181 WAS NOT OPENED; this row rests on the day line, the name page and the two hymns. `dates` UNCHANGED, and the line is the first source read to give a year: «(303)», where the folder carries «under Diocletian» off doxologia.ro, which dated only the day. 303 lies inside that reign, so nothing held is contradicted; whether the folder should take the flat year is an author question in the report. The epithet differs from the folder’s own display name — this calendar says Caesarea in Palestine where the corpus’s slug and display say Jerusalem — and nothing was renamed on it. Two hymns taken. The troparion is the common of a martyr with his name set into it, «Мученик Твой, Господи, Прокопий», which is his service and is copied whole; the kontakion is proper to him. THREE DIFFERENT PROCOPII STAND ON THIS ONE DAY and the corpus already held all three: the great-martyr of Caesarea in Palestine (303), the fool-for-Christ of Veliky Ustyug (1303) and the righteous one of Usya (XVII). Each has a name page of its own — 1844, 1847, 1846 — each listing «День памяти: 8 июля» and no other day, and the hymn headings on the day page keep them apart by the same epithets. No row was written on a bare forename anywhere here. THE DAY IS MOSTLY ICONS AND ALL OF THEM ARE LEFT OUT: the appearing of the Kazan icon at Kazan in 1579, the sign from the Annunciation icon at Ustyug in 1290, the Jacobstadt icon, and one line that lists FIFTEEN honoured copies of the Kazan icon by city and year with a name link and a reading behind each. Five of the day’s eight entries are that, and none of them is a folder; their hymns — two for the Kazan icon with a величание, one for the Tambov copy and one for the Ustyug Annunciation — were not copied."
     },
     {
       "church": "romanian",
@@ -106,6 +121,38 @@
       },
       "english": {
         "text": "Receiving your calling not from men but from God, holy one, you left the bad faith of your fathers and the appointed services; and in zeal for Christ, like a second Paul, you endured many labours and wounds. Having now received the promised crown, Procopius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученик Твой, Господи, Прокопий/ во страдании своем венец прият нетленный от Тебе, Бога нашего:/ имели бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Тропарь великомученика Прокопия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Procopius, O Lord, in his contest received an incorruptible crown from Thee, our God; for having Thy strength he cast down the tormentors and broke the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Ревностию ко Христу Божественною распалаемь/ и Креста крепостию ограждаемь,/ врагов шатание и дерзость низложил еси, Прокопие,/ и честную Церковь возвысил еси,/ верою преуспевая и просвещая нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 июля ст. ст. — «Кондак великомученика Прокопия», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260708.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Set alight with divine zeal for Christ and walled about with the strength of the Cross, thou didst cast down the raging and the insolence of the enemy, O Procopius, and didst exalt the honourable Church, going forward in faith and enlightening us.",
         "rendered": "site"
       }
     }

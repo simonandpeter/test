@@ -11,6 +11,11 @@
       "form": "Φιλήκας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Ιουνίου, «Άγιος Ίσαυρος και οι συν αυτώ Βασίλειος, Ιννοκέντιος, Ερμείας, Φιλήκας και Περεγρίνος», with the rank word left off."
+    },
+    {
+      "form": "Филикс Афинянин, Аполлониадский (Македонский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2286, with the rank words after the last comma left off. The day line gives the name in the genitive only. The epithets are the page’s own and are kept whole, the bracketed «(Македонский)» included. `fk.mjs` returns no other holder for the folded form."
     }
   ],
   "sex": "male",
@@ -22,13 +27,25 @@
     "innocent-of-apollonia",
     "peregrinus-of-apollonia",
     "basil-companion-of-isaurus",
-    "hermias-companion-of-isaurus"
+    "hermias-companion-of-isaurus",
+    "rufus-of-apollonia",
+    "rufinus-of-apollonia"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Исавра диакона, Иннокентия , Филикса , Ермия , Василия , Перегрина , Руфа и Руфина Македонских (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry. This folder’s man is the third of the eight; the Russian «Филикс» is the Φιλήκας this folder was made from, and the English display name is the Latin Felix the Romanian calendar prints. A DIFFERENT DAY FROM THIS FOLDER’S OTHER ROWS, AND NO ROW IS MOVED. saint.gr and doxologia.ro keep the company of Apollonia on 17 June and this calendar keeps it on 6 июля ст. ст.; one attestation row per church is the schema, so the russian row stands on the russian day and the greek and romanian rows were left exactly as they are. THE RUSSIAN LINE NAMES EIGHT WHERE THE GREEK NAMES SIX. The reading life4167 was opened and is two sentences: «Святые мученики Исавр диакон, Иннокентий, Филикс, Ермий, Василий, Перегрин - афиняне, пострадавшие за Христа в македонском городе Аполлонии при императоре Нумериане (283-284). Вместе с ними были усечены уверовавшие во Христа два градоначальника - Руф и Руфин.» — Athenians who suffered at the Macedonian city of Apollonia under Numerian, and with them two city magistrates who had come to believe, Rufus and Rufinus. Those two are new folders in this batch, `rufus-of-apollonia` and `rufinus-of-apollonia`, and the whole company is joined by `related`. `dates` UNCHANGED, and nothing is owed: the reign this reading names, «Нумериане (283-284)», is the same reign and the same interval saint.gr gave, so the two books agree; the line’s own «(III-IV)» is wider than either and narrows nothing. `types` UNCHANGED. No hymn on the day page stands under any of these eight names, and azbyka.ru was not read. Name page 2286 heads him «Филикс Афинянин, Аполлониадский (Македонский), мч.» or with the rank the line gives, and lists «День памяти: 6 июля» and no other day."
     },
     {
       "church": "romanian",

@@ -10,13 +10,28 @@
       "form": "Μύριοι",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιοι Μύριοι», with the rank word left off. The page's own first sentence expands it: «Οι Άγιοι Μύριοι (10.000) Όσιοι της Νιτρίας»."
+    },
+    {
+      "form": "Пустынники египетские, огнем и дымом уморенные",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s COLLECTIVE name page 6927, which the page prints as «Прподобные пустынники египетские, огнем и дымом уморенные» — with the rank word at the head left off, and with that word’s own misprint, a missing е, left with it. It is a description rather than a name, as the «Μύριοι» this folder already stores is a number rather than a name. `fk.mjs` returns no other holder."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Преподобных пустынников египетских , огнем и дымом уморенных (ок. 398).»",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry, and this folder’s company on the identification the Greek reader left open: the same menologion day, the same manner of death, the same company of ASCETICS rather than martyrs under a persecution. The line reads «Преподобных пустынников египетских , огнем и дымом уморенных (ок. 398)» — the venerable Egyptian desert-dwellers smothered with fire and smoke, about 398 — against saint.gr’s ten thousand «Όσιοι» of Nitria burned alive in their cells by men sent secretly by Theophilus of Alexandria in his quarrel with Isidore the Presbyter. THE RUSSIAN CALENDAR GIVES NO NUMBER AND THE GREEK GIVES TEN THOUSAND, and that is the whole of what separates them; the day, the country, the rank and the fire are the same, and a company of Egyptian ascetics suffocated by fire on the Julian 10 July is not a thing that happened twice. The identification is written and said here to be an identification. THE CALENDAR GIVES NO LIFE: the line links to the collective name page 6927 and to no reading, and that page carries no «День памяти» line at all. `dates` IS THE FOLDER’S FIRST AND IS STILL NOT WRITTEN: the folder has never held a date, and this line gives «(ок. 398)» — a hedged year, which would be the only one any source has offered. `upgrade.py` would replace the whole field and no reader of this block has been told to write a first date on a source’s «ок.»; the question is in the report. `types` UNCHANGED at `venerable-martyr`, which «Преподобных … уморенных» carries as well as the Greek «Όσιοι» did. No hymn on the day page stands under this entry. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `anthony-of-the-caves` on 2 сентября (three hymns on this page left uncopied) and `silouan-of-the-kyiv-caves` on 10 июня — whose own row-note already records that his name page lists 10 июля as a day it did not read, and whose two hymns were taken there. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either. LEFT OUT of this day: «Положение честной ризы Господа нашего Иисуса Христа в Москве (1625)», the laying up of the Lord’s robe, which is a feast and not a person, with its troparion, kontakion and величание; and the Konevskaya icon with its two hymns."
     },
     {
       "church": "romanian",

@@ -6,6 +6,11 @@
       "form": "Audifaciu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iulie, «Sfinții Mucenici Marius și Marta, soția sa, și fiii lor Audifaciu și Avacum»."
+    },
+    {
+      "form": "Авдифакс Персиянин, Римский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 11, «Авдифакс Персиянин, Римский, мч.», with the rank word after the last comma left off. The day line gives the bare forename in the genitive, «Авдифакса». `fk.mjs` returns no other holder."
     }
   ],
   "sex": "male",
@@ -15,7 +20,9 @@
   "related": [
     "marius-of-persia",
     "martha-wife-of-marius",
-    "abachum-son-of-marius"
+    "abachum-son-of-marius",
+    "cyrinus-companion-of-marius",
+    "asterius-of-rome"
   ],
   "dates": {
     "death": {
@@ -29,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Мчч. Марина , Марфы , Авдифакса , @2[Аввакума], Кирина , Валентина пресвитера, Астерия и иных многих в Риме (269).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, third name, and this folder’s man: the same menologion day its Romanian row already keeps, the same company. The line is quoted exactly as the page prints it: the fourth name stands in the source’s own HTML as «@2[Аввакума]», an unresolved name-link template, which is why Аввакум alone of the seven carries no `/name/` link. The artefact is the page’s and not the scrape’s — it is in the cached HTML itself. The reading life4166 was opened. The Russian line and reading put the company at Rome under Claudius II (268–270) and close with 269, which falls inside the interval this folder already carries; `dates` UNCHANGED. The two names of the seven that the corpus did not hold — Кирин and Астерий — are new folders in this same batch, `cyrinus-companion-of-marius` and `asterius-of-rome`, and the whole company is joined by `related`. «иных многих» names nobody and takes no folder. Name page 11 heads him «Авдифакс Персиянин, Римский, мч.» and lists «День памяти: 6 июля» and no other day."
     },
     {
       "church": "romanian",

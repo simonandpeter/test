@@ -11,6 +11,11 @@
       "form": "Ευμένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουλίου, «Όσιοι Παρθένιος και Ευμένιος οι εν Γορτύνη της Νήσου Κρήτης», with the rank word left off. The page gives his baptismal name as Εμμανουήλ and his first monastic name as Μεθόδιος; Ευμένιος is the name he took at the great schema."
+    },
+    {
+      "form": "Евмений Гортинский, Кудумский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14469, «Евмений Гортинский, Кудумский, прп.», with the rank word after the last comma left off. The day line gives the bare forename in the genitive with the epithet in the plural, «Евмения (1920) и Парфения (1905) Гортинских», so the second byname is the name page’s. `fk.mjs` returns no other holder."
     }
   ],
   "dates": {
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Прпп. Евмения (1920) и Парфения (1905) Гортинских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "note": "The day’s eighth entry, first name, and this folder’s man beyond doubt: the same menologion day its Greek row already keeps, the same Gortyna of Crete, the same Koudoumas — name page 14469 heads him «Евмений Гортинский, Кудумский, прп.», both of this folder’s bynames in one line — and «(1920)», which is EXACTLY the year of death this folder already carries off saint.gr. `dates` and `types` UNCHANGED. THE CALENDAR GIVES NO LIFE: the line links to the two names and to no reading. ONE ODDITY ON HIS NAME PAGE, RECORDED AND NOT ACTED ON: it lists «Дни памяти: 26 января (Новомуч.) , 10 июля» — the synaxis of the New Martyrs and Confessors of Russia beside his own day, for a Cretan hieromonk who died in his bed in 1920. His companion’s page, 14470, lists 10 июля alone. No `new-martyr` was written and the 26 января page was not opened; the line itself grades him «Прпп.», venerable, and nothing more. No hymn on the day page stands under either name. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `anthony-of-the-caves` on 2 сентября (three hymns on this page left uncopied) and `silouan-of-the-kyiv-caves` on 10 июня — whose own row-note already records that his name page lists 10 июля as a day it did not read, and whose two hymns were taken there. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either. LEFT OUT of this day: «Положение честной ризы Господа нашего Иисуса Христа в Москве (1625)», the laying up of the Lord’s robe, which is a feast and not a person, with its troparion, kontakion and величание; and the Konevskaya icon with its two hymns."
     },
     {
       "church": "romanian",
