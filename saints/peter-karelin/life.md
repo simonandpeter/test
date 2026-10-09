@@ -1,0 +1,9 @@
+# Peter (Karelin)
+
+days.pravoslavie.ru’s calendar for 16 июня ст. ст. carries five names on one line and his is the fourth of them: «Сщмчч. Гермогена , еп. Тобольского, Ефрема , Михаила и Петра пресвитеров и мч. Константина (1918).» The line gives the forenames in the genitive, two grade-classes, and the year 1918. The name link behind his place in it supplies the calendar’s own nominative with the surname, «Петр (Карелин), иерей, сщмч.», and that is where the name form in this folder is read from. Behind the line the calendar keeps one page for the company, and it is headed for the bishop of the five and for the priest who died with him.
+
+He is the one of the four the page follows to the end, and its title names him beside the bishop. He was priest of the church of the Каменский works and dean of the second district of the Камышевский uyezd in the Екатеринбургская province. When the bishop’s boat reached the village of Покровское every prisoner aboard was shot except the bishop and himself, and the two of them were shut in a dirty hold while the steamer made for Tobolsk. About midnight between the fifteenth and the sixteenth of June the Bolsheviks brought him out onto the deck of the steamer «Ока», tied two large granite stones to him, and threw him into the waters of the river Тура. The bishop followed him.
+
+The day page prints no hymn for any of the five and he has no life page of his own; the company page is the whole of the prose. The page closes by recording that the five of this line — «Гермоген, Ефрем, Пётр, Михаил и мученик Константин» — were numbered among the new martyrs and confessors of Russia at the jubilee council of bishops in August 2000, for veneration throughout the church.
+
+*After the Православный церковный календарь of the Сретенский monastery for 16 июня ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260616.html) and [the life of the company](https://days.pravoslavie.ru/Life/life4794.htm); read 9 October 2026.*

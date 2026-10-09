@@ -1,0 +1,61 @@
+{
+  "slug": "ephraim-dolganev",
+  "display_name": "Ephraim (Dolganev)",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Ефрем (Долганев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru’s line for 16 июня ст. ст., «Ефрем (Долганев), протоиерей, сщмч.», with the grade word and the rank word left off; the surname is part of the name and stays. The line itself gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints at the end of the line for 16 июня ст. ст.: «Сщмчч. Гермогена , еп. Тобольского, Ефрема , Михаила и Петра пресвитеров и мч. Константина (1918).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian",
+        "note": "The line that names him, the second of its five names, ends 1918. The life page spells his surname «Долганов» where the name link spells it «Долганев»; the link’s spelling is the one stored, and both are recorded in the life. It is also the surname the calendar gives the bishop of the same line, whose folder is `hermogenes-of-tobolsk`; the page says nothing about any kinship between them and none is supposed here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 июня ст. ст. — «Сщмчч. Гермогена , еп. Тобольского, Ефрема , Михаила и Петра пресвитеров и мч. Константина (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260616.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 29 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 June 2026, the corresponding civil day (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (9 October 2026)."
+    }
+  ],
+  "hymns": [],
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}
