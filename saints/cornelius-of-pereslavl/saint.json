@@ -10,6 +10,11 @@
       "form": "Корнилије Перејаславски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 22. јул ст. ст., „Преп. Корнилије Перејаславски.“, with «Преп.» — the rank — left off by §6. **«Перејаславски» IS KEPT AND IS THE WHOLE OF WHY THIS FORM LANDS IN NO FOLD**: it is neither a rank nor a see, he is a monk and holds no see, and the bare «Корнилије» is already held in sr by `cornelius-the-centurion`. `sr-foldnew.mjs` answered `keys: 2` with `holders: 0 (none)` for both, and `foldchk.py` `NO FOLDER HOLDS THIS FORM`. The form is the nominative the heading itself prints. No Romanian, Greek or Russian form is written: none of those books was opened for him, and the Russian calendar is the one most likely to hold him, which is said in this batch’s commit message."
+    },
+    {
+      "form": "Корнилий Переяславский",
+      "lang": "ru",
+      "note": "Name page 1287 of days.pravoslavie.ru is «Корнилий Переяславский, прп.»: the rank is stripped and the place kept. `fk.mjs` on the stored string returns NONE — the folder's Serbian form spells the place with ј and folds elsewhere."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 22 июля ст. ст., which is the page for this menologion number. **This is the calendar most likely to hold him**, Pereslavl being a Russian town and the year 1693 inside the Russian calendar’s densest centuries; `grep -rilE ’pereslavl|perejaslav|pereyaslav’ saints/*/saint.json` returns eight folders and none of them is this man, but the Russian page itself was not opened."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июля ст. ст. — «Прп. Корнилия Переяславского (1693).»",
+        "url": "https://days.pravoslavie.ru/Days/20260722.html",
+        "year": 2026
+      },
+      "note": "The day's third entry and the same menologion day as the folder's Serbian row, which is the only other venerated row it carries. «Прп.» is the `venerable` the folder's `types` already carry. `dates` UNCHANGED and the two sources AGREE EXACTLY: this line gives «(1693)» and the Ohrid Prologue gives 22 July 1693. The spelling differs between the two books — the Serbian form is «Перејаславски» and this calendar writes «Переяславский», which is why the Russian form is stored beside the Serbian and not instead of it. The reading life4288 was NOT opened, the folder's life being already written from the Prologue. TWO HYMNS TAKEN where the folder had none, and THE KONTAKION IS WHY HE IS CALLED SILENT: it has him lay silence upon his lips so as not to speak vanity, and sing to God with an unsilent heart."
     },
     {
       "church": "romanian",
@@ -55,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Новоявленнаго угодника Божия почтим,/ Корнилия преподобнаго,/ крест на рамо вземшаго,/ иго Христово усердно понесшаго,/ иже на невидимыя враги мужественно подвизався/ и козни их поправ, яко добр воин,/ Владыце Христу предста и молится о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июля ст. ст. — «Тропарь преподобного Корнилия Переяславского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260722.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the newly manifest servant of God, Cornelius the venerable, who took the cross upon his shoulder and bore the yoke of Christ with zeal, who contended manfully against the unseen enemies and, trampling down their devices as a good soldier, stood before Christ the Master and prays for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Вышняя получити желая,/ в Вышних Живущему неленостно поработал еси, блаженне,/ да наследиши Горняя, презрел еси дольняя,/ не токмо очи отвратив, не видети суеты,/ но и устнама твоима молчание наложив, не глаголати суетная,/ обаче немолчным сердцем воспел еси Богу./ Не умолчи убо и ныне, о нас моляся,/ Корнилие преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 июля ст. ст. — «Кондак преподобного Корнилия Переяславского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260722.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring to obtain the things on high, thou didst labour untiringly for Him who dwells on high, O blessed one; that thou mightest inherit the things above, thou didst despise the things below, not only turning thine eyes away so as not to see vanity, but laying silence upon thy lips so as not to speak vain things, and yet singing to God with an unsilent heart. Be not silent now either, but pray for us, O venerable Cornelius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
