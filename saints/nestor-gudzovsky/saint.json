@@ -1,0 +1,68 @@
+{
+  "slug": "nestor-gudzovsky",
+  "display_name": "Nestor (Gudzovsky)",
+  "names": [
+    {
+      "form": "Нестор (Гудзовский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 13748, «Нестор (Гудзовский), диакон, сщмч.», with the two rank words after the comma left off. The day line gives only the bare forename in the genitive, so the surname is the name link’s and is stored with it — which matters most for this one of the six, the corpus already holding a great many folders under the bare forename. `fk.mjs` returns no holder for the folded form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line prints for all six, «(1918)». No year of birth, no age and no place is given on either the day page or the name page, and no life page exists."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Сщмчч. Александра , Василия , Петра и Стефана пресвитеров, Георгия и Нестора диаконов (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry, sixth name. SIX NAMES, SO SIX FOLDERS, and the corpus held none of them. THE CALENDAR GIVES NO LIFE: the line links to the six names and to no reading, and name page 13748 prints the heading, «Дни памяти: 26 января (Новомуч.) , 10 июля» and nothing else. The line itself divides the six by rank — four «пресвитеров» and two «диаконов» — and each name page repeats the man’s own rank word; this one’s is «диакон». `new-martyr` rests on the 26 января synaxis the page itself labels «(Новомуч.)» standing beside this day, which is his own, together with «sщмч.» grading him a martyr on both line and page; THE 26 ЯНВАРЯ DAY PAGE WAS NOT OPENED. NO `office` WAS WRITTEN: the page’s «диакон» has no counterpart in the four locale packs, and `deacon` is in the corpus’s own `types` vocabulary instead. `related` joins him to the other five of the line, which his life names and links, and that row is owed by `life-links` and asserts nothing beyond the line they share. No hymn on the day page stands under any of the six names. azbyka.ru was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 23 iulie, the civil day of this Julian 10 July (9 October 2026); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 23 Ιουλίου, the civil day of this Julian 10 July (9 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 July 2026, the civil day of this Julian 10 July (9 October 2026)."
+    }
+  ],
+  "related": [
+    "alexander-popov",
+    "basil-pobedonostsev",
+    "peter-zefirov",
+    "stephen-lukanin",
+    "george-begma"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

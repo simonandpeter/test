@@ -16,6 +16,11 @@
       "form": "45 мученика",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 10. јул ст. ст., „Св. 45 мученика: Леонтије, Маврикије, Александар, Сисиније и прочи.“ — „Св.“ is not a rank and yields nothing, and what is left after it is the company’s name, „45 мученика“, followed by a colon and the four names the heading enumerates. **The enumeration is the company’s members and not part of the company’s name**, and „и прочи“, and the rest, says so in the heading itself; the same shape as `four-hundred-forty-martyrs-of-italy`, which stores „Четири стотине и четрдесет мученика“ and no names. `foldchk.py` returns no holder for the string and `sr-foldpred.mjs` predicts a new key with no other holder, so this form folds with nobody."
+    },
+    {
+      "form": "Сорок пять мучеников Никопольских",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s COLLECTIVE name page 10118, «Сорок пять мучеников Никопольских» — the page the day line’s own «45-ти» links to, beside the nine individual name pages. It carries no rank word to strip. It is the Russian counterpart of the «Σαράντα Πέντε Μάρτυρες» and «45 мученика» this folder already stores. `fk.mjs` returns no other holder."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Мчч. 45-ти в Никополе Армянском: Леонтия , Маврикия , Даниила , Антония , Александра , Ианикита , Сисиния , Менеи , Вирилада и прочих (ок. 319).»",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and this folder’s company: the same menologion day its Romanian, Greek and Serbian rows already keep, the same Nicopolis in Armenia, and «(ок. 319)» — about 319, which is the upper end of the interval this folder already carries and the year the Охридски пролог states flat. `dates` UNCHANGED. THIS ENTRY ENUMERATES NINE AND THE FOLDER STAYS ONE, WHICH IS AN OPEN QUESTION IN THE REPORT. The line names Леонтий, Маврикий, Даниил, Антоний, Александр, Ианикит, Сисиний, Менея, Вирилад «и прочих», and the rest — nine of forty-five, with a `/name/` page for each, and THE DAY PAGE ALSO CARRIES A COLLECTIVE NAME LINK, 10118, «Сорок пять мучеников Никопольских», which is this folder. Nine of forty-five is not an enumeration of the company, and the three books the folder already rests on name four, four and four between them with only six distinct names; this calendar brings three more that none of them printed — Ианикит (Аникита), Менея, Вирилад — and one, Сисиний, that it gives a DIFFERENT epithet from the other eight: name page 2026 is «Сисиний Томский (Кюстенджийский), мч.», of Tomis, where the other eight are «Никопольский (Армянский)». NO FOLDER WAS MADE FOR ANY OF THE NINE. The row is written on the collective name page the day itself offers, the nine names are recorded here and in the report, and whether the company should be split into forty-five, or into the nine the calendars between them name, is a question for the author and not a thing to decide inside one day’s batch. Three hymns taken. The second troparion is the common of martyrs with the number set into the plural, «Мученицы Твои, Господи», printed under their heading, which this corpus’s standing rule treats as their service: it is copied whole and said here to be a common. The first troparion and the kontakion name the forty-five themselves. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `anthony-of-the-caves` on 2 сентября (three hymns on this page left uncopied) and `silouan-of-the-kyiv-caves` on 10 июня — whose own row-note already records that his name page lists 10 июля as a day it did not read, and whose two hymns were taken there. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either. LEFT OUT of this day: «Положение честной ризы Господа нашего Иисуса Христа в Москве (1625)», the laying up of the Lord’s robe, which is a feast and not a person, with its troparion, kontakion and величание; and the Konevskaya icon with its two hymns."
     },
     {
       "church": "romanian",
@@ -122,6 +137,54 @@
       },
       "english": {
         "text": "Your martyrs, O Lord, in their contending received from you our God the crown of incorruption; for having your strength they brought down the tyrants, and shattered the powerless insolence of the demons. By their entreaties, Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Единоумне душею связани бывше,/ четыредесять с пятьми страдальцы святии,/ на врага ополчистеся,/ победителие же явльшеся,/ прилете венцы от Христа Бога/ и вечное мучений ваших воздаяние,/ тыя и нам улучити молите,/ благочестно песньми вас величающим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Тропарь 45-ти мученикам в Никополе Армянском», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being bound together in one mind of soul, O holy sufferers forty and five, ye took arms against the enemy and, shown forth as victors, ye received crowns from Christ God and the eternal reward of your torments. Pray that we also may obtain them, who piously magnify you with hymns.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Ин тропарь 45-ти мученикам в Никополе Армянском», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received incorruptible crowns from Thee, our God; for having Thy strength they cast down the tormentors and broke the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Христа ради, мученицы, многия муки подъясте,/ и многобожие низложисте все идольское,/ и разрушисте безбожие всякия прелести,/ Христовою силою сия поправите,/ нас всех верно научаете вопити яве: аллилуйя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Кондак 45-ти мученикам в Никополе Армянском», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For Christ's sake, O martyrs, ye bore many torments and cast down all the many gods of the idols, and destroyed the godlessness of every delusion, trampling these down by the power of Christ; and ye teach us all faithfully to cry aloud: alleluia.",
         "rendered": "site"
       }
     }

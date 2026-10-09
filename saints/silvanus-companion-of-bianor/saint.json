@@ -11,6 +11,11 @@
       "form": "Σιλουανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιοι Βιάνωρ και Σιλουανός», with the rank word left off."
+    },
+    {
+      "form": "Силуан Писидийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 1989, «Силуан Писидийский, мч.», with the rank word after the comma left off. `fk.mjs` returns no other holder; the Caves schemamonk of the same day stores «Силуан Киево-Печерский»."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 июля ст. ст. — «Мчч. Вианора и Силуана (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260710.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, second name, and this folder’s man — name page 1989, «Силуан Писидийский, мч.», «День памяти: 10 июля» and no other day. The epithet is the calendar’s and is the companion’s, not his own country: the reading makes him a bystander at Bianor’s torments who believed on the spot. THE READING life4211 WAS OPENED, and in it he is the one who had his tongue cut out and his head struck off the moment he declared his faith, before Bianor’s own beheading. `dates` STILL NULL AND DELIBERATELY SO, for the same reason as his companion’s: «(IV)» on the line against a martyrdom the reading says is of unknown date and only SUPPOSED to be under Diocletian. `types` UNCHANGED, and no `confessor` was added. HE IS NOT THE SILVANUS OF THE DAY’S SEVENTH ENTRY: that is «Прп. Силуана , схимника Печерского (XIII-XIV).», the Kyiv Caves schemamonk, whose folder is `silouan-of-the-kyiv-caves` and whose name page is 1988, and whose entry is withheld here for the reason below. Two Silvanuses on one day, two name pages, two folders. TWO ENTRIES OF THIS DAY WERE WITHHELD AND ARE NAMED IN THE REPORT, both folders already carrying a VENERATED russian row on another Julian day: `anthony-of-the-caves` on 2 сентября (three hymns on this page left uncopied) and `silouan-of-the-kyiv-caves` on 10 июня — whose own row-note already records that his name page lists 10 июля as a day it did not read, and whose two hymns were taken there. BRIEF-RUSSIAN §4 forbids a draft on such a folder and BRIEF.md §4 sanctions a second-day note; the author has not ruled, so nothing was written for either. LEFT OUT of this day: «Положение честной ризы Господа нашего Иисуса Христа в Москве (1625)», the laying up of the Lord’s robe, which is a feast and not a person, with its troparion, kontakion and величание; and the Konevskaya icon with its two hymns."
     },
     {
       "church": "romanian",
