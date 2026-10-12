@@ -1,0 +1,7 @@
+# Euphrosyne (Denisova)
+
+The Православный церковный календарь of the Сретенский monastery names Euphrosyne on 29 December and gives no life. Its line is «Мцц. Наталии , Наталии , Евдокии , Анны , Матроны , Варвары , Анны , Евдокии , Евфросинии , Агриппины и Наталии (1942).» — the martyrs Natalia, Natalia, Eudocia, Anna, Matrona, Barbara, Anna, Eudocia, Euphrosyne, Agrippina and Natalia, 1942 — and the calendar’s own numbered name page for this memory carries the surname the line leaves out: «Евфросиния (Денисова), мц.»
+
+That is the whole of the record. The calendar gives her no grade and no office, only the rank of martyr; the year of death the line gives is 1942; the calendar keeps the memory on this day, inside the afterfeast of the Nativity. THE LINE ENUMERATES ELEVEN FORENAMES — three Natalias, two Annas, two Eudocias, and a Matrona, a Barbara, a Euphrosyne and an Agrippina — AND THIS DRAFT HOLDS ALL ELEVEN. The line itself gives forenames only; the eleven numbered name pages behind it give eleven different surnames, and those are what tell the repeats apart. The day page prints seven hymns — two for the gravedigger of the Kyiv Caves, two for the abbot of the Unsleeping and three for the infants of Bethlehem — and none under this name. Nothing else is written here, because nothing else was read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 29 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261229.html); read 13 October 2026.*

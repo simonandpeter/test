@@ -11,6 +11,11 @@
       "form": "Νήπια",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Δεκεμβρίου, «Άγια Νήπια (περίπου 14.000) που εσφάγισαν με διαταγή του Ηρώδη». The page's name for the company is the one word Νήπια, the Infants, and the rest of its line is the number and the manner of their death; the rank word Άγια is left off."
+    },
+    {
+      "form": "Мученики 14000 младенцев, от Ирода в Вифлееме избиенные",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Мученики 14000 младенцев, от Ирода в Вифлееме избиенные» and carries no rank word to strip beyond «Мученики», which is part of the company’s own designation and is kept. `fk.mjs` on the stored string returns NONE; the folder had no Cyrillic form."
     }
   ],
   "sex": "unknown",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Мучеников 14000 младенцев , от Ирода в Вифлееме избиенных (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry after the afterfeast, and the same menologion day, 29 December, as the folder’s Romanian, Greek and Serbian rows. The line’s «Мучеников» is the `martyr` the folder’s `types` already carry. NO `dates` WERE WRITTEN: the line’s «(I)» is a bare Roman numeral and this wave has declined to write a date off one. The reading life3193 was NOT OPENED, the folder’s life being already written. THREE HYMNS TAKEN, the day’s whole set for them, where the folder had none of this calendar’s; its two existing hymns were not touched. The third, printed as «Кондак младенцев» without the number, is a second kontakion of the same memory and is stored as one."
     },
     {
       "church": "romanian",
@@ -103,6 +118,54 @@
       },
       "english": {
         "text": "A star sent the Magi to the newborn, and Herod sent an unjust soldiery, and sent it in vain, thinking to murder the one lying in the manger as an infant.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Болезньми святых, имиже о Тебе пострадаша,/ умолен буди, Господи,/ и вся наша болезни исцели,// Человеколюбче, молимся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Тропарь мучеников 14 000 младенцев», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the sufferings of the saints, which they bore for Thee, be entreated, O Lord, and heal all our sufferings, O Lover of mankind, we pray.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Звезда волхвы посла к Рождшемуся,/ и Ирод неправедное воинство посла люто,// убити мня во яслех яко Младенца лежаща.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Кондак мучеников 14 000 младенцев», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The star sent the Magi to Him who was born, and Herod cruelly sent his unjust soldiery, thinking to kill as an infant Him who lay in the manger.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "В Вифлееме рождшуся Царю, волсви от Персиды с дары приходят,/ звездою свыше наставляеми,/ но Ирод смущается и пожинает младенцы, яко пшеницу,/ и рыдает себе,/ яко держава его вскоре разорится.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Кондак младенцев», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "When the King was born in Bethlehem, Magi came from Persia with gifts, guided from on high by a star; but Herod is troubled, and reaps down the infants like wheat, and laments for himself, that his dominion will soon be overthrown.",
         "rendered": "site"
       }
     }

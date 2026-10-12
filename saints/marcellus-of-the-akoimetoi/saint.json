@@ -16,6 +16,11 @@
       "form": "Маркел",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 29. децембар ст. ст., „Преподобни Маркел, из Апамије Сиријске.“ — «Преподобни» is the rank `venerable` the folder carries, and «из Апамије Сиријске» is a PREPOSITIONAL PHRASE, from Apamea of Syria, and not a by-name adjective, so the bare forename is what is left. THE PHRASE WAS DELIBERATELY NOT TURNED INTO ONE: `marcellus-of-apamea`, the hieromartyr bishop of that city dated about 389 and kept on 14 August, already carries the Serbian form «Маркел Апамејски», and manufacturing the same adjective here would have folded a bishop OF Apamea together with a man merely FROM it. MEASURED BEFORE IT WAS WRITTEN: the bare string lands on `marcellus-15-november`, so the two-member fold key «маркел» is declared in the same commit with both holders read. The monastery of the Sleepless Ones is in the body and not in the heading, and no form was assembled out of it either."
+    },
+    {
+      "form": "Маркелл Апамейский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Маркелл Апамейский, игумен обители»: «игумен обители» is a rank phrase and is stripped, which leaves the forename and the epithet. `fk.mjs` on the stored string returns `marcellus-of-apamea`, a DIFFERENT man of the same Russian string, and the fold is recorded in `corpus-gate.mjs`’s READ_FOLDS in the same commit. The day line gives only «Маркелла , игумена обители \"Неусыпающих\"» and no epithet at all."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Прп. Маркелла , игумена обители \"Неусыпающих\" (485).»",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry and the same menologion day, 29 December, as the folder’s Romanian, Greek and Serbian rows; the line names the monastery of the Unsleeping and the year 485, which is this folder exactly. The line’s «Прп.» and «игумена» are the `venerable` and `abbot` its `types` already carry. NO `dates` WERE WRITTEN: the line’s «(485)» is a single year and the folder already carries its own reading. THE READING life3194 WAS OPENED, for one reason only — to settle the name form — and it says «Преподобный Маркелл, игумен обители \"Неусыпающих\", был родом из г. Апамеи в Сирии», educated at Antioch and then at Ephesus, received into the Unsleeping by its abbot Alexander, dead in 485. THE STORED FORM MAKES A FOLD AND THE FOLD IS RECORDED: «Маркелл Апамейский» is already the `ru` form of `marcellus-of-apamea`, a hieromartyr and bishop of Apamea kept on 14 августа — a different man, who was born in Cyprus and was elected bishop by the people of Apamea, where this one was merely born there. TWO HYMNS TAKEN; the troparion IS A COMMON, the troparion of a venerable father with the name slotted into it («В тебе, отче, известно спасеся, еже по образу»), and is flagged as one, while the kontakion is proper and names Ephesus and the imperial city. The folder’s two existing hymns are one Romanian and one Greek and neither was touched."
     },
     {
       "church": "romanian",
@@ -105,6 +120,38 @@
       },
       "english": {
         "text": "Offering God a hymn that never ceases, you fittingly kept an unsleeping mind for the fulfilling of the divine commands; and so you became a rule of virtue and a God-wise guide of monks. Father Marcellus, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В тебе, отче, известно спасеся, еже по образу,/ приим бо Крест, последовал еси Христу/ и дея учил еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней.// Темже и со Ангелы срадуется, преподобне Маркелле, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Тропарь преподобного Маркелла», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, that which is according to the image was surely saved; for, taking up the Cross, thou didst follow Christ, and by thy deeds thou didst teach us to despise the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore thy spirit rejoices with the angels, O venerable Marcellus.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко звезда, красно сияя,/ от Ефеса провозсиял еси нам, всеблаженне, постижно,/ и добродетельми возгремел еси,/ наставник иноком многим быв, преподобие,/ того ради и царствующий град просветил еси,/ и сего ради вопием ти:/ радуйся, отче всеблаженне Маркелле.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Кондак преподобного Маркелла», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining beautifully as a star, thou didst dawn upon us from Ephesus, O all-blessed one, and didst thunder forth in virtues, becoming the guide of many monks, O venerable one; therefore thou didst enlighten the imperial city also, and for this we cry to thee: rejoice, O all-blessed father Marcellus.",
         "rendered": "site"
       }
     }

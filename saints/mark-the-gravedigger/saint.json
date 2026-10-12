@@ -10,6 +10,11 @@
       "form": "Марко Гробар",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 29. децембар ст. ст., „Преподобни Марко Гробар и Теофил Плачљиви.“ — «Преподобни» is the rank `venerable`, which §6 keeps out of a stored form, and «Гробар», the gravedigger, is the by-name the heading gives him and is kept. Measured before it was written: neither the full string nor anything folding to it has another holder in the corpus, where the bare «Марко» lands on four folders — `mark-of-arethusa`, `mark-of-byblos`, `mark-of-ephesus` and `mark-the-evangelist`."
+    },
+    {
+      "form": "Марк Печерский, гробокопатель",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Преподобный Марк Печерский, гробокопатель»: «Преподобный» is a rank word and is stripped, and «гробокопатель», the gravedigger, is kept because it is the epithet the calendar identifies him by and not a rank. `fk.mjs` on the stored string returns NONE; the folder’s Serbian «Марко Гробар» folds elsewhere."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Прпп. Марка гробокопателя, Феофила и Иоанна Печерских (XI-XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, a line of three men of the Kyiv Caves, and the same menologion day, 29 December, as the folder’s Serbian row, which is its only other venerated row. ONLY THE FIRST OF THE THREE IS HERE. THREE OF THE DAY’S ENTRIES WERE WITHHELD and are in `.tmp/ru-drafts/withheld-12-29.json`: «Прп. Феофила Омучского (XV)», whose folder `theophilus-of-omuch` already carries a VENERATED russian row on 21 октября ст. ст.; and the second and third names of the Caves trio, «Феофил Плачливый» and «Иоанн Печерский», each of which has a corpus folder that MIGHT be the same man — `theophilus-of-the-kyiv-caves` on 24 октября, `john-the-faster-of-the-cave` on 7 декабря — and both of those also carry venerated russian rows on those other days. Neither identity was settled and nothing was written for any of the three. THE READINGS life3195 AND life6622 WERE OPENED: they tell the Paterikon’s story of the two brother-monks Theophilus and John who asked Mark to prepare them one grave, and of the dead man moving over in it at Mark’s word; the «Дни памяти» line on both gives 28 сентября (Печер.(Б)) beside this day, which is the Caves synaxis and NOT a second feast, and that page was not opened. The line’s «Прпп.» is the `venerable` the folder’s `types` already carry. NO `dates` WERE WRITTEN: the line’s «(XI-XII)» is a pair of bare Roman numerals and this wave has declined to write a date off those. TWO HYMNS TAKEN, both proper to him — the troparion names the digging of graves and the kontakion the tomb people run to — where the folder had none at all."
     },
     {
       "church": "romanian",
@@ -55,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Умертвив плотския похоти многим воздержанием/ и копанием гробов святым,/ присно, аки мертв, в пещере живя,/ мертвыя повелением своим воздвизал еси,/ Марко прехвальне,/ мертви и наша мудрования плотская/ и настави нас на течение добродетелей,/ моля о нас Единаго Человеколюбца.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Тропарь преподобного Марка гробокопателя, Печерского, в Ближних пещерах», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having put the lusts of the flesh to death by much abstinence and by the digging of graves for the saints, living always in the cave as one dead, thou didst raise the dead by thy command, O all-praised Mark. Put to death our fleshly thoughts also, and set us on the course of the virtues, praying for us to the one Lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Врача изрядна и чудотворца любовию, вернии, ублажим, просяще его:/ да молитвами своими уврачует наша страсти, душевныя и телесныя,/ имать бо на сие благодать от Бога,/ и прогонит духи лукавыя от всех, верно ко гробу его притекающих и зовущих:/ радуйся, Марко, целителю немощей наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Кондак преподобного Марка гробокопателя, Печерского, в Ближних пещерах», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful bless with love an excellent physician and wonderworker, asking of him that by his prayers he heal our passions of soul and body — for he has grace from God for this — and drive away the evil spirits from all who run in faith to his tomb and cry: rejoice, O Mark, healer of our infirmities.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
