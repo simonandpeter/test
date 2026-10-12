@@ -1,0 +1,60 @@
+{
+  "slug": "paul-kushnikov",
+  "display_name": "Paul (Kushnikov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Павел (Кушников)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 23 февраля ст. ст., which gives the calendar's own nominative «Павел (Кушников), иерей, сщмч.»; the rank word and the office are left off. The line on the day page itself gives only the forename, in the genitive, and no surname; the surname in brackets comes from the name link and is kept."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 23 февраля ст. ст.: «Сщмч. Павла пресвитера (1918).». The calendar gives no other year and no life page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Сщмч. Павла пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 March 2026 (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,4 +6,6 @@ The venerable [Antiochus](/saints/antiochus-of-ramas), [Antoninus](/saints/anton
 
 The distich over the four of them counts them as a company: a four-numbered array of honourable men is drawn up for thee, and departs from this life. The page gives no year for any of them, no emperor, no monastery, no relic and no hymn.
 
-*After saint.gr's calendar for 23 Φεβρουαρίου — [the day](https://www.saint.gr/02/23/index.aspx) and [the page for the four of them](https://www.saint.gr/3685/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps the eight Syrian hermits together on this day, and two of the eight are called Moses. Of this one it says that he imitated [John](/saints/john-disciple-of-limnaeus) and settled on a mountain top near the village of Ramas; the older account the same page quotes sets him on one high peak near Ramas, with the same clothing, the same food, the same standing at prayer and the same labour day and night as the others of that company.
+
+*After saint.gr's calendar for 23 Φεβρουαρίου — [the day](https://www.saint.gr/02/23/index.aspx) and [the page for the four of them](https://www.saint.gr/3685/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 23 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260223.html) and [the life of the eight](https://days.pravoslavie.ru/Life/life498.htm), read 3 October 2026.*

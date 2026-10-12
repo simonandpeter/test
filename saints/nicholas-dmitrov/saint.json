@@ -1,0 +1,71 @@
+{
+  "slug": "nicholas-dmitrov",
+  "display_name": "Nicholas (Dmitrov)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Николай (Дмитров)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 23 февраля ст. ст., which gives the calendar's own nominative «Николай (Дмитров), протоиерей, сщмч.»; the rank word and the office are left off. His life page heads him more fully still, «Священномученик Николай Лаврович Дмитров», with the patronymic, which is not part of the form stored here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1878,
+      "latest": 1878,
+      "display": "1878",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 14 мая 1878 года в селе Кунцево Московской губернии в семье священника Лавра Дмитрова, болгарина по происхождению»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's line for 23 февраля ст. ст. gives «(1938)» for all four of its names, and its life for him gives the day as well: «23 февраля (8 марта н. ст.) 1938 года батюшка был расстрелян в Тверской тюрьме»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 26 января (Новомуч.), 23 февраля» — a second memory with the synaxis of the new martyrs on 26 января, which the day page for 23 февраля ст. ст. does not repeat. Recorded here as a note. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Сщмчч. Алексия, Николая, Михаила пресвитеров и мч. Сергия (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 March 2026 (3 October 2026)."
+    }
+  ],
+  "related": [
+    "gregory-raevsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

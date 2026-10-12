@@ -6,4 +6,6 @@ The venerable [Antiochus](/saints/antiochus-of-ramas), [Antoninus](/saints/anton
 
 The distich over the four of them counts them as a company: a four-numbered array of honourable men is drawn up for thee, and departs from this life. The page gives no year for any of them, no emperor, no monastery, no relic and no hymn.
 
-*After saint.gr's calendar for 23 Φεβρουαρίου — [the day](https://www.saint.gr/02/23/index.aspx) and [the page for the four of them](https://www.saint.gr/3685/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps the eight Syrian hermits together on this day and gives each of them a few lines. John, the disciple of [Limnaeus](/saints/limnaeus), lived in the fifth century in Syria and chose for himself the labour of «life without shelter»: he settled on a hill open on every side to the winds and lived there twenty-five years, eating only bread with salt and wearing heavy chains that wore his body out. When someone who had come to see him planted an almond tree on the hill, so that he might have its shade against the burning heat, he had it cut down, so as to give his body no rest at all.
+
+*After saint.gr's calendar for 23 Φεβρουαρίου — [the day](https://www.saint.gr/02/23/index.aspx) and [the page for the four of them](https://www.saint.gr/3685/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 23 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260223.html) and [the life of the eight](https://days.pravoslavie.ru/Life/life498.htm), read 3 October 2026.*

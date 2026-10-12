@@ -6,4 +6,6 @@ The venerable [Antiochus](/saints/antiochus-of-ramas), Antoninus and [Moses](/sa
 
 The distich over the four of them counts them as a company: a four-numbered array of honourable men is drawn up for thee, and departs from this life. The page gives no year for any of them, no emperor, no monastery, no relic and no hymn.
 
-*After saint.gr's calendar for 23 Φεβρουαρίου — [the day](https://www.saint.gr/02/23/index.aspx) and [the page for the four of them](https://www.saint.gr/3685/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps the eight Syrian hermits together on this day. Of Antoninus it says that he laboured in the same way as [John](/saints/john-disciple-of-limnaeus), and that he and [Antiochus](/saints/antiochus-of-ramas) went on with their labours into great old age, giving an example of a strength of spirit that overcomes every infirmity. The older account the same page quotes puts it more sharply still: in a body already grown old, Antoninus laboured like the young, and the clothing, the food, the standing at prayer and the work day and night were the same for him as for all the rest of them.
+
+*After saint.gr's calendar for 23 Φεβρουαρίου — [the day](https://www.saint.gr/02/23/index.aspx) and [the page for the four of them](https://www.saint.gr/3685/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 23 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260223.html) and [the life of the eight](https://days.pravoslavie.ru/Life/life498.htm), read 3 October 2026.*

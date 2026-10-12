@@ -17,6 +17,11 @@
       "form": "Поликарп",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 23. фебруар ст. ст., „Свети свештеномученик Поликарп, епископ смирнски.“, with Свети, the rank words свештеномученик and епископ and the see left off; the see is the folder's `office` and not part of the name."
+    },
+    {
+      "form": "Поликарп Смирнский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 23 февраля ст. ст., «Святитель Поликарп Смирнский, епископ, сщмч.», with the rank words and the office left off. The line on the day page itself gives the name in the genitive with the see."
     }
   ],
   "sex": "male",
@@ -42,8 +47,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Сщмч. Поликарпа, еп. Смирнского (167).»",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -140,6 +154,38 @@
       },
       "english": {
         "text": "Offering to the Lord the fruits of reason through virtues filled with God, O wise Polycarp, thou wast shown worthy of God, O blessed hierarch; whence today we who have been enlightened by thy words hymn thy memory, which is worthy of all praise, and magnify God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, Богодохновенне,/ в видения восход./ Сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Поликарпе,/ моли Христа Бога,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Тропарь священномученика Поликарпа, епископа Смирнского»",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A partaker of their way of life and a successor upon the throne of the apostles, O God-inspired one, thou didst find in action the ascent to contemplation. Therefore, rightly setting out the word of truth, thou didst suffer even unto blood for the faith, O hieromartyr Polycarp. Pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Плоды словесныя Господеви принося,/ Поликарпе мудре, добродетелей жертвы,/ темже и от Бога достоин иерарх прославился еси./ Сего ради днесь, просвещшеся твоими словесы,/ воспеваем твою достохвальную памятъ,// славяще Господа.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Кондак священномученика Поликарпа»",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bringing to the Lord the fruits of the word, O wise Polycarp, and the sacrifices of the virtues, thou wast therefore glorified by God as a hierarch worthy of Him. And so today, enlightened by thy words, we sing thy praiseworthy memory and glorify the Lord.",
         "rendered": "site"
       }
     }

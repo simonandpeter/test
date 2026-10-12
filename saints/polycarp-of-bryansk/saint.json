@@ -6,6 +6,11 @@
       "form": "Πολύκαρπος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Οσίος Πολύκαρπος του Μπρυάνσκ», with the rank words left off."
+    },
+    {
+      "form": "Поликарп Брянский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 23 февраля ст. ст., «Преподобный Поликарп Брянский», with the rank word left off. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Прп. Поликарпа Брянского (1620-1621).»",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +69,42 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "michael-of-chernigov"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Ветрилом креста душевный корабль окормив,/ житейская красная оставил еси,/ и от мирскаго мятежа изшед,/ плотския похоти воздержанием многим, отче, умертвил еси,/ пощением и слезами, молитвами и песньми непрестанно прилепляяся Богу:/ темже и жилище достойно Духа Пресвятаго показался еси./ Моли, Поликарпе преподобне, Христа Бога/ оставление прегрешений даровати нам и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Кондак преподобного Поликарпа Брянского» (глас 1)",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having steered the ship of thy soul with the sail of the Cross, thou didst leave behind the pleasant things of this life; and coming out of the world's tumult thou didst put the lusts of the flesh to death, O father, by much abstinence, cleaving without ceasing to God in fasting and tears, in prayers and in hymns. Therefore thou wast shown forth as a dwelling worthy of the Most Holy Spirit. Pray, O venerable Polycarp, to Christ God, that remission of sins and great mercy be granted us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Якоже отец духовно, князь чувственно,/ людем Российским явился еси, преподобне Поликарпе:/ мудрование бо и славу мирскую презрев,/ Божественным законом последовал еси,/ монахом же был твердое укрепление и светильник светел,/ темже восхваляюще честную память твою, зовем ти:/ моли Христа спасти и просветити души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Кондак преподобного Поликарпа Брянского» (глас 4)",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to the people of Russia as a father in the spirit and a prince in the flesh, O venerable Polycarp; for despising worldly wisdom and worldly glory thou didst follow the law of God, and to monks thou wast a firm strengthening and a bright lamp. Therefore, praising thy honoured memory, we cry to thee: pray to Christ to save and enlighten our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

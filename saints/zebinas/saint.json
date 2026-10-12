@@ -6,6 +6,11 @@
       "form": "Ζεβινάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Όσιοι Ζεβινάς, Πολυχρόνιος, Δαμιανός και Μωυσής», with the rank words left off. The life page heads him «Οσιος Ζεβινας» and the distich over him writes the accusative «Ζεβινάν»."
+    },
+    {
+      "form": "Зевин Сирийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 23 февраля ст. ст., «Зевин Сирийский, пустынник», with the rank word left off. The same page's quoted older account spells the name «Зебинас» as well as «Зевин», and both are the calendar's."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 февраля ст. ст. — «Прпп. Иоанна, Антиоха, Антонина, Моисея, Зевина, Полихрония, Моисея другого и Дамиана, пустынников Сирийских (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260223.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -52,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(V)» after the eight names for 23 февраля ст. ст., and its life closes «Все эти преподобные отцы мирно скончались в V в. в Сирии»."
+    }
   }
 }

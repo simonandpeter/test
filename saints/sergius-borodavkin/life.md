@@ -1,0 +1,11 @@
+# Sergius (Borodavkin)
+
+He was born on 29 December 1878 in the town of Krasny Kholm and finished the town school. He was a merchant of the first guild and an honoured citizen of the town: before the revolution he traded in cloth and groceries and bought up eggs for sending abroad, as much as thirty wagonloads in a season, and he had shops in Petrograd and in Krasny Kholm and a hundred desyatinas of land. Soon after the Bolshevik seizure of power all of it was taken from him.
+
+In 1930 he was arrested and sentenced to two years' exile, and when it was over he came back, in 1933, to his own town and became the warden of its church. The arrests and shootings of 1937, which the state had ordered carried through in four months from 5 August, had only just ended when, on 31 January 1938, the Politburo took a new decision — «on the approval of an additional number of persons subject to repression», the whole operation to be finished not later than 15 March 1938. On 16 February 1938 the warden of the church in the town of Krasny Kholm in the Tver region was arrested.
+
+He was questioned at once, and it was the first and the last questioning. Name your connections in the Krasnokholmsk district and outside it, the investigator said; and he answered that in Krasny Kholm he had a sister, and outside the district a brother living at Yaroslavl, though where the brother worked he could not say, having no correspondence with him. Give the investigation your evidence on the anti-Soviet agitation you carried on among the people of Krasny Kholm. «I carried on no anti-Soviet agitation among the people in Krasny Kholm, and I do not admit that I am guilty of it.»
+
+Three weeks later, on 6 March, an NKVD troika sentenced him to be shot, and he was shot on 8 March 1938, which is the 23 февраля of the calendar's own reckoning. He was numbered among the new martyrs and confessors of Russia for veneration throughout the church at the Jubilee Council of Bishops of the Russian Orthodox Church in August 2000.
+
+*After the Православный церковный календарь of the Сретенский monastery for 23 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260223.html) and [the life](https://days.pravoslavie.ru/Life/life4901.htm); read 3 October 2026.*
