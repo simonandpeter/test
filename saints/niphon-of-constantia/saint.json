@@ -16,6 +16,11 @@
       "form": "Нифонт Чудотворац",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 23. децембар ст. ст., „Свети Нифонт Чудотворац.“ — «Свети» is “saint” and not a rank, and «Чудотворац» is kept on the form as the 12-21 reader kept it on `peter-of-moscow`’s «Петар Чудотворац». MEASURED BEFORE IT WAS WRITTEN AND THAT IS WHY IT WAS KEPT: the bare «Нифонт» lands on `niphon-of-novgorod` and `niphon-the-athonite`, so stripping it would have made a three-member fold where the full string has no other holder at all. The see, Constantia on Cyprus, is in the body and not in the heading, and no form was assembled out of it. THE AUTHOR MAY READ «Чудотворац» AS A RANK: BRIEF-SERBIAN §5 maps it to the type `wonderworker`, and §6 keeps a rank out of a stored form, so this form and `peter-of-moscow`’s stand or fall together."
+    },
+    {
+      "form": "Нифонт Кипрский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 23 декабря ст. ст., «Святитель Нифонт Кипрский, епископ», with the rank words left off. The day’s own line declines the forename and gives «Прп. Нифонта, еп. Кипрского»."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Прп. Нифонта, еп. Кипрского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "note": "The day’s line gives his see as Cyprus and his century as the fourth, and the life page behind it names the city: he was made bishop «города Констанции на Кипре», Constantia in Cyprus, which is the see this folder is named for. His name page and his life page give this one day. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
