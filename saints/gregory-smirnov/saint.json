@@ -1,0 +1,61 @@
+{
+  "slug": "gregory-smirnov",
+  "display_name": "Gregory (Smirnov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "office": "Deacon",
+  "names": [
+    {
+      "form": "Григорий (Смирнов)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Григорий (Смирнов), диакон, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only the forename. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The day line closes «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Сщмчч. Павла пресвитера и Григория диакона (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "note": "THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind this entry. The line names two men and both are in this draft. THE SURNAME IS COMMON AND WAS GREPPED: «Смирнов» returns twenty-nine folders across the corpus and not one of them is a Gregory. `fk.mjs` on the stored form returns NONE. The day page prints seven hymns — two for Mark the Gravedigger, two for the venerable Marcellus and three for the fourteen thousand infants — and none under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

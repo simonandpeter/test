@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-volkov",
+  "display_name": "Alexander (Volkov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Александр (Волков)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Александр (Волков), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Александра ... пресвитера». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The day line closes «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Сщмчч. Александра и Димитрия пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry, a line of two men; THE LINE AND THE NAME PAGE ARE ALL THERE IS, no life page standing behind either. The line says «пресвитеров» and the name page «иерей», priest, which agree, so `presbyter` and the office `Priest` are the source’s own words; `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries. A Cyrillic grep for «Волков» over every `saint.json` returns `demetrius-volkov` and `vladimir-volkov` — two other forenames and two other days — and `fk.mjs` on the stored form returns NONE. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 8 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 8 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

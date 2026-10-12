@@ -16,6 +16,11 @@
       "form": "Теодор Начертани",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 27. децембар ст. ст., „Преподобни мученик Теодор и Теофан Начертани.“ — «Преподобни» is the rank `venerable` and «мученик» the rank `martyr`, both of which §6 keeps out of a stored form, and «Начертани» is the EPITHET, standing in the plural at the end of the heading for both brothers: the body says «због чега су и прозвати Начертани», for which they were called the Written-on, so carrying it onto his own forename is the book’s own doing and not an assembly of mine. MEASURED BEFORE IT WAS WRITTEN: the bare «Теодор» lands on five folders — `theodore-boyar-of-chernigov`, `theodore-of-perga`, `theodore-of-vrsac`, `theodore-prince-of-yaroslavl` and `theodore-the-sabbaite-of-edessa` — where the full string has no other holder at all. The brother’s folder has stored «Теофан Начертани» in the same shape since the 10-11 reading of this same book."
+    },
+    {
+      "form": "Феодор Начертанный, Константинопольский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Феодор Начертанный, Константинопольский, исповедник, прп.»: «исповедник» and «прп.» are rank words and are stripped and both epithets kept. The bare «Феодор» was out of the question — it folds onto eight corpus folders — and the day line itself gives only «Феодора Начертанного, исп». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Прп. Феодора Начертанного, исп (ок. 840).»",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry and the same menologion day, 27 December, as the folder’s Romanian, Greek and Serbian rows. The line’s «Прп.» is the `venerable` and «исп» the `confessor` the folder’s `types` already carry; «Начертанного», the Branded, is the epithet the folder’s Serbian form «Теодор Начертани» already holds. NO `dates` WERE WRITTEN: the line’s «ок. 840» is about 840 and the folder already carries its own reading. The reading life3186 was NOT OPENED. ONE HYMN TAKEN, and IT IS A COMMON AND IS FLAGGED AS ONE: the day page prints it as «Тропарь преподобнаго Феодора», with no epithet, and its text is the troparion of a venerable teacher — «Православия наставниче, благочестия учителю и чистоты» — which the books also sing to other Theodores. It names no saint but Theodore, so by BRIEF.md §4’s test it is this day’s venerable Theodore’s service and not another man’s proper; the folder’s two existing hymns are one Greek and one Romanian and neither was touched."
     },
     {
       "church": "romanian",
@@ -115,6 +130,22 @@
       },
       "english": {
         "text": "Marked with divine brandings, you were offered as a living gift to the Giver of life, God-bearing Theodore; for adorned with the gifts of the ascetic life, you shone out in the contests of confession. Venerable father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ вселенныя светильниче,/ монашествующих богодохновенное удобрение,/ Феодоре премудре,/ ученьми твоими вся просветил еси, цевнице духовная,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Тропарь преподобнаго Феодора», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O teacher of Orthodoxy, instructor in piety and purity, lamp of the whole world, God-inspired adornment of monastics, most wise Theodore: by thy teachings thou hast enlightened all, O spiritual harp; entreat Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }

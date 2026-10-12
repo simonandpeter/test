@@ -1,0 +1,64 @@
+{
+  "slug": "theophila-of-nicomedia",
+  "display_name": "Theophila of Nicomedia",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Феофила Никомидийская",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Феофила Никомидийская, мц.»: «мц.» is a rank word and is stripped. The day line itself gives «мцц. ... Феофилы», a genitive under a shared rank. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "attested",
+      "note": "The day line closes «(302)» for the whole company. Life 3189 places it under Maximian, «император Максимиан (284 - 305)», and gives no year of its own."
+    }
+  },
+  "related": [
+    "twenty-thousand-martyrs-of-nicomedia",
+    "domna-of-nicomedia",
+    "agatha-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Мучеников 20000 , в Никомидии в церкви сожженных, и прочих, тамо же вне церкви пострадавших: Гликерия пресвитера, Зинона , Феофила диакона, Дорофея , Мардония , Мигдония диакона, Индиса , Горгония , Петра , Евфимия , мцц. Агафии , Домны , Феофилы и иных (302).»",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, the thirteenth name on it. THE LINE ENUMERATES THIRTEEN NAMES beside the twenty thousand and «и иных»: Гликерия, Зинона, Феофила, Дорофея, Мардония, Мигдония, Индиса, Горгония, Петра, Евфимия, Агафии, Домны, Феофилы. This draft holds TWO of them as arrivals, one — Glycerius — as an upgrade with the collective, and TEN AS WITHHELD: `zeno-of-nicomedia`, `theophilus-the-deacon-of-nicomedia`, `dorotheus-of-nicomedia`, `mardonius-of-nicomedia`, `migdonius-of-nicomedia`, `indes-of-nicomedia`, `gorgonius-of-nicomedia`, `peter-of-nicomedia`, `euthymius-of-nicomedia` and `domna-of-nicomedia` each already carry a VENERATED russian row on 3 сентября ст. ст., and a second Russian day is a reading for the report and never a draft (BRIEF-RUSSIAN §4). The reading life3189 WAS OPENED. The line calls her «мцц.», a martyr, and the name page «мц.», the same; `virgin` is written because the reading is explicit that she kept her virginity — «святая Феофила помощью Ангела Господня и там сохранила девство» — and for no other reason. NO `office` WAS STORED. `fk.mjs` on the stored form returns NONE, and the corpus holds twenty-nine `theophilus-*` folders and no Theophila of any day. The day page prints two hymns, a troparion and a kontakion of the martyrs, and both are the company’s own; nothing stands under this name alone."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 10 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 10 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

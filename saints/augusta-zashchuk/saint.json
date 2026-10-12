@@ -1,0 +1,61 @@
+{
+  "slug": "augusta-zashchuk",
+  "display_name": "Augusta (Zashchuk)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monastic"
+  ],
+  "office": "Schemanun",
+  "names": [
+    {
+      "form": "Августа (Защук)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Августа (Защук), схимонахиня, прмц.»; the grade and the rank are stripped and the surname kept, the day line itself giving only the forename. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Сщмч. Григория пресвитера, прмцц. Августы и Марии , мц. Агриппины (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s tenth entry. THE LINE AND THE NAME PAGE ARE ALL THERE IS, no life page standing behind any of this company. The line names four people and all four are in this draft. The name page’s grade for this person is «схимонахиня». A Cyrillic grep for «Защук» over every `saint.json` in the corpus returns nothing, `ls -d saints/augus*` nothing of this man, and `fk.mjs` on the stored form returns NONE. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 8 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 8 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

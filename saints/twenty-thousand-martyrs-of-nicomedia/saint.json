@@ -11,6 +11,11 @@
       "form": "Δισμύριοι",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Άγιοι Δισμύριοι (20.000) μάρτυρες που κάηκαν στη Νικομήδεια». The page's name for the company is the one word Δισμύριοι, the twice-ten-thousand, and the rest of its line is a gloss on it; the rank word Άγιοι is left off."
+    },
+    {
+      "form": "Мученики 20000, в Никомидии в церкви сожженные",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Мученики 20000, в Никомидии в церкви сожженные» and carries no rank word to strip. `fk.mjs` on the stored string returns NONE; the folder had no Cyrillic form."
     }
   ],
   "sex": "unknown",
@@ -27,13 +32,25 @@
     "mardonius-of-nicomedia",
     "migdonius-of-nicomedia",
     "peter-of-nicomedia",
-    "zeno-of-nicomedia"
+    "zeno-of-nicomedia",
+    "agatha-of-nicomedia",
+    "theophila-of-nicomedia"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Мучеников 20000 , в Никомидии в церкви сожженных, и прочих, тамо же вне церкви пострадавших: Гликерия пресвитера, Зинона , Феофила диакона, Дорофея , Мардония , Мигдония диакона, Индиса , Горгония , Петра , Евфимия , мцц. Агафии , Домны , Феофилы и иных (302).»",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry and the same menologion day, 28 December, as the folder’s Romanian, Greek and Serbian rows. THE LINE ENUMERATES THIRTEEN NAMES beside the twenty thousand and «и иных»: Гликерия, Зинона, Феофила, Дорофея, Мардония, Мигдония, Индиса, Горгония, Петра, Евфимия, Агафии, Домны, Феофилы. This draft holds TWO of them as arrivals, one — Glycerius — as an upgrade with the collective, and TEN AS WITHHELD: `zeno-of-nicomedia`, `theophilus-the-deacon-of-nicomedia`, `dorotheus-of-nicomedia`, `mardonius-of-nicomedia`, `migdonius-of-nicomedia`, `indes-of-nicomedia`, `gorgonius-of-nicomedia`, `peter-of-nicomedia`, `euthymius-of-nicomedia` and `domna-of-nicomedia` each already carry a VENERATED russian row on 3 сентября ст. ст., and a second Russian day is a reading for the report and never a draft (BRIEF-RUSSIAN §4). The reading life3189 WAS OPENED: about twenty thousand Christians were gathered in the church of Nicomedia, refused the herald’s order to sacrifice, and were burnt in it with the bishop celebrating. NO `dates` WERE WRITTEN: the line’s «(302)» is a single year and the folder already carries its own reading. TWO HYMNS TAKEN, the day’s whole set, where the folder had none of this calendar’s; its one existing hymn is Greek and was not touched. The kontakion names the company in so many words — «две тьме страдалец», twice ten thousand sufferers — so it is the company’s proper and not a common."
     },
     {
       "church": "romanian",
@@ -98,6 +115,38 @@
       },
       "english": {
         "text": "A divine army, a holy city, a people the Lord has made his own — so you were shown to be, twenty thousand martyrs; for bedewed with his love you finished your contest through fire. Ask, then, wise ones, of the Lord of mercy, that he grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Страстотерпцы Господни,/ блаженна земля, напившаяся кровьми вашими,/ и свята селения, приимшая телеса ваша:/ в подвизе бо врага победисте/ и Христа со дерзновением проповедасте./ Того, яко Блага, молите,// спастися, молимся, душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Тропарь мучеников», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O passion-bearers of the Lord, blessed is the earth that drank your blood, and holy the dwellings that received your bodies: for in the contest you overcame the enemy and preached Christ with boldness. Entreat Him, as He is good, that our souls be saved, we pray.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Тверди душею по вере, святии,/ огнем страдание приемше, две тьме страдалец,/ вопиюще Рождшемуся от Девы:/ приими всесожжения наша за Тя,/ якоже дары персских царей, злато, и смирну, и ливан,// Превечный Боже.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Кондак мучеников», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Firm of soul in the faith, O holy ones, you received your suffering by fire, twice ten thousand sufferers, crying to Him who was born of the Virgin: receive our whole burnt offerings for Thy sake, as Thou didst the gifts of the Persian kings, the gold and the myrrh and the frankincense, O pre-eternal God.",
         "rendered": "site"
       }
     }

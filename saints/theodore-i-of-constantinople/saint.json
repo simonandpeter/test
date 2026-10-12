@@ -6,6 +6,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Δεκεμβρίου, «Άγιος Θεόδωρος ο Α' Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank, the ordinal and the see left off."
+    },
+    {
+      "form": "Феодор I Константинопольский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Святитель Феодор I Константинопольский, патриарх»: «Святитель» and «патриарх» are rank words and are stripped, and the numeral is kept because the calendar prints it and it is what tells him from the day’s other Theodore. `fk.mjs` on the stored string returns NONE; the folder had no Cyrillic form of any kind."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Свт. Феодора , архиеп. Константинопольского (ок. 686).»",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry and the same menologion day, 27 December, as the folder’s Greek row, which is its only other venerated row. The line says «архиеп.», archbishop, and the name page «патриарх», patriarch; both are what the folder’s `types` and its `office` «Archbishop and Patriarch of Constantinople» already hold, so neither was changed. The numeral on the name page, «Феодор I», is what separates him from the other Theodore on this same day, the Branded. NO `dates` WERE WRITTEN: the line’s «ок. 686» is about 686 and the folder already carries its own reading. The reading life3187 was NOT OPENED. The day page prints four hymns, three for the protomartyr Stephen and one for the venerable Theodore, and none for this hierarch."
     },
     {
       "church": "romanian",

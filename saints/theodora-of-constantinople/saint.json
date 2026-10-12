@@ -10,6 +10,11 @@
       "form": "Теодора Цариградска",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's second heading for 30. децембар ст. ст., „Преподобна Теодора Цариградска.“ — «Преподобна» is the rank `venerable`, which §6 keeps out of a stored form, and «Цариградска», of Constantinople, is the by-name the heading gives her and is kept. Measured before it was written: the bare «Теодора» lands on five folders — `theodora-12-january`, `theodora-companion-of-didymus`, `theodora-companion-of-leonides`, `theodora-of-alexandria` and `theodora-the-empress` — and the full string has no other holder at all."
+    },
+    {
+      "form": "Феодора Константинопольская",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Феодора Константинопольская, прп.»: «прп.» is a rank word and is stripped and the epithet kept. `fk.mjs` on the stored string returns NONE; the folder’s Serbian «Теодора Цариградска» folds elsewhere."
     }
   ],
   "dates": {
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Прп. Феодоры Константинопольской (X).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry and the same menologion day, 30 December, as the folder’s Serbian row, which is its only other venerated row. The line’s «Прп.» is the `venerable` the folder’s `types` already carry beside `monastic`. SHE IS NOT THE DAY’S OTHER THEODORA: the entry before hers is «Прп. Феодоры Кесарийской (VIII)», a different folder and four centuries earlier. NO `dates` WERE WRITTEN: the line’s «(X)» is a bare Roman numeral. The reading life3203 was NOT OPENED. The day page prints four hymns — two for the hierarch Macarius, one for the hieromartyr Zoticus and one for the martyr Anysia — and none under this name."
     },
     {
       "church": "romanian",

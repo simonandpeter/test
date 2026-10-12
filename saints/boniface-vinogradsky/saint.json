@@ -1,0 +1,60 @@
+{
+  "slug": "boniface-vinogradsky",
+  "display_name": "Boniface (Vinogradsky)",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Вонифатий (Виноградский) Феофановский, Киевский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Вонифатий (Виноградский) Феофановский, Киевский, игумен, прп.»: «игумен» and «прп.» are rank words and are stripped, the surname and both epithets kept. The day line itself declines to «Вонифатия Феофановского, Киевского» and gives no surname at all. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "The day line closes «(1871)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Прп. Вонифатия Феофановского, Киевского (1871).»",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. «Прп.» is the `venerable` and «игумен» the `abbot` and the office `Abbot`; «Феофановского» is the Theophania hermitage at Kyiv and «Киевского» the city, and both are kept inside the stored name form rather than turned into an `office` the locale packs do not carry. A Cyrillic grep for «Виноградский» over every `saint.json` returns `nicholas-vinogradsky` alone — another forename and another day — and `fk.mjs` on the stored form returns NONE. The day page carries four hymns — three for the protomartyr Stephen and one for the venerable Theodore — and none under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 9 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 9 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -16,6 +16,11 @@
       "form": "Јевтимије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s fourth heading for 26. децембар ст. ст., „Свети Јевтимије Исповедник, епископ сардијски.“ — «Свети» is “saint” and not a rank, «Исповедник» is the rank `confessor` and «епископ» the rank `bishop`, both of which the folder already carries, and «сардијски» is the see, which §6 keeps out of a stored form and which the folder carries in its `office` and its display name. So the bare forename is what is left, and that is a reading rather than a regex: the see is the one thing here that would have told him apart. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON ANOTHER FOLDER: `euthymius-of-dimitsana` already holds the identical Serbian string, so the two-member fold key «јевтимије» is declared in the same commit with both holders read. The corpus’s four other Euthymii carry two-word Serbian forms — «Јевтимије Велики», «Јевтимије Иверски», «Јевтимије Нови», «Јевтимије Дохијарски» — which the fold key sorts as two words and which therefore reach neither this string nor each other."
+    },
+    {
+      "form": "Евфимий Сардийский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Святитель Евфимий Сардийский, епископ, сщмч.»: «Святитель», «епископ» and «сщмч.» are rank words and are stripped. The day line itself declines to «Евфимия , еп. Сардийского». `fk.mjs` on the stored string returns NONE; the folder had no `ru` form."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Сщмч. Евфимия , еп. Сардийского (ок. 840).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry and the same menologion day, 26 December, as the folder’s Romanian, Greek and Serbian rows, which is the day and the person agreeing. The line’s «Сщмч.» is the `hieromartyr` the folder’s `types` already carry and «еп. Сардийского» the see its `office` already names. NO `dates` WERE WRITTEN: the line’s «ок. 840» is about 840 and the folder already carries its own reading. The reading life3181 was NOT OPENED, the folder’s life being already written. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
     },
     {
       "church": "romanian",

@@ -33,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Ап. первомч. и архидиакона Стефана (ок. 34).»",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry and the same menologion day, 27 December, as the folder’s Romanian and Greek rows; its Serbian row keeps him on 2 August, for the translation of his relics, and was not touched. `day-candidates.mjs` splits this line in two at the linked «Стефана»; the page’s own line, read out of the cached HTML, is the one quoted here. The line’s «Ап.» and «архидиакона» are the `apostle` and `deacon` the folder’s `types` already carry and «первомч.» its `martyr`. NO `dates` WERE WRITTEN: the line’s «ок. 34» is about the year 34 and the folder already carries its own reading. The reading id2051 was NOT OPENED, the folder’s life being already written. NO `ru` NAME FORM WAS STORED, and this is a deliberate refusal: the calendar’s name page for him is «Первомученик и архидиакон Стефан», which is rank words and a bare forename, and the bare «Стефан» already folds onto thirteen corpus folders under a key the gate has read — storing it would widen that fold to fourteen and add nothing the folder does not hold. THREE HYMNS TAKEN, the day’s whole set for him, where the folder had none of this calendar’s; its three existing hymns are two Greek and one Romanian and none was touched."
     },
     {
       "church": "romanian",
@@ -129,6 +139,54 @@
       },
       "english": {
         "text": "Yesterday the Master came to us in the flesh; today the servant departs out of the flesh. Yesterday he who reigns was born in the flesh; today the household servant is stoned. For his sake he is made perfect — the first martyr, the divine Stephen.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Подвигом добрым подвизался еси,/ первомучениче Христов, и апостоле, и архидиаконе Стефане,/ и мучителей обличил еси нечестие,/ камением бо побиен от рук беззаконных,/ венец от яже свыше десницы приял еси/ и к Богу взывал еси, вопия:// Господи, не постави им греха сего.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Тропарь первомученика и архидиакона Стефана», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst contend in the good contest, O protomartyr of Christ, apostle and archdeacon Stephen, and didst convict the ungodliness of thy tormentors; for, stoned by lawless hands, thou didst receive the crown from the right hand on high, and didst cry out to God: Lord, lay not this sin to their charge.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Апостолом совсельник/ и страстотерпцем первострадалец,/ Христов служитель, прехвальне Стефане,/ первее бо совершив мучения течение,/ безчисленныя роды человек равно Подвигоположнику Христу приведе./ Темже яко апостола и страдальца верховнаго/ чтуще тя, молим:/ моли Христа Бога/ даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Ин тропарь апостола, первомученика и архидиакона Стефана», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fellow-dweller with the apostles and first to suffer among the passion-bearers, servant of Christ, all-praised Stephen: having first run the course of martyrdom, thou didst bring countless generations of men to Christ, the Author of the contest. Therefore, honouring thee as an apostle and the foremost of sufferers, we pray: entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Владыка вчера нам плотию прихождаше,/ и раб днесь от плоти исхождаше,/ вчера Царствуяй плотию родися,/ днесь раб камением побивается,/ того ради и скончавается,// первомученик и Божественный Стефан.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Кондак первомученика и архидиакона Стефана», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Yesterday the Master came to us in the flesh, and today the servant goes out of the flesh; yesterday He who reigns was born in the flesh, today the servant is stoned, and for His sake he dies — the protomartyr and divine Stephen.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,61 @@
+{
+  "slug": "theodosius-belenky",
+  "display_name": "Theodosius (Belenky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Феодосий (Беленький)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Феодосий (Беленький), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only the forename. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 декабря ст. ст. — «Сщмч. Феодосия пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261229.html",
+        "year": 2026
+      },
+      "note": "THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind this entry. The line names one man and he is in this draft. A Cyrillic grep for «Беленький» over every `saint.json` returns nothing. The day page prints seven hymns — two for Mark the Gravedigger, two for the venerable Marcellus and three for the fourteen thousand infants — and none under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

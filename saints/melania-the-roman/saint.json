@@ -16,6 +16,11 @@
       "form": "Меланија Римљанка",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's first heading for 31. децембар ст. ст., „Преподобна Меланија Римљанка.“ — «Преподобна» is the rank `venerable`, which §6 keeps out of a stored form, and «Римљанка», the Roman woman, is the by-name the heading gives her and is kept, §6 asking for the fullest form the calendar gives. Measured before it was written: `fk.mjs` returns no holder for the full string and none for the bare «Меланија» either, so no fold is created or widened by it."
+    },
+    {
+      "form": "Мелания Римляныня, Вифлеемская, Палестинская",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Мелания Римляныня, Вифлеемская, Палестинская, прп.»: «прп.» is a rank word and is stripped and all three epithets kept, because the calendar prints all three. The day line itself gives only «Мелании Римляныни». `fk.mjs` on the stored string returns NONE; the folder’s Serbian «Меланија Римљанка» folds elsewhere."
     }
   ],
   "sex": "female",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 декабря ст. ст. — «Прп. Мелании Римляныни (439).»",
+        "url": "https://days.pravoslavie.ru/Days/20261231.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry after the giving-back of the feast, and the same menologion day, 31 December, as the folder’s Romanian, Greek and Serbian rows. The line’s «Прп.» is the `venerable` the folder’s `types` already carry beside `monastic` and `ascetic`. NO `dates` WERE WRITTEN: the line’s «(439)» is a single year and the folder already carries its own reading. The reading life3205 was NOT OPENED, the folder’s life being already written. ONE HYMN TAKEN, the day’s only one and a proper, which names her betrothed and the monasteries she raised; the folder’s two existing hymns were not touched. The day prints no troparion for her."
     },
     {
       "church": "romanian",
@@ -126,6 +141,22 @@
       },
       "english": {
         "text": "Your soul lit up by the beacon-fires of him who shone out for us from the Virgin, you shone in the virtues, all-praised one; for scattering your perishable wealth upon the earth you laid up the wealth of heaven instead, and in the ascetic life you shone brightly. And so, Melania, with longing we…",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Девства чистоты возлюбльши и обручника к благим увещавши,/ премножество богатства расточи/ в пребывание иночествующим, Богоблаженная, и обители воздвиже./ Темже в Небесная обители вселися,/ поминай нас, Желание всечестная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 декабря ст. ст. — «Кондак преподобной Мелании Римляныни», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20261231.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved the purity of virginity and having won thy betrothed over to what is good, thou didst scatter a very great wealth for the dwelling of monastics, O God-blessed one, and didst raise up monasteries. Therefore thou hast taken up thy dwelling in the mansions of heaven: remember us, O all-honoured desire.",
         "rendered": "site"
       }
     }

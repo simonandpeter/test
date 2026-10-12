@@ -6,6 +6,11 @@
       "form": "Petru Movilă",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 decembrie, «Sfântul Ierarh Petru Movilă, Mitropolitul Kievului», with the rank and the see left off."
+    },
+    {
+      "form": "Петр (Могила)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Святитель Петр (Могила), митрополит киевский»: «Святитель», «митрополит» and the see are rank words and are stripped, the surname kept — and the surname is what makes this form storable at all, the bare «Петр» being a fold eleven corpus folders already share. `fk.mjs` on the stored string returns NONE; the folder had no Cyrillic form of any kind."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 декабря ст. ст. — «Свт. Петра Могилы, митрополита Киевского (1646).»",
+        "url": "https://days.pravoslavie.ru/Days/20261231.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. The folder’s only other venerated row is Romanian and keeps him on 22 December in the revised Julian calendar — ANOTHER CHURCH’S DAY, not a second Russian one, and it was not touched; the schema holds one row per church and this calendar’s is 31 December. The line says «митрополита Киевского» and the name page «митрополит киевский», in lower case, which are the `metropolitan` and `hierarch` the folder’s `types` already carry and the see its `office` already names in full. THE LINE CLOSES «(1646)», which is the year the folder already reads for Petru Movilă. NO `dates` WERE WRITTEN. No life page stands behind this entry on this calendar, and the folder’s life is already written. The day page prints one hymn only, a kontakion of the venerable Melania, and nothing under this name."
     },
     {
       "church": "romanian",
