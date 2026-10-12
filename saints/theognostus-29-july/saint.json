@@ -1,0 +1,97 @@
+{
+  "slug": "theognostus-29-july",
+  "display_name": "Theognostus (29 July)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Феогност",
+      "lang": "ru",
+      "note": "Name page 9248 of days.pravoslavie.ru is «Феогност, иеромонах, сщмч.»; the grade and the rank are stripped and NOTHING ELSE IS LEFT — the calendar gives him no surname and no place, where it gives his companion of the same line both a surname and the same rank. `fk.mjs` on «Феогност» returns NONE; the corpus's `theognostus-of-kantara` and `theognostus-of-kyiv` carry epithets and neither folds onto the bare form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "The day line closes «(1921)», one year for both men of the entry; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Прмчч. Серафима и Феогноста (1921).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The second man of the day's tenth entry. THE LINE AND THE NAME PAGE DISAGREE ABOUT THE GRADE, as for his companion: the line heads both «Прмчч.», venerable-martyrs, and name page 9248 grades him «сщмч.», hieromartyr. `venerable-martyr` is written from the line, `hieromonk` from the name page's rank, and `hieromartyr` was NOT written. THE DISPLAY NAME TAKES THE DAY AS ITS DISAMBIGUATOR because the calendar gives him no surname and no epithet whatever, and the corpus already holds two men of the name with epithets of their own; nothing was invented to fill the gap. The reading life4747 stands behind the entry and was NOT opened. TWO HYMNS TAKEN, both joint to the pair, and nothing was taken from them into the life or into a `location`. THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "seraphim-bogoslovsky"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Любве ради Христовы отечество свое оставльше, вся мира сего красная, яко скороисчезающая, презревше, горняго Иерусалима взыскующе, на горах Тянь-Шаня в подвизех благочестия Святую Троицу прославили есте. И венцами добропобеднаго мученичества украсившеся, граду Алма-Ате богодарованнии покровителие явилися есте, преподобномученицы Серафиме и Феогносте, Православия мужественнии исповедницы. Темже и мы, духовная чада ваша, любовию вопием: Слава Давшему вам крепость, Слава Венчавшему вас, Слава Подающему вами милости и исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Тропарь новомучеников и исповедников иеромонахов Серафима и Феогноста, в земле Казахской просиявших», глас 1; a joint hymn, naming both of them",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ you left your own country, and counting all the beauty of this world as a thing that quickly vanishes, you sought the Jerusalem on high and glorified the Holy Trinity by struggles of godliness in the mountains of the Tian Shan. And being adorned with the crowns of a victorious martyrdom, you were shown to be God-given protectors of the city of Alma-Ata, O venerable martyrs Seraphim and Theognostus, manful confessors of Orthodoxy. Therefore we also, your spiritual children, cry out in love: glory to Him who gave you strength, glory to Him who crowned you, glory to Him who through you grants mercies and healings.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Благое иго Христово на себе восприемше и легкое бремя Его любовию облобызавше, житием своим Агнца Божия проповедавше, за истину, радующеся, пострадали есте, и в покой Небесный прешедше, с лики святых Престолу Божию предстоите, преподобномученицы Серафиме и Феогносте, граду Алма-Ате испросите мира и всем чтущым вас велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Кондак новомучеников и исповедников иеромонахов Серафима и Феогноста, в земле Казахской просиявших», глас 2; a joint hymn, naming both of them",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking the good yoke of Christ upon yourselves and embracing His light burden with love, preaching the Lamb of God by your very life, you suffered rejoicing for the truth; and having passed over into the rest of heaven you stand with the choirs of the saints before the throne of God, O venerable martyrs Seraphim and Theognostus: ask peace for the city of Alma-Ata and great mercy for all who honour you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

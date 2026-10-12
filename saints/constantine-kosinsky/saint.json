@@ -1,0 +1,79 @@
+{
+  "slug": "constantine-kosinsky",
+  "display_name": "Constantine Kosinsky",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Константин Косинский, Старорусский",
+      "lang": "ru",
+      "note": "Name page 1275 of days.pravoslavie.ru is «Константин Косинский, Старорусский, прп.»; the grade is stripped and both epithets kept, that being the fullest form the calendar gives, per BRIEF-RUSSIAN §2. The display name transliterates the calendar's own adjective rather than naming a place, nothing read saying what settlement «Косинский» stands for. `fk.mjs` on the stored string returns NONE; the corpus's `john-kosinsky` is a different forename and a surname-bearer."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "The century the day line prints for the pair, «Прпп. Константина и Космы Косинских, Старорусских (XIII).», and the whole of what the source gives. The interval is that century; no year anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Прпп. Константина и Космы Косинских, Старорусских (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The first man of the day's eighth entry, a joint line for two. «Прпп.» is the `venerable` written here and the calendar gives him no other grade and no rank in the church, so NO `office` IS WRITTEN. The reading life4342 stands behind the entry and was NOT opened: this folder is written from the day line, the name page and the day's hymn, and says so. No folder held him: `ls -d saints/*kosin*` returns only `john-kosinsky`. ONE HYMN TAKEN, a troparion joint to the two of them which the day page prints under both their names; it names a Barlaam as his teacher and the Barlaam folders were NOT linked, a hymn not being a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "cosmas-kosinsky"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Яко великаго во отцех Варлаама ученик,/ прехвальне Константине,/ и сам чадо послушания, блаженнаго Косму, возрастил еси,/ темже, преподобнии, вкупе Престолу Владычню ныне предстоящии,/ молитвами вашими в вере Православней нас утвердите,/ в послушании Церкви Святей укрепите/ и вся полезная душам нашим испросите.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Тропарь преподобных Константина и Космы Косинских, Старорусских», глас 3; a joint hymn, naming both of them",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a disciple of Barlaam, who was great among the fathers, O most praised Constantine, thou didst thyself bring up a child of obedience, the blessed Cosmas; and therefore, O venerable ones, standing together now before the Master's throne, by your prayers confirm us in the Orthodox faith, strengthen us in obedience to the holy Church, and ask for all that is profitable for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

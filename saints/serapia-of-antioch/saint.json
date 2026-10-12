@@ -11,6 +11,11 @@
       "form": "Серафима",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 29. јул ст. ст., „Св. муч. Серафима.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder carries, both left off by BRIEF-SERBIAN §6, and the heading gives nothing else at all, so the bare forename is the whole of the form. «of Antioch» in the display name is not stored: the body has «Девојка из Антиохије», a girl FROM Antioch, which is a prepositional phrase and not an adjective, and a form assembled out of a heading and a body is not stored. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Серафима» returns the key «серафима» at one holder, `seraphima-abbess-martyr-1918`, whose own single stored form is the identical string under `lang: ru`. The fold therefore becomes two wide with this form and the key «серафима seraphima-abbess-martyr-1918 serapia-of-antioch» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. No earlier key for this string existed, because one holder is no collision."
+    },
+    {
+      "form": "Серафима Римская",
+      "lang": "ru",
+      "note": "Name page 2666 of days.pravoslavie.ru is «Мученица Серафима Римская»; «Мученица» is a rank word and is stripped, and the epithet is kept. The day line itself gives «Серафимы девы». `fk.mjs` on the stored string returns NONE — the folder's Serbian «Серафима» folds to a narrower key which this form does not reach."
     }
   ],
   "dates": {
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 29 июля ст. ст., which is the page for this menologion number."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Мц. Серафимы девы (117-138).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The day's second entry, and the same menologion day as the folder's Serbian row, the only other it has. THE IDENTIFICATION RESTS ON THE YEARS AS MUCH AS THE DAY: «Мц.» and «девы» are the `martyr` and `virgin` the folder already carries, and the line's «(117-138)» is the reign of Hadrian — character for character the interval the folder already holds off the Ohrid Prologue's «у време цара Адријана (117 – 138)». Same day, same reign, same grade, so NO `dates` WERE CHANGED and nothing was narrowed. THE TWO SOURCES CALL HER DIFFERENT THINGS: this calendar's «Серафима Римская», Seraphima of Rome, against the folder's «Serapia of Antioch» and its Serbian «Серафима»; the folder was NOT renamed and the Roman epithet is recorded here and in the name form's note. The index id2666 was NOT opened, the folder's life being already written. TWO HYMNS TAKEN where the folder had none."
     },
     {
       "church": "romanian",
@@ -59,5 +74,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Невесто Христова возлюбленная, Серафиме,/ наследнице Царствия Небеснаго,/ добре за Господа пострадавшая/ и кровию твоею обагренная/ и, аки царскою багряницею, украшенная,/ поминай нас, совершающих святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Тропарь мученицы Серафимы», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O beloved bride of Christ, Serapia, heiress of the kingdom of heaven, who didst suffer well for the Lord and wast reddened with thine own blood and adorned with it as with a royal purple: remember us who keep thy holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Серафимскою любовию Господа возлюбила еси,/ святая дево Серафиме,/ и всю себе за Господа на мучение предаде,/ дондеже достигла еси Царствия Небеснаго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Кондак мученицы Серафимы», глас 2; the hymn plays on her Russian name, «Серафимскою любовию», a love like a seraph's, which no English rendering can keep",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With a seraph's love thou didst love the Lord, O holy virgin Serapia, and didst give thyself wholly over to torment for the Lord's sake, until thou didst attain the kingdom of heaven.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -1,0 +1,58 @@
+{
+  "slug": "daniel-kushnir",
+  "display_name": "Daniel (Kushnir)",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Даниил (Кушнир) Черкасский",
+      "lang": "ru",
+      "note": "Name page 14954 of days.pravoslavie.ru is «Даниил (Кушнир) Черкасский, мч.»; the grade is stripped and both the surname and the epithet kept, that being the fullest form the calendar gives. The day line itself gives «Даниила Черкасского» without the surname. `fk.mjs` on the stored string returns NONE and a Cyrillic grep for «Кушнир» over every `saint.json` returns nothing."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1766,
+      "latest": 1766,
+      "display": "1766",
+      "basis": "attested",
+      "note": "The day line closes «(1766)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Мч. Даниила Черкасского (1766).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The day's ninth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line and name page 14954 agree on «мч.», martyr, with no rank in the church, so `martyr` is all that is written and NO `office` IS WRITTEN; `new-martyr` was not written either, 1766 being two centuries before anything this corpus calls that. No folder held him: `ls -d saints/*kushnir*` and `*cherkas*` return nothing of this name. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

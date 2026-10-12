@@ -16,6 +16,11 @@
       "form": "Калиник",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 29. јул ст. ст., „Св. муч. Калиник.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder already carries, both left off by BRIEF-SERBIAN §6, and the heading gives nothing else at all, so the bare forename is the whole of the form. «Киликије» stands in the body as «Родом из Киликије», a prepositional phrase, and is not turned into an adjective to make a fuller form. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Калиник» returns the key «калиник» at one holder, `callinicus-of-caesarea`; of the nine Callinicus folders the corpus holds, that one is the only other to carry a Serbian form at all. The fold becomes two wide with this form and the key «калиник callinicus-of-caesarea callinicus-of-cilicia» is declared in the same commit with both holders read. No earlier key for this string existed, because one holder is no collision."
+    },
+    {
+      "form": "Каллиник Киликийский, Гангрский",
+      "lang": "ru",
+      "note": "Name page 1158 of days.pravoslavie.ru is «Каллиник Киликийский, Гангрский, мч.»; the grade is stripped and both epithets kept, that being the fullest form the calendar gives, per BRIEF-RUSSIAN §2. The day line itself gives «Каллиника» bare. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Мч. Каллиника (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the same menologion day as all three of the folder's other venerated rows. «Мч.» is the `martyr` the folder already carries. A DATE DISAGREEMENT RECORDED AND CHANGED NOWHERE: this line gives «(III-IV)», the third to fourth century, where the folder holds «c. 250» off the Ohrid Prologue; the folder's year sits inside the calendar's span, so the two do not contradict each other and NO `dates` WERE CHANGED. Name page 1158 adds «Гангрский», of Gangra, to the Cilicia the folder's display name carries, and the folder was NOT renamed. The reading life4341 was NOT opened, the folder's life being already written. TWO HYMNS TAKEN where the folder had none of this calendar's; the first is the common of one martyr, «Мученик Твой, Господи», printed with his name set into it, and its citation says so."
     },
     {
       "church": "romanian",
@@ -123,6 +138,38 @@
       },
       "english": {
         "text": "The delights above you have now worthily inherited; for being set ablaze with a fierce longing for Christ, Callinicus, you bravely dared the fire for his sake. Standing now before him, do not cease to intercede for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученик Твой, Господи, Каллиник/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Тропарь мученика Каллиника», глас 4; this is «Мученик Твой, Господи», the common of one martyr, printed with his name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Callinicus, O Lord, in his suffering has received an incorruptible crown from Thee, our God; for having Thy strength, he cast down the tormentors and shattered also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Горняя красная достойно ныне наследовал еси,/ Христовою бо зело любовию разжегся,/ на огнь, Каллиниче, тем мужественно дерзнул еси,/ Емуже и ныне предстоя,// не престай моля о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Кондак мученика Каллиника», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast now worthily inherited the beauty of the heights, for being set greatly aflame with the love of Christ thou didst therefore dare the fire manfully, O Callinicus; and standing now before Him, do not cease to pray for us all.",
         "rendered": "site"
       }
     }

@@ -11,6 +11,11 @@
       "form": "Јевстатије Мцхетски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 29. јул ст. ст., „Св. муч. Јевстатије Мцхетски.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder already carries, both left off by BRIEF-SERBIAN §6; «Мцхетски» is an adjective in the heading itself and not a phrase read out of the body, so it stays and the form is the fullest the calendar gives. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Јевстатије Мцхетски» returns the key «мцхетски јевстатије» with NO holders, so this form widens no fold. The bare «Јевстатије» is a declared key at two holders and was deliberately not written here: the heading does not print it bare."
+    },
+    {
+      "form": "Евстафий Мцхетский, Тифлисский",
+      "lang": "ru",
+      "note": "Name page 711 of days.pravoslavie.ru is «Евстафий Мцхетский, Тифлисский, мч.»; the grade is stripped and both epithets kept, that being the fullest form the calendar gives. `fk.mjs` on the stored string returns NONE; the folder previously held a Romanian and a Serbian form and no Russian one."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Мч. Евстафия Мцхетского (589) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, and the same menologion day as both of the folder's other venerated rows. The line names Mtskheta itself, so the identification needs nothing beyond it; «(Груз.)», Georgian, is the calendar's own mark for a saint of that church. «Мч.» is the `martyr` the folder already carries, and the line's «(589)» agrees exactly with the death year the folder holds off the Ohrid Prologue, so NO `dates` WERE CHANGED. Name page 711 adds «Тифлисский», of Tiflis, which is where the Prologue says he was beheaded, and the folder was NOT renamed. The reading life4346 was NOT opened, the folder's life being already written. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
