@@ -10,13 +10,28 @@
       "form": "Ευστάθιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιουλίου, «Άγιος Ευστάθιος που μαρτύρησε στην Άγκυρα», with the rank word and the clause of place left off. The page glosses the name from ευσταθής, the man steady in a decision."
+    },
+    {
+      "form": "Евстафий Анкирский",
+      "lang": "ru",
+      "note": "Name page 707 of days.pravoslavie.ru is «Евстафий Анкирский, мч.»; the grade is stripped and the epithet kept, which is also what the day line itself prints. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Мч. Евстафия Анкирского (ок. 316).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, and the same menologion day as both of the folder's other venerated rows. The line names Ancyra itself, so the identification needs nothing beyond it. «Мч.» is the `martyr` the folder already has. NO `dates` WERE WRITTEN: the line's «(ок. 316)» would be this folder's first date of any kind and was declined, as everywhere in this wave. The reading life4324 was NOT opened, the folder's life being already written. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

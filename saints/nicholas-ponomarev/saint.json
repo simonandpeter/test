@@ -1,0 +1,61 @@
+{
+  "slug": "nicholas-ponomarev",
+  "display_name": "Nicholas (Ponomarev)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "office": "Deacon",
+  "names": [
+    {
+      "form": "Николай (Пономарев)",
+      "lang": "ru",
+      "note": "Name page 13757 of days.pravoslavie.ru is «Николай (Пономарев), диакон, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Николая диакона». `fk.mjs` on the stored string returns NONE; the corpus holds `ardalion-ponomarev` and `stephen-ponomarev`, two other forenames on other days, and no Nicholas of the surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The day line closes «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Сщмч. Николая диакона (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The day's tenth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line says «диакона» and name page 13757 «диакон», which agree, so `deacon` and the office `Deacon` are both the source's own words. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: `ls -d saints/*ponomarev*` returns two other forenames and the Cyrillic grep for «Пономарев» the same two. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 10 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 10 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

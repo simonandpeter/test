@@ -1,0 +1,69 @@
+{
+  "slug": "basil-erekaev",
+  "display_name": "Basil (Erekaev)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Василий (Эрекаев)",
+      "lang": "ru",
+      "note": "Name page 9200 of days.pravoslavie.ru is «Василий (Эрекаев), иеромонах, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Василия». `fk.mjs` on the stored string returns NONE and a Cyrillic grep for «Эрекаев» over every `saint.json` returns nothing — the bare «Василий» was out of the question, three folders carrying it as a display name alone."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)», one year for the whole company of eight; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Прмч. Василия , прмцц. Анастасии и Елены , мчч. Арефы , Иоанна , Иоанна , Иоанна и мц. Мавры (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The first man of the day's eleventh entry, AN ENUMERATED COMPANY OF EIGHT, which BRIEF.md §4 makes eight folders; this draft holds all eight the line prints and no more. THE LINE AND THE NAME PAGE ARE ALL THERE IS for every one of them: no life page stands behind the entry. THE LINE AND HIS NAME PAGE DISAGREE ABOUT THE GRADE — the line heads him «Прмч.», venerable-martyr, and name page 9200 «сщмч.», hieromartyr. `venerable-martyr` is written from the line, `hieromonk` from the name page's rank, which is a fact and not a grade, and `hieromartyr` was NOT written; the disagreement is recorded and resolved nowhere. NO `office` IS WRITTEN — «Hieromonk» is not a string the locale packs were checked for and the rank stands in `types`. THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. The day page prints no hymn under any of the eight names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 10 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 10 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "anastasia-kamaeva",
+    "elena-astashikina",
+    "arethas-eremkin",
+    "john-lomakin",
+    "john-milyoshkin",
+    "john-selmanov",
+    "maura-moiseeva"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
