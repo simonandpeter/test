@@ -1,0 +1,68 @@
+{
+  "slug": "peter-zinoviev",
+  "display_name": "Peter (Zinoviev)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Зиновьев)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Петр (Зиновьев), иерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only, which eleven folders already share and which is therefore not what is stored. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1894,
+      "latest": 1894,
+      "display": "1894",
+      "basis": "attested",
+      "note": "The reading at `/Life/life4885.htm`: «родился 20 июня 1894 года в селе Березники Воскресенского уезда Саратовской губернии в семье священника Константина Зиновьева»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)» and the reading gives the day: «Священник Петр Зиновьев был расстрелян через десять дней после ареста — 29 декабря 1937 года.» That civil date is the Julian 16 декабря of this memory."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Сщмч. Петра пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      },
+      "note": "The day’s eighth and last entry, on a line of his own, read at `/Life/life4885.htm`. He served in the same town of Bezhetsk whose bishop heads the day’s seventh line and was shot on the same day as the seven men of it, and NO `related` ROW IS WRITTEN ON THAT ACCOUNT: the calendar gives him a line to himself, his reading names none of them and theirs name none of him, and a shared town and a shared day are not a relation. No folder held him: `fk.mjs` on «Петр (Зиновьев)» returns NONE, and a Cyrillic grep for «Зиновьев» over every `saint.json` returns one folder, of another forename. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

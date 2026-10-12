@@ -1,0 +1,92 @@
+{
+  "slug": "sophia-of-suzdal",
+  "display_name": "Sophia of Suzdal",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "София Суздальская",
+      "lang": "ru",
+      "note": "The calendar’s own name page for her, which day-candidates.mjs prints as `name: София Суздальская, прп.`; the grade is stripped and the epithet kept, the day line itself declining the same two. Her name in the world, Соломония, is in the reading and not in the stored form, the calendar’s own line giving the name in religion. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1542,
+      "latest": 1542,
+      "display": "1542",
+      "basis": "attested",
+      "note": "The day line closes «(1542)» and the reading says it in as many words: «Преподобная София преставилась к Богу в 1542 году.» No year of birth is given; the reading dates her marriage to 1505 and her forced tonsure to 25 ноября 1525 and nothing is reckoned from either."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Прп. Софии Суздальской (1542).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, read at `/Life/life3133.htm`. No folder held her: `fk.mjs` on «София Суздальская» returns NONE, ten `sophia-*` folders standing beside her, and a Cyrillic grep for «Суздальская» returns only `euphrosyne-of-suzdal`, another woman of the same city. HER «ДНИ ПАМЯТИ» LINE PRINTS TWO DAYS — «1 августа (обретение мощей), 16 декабря» — and the first is a finding of relics, which `BRIEF-RUSSIAN` §6 says is a feast and not this folder’s business; only the day page that listed her is this row. She is the only memory of the day with hymns: the day page’s two blocks are both under her name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 December 2026 (13 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Вышняго красотою явственно украшался,/ постническими бо труды подвизася преподобная София,/ и бысть наследница Небесному Царствию,/ и вниде в Небесный Чертог насладитися Христовы красоты,/ Его же моли спастися граду Суждалю/ от поганых нахождений и междоусобныя брани/ и подаждь душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Тропарь преподобной Софии Суздальской», глас 4. Her own proper: it names her and prays for the city she was shut up in.",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned manifestly with the beauty of the Most High, the venerable Sophia strove in the labours of fasting, and became an heir of the heavenly kingdom, and entered the heavenly bridal chamber to delight in the beauty of Christ. Pray to Him that the city of Suzdal be saved from the inroads of the heathen and from civil war, and grant great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Нощи страстный избегши, Богомудрая Софие преподобная,/ к Незаходимому же Солнцу, Христу, пришедши,/ умертвила еси плотское мудрование постом же, воздержанием и молитвами,/ показася равна Ангелом,/ на земли бо поживе и духи нечистыя от человек отгнала еси,/ и различная исцеления подававши, от многих бед и зол избавлявши,/ Софие преподобная,/ моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Кондак преподобной Софии Суздальской», глас 1. Her own proper, naming her twice.",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having fled the night of the passions, O venerable Sophia wise in God, and having come to the Sun that never sets, to Christ, thou didst put to death the mind of the flesh by fasting and abstinence and prayers, and wast shown to be the equal of the angels; for living upon earth thou didst drive unclean spirits out of men, and bestowing healings of many kinds thou didst deliver from many troubles and evils. O venerable Sophia, pray that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

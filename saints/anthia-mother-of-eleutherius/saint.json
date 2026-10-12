@@ -11,6 +11,11 @@
       "form": "Ανθία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Αγία Ανθία», with the rank word left off. The page glosses the name itself, «(από την λέξη άνθος) = η ωραία όπως το λουλούδι, η λουλουδένια», and gives «Ανθή» as an alternative, which is recorded in the attestation and not stored as a second form."
+    },
+    {
+      "form": "Анфия Римская",
+      "lang": "ru",
+      "note": "The calendar’s own name page for her is «Анфия Римская, мц.»; the grade is stripped and the epithet kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "female",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. NO `dates` ARE WRITTEN FROM THIS LINE: it closes «(ок. 117-138)», which is a reign and approximate at that, and this folder has no date from any source, so nothing is minted from an emperor’s years. The reading this calendar links, `/Life/life3121.htm`, was NOT opened; it stands behind her son and the eparch alike and this folder’s life is already written out of its other sources. The day page’s two Eleutherius hymn blocks are titled «священномученика», her son the hieromartyr bishop, and NOTHING on the day page is under her name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Сщмч. Елевферия, матери его мц. Анфии и мч. Корива епарха (ок. 117-138).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Илија Муромец",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s fourth heading for 19. децембар ст. ст., „Преподобни Илија Муромец.“ — «Преподобни» is the rank `venerable` the folder already carries and comes off the form, and what is left is the forename with the by-name that distinguishes him. Measured before it was written: no other folder holds this key. The bare «Илија» alone was NOT written: four folders already hold it — elias-martyr-with-patermuthius, elias-of-jerusalem, elias-the-egyptian and elijah-the-tishbite — and «Муромец» is what tells this man from them."
+    },
+    {
+      "form": "Илия Муромец, Печерский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Преподобный Илия Муромец, Печерский»; the rank is stripped and both epithets kept, the day line declining the same two. The second, of the Kyiv Caves, is new to this folder. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(1188)», which is the year this folder’s `death` already holds from the Ohrid Prologue, so it confirms it and replaces nothing. THE CALENDAR ADDS «Печерского» TO HIS NAME, of the Kyiv Caves, where the Serbian and Greek sources have only Murom; the epithet is kept in the stored form and nothing is inferred beyond it. The reading this calendar links, `/Life/id942.htm`, is an INDEX and was NOT opened; this folder’s life is already written out of its other sources. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Прп. Илии Муромца, Печерского (1188).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

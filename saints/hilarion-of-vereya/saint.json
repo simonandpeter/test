@@ -1,0 +1,68 @@
+{
+  "slug": "hilarion-of-vereya",
+  "display_name": "Hilarion of Vereya",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "archbishop"
+  ],
+  "office": "Archbishop",
+  "names": [
+    {
+      "form": "Иларион (Троицкий)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Иларион (Троицкий), архиепископ Верейский`; the rank is stripped and the surname kept, the day line itself declining the forename and the see only. `fk.mjs` on the stored string returns NONE, against twenty-five Hilarion folders and twelve folders whose name carries «Троицкий»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "Both readings the calendar links give the day as well as the year: «родился 13 сентября 1886 года в семье священника с. Липицы Каширского уезда». They disagree on the province — the first says Тульской, the second Московской — and the disagreement is recorded in the life rather than resolved."
+    },
+    "death": {
+      "earliest": 1929,
+      "latest": 1929,
+      "display": "1929",
+      "basis": "attested",
+      "note": "The day line closes «(1929)» and both readings date the death «15/28 декабря 1929 года», the Julian day of this memory with its civil equivalent beside it. The second reading adds the cause, typhus caught on the transport, and the place, a prison hospital in Leningrad."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Сщмч. Илариона, архиеп. Верейского (1929).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. Two readings stand behind it at `/Life/id9113.htm`, an index, and both were opened: `/Life/life6602.htm` and `/Life/life4812.htm`. No folder held him — `fk.mjs` on «Иларион (Троицкий)» returns NONE, and a Cyrillic grep for «Троицкий» over every `saint.json` returns twelve folders, none of them this man. The office is `Archbishop`, the word both readings and the name page use; the see is in the display name and in the life, because `Archbishop of Vereya` is not a string the four locale packs read. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. HIS «ДНИ ПАМЯТИ» LINE PRINTS SIX DAYS — «26 января (Новомуч.), 27 апреля (прославление), 8 июня (Петерб.), 11 июля (обретение мощей), 24 августа (Моск.), 15 декабря» — and only the last of them is the day page that listed him, so only the last is this row; the others are a glorification, a finding of relics and two diocesan synaxes, and none of them is recorded as a feast. The day page carries eight hymn blocks and not one of them is under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 28 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 28 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

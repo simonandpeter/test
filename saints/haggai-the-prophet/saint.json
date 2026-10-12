@@ -16,6 +16,11 @@
       "form": "Агеј",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 16. децембар ст. ст., „Свети пророк Агеј.“ — with «Свети» left off, which §5 says is not a rank, and «пророк» left off, that being the `prophet` grade §5 maps and `types` keeps. The bare forename is the whole of what the heading gives. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `агеј` at NO other holder, so no READ_FOLDS key is written. THE NAMESWEEP MISSED THIS FOLDER, and the miss is BRIEF-SERBIAN §7’s own false negative: «Агеј» romanises to a skeleton that is not Haggai’s, and the sweep answered «nothing but rank words in this line». The folder was found from the candidate file’s menologion list, not from the sweep."
+    },
+    {
+      "form": "Аггей",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Аггей, пророк, из 12 малых пророков»; the rank and the description of his place among the minor prophets are stripped, and the bare name is all the calendar gives — it prints no epithet for him in any form. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE LINE’S YEAR DISAGREES WITH THE FOLDER’S INTERVAL AND REPLACES NOTHING: days.pravoslavie.ru closes the line «(500 до Р.Х.)», five hundred years before Christ, where the folder’s `floruit` is doxologia.ro’s four hundred and seventy before the Incarnation and the thirty-six years of prophesying it counts back from. Thirty years divide the two and neither book cites a document, so the Russian figure is recorded in the life and the bounds are left as they were. The reading this calendar links, `/Life/life3130.htm`, was NOT opened; this folder’s life is already written out of its other sources. The day page carries two hymns and both are under another saint’s name, so nothing is added to the three this folder already holds."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Прор. Аггея (500 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

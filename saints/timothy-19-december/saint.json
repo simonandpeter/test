@@ -6,18 +6,34 @@
       "form": "Τιμόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Τιμόθεος και Πολύευκτος», with the rank word left off. The page glosses the name itself, «(τιμώ + Θεός) = αυτός που τιμά τον Θεό, ο ευσεβής», and adds notes about an Athenian general, a sculptor and a poet, which are not about this saint."
+    },
+    {
+      "form": "Тимофей Мавританский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Тимофей Мавританский, диакон, сщмч.»; the grade and the rank are stripped and the epithet kept, the day line itself declining the forename and the grade. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
   "types": [
     "martyr",
-    "preacher"
+    "preacher",
+    "deacon"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. NO `dates` ARE WRITTEN FROM THIS LINE, for the reason given on his companion’s row: «(IV)» is a bare century after two names, and the century is recorded in the life. THE GRADE IS NEW AND IS THE CALENDAR’S OWN: the line calls him «Тимофея диакона» and the name page «Тимофей Мавританский, диакон, сщмч.», so `deacon` is added to `types`, which is where this corpus keeps a deacon’s grade — `abibus-the-deacon-of-edessa` carries it the same way and no `office` with it. THE NAME PAGE ALSO CALLS HIM «Мавританский», of Mauretania, and «сщмч.», a hieromartyr, where the line calls both men simply martyrs; the epithet is kept in the name form and the grade is not written into `types`, a hieromartyr being a rank for an ordained man that the line itself does not give him. No reading is linked behind this entry at all. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Мчч. Полиевкта и Тимофея диакона (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

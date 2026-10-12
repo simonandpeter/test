@@ -1,0 +1,67 @@
+{
+  "slug": "macarius-smirnov",
+  "display_name": "Macarius (Smirnov)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Макарий (Смирнов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Макарий (Смирнов), иеромонах, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. His name in the world, Михаил, is in the reading and not in the stored form. `fk.mjs` on the stored string returns NONE, twenty-two Smirnov folders standing beside him and none of them a Macarius."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "The reading at `/Life/life4847.htm`: «в миру Михаил Ефимьевич Смирнов, родился 1 апреля 1877 года в селе Мелехово Санкт-Петербургской губернии в семье крестьян Евфимия и Анны»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)» and the reading gives the day: «Иеромонах Макарий был расстрелян через день, 29 декабря 1937 года.» That civil date is the Julian 16 декабря of this memory."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Сщмчч. Аркадия, еп. Бежецкого, Илии, Павла, Феодосия, Владимира, Александра пресвитеров, прмч. Макария (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      },
+      "note": "The seventh and last of the men of the day’s seventh line, and the only one of them the line calls «прмч.», a venerable-martyr, which is why his `types` differ from the other six; the reading’s own title says the same, «Преподобномученик Макарий (Смирнов)», while the calendar’s name page says «иеромонах, сщмч.». He takes no `office`, this corpus writing a hieromonk’s rank into `types` and leaving `office` empty, as `hilarion-gromov` does. Read at `/Life/life4847.htm`, which is his alone and names none of the others; no `related` rows join the seven, for the reason given on the bishop’s row. No folder held him. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

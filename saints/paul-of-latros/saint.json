@@ -16,6 +16,11 @@
       "form": "Павле у Латри",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s third heading for 15. децембар ст. ст., „Преподобни Павле у Латри.“ — with «Преподобни» left off, that being the `venerable` grade §5 maps and `types` keeps. What is left is «Павле у Латри», Paul in Latra, and it is kept WHOLE, with the preposition, because it is what the calendar prints and because the alternative is fatal: `fk.mjs` measures the bare «Павле» at EIGHT other holders — `paul-28-june`, `paul-companion-of-andrew`, `paul-companion-of-lucillian`, `paul-companion-of-quadratus`, `paul-of-jamnia`, `paul-of-ptolemais`, `paul-the-apostle`, `paul-the-confessor` — and this folder would be the ninth. A prepositional phrase inside a stored form has precedent in this corpus’s own Serbian forms, «6000 мученика у Грузији» and «Непозната девојка из богате куће у Александрији». NOTHING IS DECLINED OR NORMALISED: «Латри» is the locative the book itself prints, and the mountain’s nominative «Латра» appears in the body. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `латри павле у` at NO other holder."
+    },
+    {
+      "form": "Павел Латрийский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Павел Латрийский, прп.»; the grade is stripped and the epithet kept, the day line itself declining the same two words. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE LINE’S YEAR FALLS INSIDE THE FOLDER’S INTERVAL AND REPLACES NOTHING: days.pravoslavie.ru closes the line «(955)», where the folder’s `death` is 896 to 950, widened to hold saint.gr’s 896 and the Ohrid Prologue’s 950 without choosing. 955 is a third year, five years past the top of that interval, and it is recorded in the life rather than used to move the bounds, because a fourth reading would be a choice between books and not a reading of one. The reading this calendar links, `/Life/life3122.htm`, was NOT opened; this folder’s life is already written out of its other sources. The day page’s third and fourth hymn blocks are under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Прп. Павла Латрийского (955).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -87,6 +102,38 @@
       },
       "english": {
         "text": "As one who dwells together with the bodiless powers and shares the lot of all the venerable, most praised Paul, we praise you and pray to you: pray for us, that we may always find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко Безплотных единовсельника/ и всем преподобным сообщника,/ всеславне Павле, поем тя и молим тя:/ молися всегда о нас,// яко да обрящем милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Тропарь преподобного Павла», глас 4. His own proper, naming him. It is the Church Slavonic of the Romanian troparion «Ca cel ce eşti împreună locuitor cu cei fără de trup» this folder already carries from doxologia.ro.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a fellow-dweller with the bodiless powers and a companion of all the venerable, O all-glorious Paul, we sing to thee and entreat thee: pray for us always, that we may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От юности, мудре, яже паче смысла вожделел еси мужески,/ мирский мятеж оставил еси,/ и был еси Божественнаго ради жительства Троицы жилище,/ и просветил еси верою приступающия тебе.// Тем зовем: радуйся, Павле пребогате.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Кондак преподобного Павла», глас 8. His own proper, closing on his name.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth, O wise one, thou didst manfully long for the things that are beyond understanding; thou didst leave behind the turmoil of the world, and for the sake of a godly way of life thou becamest a dwelling-place of the Trinity, and thou didst enlighten with faith those who drew near to thee. Therefore we cry: rejoice, O Paul most rich.",
         "rendered": "site"
       }
     }

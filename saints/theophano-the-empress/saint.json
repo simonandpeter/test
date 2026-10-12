@@ -16,6 +16,11 @@
       "form": "Теофанија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s third heading for 16. децембар ст. ст., „Света Теофанија, царица.“ — with «Света» left off, which §5 says is not a rank, and «царица» left off, that being the `empress` grade §5 maps and `types` keeps. The bare forename is the whole of what the heading gives; the by-name «Чудотворна» the Greek page carries and the husband it names are not in this heading. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `теофанија` at NO other holder, so no READ_FOLDS key is written. THE NAMESWEEP MISSED THIS FOLDER TOO, the same §7 false negative as «Агеј»: it offered Photina, Photini, Tatiana and Aphthonius and never Theophano. The folder was found from the candidate file’s menologion list."
+    },
+    {
+      "form": "Феофания Византийская",
+      "lang": "ru",
+      "note": "The calendar’s own name page for her is «Феофания Византийская, императрица»; the rank is stripped and the epithet kept, the day line itself declining the forename and the rank «царицы». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "female",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE LINE’S YEARS DISAGREE WITH THE FOLDER’S AND REPLACE NOTHING: days.pravoslavie.ru closes the line «(893-894)», a pair of years one after the other and not an interval of a life, where the folder’s `death` is the Ohrid Prologue’s stated 892. One or two years divide them, neither book cites a document, and the Russian pair is recorded in the life instead of being chosen between. The calendar calls her «блж.», blessed, and «царицы», empress, which is the `type` this folder already carries. The reading this calendar links, `/Life/life3132.htm`, was NOT opened; this folder’s life is already written out of its other sources. Nothing on the day page is under her name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Блж. царицы Феофании (893-894).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

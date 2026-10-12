@@ -16,6 +16,11 @@
       "form": "Бонифатије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 19. децембар ст. ст., „Свети мученик Бонифатије.“ — «Свети» is “saint” and not a rank and «мученик» is the rank `martyr` the folder already carries, so BRIEF-SERBIAN §6 strips both and the bare forename is the whole of what the heading gives him. Measured before it was written: ten characters, above the width the gate indexes, and no other folder holds this string — the other Bonifaces the corpus keeps carry no Serbian form at all."
+    },
+    {
+      "form": "Вонифатий Тарсийский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Мученик Вонифатий Тарсийский»; the rank is stripped and the epithet kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(290)», which is the year this folder’s `death` already holds from saint.gr, so it confirms it and replaces nothing. THE RUSSIAN LINE NAMES HIM ALONE where the Greek page tells his story with the woman who sent him, and no row of this folder’s `related` is touched on that account. The reading this calendar links, `/Life/id437.htm`, is an INDEX and was NOT opened; this folder’s life is already written out of its other sources. All three of the day page’s hymn blocks are under his name and all three are on this folder."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Мч. Вонифатия (290).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -128,6 +143,54 @@
       },
       "english": {
         "text": "A spotless victim, you offered yourself willingly to him who for your sake was about to be born of the Virgin, O holy one, O crown-bearing and wise Boniface.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "К сословию послан мучеников,/ мученик был еси истинен,/ пострадав за Христа крепчайше, всехвальне,/ мощми же возвратился еси верою пославшей тя, Вонифатие блаженне,/ моли Христа Бога// прияти нам грехов прощение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Тропарь мученика Вонифатия», глас 4. His own proper: it names him and tells his own story, the errand for relics that ended in his own martyrdom and the relics that went back to the woman who had sent him.",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sent to the company of the martyrs, thou wast thyself found a true martyr, having suffered most bravely for Christ, O all-praised one; and in thy relics thou didst return to her who had sent thee in faith, O blessed Boniface. Pray to Christ God that we may receive forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Священие непорочное/ самовольне тебе привел еси,/ Иже от Девы тебе ради родитися хотящему,/ святе венченосче,// премудре Вонифатие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Кондак мученика Вонифатия», глас 4. His own proper, closing on his name. The day page prints a second kontakion under the title «Ин кондак», and the two are different texts and not two redactions of one, so both are written here.",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Of thine own will thou didst offer thyself as an unblemished sacrifice to Him Who for thy sake willed to be born of the Virgin, O holy crown-bearer, O most wise Boniface.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Изыде к приятию страстотерпческих мощей и страждущих законне веры ради зря,/ показал еси мужески крепость свою,/ устремився на страсти исповеданием во Христа,/ Иже прием почесть победы твоего страдания,/ Вонифатие, присно моли за ны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Ин кондак мученика Вонифатия», глас 4. THE SECOND KONTAKION OF THE DAY UNDER HIS NAME, a different text from the first and not a redaction of it: it tells the errand itself, his going out to receive the relics of the passion-bearers.",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst go forth to receive the relics of the passion-bearers; and seeing those who were suffering lawfully for the faith, thou didst show thy strength manfully, hastening to the passion by thy confession of Christ. Having received the prize of victory for thy suffering, O Boniface, pray for us always.",
         "rendered": "site"
       }
     }

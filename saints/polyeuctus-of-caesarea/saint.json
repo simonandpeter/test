@@ -6,6 +6,11 @@
       "form": "Πολύευκτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Τιμόθεος και Πολύευκτος», with the rank word left off. The page glosses the name itself, «(πολύ + εύχομαι) = ο πολυπόθητος», and its epigram calls him «Πολύευκτε Καισαρεῦ», which is where the English form of this folder's name comes from."
+    },
+    {
+      "form": "Полиевкт Кесарийский (Каппадокийский)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Полиевкт Кесарийский (Каппадокийский), мч.»; the grade is stripped and both epithets kept, parentheses and all, because the second says which Caesarea the first means. The day line declines the bare forename only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. NO `dates` ARE WRITTEN FROM THIS LINE: it closes «(IV)», a bare century set after two names, and this folder has no date from any source; the same answer was given on the Julian 15 декабря to `eleutherius-the-cubicularius`, whose line closes the same way, and the century is recorded in the life instead. THE CALENDAR ADDS «(Каппадокийский)» to his Caesarea, which tells the reader which Caesarea it means and is kept in the name form. No reading is linked behind this entry at all — the day page gives the two men a name page each and no life page. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Мчч. Полиевкта и Тимофея диакона (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

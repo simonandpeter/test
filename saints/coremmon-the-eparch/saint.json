@@ -6,6 +6,11 @@
       "form": "Κορέμμων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Κορέμμων ο έπαρχος», with the rank word and the office left off. The page's text gives an alternative in passing, «Ο Άγιος Κορέμμων (ή Κοράμων)», which is recorded in the attestation and not stored as a second form."
+    },
+    {
+      "form": "Корив Римский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Корив Римский, мч.»; the grade is stripped and the epithet kept, the day line itself declining the bare forename and the office. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line’s «(ок. 117-138)» is the same reign this folder’s `floruit` already holds from saint.gr’s statement about his office, approximate here where that was flat, so it replaces nothing. THE CALENDAR SPELLS HIM «КОРИВ», not a Slavonic reading of Coremmon, and that is the form stored; no inference is drawn from the difference. The reading this calendar links, `/Life/life3121.htm`, was NOT opened; it stands behind the bishop and his mother alike and this folder’s life is already written out of its other sources. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Сщмч. Елевферия, матери его мц. Анфии и мч. Корива епарха (ок. 117-138).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

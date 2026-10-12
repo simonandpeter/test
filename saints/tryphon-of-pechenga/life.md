@@ -1,0 +1,11 @@
+# Tryphon of Pechenga and Kola
+
+He was Mitrofan in the world, born in 1495 in the Novgorod province, and from his early years the calendar’s first reading calls him a notable faster, meek and merciful. Praying in a wood one day he heard a voice telling him that an uninhabited and thirsting land was waiting for him, and he went north to the Lapps on the river Pechenga, on the Kola peninsula, whose way of life he knew only from what the fishing traders said of it. He traded among them first, learned their language and their beliefs, and then began to preach.
+
+They heard him with suspicion, and he was driven off and beaten, but he did not leave off, and in the end many of them were baptised. In 1532 he built a church and founded beside it a monastery of the Holy Trinity, in the second reading’s words by the cold sea at the Murman border, and the monastery was richly endowed by the tsar. He would not be its abbot: he set a disciple of his own over it and stayed under obedience himself.
+
+The readings keep two of his acts. He bought hand millstones at Kola and carried them the hundred and fifty versts back himself, telling the brethren who asked to share the load that he would rather hang a millstone round his own neck than trouble them with his idleness. And a bear that got into his cell and overturned his kneading trough he held still by the name of God, rebuked, and let go; from then on neither bears nor wolves touched the monastery’s reindeer.
+
+In the years when the harvest failed he went with a few of the brethren into the Novgorod lands to beg, and sent back what was given. He died in peace on 15 December 1583, the first reading says at the age of eighty-eight, having lived at Pechenga, the second says, almost sixty years. He was commemorated locally soon after his death; the monastery itself was destroyed by the Swedes in 1589 and afterwards moved to Kola, and a church was raised on the site in his name.
+
+*After the Православный церковный календарь of the Сретенский monastery for 15 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261215.html) and the two lives at [life6873](https://days.pravoslavie.ru/Life/life6873.htm) and [life3124](https://days.pravoslavie.ru/Life/life3124.htm); read 13 October 2026.*

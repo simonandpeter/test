@@ -16,6 +16,11 @@
       "form": "Данил (Донале)",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 17. децембар ст. ст., „Преподобни Данил (Донале).“ — with «Преподобни» left off, that being the `venerable` grade §5 maps and `types` keeps. What is left is kept WHOLE, with the parenthesis as the book prints it, because both words are the book’s own and neither can be called the name and the other a gloss. BRIEF-ADDENDUM §2 is explicit that parentheses are not part of a name key, so the string keys as `данил донале`. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts that key at NO other holder, so no READ_FOLDS key is written FOR THIS FORM. **It is not the bare «Данил» this same commit writes onto `daniel-the-prophet`**: that string keys as `данил`, a different key, which the commit does key — and had this form been stored as a bare «Данил» the two men of one day would have landed in one fold, which is exactly the collision BRIEF-ADDENDUM §2 was written about. The form is the PRE-TONSURE name; the name the folder is titled by, Stephen, is what the body says the patriarch gave him and is not in the heading."
+    },
+    {
+      "form": "Даниил (в схиме Стефан) Нивертский, Египетский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Даниил (в сxиме Стефан) Нивертский, Египетский, прп., исповедник»; the grade and the rank are stripped and everything else kept, parentheses and all, because the calendar’s own form carries both his names and both his epithets and a bare «Даниил» would be a different and much commoner string. ONE LETTER IS TAKEN FROM THE SAME PAGE’S OTHER SPELLING AND NOT FROM NOWHERE: the name page writes «сxиме» with a LATIN x, codepoint 0x78, inside the Cyrillic word, and the day line of the same page writes «схиме» with the Cyrillic х, 0x445; the stored form takes the day line’s letter, which is a reading of the page and not a reconstruction, and the defect is named in the reader’s report. The calendar names him Daniel where this folder’s display name is the Stephen of the schema, which is what saint.gr and the Ohrid Prologue call him. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE IDENTITY IS READ ON THE ISLAND AND THE SCHEMA-NAME: the line is «Прп. Даниила исп., в схиме Стефана (X).» — Daniel the confessor, Stephen in the schema — and the reading at `/Life/life3137.htm`, which WAS opened, makes him a Spanish nobleman, the chief of the island of Niverta, which is the Nivertis this folder’s life already names out of saint.gr, under the same rank and on the same day. The Russian book is the first source in this folder to say how he died: «За отказ принять ислам мученически погиб в Египте от сарацин в Х веке» — for refusing Islam he died a martyr in Egypt at the hands of the Saracens in the tenth century. NO `dates` AND NO `types` ARE CHANGED ON THAT ACCOUNT: the folder’s one year, saint.gr’s 919 for his coming to Constantinople, stands untouched, the Russian century is consistent with it and narrower than nothing, and the martyrdom is recorded in the life, where the calendar’s own line still calls him «прп.» and «исп.», venerable and confessor, and not a martyr. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Прп. Даниила исп., в схиме Стефана (X).»",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
