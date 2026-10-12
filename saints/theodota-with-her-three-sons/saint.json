@@ -16,6 +16,11 @@
       "form": "Теодотија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 22. децембар ст. ст., „Света мученица Теодотија с три детета.“ — «Света» is “saint” and not a rank, «мученица» is the rank `martyr` the folder already carries, and «с три детета», with three children, is the count the display name already carries and not a by-name, so the bare forename is what is left. The book gives her no by-name of any kind. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON ANOTHER FOLDER: `theodote-of-nicaea` already carries the identical Serbian string, so the fold key «теодотија» is declared in the same commit with both holders read."
+    },
+    {
+      "form": "Феодотия",
+      "lang": "ru",
+      "note": "The nominative behind days.pravoslavie.ru's line for 22 декабря ст. ст., which declines it to «Феодотии»; her name page gives «Святая мученица Феодотия», with the rank words left off here and no epithet to take."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Мчч. Хрисогона, Феодотии, Евода, Евтихиана и иных (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "note": "Her life page lists two days, «29 июля, 22 декабря», and closes by saying so outright: «Память святых мучеников Феодотии, отрока Евода и двух ее малолетних сыновей совершается еще 22 декабря, вместе с памятью святой Анастасии Узорешительницы.» The row is this day, the one the day page listed her on, and the 29 июля of her own page is the day the Romanian and Greek rows here already keep. Her eldest son Евод is named separately on this calendar's line and has his own folder; the two younger sons are not named and have none."
     },
     {
       "church": "romanian",
@@ -119,6 +134,7 @@
     }
   ],
   "related": [
-    "anastasia-pupil-of-chrysogonus"
+    "anastasia-pupil-of-chrysogonus",
+    "evodus-of-nicaea"
   ]
 }

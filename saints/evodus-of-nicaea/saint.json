@@ -1,0 +1,63 @@
+{
+  "slug": "evodus-of-nicaea",
+  "display_name": "Evodus of Nicaea",
+  "names": [
+    {
+      "form": "Евод Никейский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 декабря ст. ст., «Евод Никейский, мч.», with the rank word left off. The day's own line declines the name to «Евода» and gives it without the epithet."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life of his mother closes her trial «(304)», and the day's own line for the company reads «(ок. 304)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Мчч. Хрисогона, Феодотии, Евода, Евтихиана и иных (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "note": "The line enumerates four and then closes «и иных», and the unnamed remainder is not recorded here. His name page 691 gives «Евод Никейский, мч.» and this one day. He is a distinct man from the corpus's Evodus of Nicomedia, who suffers with Callista, Agathocleia and Hermogenes and whom this same calendar keeps on 1 сентября ст. ст."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 4 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 January 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "theodota-with-her-three-sons",
+    "anastasia-pupil-of-chrysogonus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

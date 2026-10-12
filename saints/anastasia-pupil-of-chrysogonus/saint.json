@@ -16,6 +16,11 @@
       "form": "Анастасија Узорешителница",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 22. децембар ст. ст., „Света великомученица Анастасија Узорешителница и други с њом.“ — «Света» is “saint” and not a rank, «великомученица» is the rank `great-martyr` the folder already carries, and «и други с њом» is the unnamed company and no part of her name, so the bare name with its by-name is what is left. MEASURED BEFORE IT WAS WRITTEN: the bare «Анастасија» lands on three other folders — `anastasia-of-rome-15-april`, `anastasia-of-serbia` and `anastasia-the-patrician` — so the book’s own epithet «Узорешителница» was kept on the form rather than stripped, and the full string has no other holder in the corpus."
+    },
+    {
+      "form": "Анастасия Узорешительница",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 декабря ст. ст., «Святая великомученица Анастасия Узорешительница», with the rank words left off. The day's own line declines the name and gives «Вмц. Анастасии Узорешительницы»."
     }
   ],
   "sex": "female",
@@ -34,13 +39,25 @@
     "agape-of-aquileia",
     "irene-of-aquileia",
     "chionia-of-aquileia",
-    "theodota-with-her-three-sons"
+    "theodota-with-her-three-sons",
+    "evodus-of-nicaea",
+    "eutychian-of-illyria"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Вмц. Анастасии Узорешительницы (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "note": "The calendar's own name page 2384 gives «Святая великомученица Анастасия Узорешительница», the title the Serbian form already in this folder also carries. Its line sets the company at «ок. 304», where saint.gr gives 290 and this folder records that year; the two readings differ and neither is resolved here."
     },
     {
       "church": "romanian",
@@ -137,6 +154,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Победоноснаго Воскресения/ истинноименитая наречена еси, мученице Христова,/ победы на враги поставила еси мук терпением,/ Христа ради, Жениха твоего,/ Егоже возлюбила еси.// Того моли спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Тропарь великомученицы Анастасии»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were truly named for the victorious Resurrection, O martyr of Christ, and by your endurance of torments you set up victories over the enemies, for the sake of Christ your Bridegroom, whom you loved. Pray to Him that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Во искушениих и скорбех сущии,/ к твоему храму притекающе,/ приемлют честная дарования/ от живущия в тебе Божественныя благодати, Анастасие:// ты бо присно миру точиши исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Кондак великомученицы Анастасии»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Those who are in trials and in sorrows, coming to your church, receive honourable gifts from the divine grace that dwells in you, O Anastasia; for you pour out healings upon the world unceasingly.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
