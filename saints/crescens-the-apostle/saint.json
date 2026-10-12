@@ -12,6 +12,11 @@
       "form": "Κρήσκης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Ιουλίου, «Άγιοι Σίλας, Σιλουανός, Επαινετός, Κρήσκης και Ανδρόνικος οι Απόστολοι», with the rank words left off."
+    },
+    {
+      "form": "Крискент",
+      "lang": "ru",
+      "note": "The calendar's own name page is titled «Святитель Крискент, епископ Галатийский, апостол от 70-ти, сщмч.»; the name is stored bare, the see left to the folder's office, because the page puts «епископ Галатийский» behind a comma and joining it to the name would be a reconstruction. The day line declines it to «Крискента». Two other folders already carry this same bare form as their Serbian one, and the fold is recorded. Read 13 October 2026."
     }
   ],
   "sex": "male",
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Апп. от 70-ти Силы, Силуана, Крискента, Епенета и Андроника (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -144,6 +158,38 @@
       },
       "english": {
         "text": "Running out to the ends of the world, you sowed the word of the knowledge of God; and having reaped a harvest of many ears, you brought it to the King of all, all-renowned Apostles of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Лик пяточисленный апостол Христовых песньми восхвалим,/ Силу, Силуана, Крискента, Андроника со Епенетом,/ сии бо идольскую лесть обличиша/ и, неверныя в веру уловивше,/ молят непрестанно о всех, память их величающих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Тропарь апостолов от 70-ти Силы, Силуана, Крискента, Епенета и Андроника»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise in song the fivefold company of Christ's apostles, Silas, Silvanus, Crescens, Andronicus with Epaenetus, for these laid bare the deceit of the idols and, taking the unbelieving captive into the faith, they pray without ceasing for all who magnify their memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Лозие явистеся Христова винограда,/ гроздие приносяще, мудрии, в добродетелех,/ вино нам спасения источающе,/ еже приемлюще, веселия исполняемся,/ празднующе всечестную вашу память,/ в нюже молитеся о оставлении грехов наших,// Господни апостоли.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Кондак апостолов»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be branches of Christ's vineyard, bearing clusters of virtue, O wise ones, and pouring out for us the wine of salvation; receiving it we are filled with gladness as we keep your all-honoured memory. In it pray for the forgiveness of our sins, O apostles of the Lord.",
         "rendered": "site"
       }
     }

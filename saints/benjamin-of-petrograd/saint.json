@@ -1,0 +1,106 @@
+{
+  "slug": "benjamin-of-petrograd",
+  "display_name": "Benjamin of Petrograd",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "metropolitan"
+  ],
+  "office": "Metropolitan",
+  "names": [
+    {
+      "form": "Вениамин Петроградский, Гдовский",
+      "lang": "ru",
+      "note": "The calendar's own name page is titled «Священномученик Вениамин Петроградский, Гдовский, митрополит»; the form is stored with the rank words dropped and the two sees as the page itself joins them to the name. The day line declines it to «Вениамина, митр. Петроградского и Гдовского». The lives give the name in the world as Vasily Kazansky. Read 13 October 2026."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's second life for the day: «родился в 1873 году на Нименском погосте Андреевской волости Каргопольского уезда, ныне Архангельской области, в семье священника Павла и Марии Казанских». Read 13 October 2026."
+    },
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "The year the calendar's day line prints for the four of them together, «(1922)», and the life says it twice over: «в ночь с 12 на 13 августа того же года митрополит Вениамин и вместе с ним архимандрит Сергий (Шеин), миряне Юрий Новицкий и Иван Ковшаров были расстреляны на окраине Петрограда», the sentence having been given on 5 July 1922. Read 13 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Сщмч. Вениамина, митр. Петроградского и Гдовского, и иже с ним убиенных сщмч. архим. Сергия и мчч. Юрия и Иоанна (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "related": [
+    "sergius-shein",
+    "yuri-novitsky",
+    "john-kovsharov"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Светильник всесветлый во граде святаго Петра явился еси,/ пастырю добрый, священномучениче отче Вениамине./ Любовь и милосердие в сердцах верных насаждая,/ благотворити призывал еси терпящим глад и нищету. Сего ради и мы к тебе прибегаем и с верою вопием ти:/ моли милостиваго Бога/ Отечество наше в Православии и благочестии утвердити,/ мир Церкви даровати// и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Тропарь священномученика Вениамина»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be an all-radiant lamp in the city of Saint Peter, O good shepherd, hieromartyr Benjamin our father. Planting love and mercy in the hearts of the faithful, you called them to do good to those enduring hunger and want. For this we also run to you and cry to you in faith: pray to the merciful God to establish our homeland in Orthodoxy and piety, to grant peace to the Church, and to our souls great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "От юности иго Христово на рамо взем,/ истинный страж Православныя Церкве явился еси,/ священномучениче Вениамине./ Клевету, узы, страдания и суд неправедный/ от беззаконных мужественне претерпевая,/ святыню церковную на поругание не предал еси./ Темже и Христос даром терпения и любве тя исполни,/ во еже пред мученическою кончиною/ со благодарением взывати:// за вся, Господи, слава Тебе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Кондак священномученика Вениамина»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having taken the yoke of Christ upon your shoulder from your youth, you were shown to be a true guardian of the Orthodox Church, O hieromartyr Benjamin. Bearing manfully from lawless men their slander, your bonds, your sufferings and an unjust trial, you did not hand over the holy things of the Church to be profaned. Therefore Christ filled you with the gift of patience and of love, so that before your martyr's end you cried out with thanksgiving: for all things, O Lord, glory to Thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

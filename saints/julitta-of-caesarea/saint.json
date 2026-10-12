@@ -16,6 +16,11 @@
       "form": "Јулита",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 31. јул ст. ст., „Св. муч. Јулита.“ — «Св.» is “saint” and «муч.» the rank `martyr` the folder already carries, both left off by BRIEF-SERBIAN §6, and the heading gives nothing else at all, so the bare forename is the whole of the form. «of Caesarea» in the display name stays out of it: the body has «Из Кесарије Кападокијске», FROM Caesarea in Cappadocia, a prepositional phrase and not an adjective. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Јулита» returns the key «јулита» at one holder, `julitta-mother-of-cyricus`, which is exactly the folder whose own name note predicted this collision when the Julian 15 July was read. The fold becomes two wide with this form and the key «јулита julitta-mother-of-cyricus julitta-of-caesarea» is declared in the same commit with both holders read. No earlier key existed, because one holder is no collision."
+    },
+    {
+      "form": "Иулитта Кесарийская (Каппадокийская)",
+      "lang": "ru",
+      "note": "The nominative the calendar's own name page gives, «Иулитта Кесарийская (Каппадокийская), мц.», with the rank word dropped and both of the page's epithets kept as it prints them; the day line gives the forename alone in the genitive, «Мц. Иулитты». Read 13 October 2026."
     }
   ],
   "sex": "female",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Мц. Иулитты (304-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -78,5 +92,14 @@
   },
   "related": [
     "basil-the-great"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 305,
+      "display": "304–305",
+      "basis": "traditional",
+      "note": "The folder's first date of any kind: `dates` was null, neither doxologia.ro nor saint.gr nor the Ohrid Prologue giving a year. days.pravoslavie.ru closes its line for 31 июля ст. ст. «Мц. Иулитты (304-305).», printing the pair of years as the calendar prints a year; the display here is that pair with the calendar's hyphen set as an en dash, which is the form `lib/date-display.js` reads. No year of birth and no age is stated anywhere read. Read 13 October 2026."
+    }
+  }
 }

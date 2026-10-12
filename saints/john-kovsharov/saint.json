@@ -1,0 +1,63 @@
+{
+  "slug": "john-kovsharov",
+  "display_name": "John (Kovsharov)",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Ковшаров)",
+      "lang": "ru",
+      "note": "The nominative the calendar's own name page gives, «Мученик Иоанн (Ковшаров)», with the rank word dropped; the day line gives the forename alone in the genitive and no surname. The life gives the name in full as Ivan Mikhailovich Kovsharov, in the Russian rather than the Church form. Read 13 October 2026."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "attested",
+      "note": "The year the calendar's day line prints for the four of them together, «(1922)», and the life: «в ночь с 12 на 13 августа того же года ... миряне Юрий Новицкий и Иван Ковшаров были расстреляны на окраине Петрограда». The life gives him no year of birth, where it gives one to each of the other three, so no birth is recorded here. Read 13 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Сщмч. Вениамина, митр. Петроградского и Гдовского, и иже с ним убиенных сщмч. архим. Сергия и мчч. Юрия и Иоанна (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "related": [
+    "benjamin-of-petrograd",
+    "sergius-shein",
+    "yuri-novitsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

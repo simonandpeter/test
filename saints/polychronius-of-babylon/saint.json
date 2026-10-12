@@ -11,6 +11,11 @@
       "form": "Полихроније",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 30. јул ст. ст., „Свешт. муч. Полихроније еп. Вавилонски.“ — «Свешт. муч.» is the `hieromartyr`, «еп.» the `bishop` and «Вавилонски» the see, all of which §6 keeps out of a stored form, so the bare forename is what is left. Measured before it was written: `fk.mjs` returned one other holder, `polychronius-the-martyr`, and a `READ_FOLDS` key for the pair is written in the same commit as this folder. `polychronius-disciple-of-zebinas` and `polychronia-mother-of-george` are not in the fold and hold no Serbian form."
+    },
+    {
+      "form": "Полихроний Вавилонский",
+      "lang": "ru",
+      "note": "The calendar's own name page is titled «Святитель Полихроний Вавилонский, епископ, сщмч.», which puts the toponymic adjective on the name itself and the rank behind a comma; the form is stored as the page has it without the rank words. The day line declines it to «Полихрония, еп. Вавилонского». Read 13 October 2026."
     }
   ],
   "dates": {
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Сщмчч. Полихрония, еп. Вавилонского, Пармения, Елимы и Хрисотеля пресвитеров, Луки и Муко диаконов, мчч. Авдона и Сенниса, князей Персидских, и мчч. Олимпия и Максима (ок. 251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,66 @@
+{
+  "slug": "germanus-of-auxerre",
+  "display_name": "Germanus of Auxerre",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Герман Осерский",
+      "lang": "ru",
+      "note": "The calendar's own name page is titled «Святитель Герман епископ Осерский, епископ Осерский, свт.», repeating the see twice over, which is the page's own doubling; the form here is that title with its three rank words removed and nothing else changed. The day line declines it to «Германа, епископа Осерского». Read 13 October 2026."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 448,
+      "latest": 448,
+      "display": "448",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Свт. Германа, епископа Осерского (448).» It is the only date on the entry; the calendar gives no year of birth and carries no life page for him. Read 13 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Свт. Германа, епископа Осерского (448).»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "related": [
+    "alban-of-britain",
+    "genevieve-of-paris",
+    "ninnoca-of-brittany",
+    "palladius-of-scotland",
+    "priscus-martyr-at-besancon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

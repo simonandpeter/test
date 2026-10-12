@@ -1,0 +1,63 @@
+{
+  "slug": "abundius-of-interamna",
+  "display_name": "Abundius of Interamna",
+  "types": [
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Авундий Интерамский (Италийский)",
+      "lang": "ru",
+      "note": "The calendar's own name page gives the nominative with both epithets in this form; the day line declines it to «Авундия» and carries no epithet. One of the two lives the calendar prints for this company spells the name «Авундин» throughout, and the other and the day line spell it «Авундий», which is the form stored here. Read 13 October 2026."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 273,
+      "latest": 273,
+      "display": "about 273",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the day line «(ок. 273)» — about 273 — for the bishop and his four together, and the line calls Abundius righteous rather than a martyr, so the year is the company's and not a year of death the page states for him. Its life sets the healing that began the story «В правление императора Аврелиана (270-275 гг.)» and opens «жили в III веке». No year of birth and no age is printed. Read 13 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Сщмч. Валентина (Уалентина) епископа и трех учеников его, мчч. Прокула, Ефива и Аполлония и прав. Авундия (ок. 273).»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "related": [
+    "valentine-of-interamna",
+    "proculus-of-interamna",
+    "ephebus-of-interamna",
+    "apollonius-of-interamna"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

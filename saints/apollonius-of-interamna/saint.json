@@ -1,0 +1,63 @@
+{
+  "slug": "apollonius-of-interamna",
+  "display_name": "Apollonius of Interamna",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Аполлоний Интерамский (Италийский)",
+      "lang": "ru",
+      "note": "The calendar's own name page gives the nominative with both epithets in this form; the day line declines it to «Аполлония» and carries no epithet at all. Read 13 October 2026."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 273,
+      "latest": 273,
+      "display": "about 273",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the day line «(ок. 273)» — about 273 — for the bishop and his four together. Its life sets the healing that began the story «В правление императора Аврелиана (270-275 гг.)» and opens «жили в III веке». The calendar's «ок.» is kept as «about»; no year of birth and no age is printed. Read 13 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Сщмч. Валентина (Уалентина) епископа и трех учеников его, мчч. Прокула, Ефива и Аполлония и прав. Авундия (ок. 273).»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "related": [
+    "valentine-of-interamna",
+    "proculus-of-interamna",
+    "ephebus-of-interamna",
+    "abundius-of-interamna"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

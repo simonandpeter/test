@@ -17,6 +17,11 @@
       "form": "Валентин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's second heading for 30. јул ст. ст., „Свешт. муч. Валентин.“ — «Свешт. муч.» is the `hieromartyr` the folder already carries and the heading gives no see, no place and no by-name, the city standing in the body only, so §6 leaves the bare forename. Measured before it was written: `fk.mjs` returns one other holder, `valentine-of-durostorum`, and a `READ_FOLDS` key for the pair is written in the same commit as this row."
+    },
+    {
+      "form": "Валентин (Уалентин)",
+      "lang": "ru",
+      "note": "The Russian calendar prints his name twice over, «Валентина (Уалентина)» on the day line and «Священномученик Валентин (Уалентин) епископ» at the head of one of its two lives; both spellings are the page's own and are stored as it gives them. Its other life and its name page give «Валентин» alone. Read 13 October 2026."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Сщмч. Валентина (Уалентина) епископа и трех учеников его, мчч. Прокула, Ефива и Аполлония и прав. Авундия (ок. 273).»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -103,7 +117,11 @@
     }
   ],
   "related": [
-    "valentine-of-rome"
+    "valentine-of-rome",
+    "proculus-of-interamna",
+    "ephebus-of-interamna",
+    "apollonius-of-interamna",
+    "abundius-of-interamna"
   ],
   "dates": {
     "death": {

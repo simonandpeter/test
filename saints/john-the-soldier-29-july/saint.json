@@ -10,6 +10,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιος Ιωάννης ο στρατιώτης», with the rank word and the trade left off. The 12 Ιουνίου line prints the same name with the epithet capitalised, «ο Στρατιώτης»."
+    },
+    {
+      "form": "Иоанн Воин",
+      "lang": "ru",
+      "note": "The calendar's own name page is titled «Святой мученик Иоанн Воин», and the day line declines the two words together as «Иоанна Воина», so the epithet is stored with the name as the calendar prints it. The folder's slug says 29 July because the Greek calendar keeps him on that day; the Russian line is the Julian 30th and the Serbian row already stands on the Julian 30th too. Read 13 October 2026."
     }
   ],
   "attestations": [
@@ -45,8 +50,17 @@
     },
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Мч. Иоанна Воина (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -86,5 +100,71 @@
   ],
   "aliases": [
     "john-the-soldier-12-june"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Всеблагаго Бога и Царя/ благоверный раб и воин явился еси, Иоанне чудодетелю,/ пострадав бо ради веры мужески,/ блаженно же скончав течение,/ зриши Всетворца Господа в Небесех светлейше./ От Негоже прием дарование чудес,/ страждущим человеком во всяких напастех помогаеши,/ укрепляеши воины в ратех,/ от врагов пленения, ран же и внезапных смертей и от бед лютых изымаеши./ Темже моли Владыку Христа, приснопамятне,/ да во всяком обстоянии сотворит нам милость/ и не введет нас во искушения,// но спасет души наша, яко Человеколюбец.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Тропарь мученика Иоанна Воина»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a faithful servant and soldier of God the all-good King, O John, worker of wonders; for having suffered manfully for the faith and ended your course in blessedness, you behold the Lord, Maker of all, more brightly in the heavens. Having received from Him the gift of wonders, you help men who suffer in every misfortune, you strengthen soldiers in battle, and you deliver them from captivity to enemies, from wounds, from sudden death and from cruel troubles. Therefore pray to Christ the Master, O ever-remembered one, that in every circumstance He may show us mercy and not lead us into temptation, but save our souls, for He loves mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Блаженство евангельское возлюбив, Богомудре Иоанне,/ чистоту сердца девством почтил еси./ Темже суету мира сего пренебрег,/ устремился еси зрети Бога,/ Иже тя прослави чудесы во врачевании различие страждущих./ Сего ради молим тя:/ проси нам у Христа Господа всяких скорбей избавления/ и получения Царства Небеснаго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Ин тропарь мученика Иоанна Воина»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved the blessedness of the Gospel, O John of godly wisdom, you honoured purity of heart with virginity. Therefore, despising the vanity of this world, you pressed on to behold God, who glorified you with wonders in the healing of those who suffer in divers ways. For this we pray you: ask of Christ the Lord deliverance from all sorrows for us, and the obtaining of the heavenly Kingdom.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Благочестиваго воина Христова,/ победившаго враги душевныя и телесныя богомудренно,/ Иоанна мученика достодолжно песньми восхвалим,/ чудодействуя бо, подает обильная исцеления страждущим людем/ и молится Господу Богу// от всяких бед спасти правоверныя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Кондак мученика Иоанна Воина»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise with due songs the godly-wise and devout soldier of Christ, John the martyr, who overcame the enemies of soul and body; for working wonders he grants abundant healings to the suffering people, and prays the Lord God to save the right-believing from every ill.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Великая скорбным людем радость в бедах обретаешися, чудотворче Иоанне,/ всякия бо страсти молящим тя врачуеши,/ исполняя их прошения./ Темже и ныне моли Господа,/ да спасет ны в милости Своей.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Ин кондак мученика Иоанна Воина»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You are found a great joy to sorrowing people in their troubles, O wonderworker John; for you heal every passion of those who pray to you, fulfilling their petitions. Therefore now also pray the Lord that He may save us in His mercy.",
+        "rendered": "site"
+      }
+    }
   ]
 }
