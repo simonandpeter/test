@@ -1,0 +1,63 @@
+{
+  "slug": "claudia-mother-of-eugenia",
+  "display_name": "Claudia, mother of Eugenia",
+  "names": [
+    {
+      "form": "Клавдия Римская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 24 декабря ст. ст., «Клавдия Римская, мц.», with the rank word left off. The day's own line declines the name to «Клавдии» and gives it without the epithet."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 262,
+      "latest": 268,
+      "display": "262 to 268",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for the company closes «(ок. 262)», which is the year its life gives for Eugenia's death; of Claudia the same life says only that she received the martyr's crown «вскоре» afterwards, under the emperor Gallienus, whose reign it dates 260 to 268. The interval is the calendar's own two limits and no year is inferred inside it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Прмц. Евгении и с нею мчч. Прота, Иакинфа и Клавдии (ок. 262).»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "note": "One line for four persons and this folder is the last of them. Her name page 2562 gives «Клавдия Римская, мц.» and this one day. The day's line puts her with Eugenia's two servants and does not say she is Eugenia's mother; the life page behind the line does, and the folder is named from the life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 January 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "eugenia",
+    "philip-father-of-eugenia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

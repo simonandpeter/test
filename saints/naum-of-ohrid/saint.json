@@ -16,6 +16,11 @@
       "form": "Наум Охридски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 20. јун ст. ст., „Преподобни Наум Охридски“ — Преподобни is the rank and comes off, and Охридски is **kept**, being the by-name the heading itself gives and the thing that distinguishes him rather than grades him. Both forms were measured before the choice: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Наум Охридски», and for the bare «Наум» it returns `naum-of-aglomazovo`, which holds that string as `ru`. So the fuller form was taken on §6’s rule — the fullest the calendar gives, and bare of rank — and it happens also to be the form that leaves the one other Naum alone."
+    },
+    {
+      "form": "Наум Охридский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 23 декабря ст. ст., «Святой равноапостольный Наум Охридский», with the rank words left off. The day’s own line declines the name to «Наума Охридского»."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Равноап. Наума Охридского (910).»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "note": "The day page prints his troparion twice and his kontakion twice, once headed «святителя Наума Охридского» and once «равноапостольного Наума Охридского». The troparia are word for word the same and the kontakia differ only in one mark of punctuation; one of each is stored here, the «равноапостольного» reading, because that is the rank the day’s own line gives him. The duplication is the page’s."
     },
     {
       "church": "romanian",
@@ -111,6 +126,38 @@
       },
       "english": {
         "text": "A worthy disciple of Saints Cyril and Methodius you were shown to be, O blessed one, and healings in plenty you poured out with love upon humble souls; and as one who was shown a great light to those in the darkness of ignorance, surround us also with the ray of your prayer in the hour of our lowliness.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мир оставил еси, прилепився Христу,/ плоть распял еси, пожив Духу,/ Науме всеблаженне,/ потщался еси апостольским подвизатися течением/ и уловил еси к вере Болгарская неисчетная множества./ Темже молитвами твоими/ избави нас от искушений.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Тропарь равноапостольного Наума Охридского»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You left the world and clove to Christ; you crucified the flesh and lived by the Spirit, O all-blessed Naum. You hastened to labour in the apostles’ course and caught for the faith the uncounted multitudes of the Bulgarians. Therefore by your prayers deliver us from temptations.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Светлых твоих подвигов пречестная память, яко велие солнце, всем возсиявает,/ лица воспевающих тя просвещает,/ демоны и всяку болезнь отгоняет:/ сего ради, сошедшеся, любовию сию верно восхвалим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Кондак равноапостольного Наума Охридского»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The most honourable memory of your shining labours rises upon all like a great sun; it enlightens the faces of those who sing your praise and drives off the demons and every sickness. For this, having come together, let us faithfully extol it with love.",
         "rendered": "site"
       }
     }

@@ -16,6 +16,11 @@
       "form": "Помпије",
       "lang": "sr",
       "note": "The Serbian form is this man’s own name out of the book’s list, «Помпије», MEASURED BEFORE IT WAS WRITTEN: it lands on `pompeius-companion-of-terentius`, so the two-member fold key «помпије» is declared in `scripts/corpus-gate.mjs` in this same commit with both holders read. THAT OTHER MAN DIED IN THE SAME YEAR AND UNDER THE SAME EMPEROR and is still not this man: one of the forty of Africa who would not obey the edict of Decius, set apart with three others by the governor Fortunatianus, dated 250 — Africa and not Crete, a company of forty and not of ten, and 10 April and not 23 December."
+    },
+    {
+      "form": "Помпий Критский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 23 декабря ст. ст., «Помпий Критский, мч.», with the rank word left off. The day’s own line declines the name to «Помпия» and gives it without the epithet."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Мучеников, иже в Крите: Феодула, Саторнина, Евпора, Геласия, Евникиана, Зотика, Помпия, Агафопуса, Василида и Евареста (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "note": "One line for the whole company, which this calendar enumerates, so each of the ten takes a row of his own. His name is declined to «Помпия» there; numbered name page 1820 behind it gives «Помпий Критский, мч.» The life page and the name page give this one day and no other, and the hymns the day prints are the company’s, not his alone."
     },
     {
       "church": "romanian",
@@ -131,6 +146,38 @@
       },
       "tone": "Ήχος γ’.",
       "model": "Την ωραιότητα."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Многочудный Крит почтим,/ процветший честныя цветы, Христовы бисеры,/ мучеников сорасленых,/ десять бо суть числом, блаженнии,/ иже весь идольский народ посрамиша,// темже и венцы прияша, добледушнии.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Тропарь мучеников иже в Крите»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour Crete the worker of many wonders, which brought forth honourable flowers, the pearls of Christ, martyrs grown up together — for they are ten in number, the blessed ones, who put the whole nation of the idolaters to shame, and therefore received the crowns, the valiant of soul.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Денница возсия мучеников честное страдальчество,/ предозаряющее нам в вертепе Раждаемаго,// Егоже Дева безсеменно роди.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Кондак мучеников иже в Крите»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The honourable contest of the martyrs has shone out like the morning star, lighting the way before us to Him who is born in the cave, whom the Virgin bore without seed.",
+        "rendered": "site"
+      }
     }
   ]
 }

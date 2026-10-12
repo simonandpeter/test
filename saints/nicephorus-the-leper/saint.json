@@ -6,6 +6,11 @@
       "form": "Nichifor Leprosul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    },
+    {
+      "form": "Никифор (Джанакакис) Прокаженный",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 декабря ст. ст., «Никифор (Джанакакис) Прокаженный, прп.», with the rank word left off. The day's own line declines it to «Никифора Прокаженного» and gives the name without the surname."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Прп. Никифора Прокаженного (1964).»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "note": "This Julian 22 декабря is the civil 4 January, the same civil day as the 4 ianuarie the Romanian row here already keeps, so the two rows are one feast in two reckonings and not two days. The calendar's own name page 14745 gives «Никифор (Джанакакис) Прокаженный, прп.» — the surname Tzanakakis, which this folder's Romanian life also carries. Neither page carries a life."
     },
     {
       "church": "romanian",

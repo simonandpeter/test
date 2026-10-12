@@ -1,0 +1,72 @@
+{
+  "slug": "sergius-mechev",
+  "display_name": "Sergius (Mechev)",
+  "names": [
+    {
+      "form": "Сергий (Мечёв)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 24 декабря ст. ст., «Сергий (Мечёв), протоиерей, сщмч.», with the rank words left off. The day's own line declines the forename and gives the name without the surname. The surname is printed with ё on both the name page and the life page."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1892,
+      "latest": 1892,
+      "display": "1892",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life of him: «родился в Москве 17 сентября 1892 года»."
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru's line for 24 декабря ст. ст. closes with, and the new-style year of the pair its life page gives: «в ночь на 24 декабря 1941 года (6-е января 1942 г. н. ст.) батюшка был расстрелян в тюрьме Ярославского Н. К. В. Д.» The old-style date is this folder's feast day and the new-style year is the one recorded here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Сщмч. Сергия пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "note": "His life page and his name page both list a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it. The day's line calls him «пресвитера», his name page «протоиерей» and his life page's own title «иерей»; the office here follows the name page. The life page closes by saying he was numbered among the saints at the jubilee council of bishops in August 2000, for veneration throughout the church."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 January 2026 (13 October 2026)."
+    }
+  ],
+  "office": "Archpriest",
+  "related": [
+    "alexis-mechev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "innocent-beda",
+  "display_name": "Innocent (Beda)",
+  "names": [
+    {
+      "form": "Иннокентий (Беда)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 24 декабря ст. ст., «Иннокентий (Беда), архимандрит, сщмч.», with the rank words left off. The day's own line declines the forename and gives the name without the surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monastic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1928,
+      "latest": 1928,
+      "display": "1928",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru's line for 24 декабря ст. ст. closes with: «Прмч. Иннокентия (1928).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Прмч. Иннокентия (1928).»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "note": "The two ranks the calendar gives him differ: the day's line governs his name with «прмч.», a venerable-martyr, while name page 9172 closes his fuller form with «сщмч.», a hieromartyr, and gives his grade as archimandrite. Both readings are the calendar's own and neither is resolved here; the types follow the day line. Neither page carries a life. The name page lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 January 2026 (13 October 2026)."
+    }
+  ],
+  "office": "Archimandrite",
+  "text": {
+    "life": "life.md"
+  }
+}

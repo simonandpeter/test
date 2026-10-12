@@ -16,6 +16,11 @@
       "form": "Јулијана",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 21. децембар ст. ст., „Света мученица Јулијана и шест стотина тридесет мученика с њом.“ — «Света» is “saint” and not a rank, «мученица» is the rank `martyr` the folder already carries, and the rest of the heading is the company that believed at her wonder and not any part of her name, so the bare forename is what is left. The book gives her no by-name: Nicomedia is in the body as her birthplace and not in the heading, and a form was not assembled out of it. MEASURED BEFORE IT WAS WRITTEN, AND IT LANDS ON ANOTHER FOLDER: `juliana-of-ptolemais` already carries the identical Serbian string, so the fold key «јулијана» is declared in the same commit with both holders read. That other woman is the martyr of Ptolemais, dated about 273, kept by this same book on the Julian 4 March with Paul of Ptolemais and the three executioners who were converted at her suffering — thirty years and a different province and a different company."
+    },
+    {
+      "form": "Иулиания Никомидийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 декабря ст. ст., «Иулиания Никомидийская, дева, мц.», with the rank words left off. The day's own line declines the forename and gives it without the epithet."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Мц. Иулиании и с нею 500 мужей и 130-ти жен, в Никомидии пострадавших (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "note": "One line for her and for the two companies that suffered with her; the calendar's own name page 2530 gives the fuller form «Иулиания Никомидийская, дева, мц.»"
     },
     {
       "church": "romanian",
@@ -104,6 +119,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Агница Твоя, Иисусе, Иулиания/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою,/ но, яко жертву непорочную, приими мя, с любовию пожершуюся Тебе./ Тоя молитвами,/ яко милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Тропарь мученицы Иулиании»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your lamb, O Jesus, Juliana, cries out with a great voice: You, my Bridegroom, I love, and seeking You I contend in suffering; I am crucified and buried with You in Your baptism, and I suffer for Your sake that I may reign in You, and I die for You that I may also live with You. Receive me as an unblemished sacrifice, offered to You in love. By her prayers, since You are merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Девства добротами преочищена, девице,/ и мучения венцы, Иулиание, ныне венчавшися,/ даеши сущим в нуждах и недузех исцеление и спасение,/ приступающим к раце твоей:/ Божественную бо благодать Христос источает и жизнь вечную.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Кондак мученицы Иулиании»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made wholly pure by the graces of virginity, O maiden, and crowned now, Juliana, with the crowns of martyrdom, you give healing and salvation to those in need and in sickness who draw near to your reliquary; for Christ pours out divine grace from it, and life eternal.",
+        "rendered": "site"
+      }
     }
   ],
   "dates": {

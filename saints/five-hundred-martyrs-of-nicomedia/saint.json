@@ -18,8 +18,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Мц. Иулиании и с нею 500 мужей и 130-ти жен, в Никомидии пострадавших (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "note": "The company has no name link of its own on this calendar: the day's single line carries one link, behind «Иулиании», so no Russian name form is recorded for it here."
     },
     {
       "church": "romanian",

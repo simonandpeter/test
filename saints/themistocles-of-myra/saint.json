@@ -16,6 +16,11 @@
       "form": "Темистокле",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s third heading for 21. децембар ст. ст., „Свети мученик Темистокле.“ — «Свети» is “saint” and not a rank and «мученик» is the rank `martyr` the folder already carries, so BRIEF-SERBIAN §6 strips both and the bare forename is the whole of what the heading gives him; Myra is in the body and not in the heading. Measured before it was written: ten characters, above the width the gate indexes, and no other folder in the corpus holds this string."
+    },
+    {
+      "form": "Фемистоклей Мирликийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 декабря ст. ст., «Фемистоклей Мирликийский, мч.», with the rank word left off. The day's own line declines the name to «Фемистоклея» and gives it without the epithet."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Мч. Фемистоклея (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "note": "The calendar's own name page 2168 gives the fuller form «Фемистоклей Мирликийский, мч.», which names Myra as the corpus's display name does. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

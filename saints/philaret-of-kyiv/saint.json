@@ -6,6 +6,11 @@
       "form": "Φιλάρετος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Άγιος Φιλάρετος Μητροπολίτης Κιέβου», with the rank word and the see left off."
+    },
+    {
+      "form": "Филарет (в схиме Феодосий) (Амфитеатров), митрополит Киевский и Галицкий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 декабря ст. ст., «Святитель Филарет (в схиме Феодосий) (Амфитеатров), митрополит Киевский и Галицкий», with the rank word «Святитель» left off. The day's own line declines the forename and gives «Свт. Филарета, митр. Киевского». The page's own spelling of «в схиме» is clean Cyrillic here, checked letter by letter."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Свт. Филарета, митр. Киевского (1857).»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "note": "The calendar's own name page 13451 gives the fuller form «Святитель Филарет (в схиме Феодосий) (Амфитеатров), митрополит Киевский и Галицкий» — the surname, the schema name and the second half of the see, none of which the day's line carries. Neither page carries a life. This Julian 21 декабря is the civil 3 January, and the Greek row's 2 Δεκεμβρίου is a different day, not a style conversion of it."
     },
     {
       "church": "romanian",

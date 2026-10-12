@@ -11,6 +11,11 @@
       "form": "Χρυσόγονος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Χρυσόγονος», with the rank word left off."
+    },
+    {
+      "form": "Хрисогон",
+      "lang": "ru",
+      "note": "The nominative behind days.pravoslavie.ru's line for 22 декабря ст. ст., which declines it to «Хрисогона»; the calendar's life of the company spells it «Хрисогон». His name page gives no epithet with it."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Мчч. Хрисогона, Феодотии, Евода, Евтихиана и иных (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "note": "He heads the company on this calendar's line, and his name page 2351 keeps him on this one day. saint.gr keeps him on 24 Νοεμβρίου instead, and that is a different day and not a style conversion of this one."
     },
     {
       "church": "romanian",

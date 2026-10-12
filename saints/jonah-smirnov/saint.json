@@ -1,0 +1,60 @@
+{
+  "slug": "jonah-smirnov",
+  "display_name": "Jonah (Smirnov)",
+  "names": [
+    {
+      "form": "Иона (Смирнов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 23 декабря ст. ст., «Иона (Смирнов), прмч.», with the rank word left off. The day's own line declines the forename and does print this surname, «Ионы Смирнова», which is his and not the other two men's."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru's line for 23 декабря ст. ст. closes with: «Сщмч. Василия пресвитера и прмч. Макария и Ионы Смирнова (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Сщмч. Василия пресвитера и прмч. Макария и Ионы Смирнова (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "note": "One line for three men and this folder is the third of them, the only one of the three whose surname the day's line carries; name page 14727 confirms it as his. Neither that page nor the day page carries a life, and neither gives him a grade beyond «прмч.» The name page lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

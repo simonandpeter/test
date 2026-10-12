@@ -1,0 +1,95 @@
+{
+  "slug": "theoctistus-of-novgorod",
+  "display_name": "Theoctistus of Novgorod",
+  "names": [
+    {
+      "form": "Феоктист Новгородский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 23 декабря ст. ст., «Святитель Феоктист Новгородский, архиепископ», with the rank words left off. The day's own line declines the forename and gives «Свт. Феоктиста, архиеп. Новгородского»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1310,
+      "latest": 1310,
+      "display": "1310",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru's line for 23 декабря ст. ст. closes with: «Свт. Феоктиста, архиеп. Новгородского (1310).» His life page gives no year for his death and dates his withdrawal to 1307, his glorification to 1664 and the translation of his relics to 1786."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Свт. Феоктиста, архиеп. Новгородского (1310).»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "note": "His life page lists a second day, «23 января», which the 23 декабря page does not repeat and which is not thirteen days from it; it is recorded here and the folder does not render on it. The troparion is stored with the page's own spelling: it prints «в житий сем» for «в житии сем» and «спастйся» for «спастися», and neither is corrected here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 January 2026 (13 October 2026)."
+    }
+  ],
+  "office": "Archbishop",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Божия Слова Премудрости изрядный служитель,/ Ангельскаго жительства истинный подражатель,/ Божественныя чистоты рачитель,/ архиереом сопрестольниче, преподобным сожительниче,/ пастырская красота,/ Великому Новуграду похвала,/ святителю пречестный Феоктисте, отче наш,/ Емуже, Слову Божию, в житий сем послужил еси,/ моли спастйся душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Тропарь святителя Феоктиста, архиепископа Новгородскаго»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Excellent servant of the Wisdom of the Word of God, true imitator of the angelic life, lover of divine purity, sharer of the throne of the bishops and companion of the venerable, beauty of shepherds, praise of Great Novgorod, most honourable hierarch Theoctistus our father: pray to the Word of God, whom you served in this life, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Архиерейское украшение,/ Великому Новуграду Богодухновенное удобрение,/ сущия бо в нем люди на пажитех живоноснаго закона Господня упасл еси,/ и сего ради в лице святых водворятися сподобися,/ и святую твою память многими леты сотвори неоскверненну,/ в нейже, тя почитающе,— радуйся,— от души вопием ти,/ святителю отче Феоктисте,/ Великому Новуграду похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Кондак святителя Феоктиста, архиепископа Новгородскаго»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adornment of bishops, God-inspired enriching of Great Novgorod: you shepherded the people who were in it on the pastures of the life-bearing law of the Lord, and were counted worthy for this to dwell among the saints, and you have kept your holy memory undefiled through many years. Honouring you in it, we cry to you from the soul: rejoice, O hierarch Theoctistus our father, the praise and the strength of Great Novgorod.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

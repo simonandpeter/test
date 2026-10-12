@@ -11,6 +11,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Δεκεμβρίου, «Όσιος Παύλος Αρχιεπίσκοπος Νεοκαισαρείας», with the rank word and the see left off."
+    },
+    {
+      "form": "Павел Неокесарийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 23 декабря ст. ст., «Святитель Павел Неокесарийский, епископ, исповедник», with the rank words left off. The day’s own line declines the forename and gives «Прп. Павла, еп. Неокесарийского»."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 декабря ст. ст. — «Прп. Павла, еп. Неокесарийского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261223.html",
+        "year": 2026
+      },
+      "note": "The calendar’s own name page 1691 adds «исповедник», confessor, to his form, which the day’s line does not. His name page and his life page give this one day. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

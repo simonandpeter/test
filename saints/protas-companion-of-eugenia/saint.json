@@ -11,6 +11,11 @@
       "form": "Прот",
       "lang": "sr",
       "note": "Read out of the body of the Охридски пролог’s first entry for 24. децембар ст. ст., «Тада бише посечени и оба она евнуха, Прот и Јакинт». The heading does not print the name; the body does, and the heading’s own «и други с њом» is what sends the reader to it. Measured before it was written and it has no other holder in the corpus. IT IS FOUR CHARACTERS AS THE GATE FOLDS IT, which is the shortest form indexed — one character shorter and it would be invisible to the gate’s collision list, which is the «Ана» blind spot the 11-24 report names."
+    },
+    {
+      "form": "Прот Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 24 декабря ст. ст., «Прот Римский, прмч.», with the rank word left off. The day's own line declines the name to «Прота» and gives it without the epithet."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Прмц. Евгении и с нею мчч. Прота, Иакинфа и Клавдии (ок. 262).»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "note": "The line enumerates him second, after Eugenia. His name page 1850 gives «Прот Римский, прмч.» — a venerable-martyr, where the day's line governs him with «мчч.», a martyr; both are the calendar's own and the existing types are left as they stand. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
@@ -61,7 +76,8 @@
   ],
   "related": [
     "hyacinth-companion-of-eugenia",
-    "eugenia"
+    "eugenia",
+    "claudia-mother-of-eugenia"
   ],
   "text": {
     "life": "life.md"

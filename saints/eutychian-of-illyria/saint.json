@@ -1,0 +1,62 @@
+{
+  "slug": "eutychian-of-illyria",
+  "display_name": "Eutychian of Illyria",
+  "names": [
+    {
+      "form": "Евтихиан Иллирийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 декабря ст. ст., «Евтихиан Иллирийский, мч.», with the rank word left off. The day's own line declines the name to «Евтихиана» and gives it without the epithet."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "c. 304",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for the company closes «(ок. 304)», and the page gives no other year for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 декабря ст. ст. — «Мчч. Хрисогона, Феодотии, Евода, Евтихиана и иных (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261222.html",
+        "year": 2026
+      },
+      "note": "The line enumerates four and then closes «и иных», and the unnamed remainder is not recorded here. His name page 722 gives «Евтихиан Иллирийский, мч.» and this one day. He is a distinct man from the corpus's Eutychian of Nicomedia, whom this same calendar keeps on 17 августа ст. ст."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 4 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 January 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "anastasia-pupil-of-chrysogonus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

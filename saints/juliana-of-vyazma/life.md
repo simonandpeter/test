@@ -1,0 +1,9 @@
+# Juliana of Vyazma
+
+The Православный церковный календарь of the Сретенский monastery keeps her on 21 декабря ст. ст. as «Блгв. кн. Иулиании Вяземской (1406)», and its two life pages for her agree on the story. She was the wife of Simeon Mstislavich, prince of Vyazma. When the Lithuanian prince Vitovt took their lands, her husband shared the exile of Yury Svyatoslavich, prince of Smolensk, and the Moscow prince Vasily Dmitrievich gave the two exiled princes the Tver town of Torzhok to hold.
+
+There Yury was taken with Juliana's beauty and tried by every means to draw her into adultery, and she kept her husband's bed strictly. At a feast Yury killed her husband, hoping afterwards to take her by force. She resisted him and struck him with a knife; the enraged prince had her hands and feet cut off and her body thrown into the river Tvertsa. The calendar's life puts her death in the winter of 1406. Yury fled to the Horde, found no rest there, and withdrew to a monastery, where he died in 1408 in penitence.
+
+In the spring her body was seen in the Tvertsa, carried upstream against the current, and a sick man heard a voice bidding him gather the clergy and bury her by the southern doors of the cathedral at Torzhok; he was healed in that moment, and many were healed at her burial. Her coffin was afterwards set in the Transfiguration cathedral, a side chapel was dedicated to her there in 1819, and a church was consecrated in her name over her earlier tomb in 1906. The relics were kept in the church of the Archangel Michael until 1930, after which, the page says, nothing is known of them.
+
+*After the Православный церковный календарь of the Сретенский monastery for 21 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261221.html) and [the life](https://days.pravoslavie.ru/Life/life3161.htm), with [a second reading](https://days.pravoslavie.ru/Life/life6658.htm) on the same index; read 13 October 2026.*
