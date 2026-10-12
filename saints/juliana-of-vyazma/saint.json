@@ -1,0 +1,94 @@
+{
+  "slug": "juliana-of-vyazma",
+  "display_name": "Juliana of Vyazma",
+  "names": [
+    {
+      "form": "Иулиания, княгиня Вяземская и Новоторжская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 декабря ст. ст., «Благоверная Иулиания, княгиня Вяземская и Новоторжская», with the rank word «Благоверная» left off. The day's own line declines the forename and gives only «Иулиании Вяземской»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "princess",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1406,
+      "latest": 1406,
+      "display": "1406",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life page for her: «Мученичество святой Иулиании совершилось зимой 1406 года.» The day's own line closes with the same year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Блгв. кн. Иулиании Вяземской (1406).»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "note": "Her life page and her name page both list a second day, «2 июня (обретение мощей)», the finding of her relics; it is recorded here and the folder does not render on it. The day page's hymns head her as «праведной Иулиании Новоторжской», the other half of the title her name page gives her, and not as «Вяземской»."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 ianuarie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Ιανουαρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 January 2026 (13 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Благочестно в законе поживши/ и благими делы украсившися,/ яко крепкий адамант, явися,/ целомудренная святая благоверная княгине Иулиание,/ тленную славу и добротство телесное презревши,/ злокозненнаго врага победила еси,/ целомудрия ради мученическую смерть прияла еси./ Сего ради от Христа Бога нетленным и вечным венцем венчавшися,/ ныне с лики мученик ликуеши/ и нам велия чудеса, приходящим ко гробу твоему,/ обильно источавши./ Темже ти вопием:/ молися Христу Богу о всех нас,/ верою и любовию страдания твоя почитающих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Тропарь праведной Иулиании Новоторжской»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived devoutly in the law and adorned yourself with good works, you were shown to be a hard adamant, O chaste and holy right-believing princess Juliana. Despising perishable glory and the comeliness of the body, you overcame the cunning enemy and for chastity's sake accepted a martyr's death. Crowned therefore by Christ God with an incorruptible and everlasting crown, you now rejoice with the ranks of the martyrs and pour out great wonders in abundance on us who come to your tomb. And so we cry to you: pray to Christ God for all of us who honour your sufferings with faith and love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Воспоем днесь Благодетеля всех Бога,/ прославльшаго в России Иулианию Богомудрую,/ да молитвами ея подаст душам нашим/ грехов оставление и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Кондак праведной Иулиании Новоторжской»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing today of God the Benefactor of all, who has glorified Juliana the wise in God in Russia, that by her prayers He may grant to our souls the forgiveness of sins and great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -12,6 +12,11 @@
       "form": "Προκόπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Νοεμβρίου, «Όσιος Προκόπιος της Βιάτκα ο δια Χριστόν σαλός», with the rank word, the place and the epithet left off. The page prints no Russian form of the name."
+    },
+    {
+      "form": "Прокопий Вятский, Христа ради юродивый",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 декабря ст. ст., «Прокопий Вятский, Христа ради юродивый». The day's own line declines the forename and sets the epithet after it."
     }
   ],
   "images": [
@@ -42,8 +47,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Преставление блж. Прокопия, Христа ради юродивого, Вятского (1627).»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "note": "This Russian day, 21 декабря, is the day saint.gr's own life names for his repose while keeping him on 21 Νοεμβρίου; the discrepancy recorded in the Greek row is therefore a discrepancy within saint.gr and not between the two calendars. His name page 1842 and his life page give «21 декабря» as his only day."
     },
     {
       "church": "romanian",
@@ -73,5 +88,87 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже на земли Христа ради волею в буйство преложися,/ и мира сего красоты отнюд возненавиде,/ и плотская играния увядив постом и жаждою/ и на земли леганием,/ от зимы студению и мразом,/ и от зноя солнечнаго и дождя/ и прочия тяготы никогда же уклонися под кров,/ и на теле своем не имея одеяния,/ Божиею помощию покрываем,/ и душу очистил еси добродетельми своими, яко злато в горниле,/ Прокопие премудре,/ с верою творящим память твою честно/ и усердно притекающим к мощем твоим,/ прославляюще твое святое успение,/ Христу Богу молися, благоюроде,/ да избавит ны Господь от варварскаго нашествия и междоусобныя брани/ и мир мирови дарует/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Тропарь блаженного Прокопия»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who on earth turned willingly to foolishness for Christ's sake, and utterly hated the beauties of this world, and withered the sportings of the flesh with fasting and thirst and with lying upon the ground, and never once turned aside under a roof from the cold and frost of winter, nor from the heat of the sun, nor from the rain, nor from the rest of its hardships, having no clothing on your body and covered by the help of God: you cleansed your soul also by your virtues, like gold in the furnace, O most wise Procopius. Pray to Christ God, O blessed fool, for those who keep your memory in faith and honour and who come eagerly to your relics, glorifying your holy repose, that the Lord may deliver us from the invasion of the barbarians and from civil war, and grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Велию любовь ко Господу в себе имея,/ все претрудное житие твое/ во граде Хлынове, юродствуя, провел еси, блаженне Прокопие,/ зной и мраз, глад и жажду благодушно терпя,/ биение и поношение от людий безбожных/ радостно принимал еси, подвижниче добропобедный,/ любовию же и добром велиим за зло воздавая,/ мнозем предрекал еси их ожидающее/ и от недугов исцелял еси, беззлобие,/ тем же, наслаждался ныне в сонме святых,/ моли Господа помиловати град и люди, тя почитающия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Ин тропарь блаженного Прокопия»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having great love for the Lord within you, you passed the whole of your most laborious life in the city of Khlynov playing the fool, O blessed Procopius, bearing heat and frost, hunger and thirst with a good will, and receiving with joy the beatings and the reproach of godless men, O well-conquering ascetic. Repaying evil with love and with great kindness, you foretold to many what awaited them and healed them of their sicknesses, O guileless one. Delighting now in the company of the saints, pray to the Lord to have mercy on the city and the people who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Ангельски живя на земли богоугодно,/ многия скорби и труды терпеливо неся,/ добродетельми и дарованиями от Бога украсився,/ предвещая грядущая и исцеляя болезни,/ безмолвно, непрестанно моляся,/ юродствуя, скрыв дарования своя,/ ныне наслаждался в селениих святых,/ святый блаженне Прокопие,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Ин тропарь блаженного Прокопия»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Living on earth as an angel and in a way pleasing to God, bearing many sorrows and labours patiently, adorned with virtues and with gifts from God, foretelling things to come and healing diseases, praying in silence and without ceasing, and hiding your gifts by playing the fool: delighting now in the dwellings of the saints, O holy and blessed Procopius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Возбранному и дивному в праведницех мужу,/ волею во юродство претворившуся,/ мира сего красоты возненавидел еси,/ плотская мудрования увядил еси постом и жаждею,/ студению мраза, снега, и зноя, и дождя,/ и от прочил воздушныя тяготы никогда же уклонися/ и очистил еси себе, яко злато в горниле, Прокопие блаженне,/ всей Вятской земли похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Кондак блаженного Прокопия»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To the man unconquerable and wondrous among the righteous, who turned himself willingly to folly: you hated the beauties of this world, you withered the reasonings of the flesh with fasting and thirst, with the cold of frost and snow and with heat and rain, and you never turned aside from the rest of the hardships of the open air, and you cleansed yourself like gold in the furnace, O blessed Procopius, the praise and the strength of all the land of Vyatka.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Многою любовию к Богу пламенея,/ любви и смирению людей безмолвно учил еси,/ деянием будущая являя,/ недуги и болезни целил еси./ На путь спасения нас настави,/ от язв греховных исцели,/ Прокопие блаженне,/ о всех нас Христа Бога моли.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 декабря ст. ст. — «Ин кондак блаженного Прокопия»",
+        "url": "https://days.pravoslavie.ru/Days/20261221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Burning with much love for God, you taught men love and humility in silence, showing things to come by your deeds, and you healed infirmities and diseases. Guide us on the way of salvation, heal us of the wounds of sin, O blessed Procopius, and pray to Christ God for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

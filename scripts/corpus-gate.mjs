@@ -122,6 +122,10 @@ for (const { slug, saint } of corpus) {
  * set, and a reading that no longer names everyone it folds is worse than none.
  */
 const READ_FOLDS = {
+  'сергии цветков sergius-tsvetkov sergius-tsvetkov-21-december':
+    'Two men, read on the Russian 21 December. days.pravoslavie.ru gives each his own numbered name page: 10800, «Сергий (Цветков), иерей, сщмч.», a priest kept on 9 марта ст. ст. and dying in 1938, and 14499, «Сергий (Цветков), диакон, сщмч.», a deacon kept on 21 декабря ст. ст. and dying in 1937. The grade, the year and the day all differ; the name does not, which is why the later slug carries its day. Not a duplicate.',
+  'sergius tsvetkov sergius-tsvetkov sergius-tsvetkov-21-december':
+    'Two men, read on the Russian 21 December. days.pravoslavie.ru gives each his own numbered name page: 10800, «Сергий (Цветков), иерей, сщмч.», a priest kept on 9 марта ст. ст. and dying in 1938, and 14499, «Сергий (Цветков), диакон, сщмч.», a deacon kept on 21 декабря ст. ст. and dying in 1937. The grade, the year and the day all differ; the name does not, which is why the later slug carries its day. Not a duplicate.',
   'марков михаил michael-markov michael-markov-27-february':
     'Two men, two numbered name pages, two days. 14269 «Михаил (Марков), иерей, сщмч.» is the priest kept 3 июня ст. ст., which is the folder michael-markov; 14231 «Михаил (Марков), псаломщик, мч.» is the psalmist dead 1938 and kept 27 февраля ст. ст. Different office and different rank on the calendar itself. Read 13 October 2026.',
   'markov michael michael-markov michael-markov-27-february':
