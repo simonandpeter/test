@@ -1,0 +1,70 @@
+{
+  "slug": "galaction-novikov",
+  "display_name": "Galaction (Novikov)",
+  "names": [
+    {
+      "form": "Галактион (Новиков)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9204, «Галактион (Новиков), иеромонах, сщмч.», with the grade and rank words left off. The day line declines the forename and prints no surname. No other folder in this corpus holds this surname with this forename."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Сщмчч. Сергия, Михаила и Сергия пресвитеров, Никифора диакона и прмчч. Галактиона и Гурия, мч. Иоанна (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "AN ENUMERATED COMPANY — seven names in one line under one year, and this folder is one of the seven. His own place in it is «прмчч. Галактиона и Гурия». The other six are in this folder’s `related`, both ways. His name page gives him «сщмч.», a hieromartyr, where the day line gives «прмч.»: two readings of one death, a monk in orders put to death, and this folder follows the day line and records the other here rather than choosing between them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 decembrie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Δεκεμβρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 December 2026 (13 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the line closes with for all seven men it names, and the only year this calendar gives him. Neither the line nor the name page gives a day or a month of death."
+    }
+  },
+  "related": [
+    "sergius-uspensky",
+    "michael-uspensky",
+    "sergius-goloshchapov",
+    "nicephorus-litvinov",
+    "gurias-samoilov",
+    "john-demidov"
+  ],
+  "office": "Hieromonk",
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Φιλοθέα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Οσία Φιλοθέα η Παρθενομάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Филофея Румынская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 7 декабря ст. ст., «Филофея Румынская, мц.», with the rank word left off. The calendar gives her the country and not the city: the folder's Romanian form is «Filofteia de la Curtea de Argeș», where her relics lie. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "female",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Мц. Филофеи (1060) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "The same woman and the same menologion day the Romanian row already keeps. The calendar's own «(Рум.)» marks the entry as a Romanian saint, and its name link reads «Филофея Румынская, мц.», Philothea the Romanian, martyr — «мц.» is the `martyr` this folder already holds, and `types` are untouched. No life page stands behind the line: the line and the name link are all there is here."
     },
     {
       "church": "romanian",
@@ -85,5 +100,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1060,
+      "latest": 1060,
+      "display": "1060",
+      "basis": "traditional",
+      "note": "The year the day line closes with for 7 декабря ст. ст., «(1060)». It is the first year of any kind this folder has carried: the Romanian and the Greek lines that made it gave none, and no life page stands behind this one to confirm it, so the basis is traditional and the year is this calendar's. Read 13 October 2026."
+    }
+  }
 }

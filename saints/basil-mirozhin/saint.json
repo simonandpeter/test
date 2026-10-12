@@ -1,0 +1,65 @@
+{
+  "slug": "basil-mirozhin",
+  "display_name": "Basil (Mirozhin)",
+  "names": [
+    {
+      "form": "Василий (Мирожин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14495, «Василий (Мирожин), протоиерей, сщмч.», with the grade and rank words left off. The day line declines the forename and prints no surname. No other folder in this corpus holds this surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Сщмчч. Петра и Василия пресвитеров (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "His line is «Сщмчч. Петра и Василия пресвитеров (1941).», and his place in it is the second of the two men his line names, and his line closes the day, under the rank «сщмч.», a hieromartyr, with the grade «пресвитеров», presbyters."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 decembrie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Δεκεμβρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 December 2026 (13 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "traditional",
+      "note": "The year his line closes with, and the only year this calendar gives him. Neither the line nor the name page gives a day or a month of death."
+    }
+  },
+  "related": [
+    "peter-krestov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

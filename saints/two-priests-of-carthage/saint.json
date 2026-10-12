@@ -6,6 +6,11 @@
       "form": "Δύο Ιερείς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιοι Δύο Ιερείς», with the rank word left off."
+    },
+    {
+      "form": "Мученики 62 иерея и 300 мирян, в Африке от ариан пострадавшие",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page and life page for 8 декабря ст. ст., kept whole because it is the whole company's name and this company has no personal one: the calendar counts the priests and the laymen and names nobody. The form covers all three of the folders this line is read onto, which is why each of the three carries it; what distinguishes this folder inside it is the two of the sixty-two whom the life page says were burned."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Мчч. 62-х иереев и 300 мирян, в Африке от ариан пострадавших (477).»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "note": "**ONE RUSSIAN LINE, THREE EXISTING FOLDERS.** This folder is the two priests who were burned: the line counts sixty-two priests, and its life page says «Из 62 иереев двух сожгли, остальным отрезали языки» — two of them were burned and the rest had their tongues cut out. Those are the first two of the three groups the Ohrid Prologue counts in its own body for this same menologion day, „Два свештеника сажежена, шездесеторици језици одрезани“, which is where this folder and `sixty-priests-of-carthage` come from; the three hundred laymen are `three-hundred-martyrs-of-africa`. `dates` UNTOUCHED: the line's «(477)» falls inside the 474–484 this folder already holds out of two regnal brackets."
     },
     {
       "church": "romanian",

@@ -6,6 +6,11 @@
       "form": "Τριακόσιοι Μάρτυρες",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιοι Τριακόσιοι Μάρτυρες που μαρτύρησαν στην Αφρική», with the rank word left off."
+    },
+    {
+      "form": "Мученики 62 иерея и 300 мирян, в Африке от ариан пострадавшие",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page and life page for 8 декабря ст. ст., kept whole because it is the whole company's name and this company has no personal one: the calendar counts the priests and the laymen and names nobody. The form covers all three of the folders this line is read onto, which is why each of the three carries it; what distinguishes this folder inside it is the three hundred laymen the line counts after the priests."
     }
   ],
   "sex": "unknown",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Мчч. 62-х иереев и 300 мирян, в Африке от ариан пострадавших (477).»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "note": "**ONE RUSSIAN LINE, THREE EXISTING FOLDERS.** This folder is the three hundred: the line counts «300 мирян», three hundred laymen, which is the same word мирјана the Ohrid Prologue uses of them on this same menologion day, and its life page says they were the firmest in the true faith, gave themselves up voluntarily and were beheaded. The sixty-two priests of the same line are `sixty-priests-of-carthage` and `two-priests-of-carthage`, which the life page's own breakdown divides. `dates` UNTOUCHED: this folder holds Zeno's reign, 474–491, out of saint.gr, and the line's «(477)» falls inside it; the Russian life page brackets the same emperor «(474 - 491)», which is the first time a second book has repeated those exact bounds."
     },
     {
       "church": "romanian",

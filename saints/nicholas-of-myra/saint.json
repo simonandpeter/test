@@ -17,6 +17,11 @@
       "form": "Николај",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 6. децембар ст. ст., „Свети Николај Чудотворац, архиепископ мирликијски.“ — with «Свети» (“saint”), «Чудотворац» (the `wonderworker` grade BRIEF-SERBIAN §5 maps and `types` keeps) and «архиепископ мирликијски» (a rank and a see) all left off, which leaves the bare personal name. That stripping is the one this corpus has already made on him: the Greek form stored here is the bare «Νικόλαος», read off saint.gr’s «Άγιος Νικόλαος Αρχιεπίσκοπος Μύρων της Λυκίας, ο Θαυματουργός» with the Wonderworker taken off in the same way. The fold the bare string joins is keyed in `scripts/corpus-gate.mjs` at five members in this commit."
+    },
+    {
+      "form": "Николай Мирликийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 6 декабря ст. ст., «Святитель Николай Мирликийский, чудотворец», with the rank words at both ends left off. The line on the day page itself gives the name in the genitive with the see spelled out instead of the adjective."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 декабря ст. ст. — «Святителя Николая, архиепископа Мир Ликийских чудотворца (ок. 345).»",
+        "url": "https://days.pravoslavie.ru/Days/20261206.html",
+        "year": 2026
+      },
+      "note": "The whole of the day: this calendar prints one entry for 6 декабря ст. ст. and it is his, written out in full rather than abbreviated, which it does for no other saint in this reader’s range. The same man the Romanian, the Greek and the Serbian rows already keep on this menologion day, and the line gives him the same see and the same rank they do — «архиепископа Мир Ликийских», archbishop of Myra in Lycia, and «чудотворца», the wonderworker. `types` and `office` are untouched; the folder already holds all three readings."
     },
     {
       "church": "romanian",
@@ -82,10 +97,10 @@
   "dates": {
     "death": {
       "earliest": 330,
-      "latest": 343,
-      "display": "330–343",
+      "latest": 345,
+      "display": "330–345",
       "basis": "traditional",
-      "note": "**Two books thirteen years apart, and the interval holds both; it was a flat 330 before this reading.** saint.gr's head line reads «Αγιος Νικολαος Αρχιεπισκοπος Μυρων Της Λυκιας, ο Θαυματουργος (; - 330)» and the same page says «μετά την κοίμησή του το 330 μ.Χ.». The Охридски пролог за 6. децембар ст. ст. closes its entry „Упокојио се 6. децембра 343. године (в. 9. мај).“ — he reposed on 6 December 343. Both books agree that he was at the First Ecumenical Council of Nicaea, which was in 325, so neither year is impossible; nothing is chosen and the basis stays traditional. NO BIRTH YEAR: saint.gr puts his birth in the third century without a year and this book gives none at all."
+      "note": "**Three books, fifteen years apart at the widest, and the interval holds all three; it was 330–343 before this reading and a flat 330 before that.** saint.gr's head line reads «Αγιος Νικολαος Αρχιεπισκοπος Μυρων Της Λυκιας, ο Θαυματουργος (; - 330)» and the same page says «μετά την κοίμησή του το 330 μ.Χ.». The Охридски пролог за 6. децембар ст. ст. closes its entry „Упокојио се 6. децембра 343. године (в. 9. мај).“ — he reposed on 6 December 343. The Православный церковный календарь closes its one line for 6 декабря ст. ст. «(ок. 345)», about 345, and the «ок.» is the calendar's own hedge. All three books agree that he was at the First Ecumenical Council of Nicaea, which was in 325, so no one of the years is impossible; nothing is chosen and the basis stays traditional. NO BIRTH YEAR: saint.gr puts his birth in the third century without a year and neither of the other two gives one at all."
     }
   },
   "hymns": [
@@ -121,6 +136,38 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему/ Яже вещей Истина./ Сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче священноначальниче Николае,/ моли Христа Бога,// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 декабря ст. ст. — «Тропарь святителя Николая»",
+        "url": "https://days.pravoslavie.ru/Days/20261206.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Truth of things has shown you to your flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore you have won the heights by humility and riches by poverty. Father and chief among priests, Nicholas, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "В Мирех, святе, священнодействитель показался еси,/ Христово бо, преподобне, Евангелие исполнив,/ положил еси душу твою о людех твоих/ и спасл еси неповинныя от смерти./ Сего ради освятился еси,// яко великий таинник Божия благодати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 декабря ст. ст. — «Кондак святителя Николая»",
+        "url": "https://days.pravoslavie.ru/Days/20261206.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In Myra, holy one, you were shown to be a celebrant of the holy mysteries; for having fulfilled the Gospel of Christ, venerable father, you laid down your life for your people and saved the innocent from death. Therefore you were sanctified as a great initiate of the grace of God.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [

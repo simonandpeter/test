@@ -16,6 +16,11 @@
       "form": "Сава Освећени",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 5. децембар ст. ст., „Преподобни Сава Освећени.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Освећени» is the Sanctified, the epithet and not a rank, and it is the whole of what tells him from the thirty-odd folders whose names fold to Sabbas; §6 asks for the fullest form the calendar gives. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Савва Освященный",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 5 декабря ст. ст., «Преподобный Савва Освященный», with the rank word left off. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 декабря ст. ст. — «Прп. Саввы Освященного (532).»",
+        "url": "https://days.pravoslavie.ru/Days/20261205.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry and the one the page marks with an all-night vigil. The same man the Romanian, the Greek and the Serbian rows already keep on this menologion day: «Освященного» is the Ηγιασμένος and the Освећени those rows carry, and the year the line closes with, (532), is this folder’s own lower bound. `dates` is left untouched: the folder holds 532–534 out of two books that give the same age at death two years apart, and a third book repeating one of the two is not a reason to choose between them."
     },
     {
       "church": "romanian",
@@ -162,6 +177,38 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Τῇ ὑπερμάχῳ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Савво, отче наш,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 декабря ст. ст. — «Тропарь преподобного Саввы»",
+        "url": "https://days.pravoslavie.ru/Days/20261205.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barrenness of the desert, and with sighings from the depths you made your labours bear fruit a hundredfold, and you became a lamp to the whole world, shining with wonders, Sabbas our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко от младенства Богу жертва непорочная/ принеслся еси добродетелию, Савво блаженне,/ садоделатель быв благочестия,/ темже был еси преподобных удобрение,/ гражданин же пустынный достохвален./ Темже зовем ти:// радуйся, Савво пребогате.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 декабря ст. ст. — «Кондак преподобного Саввы»",
+        "url": "https://days.pravoslavie.ru/Days/20261205.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Offered to God from infancy as a blameless sacrifice by your virtue, blessed Sabbas, you became a planter of godliness; and so you were the adornment of the venerable and a citizen of the desert worthy of all praise. Therefore we cry to you: Rejoice, Sabbas most rich.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

@@ -1,0 +1,94 @@
+{
+  "slug": "cyril-of-chelma",
+  "display_name": "Cyril of Chelma",
+  "names": [
+    {
+      "form": "Кирилл Челмогорский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 8 декабря ст. ст., «Преподобный Кирилл Челмогорский», with the rank word left off; both of its life pages head him in the same words. The line on the day page itself gives the name in the genitive. No other folder in this corpus holds this epithet."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "preacher"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Прп. Кирилла Челмогорского (1368).»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "note": "The fifth of the day's six entries, and the day's only saint of the Russian north. `preacher` is read and not assumed: both life pages open by calling him «просветитель чуди», the enlightener of the Chud, and both say his mild instruction brought many of them to baptism. The calendar gives him no see and no grade in orders, so he takes no `office`."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 decembrie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Δεκεμβρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 December 2026 (13 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1368,
+      "latest": 1368,
+      "display": "1368",
+      "basis": "traditional",
+      "note": "The year the day line closes with for 8 декабря ст. ст., «(1368)». Both life pages give an age and a span instead of a year — fifty-two years on Mount Chelma and a death in deep old age at eighty-two — and neither of those is subtracted from the year to make a birth, which is this corpus's habit with an age. Read 13 October 2026."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Днесь возсия нам пресветлая память твоя, славне/ яко солнце светозарное,/ лучами благодати озаряющи весь мир/ и тьму нощи злых духов и от нас отгоняющи./ Днесь Небесныя силы святых Ангел, и мирской народ,/ и души праведных мысленно торжествуют, радующеся,/ днесь и мы, грешнии, припадающе, молимся;/ отче преподобне Кирилле,/ Христа Бога моли непрестанно/ спасти град и люди,/ иже любезно тебе почитающия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Тропарь преподобного Кирилла Челмогорского»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today your most radiant memory has dawned upon us, glorious one, like the sun in its brightness, lighting the whole world with the rays of grace and driving the night-darkness of the evil spirits away from us. Today the heavenly powers of the holy angels, and the people of the world, and the souls of the righteous keep festival in spirit and rejoice; today we sinners also fall down and pray: venerable father Cyril, pray without ceasing to Christ God to save the city and the people who honour you with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "От юности, преподобне, вся оставль житейская, красная же и лепотная,/и в пустыню вселився, усердно последовал еси Звавшему тебе, преблаженне,/ в трудех же и постех, отче, тело свое изнурил еси,/ отонюдуже тя пастыря Своим овцам добре устрояет всебогатый Господь,/ Кирилле чудодейственниче, моли Христа Бога/ о приходящих с верою и просящих своих согрешений оставление даровати,/ чтущим любовию святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Кондак преподобного Кирилла Челмогорского»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From your youth, venerable one, you left behind everything of this life, all that is fair and comely, and settling in the wilderness you followed with zeal the one who had called you, most blessed father; and in labours and in fastings you wore your body out, and from there the Lord who is rich in all things set you well as a shepherd over his own sheep. Cyril, worker of wonders, pray to Christ God that forgiveness of their sins be granted to those who come in faith and ask for it, and who honour your holy memory with love.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

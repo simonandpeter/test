@@ -6,18 +6,35 @@
       "form": "Αντώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Δεκεμβρίου, «Όσιος Αντώνιος ο Νέος και θαυματουργός «ἐν Σιήσκῳ»», with the rank words left off. The by-names «ο Νέος» and «θαυματουργός» and the place «ἐν Σιήσκῳ» are left off the stored form."
+    },
+    {
+      "form": "Антоний Сийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 7 декабря ст. ст., «Антоний Сийский, иеромонах, прп.», with the grade and rank words left off. The folder's display name keeps the Greek calendar's transliteration of the same epithet, «Siesko»; the Russian spells it «Сийский», of the Siya. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "wonderworker"
+    "wonderworker",
+    "hieromonk",
+    "abbot"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr calls him a Russian venerable, so the Russian calendar is the one that would say most about him, and it has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Прп. Антония Сийского (1556).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "**The same man, and the Russian calendar supplies the whole of what saint.gr said it did not have.** The Greek entry this folder was made from is «Αντώνιος ὁ ἐν Σιήσκῳ», whom that page calls a Russian venerable and a wonderworker and of whose life it says in one sentence that it has no details; «Сийский» is that Σιήσκῳ, the Siya river of the far north, and this calendar's life page for 7 декабря ст. ст. gives the river, the island between it and the lakes, the monastery founded there, the abbacy and the year of death. The two books differ by one day and not by thirteen — the Greek keeps him on 6 December and this calendar on the Julian 7 — and each row keeps the day its own book gives, which is what the schema is for. `types_add` are read, not assumed: «иеромонах» off the name link for the hieromonk, and the life's «вновь принял игуменство» for the abbacy."
     },
     {
       "church": "romanian",
@@ -47,5 +64,81 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1556,
+      "latest": 1556,
+      "display": "1556",
+      "basis": "traditional",
+      "note": "The year the day line closes with for 7 декабря ст. ст., «(1556)», and the year its life page ends on: «благочестно управлял монастырем до своего преставления в 1556 году, когда ему было 79 лет» — he governed the monastery devoutly until his repose in 1556, when he was seventy-nine. The folder held no date at all: saint.gr said outright that it had no details of his life. NO BIRTH YEAR: the age at death is on the page and is deliberately not subtracted from the year to make one, which is this corpus's habit with an age. Read 13 October 2026."
+    }
+  },
+  "office": "Hieromonk",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Желанием духовным распалився/ и мятежи мирския отринув,/ ко единому же Богу любовию прилепился еси/ и, Того вседушне взыскуя,/ во внутреннюю пустыню отошел еси, при водах вселився,/ идеже во слезах и трудех пребывая многолетное время,/ в терпении мнозем житие Ангельское проходил еси/ в наставлении Божественнаго разума,/ и множество монахов собрал еси, мудре,/ ихже посещая, и не остави, Антоние преподобне, отче наш,/ Пресвятей Троице моляся/ от зол всяческих избавити и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Тропарь преподобного Антония Сийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Set alight with spiritual longing, you cast off the tumults of the world and clung in love to the one God alone; and seeking him with your whole soul you went away into the inner wilderness and settled by the waters, where you stayed many a year in tears and in labours and went through an angelic life in much patience, under the teaching of the divine understanding. You gathered a multitude of monks, O wise one; visit them, and do not leave them, Antony our venerable father, praying to the most holy Trinity to deliver us from all evils and to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Иже воистинну на земли тя Ангела/ и на Небеси человека Божия почтим,/ сию жизнь суетную оставль,/ яко воистинну преудобрен воин Христа Бога,/ на страсти душепагубныя подвизався в жизни сей суетней/ бдением и пощением,/ во всем быв образ своим учеником./ Темже бо в тя вселися Пресвятый Дух,/ Егоже действием светло украшен,/ но яко имея дерзновение ко Святей Троице,/ поминай святую обитель сию/ и стадо свое, еже собра, мудре,/ и не забуди, якоже обещася,/ посещай чад своих,/ Антоние преподобне, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Ин тропарь преподобного Антония Сийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "We honour you as truly an angel upon earth and a man of God in heaven; for leaving this vain life behind, like a soldier of Christ God made ready indeed, you contended in this vain life against the passions that destroy the soul, by vigil and by fasting, and in everything you were a pattern to your own disciples. The most Holy Spirit therefore came to dwell in you, and by his working you are brightly adorned. And since you have boldness before the Holy Trinity, remember this holy house and the flock you gathered, O wise one; and do not forget, as you promised, but visit your children, Antony our venerable father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От юности, преподобне, плоть твою в постех и молитвах истончил еси/ и, крест твой взем, Христу последовал еси./ Темже и к Вышним течение радостно совершил еси,/ идеже со всеми святыми Святей Троице предстоиши;/ и ныне, стадо твое посещая,/ поминай чтущих пресвятую память твою,/ да вси благодарив вопием ти:/ радуйся, Богомудре Антоние, наставниче пустынный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Кондак преподобного Антония Сийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From your youth, venerable one, you wore your flesh thin with fasting and with prayer, and taking up your cross you followed Christ. So you finished your course to the heights with joy, where you stand before the Holy Trinity with all the saints; and now, visiting your flock, remember those who honour your most holy memory, that we may all cry to you in thanksgiving: Rejoice, Antony wise in God, teacher of the wilderness.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Христа единаго вожделев,/ и к Тому любовию уязвився,/ и Тому неотложным путем последовал еси./ Всякое житейское наслаждение возненавидев,/ темже, яко второе солнце, чудесы сияя,/ и сего ради тя даром обогати Владыка,/ поминай нас, чтущих пресветлую память твою, да зовем ти:/ радуйся, Антоние, преподобне отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Ин кондак преподобного Антония Сийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring Christ alone, and wounded with love for him, you followed him by a road you would not leave. You hated every pleasure of this life, and so you shine with wonders like a second sun; and because of it the Master enriched you with the gift. Remember us who honour your most radiant memory, that we may cry to you: Rejoice, Antony our venerable father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

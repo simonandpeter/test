@@ -17,6 +17,11 @@
       "form": "Амвросије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. децембар ст. ст., „Свети Амвросије, епископ медиолански (милански).“ — with «Свети» (“saint”) and «епископ медиолански (милански)» left off, that being a rank and a see with the book’s own gloss on the see, all of which §6 keeps out of a stored form; so the bare personal name is the whole of the form, which is the same stripping the Greek «Αμβρόσιος» and the Romanian «Ambrozie» already stored here were made by. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Амвросий Медиоланский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 7 декабря ст. ст., «Святитель Амвросий, епископ Медиоланский», with the rank word left off and the see in its adjectival form as the link gives it. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Свт. Амвросия, еп. Медиоланского (397).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The same man the Romanian, the Greek and the Serbian rows already keep on this menologion day, with the same see — «еп. Медиоланского», bishop of Milan — and the year the line closes with, 397, is the year this folder already holds for his death. `types`, `office` and `dates` untouched."
     },
     {
       "church": "romanian",
@@ -158,6 +173,54 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Θείας πίστεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему/ Яже вещей Истина./ Сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче Амвросие,/ моли Христа Бога,// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Тропарь святителя Амвросия Медиоланского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Truth of things has shown you to your flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore you have won the heights by humility and riches by poverty. Father Ambrose, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Божественными догматы облистая,/ помрачил еси Ариеву прелесть, священнотаинниче и пастырю Амвросие,/ чудодействуя же силою Духа,/ страсти различныя яве исцелил еси, отче преподобне,// Христа Бога моли, спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Кондак святителя Амвросия Медиоланского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out with divine doctrines, you darkened the delusion of Arius, Ambrose, celebrant of the holy mysteries and shepherd; and working wonders by the power of the Spirit you openly healed sicknesses of many kinds. Venerable father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Изрядно слово жизни стяжав, отче мудре,/ не усумнеся высоты царския, богонаказательне царя обличи и умудрив./ Тем паче честне почтеся и людей своих паству к Богу настави./ Сего ради зовем ти:/ радуйся, Амвросие предивне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Ин кондак святителя Амвросия Медиоланского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained the word of life in full measure, wise father, you did not quail before the height of a throne, but with God's own chastening you rebuked an emperor and made him wise. For that you were honoured the more, and you led the flock of your own people to God. Therefore we cry to you: Rejoice, Ambrose most wonderful.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -186,6 +249,7 @@
     "gervasius-of-milan",
     "protasius-of-milan",
     "celsus-disciple-of-nazarius",
-    "bassian-of-lodi"
+    "bassian-of-lodi",
+    "anthousa-of-rome"
   ]
 }

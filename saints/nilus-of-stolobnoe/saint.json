@@ -11,6 +11,11 @@
       "form": "Нил Столбенски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 7. децембар ст. ст., „Преподобни Нил Столбенски.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Столбенски» is the island of Stolobnoe and not a rank, it is what tells him from the other Nilus folders, and §6 asks for the fullest form the calendar gives; the Greek form stored here is the bare «Νείλος» with the island taken off, so the two forms differ in exactly that and the fuller one is this book’s. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Нил Столобенский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 7 декабря ст. ст., «Преподобный Нил Столобенский», with the rank word left off. The folder's Serbian form spells the island «Столбенски» and this one «Столобенский». The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr calls him a Russian venerable, so the Russian calendar is the one that would say most about him, and it has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Прп. Нила Столобенского (1554).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and the same man and the same menologion day the Serbian row already keeps; the Greek row keeps him one day earlier, on 6 December, which is that calendar's own placement and is left as it stands. The year the line closes with, 1554, is the year this folder already holds for his death, read off the Ohrid Prologue. `types` and `dates` untouched."
     },
     {
       "church": "romanian",
@@ -71,5 +86,39 @@
       "basis": "traditional",
       "note": "Охридски пролог за 7. децембар ст. ст.: „Упокојио се и преселио у Царство Христово 1554. године.“ — he reposed and passed over into the kingdom of Christ in 1554. The first date of any kind this folder has carried: saint.gr names the island, the lake and the two by-names and gives no year at all, and this folder's `dates` was null before this reading."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко светильник всесветел,/ явился еси во острове Селигера езера,/ преподобне отче Ниле,/ ты бо, крест Христов от юности своея на рамо взем,/ усердно Тому последовал еси,/ чистотою Богови приближився,/ отонудуже и чудес дарованием обогатился еси./ Тем и мы, притекающе к раце мощей твоих, умильно глаголем:/ отче преподобне,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Тропарь преподобного Нила Столобенского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You appeared as a lamp giving light on every side upon the island of Lake Seliger, venerable father Nilus; for taking the cross of Christ on your shoulder from your youth you followed him with zeal, and drawing near to God by purity you were enriched from there with the gift of wonders. Therefore we too, running to the shrine of your relics, say with compunction: Venerable father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Отечества, преподобне, удалився,/ в пустыню вселился еси,/ и, на остров Селигера езера возшед,/ жестоко житие показал еси,/ и, многих добродетельми удивив,/ дарования чудес от Христа приял еси./ Поминай нас, чтущих память твою, да зовем ти:// радуйся, Ниле, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Кондак преподобного Нила Столобенского»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Going away from your own country, venerable one, you settled in the wilderness; and having come up onto the island of Lake Seliger you showed a hard way of life, and astonishing many by your virtues you received from Christ the gift of wonders. Remember us who honour your memory, that we may cry to you: Rejoice, Nilus our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
