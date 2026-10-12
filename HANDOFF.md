@@ -38,9 +38,22 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**The Russian reading wave, stopped 9 October 2026 at the author's word.**
-Nothing is in flight: no reader is running, no branch is unmerged, the tree is
-clean and `136b1f37` is green and deployed. `../ro-run/FINDINGS.md` is the
+**The Russian reading wave is running again, 13 October 2026.** 327 of 366 days
+carry somebody, up from 313. Two readers are out in their own worktrees on the
+Julian 9-11 and 15-19 December; they commit on their branches and the writer
+merges, verifies and pushes. `c7a43136` is green and deployed (1121 passed,
+4 flaky, all passing on retry).
+
+**Three of the thirty-nine empty days owe nothing and are not gaps**: Julian
+01-07 and 02-02, which enumerate nobody, and 02-29, which has no source page on
+any of the four hosts. Julian 06-30 is blocked on the ruling below rather than
+unread. What is actually owed is 01-27, 02-28, seven days in July, eight in
+August, 09-14 and seventeen in December.
+
+**20-27 February were read on 3 October and no writer ever applied them**, and
+that is the shape to look for before dispatching anyone: `.tmp/ru-drafts` holds
+494 files and a draft sitting there is not evidence of a day written. Measure
+with `node scripts/ship-gate-days.mjs` and compare. `../ro-run/FINDINGS.md` is the
 record, one section per merged wave with its verification; `../ro-run/BRIEF-RUSSIAN.md`
 and `BRIEF-ADDENDUM.md` are binding on the next reader. Measure the state with
 `node scripts/ship-gate-days.mjs`, never from here.
