@@ -1,0 +1,107 @@
+{
+  "slug": "pitirim-of-tambov",
+  "display_name": "Pitirim of Tambov",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Питирим Тамбовский",
+      "lang": "ru",
+      "note": "Name page 1801 of days.pravoslavie.ru is «Святитель Питирим, епископ Тамбовский» and his two life pages are headed «Святитель Питирим Тамбовский, чудотворец» and «Святитель Питирим, епископ Тамбовский»; «Святитель» and «епископ» are rank words and are stripped, and the see's adjective is kept in the form the life pages give it. `fk.mjs` on the stored string returns NONE; the bare «Питирим» was out of the question, `pitirim-of-perm` being a different bishop of the fifteenth century whom this saint's own life names."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1645,
+      "latest": 1645,
+      "display": "1645",
+      "basis": "attested",
+      "note": "His longer life on days.pravoslavie.ru: «родился в 1645 году в городе Вязьме», and the shorter one «родился 27 февраля 1645 (или 1644) года в городе Вязьме». The 1644 the second reading allows is recorded here and not written into the interval, the first reading giving 1645 flat and both pages agreeing that he died aged fifty-three in 1698."
+    },
+    "death": {
+      "earliest": 1698,
+      "latest": 1698,
+      "display": "1698",
+      "basis": "attested",
+      "note": "Both of his life pages give the year, the longer one with the day: «только 28 июля 1698 года, на праздник Смоленской иконы Божией Матери, архипастырь-подвижник предал блаженную душу свою в руце Божий», and the day line closes «(1698)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Свт. Питирима , еп. Тамбовского (1698).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The day's third entry. Index id1801 lists TWO readings of him, life6801 and life4321, and both were read; both head «День памяти: 28 июля», which is the day page's own day, so there is no second feast to note. No folder held him: `ls -d saints/pitirim*` returns only `pitirim-of-perm`, a bishop of Great Perm kept on the Julian 19 августа and named in this saint's own longer life as the likely reason his monastic name was chosen; a Cyrillic grep for «Тамбовский» over every `saint.json` returned nothing. `wonderworker` is the word his own life page's title gives him, «чудотворец». NO OFFICE WAS MINTED: the packs carry «Bishop» and not «Bishop of Tambov», so the see stands in the display name and in the life. NO `locations` WERE WRITTEN, though Vyazma and Tambov are both named plainly. TWO HYMNS TAKEN."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 10 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 10 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "pitirim-of-perm",
+    "procopius-of-decapolis",
+    "mitrophan-of-voronezh"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Веры и благочестия наставниче,/ Церкве светильниче, монашествующих образе,/ святителю Питириме премудре,/ стадо твое благочестно упасл еси/ и ко Христу привел еси,/ темже в Вышних венцем славы украшен,/ с нами на земли духом пребываеши, сияя чудесы./ Моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Тропарь святителя Питирима, епископа Тамбовского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Teacher of faith and of piety, lamp of the Church, pattern for those in the monastic life, O most wise hierarch Pitirim: thou didst shepherd thy flock in godliness and bring it to Christ, and therefore, adorned on high with a crown of glory, thou dwellest with us on earth in spirit, shining with wonders. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Монахов наставника изрядна и святителя всем людем милостива,/ чудотворца предивна и молитвенника о нас неусыпна,/ сошедшеся, воспоим Питирима, Тамбовский земли похвалу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Кондак святителя Питирима, епископа Тамбовского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "An excellent teacher of monks and a hierarch merciful to all the people, a most wonderful worker of miracles and an unsleeping intercessor for us: let us gather and sing of Pitirim, the boast of the land of Tambov.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

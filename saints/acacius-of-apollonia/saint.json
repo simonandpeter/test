@@ -10,13 +10,28 @@
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιουλίου, «Άγιος Ακάκιος», with the rank word left off. The page glosses the name from the privative and κακός, the man without malice and so the virtuous one."
+    },
+    {
+      "form": "Акакий Апамейский, Милетский",
+      "lang": "ru",
+      "note": "Name page 86 of days.pravoslavie.ru is «Акакий Апамейский, Милетский, мч.»; the grade is stripped and both epithets kept, that being the fullest form the calendar gives. «Апамейский» does not agree with the folder's own «of Apollonia», which came from saint.gr; the calendar's own words are stored and the disagreement is in this entry's row note. `fk.mjs` on the stored string returns NONE; the bare «Акакий» was out of the question, the corpus holding fourteen."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Мч. Акакия , иже в Милете Карийском (ок. 321).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry, and the same menologion day as the folder's Greek row, the only other it has. THE IDENTIFICATION IS A READING AND THE TWO SOURCES DISAGREE ABOUT HIS CITY, SO IT IS SET OUT HERE. The corpus holds fourteen men of this name; the folder's own greek note, written off saint.gr, says that this one alone of them comes from Apollonia, suffers under Licinius, BREAKS THE IDOLS AT MILETUS BY PRAYER and is buried at Synada, and that none of the other thirteen is kept on 28 July. This Russian line is on that same menologion day, says «иже в Милете Карийском», in Miletus of Caria, and gives «(ок. 321)», inside the reign of Licinius; the Miletus, the reign and the day are three agreements and they are what the row rests on. BUT name page 86 calls him «Акакий Апамейский, Милетский» — of APAMEA, not of Apollonia — and Apamea and Apollonia are not the same city. The folder was NOT renamed and nothing was reconciled; this is an open question for the author. NO `dates` WERE WRITTEN: the line's «(ок. 321)» would be this folder's first date of any kind and was declined. The reading life4325 was NOT opened. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

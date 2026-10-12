@@ -1,0 +1,63 @@
+{
+  "slug": "lupus-of-troyes",
+  "display_name": "Lupus of Troyes",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Луп",
+      "lang": "ru",
+      "note": "Name page 14901 of days.pravoslavie.ru is «Святитель Луп епископ Труа, епископ Труа, свт.» — THE PAGE PRINTS THE SEE TWICE AND THE RANK THREE TIMES, which is the source's own doubling and not a transcription slip. «Святитель», «свт.» and both «епископ Труа» are rank and see, and are stripped, and the bare forename is all that is left. `fk.mjs` on «Луп» returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 479,
+      "latest": 479,
+      "display": "479",
+      "basis": "attested",
+      "note": "The day line closes «(479)», which is the whole of what this source gives; no year of birth anywhere on it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Свт. Лупа , епископа Труа (479).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. «Свт.» and «епископа» are the `hierarch` and `bishop` written here; NO OFFICE WAS MINTED, the packs carrying «Bishop» and not «Bishop of Troyes», so the see stands in the display name. No folder held him: `ls -d saints/lup*` is empty. HE IS NOT NEW TO THE CORPUS'S PROSE, THOUGH: `palladius-of-scotland`'s life already names him, saying that in 429 pope Celestine sent him and Germanus of Auxerre to the British Isles against the Pelagians, and a `related` row was written in both directions in the same batch for that reason. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "palladius-of-scotland"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

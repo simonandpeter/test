@@ -6,6 +6,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Άγιος Γεώργιος Αρχιεπίσκοπος Λευκορωσίας», with the rank word and the see left off. The page gives his civil name too: «κατά κόσμο Γρηγόριος Ιωσήφοβιτς Κονίσκιυ»."
+    },
+    {
+      "form": "Георгий (Конисский)",
+      "lang": "ru",
+      "note": "Name page 15001 of days.pravoslavie.ru is «Святитель Георгий (Конисский), архиепископ Могилевский»; «Святитель» and «архиепископ» are rank words and are stripped, and «Могилевский» stands AFTER the rank word, qualifying the see rather than the name, so it is not kept — a reading, and it is recorded here as one. The surname in the parentheses stays. `fk.mjs` on the stored string returns NONE; the folder previously held only the Greek Γεώργιος and no Russian form at all."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Свт. Георгия , архиеп. Могилевского (1795).»",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry. THE FOLDER WAS REACHABLE ONLY BY A SLUG-STEM GREP: the day scan's held list does not print it, its one venerated row standing on the GREEK revised 13 February, and `ls -d saints/*koniss*` is what found it. «Свт.» and «архиеп.» are the `hierarch` and `archbishop` the folder's `types` already carry, and the line's «(1795)» agrees exactly with the death year the folder holds off saint.gr, so NO `dates` WERE CHANGED. THE TWO SOURCES NAME DIFFERENT SEES: the folder's office is «Archbishop of Belorussia», off saint.gr, and this line says «Могилевского», of Mogilev. NO OFFICE WAS CHANGED AND NONE MINTED — a «Bishop of Mogilev» string is four locale translations a reader should not invent, and which see is the right one for the display is an author question. There is no life page behind this line. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

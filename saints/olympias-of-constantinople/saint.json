@@ -16,6 +16,11 @@
       "form": "Олимпијада",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 25. јул ст. ст., „Св. Олимпијада ђакониса.“ — «Св.» is “saint” and «ђакониса» the grade, which is the `deaconess` in `types`, both left off by §6; the heading gives no by-name at all and «of Constantinople» in the display name is the corpus’s own. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so the bare form costs nothing here. The Serbian vernacular differs from the Greek Ολυμπιάδα and the Romanian Olimpiada this folder already holds, and nothing is transliterated."
+    },
+    {
+      "form": "Олимпиада Константинопольская",
+      "lang": "ru",
+      "note": "Name page 2633 of days.pravoslavie.ru is «Олимпиада Константинопольская, диакониса, дева»; the two rank words are stripped and the epithet kept, the day line itself giving «Олимпиады» with the rank alone. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "female",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Свв. жен Олимпиады диакониссы (409) и Евпраксии девы, Тавеннской (413).»",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "note": "The first woman of the day's second entry, a joint line for two, and the same menologion day as all three of the folder's other venerated rows. «диакониссы» is the `deaconess` the folder's `types` already carry; NO OFFICE WAS MINTED — «Deaconess» is one of the strings the locale packs do not hold, and the folder's `office` was empty and stays so. A YEAR DISAGREEMENT RECORDED AND CHANGED NOWHERE: this line gives «(409)» where the folder holds a death of 410 off the Ohrid Prologue and a `floruit` of 395 off saint.gr; one year apart, with nothing read to decide between them, so NO `dates` WERE CHANGED. The reading life4301 was NOT opened, the folder's life being already written. The day page prints no hymn under either woman's name."
     },
     {
       "church": "romanian",

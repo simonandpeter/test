@@ -12,13 +12,28 @@
       "form": "Μωησής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιουλίου, «Όσιος Μωησής ο θαυματουργός», with the rank word and the byname left off; the page spells the name this way in both its line and its head. It glosses it as a Hebrew word, the one saved out of the waters."
+    },
+    {
+      "form": "Моисей Печерский",
+      "lang": "ru",
+      "note": "Name page 1571 of days.pravoslavie.ru is «Преподобный Моисей Печерский»; «Преподобный» is a rank word and is stripped, and the epithet is kept. `fk.mjs` on the stored string returns NONE; the folder previously held only the Greek Μωησής and no Russian form at all."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The Lavra of the Caves is at Kyiv and the Russian calendar is very likely to keep him; that is a reading somebody must do, not an absence this row asserts."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Прп. Моисея , чудотворца Печерского (XIII-XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The day's ninth entry, and the same menologion day as the folder's Greek row, the only other it has. «Прп.» and «чудотворца» are the `venerable` and `wonderworker` the folder's `types` already carry. NO `dates` WERE WRITTEN: the line's «(XIII-XIV)» would be this folder's first date of any kind and this wave has declined to write a first date off a line's Roman numerals. The index id1571 was NOT opened, the folder's life being already written. TWO HYMNS TAKEN where the folder had none; BOTH ARE TITLED «в Дальних пещерах почивающаго», resting in the Far Caves, which the folder's own epithet does not say and which was not written into it — it is in the hymns' citations instead. The second hymn describes an iron belt and an iron cross he wore; that is a hymn and not a life and nothing was added to the life from it."
     },
     {
       "church": "romanian",
@@ -48,5 +63,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Велия исправления и крепкия подвиги во псалмопениих же и коленопреклонениих бесчисленных показавши и многими труды и чудодействии, богоносе Моисее, просиявый, моли Христа Бога во еже спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Тропарь преподобнаго Моисея, в Дальних пещерах почивающаго», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Showing great amendments and strong struggles in psalmody and in prostrations beyond counting, and shining with many labours and workings of wonders, O God-bearing Moses: pray to Christ God that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Являя твердую и неразоримую свою любовь ко Господу, поясом железным его ради поясался еси, к сему и крест железен присно на себе носил еси велий, преподобне Моисее, в коем стеснении сый, еже и делы ручными удручался еси, за еже велиими чудесы обогащася и Царствию Христову общник явлься, моли и нам в тожде вселитися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Кондак преподобнаго Моисея, в Дальних пещерах почивающаго», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Showing thy firm and indestructible love for the Lord, thou didst gird thyself with an iron belt for His sake, and beyond that thou didst always carry a great iron cross upon thee, O venerable Moses; and being in that narrowness, and wearing thyself out besides with the work of thy hands, thou wast therefore enriched with great wonders and shown to be a partaker of the kingdom of Christ. Pray that we too may dwell in it.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

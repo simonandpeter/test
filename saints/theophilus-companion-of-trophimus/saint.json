@@ -16,6 +16,11 @@
       "form": "Теофил",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 23. јул ст. ст., „Св. муч. Трофим и Теофил, и још тринаест с њима.“ — «Св.» is “saint” and «муч.» the rank, both left off by §6, and the heading is one rank over two bare forenames and a count, with no see, no city and no by-name among them, so the bare forename is the whole of the form; the companionship this corpus keeps in the English display name is no part of what the book calls him. The form is the nominative the heading itself prints. `foldchk.py` before the draft returned `[(’theophilus-of-selention’, ’sr’)]` — one folder, so this form makes a shared form where there was none, so the fold this makes is read in this batch’s commit message."
+    },
+    {
+      "form": "Феофил Ликийский",
+      "lang": "ru",
+      "note": "Name page 2262 of days.pravoslavie.ru is «Феофил Ликийский, мч.»; the grade is stripped and the epithet kept, the day line itself giving «Феофила» bare. `fk.mjs` on the stored string returns NONE; the bare «Феофил» was out of the question, the corpus holding several."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июля ст. ст. — «Мчч. Трофима , Феофила и с ними 13-ти мучеников (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260723.html",
+        "year": 2026
+      },
+      "note": "The second man of the day's second entry, and the same menologion day as the folder's Romanian and Serbian rows; the folder's Greek row stands on the revised 21 July and was NOT moved. The line's «(284-305)» is the reign of Diocletian the folder already holds as 284–304 off saint.gr, one year wider at the end, and NO `dates` WERE CHANGED. The thirteen companions the line counts are not named anywhere on the page, so no folder was made for any of them. The reading life4292 was NOT opened, the folder's life being already written. TWO HYMNS TAKEN, the day page's two blocks for this pair, stored in both folders."
     },
     {
       "church": "romanian",
@@ -87,5 +102,39 @@
       "basis": "traditional",
       "note": "saint.gr: «Οι άγιοι αυτοί, έζησαν στα χρόνια του αυτοκράτορα Διοκλητιανού (284 - 304 μ.Χ.)». The interval is that reign as the page prints it, which ends the reign in 304 where it is usually given as 305. The Romanian source the folder was built from named the reign and gave no years."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко воини, мученицы непобедимии,/ течением невозбранным в судилище неверных внидосте/ и веры ради многия муки претерпесте,/ Христа исповедающе Единаго со дерзновением./ Того молите, Трофиме и Феофиле с прочими,/ яко да тяготу страстей отложше,/ ваше ныне страдание поем, страстотерпцы непреоборимии.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июля ст. ст. — «Тропарь мучеников Трофима, Феофила и с ними 13-ти мучеников», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260723.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As soldiers, O unconquerable martyrs, you went into the judgement hall of the unbelieving by a course nothing could bar, and for the faith's sake you endured many torments, confessing Christ alone with boldness. Entreat Him, O Trophimus and Theophilus with the rest, that laying aside the weight of the passions we may sing today of your suffering, O passion-bearers who cannot be overcome.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы пришла нетленныя от Тебе, Бога нашего:/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июля ст. ст. — «Ин тропарь, общий, мучеников Трофима, Феофила и с ними 13-ти мучеников», глас 4; the page itself calls this one «общий», a common of martyrs, and it names no saint",
+        "url": "https://days.pravoslavie.ru/Days/20260723.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their sufferings have received incorruptible crowns from You, our God; for having Your strength, they cast down the tormentors and shattered also the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

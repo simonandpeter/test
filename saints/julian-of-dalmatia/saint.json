@@ -7,8 +7,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Мч. Иулиана (ок. 138-161).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry, and the same menologion day as the folder's Serbian row, the only other it has. The day line gives the forename alone; it is name page 1136, «Иулиан Далматский, Атинский, мч.», that names Dalmatia and so identifies him with this folder, and «Атинский» is a second epithet the folder does not carry and which was not written into it. «Мч.» is the `martyr` the folder already has. NO `dates` WERE WRITTEN: the line's «(ок. 138-161)» is the reign of Antoninus Pius and would be this folder's first date of any kind, and this wave has declined to write a first date off a calendar line. The reading life4323 was NOT opened, the folder's life being already written. THE FOLDER HELD NO NAME FORM IN ANY LANGUAGE before this row; this is its first. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
@@ -38,5 +48,12 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "names": [
+    {
+      "form": "Иулиан Далматский, Атинский",
+      "lang": "ru",
+      "note": "Name page 1136 of days.pravoslavie.ru is «Иулиан Далматский, Атинский, мч.»; the grade is stripped and both epithets kept, that being the fullest form the calendar gives, per BRIEF-RUSSIAN §2. `fk.mjs` on the stored string returns NONE; the bare «Иулиан» was out of the question."
+    }
+  ]
 }

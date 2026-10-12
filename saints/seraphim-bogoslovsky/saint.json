@@ -1,0 +1,98 @@
+{
+  "slug": "seraphim-bogoslovsky",
+  "display_name": "Seraphim (Bogoslovsky)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Серафим (Богословский)",
+      "lang": "ru",
+      "note": "Name page 9242 of days.pravoslavie.ru is «Серафим (Богословский), иеромонах, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Серафима». `fk.mjs` on the stored string returns NONE; the corpus holds `constantine-bogoslovsky`, `michael-bogoslovsky` and `nicholas-bogoslovsky`, three other forenames on other days."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "The day line closes «(1921)», one year for both men of the entry; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Прмчч. Серафима и Феогноста (1921).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The first man of the day's tenth entry, a joint line for two hieromonks. THE LINE AND THE NAME PAGE DISAGREE ABOUT THE GRADE: the line heads both «Прмчч.», venerable-martyrs, and name page 9242 grades him «сщмч.», hieromartyr. `venerable-martyr` is written from the line, `hieromonk` from the name page's rank, which is a fact and not a grade, and `hieromartyr` was NOT written. The reading life4747 stands behind the entry and was NOT opened. HE IS NOT NEW TO THE CORPUS'S PROSE: `evdokia-tkachenko`'s life names «the hieromonk Seraphim (Bogoslovsky) who was their spiritual father» among the sisters of the John and Mary convent at Stavropol in 1913, and a `related` row was written in both directions in the same batch for that reason. TWO HYMNS TAKEN, both joint to the pair; they call the two of them the God-given protectors of Alma-Ata and set their struggle in the mountains of the Tian Shan, and NEITHER A `location` NOR A LIFE SENTENCE WAS TAKEN FROM THEM, a hymn not being a life. THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "theognostus-29-july",
+    "evdokia-tkachenko"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Любве ради Христовы отечество свое оставльше, вся мира сего красная, яко скороисчезающая, презревше, горняго Иерусалима взыскующе, на горах Тянь-Шаня в подвизех благочестия Святую Троицу прославили есте. И венцами добропобеднаго мученичества украсившеся, граду Алма-Ате богодарованнии покровителие явилися есте, преподобномученицы Серафиме и Феогносте, Православия мужественнии исповедницы. Темже и мы, духовная чада ваша, любовию вопием: Слава Давшему вам крепость, Слава Венчавшему вас, Слава Подающему вами милости и исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Тропарь новомучеников и исповедников иеромонахов Серафима и Феогноста, в земле Казахской просиявших», глас 1; a joint hymn, naming both of them",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ you left your own country, and counting all the beauty of this world as a thing that quickly vanishes, you sought the Jerusalem on high and glorified the Holy Trinity by struggles of godliness in the mountains of the Tian Shan. And being adorned with the crowns of a victorious martyrdom, you were shown to be God-given protectors of the city of Alma-Ata, O venerable martyrs Seraphim and Theognostus, manful confessors of Orthodoxy. Therefore we also, your spiritual children, cry out in love: glory to Him who gave you strength, glory to Him who crowned you, glory to Him who through you grants mercies and healings.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Благое иго Христово на себе восприемше и легкое бремя Его любовию облобызавше, житием своим Агнца Божия проповедавше, за истину, радующеся, пострадали есте, и в покой Небесный прешедше, с лики святых Престолу Божию предстоите, преподобномученицы Серафиме и Феогносте, граду Алма-Ате испросите мира и всем чтущым вас велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Кондак новомучеников и исповедников иеромонахов Серафима и Феогноста, в земле Казахской просиявших», глас 2; a joint hymn, naming both of them. The page spells «всем чтущым вас» with ы, and the form is stored as it prints it",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking the good yoke of Christ upon yourselves and embracing His light burden with love, preaching the Lamb of God by your very life, you suffered rejoicing for the truth; and having passed over into the rest of heaven you stand with the choirs of the saints before the throne of God, O venerable martyrs Seraphim and Theognostus: ask peace for the city of Alma-Ata and great mercy for all who honour you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -17,6 +17,11 @@
       "form": "Прохор",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's first heading for 28. јул ст. ст., „Свети апостоли: Прохор, Никанор, Тимон и Пармен.“ — «Свети» is not a rank and «апостоли» is the `apostle` the folder already carries, so what the heading leaves is the bare forename, which is all it gives any of the four. Measured before it was written: `fk.mjs` returns no other holder of this string or of anything folding to it."
+    },
+    {
+      "form": "Прохор",
+      "lang": "ru",
+      "note": "Name page 1855 of days.pravoslavie.ru is «Святитель Прохор, епископ Никомидийский, апостол от 70-ти, сщмч.»; «Святитель», «апостол от 70-ти» and «сщмч.» are rank words and are stripped, and «Никомидийский» stands after «епископ», qualifying the see rather than the name, so the bare forename is all the calendar leaves. `fk.mjs` returns this same folder, which already stores the Serbian «Прохор»; no fold is widened."
     }
   ],
   "sex": "male",
@@ -98,13 +103,55 @@
         "text": "Revered deacons and eyewitnesses of the Word, you were shown by faith to be chosen vessels, Nicanor and Prochorus, Parmenas and glorious Timon; and so today we keep your sacred memory with gladness of heart, and call you blessed.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Тропарь апостолов», глас 3; a common of apostles, naming nobody, printed on the day of these four",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, entreat the merciful God, that He may grant the forgiveness of sins to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Диакони честнии,/ и самовидцы Слова,/ и сосуди избраннии явистеся веры,/ Никанор, Прохор, Пармен и Тимон, славнии,/ темже днесь священную память вашу празднуем,// в веселии сердца вас ублажающе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Кондак апостолов», глас 1; a joint hymn, naming all four of them",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be honoured deacons and eyewitnesses of the Word and chosen vessels of the faith, O glorious Nicanor, Prochorus, Parmenas and Timon; and therefore we keep your sacred memory today, blessing you with gladness of heart.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Апп. от 70-ти Прохора , Никанора , Тимона и Пармена диаконов (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The first of the four deacons of the day's second entry, and the same menologion day as all three of the folder's other venerated rows. «Апп. от 70-ти» and «диаконов» are the `apostle` and `deacon` the folder's `types` already carry, and name page 1855 calls him «епископ Никомидийский», the see the folder's office already names. NO `dates` WERE WRITTEN: the line's «(I)» would be this folder's first date of any kind, and this wave has declined to write a first date off a bare Roman numeral — the standing author question, and it falls the same way for all four deacons here. The reading life4320 was NOT opened, the folder's life being already written. TWO HYMNS TAKEN, both of them the day's joint blocks for the four and both stored in all four folders."
     },
     {
       "church": "romanian",

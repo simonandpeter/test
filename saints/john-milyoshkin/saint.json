@@ -1,0 +1,68 @@
+{
+  "slug": "john-milyoshkin",
+  "display_name": "John (Milyoshkin)",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Милёшкин)",
+      "lang": "ru",
+      "note": "Name page 9978 of days.pravoslavie.ru is «Иоанн (Милёшкин), мч.»; the grade is stripped and the surname kept, WITH ITS Ё, which is how the page spells it. The day line prints «Иоанна» three times over and gives no surname at all, so THE THREE NUMBERED NAME PAGES ARE WHAT MAKE THESE THREE MEN — 9976, 9978 and 9981, three surnames. `fk.mjs` on the stored string returns NONE and a Cyrillic grep for «Милёшкин» over every `saint.json` returns nothing."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)», one year for the whole company of eight; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Прмч. Василия , прмцц. Анастасии и Елены , мчч. Арефы , Иоанна , Иоанна , Иоанна и мц. Мавры (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The second of the three men the day's eleventh entry calls «Иоанна», in an ENUMERATED COMPANY OF EIGHT which BRIEF.md §4 makes eight folders. The line prints the forename three times and no surname; name pages 9976, 9978 and 9981 carry three different surnames, and that — not the day line — is what makes them three men and three folders. The line and his name page agree: «мч.» on both, with no rank in the church, so `martyr` is all that is written and NO `office` IS WRITTEN. THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind the entry, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. The day page prints no hymn under any of the eight names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 10 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 10 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "basil-erekaev",
+    "anastasia-kamaeva",
+    "elena-astashikina",
+    "arethas-eremkin",
+    "john-lomakin",
+    "john-selmanov",
+    "maura-moiseeva"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

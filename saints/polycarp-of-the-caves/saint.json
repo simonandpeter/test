@@ -11,6 +11,11 @@
       "form": "Поликарп Печерски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 24. јул ст. ст., „Преподобни Поликарп игуман Печерски.“, with «Преподобни» — the rank — and «игуман» — the grade, which is the `abbot` in `types` — both left off by §6. **«Печерски» IS KEPT AND IS THE WHOLE OF WHY THIS FORM LANDS IN NO FOLD**: the bare «Поликарп» is already held in sr by `polycarp-of-smyrna`. It is a toponymic by-name and not a see, he being an abbot and not a bishop, so §6 keeps it, and it is the fullest form this calendar gives him. The form is the nominative the heading itself prints. No Romanian, Greek or Russian form is written: none of those books was opened for him, and the Russian calendar is the one most likely to hold him, which is said in this batch’s commit message."
+    },
+    {
+      "form": "Поликарп Печерский",
+      "lang": "ru",
+      "note": "Name page 1812 of days.pravoslavie.ru is «Поликарп Печерский, архимандрит»; the rank is stripped and the epithet kept, the day line itself giving «Поликарпа» bare. `fk.mjs` on the stored string returns NONE — the folder's Serbian «Поликарп Печерски», one letter short of it, folds to a different key."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 24 июля ст. ст., which is the page for this menologion number. **This is the calendar most likely to hold him**, the Kyiv Caves being its own house and 1182 inside its range; the corpus already keeps `basil-of-the-kyiv-caves`, `nikon-of-the-kyiv-caves`, `theodosius-of-the-kyiv-caves` and others of that Lavra off that calendar, and none of them is this abbot. The Russian page itself was not opened."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Прп. Поликарпа , архим. Печерского (1182).»",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "note": "The day's third entry, and the same menologion day as the folder's Serbian row, the only other it has. «Прп.» is the `venerable` the folder already carries, and the year agrees exactly with the 1182 the folder holds off the Ohrid Prologue, so NO `dates` WERE CHANGED. The line grades him «архим.», archimandrite, where the folder's `types` say `abbot` and its `office` is empty: NO OFFICE WAS MINTED, an «Archimandrite» string being four locale translations a reader should not invent, and `abbot` was left as it stands. The reading life6803 was NOT opened, the folder's life being already written. TWO HYMNS TAKEN where the folder had none."
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Тезоименит званию твоему,/ яко многоплодное древо,/ насажден сый во обители Божия Матере,/ многая и чудная тщанием твоим исправления показавый,/ мудре Поликарпе,/ моли Христа Бога о нас,/ яко да и мы, многия плоды добродетелей Ему принесше, спасемся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Тропарь преподобного Поликарпа, архимандрита Печерского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearing a name that answers to thy calling, planted like a tree of many fruits in the monastery of the Mother of God, and showing by thy diligence many wonderful amendments, O wise Polycarp, pray to Christ God for us, that we too, bringing Him many fruits of the virtues, may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Яко преподобным Печерским совсельника/ и житий их в себе делом и писанием изобразителя неложна,/ вкупе же славы Небесныя с теми общника явльшагося,/ приидите, вернии, песньми священными преподобнаго Поликарпа ублажим, зовуще:/ радуйся, архимандритов Печерских похвало.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Кондак преподобного Поликарпа, архимандрита Печерского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a fellow-dweller with the venerable fathers of the Caves, and a truthful portrayer of their lives in deed and in writing, and as one shown to share with them the glory of heaven — come, O faithful, let us bless the venerable Polycarp with sacred songs, crying: rejoice, boast of the archimandrites of the Caves.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

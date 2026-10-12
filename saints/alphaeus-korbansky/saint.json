@@ -1,0 +1,61 @@
+{
+  "slug": "alphaeus-korbansky",
+  "display_name": "Alphaeus (Korbansky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "office": "Deacon",
+  "names": [
+    {
+      "form": "Алфей (Корбанский)",
+      "lang": "ru",
+      "note": "Name page 13754 of days.pravoslavie.ru is «Алфей (Корбанский), диакон, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Алфея диакона». `fk.mjs` on the stored string returns NONE, and a Cyrillic grep for «Корбанский» over every `saint.json` returns nothing; the two «Алфей» folders this corpus holds are the apostle and the companion of Zacchaeus, neither of them a modern deacon."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Сщмч. Алфея диакона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line says «диакона» and name page 13754 «диакон», which agree, so `deacon` and the office `Deacon` are both the source's own words. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: `ls -d saints/*korbansk*` is empty and the Cyrillic grep returns nothing. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 6 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 6 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

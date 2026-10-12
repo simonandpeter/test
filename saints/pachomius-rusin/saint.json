@@ -1,0 +1,63 @@
+{
+  "slug": "pachomius-rusin",
+  "display_name": "Pachomius (Rusin)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Пахомий (Русин)",
+      "lang": "ru",
+      "note": "Name page 9240 of days.pravoslavie.ru is «Пахомий (Русин), иеромонах, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Пахомия». `fk.mjs` on the stored string returns NONE; the corpus's `demetrius-rusinov` is a different surname as well as a different forename."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», one year for both men of the entry; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Сщмч. Алексия пресвитера, прмч. Пахомия (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "The second man of the day's twelfth and last entry. THE LINE AND THE NAME PAGE DISAGREE ABOUT THE GRADE: the line heads him «прмч.», venerable-martyr, and name page 9240 «сщмч.», hieromartyr — the third such disagreement on this one day. `venerable-martyr` is written from the line, `hieromonk` from the name page's rank, and `hieromartyr` was NOT written. NO `office` IS WRITTEN. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: `ls -d saints/*rusin*` returns only `demetrius-rusinov`. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 11 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 11 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "alexis-krasnovsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

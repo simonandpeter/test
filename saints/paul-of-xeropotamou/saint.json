@@ -16,6 +16,11 @@
       "form": "Павле Ксиропотамски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 28. јул ст. ст., „Преподобни Павле Ксиропотамски.“ — «Преподобни» is the rank `venerable`, which §6 keeps out of a stored form, and «Ксиропотамски», of Xeropotamou, is the by-name the heading gives him and is kept, §6 asking for the fullest form the calendar gives. The bare «Павле» was not even measured as a candidate: eleven folders share a bare «Петар» in this corpus and the brief names a bare Paul as the same hazard. Measured before it was written: `fk.mjs` returns no other holder of the full string."
+    },
+    {
+      "form": "Павел Ксиропотамский",
+      "lang": "ru",
+      "note": "Name page 10140 of days.pravoslavie.ru is «Павел Ксиропотамский, прп.»; the grade is stripped and the epithet kept, which is also what the day line itself prints. `fk.mjs` on the stored string returns NONE; the folder's Serbian «Павле Ксиропотамски» folds to a different key."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июля ст. ст. — «Прп. Павла Ксиропотамского (820).»",
+        "url": "https://days.pravoslavie.ru/Days/20260728.html",
+        "year": 2026
+      },
+      "note": "The day's eighth entry, and the same menologion day as all three of the folder's other venerated rows. «Прп.» is the `venerable` the folder already carries, and the line names Xeropotamou itself. NO `dates` WERE WRITTEN: the line's «(820)» would be this folder's first date of any kind and was declined, as everywhere in this wave — and it is the one of this day's declined years that is a flat date rather than a century or a reign, which is worth the author's eye. The reading life4326 was NOT opened, the folder's life being already written. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

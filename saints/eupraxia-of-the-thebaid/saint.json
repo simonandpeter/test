@@ -16,6 +16,11 @@
       "form": "Евпраксија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 25. јул ст. ст., „Преподобна Евпраксија девица.“ — «Преподобна» is the rank and «девица» the second rank, the `venerable` and the `virgin` in `types`, both left off by §6. The heading gives no by-name at all; «of the Thebaid» in the display name is the corpus’s own and the body says only Egypt. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so the bare form costs nothing. The Serbian vernacular differs from the Greek Ευπραξία and the Romanian Eupraxia this folder already holds, and nothing is transliterated."
+    },
+    {
+      "form": "Евпраксия Константинопольская, Тавенская, Младшая",
+      "lang": "ru",
+      "note": "Name page 2473 of days.pravoslavie.ru is «Евпраксия Константинопольская, Тавенская, Младшая, дева, прп.»; the two rank words are stripped and ALL THREE epithets kept, that being the fullest form the calendar gives, per BRIEF-RUSSIAN §2. The day line itself gives only «Евпраксии девы, Тавеннской». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "female",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Свв. жен Олимпиады диакониссы (409) и Евпраксии девы, Тавеннской (413).»",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "note": "The second woman of the day's second entry, and the same menologion day as all three of the folder's other venerated rows. «девы» is the `virgin` the folder's `types` already carry, and the line's «(413)» agrees exactly with the year the folder holds off the Ohrid Prologue, so NO `dates` WERE CHANGED. THE SOURCE SPELLS HER PLACE TWO WAYS AND BOTH ARE THE PAGE'S OWN: the day line has «Тавеннской», with a doubled н, and name page 2473 has «Тавенская» with a single one. The name page's spelling is what the stored form carries, the line's is quoted whole in this row's source text, and neither was reconciled. The folder's own epithet, «of the Thebaid», is from the earlier waves' sources and this calendar does not repeat it; nothing was renamed. The reading life4302 was NOT opened, the folder's life being already written. The day page prints no hymn under either woman's name."
     },
     {
       "church": "romanian",

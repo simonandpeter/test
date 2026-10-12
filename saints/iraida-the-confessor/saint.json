@@ -1,0 +1,58 @@
+{
+  "slug": "iraida-the-confessor",
+  "display_name": "Iraida",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Ираида",
+      "lang": "ru",
+      "note": "Name page 11755 of days.pravoslavie.ru is «Ираида, исповедница»; the rank is stripped and NOTHING ELSE IS LEFT — the calendar gives her no surname, no place and no epithet, on the line or on the name page, which is unusual for a twentieth-century entry and is the reason this form is bare. THE STRING IS NOT NEW: `fk.mjs` returns `raisa-of-alexandria`, which stores «Ираида» as the second of its two Russian forms for a virgin martyr of about 308 on the Julian 5 сентября, and the two-holder fold `ираида` is keyed in `scripts/corpus-gate.mjs` in the same commit as this folder."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1967,
+      "latest": 1967,
+      "display": "1967",
+      "basis": "attested",
+      "note": "The day line closes «(1967)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Св. Ираиды исп (1967).»",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "note": "The day's last entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line is quoted exactly as the page prints it, «исп» without its abbreviation point, which is the page's own spelling and not a transcription slip. The line and name page agree: «исп.» and «исповедница», a confessor, so `confessor` is the whole of her `types`, and NO `office` IS WRITTEN — the calendar gives her no rank in the church at all, and nothing read says whether she was a nun or a laywoman. `new-martyr` was NOT written: she died in 1967 and the calendar calls her a confessor. THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held her: `ls -d saints/iraida*` is empty, and the only Cyrillic «Ираида» in the corpus is a name form on `raisa-of-alexandria`, a martyr of about 308. The day page prints no hymn under her name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 7 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 7 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
