@@ -17,6 +17,11 @@
       "form": "Карион",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 5. децембар ст. ст., „Преподобни Карион и Захарија.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps, and the first of the two names taken, the heading giving the pair nothing but their bare forenames. `sr-foldpred.mjs` measured the folded string at 0 other holders, which is worth saying because `karion-the-martyr` carries the same English display name: that folder’s only form is the Greek «Καρίων» and no Serbian string folds against this one."
+    },
+    {
+      "form": "Карион Скитский, Египетский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 5 декабря ст. ст., «Карион Скитский, Египетский, прп.», with the rank word left off. The line on the day page itself gives the name in the genitive and no epithet at all."
     }
   ],
   "related": [
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 декабря ст. ст. — «Прпп. Кариона монаха и сына его Захарии, египтян (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261205.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop. AN ENUMERATED PAIR — two names in one heading, father and son, the same pair the Serbian row of this folder already carries on this menologion day. The son is this corpus’s `zacharias-son-of-carion`, and NO russian row is written for him from this day: he already holds a venerated russian row on the Julian 24 марта, where this same calendar keeps him as «Прп. Захарии монаха (IV)», and a second day on one church has no field in this schema. That reading is left for the author."
     },
     {
       "church": "romanian",
@@ -66,5 +81,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru closes the line with for 5 декабря ст. ст., «(IV)», and its life page opens «Преподобный Карион жил в одном из египетских скитов в IV веке». The folder held no date at all: neither saint.gr nor the Ohrid Prologue gave one. Read 13 October 2026."
+    }
   }
 }

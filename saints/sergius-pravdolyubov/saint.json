@@ -1,0 +1,62 @@
+{
+  "slug": "sergius-pravdolyubov",
+  "display_name": "Sergius (Pravdolyubov)",
+  "names": [
+    {
+      "form": "Сергий (Правдолюбов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9789, «Сергий (Правдолюбов), иерей, исп.», with the grade and rank words left off. The day line declines the forename and prints no surname. No other folder in this corpus holds this surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 декабря ст. ст. — «Св. Сергия исп., пресвитера (1950).»",
+        "url": "https://days.pravoslavie.ru/Days/20261205.html",
+        "year": 2026
+      },
+      "note": "The last clause of the day and the latest death on it. He is not called a martyr: the line gives «Св.» and the grade «исп.», a confessor, and his name page repeats «исп.», so this folder records a confessor and no martyrdom, and 1950 is a year of death and not of a killing."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 decembrie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Δεκεμβρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 December 2026 (13 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1950,
+      "latest": 1950,
+      "display": "1950",
+      "basis": "traditional",
+      "note": "The year the day line closes with, and the only year this calendar gives him. The line gives no day or month of death and the name page gives none either."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
