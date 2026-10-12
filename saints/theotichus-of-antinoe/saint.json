@@ -1,0 +1,63 @@
+{
+  "slug": "theotichus-of-antinoe",
+  "display_name": "Theotichus of Antinoë",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Феотих Антинойский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Феотих Антинойский, мч.»; the rank is stripped and the city kept. The day line declines the bare forename, «Феотиха». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 287,
+      "latest": 287,
+      "display": "287",
+      "basis": "attested",
+      "note": "The reading at /Life/life3117.htm: «мученики Ариан и Феотих – 4 марта 287 года». THE LINE’S OWN YEARS ARE BACKWARDS AND ARE NOT USED AS A RANGE: it closes «(286-251)», a later year before an earlier one, which cannot be an interval. The reading behind it gives two dates instead and they are what is recorded — «Мученики Филимон и Аполлоний скончались 16 марта 286 г., а мученики Ариан и Феотих – 4 марта 287 года». The defect is the source’s own, as `docs/CORPUS.md` §3 says such readings are."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 декабря ст. ст. — «Мчч. Филимона , Аполлония , Ариана и Феотиха (286-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20261214.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, a company of four of whom the corpus already held three. He is the fourth and he is new: `grep -ril 'Феотих\\|Theotich'` over every `saint.json` returns nothing. The reading behind the line places him exactly — «Среди телохранителей старшим был мученик Феотих», the senior of the bodyguards Arianus was baptised with — so he is a person and not a heading, and `martyr` is the line’s own «Мчч.». NO OFFICE IS WRITTEN: the reading makes him the senior of a governor’s bodyguard, which is not a church office and is not a word the locale packs read; it is said in the life instead. **AN OPEN QUESTION IS LEFT AND NOT DECIDED.** The corpus holds `evhie-14-december`, a bare Romanian line — doxologia’s «Sfântul Mucenic Evhie» for 14 decembrie with no life, no year, no place and no companions — and the four bodyguards of this reading are the four protectors the Greek calendar counts on the same day, so that folder could in principle be one of them. Nothing read links the two: «Evhie» is no transliteration of «Феотих» and neither page names the other. This folder is written because the name is absent from the corpus, and the question is named in the day’s report rather than settled here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 27 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 27 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 December 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "arianus-of-the-thebaid",
+    "philemon-the-flute-player",
+    "apollonius-the-reader"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

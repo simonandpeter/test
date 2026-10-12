@@ -16,6 +16,11 @@
       "form": "Калиник",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Тирс, Левкије и Калиник.“ — with «Свети мученици» left off and the last of the three bare forenames taken; the Caesarea of the display name is in the body, and «жрец идолски» is the station the body gives him and not part of a name. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Каллиник Кесарийский (Вифинский)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Каллиник Кесарийский (Вифинский), мч.»; the rank is stripped and both forms of the place kept, the parentheses being the page’s own. The day line declines the bare forename, «Каллиника». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. **THE OTHER TWO MEN OF THIS LINE WERE WITHHELD AND NOT UPGRADED, AND THE REASON IS NOT ABOUT THEM BUT ABOUT A RULING.** `thyrsus-of-caesarea` and `leucius-of-caesarea` already hold venerated russian rows on 14 августа ст. ст. — the calendar’s «Мчч. Фирса, Левкия, Короната и дружины их (249-251)» — and a saint who already holds such a row on another day is governed by an author question BRIEF-RUSSIAN §4 and BRIEF.md §4 answer differently, so nothing was written for either. This folder’s own russian row was `undocumented`, its 17 августа companion being Coronatus and not him, so there is no such question here. THE READINGS THIS ENTRY LINKS WERE NOT OPENED: this folder’s life is already written out of its other sources. The day page’s one kontakion is written here — see the hymn’s own note."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 декабря ст. ст. — «Мчч. Фирса , Левкия и Каллиника (249-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20261214.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -126,6 +141,22 @@
       },
       "english": {
         "text": "Coming together today, let us all acclaim and hymn the luminaries of the Church with sacred praises, as prize-winners of Christ our God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Благочестия веры поборницы,/ злочестиваго мучителя оплевавше,/ обличисте зверообразное его кровопролитие/ и победисте того яростное противление,/ Христовою помощию укрепляеми, Фирсе и Левкие,// с пострадавшими о нас молитеся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 декабря ст. ст. — «Кондак мучеников», глас 2. THE TEXT NAMES TWO OTHER MEN AND NOT HIM, and it is written here on purpose. It addresses «Фирсе и Левкие, с пострадавшими» — Thyrsus and Leucius, with those who suffered with them — and the day line that carries it names him third of exactly that company, as his own `related` rows to both men already do. It is the company’s kontakion and not another saint’s proper, which is the test `BRIEF.md` §4 sets. It is NOT written on the folders of the two men it names, because both already hold a venerated russian row on 17 августа ст. ст. and were withheld under the ruling named in this row’s note.",
+        "url": "https://days.pravoslavie.ru/Days/20261214.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O champions of the faith of piety, who spat upon the impious torturer, ye laid bare his beast-like shedding of blood and overcame his furious resistance, being strengthened by the help of Christ. O Thyrsus and Leucius, with those who suffered alongside you, pray for us.",
         "rendered": "site"
       }
     }
