@@ -11,6 +11,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Όσιος Αθανάσιος ο Ομολογητής της Μονής Παυλοπετρίου», with the rank words left off."
+    },
+    {
+      "form": "Афанасий Павлопетрийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 февраля ст. ст., «Преподобный Афанасий Павлопетрийский, исповедник», with the rank word and the title of confessor left off. The line on the day page gives only the forename in the genitive with an abbreviation for confessor, «Афанасия исп»."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 февраля ст. ст. — «Прп. Афанасия исп (821).»",
+        "url": "https://days.pravoslavie.ru/Days/20260222.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

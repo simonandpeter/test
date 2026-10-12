@@ -16,6 +16,11 @@
       "form": "Маврикије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 22. фебруар ст. ст., „Свети мученик Маврикије и седамдесет војника.“, with Свети, the rank word мученик and the company clause left off; Apamea, which the folder's English name carries, is in the body."
+    },
+    {
+      "form": "Маврикий Апамейский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 февраля ст. ст., «Маврикий Апамейский, мч.», with the rank word left off. The line on the day page itself gives the name in the genitive with the company, «Маврикия и 70-ти воинов»."
     }
   ],
   "sex": "male",
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 февраля ст. ст. — «Мчч. Маврикия и 70-ти воинов: Фотина, Феодора, Филиппа и иных (ок. 305).»",
+        "url": "https://days.pravoslavie.ru/Days/20260222.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -83,7 +97,7 @@
       "latest": 305,
       "display": "about 305",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 22 February: „Ови храбри Христови војини пострадаше око 305. године.“ The page says about the year 305, not 305, and it is the only source read for him that gives a year; the folder carried no dates at all before this reading."
+      "note": "days.pravoslavie.ru prints «(ок. 305)» after the company's names for 22 февраля ст. ст. The Romanian and Greek pages this record was first built from give no year."
     }
   }
 }

@@ -1,0 +1,66 @@
+{
+  "slug": "andrew-gnevyshev",
+  "display_name": "Andrew (Gnevyshev)",
+  "names": [
+    {
+      "form": "Андрей (Гневышев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 февраля ст. ст., which gives the calendar's own nominative «Андрей (Гневышев), мч.»; the rank word is left off. His life page heads him «Мученик Андрей (Гневышев), староста Никольской церкви» and gives the civil name in full as «Андрей Иванович Гневышев», with the patronymic, which is not part of the form stored here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 3 августа 1872 года в городе Бежецке в семье купца Ивана Гневышева»."
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's line for 22 февраля ст. ст. prints «Мч. Андрея (1941).», and its life for him gives the day: «Андрей Иванович Гневышев умер 7 марта 1941 года в Каргопольлаге Архангельской области»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 26 января (Новомуч.), 22 февраля» — a second memory with the synaxis of the new martyrs on 26 января, which the day page for 22 февраля ст. ст. does not repeat. Recorded here as a note. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 февраля ст. ст. — «Мч. Андрея (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20260222.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 7 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 March 2026 (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

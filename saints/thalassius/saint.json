@@ -16,6 +16,11 @@
       "form": "Таласије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 22. фебруар ст. ст., „Преподобни Таласије и Лимније.“, which gives the two bare forenames under one rank word and no epithet for either."
+    },
+    {
+      "form": "Фалассий Сирийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 февраля ст. ст., «Фалассий Сирийский, пустынник», with the rank word left off. The line on the day page gives the bare forename in the genitive with the company's epithet, «пустынников Сирийских»."
     }
   ],
   "sex": "male",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 февраля ст. ст. — «Прпп. Фалассия, Лимния и Варадата, пустынников Сирийских (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260222.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -83,11 +97,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 440,
-      "latest": 440,
-      "display": "440",
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 22 February dates his death inside the sentence about his companion: „По смрти светог Таласија 440. Лимније пређе ка светом Марону.“ The folder carried no dates at all before this reading."
+      "note": "days.pravoslavie.ru prints «(V)» after the three names for 22 февраля ст. ст., and its life opens «Преподобный Фалассий, пустынник Сирийский, жил в V веке»."
     }
   }
 }

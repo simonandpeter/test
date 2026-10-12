@@ -16,6 +16,11 @@
       "form": "Лимније",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 22. фебруар ст. ст., „Преподобни Таласије и Лимније.“, which gives the two bare forenames under one rank word and no epithet for either."
+    },
+    {
+      "form": "Лимний Сирийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 22 февраля ст. ст., «Лимний Сирийский, пустынник», with the rank word left off. The line on the day page gives the bare forename in the genitive with the company's epithet."
     }
   ],
   "sex": "male",
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 февраля ст. ст. — «Прпп. Фалассия, Лимния и Варадата, пустынников Сирийских (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260222.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -81,5 +95,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(V)» after the three names for 22 февраля ст. ст., and sets him in the same century as the Thalassius under whom it says he began."
+    }
   }
 }
