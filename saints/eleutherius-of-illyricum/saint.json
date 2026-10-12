@@ -17,6 +17,11 @@
       "form": "Елевтерије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 15. децембар ст. ст., „Свештеномученик Елевтерије.“ — with «Свештеномученик» left off, that being the `hieromartyr` grade §5 maps and `types` keeps, which leaves the bare forename. The heading offers nothing else at all: the see, Illyria and Valona are in the body, and no epithet is printed anywhere that could be stored instead. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN. `fk.mjs`, which imports the real `fold` from `scripts/corpus-index.mjs` and therefore sees bracket-hidden folds as well, puts the key `елевтерије` at NO other holder, so no READ_FOLDS key is written and the gate’s collision count does not move. THE HAZARD IS NAMED HERE FOR WHOEVER COMES NEXT: the corpus holds three other Eleutherius folders — `eleutherius-the-cubicularius`, who stands on this very menologion day from the Greek calendar, `eleutherius-disciple-of-dionysius` and `eleutherius-monk-martyr-1937` — and none of them has a Serbian form. A second reader writing the same bare «Елевтерије» onto any of them makes a two-member fold that neither commit will have keyed."
+    },
+    {
+      "form": "Елевферий Иллирийский, Римский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Святитель Елевферий Иллирийский, Римский, епископ, сщмч.»; the rank words and the grade are stripped and both epithets kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE LINE’S INTERVAL IS WIDER THAN THE FOLDER’S YEAR AND REPLACES NOTHING: days.pravoslavie.ru closes the line «(ок. 117-138)», which is the reign of Hadrian approximately and not a year of death, while the folder’s `dates` are the Ohrid Prologue’s stated year 120 and the disagreement with saint.gr already recorded there. The Russian reading is consistent with the folder’s year and narrower than nothing, so it is recorded in the life instead. The reading this calendar links behind the entry, `/Life/life3121.htm`, was NOT opened: it stands behind this man and his mother and the eparch alike, and this folder’s life is already written out of its other sources. The day page’s first two hymn blocks are titled «священномученика Елевферия», the hieromartyr, which is this bishop and not the cubicularius of the same name lower down the same day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Сщмч. Елевферия, матери его мц. Анфии и мч. Корива епарха (ок. 117-138).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -170,6 +185,38 @@
       },
       "english": {
         "text": "As the beauty of priests, O venerable one, and the spur of the prize-winners, we all acclaim you and ask of you, O hieromartyr Eleutherius: set free from manifold dangers those who keep your memory with longing, interceding unceasingly for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, богодухновенне,/ в видения восход,/ сего ради, слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Елевферие,/ моли Христа Бога,// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Тропарь священномученика Елевферия», глас 4. THIS IS A COMMON, the troparion of a hieromartyr bishop with his name set into it, and it is copied whole as the page has it because the page serves it under his name. It is the Church Slavonic of the Greek troparion «Καὶ τρόπων μέτοχος, καὶ θρόνων διάδοχος» this folder already carries from saint.gr.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in the ways of the apostles and successor to their thrones, O inspired of God, thou didst find in action the ascent to contemplation; wherefore, setting straight the word of truth, thou didst suffer even unto blood for the faith, O hieromartyr Eleutherius. Intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко удобрение священников, преподобне,/ и предувещание страстотерпцев вси восхваляем/ и просим тя, священномучениче Елевферие:/ любовию память твою празднующия/ бед многообразных свободи,// моля непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Кондак священномученика Елевферия», глас 2. His own proper, naming him twice over. It is the Church Slavonic of the Greek kontakion «Ὡς καλλονὴν τῶν ἱερέων Ὅσιε, καὶ προτροπὴν τῶν Ἀθλοφόρων» this folder already carries from saint.gr.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the adornment of priests, O venerable one, and the encouragement of the passion-bearers, we all praise thee and entreat thee, O hieromartyr Eleutherius: free from manifold afflictions those who keep thy memory with love, praying without ceasing for us all.",
         "rendered": "site"
       }
     }

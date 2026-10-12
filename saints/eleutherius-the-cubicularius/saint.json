@@ -6,6 +6,11 @@
       "form": "Ελευθέριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Ελευθέριος ο Κουβικουλάριος», with the rank word and the by-name left off. The page glosses the name itself, «Ο εραστής, κήρυκας και πρόμαχος της ελευθερίας»."
+    },
+    {
+      "form": "Елевферий Кувикуларий",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Мученик Елевферий Кувикуларий»; the rank word is stripped and the office-epithet kept as the calendar spells it, the day line itself declining the same two. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(IV)», the fourth century; this folder has no date from any source and NONE IS WRITTEN FROM A BARE CENTURY HERE, the Russian reading being the only one that gives one and the Greek having given none. He is NOT the Eleutherius of the day’s first line: that man is the hieromartyr bishop of Illyricum, whose mother and whose eparch the same line names, and the day page’s two Eleutherius hymns are titled «священномученика» for him. The reading this calendar links, `/Life/id758.htm`, is an INDEX and was NOT opened; this folder’s life is already written out of its other sources. Nothing on the day page is under this man’s name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Мч. Елевферия кувикулария (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -4,4 +4,6 @@ saint.gr's calendar for 15 December keeps Saint Coremmon the eparch, and its pag
 
 That is the whole of the entry. The page says nothing of where he came from or of what became of his household, and it gives him no year of his own: the only years in it are those of the reign in which it places his office. It names Rome and nothing else, and it prints no hymn for him, the hymns of the day standing on Eleutherius's page and naming Eleutherius.
 
-*After saint.gr's calendar for 15 Δεκεμβρίου — [the day](https://www.saint.gr/12/15/index.aspx) and [the life](https://www.saint.gr/3270/saint.aspx); read 2 October 2026.*
+The Russian calendar keeps him on 15 декабря ст. ст., the same menologion day as the Greek calendar here, and names him third of three in one line: «Сщмч. Елевферия, матери его мц. Анфии и мч. Корива епарха (ок. 117-138).» — the hieromartyr Eleutherius, his mother the martyr Anthia and the martyr Coremmon the eparch, about 117 to 138. That is the reign this folder already records for his office, given here as approximate, and it changes nothing. The calendar spells his name «Корив» and calls him Roman; the form is stored as the calendar has it and nothing is read out of the difference.
+
+*After saint.gr's calendar for 15 Δεκεμβρίου — [the day](https://www.saint.gr/12/15/index.aspx) and [the life](https://www.saint.gr/3270/saint.aspx); read 2 October 2026; and the Православный церковный календарь of the Сретенский monastery for 15 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261215.html), read 13 October 2026.*

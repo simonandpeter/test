@@ -1,0 +1,9 @@
+# Alexander (Rozhdestvensky)
+
+He was born on 11 August 1874 in the family of a priest of the Blagoveshchensky pogost, in the Molodoy Tud district of the Tver province, finished the theological seminary, and in 1902 was ordained priest to the church of his own native village. He served there until the persecutions of the nineteen-thirties began. In 1930 the authorities took everything he owned and then demanded that he pay his tax; left without means, he could not pay it, and for that he was sentenced in 1932 to two years in a corrective labour camp.
+
+When he came back he moved to the village of Pereslegino in the Vysokovsky district and served in the church there. On 21 December 1937 an officer of the district branch of the NKVD arrested him and questioned him the same day. The reading is plain about what the case was: there was nothing to charge him with, no evidence and no witness statements, so the investigator wrote the charges out himself to a template, confident he would find men willing to confirm whatever he had written.
+
+He was told that he had been carrying on counter-revolutionary work against the order of things in the USSR and supporting enemies of the people. He answered that he had conducted no agitation among the population and had spoken to nobody about enemies of the people, and that he had done no work of any kind with the parish council. Duty witnesses signed the investigator’s protocols the next day, the case was closed in two days, a troika of the NKVD sentenced him to be shot on 26 December, and on 28 December 1937 he was shot. He was numbered among the New Martyrs and Confessors of Russia at the Jubilee Council of Bishops in August 2000.
+
+*After the Православный церковный календарь of the Сретенский monastery for 15 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261215.html) and [the life](https://days.pravoslavie.ru/Life/life4730.htm); read 13 October 2026.*

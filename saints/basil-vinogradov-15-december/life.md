@@ -1,0 +1,11 @@
+# Basil (Vinogradov, 15 December)
+
+He was born on 24 June 1891 at Dubnikha, in the Tolmachevo volost of the Bezhetsk district of the Tver province, in a devout peasant family, and lived with his parents until he was fifteen. He finished the zemstvo school, and in 1907 entered the Solovetsky monastery, where he meant to stay for life. A grave illness took him home in 1913; he recovered, went back, and remained there until 1919, when the monastery began to be broken up. He was a psalm-reader from 1923, then a deacon, and then a priest.
+
+In May 1931, serving at Tolmachi, he was reported to the OGPU by the village policeman, whose rapport was a list of who had been at his lodging one evening — his sister, two nieces, a nun who kept watch in the church, a guest nobody knew, and some men from the neighbouring villages. That was enough. On 29 May he was arrested with a nun and a novice of a women’s monastery at Torzhok that had been closed, and shut in the Tver prison. Witnesses then gave the statements the investigator wanted: agitation against the collective farms, rumours of the fall of Soviet power, telling peasants to keep back their grain. The questioning of all the prosecution witnesses took two days, and he was brought up for interrogation on 2 July.
+
+He was arrested again in December 1937. The chairman of the collective farm, the chairman of the church council and the secretary of the village soviet were all questioned over two days, and none of them produced what was wanted: the first had heard no counter-revolutionary agitation from him and knew nothing of any anti-Soviet frame of mind. Questioned himself on 23 December, he said that he did not admit to agitation among the population and had held no conversations of that kind.
+
+The indictment was drawn up the next day and the case passed to a troika of the NKVD, which sentenced him to be shot on 26 December. He was shot on 28 December 1937, and was numbered among the New Martyrs and Confessors of Russia at the Jubilee Council of Bishops in August 2000.
+
+*After the Православный церковный календарь of the Сретенский monastery for 15 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261215.html) and [the life](https://days.pravoslavie.ru/Life/life4773.htm); read 13 October 2026.*

@@ -1,0 +1,68 @@
+{
+  "slug": "alexander-rozhdestvensky",
+  "display_name": "Alexander (Rozhdestvensky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Александр (Рождественский)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Александр (Рождественский), иерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "The reading at `/Life/life4730.htm`: «родился 11 августа 1874 года в семье священника Благовещенского погоста Молодотутского уезда Тверской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)» and the reading gives the day: «Еще через день, 28 декабря 1937 года, он был расстрелян.» That civil date is the Julian 15 декабря of this memory."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Сщмчч. Александра и Василия, Викторина пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "note": "The first of the three presbyters of the day’s last line, and the reading at `/Life/life4730.htm` is his alone and names neither of the others. NO `related` ROWS JOIN THE THREE MEN OF THIS LINE: the two readings the line carries each have their man arrested in his own district and interrogated alone, and the source nowhere says they suffered together, so sharing a line is not made into a relation here. No folder held him: `fk.mjs` on «Александр (Рождественский)» returns NONE. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. The day page carries eight hymn blocks and not one of them is under his name or the line’s."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 28 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 28 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

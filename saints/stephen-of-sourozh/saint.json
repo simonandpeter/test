@@ -11,6 +11,11 @@
       "form": "Стефан Сурожски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 15. децембар ст. ст., „Свети Стефан, исповедник сурожски.“ — with «Свети» left off, which §5 says is not a rank, and «исповедник» left off, that being the `confessor` grade §5 maps and which this upgrade puts into `types`. What is left is the forename and the see’s adjective, and that is the fullest form the calendar gives. TWO READINGS ARE IN THIS FORM AND BOTH ARE STATED. First, the toponymic adjective is CAPITALISED here, where the Prologue prints it lower case because it stands mid-sentence after the rank word; that is the habit this corpus’s own Serbian forms already keep — «Стефан Дечански», «Сава Сторожевски», «Тихон Задонски», «Серафим Саровски» — and the adjective is kept rather than dropped because dropping it would leave a bare «Стефан», which `fk.mjs` measures at a very large fold. Second, the adjective is a see and §6 says a see is stripped; it is kept because it is the whole of what tells this Stephen from the corpus’s other hundred and sixty, and because the alternative is that bare fold. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `стефан сурожски` at NO other holder."
+    },
+    {
+      "form": "Стефан Сурожский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Святитель Стефан Сурожский, архиепископ, исповедник»; the rank words are stripped and the epithet kept, the day line itself declining the forename, the grade and the see. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(VIII)», the eighth century, which is the century the folder’s `death` already holds as its last quarter from the Ohrid Prologue’s «крајем VIII века»; it is consistent and wider, so it replaces nothing. The reading this calendar links, `/Life/life3123.htm`, was NOT opened; this folder’s life is already written out of its other sources. The day page’s fifth and sixth hymn blocks are under his name, and THE TROPARION ADDRESSES HIM «священномучениче» WHILE ITS OWN TITLE CALLS HIM «святителя … исповедника», and the calendar’s line and name page call him confessor; the hymns are titled for him by name and see and are his, and the difference of title is the source’s own and is not resolved here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Свт. Стефана исп., архиеп. Сурожского (VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -76,5 +91,39 @@
   },
   "related": [
     "germanus-of-constantinople"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко святитель со Безплотными единожитель быв,/ священномучениче Стефане,/ восприем бо Крест яко оружие,/ и став крепко сопротив иконоукорителя и духоборцев,/ не покланяющихся пречистому образу Христа Бога нашего,/ и отсекл еси всяку ересь лукавых./ Того ради прием мучения венец,/ избавил еси град твой Сурож от всякия неприязни./ И ныне молим тя, святе,/ да избавиши нас от всяких злых искушений, и бед,/ и вечныя муки.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Тропарь святителя Стефана исповедника, архиепископа Сурожского», глас 4. His own proper: it names him, his see and the iconoclasm he stood against. Its body addresses him «священномучениче» where its title and the day line call him confessor, and both are left as the page has them.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a hierarch thou wast made a fellow-dweller with the bodiless powers, O hieromartyr Stephen; for taking up the Cross as a weapon thou didst stand firm against the reviler of icons and against those who fight the Spirit, who would not bow before the most pure image of Christ our God, and thou didst cut off every heresy of the evil-minded. Wherefore, having received the crown of suffering, thou didst deliver thy city of Sourozh from all enmity. And now we entreat thee, O holy one, deliver us from all evil temptations, and from troubles, and from eternal torment.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Вышняго силою, священне, укрепився,/ царева низложил еси иконоборная шатания;/ днесь Сурожу и нам верным предлежат/ слава и богатство — святыя твоя мощи,/ ихже свыше дароносят Ангельстии чинове,/ песньми и пением славословят тя,/ великий священный Стефане.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Кондак святителя Стефана исповедника, архиепископа Сурожского», глас 3. His own proper: it names him and his city and the relics kept there.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Strengthened by the power of the Most High, O sacred one, thou didst cast down the emperor’s iconoclast ragings; and today there lie before Sourozh and before us the faithful a glory and a treasure, thy holy relics, which the angelic orders bear as a gift from on high, and with hymns and singing they glorify thee, O great and sacred Stephen.",
+        "rendered": "site"
+      }
+    }
   ]
 }

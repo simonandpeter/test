@@ -1,0 +1,68 @@
+{
+  "slug": "basil-vinogradov-15-december",
+  "display_name": "Basil (Vinogradov, 15 December)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Виноградов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Василий (Виноградов), иерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. THE STORED STRING IS THE SAME AS `basil-vinogradov`’s, a different man, and `fk.mjs` returns that folder for it; the two are read apart in this folder’s russian attestation note and in `corpus-gate.mjs`’s `READ_FOLDS`."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "1891",
+      "basis": "attested",
+      "note": "The reading at `/Life/life4773.htm`: «родился 24 июня 1891 года в деревне Дубниха Толмачевской волости Бежецкого уезда Тверской губернии в благочестивой крестьянской семье»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)» and the reading gives the day: «Священник Василий Виноградов был расстрелян 28 декабря 1937 года.» That civil date is the Julian 15 декабря of this memory."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Сщмчч. Александра и Василия, Викторина пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "note": "The second of the three presbyters of the day’s last line, and the reading at `/Life/life4773.htm` is his alone and names neither of the others; no `related` rows join the three, for the reason given on his companion’s row. A SECOND MAN OF THE SAME NAME IS ALREADY IN THE CORPUS AND THESE ARE TWO MEN: `basil-vinogradov` is a LAYMAN martyr, «мч.», of a company of six kept on 24 сентября ст. ст., born in 1891 in the village of Ivantsevo and shot on 7 октября 1937, while this man is «иерей, сщмч.», a PRIEST, born on 24 июня 1891 at Dubnikha in the Tver province and shot on 28 декабря 1937. The two years of birth agree and nothing else does; neither reading mentions the other man. The slug therefore carries the day, as `alexander-parusnikov-14-june` does, and the shared `ru` form is recorded in `corpus-gate.mjs`’s `READ_FOLDS`. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 28 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 28 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

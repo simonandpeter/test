@@ -11,6 +11,11 @@
       "form": "Пард",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s fourth heading for 15. децембар ст. ст., „Преподобни Пард Отшелник.“ — with «Преподобни» left off, that being the `venerable` grade §5 maps and `types` keeps, and «Отшелник» left off, that being the `hermit` grade the same table maps and `types` also keeps; what is left is the bare forename, which is the whole of what the heading gives beyond the two ranks. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs`, which imports the real `fold` from `scripts/corpus-index.mjs` and so sees bracket-hidden folds too, puts the key `пард` at NO other holder, so no READ_FOLDS key is written and the gate’s collision count does not move. The nearest folder the namesweep offered, `parodos-the-presbyter`, is Parodos and not Pardus, and a direct grep of `saints/*/saint.json` for `pardus` and for `Пард` finds nothing, which is what made this an arrival. The book prints no Latin form of his name."
+    },
+    {
+      "form": "Пард Римлянин, Палестинский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Пард Римлянин, Палестинский, отшельник»; the rank is stripped and both epithets kept, the day line itself declining the forename and the rank only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 15 декабря ст. ст. (7 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(VI)», the sixth century, which is exactly the `floruit` this folder already holds from the Ohrid Prologue’s «Живео у Палестини у VI веку», so it replaces nothing. THE CALENDAR ADDS «РИМЛЯНИН» TO HIS NAME, calling him a Roman as well as a Palestinian, which no other source in this folder does; it is stored in the name form and nothing is inferred from it. The reading this calendar links, `/Life/life3126.htm`, was NOT opened; this folder’s life is already written out of its other sources. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Прп. Парда отшельника (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

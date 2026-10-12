@@ -1,0 +1,99 @@
+{
+  "slug": "tryphon-of-pechenga",
+  "display_name": "Tryphon of Pechenga and Kola",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Трифон Печенгский, Кольский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Преподобный Трифон Печенгский, Кольский`; the rank is stripped and both epithets kept, the day line itself declining the same two. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1495,
+      "latest": 1495,
+      "display": "1495",
+      "basis": "attested",
+      "note": "The first of the two readings: «В миру его звали Митрофан, родился в 1495 г. в Новгородской губернии.» The second reading gives no year of birth at all and says only that he was born in the Novgorod province in a priest’s family."
+    },
+    "death": {
+      "earliest": 1583,
+      "latest": 1583,
+      "display": "1583",
+      "basis": "attested",
+      "note": "The day line closes «(1583)» and the first reading dates the repose to the day: «мирно почил о Господе 15 декабря 1583 г. в возрасте 88 лет». The second gives the year alone and says he had lived at Pechenga almost sixty years. The age of 88 agrees with the first reading’s year of birth and was not used to narrow anything."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Прп. Трифона Печенгского, Кольского (1583).»",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry. Two readings stand behind it at `/Life/id2127.htm`, an index, and both were opened: `/Life/life6873.htm` and `/Life/life3124.htm`. THIS IS THE PECHENGA OF THE KOLA PENINSULA AND NOT THE PECHENGA IN VOLOGDA: the same calendar keeps two venerable founders of a Vologda Pechenga on 4 февраля, a different place, a different century and no companions of his, and this folder makes no claim about them. No `tryphon-*` folder held him either; the six that exist are of Campsada, Constantinople, Vyatka, Radonezh, the 19 декабря line and a companion of Trophimus. He took no office: both readings say he declined the abbacy and set a disciple of his own over the monastery instead. The day page’s seventh and eighth hymn blocks are under his name and are on this folder."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 28 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 28 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 December 2026 (13 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Пути, вводящаго в жизнь, наставник и учитель был еси:/ первее бо, преподобне отче наш Трифоне,/ пришел еси в часть Норвегския земли/ и в последних концех северныя страны языки просветил еси,/ породив водою и Духом Святым,/ и священная твоя чада в безплодней пустыни,/ яко древа масличная, насадил еси,/ велию обитель Святыя и Живоначальныя, Единосущныя и Нераздельныя Троицы создал еси/ и монахов множество собрав./ Тем, яко апостолом и пустынножителем равночестна чтуще тя,/ прилежно припадающе, вопием:/ моли всех Бога за Русскую землю, за область твою и за вся люди,/ почитающия память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Тропарь преподобного Трифона Печенгского, Кольского», глас 8. His own proper: it names him and tells his own story, the Norwegian march and the Trinity monastery in the north.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a guide and a teacher of the way that leadeth into life; for thou wast the first, O our venerable father Tryphon, to come into a part of the land of Norway, and in the uttermost ends of the northern country thou didst enlighten the heathen, begetting them by water and by the Holy Spirit, and thou didst plant thy sacred children in the barren wilderness like olive trees. A great monastery of the Holy and Life-originating, Consubstantial and Undivided Trinity thou didst build, and didst gather a multitude of monks. Therefore, honouring thee as equal in honour to the apostles and to the dwellers in the desert, we fall down earnestly and cry: pray to the God of all for the Russian land, for thine own region, and for all the people who honour thy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Все твое умное желание к Богу вперив,/ Того званию невозвратно от души последовал еси,/ в пустыню конечную вселився,/ и, тамо ангельски и равноапостольне пожив,/ многим путь был еси ко спасению./ Сего ради и Христос тя прослави и даром чудес обогати./ Темже вси вопием ти:/ радуйся, исповедниче Христа Бога нашего;/ радуйся, граду твоему неколебимое утверждение, Трифоне, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 декабря ст. ст. — «Кондак преподобного Трифона Печенгского, Кольского», глас 8. His own proper: it closes on his name and on the city his monastery stood for.",
+        "url": "https://days.pravoslavie.ru/Days/20261215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having fixed all the desire of thy mind upon God, thou didst follow His calling from thy soul without turning back; and settling in the uttermost wilderness, and living there as an angel and as one equal to the apostles, thou becamest a way of salvation to many. For this cause Christ glorified thee and enriched thee with the gift of wonders. Therefore we all cry to thee: rejoice, O confessor of Christ our God; rejoice, unshaken strength of thy city, O Tryphon our father.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
