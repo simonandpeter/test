@@ -21,6 +21,11 @@
       "form": "Григорије Синаит",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fifth heading for the Julian 7 April on pravoslavno.rs, „Преп. Григорије Синаит.“, with the rank word Преп. left off. The by-name Синаит is kept: it is what the heading gives beyond the forename, and `gregory-of-nyssa` and `gregory-of-moesia` already hold the bare Григорије, which a bare form here would fold onto."
+    },
+    {
+      "form": "Григорий Синаит",
+      "lang": "ru",
+      "note": "Name page 549 of days.pravoslavie.ru is «Григорий Синаит, прп.»; the rank is stripped. The folder held the Serbian «Григорије Синаит» and no Russian form. The day line gives the genitive «Григория Синаита». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Прп. Григория Синаита (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry. FOUR CALENDARS AND FOUR DIFFERENT DAYS, and this is not a collision to resolve: the folder's Greek row is 11 February revised-julian, its Romanian 6 April revised-julian with a note of its own, its Serbian 7 April julian, and this Russian one is 8 August julian. The other three do not agree with each other, so the agreement test has nothing to say, and one row per church is the schema. The line's «(XIV)» is the fourteenth century, inside which the folder's 1255 to 1346 already sits, so no `dates` were touched. «Прп.» is the `venerable` the folder's `types` already carry. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

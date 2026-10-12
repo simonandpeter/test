@@ -1,0 +1,72 @@
+{
+  "slug": "nicodemus-krotkov",
+  "display_name": "Nicodemus (Krotkov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop",
+  "names": [
+    {
+      "form": "Никодим (Кротков)",
+      "lang": "ru",
+      "note": "Name page 9116 of days.pravoslavie.ru is «Святитель Никодим (Кротков), архиепископ Костромской, сщмч.»; «Святитель», «архиепископ Костромской» and «сщмч.» are the rank and the see and are stripped, and the surname the calendar keeps in parentheses stays. The day line gives the genitive «Никодима, архиеп. Костромского». `fk.mjs` on the stored string returns NONE; `sergius-krotkov` carries the same surname and a different forename."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "The reading behind his name, life4859: «родился в 1868 году». No day or month is given for the birth."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)» and the reading gives the day in both styles: «скончался 8 (21 н. ст.) августа 1938 года». The new-style day is 21 August and the old-style 8 August, which is the day the calendar keeps him on; the pair is recorded here and the year alone is displayed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Сщмч. Никодима, архиеп. Костромского (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "note": "The day's tenth entry, and the only one of this day's four new martyrs with a reading behind his name — life4859, «Священномученик Никодим, архиепископ Костромской и Галичский». THE SEE IS NOT A KEY THE LOCALE PACKS CARRY: `Archbishop of Kostroma` is absent from all four, so `office` is the bare `Archbishop` and Kostroma stands in the display name's place in the life. The reading lists two other days for him — «26 января (Новомуч.)», the synaxis of the new martyrs, and the synaxis of the Kostroma saints on 23 января — and this day page repeats neither, so both are notes and neither is a feast. No folder held him: `ls -d saints/*krotkov*` returned `sergius-krotkov` alone, a different forename. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 21 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 21 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "demetrius-ignatenko"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

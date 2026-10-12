@@ -11,13 +11,28 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Αυγούστου, «Όσιος Γρηγόριος ο ζωγράφος ο εν τω σπηλαίω», with the rank word left off and the two epithets, the painter and the one in the cave, left in the English form of the name instead. The page glosses the name: «ο άγρυπνος, άρα ενήμερος και φωτιομένος»."
+    },
+    {
+      "form": "Григорий Печерский",
+      "lang": "ru",
+      "note": "Name page 546 of days.pravoslavie.ru is «Григорий Печерский, иконописец»; «иконописец» is the trade this corpus's `types` vocabulary holds as `iconographer` and is stripped, as a rank is. A DELIBERATE FOLD: `fk.mjs` on the stored string returns `gregory-the-wonderworker-of-the-caves`, which stores the identical form and is the venerable-martyr of the same monastery kept on the Julian 8 January — the calendar gives both men the same two words and nothing more. The day line gives the genitive «Григория, иконописца Печерского»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian venerable, so this is the row a later reader will most want to fill."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Прп. Григория, иконописца Печерского (XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry and the same menologion day as the folder's Greek row, which is its only other venerated one. THE `[~]` MARK IS WRONG HERE: `day-candidates.mjs` flagged this line as a possible feast on the words round the name, and it is a man. «Прп.» is the `venerable` and «иконописца» the `iconographer` the folder's `types` already carry. NO `dates` WERE WRITTEN: the line's «(XII)» is the twelfth century and would be this folder's first date of any kind, and this wave has declined to write a first date off a bare Roman numeral on a line — the standing author question. The reading life4398 was not opened. THE `ru` FORM FOLDS ONTO `gregory-the-wonderworker-of-the-caves`, which stores the identical «Григорий Печерский» and is a different man of the same monastery kept on the Julian 8 January; the fold is recorded in the gate's READ_FOLDS. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
