@@ -17,6 +17,11 @@
       "form": "Аполинарије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 23. јул ст. ст., „Свештеномученик Аполинарије.“ — «Свештеномученик» is the rank, written out in full on this day where most of this book’s headings abbreviate it, and §6 leaves it off. **The heading is that one word and the name, and nothing else at all**, so the bare forename is the whole of the form; the see is in `office` and the «of Ravenna» of the display name is the corpus’s own. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` and `sr-foldpred.mjs` `new key, other holders: 0 (none)`."
+    },
+    {
+      "form": "Аполлинарий Равеннийский",
+      "lang": "ru",
+      "note": "Name page 238 of days.pravoslavie.ru is «Святитель Аполлинарий Равеннийский, епископ, сщмч.»: «Святитель», «епископ» and «сщмч.» are all rank words and are stripped, the see's adjective being part of the name. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июля ст. ст. — «Сщмч. Аполлинария , еп. Равеннийского (ок. 75).»",
+        "url": "https://days.pravoslavie.ru/Days/20260723.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, and the same menologion day as all three of the folder's other venerated rows. «Сщмч.» and «еп.» are the `hieromartyr` and `bishop` the folder's `types` already carry, and its office «Bishop of Ravenna» is the see the line names, so nothing was added. NO `dates` WERE WRITTEN: the line's «(ок. 75)» would be this folder's first date of any kind, and this wave has declined to write a first date off a calendar line — the standing author question. The reading life4293 was NOT opened, the folder's life being already written. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

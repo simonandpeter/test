@@ -1,0 +1,62 @@
+{
+  "slug": "andrew-argunov",
+  "display_name": "Andrew (Argunov)",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Андрей (Аргунов)",
+      "lang": "ru",
+      "note": "Name page 14295 of days.pravoslavie.ru is «Андрей (Аргунов), мч.»; the grade is stripped and the surname kept, the day line itself giving only «мч. Андрея». `fk.mjs` on the stored string returns NONE and no folder in this corpus carries «Аргунов» in any form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», a single year standing for both men of the entry; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 июля ст. ст. — «Сщмч. Михаила пресвитера и мч. Андрея (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260723.html",
+        "year": 2026
+      },
+      "note": "The second man of the day's fifth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line grades him «мч.» alone, with no priestly rank and no see, so `martyr` is all that is written and NO `office` IS WRITTEN. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: `ls -d saints/*argunov*` is empty and a Cyrillic grep for «Аргунов» over every `saint.json` returns nothing. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 5 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 5 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "michael-troitsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
