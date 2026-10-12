@@ -1,0 +1,99 @@
+{
+  "slug": "erasmus-of-the-kyiv-caves",
+  "display_name": "Erasmus of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Еразм Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 24 февраля ст. ст., «Еразм Печерский, прп.», with the rank word left off. The line on the day page itself gives the name in the genitive; the calendar gives no surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1160,
+      "latest": 1160,
+      "display": "about 1160",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(ок. 1160)» beside his name for 24 февраля ст. ст., and closes the letter quoted in its life with «(+ ок. 1160)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life page behind the calendar's line heads «Дни памяти: 24 февраля, 28 сентября (Печер.(Б))» — a second memory with the synaxis of the venerable fathers of the Near Caves, which the day page for 24 февраля ст. ст. does not repeat. Recorded here as a note. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 февраля ст. ст. — «Прп. Еразма Печерского (ок. 1160).»",
+        "url": "https://days.pravoslavie.ru/Days/20260224.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 9 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 9 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 March 2026 (3 October 2026)."
+    }
+  ],
+  "related": [
+    "simon-of-vladimir",
+    "anthony-of-the-caves",
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Благолепие дому Господня любя,/ расточил еси нещадно имение твое во украшение того,/ преподобне Еразме,/ тем ныне живя в дому Господни на Небеси,/ моли и нам освятитися в жилище Господне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 февраля ст. ст. — «Тропарь преподобного Еразма Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260224.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving the beauty of the Lord's house, thou didst spend thy goods upon its adorning without sparing, O venerable Erasmus; and therefore, dwelling now in the house of the Lord in heaven, pray that we too may be hallowed into a dwelling-place of the Lord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Украсивый церковь Богоматере/ расточением имения ти на сие иконами, Еразме славне,/ себе же о том нераскаянием;/ подаждь и нам расточением грехов своих/ и покаяния лепотою украсившимся/ церковию светлою Духови Святому явитися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 февраля ст. ст. — «Кондак преподобного Еразма Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260224.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst adorn the church of the Mother of God with icons by spending thy goods upon it, O glorious Erasmus, and didst adorn thyself by not repenting of that spending. Grant to us also, who have spent away our sins and been adorned with the beauty of repentance, to be shown forth as a bright church for the Holy Spirit.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
