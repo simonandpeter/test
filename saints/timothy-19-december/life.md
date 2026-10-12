@@ -6,4 +6,6 @@ Although their own people were present at the execution and were weeping, the pa
 
 That is the whole of the entry. It gives no year and no reign, names no judge, lists no relic and prints no hymn for either of them.
 
-*After saint.gr's calendar for 19 Δεκεμβρίου — [the day](https://www.saint.gr/12/19/index.aspx) and [the life](https://www.saint.gr/3304/saint.aspx); read 2 October 2026.*
+The Russian calendar keeps him on 19 декабря ст. ст., the same menologion day as the other calendars here, and its line is «Мчч. Полиевкта и Тимофея диакона (IV).» — the martyrs Polyeuctus and Timothy the deacon, fourth century. The deacon’s grade is the calendar’s own and is new to this folder; the century is the only date any of its sources gives, and it is set down here rather than written into the folder’s dates, a bare century after two names being an era marker and not a year this corpus mints from. The calendar’s name page calls him Timothy of Mauretania and a hieromartyr, where the line calls both men simply martyrs; the epithet is kept in the name form, and the higher rank is not taken into this folder, the line itself not giving it to him. No life page stands behind the entry for either man.
+
+*After saint.gr's calendar for 19 Δεκεμβρίου — [the day](https://www.saint.gr/12/19/index.aspx) and [the life](https://www.saint.gr/3304/saint.aspx); read 2 October 2026; and the Православный церковный календарь of the Сретенский monastery for 19 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261219.html), read 13 October 2026.*

@@ -17,6 +17,11 @@
       "form": "Григорије (Григентије)",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s second heading for 19. децембар ст. ст., „Свети Григорије (Григентије), епископ омиритски.“ — «Свети» is “saint” and not a rank, and «епископ омиритски» is the rank with the see, both of which BRIEF-SERBIAN §6 keeps out of a stored form. The book prints the second name in a parenthesis of its own and it is kept, because the parenthesis is the book’s and the fold reads it as one string either way (BRIEF-ADDENDUM §2). Measured before it was written: no other folder holds this key. The bare «Григорије» alone was NOT written: five folders already hold it — gregory-of-akragas, gregory-of-antioch, gregory-of-moesia, gregory-of-nyssa and gregory-the-wonderworker-of-neocaesarea — and the second name is what tells this man from them."
+    },
+    {
+      "form": "Григорий Омиритский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Святитель Григорий Омиритский, епископ»; the rank words are stripped and the epithet kept, the day line itself declining the forename and the see. The calendar’s forename is Григорий, Gregory, where the Greek page has Γρηγέντιος; the form is stored as the calendar prints it. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE IDENTITY IS READ ON THE SEE AND THE YEAR: the line is «Свт. Григория, еп. Омиритского (ок. 552).», the hierarch Gregory bishop of the Homerites, about 552, and this folder’s `death` is saint.gr’s 552 for the bishop of the same Homerites, dated by that page to 19 December. The Russian book gives the same year with «ок.», approximately, where the Greek gives it flatly, so it is no narrower and replaces nothing. IT CALLS HIM GRIGORY WHERE THIS FOLDER’S DISPLAY NAME IS GREGENTIUS, the Greek Γρηγέντιος; the Russian form is stored as the calendar has it and nothing is read out of the difference. The reading this calendar links, `/Life/life3149.htm`, was NOT opened; this folder’s life is already written out of its other sources. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Свт. Григория, еп. Омиритского (ок. 552).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

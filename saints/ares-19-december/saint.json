@@ -6,6 +6,11 @@
       "form": "Άρης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Ηλίας, Πρόβος και Άρης», with the rank word left off. The page glosses the name itself, «(από το σανκριστικό mar = καταιγίδα) = ο θυελλώδης», and adds a note about the god of war of the myths, which is not about this saint."
+    },
+    {
+      "form": "Арис Египтянин",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Арис Египтянин, мч.»; the grade is stripped and the epithet kept, the day line itself declining the bare forename and putting «египтян» after all three. `fk.mjs` on the stored string returns NONE, `ares-of-the-egyptian-desert` of the Julian 13 декабря being another man and stored otherwise."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(308)», which is the year this folder’s `death` already holds from saint.gr’s name-block head for him, so it confirms it and replaces nothing; the same year is now written on both his companions, who had none. THE CALENDAR CALLS THE THREE «египтян», Egyptians, which no other source in this folder does. HE IS NOT `ares-of-the-egyptian-desert`, who stands on the Julian 13 декабря, nor is anything inferred from the calendar’s calling this man an Egyptian too; `fk.mjs` on the stored form returns NONE. The reading this calendar links, `/Life/life3147.htm`, stands behind all three men at once and was NOT opened; this folder’s life is already written out of its other source. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Мчч. Илии, Прова и Ариса, египтян (308).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

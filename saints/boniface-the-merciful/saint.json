@@ -10,6 +10,11 @@
       "form": "Бонифатије Милостиви",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s third heading for 19. децембар ст. ст., „Свети Бонифатије Милостиви, епископ ферентијски.“ — «Свети» is “saint” and not a rank, and «епископ ферентијски» is the rank with the see, both of which BRIEF-SERBIAN §6 keeps out of a stored form; «Милостиви», the Merciful, is an epithet and not a rank, so it stays. Measured before it was written: no other folder holds this key. THE BARE «Бонифатије» IS WRITTEN IN THIS SAME COMMIT ON `boniface-of-tarsus`, off the same day’s first heading, and these two strings are two keys that do not fold together — which is why the epithet is kept here rather than stripped to the forename."
+    },
+    {
+      "form": "Вонифатий Милостивый",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Святитель Вонифатий Милостивый»; the rank is stripped and the epithet kept, which is the epithet this folder’s display name already carries. The day line adds the see, «еп. Ферентийского», and the name page does not, so it is not in the stored form. `fk.mjs` on the stored string returns NONE, the martyr Boniface of the same day being stored as «Вонифатий Тарсийский»."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(VI)», the sixth century, which is exactly the `death` this folder already holds from the Ohrid Prologue, so it replaces nothing. THE LINE NAMES HIS SEE WHERE THE NAME PAGE DOES NOT: «еп. Ферентийского», bishop of Ferentino, which the Prologue’s own heading gives him too, „епископ ферентијски“; the see is left out of the stored name form, the name page not carrying it, and is in the life. HE IS NOT `boniface-of-tarsus`, the martyr of the same day and the same forename: that man died at Tarsus in 290 and this one reposed in peace in Italy, and the calendar keeps them in two separate lines. The reading this calendar links, `/Life/id436.htm`, is an INDEX and was NOT opened; this folder’s life is already written out of its other sources. The day page’s three hymn blocks are all under the other Boniface’s name, and none is on this folder."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Свт. Вонифатия Милостивого, еп. Ферентийского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

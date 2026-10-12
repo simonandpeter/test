@@ -6,6 +6,11 @@
       "form": "Πρόβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Ηλίας, Πρόβος και Άρης», with the rank word left off. The page's text gives an alternative in passing, «Πρόβος (ή Πρόμος)», which is recorded in the attestation and not stored as a second form."
+    },
+    {
+      "form": "Пров Египтянин",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Пров Египтянин, мч.»; the grade is stripped and the epithet kept, the day line itself declining the bare forename and putting «египтян» after all three. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE LINE GIVES HIM A YEAR THIS FOLDER DID NOT HAVE: it closes «(308)» over all three names, and his companion `ares-19-december` already carries 308 from saint.gr’s name-block for that man alone. The two readings agree, so the year is written into `dates` here. THE CALENDAR ALSO CALLS THE THREE «египтян», Egyptians, which no other source in this folder does. HE IS NOT `probus-16-december`, `probus-9-july` or `probus-of-tarsus`, who stand on other menologion days and are stored otherwise. The reading this calendar links, `/Life/life3147.htm`, stands behind all three men at once and was NOT opened; this folder’s life is already written out of its other source. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 декабря ст. ст. — «Мчч. Илии, Прова и Ариса, египтян (308).»",
+        "url": "https://days.pravoslavie.ru/Days/20261219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 308,
+      "display": "308",
+      "basis": "attested",
+      "note": "The first year this folder has carried. The Russian line closes «(308)» over the three Egyptians together, and the same year stands already on the folder of the third of them, `ares-19-december`, out of saint.gr’s own name-block head for that man. Two books, one year, and no year of birth from either."
+    }
   }
 }
