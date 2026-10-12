@@ -16,6 +16,11 @@
       "form": "Евдоким",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 31. јул ст. ст., „Св. Евдоким.“ — «Св.» is “saint” and not a rank (BRIEF-SERBIAN §5), and the heading gives nothing else at all, so the bare forename is the whole of the form. «of Cappadocia» in the display name stays out of it: the body has «Рођен у Кападокији», born IN Cappadocia, a prepositional phrase and not an adjective. MEASURED BEFORE IT WAS WRITTEN AND AGAIN AFTER: `fk.mjs` on «Евдоким» returns the key «евдоким» with NO holders, so this form is no collision at any width and no fold key is owed for it."
+    },
+    {
+      "form": "Евдоким Каппадокиянин",
+      "lang": "ru",
+      "note": "The nominative the calendar's own name page gives, «Евдоким Каппадокиянин», which joins the epithet to the name itself; the day line declines it to «Евдокима Каппадокиянина». The folder already carried the bare «Евдоким» as its Serbian form. Read 13 October 2026."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Прав. Евдокима Каппадокиянина (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -121,6 +135,38 @@
       },
       "english": {
         "text": "Your venerable memory has gathered us today at the holy casket of your sacred relics; and so all who draw near and venerate are kept from every harm of demons, and are quickly delivered from many kinds of sickness, blessed Eudocimus.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От земли воззвавый тя к Небесным селением/ соблюдает и по смерти невредимо тело твое, святе Евдокиме:/ ты бо в целомудрии и чистом жительстве, блаженне,/ жительствовал еси, не осквернив плоти.// Темже со дерзновением моли Христа Бога спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Тропарь праведного Евдокима»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who called you from the earth to the mansions of heaven keeps your body incorrupt even after death, O holy Eudocimus; for you lived, O blessed one, in chastity and a pure manner of life, and did not defile your flesh. Therefore with boldness pray to Christ God that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышних желая, с вышними совокупляяся,/ и колесницу огненную, Божественными восхожденьми добродетелей, совершил еси душу,/ преблаженне Евдокиме,/ на земли пожив, яко безплотен,// Зиждителю всех благоугодил еси.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Кондак праведного Евдокима»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the things on high and being joined to those on high, you made your soul a chariot of fire by the divine ascents of the virtues, O most blessed Eudocimus; and having lived on earth as though without a body, you were well pleasing to the Maker of all.",
         "rendered": "site"
       }
     }

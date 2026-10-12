@@ -1,0 +1,58 @@
+{
+  "slug": "dionysius-of-vatopedi",
+  "display_name": "Dionysius of Vatopedi",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Дионисий Ватопедский",
+      "lang": "ru",
+      "note": "The nominative the calendar's own name page gives, «Дионисий Ватопедский, прмч.», with the rank word dropped. The day line declines it to «Дионисия Ватопедского». Read 13 October 2026."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1822,
+      "latest": 1822,
+      "display": "1822",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Прмч. Дионисия Ватопедского (1822) (Конст.).» It is the only date on the entry; the calendar gives no year of birth and carries no life page for him. Read 13 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 июля ст. ст. — «Прмч. Дионисия Ватопедского (1822) (Конст.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260731.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026). The entry's own «(Конст.)» says this is a commemoration the Russian calendar carries from the Patriarchate of Constantinople, so a Greek source would be the one to read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
