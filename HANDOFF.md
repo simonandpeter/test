@@ -38,11 +38,13 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**The Russian reading wave is running again, 13 October 2026.** 327 of 366 days
-carry somebody, up from 313. Two readers are out in their own worktrees on the
-Julian 9-11 and 15-19 December; they commit on their branches and the writer
-merges, verifies and pushes. `c7a43136` is green and deployed (1121 passed,
-4 flaky, all passing on retry).
+**The Russian reading wave, 13-14 October 2026: 356 of 366 days**, up from 313
+at the start of the sitting. Nine reader blocks have been merged — Feb 20-27,
+the whole of December, July 23-31 and August 1-5 — each one verified against the
+corpus rather than its own report: folder count, venerated-row delta against
+arrivals plus rows, and every fold key's membership re-read off the live gate.
+Two readers are still out, on August 7-9 and on the last three days that owe
+anything (01-27, 02-28, 09-14). `0f5e2631` is green and deployed.
 
 **Three of the thirty-nine empty days owe nothing and are not gaps**: Julian
 01-07 and 02-02, which enumerate nobody, and 02-29, which has no source page on
@@ -53,7 +55,22 @@ August, 09-14 and seventeen in December.
 **20-27 February were read on 3 October and no writer ever applied them**, and
 that is the shape to look for before dispatching anyone: `.tmp/ru-drafts` holds
 494 files and a draft sitting there is not evidence of a day written. Measure
-with `node scripts/ship-gate-days.mjs` and compare. `../ro-run/FINDINGS.md` is the
+with `node scripts/ship-gate-days.mjs` and compare.
+
+**A reader's hand-back is not a measurement.** Every block this sitting was
+checked, and two reports were wrong in ways only the corpus could show: one
+claimed sixteen upgrade rows and had written fifteen, and one claimed Anna
+Kashinskaya had no folder when `saints/anna-of-kashin` had existed since
+4 October. The claim worth checking first is always the one its author could
+not check: the delta against main.
+
+**`saint.json` is the one file the union resolver must never touch**, and this
+sitting is why it is written here. Two readers working different months both
+upgraded `nicanor-the-deacon` and `timon-the-deacon` — one to 28 июля, one to
+28 and 30 декабря — and the merge collided. The July row stands, because each
+folder's other three churches keep the man on 28 July. A reader's brief now
+tells it to pre-scan the *other three churches'* rows as well as the russian
+one, and `.tmp/upscan.py` does it. `../ro-run/FINDINGS.md` is the
 record, one section per merged wave with its verification; `../ro-run/BRIEF-RUSSIAN.md`
 and `BRIEF-ADDENDUM.md` are binding on the next reader. Measure the state with
 `node scripts/ship-gate-days.mjs`, never from here.
