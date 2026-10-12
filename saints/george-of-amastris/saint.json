@@ -13,9 +13,16 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιος Γεώργιος επίσκοπος Αμάστριδος», with the rank word and the see left off."
+    },
+    {
+      "form": "Георгий Амастридский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 февраля ст. ст., «Святитель Георгий Амастридский, епископ», with the rank word and the office left off. The line on the day page gives the name in the genitive with the see."
     }
   ],
-  "related": [],
+  "related": [
+    "tarasius-of-constantinople"
+  ],
   "dates": {
     "death": {
       "earliest": 805,
@@ -28,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The calendar's life for him gives the day of his death as «3 марта», which is neither this day nor thirteen days from it: the memory and the day of death are different days here, and the day recorded is the day page's. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 февраля ст. ст. — «Свт. Георгия, еп. Амастридского (802-811).»",
+        "url": "https://days.pravoslavie.ru/Days/20260221.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

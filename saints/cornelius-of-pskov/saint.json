@@ -13,6 +13,11 @@
       "form": "Κορνήλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Κορνήλιος ο Ιερομάρτυρας εκ Ρωσίας», with the rank word and the provenance left off."
+    },
+    {
+      "form": "Корнилий Псково-Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 февраля ст. ст., «Преподобномученик Корнилий Псково-Печерский», with the rank word left off. The line on the day page gives the name in the genitive with the office, «Корнилия, игумена Псково-Печерского»."
     }
   ],
   "related": [
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life pages behind the calendar's line head «Дни памяти: 20 февраля, 29 марта» — a second memory on 29 марта, which the day page for 20 февраля ст. ст. does not repeat. Recorded here as a note; no row is moved. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Прмч. Корнилия, игумена Псково-Печерского (1570).»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -67,5 +82,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Псково-Печерская обитель,/ издревле славная чудесы иконы Богоматерни,/ многия иноки Богови воспита,/ тамо и преподобный Корнилий/ подвигом добрым подвизася,/ чудную Богоматерь славя,/ иноверныя просвещая,/ иноки и многия люди спасая,/ обитель же свою дивно украшая и ограждая./ Тамо и мученичества венец/ по многих летех пастырства своего доблестне прият./ Темже воспоим, людие,/ Христа Бога и Пречистую Его Матерь возблагодарим,/ яко дарова нам преподобномученика славна/ и молитвенника о душах наших достоблаженна.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Тропарь преподобномученика Корнилия Псково-Печерского»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The monastery of the Pskov Caves, famous of old for the wonders of the Mother of God's icon, raised up many monks for God; and there the venerable Cornelius contended with a good contending, glorifying the wonderful Mother of God, enlightening those of other faiths, saving monks and many people besides, and adorning and walling his house wonderfully. There too, after many years of his shepherding, he bravely received the crown of martyrdom. Therefore let us sing, O people, and give thanks to Christ God and to His most pure Mother, who have given us a glorious venerable-martyr and a most blessed intercessor for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Светлый светильник Православия/ и сугубая/ Псковския земли защита был еси,/ многобожие искореняя и люди к Богу наставляя./ Дом Богоматери тобою укрепися и прославися,/ добродетельми же украшен, венец мученика приял еси,/ поминай нас, чад твоих, и у Господа, преподобномучениче Корнилие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Кондак преподобномученика Корнилия Псково-Печерского»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a bright lamp of Orthodoxy and a double defence of the land of Pskov, rooting out the worship of many gods and leading the people to God. The house of the Mother of God was strengthened and glorified through thee; and adorned with the virtues thou didst receive the martyr's crown. Remember us, thy children, before the Lord also, O venerable-martyr Cornelius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Измлада, Корнилие чудный,/ трудом и подвигом себе предав,/ игуменом Псково-Печерстей обители поставлен был еси,/ образом веры и постническаго жития всем быв,/ многия люди к Богу привел еси./ За своя же великия добродетели/ завистию от злых гоним,/ мученически душу свою Богови предал еси./ Того ради с верою возопиим:/ преподобномучениче Корнилие достославный,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Ин кондак преподобномученика Корнилия Псково-Печерского», the second kontakion the day page sets for him",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth, O wondrous Cornelius, thou didst give thyself to labour and ascetic struggle, and wast set as abbot of the house of the Pskov Caves; and being to all a pattern of faith and of the fasting life, thou didst bring many people to God. For thy great virtues thou wast persecuted by the envy of evil men, and gavest up thy soul to God as a martyr. Therefore let us cry out in faith: O most glorious venerable-martyr Cornelius, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

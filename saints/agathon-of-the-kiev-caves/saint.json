@@ -12,6 +12,11 @@
       "form": "Αγάθων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Όσιος Αγάθων ο Θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Агафон Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 февраля ст. ст., «Преподобный Агафон Печерский», with the rank word left off. The line on the day page gives the name in the genitive."
     }
   ],
   "related": [
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life pages behind the calendar's line head «Дни памяти: 20 февраля, 28 августа (Печер.(Д))» — a second memory with the synaxis of the venerable fathers of the Far Caves on 28 августа, which the day page for 20 февраля ст. ст. does not repeat. Recorded here as a note. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Прп. Агафона Печерского (XIII-XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +74,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Блага Небесная ради дел твоих стяжавый,/ благости тезоимените, Агафоне,/ моли Благаго Господа, молим тя тепле,/ яко да не лишит нас вечных благ Своих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Тропарь преподобного Агафона Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who hast gained the good things of heaven by thy deeds, O Agathon, called by the very name of goodness: pray to the good Lord — warmly we entreat thee — that He may not deprive us of His own eternal good things.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Ведый известно, яко снедию род человечь испаде из рая,/ постом же паки вниде в онь,/ постное избрал еси себе житие,/ в немже крепце подвизався, блаженне Агафоне,/ и бесовская шатания тем низлагая,/ приял еси целебныя дары от Христа Бога,/ Емуже присно молися о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Кондак преподобного Агафона Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Knowing surely that it was by eating that the race of men fell out of paradise, and that by fasting it enters in again, thou didst choose the fasting life for thyself; and contending in it strongly, O blessed Agathon, and casting down the assaults of the demons by it, thou didst receive the gifts of healing from Christ God. Pray to Him always for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

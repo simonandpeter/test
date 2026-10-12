@@ -1,0 +1,67 @@
+{
+  "slug": "yaroslav-the-wise",
+  "display_name": "Yaroslav the Wise",
+  "office": "Prince",
+  "names": [
+    {
+      "form": "Ярослав Мудрый",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 февраля ст. ст., «Ярослав Мудрый, князь», with the office left off. The line on the day page gives the same name in the genitive with the rank and the office, «Блгв. кн. Ярослава Мудрого»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1054,
+      "latest": 1054,
+      "display": "1054",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 20 февраля ст. ст.: «Блгв. кн. Ярослава Мудрого (1054).». The calendar gives no other year and no life page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Блгв. кн. Ярослава Мудрого (1054).»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 March 2026 (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "anna-of-novgorod",
+    "igor-of-chernigov",
+    "nicholas-svyatosha",
+    "olav-of-norway",
+    "vladimir-yaroslavich-of-novgorod",
+    "yaropolk-izyaslavich"
+  ]
+}

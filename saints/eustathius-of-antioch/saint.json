@@ -17,6 +17,11 @@
       "form": "Евстатије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 21. фебруар ст. ст., „Свети Евстатије, архиепископ антиохијски.“, with Свети, the rank word архиепископ and the see left off; the see is the folder's `office` and not part of the name."
+    },
+    {
+      "form": "Евстафий Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 февраля ст. ст., «Святитель Евстафий Антиохийский, патриарх, исповедник», with the rank word, the office and the title of confessor left off. The day line calls him archbishop and the name link patriarch; both are the calendar's own words for the same see."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 февраля ст. ст. — «Свт. Евстафия, архиеп. Антиохийского (337).»",
+        "url": "https://days.pravoslavie.ru/Days/20260221.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -115,6 +129,22 @@
       },
       "english": {
         "text": "Being full of divine wisdom, you proclaimed at the first council the Word to be of one essence with the Father; and having met with persecutions and afflictions, you shared in unspeakable glory, Eustathius. Venerable father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их/ в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 февраля ст. ст. — «Тропарь преподобного Тимофея и святителя Евстафия»",
+        "url": "https://days.pravoslavie.ru/Days/20260221.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to Thy gentleness: take not Thy mercy from us, but by their prayers order our life in peace.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,60 @@
+{
+  "slug": "conon-of-the-thirty-four-of-valaam",
+  "display_name": "Conon, one of the thirty-four of Valaam",
+  "office": "Monk",
+  "names": [
+    {
+      "form": "Конон Валаамский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 февраля ст. ст., «Конон Валаамский, прмч.», with the rank word left off. The line itself gives the forename in the genitive, «Конон», as one of the thirty-four it enumerates. The calendar gives no surname and no second epithet, and it prints one name link for each distinct forename, so the men who share a forename share this form; they are told apart here by their place in the synodikon."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1578,
+      "latest": 1578,
+      "display": "1578",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1578)» after the thirty-four names for 20 февраля ст. ст., and its life gives the day: «20 февраля 1578 года 18 достоблаженных старцев и 16 послушников были мученически истреблены за твёрдость в православной вере»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «34 преподобномучеников Валаамских: Тита, Тихона, Геласия, Сергия, Варлаама, Саввы, Конона, Сильвестра, Киприана, Пимена, Иоанна, Самона, Ионы, Давида, Корнилия, Нифонта, Афанасия, Серапиона, Варлаама, Афанасия, Антония, Луки, Леонтия, Фомы, Дионисия, Филиппа, Игнатия, Василия, Пахомия, Василия, Феофила, Иоанна, Феодора, Иоанна (1578).»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 March 2026 (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

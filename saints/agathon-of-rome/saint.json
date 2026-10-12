@@ -12,6 +12,11 @@
       "form": "Αγάθων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Αγάθων Πάπας Ρώμης», with the rank word and the office left off."
+    },
+    {
+      "form": "Агафон Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 февраля ст. ст., «Святитель Агафон Римский, папа», with the rank word and the office left off. The day line calls him «Прп.», venerable, where the name link calls him «Святитель», a hierarch; both are the calendar's own words for him."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Прп. Агафона, Папы Римского (682).»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

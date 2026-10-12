@@ -17,6 +17,11 @@
       "form": "Лав",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 20. фебруар ст. ст., „Свети Лав, епископ катански.“, with Свети, the rank word епископ and the see left off; the see is the folder's `office` and not part of the name."
+    },
+    {
+      "form": "Лев Катанский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 февраля ст. ст., «Святитель Лев Катанский, епископ», with the rank word and the office left off. The day line calls him «Прп.», venerable, where the name link calls him «Святитель», a hierarch; both are the calendar's own words for him."
     }
   ],
   "sex": "male",
@@ -91,13 +96,54 @@
         "text": "Let us all crown with songs him who was dedicated to the Lord from infancy and received grace from his swaddling clothes — Leo, the luminary and the champion of the Church; for he is her support.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя,/ яви тя стаду твоему,/ яже вещей истина,/ сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче Льве,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Тропарь преподобного Льва, епископа Катанского»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things hath shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast gained the heights by humility and riches by poverty. O father Leo, pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Якоже светильника превелика, Церковь имать, всеблаженне,/ тебе, паче солнца сияюща,/ юже твоими молитвами сохрани, блаженне,/ непобедиму, и непоколебиму от ереси всякия, и нескверну,// яко приснопамятный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Кондак преподобного Льва»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church has thee, O all-blessed one, for a very great lamp, shining brighter than the sun. Keep her by thy prayers, O blessed one, unconquered and unshaken by every heresy and undefiled, as one of ever-blessed memory.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 февраля ст. ст. — «Прп. Льва, еп. Катанского (ок. 780).»",
+        "url": "https://days.pravoslavie.ru/Days/20260220.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -159,5 +205,8 @@
       "basis": "traditional",
       "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 20 February: „Скончао у VIII веку.“ It gives the century and no year. The folder carried no dates at all before this reading."
     }
-  }
+  },
+  "related": [
+    "martin-of-tours"
+  ]
 }
