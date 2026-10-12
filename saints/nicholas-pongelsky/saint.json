@@ -1,0 +1,63 @@
+{
+  "slug": "nicholas-pongelsky",
+  "display_name": "Nicholas (Pongelsky)",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Николай (Понгельский)",
+      "lang": "ru",
+      "note": "Name page 9612 of days.pravoslavie.ru is «Николай (Понгельский), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Николая». `fk.mjs` on the stored string returns NONE and a Cyrillic grep for «Понгельский» over every `saint.json` returns nothing — the bare «Николай» was out of the question, the corpus holding a great many."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "The day line gives the year inside the entry, after his name and before his companion's: «Свв. Николая (1942) и Иоанна (1951) испп., пресвитеров.» No year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Свв. Николая (1942) и Иоанна (1951) испп., пресвитеров.»",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "note": "The first man of the day's seventh entry, a joint line for two confessor priests nine years apart, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. THE LINE AND THE NAME PAGE DISAGREE ABOUT THE GRADE. The line heads both men «испп.», confessors, and «пресвитеров», presbyters; name page 9612 grades him «иерей, сщмч.», priest and hieromartyr. `confessor` and `presbyter` are written because they are the day line's own words and the day line is what keeps him here; `hieromartyr` was NOT written, and neither was `new-martyr`, a confessor who died in 1942 not being what this corpus writes that for. The disagreement is recorded and resolved nowhere. THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: `ls -d saints/*pongel*` is empty. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 6 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 6 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "john-kalinin"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

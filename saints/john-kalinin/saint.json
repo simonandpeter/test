@@ -1,0 +1,63 @@
+{
+  "slug": "john-kalinin",
+  "display_name": "John (Kalinin)",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Калинин, Оленевский)",
+      "lang": "ru",
+      "note": "Name page 9722 of days.pravoslavie.ru is «Иоанн (Калинин, Оленевский), иерей, исп.»; the grade and the rank are stripped and BOTH parenthesised words kept, the surname and the place together being the fullest form the calendar gives — the day line itself gives only «Иоанна». `fk.mjs` on the stored string returns NONE; a Cyrillic grep for «Калинин» over every `saint.json` returns only `thaddeus-of-tver`, a different surname-bearer in prose, and «Оленевский» returns nothing."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1951,
+      "latest": 1951,
+      "display": "1951",
+      "basis": "attested",
+      "note": "The day line gives the year inside the entry, after his name: «Свв. Николая (1942) и Иоанна (1951) испп., пресвитеров.» No year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Свв. Николая (1942) и Иоанна (1951) испп., пресвитеров.»",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "note": "The second man of the day's seventh entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. Here the two agree: the line heads both men «испп., пресвитеров» and name page 9722 grades him «иерей, исп.», priest and confessor, so `confessor`, `presbyter` and the office `Priest` are all the source's own words. `new-martyr` was NOT written — he died in 1951 and the calendar calls him a confessor, not a martyr. THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: `ls -d saints/*kalinin*` and `*olenev*` are both empty. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 6 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 6 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "nicholas-pongelsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

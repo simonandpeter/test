@@ -16,6 +16,11 @@
       "form": "Христина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 24. јул ст. ст., „Света мученица Христина.“ — «Света» is “saint” and «мученица» the rank, both left off by §6, and the heading gives no by-name at all although the body names Tyre twice. **The city is NOT taken into the form, because it is not in the heading**, and the cost is named rather than hidden: the bare form folds onto `christina-martyr-18-may`, which also holds it in sr, and the fold is read in this batch’s commit message. `foldchk.py` returned `[(’christina-martyr-18-may’, ’sr’)]` before the draft."
+    },
+    {
+      "form": "Христина Тирская",
+      "lang": "ru",
+      "note": "Name page 2757 of days.pravoslavie.ru is «Христина Тирская, мц.»; the grade is stripped and the epithet kept, the day line itself giving «Христины» bare. `fk.mjs` on the stored string returns NONE; the bare «Христина» was out of the question."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Мц. Христины (ок. 300).»",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the same menologion day as all three of the folder's other venerated rows. TWO DISAGREEMENTS RECORDED AND CHANGED NOWHERE. The line grades her «Мц.», martyr, where the folder's `types` carry `great-martyr` and `virgin` off saint.gr; nothing was narrowed. And the line's «(ок. 300)» stands a century after the folder's `floruit` of «c. 200», which saint.gr set against her father's generalship; NO `dates` WERE CHANGED, the two sources being a hundred years apart with nothing read to reconcile them. The reading life4296 was NOT opened, the folder's life being already written. THREE HYMNS TAKEN where the folder's four existing ones are the Greek, Romanian and Serbian; none was touched."
     },
     {
       "church": "romanian",
@@ -138,6 +153,54 @@
       },
       "english": {
         "text": "You were made known as a dove shining with light, having wings of gold, and you came to rest in the height of the heavens, revered Christina; and so we keep your glorious feast, venerating in faith the casket of your relics, out of which there truly springs for all a divine healing of soul and body.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Агница Твоя, Иисусе, Христина/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую/ и сраспинаюся и спогребаюся Крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою,/ но яко жертву непорочную приими мя,/ с любовию пожершуюся Тебе.// Тоя молитвами, яко Милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Тропарь мученицы Христины», глас 4; this is «Агница Твоя», the common of a woman martyr, printed with her name set into it",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Christina, cries with a great voice: Thee, my Bridegroom, I love, and seeking Thee I contend; I am crucified and buried with Thee in Thy baptism, and I suffer for Thy sake that I may reign in Thee, and I die for Thee that I may live with Thee. Receive me as a spotless sacrifice, offered to Thee in love. By her prayers, as Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Званием евангельски Христу уневестившися,/ Христино славная,/ славу мира сего и похоть бренную вменила еси ни во что же,/ о самом телеси небрегущи,/ муки претерпела еси доблественно,/ тем твое страдание хвалами почитаем,/ мученице, Христу тезоименитая.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Тропарь мученицы Христины», глас 4, the second of the two the page prints under that same title",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Betrothed to Christ as the Gospel asks and as thy very name declares, O glorious Christina, thou didst count the glory of this world and its perishable desire as nothing, caring not even for thy body, and didst endure torments valiantly. Therefore we honour thy suffering with praises, O martyr who bearest the name of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Световидная голубица позналася еси, криле имущи злате,/ и к высоте Небесней возлетела еси, Христино честная./ Темже твой славный праздник совершаем,/ верою покланяющеся твоих мощей раце,/ из неяже истекает всем обильно/ исцеление Божественное,// душам же и телом.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Кондак мученицы Христины», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast known as a dove full of light, having wings of gold, and thou didst fly up to the height of heaven, O honoured Christina. Therefore we keep thy glorious feast, bowing in faith before the shrine of thy relics, out of which there flows abundantly to all a divine healing, for souls and for bodies alike.",
         "rendered": "site"
       }
     }

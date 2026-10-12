@@ -20,13 +20,28 @@
       "form": "Борис",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 2. мај ст. ст., „Свети мученици Борис и Гљеб.“ Свети мученици heads both brothers and belongs to neither name alone, and мученици is a rank word `honorific.js` composes, so stripping it leaves the bare forename; the heading offers no patronymic and no epithet, and „синови великога кнеза Владимира“ is the body's first words, which this corpus keeps in the English display name and not in a name form. The form meets no other folder in any language — measured, and worth saying of a name this corpus holds six times over, because not one of those folders carries a Serbian form."
+    },
+    {
+      "form": "Борис",
+      "lang": "ru",
+      "note": "Name page 324 of days.pravoslavie.ru is «Благоверный князь Борис»: «Благоверный» and «князь» are both rank words and are stripped, and the bare forename is all the calendar leaves — it gives him no surname and no epithet, so there is no fuller form to take. `fk.mjs` on «Борис» returns this same folder, which already stores the Serbian «Борис»; no other folder holds the string and the fold is not widened."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Мчч. блгвв. князей Бориса и Глеба , во св. Крещении Романа и Давида (1015).»",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "note": "The day's second entry, a joint line for the two brothers, and the same menologion day as the folder's Greek row; the folder's Serbian row stands on the Julian 2 мая and was NOT moved. His brother is NOT drafted here: `gleb-prince-and-passion-bearer` already carries a VENERATED russian row on the Julian 5 сентября, which BRIEF-RUSSIAN §4 forbids writing over, so the second-day question stands open and that folder was left untouched. NO `dates` WERE WRITTEN: the line's «(1015)» would be this folder's first date of any kind, and this wave has declined to write a first date off a calendar line — the standing author question. The line's «во св. Крещении Романа» is his baptismal name; ONE `ru` FORM IS STORED, per BRIEF-RUSSIAN §2, and «Роман» is recorded here instead of as a second form, the folder already keeping Ρωμανός in Greek. The indexes id324 and id518 were NOT opened, the folder's life being already written. FIVE HYMNS TAKEN, and all five are joint blocks naming both brothers; they are stored here only, Gleb's folder being untouched."
     },
     {
       "church": "romanian",
@@ -70,5 +85,87 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Правдивая страстотерпца/ и истинная Евангелия Христова послушателя,/ целомудренный Романе с незлобивым Давидом,/ не сопротив стаста врагу сущу брату,/ убивающему телеса ваша,/ душам же коснутися не могущу./ Да плачется убо злый властолюбец,/ вы же, радующеся с лики Ангельскими,/ предстояще Святей Троице,/ молитеся о державе сродников ваших богоугодней быти// и сыновом Российским спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Тропарь благоверных князей Бориса и Глеба», глас 2; a joint hymn, naming both brothers by their baptismal names",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O true passion-bearers and true hearers of the Gospel of Christ, chaste Roman with guileless David, you did not stand against your enemy, who was your own brother, when he killed your bodies and yet could not touch your souls. Let the wicked lover of power lament; but you, rejoicing with the choirs of angels and standing before the Holy Trinity, pray that the realm of your kinsmen may be pleasing to God and that the sons of Russia may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко плодовита винограда, отрасли добродетелей суще,/ Небесный дождь Христов прилете,/ источающе отечеству своему струю Православия,/ Борисе пречудне с доблим Глебом,/ вкупе молитеся Господеви сохранити град и люди,/ и на враги пособствовати,/ и душам нашим даровати велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Ин тропарь благоверных князей страстотерпцев Бориса и Глеба», глас 4; a joint hymn, the first of the two the page prints under that title",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being branches of a fruitful vine and shoots of the virtues, you drew near to the heavenly rain of Christ and poured out upon your fatherland a stream of Orthodoxy, O most wondrous Boris with valiant Gleb. Pray together to the Lord to keep our city and our people, to help us against our enemies, and to grant our souls great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученическою кровию порфиру окропивше светло,/ украшени предстоите, страдальцы славнии, Царю Безсмертному,/ и, венцы славы от Него приимше,/ молитеся стране нашей подати на враги одоление/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Ин тропарь благоверных князей страстотерпцев Бориса и Глеба», глас 4; a joint hymn, the second of the two the page prints under that title, and it names neither brother",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having brightly sprinkled the purple with the blood of martyrdom, you stand adorned before the immortal King, O glorious sufferers, and having received from Him the crowns of glory, pray that victory over our enemies be given to our land, and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Возсия днесь преславная память ваша,/ благороднии страстотерпцы Христовы, Романе и Давиде,/ созывающи нас к похвалению Христа Бога нашего./ Тем, притекающе к раце мощей ваших,/ исцеления дар приемлем молитвами вашими, святии:// вы бо божественнии врачеве есте.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Кондак благоверных князей Бориса и Глеба», глас 3; a joint hymn, naming both brothers by their baptismal names",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today your most glorious memory has shone forth, O noble passion-bearers of Christ, Roman and David, calling us to the praise of Christ our God. Therefore, coming to the shrine of your relics, we receive the gift of healing by your prayers, O holy ones: for you are physicians given of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Аще и убиени бысте и во гробех положени,/ но на Вышнее Царство преидосте,/ оваго бо копии насунута,/ другаго же, яко агнца незлобива, ножем зарезаша,/ тем и кровь ваша бысть исцеление миру,/ верою призывающим вас, святии, на помощь.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 июля ст. ст. — «Ин кондак благоверных князей страстотерпцев Бориса и Глеба», глас 8; a joint hymn, naming neither brother but distinguishing the two deaths",
+        "url": "https://days.pravoslavie.ru/Days/20260724.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Though you were slain and laid in graves, yet you passed over to the kingdom on high: the one of you run through with a spear, the other butchered with a knife like a guileless lamb. Therefore your blood has become a healing for the world, for those who with faith call upon you, O holy ones, for help.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
