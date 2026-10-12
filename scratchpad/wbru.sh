@@ -44,7 +44,8 @@ if [ -f "$up" ]; then
 fi
 
 echo "=== manifest"
-npm run build:manifest 2>&1 | tail -3 | grep -q Built || { npm run build:manifest 2>&1 | tail -12; exit 1; }
+npm run build:manifest 2>&1 | tee $TEMP/wbru-manifest.log | tail -3
+grep -q 'Built [0-9]* saints' $TEMP/wbru-manifest.log || { tail -12 $TEMP/wbru-manifest.log; exit 1; }
 echo "=== tests"
 npm test 2>&1 | grep -E '(pass|fail) [0-9]+$' || exit 1
 echo "=== audits"
