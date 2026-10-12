@@ -1,0 +1,61 @@
+{
+  "slug": "anatoly-pravdolyubov",
+  "display_name": "Anatoly (Pravdolyubov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Анатолий (Правдолюбов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Анатолий (Правдолюбов), протоиерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Анатолия … пресвитеров». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1937)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Сщмчч. Анатолия, Александра, Евгения, Константина, Николая пресвитеров, и с ними мчч. Петра, Евсевия, Михаила, Дорофея, Лаврентия, Григория и мцц. Александры и Татианы (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "First of the thirteen one line enumerates — five presbyters, then six men martyrs, then two women martyrs. For twelve of the thirteen THE LINE AND THE NAME PAGE ARE ALL THERE IS; the one life page the line carries belongs to the second presbyter. `related` IS LEFT EMPTY, as the corpus leaves it for the thirty-four of Valaam: the company is thirteen folders and the line that enumerates them is quoted whole in this row, which is where it can be read without thirteen folders each asserting twelve relations the calendar never states. The line says «пресвитеров» and his name page «протоиерей», archpriest. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries. No folder held him: a Cyrillic grep for «Правдолюбов» over every `saint.json` in this tree returns nothing. The day page prints eleven hymns and none is under any of the thirteen names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

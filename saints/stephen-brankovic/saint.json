@@ -1,0 +1,54 @@
+{
+  "slug": "stephen-brankovic",
+  "display_name": "Stephen Branković",
+  "types": [
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Стефан Сербский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Блаженный Стефан Сербский», with the rank stripped; the day line declines it as «Стефана … Бранковичей, правителей Сербских» and gives the surname only in the genitive plural shared with his wife, so it is not taken into the form. The two readings behind the line call him «Стефан Бранкович» and «Стефан Слепой», Stephen the Blind. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "related": [
+    "angelina-of-serbia",
+    "john-the-despot",
+    "maximus-of-ungrovlachia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Блж. Иоанна (1503) и родителей его блжж. Стефана (1446) и Ангелины, Бранковичей, правителей Сербских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "One line names three people — the son and his two parents — and this is the father. No folder held him: «Стефан Сербский» returns NONE on `fk.mjs`, no `saint.json` holds «Бранкович» except his wife’s and one other, and none of the fifty-seven Stephen folders is a Branković. HIS IDENTITY IS SETTLED BY THE CORPUS AND NOT BY THIS READER: `maximus-of-ungrovlachia`’s life, already in the corpus, opens «Maximus was born in Serbia, the son of the ruler of the Serbs, Saint Stephen Branković the Blind … and of Saint Angelina», which is the same man the Russian reading at /Life/life6930.htm calls «Стефан Слепой» and whose son it makes archbishop in Wallachia and founder of Krušedol. `related` is filled both ways to that folder, to his wife and to his son; `tests/related-floor.test.mjs` demanded the first of the three and is how it was found. THE YEAR THE LINE GIVES HIM IS LEFT UNRECORDED AND THE FOLDER HAS NO `dates`: the line closes his name «(1446)», and the source’s own two readings of him put the Turkish seizure of Serbia in 1457, his accession in 1458 and his death afterwards in exile in Italy, so the line’s year cannot be his death as the readings have it. The disagreement is the source’s and is not resolved here. The day page prints eleven hymns and none is his; the two under his son’s name and the two under his wife’s are theirs."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026). THE CORPUS ALREADY CONTAINS A CLAIM THAT THE GREEK CALENDAR KEEPS HIM: `maximus-of-ungrovlachia`’s life, written off saint.gr, calls him the son of «Saint Stephen Branković the Blind, whom the Greek calendar honours on 10 December». That is a sentence in another folder’s life and not a line this reader read, so no greek row is written on it. Somebody reading saint.gr for 10 Δεκεμβρίου would settle it in a minute."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026). The Prologue is known to keep this menologion day, because his wife’s and his son’s folders both carry a venerated serbian row for 10. децембар ст. ст. reading „Преподобна Ангелина и свети Јован деспот.“ — which names the two of them and not him."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

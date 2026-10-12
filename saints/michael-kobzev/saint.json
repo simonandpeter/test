@@ -1,0 +1,61 @@
+{
+  "slug": "michael-kobzev",
+  "display_name": "Michael (Kobzev)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Михаил (Кобзев)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Михаил (Кобзев), протоиерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Михаила пресвитера». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1937)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Сщмч. Михаила пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "A line of his own, standing after the thirteen of the company of 1937 and sharing their year but not their line, so no relation to them is written. THE LINE AND THE NAME PAGE ARE ALL THERE IS. The line says «пресвитера» and the name page «протоиерей», archpriest, so `presbyter` is the line’s word and the office `Archpriest` the name page’s. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries. No folder held him: a Cyrillic grep for «Кобзев» over every `saint.json` returns nothing. The day page prints eleven hymns and none is under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

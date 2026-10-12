@@ -10,4 +10,8 @@ The Ohrid Prologue keeps him on the same menologion day and closes a date the Gr
 
 And while he hung in his torments upon the cross, the book says, a voice was heard from heaven: blessed are you, Gemellus.
 
-*After saint.gr's calendar for 10 Δεκεμβρίου — [the day](https://www.saint.gr/12/10/index.aspx) and [the life](https://www.saint.gr/3215/saint.aspx); read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 10. децембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1), read 7 October 2026.*
+days.pravoslavie.ru keeps him on the same menologion day as the Greek calendar, and its reading is three lines long: for his bold rebuke of the emperor Julian the Apostate, whose reign it gives as 361 to 363, he was given over in the city of Ancyra in Galatia to the cruellest of torments — they flayed the skin from him, and nailed him to a cross. The day line closes «(ок. 361)», about 361, which is the year the folder already records from the Greek calendar.
+
+The calendar’s own name page for him carries two epithets the Greek entry does not: the Paphlagonian and of Ancyra, which are the country he came from and the city he died in, and «Многострадалец», the much-suffering.
+
+*After saint.gr's calendar for 10 Δεκεμβρίου — [the day](https://www.saint.gr/12/10/index.aspx) and [the life](https://www.saint.gr/3215/saint.aspx); read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 10. децембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1), read 7 October 2026; and the Православный церковный календарь of the Сретенский monastery for 10 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261210.html) and [the life](https://days.pravoslavie.ru/Life/life3096.htm), read 13 October 2026.*

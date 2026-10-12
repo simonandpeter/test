@@ -1,0 +1,58 @@
+{
+  "slug": "thekla-makusheva",
+  "display_name": "Thekla (Makusheva)",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Фекла (Макушева)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for her is «Фекла (Макушева), исп.»; the rank is stripped and the surname kept, the day line itself giving only «Св. Феклы исп». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1954,
+      "latest": 1954,
+      "display": "1954",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1954)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Св. Феклы исп (1954).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "A line of her own, and THE LINE AND THE NAME PAGE ARE ALL THERE IS. «Исп.» is исповедница, a woman confessor, and the name page repeats it and adds no monastic grade, so she is recorded with `confessor` alone and no office. Her year, 1954, is the latest on this day. No folder held her: a Cyrillic grep for «Макушева» over every `saint.json` returns nothing, and the Thekla folders the corpus keeps are the first-martyr and others of far earlier date. The day page prints eleven hymns and none is under her name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
