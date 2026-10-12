@@ -16,6 +16,11 @@
       "form": "Евгенија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 24. децембар ст. ст., „Преподобна мученица Евгенија и други с њом.“ — «Преподобна» is the rank `venerable` and «мученица» the rank `martyr` the folder carries, and «и други с њом» is the company and no part of her name, so the bare forename is what is left. The book gives her no by-name. Measured before it was written and it has no other holder in the corpus."
+    },
+    {
+      "form": "Евгения Римская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 24 декабря ст. ст., «Евгения Римская, дева, прмц.», with the rank words left off. The day's own line declines the name to «Евгении» and gives it without the epithet."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Прмц. Евгении и с нею мчч. Прота, Иакинфа и Клавдии (ок. 262).»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "note": "The line heads the company with her and enumerates three with her, of whom this calendar names Claudia and the corpus did not yet keep her. Her name page 2464 gives «Евгения Римская, дева, прмц.» Her father Philip and Basilla, both of whom this folder already relates to, are in the life the line links but are not on this day's line, so neither has a russian row from it."
     },
     {
       "church": "romanian",
@@ -96,7 +111,8 @@
     "philip-father-of-eugenia",
     "basilla-martyr-24-december",
     "protas-companion-of-eugenia",
-    "hyacinth-companion-of-eugenia"
+    "hyacinth-companion-of-eugenia",
+    "claudia-mother-of-eugenia"
   ],
   "hymns": [
     {
@@ -132,6 +148,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ἐπεφάνης σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Агница Твоя, Иисусе, Евгения/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою,/ но, яко жертву непорочную, приими мя с любовию пожершуюся Тебе./ Той молитвами, яко милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Тропарь преподобномученицы Евгении Римской»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your lamb, O Jesus, Eugenia, cries out with a great voice: You, my Bridegroom, I love, and seeking You I contend in suffering; I am crucified and buried with You in Your baptism, and I suffer for Your sake that I may reign in You, and I die for You that I may also live with You. Receive me as an unblemished sacrifice, offered to You in love. By her prayers, since You are merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Благородия нравом тя честноподобне украсив обоживый Господь,/ в рабий образе от Девы нам соединися,/ Иже тя в лик дев свещеносиц вчини/ и с мученики сочета, Евгение,/ яко воистинну благородия Божественныя славы венец улучи.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Кондак преподобномученицы Евгении Римской»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Lord who deifies adorned you fittingly with nobility of character, and joined Himself to us from the Virgin in the form of a servant. He it is who set you among the choir of the lamp-bearing virgins and numbered you with the martyrs, O Eugenia, so that you have truly obtained the crown of the nobility of the divine glory.",
+        "rendered": "site"
+      }
     }
   ]
 }

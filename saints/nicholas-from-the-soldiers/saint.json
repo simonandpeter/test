@@ -6,6 +6,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Όσιος Νικόλαος «ὁ ἀπὸ στρατιωτῶν»», with the rank word left off; the epithet «ὁ ἀπὸ στρατιωτῶν» is the page's own, and the corpus already follows it for `peter-from-the-soldiers` of the Greek 9 October."
+    },
+    {
+      "form": "Николай Славянин",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 24 декабря ст. ст., «Николай Славянин, схимонах», with the grade word left off. The day's own line declines the forename and gives «Прп. Николая монаха», without this epithet."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 декабря ст. ст. — «Прп. Николая монаха (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20261224.html",
+        "year": 2026
+      },
+      "note": "He is this folder's man and not a second Nicholas: the life page behind the line gives the same account the Greek row's source does — a commander under the Byzantine emperor Nikephoros I, whose reign it dates 802 to 811, sent to the war with the Bulgarians, tempted by a woman on the eve of the battle and resisting her, the only one of his company to survive it, shown in a vision that his life was granted him for that victory, and afterwards a monk under the schema who prayed without ceasing for the soldiers fallen in battle and was given the gift of foresight. His name page calls him «Николай Славянин, схимонах», where saint.gr calls him «ὁ ἀπὸ στρατιωτῶν»; the two epithets differ and the story does not. Both pages give this one day. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

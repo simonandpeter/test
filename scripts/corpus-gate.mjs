@@ -122,6 +122,8 @@ for (const { slug, saint } of corpus) {
  * set, and a reading that no longer names everyone it folds is worse than none.
  */
 const READ_FOLDS = {
+  'иакинф римскии hyacinth-companion-of-eugenia hyacinth-the-chamberlain':
+    'Two men, read on the Russian 24 December. days.pravoslavie.ru gives both the form «Иакинф Римский» and keeps them on different days with different ranks: «Мч. Иакинфа (108)» on 3 июля ст. ст., the chamberlain of Trajan, and «мчч. ... Иакинфа» within the company of Eugenia on 24 декабря ст. ст., whose own numbered name page 865 reads «Иакинф Римский, прмч.» and whom the life makes one of Eugenia’s two servants, martyred about 262. The epithet is the city both died in; a century and a half and the whole of the story separate them. Not a duplicate.',
   'сергии цветков sergius-tsvetkov sergius-tsvetkov-21-december':
     'Two men, read on the Russian 21 December. days.pravoslavie.ru gives each his own numbered name page: 10800, «Сергий (Цветков), иерей, сщмч.», a priest kept on 9 марта ст. ст. and dying in 1938, and 14499, «Сергий (Цветков), диакон, сщмч.», a deacon kept on 21 декабря ст. ст. and dying in 1937. The grade, the year and the day all differ; the name does not, which is why the later slug carries its day. Not a duplicate.',
   'sergius tsvetkov sergius-tsvetkov sergius-tsvetkov-21-december':
