@@ -17,13 +17,28 @@
       "form": "Астерије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s third heading for the Julian 7 August, „Св. муч. Марин и Астерије.“ — Св. муч. left off, which governs both names in it and which §5 maps to `martyr`. The heading gives him nothing else at all: сенатор is in the body, and «(7 August)» in the display name is the corpus’s own device for a man the calendar names bare. It folds with one other folder, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
+    },
+    {
+      "form": "Астерий Синклитик, Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Name page 287 of days.pravoslavie.ru is «Астерий Синклитик, Кесарийский (Палестинский), мч.»; the rank is stripped and the epithets the page prints are kept. «Синклитик» is the senator the Prologue's entry makes him and is kept as the page spells it, not translated. The day line gives only the genitive «Астерия». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Мчч. Марина и Астерия (260).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's fifth entry and the same menologion day as the folder's Greek and Serbian rows; the year «(260)» is the year the folder already holds. HIS COMPANION IS NOT UPGRADED HERE: the Марин of this line is `marinus-martyr-17-march`, which already stores the very name form this line's link gives — «Марин Кесарийский (Палестинский)» — and already carries a VENERATED russian row on the Julian 17 March. A second Russian day for one saint has no field in this schema, so that entry is left as a reading for the author and no row was touched. The day page prints no hymn under either name."
     },
     {
       "church": "romanian",

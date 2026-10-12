@@ -6,14 +6,29 @@
       "form": "Antonie de la Optina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Antonie de la Optina», with the rank word left off."
+    },
+    {
+      "form": "Антоний Оптинский",
+      "lang": "ru",
+      "note": "Name page 7002 of days.pravoslavie.ru is «Антоний Оптинский, прп.»; the rank is stripped. The day line gives the genitive «Антония Оптинского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Прп. Антония Оптинского (1865).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry and the same menologion day as the folder's Romanian row, which is its only other venerated one. «Прп.» is `venerable`; the folder carries NO `types` at all and none were added here, that being a reading on the folder rather than on this line. NO `dates` WERE WRITTEN: the line's «(1865)» would be this folder's first date of any kind and the reading life4632 was not opened, so the year is quoted in the source text and nowhere else — a thing left for the next reader of this folder. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

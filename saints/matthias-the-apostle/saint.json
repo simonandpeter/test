@@ -16,6 +16,11 @@
       "form": "Матија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s first heading for the Julian 9 August, „Св. апостол Матија.“ — Св. left off, which is not a rank, and апостол left off, which §5 maps to `apostle` and which the folder already carries. What is left is the bare name. The book writes Матија where the Romanian gives Matia and the Greek Ματθίας; copied as printed, never transliterated. `.tmp/sr-foldpred.mjs` reports it folds with nothing."
+    },
+    {
+      "form": "Матфий",
+      "lang": "ru",
+      "note": "Name page 1503 of days.pravoslavie.ru is «Апостол Матфий»; «Апостол» is a rank word and is stripped, and the calendar gives no epithet. The folder held the Serbian «Матија» and no Russian form. `fk.mjs` on the stored string returns NONE, and it is a different name from Матфей, Matthew, which this corpus keeps separately."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Апостола Матфия (ок. 63).»",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "note": "The day's second entry and the same menologion day as the folder's Romanian and Serbian rows; its Greek row is 30 June, the Synaxis of the Twelve, with a note of its own saying so. «Апостола» is the `apostle` the folder's `types` already carry. NO `dates` WERE WRITTEN: the line's «(ок. 63)» would be this folder's first date of any kind — the folder has none — and about-63 for an apostle's death is the standing author question this wave has declined to answer off a calendar line. The folder was checked for the two-rows-for-one-church defect that crashes `upgrade.py` on `andrew-the-first-called`, `philip-the-apostle`, `matthew-the-apostle` and `sosthenes-the-apostle`: it has exactly four rows, one per church. TWO HYMNS TAKEN where the folder's four are the Romanian and Greek ones and none of this calendar's."
     },
     {
       "church": "romanian",
@@ -150,6 +165,38 @@
         "rendered": "site"
       },
       "model": "Τοὺς ἀσφαλεῖς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Апостоле святый Матфие,/ моли Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Тропарь апостола Матфия», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle Matthias, pray to the merciful God that He grant our souls the remission of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Светозарное, яко солнце,/ во весь мир изшедшее/ вещание твое/ просвещает языческую Церковь благодатию,// чудоносче Матфие апостоле.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Кондак апостола Матфия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy proclamation, gone out into all the world radiant as the sun, enlightens the Church of the nations with grace, O wonder-bearing apostle Matthias.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

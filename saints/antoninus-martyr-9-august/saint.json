@@ -16,6 +16,11 @@
       "form": "Антоније",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s second heading for the Julian 9 August, „Св. муч. Антоније.“ — Св. муч. left off, which §5 maps to `martyr`. The heading is that rank and the name and nothing else; Alexandria is the body’s whole two words. **The book prints Антоније, which is Antony and not Antoninus**, where the Romanian line gives «Antonin» and the Greek «Αντωνίνος»; it is copied as printed and not bent towards the other two, which is §6’s rule, and the identification rests on the day and on Alexandria rather than on the name. `.tmp/sr-foldpred.mjs` reports that it folds with three other folders, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
+    },
+    {
+      "form": "Антоний Александрийский",
+      "lang": "ru",
+      "note": "Name page 207 of days.pravoslavie.ru is «Антоний Александрийский, мч.»; the rank is stripped and the epithet the page prints is kept. The day line gives the genitive «Антония Александрийского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Мч. Антония Александрийского.»",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry and the same menologion day as the folder's Romanian, Greek and Serbian rows, all three of which are 9 August. THE FORENAME DIFFERS BY A SYLLABLE AND THE SAME SOURCE-SIDE DIFFERENCE IS ALREADY IN THE FOLDER: the Russian calendar says «Антоний», Antony, where saint.gr says «Αντωνίνος», Antoninus, and doxologia «Antonin», and the folder's Serbian form is already the Russian-shaped «Антоније». One man on one menologion day with one rank in four calendars, and the display name is left as the Greek wave wrote it. The line gives NO year, so the row quotes it as the page has it, with no closing parenthesis to quote; the folder has no `dates` and none were written. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

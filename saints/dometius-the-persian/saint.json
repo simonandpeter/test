@@ -16,6 +16,11 @@
       "form": "Дометије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s first heading for the Julian 7 August, „Преп. муч. Дометије.“ — Преп. муч. left off, which §5 maps to `venerable-martyr`. The heading gives no ethnonym and no city, so the bare forename is the whole of the form; «the Persian» in the display name is the corpus’s own, off the Romanian «Dometie Persul», and Persia is in the body. `.tmp/sr-foldpred.mjs` reports it folds with nothing, although nine other folders share the Greek Δομέτιος."
+    },
+    {
+      "form": "Дометий Персиянин, Сирийский",
+      "lang": "ru",
+      "note": "Name page 643 of days.pravoslavie.ru is «Дометий Персиянин, Сирийский, иеродиакон, сщмч.»; «иеродиакон» and «сщмч.» are rank words and are stripped, and the two epithets the page prints together are kept. The day line itself gives the genitive «Дометия Персиянина». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Прмч. Дометия Персиянина и двух учеников его (363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's second entry and the same menologion day as the folder's Romanian, Greek and Serbian rows. «Прмч.» is the `venerable-martyr` the folder's `types` already carry, and the year «(363)» is the year the folder already holds. THE TWO DISCIPLES ARE NOT FOLDERED: the line names neither, and the reading life4387 names neither either — «а впоследствии стал жить в пещере вместе с двумя учениками», and at the end the soldiers found him «молящимся с учениками у пещеры» and stoned them with him. An unnamed pair is not two folders. TWO HYMNS TAKEN where the folder held the Romanian and Greek troparia and none of this calendar's."
     },
     {
       "church": "romanian",
@@ -106,6 +121,38 @@
       },
       "english": {
         "text": "Having made the word of grace your own, you wisely put away the mummery of the fire-worshippers and were offered up to Christ, father Dometios; and unbending in the contest, as an imitator of the venerable ones, you were shown a venerable martyr. Therefore we honour you with hymns, wise one, together with the pair of your disciples.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Постнически предподвизався на горе,/ умная врагов ополчения/ всеоружием Креста погубил еси, всеблаженне./ Паки же ко страдальчеству мужески облеклся еси,/ убив Копронима мечем веры,/ и обоих ради венчался еси от Бога,/ преподобномучениче Дометие приснопамятно.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Тропарь преподобномученика Дометия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having striven as an ascetic on the mountain, thou didst destroy the spiritual hosts of the enemy with the whole armour of the Cross, O all-blessed one. Then thou didst clothe thyself manfully for the contest again, slaying Copronymus with the sword of faith, and for both thou wast crowned by God, O ever-remembered venerable-martyr Dometius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Яко преобидев тленная и долу влекущая мудрования,/ преподобномучениче Дометие,/ велик наставник монахом показался еси,/ не устрашився ярости царя, не хотяща чтити Христа, истиннаго Бога./ Сего ради и скончался еси, воспевая песнь:/ Бог есть со мною, и никтоже на мя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Кондак преподобномученика Дометия», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having despised corruptible things and the reasonings that drag downwards, O venerable-martyr Dometius, thou wast shown to be a great teacher of monks, not fearing the rage of the emperor who would not honour Christ, the true God. Therefore thou didst end thy life singing: God is with me, and no one against me.",
         "rendered": "site"
       }
     }

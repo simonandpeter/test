@@ -1,0 +1,61 @@
+{
+  "slug": "sergius-tikhomirov-8-august",
+  "display_name": "Sergius (Tikhomirov), 8 August",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Сергий (Тихомиров)",
+      "lang": "ru",
+      "note": "Name page 15022 of days.pravoslavie.ru is «Сергий (Тихомиров), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line giving only the genitive «Сергия». A DELIBERATE FOLD: `fk.mjs` on the stored string returns `sergius-tikhomirov`, which stores the identical form. They are two men — that one is the Moscow merchant's son born 1866 or 1867 and shot in 1922, kept on the Julian 13 May with Christopher Nadezhdin and his company, off name page 4778; this one is name page 15022 and died in 1930 — and two men of one name are two numbered name pages, so the day-suffixed slug and the fold reading are both deliberate."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "attested",
+      "note": "The line closes «(1930)», which is the whole of what the source gives; no year of birth anywhere, and no life page behind his name."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Сщмчч. Николая и Сергия пресвитеров (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "note": "Second of the two names in the day's eighth entry. HE IS NOT `sergius-tikhomirov`, whom this corpus keeps on the Julian 13 May: that folder's own dates say 1922 and this line says 1930, and the two names hang on two different name pages, 4778 and 15022. The surname was found by `ls -d saints/*tikhomirov*`, which returned that folder and `john-tikhomirov`, and the identity was settled on the year and the name-page number, not on the name. THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind the entry. The line's «пресвитеров» and name page 15022's «иерей» give `presbyter` and the office `Priest`. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 21 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 21 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

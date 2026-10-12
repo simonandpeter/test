@@ -10,6 +10,11 @@
       "form": "Λεωνίδης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιοι Ελευθέριος, Λεωνίδης και τα Άγια Νήπια», with the rank word left off. The page glosses the name: «το παιδί του λιονταριού»."
+    },
+    {
+      "form": "Леонид",
+      "lang": "ru",
+      "note": "Name page 1342 of days.pravoslavie.ru is «Леонид, мч.»; the rank is stripped and the calendar gives no surname and no epithet, so the bare forename is the fullest form the source has and not a reconstruction. A DELIBERATE FOLD: `fk.mjs` returns `leonid-presbyter-martyr-1937`, `leonides-father-of-origen` and `leonides-of-epidaurus`."
     }
   ],
   "related": [
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Мчч. Елевферия и Леонида (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "note": "The second of the two names in the day's seventh entry, and the same menologion day as the folder's Greek row, which is its only other venerated one. NO `dates` WERE WRITTEN, for the reason given on his companion's row. THE `ru` FORM FOLDS ONTO THREE FOLDERS: `leonid-presbyter-martyr-1937` on the Julian 12 August stores the identical bare «Леонид», and `leonides-father-of-origen` and `leonides-of-epidaurus` store it as a Serbian form; four men, and the fold is recorded in the gate's READ_FOLDS. The day page prints no hymn under either name."
     },
     {
       "church": "romanian",

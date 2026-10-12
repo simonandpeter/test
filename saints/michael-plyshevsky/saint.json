@@ -1,0 +1,68 @@
+{
+  "slug": "michael-plyshevsky",
+  "display_name": "Michael (Plyshevsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Михаил (Плышевский)",
+      "lang": "ru",
+      "note": "Name page 9359 of days.pravoslavie.ru is «Михаил (Плышевский), протоиерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line giving only the bare genitive «Михаила» inside a company of eight. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1862,
+      "latest": 1862,
+      "display": "1862",
+      "basis": "attested",
+      "note": "The notice of the Minsk hieromartyrs behind his name: «родился в 1862 году в сели Вороничи Игуменского уезда Минской губернии в семье потомственных священнослужителей»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The company's line closes «(1937)», and the notice says he was shot in the Cherven prison on the feast of the Transfiguration: «Там в праздник Преображения Господня он был расстрелян». No day of the month is stated in either place."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Сщмчч. Александра, Петра, Михаила, Иоанна, Димитрия и Алексия пресвитеров, Елисея диакона и прмч. Афанасия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "Third of the eight names the day's fourteenth entry enumerates. His name is one of the two in the company that carries a life link, and it goes to the notice «Новомученики, в земле Белорусской просиявшие (23 священномученика Минских)», which is a composite page of twenty-three Minsk hieromartyrs and holds a paragraph for him. HE IS NOT `demetrius-plyshevsky`, whom this corpus already keeps on the Julian 8 January: that man is Димитрий Плышевский, born 1880 and killed in January 1938, and stands in the same composite notice eighteen paragraphs below this one. The line's «пресвитеров» and name page 9359's «протоиерей» give `presbyter` and the office `Archpriest`. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 20 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 20 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

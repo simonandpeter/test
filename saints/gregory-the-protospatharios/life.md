@@ -1,0 +1,11 @@
+# Gregory the Protospatharios
+
+The Православный церковный календарь of the Сретенский monastery keeps him within one long line of 9 August, and he is the only name in it this corpus did not already hold: «Мчч. Иулиана, Маркиана, Иоанна, Иакова, Алексия, Димитрия, Фотия, Петра, Леонтия, Марии патрикии, протоспафария Григория и двух юношей, за икону Христа пострадавших (730).» The calendar's own name page gives him as «Григорий, протоспафарий, мч.», and the reading behind the line explains the office: «протоспафарий (начальник воинов)», a commander of soldiers.
+
+They suffered for the holy icons in the year 730, under the iconoclast emperor Leo the Isaurian. Over the so-called brazen gates of Constantinople a wonderworking icon of the Saviour, made of copper, had stood since the days of the first Christian emperor, and the emperor and his new patriarch gave orders for it to be taken down. A soldier set a ladder against the wall and climbed it, and the crowd that had gathered was outraged at the sacrilege.
+
+The reading names three who acted. A patrician woman of noble family ran to the ladder and, with many after her, pulled it away from the wall so that the soldier could not touch the icon; the ladder came down and the soldier was killed by the fall. That was 19 January 730. Taking part in the defence of the icon were also the protospatharios Gregory and the virgin Theodosia, whose memory the reading refers to another day.
+
+Learning of it, the emperor at once put to death a multitude of the Orthodox whose names and number God alone knows, and the protospatharios Gregory died a martyr among them — before the eight months of imprisonment and the five hundred daily blows that the nine noblemen of the same line endured, and before the patrician woman gave herself up to death. His own body is not among those the reading says were buried in the Pelagian quarter near the church of the martyr Theodore and found incorrupt a hundred and thirty-nine years later; the reading does not say where he was laid.
+
+*After the Православный церковный календарь of the Сретенский monastery for 9 августа ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260809.html) and [the life](https://days.pravoslavie.ru/Life/life4410.htm); read 13 October 2026.*

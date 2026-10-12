@@ -6,6 +6,11 @@
       "form": "Alexandru Hotovitzky",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 decembrie, «Sfântul Preot Mărturisitor Alexandru Hotovitzky», with the rank words left off."
+    },
+    {
+      "form": "Александр Хотовицкий",
+      "lang": "ru",
+      "note": "Name page 119 of days.pravoslavie.ru is «Священномученик Александр Хотовицкий»; «Священномученик» is a rank word and is stripped, and the surname stays. The folder held only the Romanian «Alexandru Hotovitzky». The day line gives the bare genitive «Александра» inside a company of eight. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Сщмчч. Александра, Петра, Михаила, Иоанна, Димитрия и Алексия пресвитеров, Елисея диакона и прмч. Афанасия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "First of the eight names the day's fourteenth entry enumerates, and the only one of the eight the corpus already held. THE FOLDER WAS FOUND ONLY BY A SLUG-STEM GREP: `ls -d saints/*khotovit*` was empty and `ls -d saints/*hotovit*` returned it, the Romanian wave having transliterated the surname with an h. THE DAY DIFFERS FROM THE FOLDER'S ROMANIAN ROW, which is 4 December revised-julian off doxologia; that is one other church and not three, so the two days are recorded side by side and neither is moved. The folder's own date note says he was shot on 19 August 1937, which is the civil date of the Transfiguration in that year, and this calendar keeps him on the day after it. TWO HYMNS TAKEN where the folder had none: he is the only one of the eight for whom the day page prints a service."
     },
     {
       "church": "romanian",
@@ -66,5 +81,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Кротость и смирение стяжавый, любовь Христову пастве своей показал еси в годину огненных искушений Церкве Российския и, яко пастырь добрый, душу свою за Него положил еси. Молися о нас, священномучениче Александре, просветити души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Тропарь священномученика протопресвитера Александра (Хотовицкого)», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained meekness and humility, thou didst show the love of Christ to thy flock in the hour of the Russian Church's fiery trials, and as a good shepherd thou didst lay down thy life for Him. Pray for us, O hieromartyr Alexander, that our souls be enlightened.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Труды и болезни на рамо свое взял еси и, радуяся, путем тесным шествовал еси, страданьми за Христа Небеснаго Царства достигл еси. Моли о нас Бога Спаса, священномучениче Александре, обрести нам милость в День Судный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Кондак священномученика протопресвитера Александра (Хотовицкого)», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst take labours and sicknesses upon thy shoulders and didst walk the narrow way rejoicing, and by thy sufferings for Christ thou didst attain the Kingdom of Heaven. Pray for us to God the Saviour, O hieromartyr Alexander, that we may find mercy in the Day of Judgement.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

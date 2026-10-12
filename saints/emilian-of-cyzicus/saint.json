@@ -18,13 +18,28 @@
       "form": "Емилијан",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s first heading for the Julian 8 August, „Св. Емилијан Исповедник еп. Кизички.“ — Св. left off, which is not a rank; Исповедник left off, which §5 maps to `confessor`; and еп. Кизички left off, which is a rank and a see and which this folder already carries as `bishop` and as the `office` «Bishop of Cyzicus». What is left is the bare forename, with nothing in the heading that is not a rank or a see. `.tmp/sr-foldpred.mjs` reports that it folds with two other folders, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
+    },
+    {
+      "form": "Емилиан Кизический",
+      "lang": "ru",
+      "note": "Name page 777 of days.pravoslavie.ru is «Святитель Емилиан Кизический, епископ, исповедник»; «Святитель», «епископ» and «исповедник» are rank words and are stripped. The folder held no Cyrillic form but the Serbian «Емилијан». The day line gives the genitive «Емилиана исповедника, еп. Кизического». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Свт. Емилиана исповедника, еп. Кизического (815-820).»",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "note": "The day's second entry and the same menologion day as the folder's Greek and Serbian rows. «Свт.», «исповедника» and «еп.» are the `hierarch`, `confessor` and `bishop` the folder's `types` already carry, and `Bishop of Cyzicus` is already its `office`. The line's «(815-820)» is an interval the folder's floruit of 787 to 815 touches at one end and does not contain; NO `dates` WERE TOUCHED, the folder's interval being the years of his episcopate off saint.gr and this one being the years the Russian calendar puts his confession in — a reading on the folder and not on this line. ONE HYMN TAKEN: the day page prints a kontakion for him and NO troparion, and the folder's three existing hymns are all Greek."
     },
     {
       "church": "romanian",
@@ -127,6 +142,22 @@
       },
       "english": {
         "text": "In Cyzicus, O holy one, you were shown forth a celebrant of the holy things, nourishing the flock of Christ in piety; guarding it therefore from dangers, watch over and shelter all who hymn, piously and in the Orthodox faith, the one Trinity, the maker of all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Добляго тя поборника по Троице явльшася/ Церковь славит, поющи, Емилиане,/ за нюже пострадал еси./ Сего ради почитаем память твою,// языческаго нашествия избави рабы твоя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Кондак святителя Емилиана», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church glorifies thee in song, O Emilian, as a valiant champion shown forth for the Trinity, for whose sake thou didst suffer. Therefore we honour thy memory: deliver thy servants from the invasion of the heathen.",
         "rendered": "site"
       }
     }

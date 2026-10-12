@@ -1,0 +1,61 @@
+{
+  "slug": "basil-amenitsky",
+  "display_name": "Basil (Amenitsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Василий (Аменицкий)",
+      "lang": "ru",
+      "note": "Name page 9284 of days.pravoslavie.ru is «Василий (Аменицкий), протоиерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only the genitive «Василия пресвитера». `fk.mjs` on the stored string returns NONE, and a Cyrillic grep for «Амениц» over every `saint.json` returned nothing — the bare «Василий» is a fold this form stays clear of."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The day line closes «(1938)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Сщмч. Василия пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's fifteenth and last entry, and a separate one from the company of eight before it, which closes «(1937)». THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind his name. The line says «пресвитера» and name page 9284 «протоиерей», archpriest, so `presbyter` and the office `Archpriest` are both the source's own words. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries. No folder held him: `ls -d saints/*amenits*` was empty. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 20 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 20 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

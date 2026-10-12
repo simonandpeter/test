@@ -11,6 +11,11 @@
       "form": "Θεοδώρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Αυγούστου, «Οσία Θεοδώρα της Σύχλας», with the rank words and the epithets left off. The page glosses the name as the gift of God, and records the inscription her relics carry at Kyiv, «Η αγία Θεοδώρα των Καρπαθίων»."
+    },
+    {
+      "form": "Феодора Сихлинская, Карпатская",
+      "lang": "ru",
+      "note": "Name page 14956 of days.pravoslavie.ru is «Феодора Сихлинская, Карпатская, прп.»; the rank is stripped and the two epithets the page prints together are kept. The day line itself spells the first epithet differently, «Феодоры Сихловской», and the name page's spelling is the one stored. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "female",
@@ -41,8 +46,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026). Her relics have lain in the caves of the Kyiv Lavra since 1856, by her own life's account, so a Russian commemoration is likely and was not looked for."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Прп. Феодоры Сихловской (начало XVIII) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's thirteenth entry and the same menologion day as the folder's Romanian and Greek rows. The closing «(Рум.)» is this calendar's mark for a commemoration carried over from the Romanian church, the same marker as «(Конст.)» elsewhere, and the row is written all the same: the Russian calendar prints her. «Прп.» is the `venerable` the folder's `types` already carry. The line's «(начало XVIII)» — the beginning of the eighteenth century — is the death the folder already holds as the 1720s off doxologia, so no `dates` were touched. The day page prints no hymn under her name, and no life page stands behind it."
     },
     {
       "church": "romanian",

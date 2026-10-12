@@ -16,6 +16,11 @@
       "form": "Мирон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s second heading for the Julian 8 August, „Св. Мирон Чудотворац еп. Критски.“ — Св. left off, which is not a rank; Чудотворац left off, which §5 maps to `wonderworker`; and еп. Критски left off, which is a rank and a see and which this folder already carries as `bishop` and as the `office` «Bishop of Crete». What is left is the bare forename. `.tmp/sr-foldpred.mjs` reports that it folds with two other folders, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
+    },
+    {
+      "form": "Мирон Критский",
+      "lang": "ru",
+      "note": "Name page 1543 of days.pravoslavie.ru is «Святитель Мирон Критский, епископ»; «Святитель» and «епископ» are rank words and are stripped. The folder held the Serbian «Мирон» bare; this form is the Russian one with the see's adjective the page prints. The day line gives the genitive «Мирона Чудотворца, еп. Критского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 августа ст. ст. — «Свт. Мирона Чудотворца, еп. Критского (ок. 350).»",
+        "url": "https://days.pravoslavie.ru/Days/20260808.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry and the same menologion day as the folder's Romanian, Greek and Serbian rows. «Свт.», «Чудотворца» and «еп.» are the `hierarch`, `wonderworker` and `bishop` the folder's `types` already carry, and `Bishop of Crete` is already its `office`. The line's «(ок. 350)» is the about-350 the folder already holds off the Ohrid Prologue, so no `dates` were touched. The day page prints no hymn under his name; the folder's one hymn is from another calendar."
     },
     {
       "church": "romanian",

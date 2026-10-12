@@ -1,0 +1,96 @@
+{
+  "slug": "mercurius-of-the-near-caves",
+  "display_name": "Mercurius of the Near Caves",
+  "types": [
+    "venerable",
+    "hierarch",
+    "bishop",
+    "hieromartyr"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Меркурий Смоленский, Печерский",
+      "lang": "ru",
+      "note": "Name page 1522 of days.pravoslavie.ru is «Святитель Меркурий Смоленский, Печерский, епископ, сщмч.»; «Святитель», «епископ» and «сщмч.» are rank words and are stripped, and the two epithets the page prints together are kept. The day line itself gives only the genitive «Меркурия Печерского, еп. Смоленского». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1239,
+      "latest": 1239,
+      "display": "1239",
+      "basis": "traditional",
+      "note": "The day line closes «(1239)». The reading behind his name quotes a different year from the description of the Kyiv Caves Lavra — «Святой Меркурий, епископ Смоленский, убит Батыем в 1347 году» — which is a hundred and eight years later. The two are not reconciled here: the calendar's own line is taken and the quotation is recorded and not used."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Прп. Меркурия Печерского, еп. Смоленского (1239).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's eleventh entry. HE IS NOT THE SOLDIER-MARTYR THE CORPUS ALREADY KEEPS: `mercurius-of-smolensk` is the soldier of Smolensk killed in the same invasion, venerated on 24 November, and `mercurius-the-faster` is the fourteenth-century monk of the Far Caves on 4 November. This man is the monk of the Kyiv Caves who sat on the see of Smolensk and whose relics lie in the Near caves. `ls -d saints/*merc*` and a Cyrillic grep for «Меркурий» over every `saint.json` returned those two and the great-martyr of Caesarea and nothing else. The ranks are read across three places and all four are the source's own: «Прп.» on the line, «епископ» and «сщмч.» on the name page, «Священномученик» in the life page's title. The see is not a key the locale packs carry, so `office` is the bare `Bishop` and Smolensk is in the life. His second day, «28 сентября (Печер.(Б))», is on the life page and NOT on this day page, so it is a note and not a feast. TWO HYMNS TAKEN; the troparion is a common of a venerable of the Caves and the day page prints the same text under Pimen the Faster with his name in it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 20 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 20 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 August 2026 (13 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Постом душу твою просветил еси, / молитвами непрестанными сердце твое сосуд Духа Святаго соделал еси, / преподобне отче наш Меркурие; / темже вся вражия ополчения крепко посрамил еси / и, яко победоносец истинный, / воздаяние получил еси от Христа Бога. / Тому помолися о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Тропарь преподобного Меркурия Печерского, епископа Смоленского, в Ближних пещерах», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By fasting thou didst enlighten thy soul, and by unceasing prayers thou didst make thy heart a vessel of the Holy Spirit, O our venerable father Mercurius. Therefore thou didst put all the hosts of the enemy mightily to shame, and as a true victor thou didst receive thy reward from Christ God. Pray thou to Him for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Любовию ко Христу уязвив твою душу,/ преподобне отче наш Меркурие,/ в пещернем мраце свет спасения обрел еси/ и, яко чадо избранное великих отцев Печерских Антония и Феодосия,/ вкупе с ними обитель райскую наследовал еси,/ отонудуже призирай ныне на обитель земную,/ в нейже подвизался еси,/ и молися о чтущих память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Кондак», глас 8, printed under his troparion",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having wounded thy soul with love for Christ, O our venerable father Mercurius, thou didst find the light of salvation in the darkness of the caves, and as a chosen child of the great fathers of the Caves thou didst inherit with them the dwelling of paradise. From there look now upon the earthly dwelling in which thou didst struggle, and pray for those who honour thy memory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

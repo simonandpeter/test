@@ -16,13 +16,28 @@
       "form": "Пимен Многоболезнени",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s fourth heading for the Julian 7 August, „Преп. Пимен Многоболезнени.“ — Преп. left off, which §5 maps to `venerable`. **Многоболезнени is kept**: it is not a rank, it is in no table of §5, and it is the whole of what distinguishes him from the three other Pimens this corpus keeps and from the faster of the same Lavra, whom the Greek keeps on this same day. `.tmp/sr-foldpred.mjs` reports the two-word form folds with nothing."
+    },
+    {
+      "form": "Пимен Многоболезненный",
+      "lang": "ru",
+      "note": "Name page 1792 of days.pravoslavie.ru is «Преподобный Пимен Многоболезненный»; «Преподобный» is a rank word and is stripped, and the calendar gives no surname. The day line gives the genitive «Пимена Многоболезненного, Печерского». `fk.mjs` on the stored string returns NONE, and the bare «Пимен» was out of the question with a second Pimen on the same page."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Прп. Пимена Многоболезненного, Печерского (1110).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's tenth entry and the same menologion day as the folder's Greek and Serbian rows; the year «(1110)» is the year the folder already holds. HE IS NOT THE OTHER PIMEN ON THIS PAGE: the day's twelfth entry is «Прп. Пимена, постника Печерского (XIII-XIV)», who is `pimen-the-faster-of-the-caves`, a different man of a different century with his own troparion printed below this one's, and that folder already carries a VENERATED russian row on the Julian 27 August and was therefore left untouched. TWO HYMNS TAKEN where the folder had none at all."
     },
     {
       "church": "romanian",
@@ -71,5 +86,39 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Богоноснаго Антония смиренномудрием подражая, / терпением Иову подобяся, / не исцеления от болезни, но паче протяжения тоя / желал еси себе, терпеливодушне Пимене, / да не како, здрав быв / и от места сего родительми исторжен, / сожития преподобных и чина их лишишися, / тем паче надежды от самих Ангел пострижен был еси, / с нимиже моли Христа Бога / спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Тропарь преподобного Пимена Многоболезненного, Печерского, в Ближних пещерах», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating the God-bearing Antony in humility of mind and likened to Job in patience, thou didst desire for thyself not healing from thy sickness but rather its lengthening, O patient-souled Pimen, lest, being made whole and torn from this place by thy parents, thou shouldst lose the company of the venerable and their rank. Therefore, beyond all hope, thou wast tonsured by the Angels themselves; with them pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Долговременную болезнь благодарив претерпевшаго,/ приидите, сошедшеся, восхвалим Пимена многотерпеливаго,/ иже бо иногда за смрад в болезни бе гнушаемь,/ сей ныне благоухание испущает/ с верою к раце мощей его приходящим/ и прогонит злосмрадие страстей от вопиющих:/ прииди, Пимене, к нам, и ничтоже успеет враг на ны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Кондак преподобного Пимена Многоболезненного, Печерского, в Ближних пещерах», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, let us gather and praise Pimen the long-suffering, who endured a sickness of many years with thanksgiving; for he who was once shunned for the stench of his illness now gives out a sweet fragrance to those who come in faith to the shrine of his relics, and drives the foul odour of the passions from those who cry: come to us, Pimen, and the enemy shall prevail nothing against us.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

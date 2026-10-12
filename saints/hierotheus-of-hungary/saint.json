@@ -11,13 +11,28 @@
       "form": "Ιερόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Αυγούστου, «Άγιος Ιερόθεος Α' Επίσκοπος Ουγγαρίας», with the rank word, the regnal numeral and the see left off."
+    },
+    {
+      "form": "Иерофей Венгерский, Туркийский",
+      "lang": "ru",
+      "note": "Name page 14473 of days.pravoslavie.ru is «Святитель Иерофей Венгерский, Туркийский, епископ»; «Святитель» and «епископ» are rank words and are stripped, and the two epithets the page prints together are kept. The folder held no Cyrillic form at all. The day line gives the genitive «Иерофея Венгерского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Свт. Иерофея Венгерского (X) и св. Стефана I, короля Венгрии (1038).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The first of the two names in the day's ninth entry. THE FOLDER WAS FOUND ONLY BY A SLUG-STEM GREP: the menologion scan could not see it, because the Greek row that made it reads 20 August revised-julian, which is this same Julian 7 August by the thirteen-day difference and not a disagreement. `ls -d saints/*hieroth*` returned seven folders and this is the one whose office is already `Bishop of Hungary`. «Свт.» is the `hierarch` the folder's `types` already carry. NO `dates` WERE WRITTEN: the line's «(X)» is the tenth century and the folder already holds an early-eleventh-century floruit off saint.gr; the two are adjacent and neither was changed. The day page prints no hymn under his name, and no life page stands behind it."
     },
     {
       "church": "romanian",

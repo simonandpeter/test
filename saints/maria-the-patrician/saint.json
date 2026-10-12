@@ -11,6 +11,11 @@
       "form": "Μαρία",
       "lang": "el",
       "note": "Read out of saint.gr's page for the ten who suffered at the Chalke Gate, whose head line for this one is «Αγια Μαρια η Πατρικια Που Μαρτυρησε Στη Χαλκη» and whose enumeration reads «Μαρία»; the rank word and the clause about the martyrdom are left off."
+    },
+    {
+      "form": "Мария Константинопольская, патрицианка",
+      "lang": "ru",
+      "note": "Name page 2597 of days.pravoslavie.ru is «Мария Константинопольская, патрицианка, мц.»; «мц.» is the rank and is stripped, and the city and the rank of «патрицианка» the page prints are kept. The day line gives «Марии патрикии»."
     }
   ],
   "sex": "female",
@@ -28,13 +33,24 @@
     "leontius-of-the-brazen-gate",
     "marcian-of-the-brazen-gate",
     "peter-of-the-brazen-gate",
-    "phocas-of-the-brazen-gate"
+    "phocas-of-the-brazen-gate",
+    "gregory-the-protospatharios"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Мчч. Иулиана, Маркиана, Иоанна, Иакова, Алексия, Димитрия, Фотия, Петра, Леонтия, Марии патрикии, протоспафария Григория и двух юношей, за икону Христа пострадавших (730).»",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "note": "The line's tenth name, «Марии патрикии», and the only woman in it. The reading makes her the one who began the defence: a patrician woman of noble family who ran to the ladder and pulled it from the wall, and who, not having been imprisoned with the nine, gave herself up to death of her own will when she heard of their execution. «патрицианка» is kept in the stored form, as the calendar prints it beside the name and as this corpus keeps «Синклитик» on `asterios-7-august`. One of the eleven names the day's fifth entry enumerates, all of them behind one reading, life4410, «Мученики Иулиан, Маркиан, Иоанн, Иаков, Алексий, Димитрий, Фотий, Петр, Леонтий, Мария патрикия, протоспафарий Григорий и прочие». The eleventh name, the protospatharios Gregory, is the only one the corpus did not hold and lands as a new folder in batch ru-08-09-1; this row is one of the other ten. THE TWO YOUTHS ARE NOT FOLDERED: the line closes «и двух юношей» and names neither, and neither does the reading. NO `dates` WERE WRITTEN where the folder had none: the line's «(730)» and the reading's «пострадали за святые иконы в 730 году» are one year for a company whose members died at different removes from the event — Gregory at once, these nine after eight months' imprisonment, Maria by giving herself up afterwards — and this wave has not written a first date for a folder off a company's single year. `day-candidates.mjs` marked the line `[~]` and it enumerates eleven people. The day page prints no hymn under any of these names. A `related` row to `gregory-the-protospatharios` is added, which is the eleventh man of this same line and of this same reading."
     },
     {
       "church": "romanian",
