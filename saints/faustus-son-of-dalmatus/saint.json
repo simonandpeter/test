@@ -16,6 +16,11 @@
       "form": "Фауст",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s first heading for the Julian 3 August, „Преп. Исакије, Далмат и Фауст.“ — Преп. left off, which governs all three names in it. The heading gives nothing else at all: «son of Dalmatus» in the display name is the corpus’s own and the body is where the sonship is stated. It folds with one other folder and the fold is in this commit’s FINDINGS and in `READ_FOLDS`."
+    },
+    {
+      "form": "Фавст Далматский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 августа ст. ст.; the line declines the name and the link's nominative closes «, прп.», which is a rank and is not stored in the form."
     }
   ],
   "sex": "male",
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Прпп. Исаакия , Далмата и Фавста (IV-V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -127,6 +141,38 @@
       },
       "english": {
         "text": "Those who shone out in the world by ascetic labour and overturned the heresies by faith, let us praise with hymns — Isaac, with Dalmatus and Faustus — as servants of Christ, entreating Him on behalf of us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Тропарь преподобных Исаакия Далмата и Фавста»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who deal with us always according to Your gentleness, take not Your mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Пощением возсиявшия, яко светила,/ и ереси развратившия верою,/ песньми Исаакия восхвалим и с Далматом Фавста,/ яко Христовы угодники,// Того молящия о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Кондак преподобных Исаакия Далмата и Фавста»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "They shone like lamps by their fasting and overthrew heresy by their faith: with hymns let us praise Isaacius, and Faustus with Dalmatus, as servants of Christ who pray to Him for us all.",
         "rendered": "site"
       }
     }
