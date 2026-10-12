@@ -16,6 +16,11 @@
       "form": "Зотик Сиропитатељ",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 31. децембар ст. ст., „Преподобни мученик Зотик Сиропитатељ (хранитељ убогих).“ — «Преподобни мученик» is rank and §6 keeps it out; «Сиропитатељ», the feeder of orphans, is the by-name the heading gives him and is kept; and the parenthesis «(хранитељ убогих)», feeder of the destitute, is the book's own gloss on that by-name and not a second name, so it is left out. THE BARE «Зотик» WAS REFUSED DELIBERATELY: `fk.mjs` returns three holders for it — `zoticus-20-april`, `zoticus-of-nicomedia` and `zoticus-of-the-ten-of-crete` — and `corpus-gate.mjs` already carries a read `READ_FOLDS` key for those three at that exact width, so a bare form here would have widened a fold another reader wrote and read. The full string has no other holder at all."
+    },
+    {
+      "form": "Зотик Сиропитатель, Константинопольский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Зотик Сиропитатель, Константинопольский, пресвитер, сщмч.»: «пресвитер» and «сщмч.» are rank words and are stripped, and both epithets kept. `fk.mjs` on the stored string returns NONE; the folder’s Serbian «Зотик Сиропитатељ» folds elsewhere."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Сщмч. Зотика пресвитера, сиропитателя (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry. THE DAY IS NOT THE SAME IN EVERY CALENDAR: the folder’s Romanian row keeps him on 30 December and its Greek and Serbian rows on 31 December, and this calendar’s is 30 December, which is what is recorded. The line’s «Сщмч.» is a hieromartyr where the folder’s `types` read `venerable` and `martyr`; nothing was changed, because the three other calendars that made this folder gave it those words and the disagreement is the sources’ own. «сиропитателя» is the feeder of orphans, which is the epithet the folder’s display name already renders. NO `dates` WERE WRITTEN: the line’s «(IV)» is a bare Roman numeral and this wave has declined to write a date off one. ONE HYMN TAKEN, a proper kontakion naming him; the day prints no troparion for him and the folder had no hymn at all."
     },
     {
       "church": "romanian",
@@ -94,5 +109,23 @@
       "basis": "traditional",
       "note": "The folder's first date of any kind: `dates` was null, neither doxologia.ro nor saint.gr giving a year. The Охридски пролог for 31. децембар ст. ст. closes the entry «Пострада у IV веку» — he suffered in the fourth century. The interval is that century and nothing narrower; the entry names Constantine the Great and his son Constantius and gives neither of them a year, and no year was taken from the reigns. Read 8 October 2026."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "За любовь Христову, преподобне, нищия возлюбив,/ и сих удоволил еси,/ и Небесное богатство ныне восприял еси, Зотике пребогате./ Сего ради вси тя почитаем,/ совершающе память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Кондак священномученика Зотика», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ, O venerable one, thou didst love the poor and didst satisfy them, and now thou hast received the wealth of heaven, O most rich Zoticus. Therefore we all honour thee, keeping thy memory.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

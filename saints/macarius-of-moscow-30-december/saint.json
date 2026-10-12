@@ -1,0 +1,53 @@
+{
+  "slug": "macarius-of-moscow-30-december",
+  "display_name": "Macarius of Moscow (30 December)",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Moscow",
+  "dates": {
+    "death": {
+      "earliest": 1563,
+      "latest": 1563,
+      "display": "1563",
+      "basis": "attested",
+      "note": "The day line closes «(1563)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Свт. Макария , митр. Московского (1563).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry. THE NUMERAL AND THE YEAR ARE LOAD-BEARING: the corpus already keeps `macarius-metropolitan-of-moscow`, display name «Macarius of Moscow (16 February)», who is Macarius (Nevsky, Parvitsky) of 1926 and keeps 16 февраля ст. ст. — a DIFFERENT man, three and a half centuries later, and the reason this folder is an arrival and not an upgrade. The line says «митр. Московского» and the name page «митрополит Московский и всея Руси», which agree, so `metropolitan` and the office `Metropolitan of Moscow` are the source’s own words; the pack carries no «Metropolitan of Moscow and all Rus’» and nothing was minted. NO `ru` NAME FORM WAS STORED, and this is a deliberate refusal: the name page is «Святитель Макарий, митрополит Московский и всея Руси», which is a rank word and a rank phrase around a bare forename, and the bare «Макарий» already folds onto three corpus folders under a key `corpus-gate.mjs` prints UNREAD — widening that fold for a form carrying no epithet would buy nothing. The day line’s genitive «Макария ... Московского» was NOT turned into a nominative, a reconstruction this wave refuses. THE READING life6711 WAS OPENED. TWO HYMNS TAKEN, both proper: the kontakion names his own work in so many words — «книжным списанием», the copying of books, and the glorifying of the saints of this land."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 12 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 12 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

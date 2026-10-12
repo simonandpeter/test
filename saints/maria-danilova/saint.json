@@ -1,0 +1,59 @@
+{
+  "slug": "maria-danilova",
+  "display_name": "Maria (Danilova)",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Мария (Данилова)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Мария (Данилова), мц.»: «мц.» is a rank word and is stripped and the surname kept, the day line itself giving only «Марии». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1946,
+      "latest": 1946,
+      "display": "1946",
+      "basis": "attested",
+      "note": "The day line closes «(1946)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Мц. Марии (1946).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s eighth and last entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line gives her no grade beyond «Мц.», martyr, so `martyr` is the source’s own word and `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century entries; no `office` was invented. THE YEAR IS 1946, later than any other twentieth-century entry in this six-day block. A Cyrillic grep for «Данилова» over every `saint.json` returns nothing and `fk.mjs` on the stored form returns NONE. The day page prints four hymns — two for the hierarch Macarius, one for the hieromartyr Zoticus and one for the martyr Anysia — and none under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 12 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 12 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

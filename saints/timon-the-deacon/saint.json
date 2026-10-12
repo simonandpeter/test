@@ -102,8 +102,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Ап. от 70-ти Тимона (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. THE FOLDER’S OTHER THREE ROWS KEEP HIM ON 28 JULY — Romanian, Greek and Serbian alike — and this calendar’s russian row was `undocumented`, so this is his first Russian day and no second day is claimed: the day that listed him is the day recorded, per BRIEF.md §8. The Russian calendar’s own 28 July WAS NOT CHECKED. The line’s «Ап. от 70-ти» is the `apostle` the folder’s `types` already carry beside `deacon`, `bishop` and `martyr`, and its `office` already names the see of Bostra. NO `dates` WERE WRITTEN: the line’s «(I)» is a bare Roman numeral. The reading id2100 was NOT OPENED, the folder’s life being already written. NO NAME FORM WAS ADDED: the folder already stores «Тимон», which is exactly what the name page «Апостол Тимон» leaves when its rank word is stripped. The day page prints four hymns — two for the hierarch Macarius, one for the hieromartyr Zoticus and one for the martyr Anysia — and none under this name."
     },
     {
       "church": "romanian",

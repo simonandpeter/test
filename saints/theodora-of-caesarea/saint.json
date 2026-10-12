@@ -16,6 +16,11 @@
       "form": "Теодора Кесаријска",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's fourth heading for 30. децембар ст. ст., „Преподобна Теодора Кесаријска.“ — «Преподобна» is the rank `venerable`, which §6 keeps out of a stored form, and «Кесаријска», of Caesarea, is kept. Measured before it was written: the bare «Теодора» lands on five folders, so the bare form was refused; the full string has no other holder at all."
+    },
+    {
+      "form": "Феодора Кесарийская",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Феодора Кесарийская, прп.»: «прп.» is a rank word and is stripped and the epithet kept. The bare «Феодора» was out of the question, the day printing two of the name. `fk.mjs` on the stored string returns NONE; the folder’s Serbian «Теодора Кесаријска» folds elsewhere."
     }
   ],
   "sex": "female",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Прп. Феодоры Кесарийской (VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry and the same menologion day, 30 December, as the folder’s Romanian, Greek and Serbian rows. The line’s «Прп.» is the `venerable` the folder’s `types` already carry beside `monastic` and `ascetic`. SHE IS NOT THE DAY’S OTHER THEODORA: the next entry is «Прп. Феодоры Константинопольской (X)», a different folder and four centuries later, and the two epithets are what tell them apart. NO `dates` WERE WRITTEN: the line’s «(VIII)» is a bare Roman numeral. The reading life3202 was NOT OPENED. The day page prints four hymns — two for the hierarch Macarius, one for the hieromartyr Zoticus and one for the martyr Anysia — and none under this name."
     },
     {
       "church": "romanian",

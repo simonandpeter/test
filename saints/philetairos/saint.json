@@ -6,17 +6,33 @@
       "form": "Φιλέταιρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Άγιος Φιλέταιρος», with the rank word left off."
+    },
+    {
+      "form": "Филетер Никомидийский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Филетер Никомидийский, мч.»: «мч.» is a rank word and is stripped and the epithet kept. `fk.mjs` on the stored string returns NONE; the folder had no Cyrillic form of any kind."
     }
   ],
   "sex": "male",
   "types": [
-    "confessor"
+    "confessor",
+    "martyr"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Мч. Филетера Никомидийского (311).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry and the same menologion day, 30 December, as the folder’s Greek row, which is its only other venerated row. The line calls him «Мч.», a martyr, where the folder’s `types` read `confessor` alone; `martyr` is added from this line, because the word is the source’s. «Никомидийского» is the city the folder’s display name already renders. NO `dates` WERE WRITTEN: the line’s «(311)» is a single year and the folder already carries its own reading. The reading life3201 was NOT OPENED. The day page prints four hymns — two for the hierarch Macarius, one for the hieromartyr Zoticus and one for the martyr Anysia — and none under this name."
     },
     {
       "church": "romanian",

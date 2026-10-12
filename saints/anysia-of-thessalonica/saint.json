@@ -16,6 +16,11 @@
       "form": "Анисија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's first heading for 30. децембар ст. ст., „Света мученица Анисија.“ — «Света» is not a rank and «мученица» is the `martyr` the folder already carries, so §6 leaves the bare forename, which is all the heading gives. Measured before it was written: `fk.mjs` returns no other holder of this string or of anything folding to it."
+    },
+    {
+      "form": "Анисия Солунская",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Мученица Анисия Солунская»: «Мученица» is a rank word and is stripped and the epithet, of Thessalonica, kept. The day line gives only «Анисии», a bare genitive. `fk.mjs` on the stored string returns NONE; the folder’s Serbian «Анисија» folds elsewhere."
     }
   ],
   "sex": "female",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Мц. Анисии (285-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry after the afterfeast and the same menologion day, 30 December, as the folder’s Romanian, Greek and Serbian rows. The line’s «Мц.» is the `martyr` the folder’s `types` already carry beside `virgin`, which the day’s kontakion repeats — «дево мученице Анисие». NO `dates` WERE WRITTEN: the line’s «(285-305)» is a reign and not a death, and the folder already carries its own reading. The reading id2389 was NOT OPENED, the folder’s life being already written. ONE HYMN TAKEN, the day’s only one for her and a proper, which names her; the folder’s one existing hymn was not touched. The day prints no troparion for her."
     },
     {
       "church": "romanian",
@@ -101,6 +116,22 @@
       },
       "english": {
         "text": "Having holily accomplished the road of the virtues, you were betrothed to the Word, honoured Anysia, and you contended rejoicing; and you, Melania, made bright with the radiance of dispassion, flashed out upon the world the brilliance of the virtues. And now entreat Christ the Lord to be merciful to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Наста светоносный день чудесных подвиг твоих, страстотерпице преславная,/ днесь Божия честная Церковь празднует и созывает вопити тебе:/ радуйся, дево мученице Анисие всеблаженная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 декабря ст. ст. — «Кондак мученицы Анисии», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20261230.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The light-bearing day of thy wondrous struggles has come, O most glorious passion-bearer; today the honourable Church of God keeps the feast and calls us to cry to thee: rejoice, O all-blessed virgin-martyr Anysia.",
         "rendered": "site"
       }
     }
