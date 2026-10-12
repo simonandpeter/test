@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-sakharov-25-july",
+  "display_name": "Alexander (Sakharov), 25 July",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Александр (Сахаров)",
+      "lang": "ru",
+      "note": "Name page 9262 of days.pravoslavie.ru is «Александр (Сахаров), протоиерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Александра пресвитера». THE STRING IS NOT NEW: `fk.mjs` returns `alexander-sakharov`, whose own name page is 9261 and whose day is the Julian 20 ноября, and the two-holder fold `александр сахаров` is keyed in `scripts/corpus-gate.mjs` in the same commit as this folder."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1927,
+      "latest": 1927,
+      "display": "1927",
+      "basis": "attested",
+      "note": "The day line closes «(1927)», which is the whole of what the source gives; no year of birth anywhere. It is ten years earlier than the 1937 of the other Alexander Sakharov this calendar keeps, and that difference is part of what tells the two men apart."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Сщмч. Александра пресвитера (1927).»",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. THIS IS A SECOND MAN OF ONE NAME AND ONE SURNAME, AND TWO NUMBERED NAME PAGES ARE WHAT SETTLE IT: this day's link is `/name/9262.html`, titled «Александр (Сахаров), протоиерей, сщмч.», and the Julian 20 ноября's link, behind the folder `alexander-sakharov`, is `/name/9261.html` with a title identical to this one character for character. Two adjacent ids, two days, two years — 1927 here against 1937 there — so this is a new folder with a day-suffixed slug and not a second row on that one. Neither folder was merged into the other and neither man's day was moved. THE LINE AND THE NAME PAGE DISAGREE ABOUT THE GRADE: the line says «пресвитера», presbyter, and the name page «протоиерей», archpriest. `presbyter` is written from the line and the office `Archpriest` from the name page, which is how the other folder of this name already stands; the disagreement is recorded and resolved nowhere. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 7 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 7 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

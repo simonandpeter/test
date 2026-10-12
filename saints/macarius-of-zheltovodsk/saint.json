@@ -11,6 +11,11 @@
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Ιουλίου, «Όσιος Μακάριος Ζελτοβόδας ο Θαυματουργός», with the rank word and the two bynames left off. The page glosses the name as the happy one."
+    },
+    {
+      "form": "Макарий Желтоводский, Унженский",
+      "lang": "ru",
+      "note": "Name page 1403 of days.pravoslavie.ru is «Преподобный Макарий Желтоводский, Унженский»; «Преподобный» is a rank word and is stripped, and both epithets are kept, that being the fullest form the calendar gives. `fk.mjs` on the stored string returns NONE; the folder previously held only the Greek Μακάριος and no Russian form at all."
     }
   ],
   "dates": {
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The Greek page itself calls him a Russian saint, so the Russian calendar is very likely to keep him; that is a reading somebody must do, not an absence this row asserts."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Прп. Макария Желтоводского, Унженского (1444).»",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "note": "The day's third entry, and the same menologion day as the folder's Greek row, the only other it has. «Прп.» is the `venerable` the folder already carries, and the line's «(1444)» agrees exactly with the death year the folder holds off saint.gr's heading, so NO `dates` WERE CHANGED. The index id1403 was NOT opened, the folder's life being already written. THREE HYMNS TAKEN where the folder had none, and they are the only hymns on this day for a saint whose folder this batch could touch; the two for Righteous Anna were NOT taken, her folder being withheld under BRIEF-RUSSIAN §4. The first of the three names Galich, which the folder's existing life and `locations` do not; NO `locations` WERE WRITTEN, a hymn not being a life."
     },
     {
       "church": "romanian",
@@ -66,5 +81,55 @@
   },
   "related": [
     "dionysius-of-suzdal"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Днесь град твой Галич тобою хвалится,/ в концех бо его пресветло,/ яко велие солнце, возсиял еси/ и чудесы твоими, преподобне Макарие, вся озарил еси./ И ныне молися Господеви/ избавитися душам нашим от прелести вражия/ и спастися граду твоему от поганскаго наития.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Тропарь преподобного Макария Желтоводского, Унженского», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today thy city Galich boasts of thee, for at its ends thou hast risen most brightly, like a great sun, and with thy wonders, O venerable Macarius, thou hast lit all of it. And now pray to the Lord that our souls be delivered from the enemy's deceit, and thy city saved from the heathen's onslaught.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Богомудрый Желтоводския обители первоздателю,/ Богом поставленный монашескаго жития столпе,/ благописанный досточуднаго постничества образе,/ Богозданный Духа Святаго сосуде,/ златозарное Русския земли светило всесветлое,/ молим тя, отче Макарие,/ светозарною молитв твоих лучею разрешай мрачных страстей наших облак.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Ин тропарь преподобного Макария Желтоводского, Унженского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O divinely wise first builder of the monastery of Zheltovodsk, pillar of the monastic life set up by God, fair-written image of a most wonderful abstinence, God-made vessel of the Holy Spirit, gold-shining and all-radiant lamp of the Russian land: we pray thee, father Macarius, with the bright ray of thy prayers to break up the cloud of our dark passions.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Вторый Моисей явился еси, преподобне:/ он бо жезлом море раздели,/ ты же страсти, яко Амалика, победил еси/ и непроходную пустыню немятежным умом прошел еси,/ в нейже молитвами твоими велие чудо сотворил еси:/ гладныя люди до изобилия прекормил еси./ И ныне молися Господеви/ подати всем печальным утешение,/ Макарие, отче приснопамятне,/ иже Галичестей стране и всей Российстей земли/ похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 июля ст. ст. — «Кондак преподобного Макария Желтоводского, Унженского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260725.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a second Moses, O venerable one: he divided the sea with a rod, and thou didst conquer the passions as he conquered Amalek, and thou didst cross the trackless wilderness with an untroubled mind, and there by thy prayers didst work a great wonder, feeding hungry people to the full. And now pray to the Lord to grant consolation to all who sorrow, O Macarius, father of ever-blessed memory, the praise and the strength of the country of Galich and of the whole Russian land.",
+        "rendered": "site"
+      }
+    }
   ]
 }
