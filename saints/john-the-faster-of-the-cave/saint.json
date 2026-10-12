@@ -6,6 +6,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Όσιος Ιωάννης ο Νηστευτής «ὁ ἐν τῷ Σπηλαίῳ»», with the rank word left off. The by-names «ο Νηστευτής» and «ὁ ἐν τῷ Σπηλαίῳ» are left off the stored form."
+    },
+    {
+      "form": "Иоанн Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 7 декабря ст. ст., «Иоанн Печерский, постник», with the by-name «постник», the Faster, left off as the rank-like word it stands in for here; the calendar prints it after a comma as it prints a grade. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -17,8 +22,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr calls him a Russian venerable, so the Russian calendar is the one that would say most about him, and it has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His life page lists one other day, «28 сентября (Печер.(Б))», the synaxis of the venerable fathers of the Near Caves of Kyiv, where he is buried. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Прп. Иоанна, постника Печерского (XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "The same man and the same menologion day. The Greek entry this folder was made from is «Ιωάννης ὁ Νηστευτὴς ὁ ἐν τῷ Σπηλαίῳ», John the Faster who is in the Cave, whom that page calls a Russian venerable and of whose life it says it has no details; «Печерский» is that Σπήλαιον — the Caves of Kyiv — and «постник» is the Νηστευτής. The folder's own life already sets him apart from the John the Faster who was patriarch of Constantinople, and this calendar keeps the two apart in the same way."
     },
     {
       "church": "romanian",
@@ -52,5 +68,14 @@
   "related": [
     "cyriacus-of-constantinople",
     "paul-the-new-patriarch-of-constantinople"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "The century the day line closes with for 7 декабря ст. ст., «(XII)», and the century its life page gives: «Подвизался в Киево-Печерском монастыре в XII веке и погребен в Ближних пещерах». The folder held no date at all: saint.gr said outright that it had no details of his life. Read 13 October 2026."
+    }
+  }
 }

@@ -6,6 +6,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Όσιος Παύλος ο Υποτακτικός», with the rank word left off."
+    },
+    {
+      "form": "Павел Послушливый (Повинник)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 7 декабря ст. ст., «Павел Послушливый (Повинник), прп.», with the rank word left off. Both epithets are kept because the calendar prints both and the parenthesis is its own, not an abbreviation of one of them; neither word is a rank. The line on the day page itself gives the name in the genitive with the first epithet only."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Прп. Павла Послушливого.»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "The same man and the same menologion day: this folder's Greek row is already Paul the Obedient, and «Послушливый» is that epithet in Russian. Both books tell the same two things of him — the boiling pitch he stirred with his hand unburned, and the going to Jerusalem, then Cyprus, then the mountain where he died — and this one names the mountain Паригори where the Greek one has Parigoria. The line gives him no year and neither page does; `dates` stays absent."
     },
     {
       "church": "romanian",

@@ -6,6 +6,11 @@
       "form": "Αθηνόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιος Αθηνόδωρος», with the rank word left off."
+    },
+    {
+      "form": "Афинодор Месопотамский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 7 декабря ст. ст., «Афинодор Месопотамский, прмч.», with the rank word left off. The line on the day page itself gives the name in the genitive and no country at all."
     }
   ],
   "sex": "male",
@@ -13,6 +18,13 @@
     "martyr"
   ],
   "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "about 304",
+      "basis": "traditional",
+      "note": "The year the day line closes with for 7 декабря ст. ст., «(ок. 304)», where «ок.» is the calendar's own hedge and is kept as «about». It falls inside the reign this folder already held as a floruit, which is why that reading stands beside it unchanged. Read 13 October 2026."
+    },
     "floruit": {
       "earliest": 284,
       "latest": 305,
@@ -24,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 декабря ст. ст. — «Мч. Афинодора (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261207.html",
+        "year": 2026
+      },
+      "note": "The same man and the same menologion day: the Greek entry this folder was made from places him in Mesopotamia in the time of Diocletian, and this calendar's name link and life page call him «Афинодор Месопотамский» and put him in Syrian Mesopotamia. `types` UNTOUCHED: the day line gives «Мч.», the martyr the folder already holds, while the name link gives «прмч.», a venerable-martyr, on the strength of the monastic life his life page says he led from his youth; the day line is what this row quotes and the discrepancy is recorded in the life."
     },
     {
       "church": "romanian",
