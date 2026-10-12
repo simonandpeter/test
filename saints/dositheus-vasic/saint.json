@@ -1,0 +1,61 @@
+{
+  "slug": "dositheus-vasic",
+  "display_name": "Dositheus (Vasić)",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "confessor"
+  ],
+  "office": "Metropolitan",
+  "names": [
+    {
+      "form": "Досифей (Васич)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Святитель Досифей (Васич), митрополит Загребский, исповедник»: «Святитель», «митрополит», the see and «исповедник» are rank words and are stripped, the surname kept. The form is stored in the RUSSIAN spelling the calendar prints, «Васич», and not in a Serbian one, which this reader has not seen. The day line itself gives only «Досифея , митр. Загребского, исп». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1945,
+      "latest": 1945,
+      "display": "1945",
+      "basis": "attested",
+      "note": "The day line closes «(1945)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 декабря ст. ст. — «Свт. Досифея , митр. Загребского, исп (1945).»",
+        "url": "https://days.pravoslavie.ru/Days/20261231.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line says «митр. Загребского» and «исп», and the name page «митрополит Загребский, исповедник», which agree, so `metropolitan`, `hierarch` and `confessor` are the source’s own words; THE OFFICE IS STORED AS THE BARE «Metropolitan», because the locale packs carry no «Metropolitan of Zagreb» and BRIEF-ADDENDUM §4 forbids minting one — the see is in the life instead. HE IS A SERBIAN HIERARCH ON A RUSSIAN DAY and the corpus’s Serbian wave has not reached him: a Cyrillic grep for «Васич» over every `saint.json` returns nothing, `ls -d saints/dositheus*` returns `dositheus-kolchenkov`, `dositheus-of-verkhny-ostrov` and `dositheus-the-obedient`, none of them this man, and `fk.mjs` on the stored form returns NONE. The russian row is therefore the only venerated row this folder gets, and the serbian row is left `undocumented` with its note saying the Prologue was not checked. The day page prints one hymn only, a kontakion of the venerable Melania, and nothing under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 13 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 13 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
