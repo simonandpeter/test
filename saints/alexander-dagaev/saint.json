@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-dagaev",
+  "display_name": "Alexander (Dagaev)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Александр (Дагаев)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Александр (Дагаев), протоиерей, сщмч.»; the grade, the rank and, where there is one, the see are stripped and the surname kept, the day line itself giving only the forename. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "The day line closes «(1920)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Сщмч. Александра пресвитера (1920).»",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "note": "THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind this entry. The line names one man and he is in this draft. The line says «пресвитера» and the name page «протоиерей», archpriest, which is the same order in a higher grade.  The day page prints two hymns and both belong to the twenty thousand martyrs of Nicomedia; nothing stands under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 10 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 10 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

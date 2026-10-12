@@ -1,0 +1,59 @@
+{
+  "slug": "cornelius-of-krypetsk",
+  "display_name": "Cornelius of Krypetsk",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Корнилий Крыпецкий",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Корнилий Крыпецкий, прп.»: «прп.» is a rank word and is stripped and the epithet kept. The day line itself declines to «Корнилия Крыпецкого». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "attested",
+      "note": "The day line closes «(1903)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Прп. Корнилия Крыпецкого (1903).»",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. «Прп.» is the `venerable`, and `monk` is written from that rank and from the epithet, which is the Krypetsk monastery near Pskov; the source gives no grade and no `office` was stored. A Cyrillic grep for «Крыпецкий» over every `saint.json` returns `sabbas-of-krypetsk` alone — another forename, the founder of the same house, and another day — and `ls -d saints/cornelius*` returns seven folders, none of them this man. `fk.mjs` on the stored form returns NONE. The day page prints two hymns and both belong to the twenty thousand martyrs of Nicomedia; nothing stands under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 10 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 10 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Γλυκέριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Άγιοι Ίνδης, Γοργόνιος, Πέτρος, Ζήνων, Δωρόθεος ο Πρεπόσιτος, Μαρδόνιος, Γλυκέριος ο Πρεσβύτερος, Θεόφιλος ο Διάκονος και Μυγδόνιος οι συγκλητικοί», with the rank words left off."
+    },
+    {
+      "form": "Гликерий Никомидийский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Гликерий Никомидийский, пресвитер, сщмч.»: «пресвитер» and «сщмч.» are rank words and are stripped. `fk.mjs` on the stored string returns NONE; the folder had no Cyrillic form."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Мучеников 20000 , в Никомидии в церкви сожженных, и прочих, тамо же вне церкви пострадавших: Гликерия пресвитера, Зинона , Феофила диакона, Дорофея , Мардония , Мигдония диакона, Индиса , Горгония , Петра , Евфимия , мцц. Агафии , Домны , Феофилы и иных (302).»",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, the FIRST name on it, and the same menologion day, 28 December, as the folder’s Romanian and Greek rows. THE LINE ENUMERATES THIRTEEN NAMES beside the twenty thousand and «и иных»: Гликерия, Зинона, Феофила, Дорофея, Мардония, Мигдония, Индиса, Горгония, Петра, Евфимия, Агафии, Домны, Феофилы. This draft holds TWO of them as arrivals, one — Glycerius — as an upgrade with the collective, and TEN AS WITHHELD: `zeno-of-nicomedia`, `theophilus-the-deacon-of-nicomedia`, `dorotheus-of-nicomedia`, `mardonius-of-nicomedia`, `migdonius-of-nicomedia`, `indes-of-nicomedia`, `gorgonius-of-nicomedia`, `peter-of-nicomedia`, `euthymius-of-nicomedia` and `domna-of-nicomedia` each already carry a VENERATED russian row on 3 сентября ст. ст., and a second Russian day is a reading for the report and never a draft (BRIEF-RUSSIAN §4). He is the one of the thirteen whose russian row was `undocumented`, which is why he is an upgrade here and the other ten are withheld. The line says «Гликерия пресвитера» and the name page «Гликерий Никомидийский, пресвитер, сщмч.», which are the `hieromartyr` and `presbyter` the folder’s `types` already carry. NO `dates` WERE WRITTEN: the line’s «(302)» is a single year and the folder already carries its own reading. The day page prints two hymns, a troparion and a kontakion of the martyrs, and both are the company’s own; nothing stands under this name alone."
     },
     {
       "church": "romanian",

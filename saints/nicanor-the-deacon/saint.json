@@ -100,8 +100,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 декабря ст. ст. — «Ап. от 70-ти Никанора (ок. 34).»",
+        "url": "https://days.pravoslavie.ru/Days/20261228.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry. THE FOLDER’S OTHER THREE ROWS KEEP HIM ON 28 JULY — Romanian, Greek and Serbian alike — and this calendar’s russian row was `undocumented`, so this is his first Russian day and no second-day question arises: the day that listed him is the day recorded, per BRIEF.md §8. The Russian calendar’s own 28 July is NOT recorded here and WAS NOT CHECKED. The line says «Ап. от 70-ти», of the Seventy, which is the `apostle` the folder’s `types` already carry beside `deacon` and `martyr`. NO `dates` WERE WRITTEN: the line’s «ок. 34» is about the year 34 and the folder already carries its own reading. The reading life4320 was NOT OPENED, the folder’s life being already written. NO NAME FORM WAS ADDED: the folder already stores «Никанор», which is exactly what the calendar’s name page «Никанор, апостол от 70-ти, сщмч.» leaves when its rank words are stripped. The day page prints two hymns and both belong to the twenty thousand martyrs of Nicomedia; nothing stands under this name."
     },
     {
       "church": "romanian",
