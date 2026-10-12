@@ -122,6 +122,14 @@ for (const { slug, saint } of corpus) {
  * set, and a reading that no longer names everyone it folds is worse than none.
  */
 const READ_FOLDS = {
+  'марков михаил michael-markov michael-markov-27-february':
+    'Two men, two numbered name pages, two days. 14269 «Михаил (Марков), иерей, сщмч.» is the priest kept 3 июня ст. ст., which is the folder michael-markov; 14231 «Михаил (Марков), псаломщик, мч.» is the psalmist dead 1938 and kept 27 февраля ст. ст. Different office and different rank on the calendar itself. Read 13 October 2026.',
+  'markov michael michael-markov michael-markov-27-february':
+    'Two men, two numbered name pages, two days. 14269 «Михаил (Марков), иерей, сщмч.» is the priest kept 3 июня ст. ст., which is the folder michael-markov; 14231 «Михаил (Марков), псаломщик, мч.» is the psalmist dead 1938 and kept 27 февраля ст. ст. Different office and different rank on the calendar itself. Read 13 October 2026.',
+  'николаи троицкии nicholas-troitsky nicholas-troitsky-16-november nicholas-troitsky-25-february':
+    'Archpriests and priests of one surname, each with his own numbered name page on days.pravoslavie.ru and his own day. 9734 «Николай (Троицкий), иерей, сщмч.» is the priest dead 1937, kept 7 ноября ст. ст., which is the folder nicholas-troitsky; 14505 «Николай (Троицкий), протоиерей, сщмч.» is the archpriest dead 1945, kept 25 февраля ст. ст.; nicholas-troitsky-16-november is the third, which the corpus already held. The day line prints the forename alone, so the surname and with it the fold come from the name link in every case. Read 13 October 2026.',
+  'nicholas troitsky nicholas-troitsky nicholas-troitsky-25-february':
+    'Archpriests and priests of one surname, each with his own numbered name page on days.pravoslavie.ru and his own day. 9734 «Николай (Троицкий), иерей, сщмч.» is the priest dead 1937, kept 7 ноября ст. ст., which is the folder nicholas-troitsky; 14505 «Николай (Троицкий), протоиерей, сщмч.» is the archpriest dead 1945, kept 25 февраля ст. ст.; nicholas-troitsky-16-november is the third, which the corpus already held. The day line prints the forename alone, so the surname and with it the fold come from the name link in every case. Read 13 October 2026.',
   'николаи розов nicholas-rozov nicholas-rozov-20-february nicholas-rozov-7-march':
     'Three archpriests of one surname, three numbered name pages on days.pravoslavie.ru, and three days. 9379 «Николай (Розов), протоиерей, исп.» is the confessor dead 1941, kept 25 сентября ст. ст.; 13676 «Николай (Розов), протоиерей, сщмч.» is the hieromartyr kept 20 февраля ст. ст.; the third is the folder the corpus already held for 7 марта. The calendar names only the forename on the day line, so the surname and with it the fold come from the name link in every case. Read 13 October 2026.',
   'nicholas rozov nicholas-rozov nicholas-rozov-20-february nicholas-rozov-7-march':
