@@ -1,0 +1,13 @@
+# Peter (Zinoviev)
+
+He was born on 20 June 1894 in the village of Berezniki in the Saratov province, a son of the priest Constantine Zinoviev, finished the theological seminary in 1914, served a while as a psalmist and was then ordained priest to a church in the town of Petrovsk in the same province. He was married and had three children; in 1937 the elder daughter was nineteen, the son thirteen and the younger daughter eleven. He kept a cow and twenty-two desyatinas of land. Hard as life was once the persecution began, the reading says, he did not leave the service of God for any earthly advantage.
+
+So it went until 1935, when the OGPU required him to leave the Saratov region. There was nowhere to go; and like many priests of the lower Volga he went to the archbishop under whom he had served in the twenties, and in the Tver diocese was given at once a place at the church of the Exaltation in the town of Bezhetsk, where he served until his arrest. The wave of arrests and shootings had left the diocese with almost no priests in it, and he was one of the last to be taken.
+
+The NKVD called in a duty witness who had been a precentor in one of the town’s churches for eight years and was now giving evidence against the clergy. He testified that the priest had said that the church of the Entry stood in such a good place and a monument to Lenin had been set up beside it, Lenin on whose initiative so many churches had been closed; that the faithful were oppressed, but the oppressors’ time was numbered; that the collective farms were the peasants’ ruin.
+
+Questioned himself, he denied almost all of it: the slander of the candidates for the Supreme Soviet, the rumours spread during the service of 18 December, the insults to the leaders of the party and the government, the discrediting of them in May. One thing he allowed in part — that he had spoken among people close to him of the famine of 1932 and 1933 in Petrovsk, where he had then been, as of a hard thing lived through; the rumours of war he had not spread. The investigator told him he was lying and demanded truthful evidence, and he answered that he could give no more.
+
+The indictment was drawn up on 21 December out of the false witnesses’ statements. On 27 December a troika of the NKVD sentenced him to be shot, and he was shot ten days after his arrest, on 29 December 1937. He was numbered among the New Martyrs and Confessors of Russia at the Jubilee Council of Bishops in August 2000.
+
+*After the Православный церковный календарь of the Сретенский monastery for 16 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261216.html) and [the life](https://days.pravoslavie.ru/Life/life4885.htm); read 13 October 2026.*

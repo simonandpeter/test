@@ -6,4 +6,6 @@ He was arrested by imperial order, and because he would not sacrifice to the ido
 
 A little after, the page ends, his head fell and his soul flew to the dwellings of the righteous. That is all it prints of him: no emperor is named, only an imperial order; no year is given within the century; no relic is listed and no hymn.
 
-*After saint.gr's calendar for 16 Δεκεμβρίου — [the day](https://www.saint.gr/12/16/index.aspx) and [the life](https://www.saint.gr/3280/saint.aspx); read 2 October 2026.*
+The Russian calendar keeps him on 16 декабря ст. ст., the same menologion day as the Greek calendar here, and its line is «Мч. Марина (III).» — the martyr Marinus, third century — with its own name page calling him «Марин Римский», Marinus the Roman. That century is wider than the end of the third the Greek page gives and agrees with it; the Russian book does not call him a senator, and nothing is read out of the omission.
+
+*After saint.gr's calendar for 16 Δεκεμβρίου — [the day](https://www.saint.gr/12/16/index.aspx) and [the life](https://www.saint.gr/3280/saint.aspx); read 2 October 2026; and the Православный церковный календарь of the Сретенский monastery for 16 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261216.html), read 13 October 2026.*

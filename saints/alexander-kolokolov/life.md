@@ -1,0 +1,11 @@
+# Alexander (Kolokolov)
+
+He was born on 7 March 1880 in the village of Nikolskoye-Neveryevo in the Goritsy district of the Tver province, a son of the priest Nicholas Kolokolov, finished the Tver theological seminary, and in 1913 was ordained priest to the church of St Nicholas in his own village. His whole life was bound to that village and that church. He knew every one of his parishioners, kept a holding of his own as the peasants did, and so did not depend on their offerings; from 1914 he was a full member of the Tver diocesan Orthodox missionary society, and in 1928 he was given a pectoral cross for his zealous and blameless service.
+
+The persecution that began again at the end of the twenties did not pass him by. In 1929, he being a homeopathic physician as well as a priest, the authorities fined him a thousand roubles for practising medicine; a year later he was arrested for not paying his taxes and sentenced to a year in a corrective labour camp.
+
+His boldness interested the head of the district branch of the NKVD, who came to question him himself. He did not admit his guilt before the Soviet power, he said: he had given his whole life to the service of God and would serve Him free or imprisoned; as a servant of God he was bound to care for the souls of men and for their salvation, and was bound therefore to preach as he had preached. He could not acknowledge the existing power by conviction, though he was bound to submit to it as permitted by God. That power was carrying through godlessness and was killing faith in God, and was therefore the power of dark forces; against such a power he was bound to contend for his flock with all his strength, and from that he could not draw back on any terms.
+
+A troika of the NKVD sentenced him to be shot on 27 December, and he was shot the day after the sentence, on 29 December 1937. He was numbered among the New Martyrs and Confessors of Russia at the Jubilee Council of Bishops in August 2000.
+
+*After the Православный церковный календарь of the Сретенский monastery for 16 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261216.html) and [the life](https://days.pravoslavie.ru/Life/life4727.htm); read 13 October 2026.*

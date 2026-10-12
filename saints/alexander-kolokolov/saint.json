@@ -1,0 +1,68 @@
+{
+  "slug": "alexander-kolokolov",
+  "display_name": "Alexander (Kolokolov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Александр (Колоколов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Александр (Колоколов), протоиерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE; two other Kolokolov folders carry other forenames."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "The reading at `/Life/life4727.htm`: «родился 7 марта 1880 года в селе Никольское-Неверьево Горицкого уезда Тверской губернии в семье священника Николая Колоколова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)» and the reading gives the day: «Протоиерей Александр Колоколов был расстрелян через день после приговора, 29 декабря 1937 года.» That civil date is the Julian 16 декабря of this memory."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Сщмчч. Аркадия, еп. Бежецкого, Илии, Павла, Феодосия, Владимира, Александра пресвитеров, прмч. Макария (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      },
+      "note": "The sixth of the seven men of the day’s seventh line, read at `/Life/life4727.htm`, which is his alone and names none of the others; no `related` rows join the seven, for the reason given on the bishop’s row. THE LINE CALLS HIM A PRESBYTER AND THE NAME PAGE AN ARCHPRIEST, «протоиерей», which the reading repeats at the shooting; the office is the name page’s word, the fuller of the two, and the line’s is not contradicted by it. No folder held him. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

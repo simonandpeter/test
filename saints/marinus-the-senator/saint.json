@@ -6,6 +6,11 @@
       "form": "Μαρίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Άγιος Μαρίνος», with the rank word left off. The page glosses the name itself, «(από την λατινική λέξη mare = θάλασσα) = ο άνθρωπος των θαλασσών και των ταξιδιών»."
+    },
+    {
+      "form": "Марин Римский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Марин Римский, мч.»; the grade is stripped and the epithet kept, the day line itself declining the bare forename only. The calendar calls him Roman and does not call him a senator, which the Greek page does. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The identity is read on the day, the name, the city and the century together: the line is «Мч. Марина (III)», the third century, and the calendar’s own name page calls him «Марин Римский», Marinus the Roman, where this folder’s `death` is saint.gr’s end of the third century and its life has him a senator martyred at Rome. The Russian century is the wider of the two readings and replaces nothing. The reading this calendar links, `/Life/life3131.htm`, was NOT opened; this folder’s life is already written out of its other source. Nothing on the day page is under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Мч. Марина (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

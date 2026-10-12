@@ -1,0 +1,61 @@
+{
+  "slug": "paul-favoritov",
+  "display_name": "Paul (Favoritov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Павел (Фаворитов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Павел (Фаворитов), иерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE; `peter-favoritov` carries the same surname and another forename."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1937)», which is the whole of what the source gives for him; no year of birth, and no reading of his own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 декабря ст. ст. — «Сщмчч. Аркадия, еп. Бежецкого, Илии, Павла, Феодосия, Владимира, Александра пресвитеров, прмч. Макария (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261216.html",
+        "year": 2026
+      },
+      "note": "The third of the seven men of the day’s seventh line, and THE LINE AND THE NAME PAGE ARE ALL THERE IS FOR HIM: the line carries six readings for seven men, and all six belong to the other six — the titles were read and his name is on none of them. No `related` rows join the seven, for the reason given on the bishop’s row. No folder held him: `fk.mjs` on «Павел (Фаворитов)» returns NONE, and a Cyrillic grep for «Фаворитов» over every `saint.json` returns `peter-favoritov` alone, a different forename. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 29 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 29 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
