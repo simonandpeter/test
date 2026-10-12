@@ -6,6 +6,11 @@
       "form": "Anatolie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 iulie, «Sfântul Anatolie „cel Tânăr” de la Optina», with the rank word left off; the epithet is the calendar's own."
+    },
+    {
+      "form": "Анатолий (Потапов) Оптинский II, Младший",
+      "lang": "ru",
+      "note": "The nominative the calendar's own name page gives, «Анатолий (Потапов) Оптинский II, Младший, прп.», with the rank word dropped; the day line gives neither the surname nor the numeral. Read 13 October 2026."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июля ст. ст. — «Прп. Анатолия Оптинского, Младшего (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20260730.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
