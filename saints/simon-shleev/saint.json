@@ -1,0 +1,67 @@
+{
+  "slug": "simon-shleev",
+  "display_name": "Simon (Shleev) of Ufa",
+  "names": [
+    {
+      "form": "Симон (Шлеев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст., «Сщмч. Симона , еп. Уфимского (1921).»; the line declines the name and the link's nominative is «Святитель Симон (Шлеев), епископ Уфимский, сщмч.», whose first word is the hierarch's rank and whose last two are the see and the martyr grade, none of them stored in the form. The reading gives his name in the world as Шлеев Симеон Иванович."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "dates": {
+    "birth": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru: «родился в 1873 году в Симбирской губернии»."
+    },
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru gives the day in both styles: «Владыка был убит при возвращении в свою резиденцию из кафедрального собора 5 (18) августа 1921 года». The day line closes «(1921)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Сщмч. Симона , еп. Уфимского (1921).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

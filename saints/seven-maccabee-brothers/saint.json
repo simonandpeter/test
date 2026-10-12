@@ -35,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 августа ст. ст. — «Семи мучеников Маккавеев: Авима , Антонина , Гурия , Елеазара , Евсевона , Алима и Маркелла , матери их Соломонии и учителя их Елеазара (166 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260801.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -132,6 +141,38 @@
       },
       "english": {
         "text": "Seven-numbered pillars of the wisdom of God, and seven-branched lamps of the divine light, all-wise Maccabees, greatest martyrs before the martyrs: together with them ask of the God of all that those who honour you be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Болезньми святых, имиже о Тебе пострадаша,/ умолен буди, Господи,/ и вся наша болезни исцели,// Человеколюбче, молимся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 августа ст. ст. — «Тропарь мучеников Маккавеев»",
+        "url": "https://days.pravoslavie.ru/Days/20260801.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the sufferings of the saints, wherewith they suffered for Thee, be Thou entreated, O Lord, and heal all our sufferings, O Lover of mankind: for this we pray.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Премудрости Божия столпи седмочисленнии/ и Божественнаго Света светильницы седмосвещнии,/ Маккавеи всемудрии,/ прежде мучеников превелии мученицы,/ с нимиже всех Богу молитеся// спастися почитающим вас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 августа ст. ст. — «Кондак мучеников Маккавеев»",
+        "url": "https://days.pravoslavie.ru/Days/20260801.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seven pillars of the Wisdom of God and seven-branched lamps of the divine Light, all-wise Maccabees, great martyrs before the martyrs were: pray with them to the God of all, that those who honour you may be saved.",
         "rendered": "site"
       }
     }

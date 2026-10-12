@@ -1,0 +1,60 @@
+{
+  "slug": "platon-kolegov",
+  "display_name": "Platon (Kolegov)",
+  "names": [
+    {
+      "form": "Платон (Колегов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 августа ст. ст., «Прмч. Платона (1937).», which gives the forename alone and in the genitive; the link's nominative carries the surname and then «иеромонах, сщмч.», a rank and an office which are not stored in the form."
+    }
+  ],
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "office": "Hieromonk",
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The only year the calendar prints for him, in the day line's own «(1937)». The entry has no life page of any kind behind it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Прмч. Платона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

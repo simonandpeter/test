@@ -16,13 +16,27 @@
       "form": "Антоније Римљанин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s third heading for the Julian 3 August, „Преп. Антоније Римљанин.“ — Преп. left off, which §5 maps to `venerable`. **Римљанин is kept**: it is an ethnonym and not a rank, it is in no table of §5, and it is the only thing in the heading that distinguishes him — Novgorod is in the body. `.tmp/sr-foldpred.mjs` reports the two-word form folds with nothing."
+    },
+    {
+      "form": "Антоний Римлянин",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 августа ст. ст., whose nominative is «Преподобный Антоний Римлянин»; the first word is the rank and is not stored."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Прп. Антония Римлянина, Новгородского чудотворца (1147).»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -81,5 +95,55 @@
   },
   "related": [
     "nicetas-of-novgorod"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Ветхий Рим, отечество твое, оставив,/ на камень, яко на легкий корабль, возшел еси/ и на нем паче естества, аки безплотен, по водам шествовал еси,/ промышлением Божественнаго разума направляемь,/ Великаго Новаграда достигл еси/ и, обитель в нем сотворив,/ тело твое в ней предложил еси, яко дар освящен./ Тем молим тя, отче Антоние:// моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Тропарь преподобного Антония»; the page prints this same text twice, the second time under «Тропарь преподобного Антония Римлянина, Новгородского», and it is stored once",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving old Rome, your native country, you went up onto a rock as onto a light ship, and upon it, past nature and as though bodiless, you travelled over the waters, steered by the providence of the divine Mind, until you came to Great Novgorod; and having made a monastery there you laid down your body in it as a hallowed gift. Therefore we pray you, father Anthony: pray to Christ God that He save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Римское воспитание, Великому же Новуграду благодатное процветение,/ многими бо труды и подвиги в нем Богу угодил еси./ Сего ради чудес дарований от Него сподобился еси,/ и тело твое многими леты соблюде нетленно./ Мы же, сие лобызающе, радостно от души вопием ти:// радуйся, отче Антоние.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Кондак преподобного Антония»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rome's nursling, and to Great Novgorod a flowering of grace: for in it you pleased God with many labours and struggles. Therefore you were granted from Him the gift of wonders, and He kept your body uncorrupt through many years. And we, kissing it, cry to you with joy from the soul: rejoice, father Anthony.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко звезда, возсиял еси от Рима,/ и, дошед Богоспасаемаго Великаго Новаграда,/ ту в нем обитель сотворил еси,/ и, церковь поставив,/ созва инок множество./ С нимиже моли о нас, чтущих память твою, да зовем ти:/ радуйся, преподобне отче Антоние.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Ин кондак преподобного Антония Римлянина»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a star you shone out from Rome, and having reached God-saved Great Novgorod you made a monastery there, and setting up a church you called together a multitude of monks. With them pray for us who honour your memory, that we may cry to you: rejoice, venerable father Anthony.",
+        "rendered": "site"
+      }
+    }
   ]
 }

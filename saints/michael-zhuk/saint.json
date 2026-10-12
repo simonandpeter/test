@@ -1,0 +1,60 @@
+{
+  "slug": "michael-zhuk",
+  "display_name": "Michael (Zhuk)",
+  "names": [
+    {
+      "form": "Михаил (Жук)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 августа ст. ст., «Прмч. Михаила , мчч. Симеона и Димитрия (1937).», which gives the forename alone and in the genitive; the link's nominative carries the surname and then «иеромонах, сщмч.», an office and a rank which are not stored in the form."
+    }
+  ],
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "office": "Hieromonk",
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line prints for the three men it names together, «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 августа ст. ст. — «Прмч. Михаила , мчч. Симеона и Димитрия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260804.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

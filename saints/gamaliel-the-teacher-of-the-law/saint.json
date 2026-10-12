@@ -6,6 +6,11 @@
       "form": "Gamaliel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 august, «Dreptul Gamaliel», with the rank word left off."
+    },
+    {
+      "form": "Гамалиил",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 августа ст. ст., where the line itself has «Гамалиила» in the genitive. The link's nominative is the bare forename with nothing beside it; the line's «правв.» is the rank of the righteous and is not stored."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Перенесение из Иерусалима в Константинополь мощей первомч. архидиакона Стефана (ок. 428) и обретение мощей правв. Никодима , Гамалиила и сына его Авива .»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

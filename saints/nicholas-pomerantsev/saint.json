@@ -1,0 +1,60 @@
+{
+  "slug": "nicholas-pomerantsev",
+  "display_name": "Nicholas (Pomerantsev)",
+  "names": [
+    {
+      "form": "Николай (Померанцев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 августа ст. ст., «Сщмч. Николая пресвитера (1938).», which gives the forename alone and in the genitive; the link's nominative carries the surname and then «иерей, сщмч.», an office and a rank which are not stored in the form."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The only year the calendar prints for him, in the day line's own «(1938)». The entry has no life page of any kind behind it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Сщмч. Николая пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

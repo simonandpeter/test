@@ -6,4 +6,6 @@ In his old age he came to Antioch, to the patriarch Gregory, who died in 584, an
 
 The entry gives no year for anything of his own. The 584 it prints belongs to the patriarch he came to, not to him, and nothing is recorded from it here.
 
-*After the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 3. август ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-16&prolog=1); read 6 October 2026.*
+The Russian calendar keeps him on the same Julian day as the Prologue, as «Прп. Космы отшельника (VI)», and its reading is the same dossier told from the book it names, the Spiritual Meadow, on the word of a presbyter and abba whose own tale of him it cites. It adds the desert and the century the Prologue leaves out — the Pharan wilderness in Palestine, in the sixth century — and the practice of standing at prayer through the whole night from Saturday into Sunday, and it has him die at Antioch on a journey there rather than in old age at the patriarch's door. The beggar at the grave who had lain twelve years paralysed is in both books.
+
+*After the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 3. август ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-16&prolog=1); read 6 October 2026; and the Православный церковный календарь of the Сретенский monastery for 3 августа ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260803.html) and [the life](https://days.pravoslavie.ru/Life/life4373.htm), read 13 October 2026.*

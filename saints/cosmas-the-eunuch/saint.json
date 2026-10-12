@@ -3,20 +3,35 @@
   "display_name": "Cosmas the Eunuch",
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "hermit"
   ],
   "names": [
     {
       "form": "Козма шкопац",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s second heading for the Julian 3 August, „Преп. Козма шкопац.“ — Преп. left off, which §5 maps to `venerable`. **шкопац is kept**: it is in no rank table of §5, it is not a grade, and it is the only thing in the heading that distinguishes him, the Pharan lavra and Antioch both being in the body. Without it the form would be a bare Козма, which `usableName` refuses and which would fold with every other Cosmas that stores a Serbian form."
+    },
+    {
+      "form": "Косма Фаранский (Палестинский), Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 августа ст. ст.; the line has only «Космы отшельника», the hermit Cosmas, in the genitive, and the link's nominative closes «, отшельник», which is the rank the folder's own types already carry and is not stored in the form."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Прп. Космы отшельника (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +61,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind, the Ohrid Prologue giving a year only for the patriarch he came to and not for him. days.pravoslavie.ru closes his day line «(VI)» and its reading opens «Преподобный Косма отшельник жил в VI веке в Фаранской пустыне, в Палестине»."
+    }
   }
 }

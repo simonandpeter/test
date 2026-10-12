@@ -10,4 +10,4 @@ At that the tyrant was so enraged that he ordered them to be beheaded; and so th
 
 Of Μνησίθεος himself the page says nothing beyond his name, his place in the nine and his trade: all of them were farmers, it says, except Menaeus, who was a joiner.
 
-*After saint.gr's calendar for 1 Αυγούστου — [the day](https://www.saint.gr/08/01/index.aspx) and [the life](https://www.saint.gr/2181/saint.aspx); read 1 October 2026.*
+*After saint.gr's calendar for 1 Αυγούστου — [the day](https://www.saint.gr/08/01/index.aspx) and [the life](https://www.saint.gr/2181/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 1 августа ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260801.html) and [the life](https://days.pravoslavie.ru/Life/life4363.htm), read 13 October 2026.*

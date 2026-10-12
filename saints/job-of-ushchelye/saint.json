@@ -1,0 +1,60 @@
+{
+  "slug": "job-of-ushchelye",
+  "display_name": "Job of Ushchelye",
+  "names": [
+    {
+      "form": "Иов Ущельский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст., «Прп. Иова Ущельского (1628).», whose nominative is «Преподобный Иов Ущельский»; the first word is the rank and is not stored. The two readings behind the link head him differently, one «Преподобномученик» and the other «Преподобный»."
+    }
+  ],
+  "types": [
+    "venerable-martyr",
+    "monk",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "dates": {
+    "death": {
+      "earliest": 1628,
+      "latest": 1628,
+      "display": "1628",
+      "basis": "attested",
+      "note": "The day line closes «(1628)» and the fuller reading dates the attack: «5 августа 1628 г., когда братия была на сенокосе, на монастырь напали разбойники»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Прп. Иова Ущельского (1628).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

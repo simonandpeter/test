@@ -1,0 +1,61 @@
+{
+  "slug": "razhden-the-persian",
+  "display_name": "Razhden the Persian",
+  "names": [
+    {
+      "form": "Ражден Перс, Карталинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 августа ст. ст., «Мч. Раждена перса, первомч. Грузинского (457) (Груз.).»; the line declines the name and the link's nominative adds the region of Kartli, which the reading places him in."
+    }
+  ],
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "vakhtang-gorgasali"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 457,
+      "latest": 457,
+      "display": "457",
+      "basis": "traditional",
+      "note": "The day line closes «(457)» and the reading says it in as many words: «святой Ражден скончался на кресте в 457 году»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 августа ст. ст. — «Мч. Раждена перса, первомч. Грузинского (457) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260803.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

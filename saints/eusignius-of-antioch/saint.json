@@ -16,6 +16,11 @@
       "form": "Евсигније",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s first heading for the Julian 5 August, „Св. муч. Евсигније.“ — Св. муч. left off, which §5 maps to `martyr`. The heading gives no city and no by-name, so the bare forename is the whole of the form; Antioch is in the body, where a name form may not reach. `.tmp/sr-foldpred.mjs` reports it folds with nothing."
+    },
+    {
+      "form": "Евсигний Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст.; the line declines the name and the link's nominative closes with a rank, which is not stored in the form. The nominative is «Евсигний Антиохийский, мч.»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Мч. Евсигния (362).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

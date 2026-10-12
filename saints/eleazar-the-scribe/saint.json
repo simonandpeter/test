@@ -16,6 +16,11 @@
       "form": "Елеазар",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s first heading for the Julian 1 August, „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“ — свештеник stripped, which §5 maps to `presbyter` and which this folder already carries in `types`. What is left is the bare forename, which `.tmp/sr-foldpred.mjs` reports folds with nothing: the other Eleazar folders of this corpus store no Serbian form."
+    },
+    {
+      "form": "Елеазар Иерусалимский",
+      "lang": "ru",
+      "note": "Read out of the name link behind «учителя их Елеазара» on days.pravoslavie.ru's line for 1 августа ст. ст.; the link's nominative adds the rank «Мученик», which is not stored, and the place «Иерусалимский», which is part of the name it gives. The line's earlier «Елеазара», among the seven brothers, is a different man and has its own link."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 августа ст. ст. — «Семи мучеников Маккавеев: Авима , Антонина , Гурия , Елеазара , Евсевона , Алима и Маркелла , матери их Соломонии и учителя их Елеазара (166 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260801.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -16,6 +16,11 @@
       "form": "Нона",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s fourth heading for the Julian 5 August, „Св. Нона.“ — Св. left off, which is not a rank and gives no type. The heading is that word and her name and nothing else, so the form is the bare name; the corpus’s own display name carries «mother of Gregory the Theologian», which is the corpus’s and not this book’s. `.tmp/sr-foldpred.mjs` reports it folds with nothing."
+    },
+    {
+      "form": "Нонна Назианзская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст.; the line declines the name and the link's nominative closes with a rank, which is not stored in the form. The nominative is «Нонна Назианзская, диакониса», whose last word is an office and is not stored in the form."
     }
   ],
   "sex": "female",
@@ -39,8 +44,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Прав. Нонны , матери св. Григория Богослова (374).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

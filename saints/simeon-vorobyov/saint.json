@@ -1,0 +1,68 @@
+{
+  "slug": "simeon-vorobyov",
+  "display_name": "Simeon (Vorobyov)",
+  "names": [
+    {
+      "form": "Симеон (Воробьев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 августа ст. ст., «Прмч. Михаила , мчч. Симеона и Димитрия (1937).»; the line declines the name and the link's nominative closes «, мч.», a rank which is not stored. The reading's own title spells the surname «Воробьёвы», with ё, where the name link has е."
+    }
+  ],
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "related": [
+    "demetrius-vorobyov"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru: «Семён родился в 1871 году»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru: «Братья Симеон и Димитрий были расстреляны 17 августа 1937 года», and the day line closes «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 августа ст. ст. — «Прмч. Михаила , мчч. Симеона и Димитрия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260804.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

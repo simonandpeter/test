@@ -16,6 +16,11 @@
       "form": "Соломонија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s first heading for the Julian 1 August, „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“ — матер њихова left off, a descriptor and not a rank, and already carried by the display name. **This book spells her Соломонија**, with the extra syllable, where the Greek is Σολομονή; the form is copied as printed."
+    },
+    {
+      "form": "Соломония Маккавей",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 августа ст. ст., where the line itself has «матери их Соломонии» in the genitive; the link's nominative adds the rank «Мученица», which is not stored."
     }
   ],
   "sex": "female",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 августа ст. ст. — «Семи мучеников Маккавеев: Авима , Антонина , Гурия , Елеазара , Евсевона , Алима и Маркелла , матери их Соломонии и учителя их Елеазара (166 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260801.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

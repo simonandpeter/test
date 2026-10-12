@@ -17,6 +17,11 @@
       "form": "Фавије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s second heading for the Julian 5 August, „Свешт. муч. Фавије (Фавијан) папа Римски.“ — Свешт. муч. left off, which §5 maps to `hieromartyr`, and папа Римски left off too, which §5 sends to `office` and which this folder already carries as «Bishop of Rome». **The heading prints a second spelling in brackets, (Фавијан), and the body uses both**; §6 allows one form per folder, so the headword before the bracket is stored and the gloss inside it is recorded here rather than added as a second form. `.tmp/sr-foldpred.mjs` reports that either spelling folds with nothing."
+    },
+    {
+      "form": "Фавий Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст.; the line declines the name and the link's nominative closes with a rank, which is not stored in the form. The nominative is «Святитель Фавий Римский, папа, сщмч.», whose first word is the hierarch's rank and whose last two are the see and the martyr grade."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Сщмчч. Анфира (236) и Фавия (250), пап Римских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

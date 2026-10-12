@@ -1,0 +1,60 @@
+{
+  "slug": "john-smirnov-5-august",
+  "display_name": "John (Smirnov) (5 August)",
+  "names": [
+    {
+      "form": "Иоанн (Смирнов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст., «Сщмч. Иоанна диакона (1939).», which gives the forename alone and in the genitive; the link's nominative carries the surname and then «диакон, сщмч.», an office and a rank which are not stored in the form. Three other folders already carry this exact string, on 24 октября, 22 ноября and 27 ноября, which is why this one is kept under his day."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "office": "Deacon",
+  "dates": {
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "attested",
+      "note": "The only year the calendar prints for him, in the day line's own «(1939)». The entry has no life page of any kind behind it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Сщмч. Иоанна диакона (1939).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

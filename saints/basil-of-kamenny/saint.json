@@ -1,0 +1,59 @@
+{
+  "slug": "basil-of-kamenny",
+  "display_name": "Basil of Kamenny",
+  "names": [
+    {
+      "form": "Василий Каменский (Спасо-Кубенский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 августа ст. ст., «Блж. Василия Спасо-Кубенского (XV).»; the line gives the forename alone and in the genitive, and the link's nominative is «Блаженный Василий Каменский (Спасо-Кубенский)», whose first word is the rank and is not stored."
+    }
+  ],
+  "types": [
+    "monk",
+    "ascetic"
+  ],
+  "office": "Monk",
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru gives no year, only the century, twice: the day line closes «(XV)» and both readings open «Жил в XV веке»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Блж. Василия Спасо-Кубенского (XV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

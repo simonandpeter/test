@@ -16,13 +16,27 @@
       "form": "Василије Московски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s third heading for the Julian 2 August, „Св. блажени Василије јуродиви Московски.“ — Св. is not a rank and is dropped with the two that are, блажени and јуродиви, both of which §5 reads as `fool-for-christ` here. Московски is a toponymic and not a rank, so §6 keeps it: it is the whole of what distinguishes him in this heading, and without it the form would be a bare Василије. `.tmp/sr-foldpred.mjs` reports the two-word form folds with nothing."
+    },
+    {
+      "form": "Василий Московский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 августа ст. ст., whose nominative is «Блаженный Василий, Московский чудотворец»; «Блаженный» is the rank and «чудотворец» the epithet the folder already carries as a type, so the stored form is the forename with the city."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Блж. Василия , Христа ради юродивого, Московского чудотворца (1552-1557).»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -81,5 +95,87 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Житие твое, Василие, неложное, и чистота нескверна,/ Христа ради тело твое изнурил еси постом и бдением,/ и мразом и теплотою солнечною,/ и слотою и дождевным облаком,/ и просветися лице твое, яко солнце,/ и ныне приходят к тебе Российстии народи и вси людие,/ прославляюще святое твое успение./ Тем Христа Бога моли,/ да избавит ны от варварскаго пленения и междоусобныя брани/ и мир мирови подаст и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Тропарь блаженного Василия, Христа ради юродивого»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your life, Basil, was without falsehood and your purity undefiled. For Christ's sake you wore out your body with fasting and with vigil, with frost and with the heat of the sun, with sleet and with the raining cloud, and your face shone like the sun. And now the peoples of Russia and all men come to you, glorifying your holy falling asleep. Therefore pray to Christ God, that He deliver us from captivity to the barbarian and from war among ourselves, and give peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Плоть удручившу ти злостраданием,/ душу же просветившу чистотою сердца,/ обогатился еси благодатию Пресвятаго Духа, Василие,/ даровати требующим полезная./ Сего ради недужнии, притекающе к цельбоподательному твоему гробу, премудроюроде,/ независтно приемлют болезней отложение/ и благодарственно воспевают прославльшаго тя,/ Единаго Человеколюбца.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Ина служба блаженного Василия. Тропарь»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having worn your flesh down with hard suffering and lit your soul with purity of heart, you were enriched, Basil, with the grace of the All-Holy Spirit, to give what is needful to those who need it. Therefore the sick, running to your healing tomb, O most wise fool, receive the laying aside of their sicknesses ungrudgingly, and sing in thanksgiving to Him who glorified you, the only Lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Якоже бо солнце и луна наготою своею не срамляются,/ тако и ты, угодниче Христов Василие, наг сый, не срамляшеся,/ восприят бо ризу Адама первозданнаго,/ юже он ношаше прежде в рай,/ ты же сию на земли поносил еси;/ и был еси добрый купец:/ елико имеяше, вся остави/ и купи мздою терпения своего село,/ на немже сокровен безценный Бисер, Христос./ Сего ради явися всем грешным образ покаяния/ и вселися в райскую широту,/ и, предстоя Христови,/ не забуди град, в немже обита, и люди, преблаженне,/ и моли спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Ин тропарь блаженного Василия, Христа ради юродивого»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the sun and the moon are not ashamed of their nakedness, so you, Basil, servant of Christ, being naked were not ashamed; for you took up the garment of the first-created Adam, which he wore of old in paradise, and you wore it here on earth. And you were a good merchant: all that you had you left, and with the wage of your patience you bought the field in which the Pearl beyond price, Christ, lies hidden. Therefore you were shown to every sinner as the pattern of repentance, and you dwell in the breadth of paradise. Standing before Christ, do not forget the city you lived in, nor its people, most blessed one, and pray that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Духом Божиим водим, преблаженне Василие,/ оттрясл еси мирский мятеж,/ и жития треволнения возгнушался еси,/ и, совлекся одеяний тленных и облекся в ризу безстрастия,/ убежал еси ловления льстиваго миродержца,/ и был еси странен во твоем языце,/ и, паче земнаго богатства избрав богатство Небесное,/ увязлся еси венцем терпения./ И ныне, преблаженне Василие, моли Христа Бога/ о творящих святую память твою, да зовем ти:/ радуйся, преблаженне Василие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Кондак блаженного Василия, Христа ради юродивого»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Led by the Spirit of God, most blessed Basil, you shook off the tumult of the world and turned from the storms of this life; and having stripped off the garments that perish and put on the robe of dispassion, you escaped the snares of the deceiving ruler of this world. You were a stranger among your own people, and choosing the wealth of heaven above the wealth of earth you were crowned with the crown of patience. And now, most blessed Basil, pray to Christ God for those who keep your holy memory, that we may cry to you: rejoice, most blessed Basil.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явил тя есть Господь нынешнему роду/ исцелителя болезнем и прогонителя недугом/ любовию, Василие, притекающим к тебе/ и призывающим верою молитвы твоя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Ина служба блаженного Василия. Кондак»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Lord has shown you to this generation, Basil, as a healer of sicknesses and a driver-away of infirmities, for those who run to you in love and call upon your prayers in faith.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
