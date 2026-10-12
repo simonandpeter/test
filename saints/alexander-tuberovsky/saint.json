@@ -1,0 +1,69 @@
+{
+  "slug": "alexander-tuberovsky",
+  "display_name": "Alexander (Tuberovsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter",
+    "theologian"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Александр Михайлович Туберовский",
+      "lang": "ru",
+      "note": "The fullest form the calendar gives him, read off the heading of his life page, «Священномученик протоиерей Александр Михайлович Туберовский», with the rank and the grade stripped and the patronymic kept; his name page gives the shorter «Александр (Туберовский), протоиерей, сщмч.» and the day line only «Александра … пресвитеров». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "His life page gives the day as well as the year — «родился в семье священника в селе Макавеево, Касимовского уезда Рязанской губернии 8 марта 1881 года» — and only the year is recorded here, because `dates.display` must be a string `lib/date-display.js` parses whole in four languages. The day is in the life."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1937)». His life page dates the day itself «10 (23) декабря этого же года», old style and new, and the arrest «13 (26) сентября 1937 года»; only the year is recorded here, the paired style being the source’s own and not a date this corpus stores."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Сщмчч. Анатолия, Александра, Евгения, Константина, Николая пресвитеров, и с ними мчч. Петра, Евсевия, Михаила, Дорофея, Лаврентия, Григория и мцц. Александры и Татианы (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "Second of the thirteen one line enumerates, and THE ONLY ONE OF THEM WITH A LIFE PAGE: /Life/life4735.htm, which is his alone and says nothing of the other twelve by name. `related` is left empty for the whole company, as the corpus leaves it for the thirty-four of Valaam. The line says «пресвитеров» and both his name page and his life page say «протоиерей», archpriest. His life page lists two days — «Дни памяти: 26 января (Новомуч.), 10 декабря» — of which the first is the common synaxis of the new martyrs and not a second feast of his own; THAT SYNAXIS PAGE WAS NOT OPENED. `theologian` is written because the page’s own account of him is of a dogmatic theologian: professor at the Moscow Academy and author of the one dissertation it says a modern theologian devoted to the central dogma. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries. No folder held him: a Cyrillic grep for «Туберовский» over every `saint.json` returns nothing. The day page prints eleven hymns and none is under any of the thirteen names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

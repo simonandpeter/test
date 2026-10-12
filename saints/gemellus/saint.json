@@ -11,6 +11,11 @@
       "form": "Гемел",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 10. децембар ст. ст., „Свети мученик Гемел.“ — with «Свети» (“saint”) and «мученик» (the `martyr` grade `types` keeps) left off, which leaves the bare forename; the heading offers nothing else, and the city is in the body. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Гемелл Пафлагонянин, Анкирский",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, whose text the day page splices into the line itself: «Гемелл Пафлагонянин, Анкирский. Многострадалец, мч.» The rank is stripped, the two place-epithets the page gives — the Paphlagonian, of Ancyra — are kept, and «Многострадалец», the much-suffering, is left out as a second epithet standing on its own sentence. The day line declines it as «Гемелла Пафлагонянина». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Мч. Гемелла Пафлагонянина (ок. 361).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "The day’s third line, on the same menologion day the Greek calendar keeps him on, and its year «(ок. 361)» agrees with the 361 the folder already records. The reading at /Life/life3096.htm is three lines and adds the place and the manner: Ancyra in Galatia, flayed and nailed to a cross, for rebuking Julian the Apostate. THE DAY PAGE’S HTML IS DEFECTIVE HERE: the text of his name link is spliced into the middle of the line, so that `day-candidates.mjs` reads the entry as two, «Мч. ⟦Гемелл Пафлагонянин, Анкирский. Многострадалец, мч.⟧ Гемелла Пафлагонянина (ок. 361).» The one line is one man and the name page’s own two forms are inside it. The day page prints eleven hymns and none is under his name."
     },
     {
       "church": "romanian",

@@ -1,0 +1,60 @@
+{
+  "slug": "anna-stolyarova",
+  "display_name": "Anna (Stolyarova)",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "office": "Schemanun",
+  "names": [
+    {
+      "form": "Анна (Столярова)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for her is «Анна (Столярова), схимонахиня, исповедница»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Прп. Анны исп». The other Anna this same day brings is «Ивашкина», a confessor of 1948 with no monastic grade. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1958,
+      "latest": 1958,
+      "display": "1958",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1958)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Прп. Анны исп (1958).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "The last line of the day, and the latest year on it. THE LINE AND THE NAME PAGE ARE ALL THERE IS. «Прп.» is преподобная, which this corpus reads as `venerable`, and «исп» is исповедница, a woman confessor; her name page gives the grade the line does not — «схимонахиня», a schemanun, the great habit — and the office `Schemanun` is that word and is carried by all four locale packs. TWO ANNAS STAND ON THIS ONE DAY and the surnames tell them apart: this woman «Столярова», a schemanun of 1958, and «Ивашкина», a confessor of 1948 named with another woman on a line of her own. No folder held her: a Cyrillic grep for «Столярова» over every `saint.json` returns nothing. The day page prints eleven hymns and none is under her name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

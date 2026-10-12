@@ -6,6 +6,11 @@
       "form": "Ακεψεής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιοι Αειθαλάς και Ακεψεής», with the rank word left off."
+    },
+    {
+      "form": "Акепсий Арбесский (Персидский)",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Акепсий Арбесский (Персидский), мч.», with the rank stripped and both epithets kept as the page prints them, the parenthesis included; the day line declines it as «Акепсия». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Мчч. Акепсия и Аифала (354).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "The first of the two the day’s second line names, on the same menologion day the Greek calendar keeps the pair on. The reading at /Life/life3103.htm is the first account the folder has had of either man, and it gives this one an office the Greek entry did not: a pagan priest at Arbela, healed of a sickness by a Christian bishop’s prayers and converted by it. `dates` ARE WRITTEN FOR THE FIRST TIME from the line’s «(354)» alone, the reading giving no year; the same year goes on his companion’s folder. The day page prints four hymns and none is under either name."
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 354,
+      "latest": 354,
+      "display": "354",
+      "basis": "traditional",
+      "note": "The year the Russian day line closes with, «Мчч. Акепсия и Аифала (354)»; the folder had no date at all before, the Greek calendar giving none, and the reading behind the line gives none either."
+    }
   }
 }

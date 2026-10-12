@@ -17,6 +17,11 @@
       "form": "Ермоген",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 10. децембар ст. ст., „Свети мученици Мина, Ермоген и Евграф.“ — with «Свети мученици» left off and the second of the three bare forenames taken; the see this folder is named for is in the body and not the heading, and §6 keeps a see out of a stored form in any case. `sr-foldpred.mjs` measured the folded string at two other holders, `hermogenes-of-moscow` and `hermogenes-of-nicomedia`, and no READ_FOLDS key existed for the pair, so a new three-member key goes into `scripts/corpus-gate.mjs` in this commit."
+    },
+    {
+      "form": "Ермоген Александрийский",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Ермоген Александрийский, мч.», with the rank stripped; the day line itself declines it as «Ермогена». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Мчч. Мины, Ермогена и Евграфа (ок. 313).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "The second of the three the day’s first line names, on the same menologion day the Romanian calendar keeps them on. The reading at /Life/life3095.htm makes him the eparch Maximinus sent to try the first of the three and a pagan who was converted by what he saw; NO `dates` ARE WRITTEN, the line giving a bounded guess «(ок. 313)» and the reading a reign, and the folder having carried no date through two earlier calendars. The day page’s three hymns for the company are added to all three folders; the kontakion in the fourth tone names him first of the three."
     },
     {
       "church": "romanian",
@@ -111,6 +126,54 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Τὸ προσταχθὲν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Воздержанием страстей огнепальныя/ умертвивше зраки и движения, Христовы мученицы/ прияша благодать недуги отгоняти немощных/ и живше и по кончине чудодействовати./ Воистинну чудо преславно,/ яко кости наги источают исцеления,// слава Единому и Создателю Богу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст., «Тропарь мучеников», глас 8 — a common of martyrs, printed under no one name, and the only company the day heads is this one of three",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By abstinence the martyrs of Christ put to death the fiery looks and motions of the passions, and received grace to drive sickness from the weak and to work wonders both in their life and after their end. Truly a marvellous wonder, that bare bones should pour forth healings: glory to the one God and Creator.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Добропесненный глас твоих словес,/ Ермогена из глубины погибели возвед,/ постави на камени жизни,/ отонудуже и Евграф, царя обличив,/ радуяся, посекается в славную главу,/ но прилежно моли, Мино,// спастися всем, любовию чтущим тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст., «Кондак мучеников», глас 4 — addressed to Menas and naming the other two of his company, of whom he is the first",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The sweet-singing voice of thy words led Hermogenes up out of the depth of perdition and set him upon the rock of life; whence Eugraphus also, rebuking the emperor, was gladly struck down upon his glorious head. But pray earnestly, O Menas, that all who honour thee with love may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Мину чуднаго, Ермогена Божественнаго и Евграфа купно/ священными сладкопении почтим вси,/ яко почествовавшия Господа,/ и страдальчествовавшия за Него,/ и лика Безплотных на Небесех достигшия,// и чудеса точащия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст., «Кондак мучеников», глас 1 — the second kontakion the page prints for the company, naming all three men",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all together honour with sacred sweet songs the wondrous Menas, the divine Hermogenes and Eugraphus, for they gave honour to the Lord and suffered for his sake, and have attained to the choir of the bodiless powers in the heavens, and pour forth wonders.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

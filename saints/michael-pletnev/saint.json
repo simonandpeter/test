@@ -1,0 +1,64 @@
+{
+  "slug": "michael-pletnev",
+  "display_name": "Michael (Pletnev)",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Михаил (Плеьнев)",
+      "lang": "ru",
+      "note": "STORED AS THE PAGE PRINTS IT, DEFECT AND ALL. The calendar’s own name page for him reads «Михаил (Плеьнев), мч.», with a soft sign where a т belongs: his father’s name page two links earlier reads «Евграф (Плетнев)» and the line calls him «сына его», his son, so the surname is Плетнев and the form here is a typographical fault on the source page. It is kept verbatim rather than corrected, because a name form is copied and never emended; the display name follows the father’s link. The day line itself gives only «мч. Михаила»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "related": [
+    "james-shestakov",
+    "alexander-shklyaev",
+    "eugraphus-pletnev"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Сщмчч. Иакова и Александра пресвитеров, сщмч. Евграфа пресвитера и сына его мч. Михаила (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "The fourth of the four one line enumerates, and the one the line puts in a relation: «сына его», the son of the third. «Мч.» is мученик, a martyr with no priestly grade, and the name page repeats it and adds nothing, so he is recorded as a layman. THE LINE AND THE NAME PAGES ARE ALL THERE IS. HIS NAME PAGE CARRIES A TYPOGRAPHICAL DEFECT, «Плеьнев» for «Плетнев», and the stored form keeps it; the `names` note has the whole of the reading. No folder held him. The day page prints eleven hymns and none is under any of these names."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "nicholas-vinogradov-11-december",
+  "display_name": "Nicholas (Vinogradov, 11 December)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Николай (Виноградов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Николай (Виноградов) (другой), протоиерей, сщмч.» — AND THE «(другой)», *another*, IS THE SOURCE’S OWN: the calendar itself marks him off from another man of the same name and surname. The grade, the rank and that parenthetical are stripped and the surname kept; the day line gives only «Сщмч. Николая пресвитера». `fk.mjs` on the stored string returns three other folders, so the slug and the display name carry the day, as `nicholas-vinogradov-14-november` and `nicholas-vinogradov-18-november` already do."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1937)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Сщмч. Николая пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "A line of its own, and THE LINE AND THE NAME PAGE ARE ALL THERE IS. The line says «пресвитера» and the name page «протоиерей», archpriest. A FOURTH FOLDER OF THIS NAME, and the hardest of the four to be sure of: the corpus keeps `nicholas-vinogradov` on the Julian 4 ноября with 1931, `nicholas-vinogradov-14-november` on 14 ноября with 1937, and `nicholas-vinogradov-18-november` on 18 ноября with 1948. THIS MAN IS 11 ДЕКАБРЯ WITH 1937, THE SAME YEAR AS THE 14 НОЯБРЯ FOLDER, and the only thing that distinguishes the two is the day — except that the source itself writes «(другой)», another, into his name page, which is the calendar marking him off from a namesake of its own accord. That is why this is a fourth folder and not a second day on an existing one, and it is as far as the reading goes: WHICH namesake the «(другой)» points at is not stated and is not decided here. The day page prints four hymns and none is under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 24 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 24 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 24 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

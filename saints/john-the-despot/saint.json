@@ -4,12 +4,28 @@
   "types": [
     "prince"
   ],
-  "names": [],
+  "names": [
+    {
+      "form": "Иоанн Сербский",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Блаженный Иоанн Сербский», with the rank stripped; the day line declines it as «Блж. Иоанна» and gives the surname only in the genitive plural «Бранковичей», shared with his parents, so it is not taken into the form. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (8 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Блж. Иоанна (1503) и родителей его блжж. Стефана (1446) и Ангелины, Бранковичей, правителей Сербских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth line, which names three of one family and is the only entry on the day that gives him a year: «(1503)», written into `dates` here, the folder having had none. The same line is the warrant for the new folder `stephen-brankovic`, his father, who had none, and `related` is filled both ways. HIS MOTHER IS NOT UPGRADED: `angelina-of-serbia` already carries a venerated russian row for the Julian 1 июля, and a second day on one church has no field, so that is left for the author and only a `related` row is added to her. The day page carries a troparion and a kontakion under his name, «блаженного Иоанна, царя Сербского», and both are here; the two it carries under his mother’s name are already in her folder, word for word, off the 1 июля page."
     },
     {
       "church": "romanian",
@@ -38,9 +54,53 @@
     }
   ],
   "related": [
-    "angelina-of-serbia"
+    "angelina-of-serbia",
+    "stephen-brankovic"
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1503,
+      "latest": 1503,
+      "display": "1503",
+      "basis": "attested",
+      "note": "The year the Russian day line sets against his name, «Блж. Иоанна (1503)»; the first year the folder has had, the Ohrid Prologue row above it giving none. Neither of the two readings behind the line repeats it."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Дивен, творяй преславная чудеса/ и прославляяй по кончине славящия Тя,/ нетленная телеса их являя/ и чудо действии люди обогащая/ во славу святаго Имене Своего,/ даровавый нам тело угодника Своего Иоанна,/ молящагося о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст., «Тропарь блаженного Иоанна, царя Сербского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wondrous art thou, who workest glorious wonders and glorifiest after their end those who glorify thee, showing forth their bodies incorrupt and enriching the people with the working of miracles, to the glory of thy holy name; and who hast granted us the body of thy servant John, who prayeth for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Приидите, достодолжно почтим Иоанна, новыя благодати служителя новопрославленнаго,/ славу веры нашея и нашего молитвенника,/ созывает бо пети благодарными гласы/ и прославити Прославльшаго святыя Своя/ и молится о творящих память его и о зовущих ему:/ радуйся, Иоанне, новое процветение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст., «Кондак блаженного Иоанна, царя Сербского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, let us honour as is due John, the newly glorified servant of the new grace, the glory of our faith and our intercessor; for he calls us to sing with thankful voices and to glorify him who has glorified his saints, and he prays for those who keep his memory and who cry to him: rejoice, O John, new flowering.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -11,6 +11,11 @@
       "form": "Никон Сухи",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Преподобни Никон Сухи.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Сухи» is the Dry, an epithet and no rank, which the body itself glosses as the great emaciation of his body, and it is what tells him from the other Nikon folders, so §6’s fullest form keeps it; the Greek form stored here is the bare «Νίκων» with «ο Ξηρός» and «ὁ ἐν τῷ Σπηλαίῳ» taken off, so this one is the fuller of the two. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Никон Сухой, Печерский",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Никон Сухой, Печерский», which carries no rank to strip; the day line declines it as «Прп. Никона Сухого, Печерского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr calls him a Russian venerable and puts his relic in the Lavra of the Caves at Kyiv, so the Russian calendar is the one that would say most about him, and it has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Прп. Никона Сухого, Печерского (XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. The candidate script marks it `[~]`, a guess at a feast from the words, AND THE GUESS IS WRONG: «Прп. Никона Сухого, Печерского» is a person and not a translation of relics. The line’s «(XII)» and the reading’s «Скончался преподобный Никон в начале XII века» agree with the 1101 the folder already records, so NO DATE IS TOUCHED. The reading at /Life/life3101.htm is the whole of his captivity among the Polovtsy, which the folder had in no form. The day page prints a troparion in the eighth tone and a kontakion in the sixth under his name, both titled «в Ближних пещерах», in the Near Caves, and both are added; the kontakion calls him «преподобномучениче», venerable-martyr, where the day line and the folder say only venerable, and that word is not written into `types` on the strength of a hymn. His life page lists «Дни памяти: 28 сентября (Печер.(Б)) , 11 декабря», of which the first is the synaxis of the fathers of the Near Caves and not a second feast of his own; THAT PAGE WAS NOT OPENED."
     },
     {
       "church": "romanian",
@@ -71,5 +86,39 @@
       "basis": "traditional",
       "note": "Охридски пролог за 11. децембар ст. ст.: „Упокоји се мирно у Господу 11. децембра 1101. године.“ — he reposed in peace in the Lord on 11 December 1101, which is this book's own menologion day for him. The first date of any kind this folder has carried: saint.gr prints him with two by-names and the cave he lies in, and gives no year at all."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Бога Благаго возлюбив,/ иноческое приял еси житие/ и, добре в нем подвизався, / пленен был еси половцы,/ имиже много мучим, крепкодушне Никоне,/ благодатию Христовою свободился еси от них невидимо,/ и ныне во Свете пребывая неприступном,/ моли спастися нам, твою память почитающим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст., «Тропарь преподобного Никона Сухого, Печерского, в Ближних пещерах», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved the good God, you took up the monastic life, and struggling well in it you were taken captive by the Polovtsy, by whom you were much tormented; and by the grace of Christ, stout-hearted Nikon, you were freed from them invisibly. Now, dwelling in the unapproachable Light, pray that we who honour your memory may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Первомученику подобяся,/ о мучителе твоем молился еси/ и, избавив того от смерти, привел еси ко Христу,/ преподобномучениче Никоне славне,/ темже, с первострадальцем зря Христа одесную Отца,/ молися о нас, да не пребудем вне чертога Христова.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст., «Кондак преподобного Никона Сухого, Печерского, в Ближних пещерах», глас 6 — the hymn calls him a venerable martyr where the day line and this folder say only venerable",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Likening yourself to the first martyr, you prayed for your tormentor, and having delivered him from death you brought him to Christ, glorious venerable-martyr Nikon. Therefore, beholding with the first sufferer Christ at the right hand of the Father, pray for us, that we may not be left outside the bridal chamber of Christ.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -1,0 +1,61 @@
+{
+  "slug": "vladimir-vinogradov",
+  "display_name": "Vladimir (Vinogradov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Владимир (Виноградов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Владимир (Виноградов), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Владимира пресвитера». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1919)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 декабря ст. ст. — «Сщмч. Владимира пресвитера (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20261209.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line says «пресвитера» and the name page «иерей», priest, so `presbyter` and the office `Priest` are both the source’s own words. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries. No folder held him: a Cyrillic grep for «Виноградов» over every `saint.json` returns six folders of that surname and not one Владимир. The day page prints seven hymns and none is under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 22 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 22 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

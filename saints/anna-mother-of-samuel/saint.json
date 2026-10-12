@@ -16,6 +16,11 @@
       "form": "Ана",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 9. децембар ст. ст., „Света Ана, матер пророка Самуила.“ — with «Света» (“saint”, not a rank) and the kinship clause «матер пророка Самуила» left off, which is the same stripping the Romanian «Ana» and the Greek «Άννα» already stored here were made by; §6 keeps a clause that names another saint out of a stored form, and the kinship stays in the display name where this corpus puts it. `sr-foldpred.mjs` reports that the form adds no new fold key, the folded string being the one the Romanian form already makes."
+    },
+    {
+      "form": "Анна, мать пророка Самуила",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Святая Анна Пророчица, мать пророка Самуила», with the rank «Святая» and the rank-word «Пророчица» stripped and the descriptor the calendar uses in place of a surname kept; the day line itself declines it as «Пророчицы Анны, матери прор. Самуила». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 декабря ст. ст. — «Пророчицы Анны, матери прор. Самуила (1100 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261209.html",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and the fourth calendar to keep her on this menologion day. Two readings of her stand behind the line, at /Life/life6432.htm and /Life/life3090.htm, reached through the index /Life/id2397.htm. The line’s «(1100 до Р.Х.)» is the first year any of the four calendars has given her and the folder’s `dates` are written from it, under `death` as the corpus already writes the same calendar’s «(XI до Р.Х.)» for her son. The day page prints seven hymns: THREE ARE FOR HER SON, under his name and not hers, two are for the day’s own feast of the conception of the Theotokos and two for an icon, so NONE IS TAKEN HERE."
     },
     {
       "church": "romanian",
@@ -84,5 +99,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": -1100,
+      "latest": -1100,
+      "display": "1100 BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru on the day line: «Пророчицы Анны, матери прор. Самуила (1100 до Р.Х.)». Neither of the source’s two readings of her repeats the figure, and no other calendar the folder cites gives a year; it is recorded under `death` because that is where the corpus already keeps the same calendar’s «(XI до Р.Х.)» for her son."
+    }
   }
 }

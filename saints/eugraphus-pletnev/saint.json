@@ -1,0 +1,66 @@
+{
+  "slug": "eugraphus-pletnev",
+  "display_name": "Eugraphus (Pletnev)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Евграф (Плетнев)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Евграф (Плетнев), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «сщмч. Евграфа пресвитера». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1918)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "related": [
+    "james-shestakov",
+    "alexander-shklyaev",
+    "michael-pletnev"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 декабря ст. ст. — «Сщмчч. Иакова и Александра пресвитеров, сщмч. Евграфа пресвитера и сына его мч. Михаила (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261210.html",
+        "year": 2026
+      },
+      "note": "The third of the four one line enumerates, and the only one of them the line itself puts in a relation: the fourth is «сына его», his son. THE LINE AND THE NAME PAGES ARE ALL THERE IS. The line says «пресвитера» and his name page «иерей», priest, which agree. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries. No folder held him: a Cyrillic grep for «Плетнев» over every `saint.json` returns nothing. TWO EUGRAPHUSES STAND ON THIS ONE DAY, sixteen centuries apart, and they are two men: the folder `eugraphus`, the secretary of Menas martyred at Alexandria about 313 and named in the day’s first line, and this priest of 1918 named in its seventh. The surname is what the slug and the display name carry for that reason. The day page prints eleven hymns and none is under any of these names; the three it prints for the company of 313 are that company’s and go to those three folders."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 23 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 23 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

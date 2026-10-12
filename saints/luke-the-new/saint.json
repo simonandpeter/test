@@ -16,6 +16,11 @@
       "form": "Лука Столпник",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Преподобни Лука Столпник.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Столпник» is kept on the same reading as this day’s Данило Столпник: §5 maps it to `stylite`, and it is also the whole of what the heading gives beyond the forename, the one thing that tells him from the other Lukes, and §6 asks for the fullest form the calendar gives. IT IS NOT THIS FOLDER’S DISPLAY EPITHET: the Greek «ο Νέος» and the Romanian «cel Nou» call him the New, and this book calls him the Stylite. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Лука Столпник, Халкидонский",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Лука Столпник, Халкидонский, иеромонах», with the grade stripped and the epithet and the city kept; the day line declines it as «Прп. Луки Столпника» and omits the city. The life page’s own title adds a third epithet, «Новый», the New, which is the one the folder’s display name carries. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -23,13 +28,24 @@
     "venerable",
     "stylite",
     "presbyter",
-    "soldier"
+    "soldier",
+    "hieromonk"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Прп. Луки Столпника (970-980).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, on the same menologion day the Greek calendar keeps him on, and its «(970-980)» is the interval the folder already records, so no date is touched. The reading at /Life/life3104.htm closes «Скончался около 980 г.», about 980, which is the upper end of that interval and is not written over it. It adds the whole of his course — the soldier under Constantine Porphyrogenitus, the Bulgarian war of 917, the forty-five years on the pillar at Chalcedon — and the name page adds the grade «иеромонах» and the city. THE GRADE IS WRITTEN AS THE TYPE `hieromonk` AND NOT AS AN OFFICE, the reading saying only that he was raised to the rank of presbyter after becoming a monk. The day page prints four hymns and none is under his name."
     },
     {
       "church": "romanian",

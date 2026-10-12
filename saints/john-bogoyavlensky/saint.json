@@ -1,0 +1,68 @@
+{
+  "slug": "john-bogoyavlensky",
+  "display_name": "John (Bogoyavlensky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Богоявленский)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Иоанн (Богоявленский), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Сщмч. Иоанна пресвитера». His life page gives the worldly form of the same name, «Иван Дмитриевич». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1892,
+      "latest": 1892,
+      "display": "1892",
+      "basis": "attested",
+      "note": "His life page gives the day as well: «родился 12 февраля 1892 года в селе Ветрине Ярославской губернии в семье священника Дмитрия Богоявленского и жены его Людмилы». Only the year is recorded here, because `dates.display` must be a string `lib/date-display.js` parses whole in four languages."
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1941)». HIS LIFE PAGE DOES NOT CONFIRM IT in the parts of it that were read: the beginning and the end were read and 18,303 characters of the middle were cut by the reading tool, and the end is an interrogation transcript with no date and no sentence in it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Сщмч. Иоанна пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "A line of its own, with a life page behind it. The line says «пресвитера» and the name page «иерей», priest, which agree. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries. HIS LIFE PAGE IS LONG AND WAS READ ONLY AT BOTH ENDS: 18,303 characters of the middle were cut by the reading tool, so this folder holds his birth, his schooling and his years as a schoolmaster, and the interrogation the page closes with, and NOTHING AT ALL ABOUT HIS ORDINATION, HIS ARREST OR HOW HE DIED. A later reader with the budget for the whole page will find all of that in it. His life page lists «Дни памяти: 26 января (Новомуч.) , 11 декабря», of which the first is the common synaxis of the new martyrs and not a second feast of his own; THAT SYNAXIS PAGE WAS NOT OPENED. No folder held him: `fk.mjs` on «Иоанн (Богоявленский)» returns NONE and a Cyrillic grep for «Богоявленский» over every `saint.json` returns nothing. The day page prints four hymns and none is under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 24 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 24 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 24 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

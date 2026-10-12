@@ -1,0 +1,71 @@
+{
+  "slug": "theophan-ilminsky",
+  "display_name": "Theophan (Ilminsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Феофан (Ильминский)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Святитель Феофан (Ильминский), епископ Соликамский, сщмч.»; the rank, the grade and the see are stripped and the surname kept, the day line itself giving only «Сщмч. Феофана , еп. Соликамского». His life page adds the whole of the worldly name, «в миру Ильминский Сергей Петрович». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "attested",
+      "note": "His life page gives the day as well: «родился 26 сентября 1867 года в семье церковного чтеца Петра и жены его Акилины в селе Содом Саратовской губернии». Only the year is recorded here, because `dates.display` must be a string `lib/date-display.js` parses whole in four languages; the day is in the life."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1918)», and his life page gives the day itself as the day the calendar keeps him on: «11 декабря 1918 года в тридцатиградусный мороз Святителя многократно погружали в ледяную прорубь реки Камы»."
+    }
+  },
+  "related": [
+    "andronicus-of-perm"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Сщмч. Феофана , еп. Соликамского, и с ним двух священномучеников и пяти мучеников (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "THE COMPANY NAMED WITH HIM ENUMERATES NOBODY and is therefore one entry and one folder, per BRIEF.md §4: the line says «и с ним двух священномучеников и пяти мучеников», and the life page’s own title says «и иже с ним убиенные два священника и пять мирян» — two priests and five laymen. THE TWO DISAGREE ABOUT THE SEVEN: the line calls them two hieromartyrs and five martyrs, the title two priests and five laymen, and neither gives a name, a surname or a `name:` link. Seven folders are therefore not made and the disagreement is recorded rather than resolved. The office is the plain `Bishop` the four locale packs carry, not `Bishop of Solikamsk`, which they do not; the see is in the display reading and the life. His life page lists «Дни памяти: 26 января (Новомуч.) , 11 декабря», of which the first is the common synaxis of the new martyrs and not a second feast of his own; THAT SYNAXIS PAGE WAS NOT OPENED. No folder held him: `fk.mjs` on «Феофан (Ильминский)» returns NONE and a Cyrillic grep for «Ильминский» over every `saint.json` returns nothing. 1,908 CHARACTERS WERE CUT FROM THE MIDDLE OF HIS LIFE PAGE by the reading tool and are not in this folder. The day page prints four hymns and none is under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 24 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 24 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 24 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
