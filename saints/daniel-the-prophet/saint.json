@@ -16,6 +16,11 @@
       "form": "Данил",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 17. децембар ст. ст., „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“ — with «Свети» left off, which §5 says is not a rank, and «пророк» left off, that being the `prophet` grade §5 maps and `types` keeps. The bare forename is the whole of what the heading gives him. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN AND IT IS A REAL ONE: `fk.mjs` puts the key `данил` at ONE other holder, `daniel-of-thasos`, so this form takes the fold from one member to two and a new READ_FOLDS key goes into `scripts/corpus-gate.mjs` in this same commit. It is NOT the «Данил (Донале)» of this same day’s second entry: that string keys as `данил донале` and folds with nothing."
+    },
+    {
+      "form": "Даниил",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Пророк Даниил»; the rank is stripped and the bare name is all that is left, the calendar printing no epithet for him in any form and the day line declining the same bare name. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(600 до Р.Х.)», six hundred years before Christ, where the folder’s `floruit` is the Ohrid Prologue’s round half-thousand; a hundred years divide them, neither book cites a document, and the Russian figure is recorded in the life rather than used to move the bounds. The readings this calendar links, `/Life/id583.htm`, an INDEX, and `/Life/life3136.htm`, were NOT opened; this folder’s life is already written out of its other sources. The day page’s first and third hymn blocks are his, one of them shared with the three youths his line names, and both are the Church Slavonic of hymns this folder already carries in Greek."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Прор. Даниила и трех отроков: Анании, Азарии и Мисаила (600 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -126,6 +141,38 @@
       },
       "english": {
         "text": "Cleansed by the Spirit, your pure heart became the vessel of the brightest prophecy; for you see as present the things that are far off, and cast into the pit you muzzle lions. For this we honour you, O blessed prophet, glorious Daniel.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Велия веры исправления:/ во источнице пламене, яко на воде упокоения,/ святии трие отроцы радовахуся,/ и пророк Даниил/ львом пастырь, яко овцам, являшеся./ Тех молитвами, Христе Боже,// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Тропарь пророка Даниила и трех отроков Анании Азарии и Мисаила», глас 2. The company’s own proper, naming him and the three youths together, and it is written on all four folders of the line. It is the Church Slavonic of the Greek troparion «Μεγάλα τὰ τῆς πίστεως κατορθώματα» this folder already carries, and of the Romanian «Mari sunt faptele credinţei» beside it.",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great are the achievements of faith! In the fountain of flame, as at the water of rest, the three holy youths rejoiced; and the prophet Daniel was shown to be a shepherd of lions, as though of sheep. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Просветившееся Духом чистое твое сердце/ пророчества бысть светлейшаго приятелище,/ зриши бо, яко настоящая, далече сущая,/ львы укротил еси, ввержен в ров.// Сего ради тя почитаем, пророче блаженне, Данииле славне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Кондак пророка Даниила», глас 3. His own proper, closing on his name, and on this folder alone of the four; it is the Church Slavonic of the Greek kontakion «Καθαρθεῖσα Πνεύματι, ἡ καθαρά σου καρδία» this folder already carries.",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy pure heart, enlightened by the Spirit, became the dwelling of most radiant prophecy; for thou seest things far off as though they were present, and cast into the pit thou didst tame the lions. Therefore we honour thee, O blessed prophet, O glorious Daniel.",
         "rendered": "site"
       }
     }

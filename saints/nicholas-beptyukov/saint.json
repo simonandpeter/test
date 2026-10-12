@@ -1,0 +1,65 @@
+{
+  "slug": "nicholas-beptyukov",
+  "display_name": "Nicholas (Beptyukov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Николай (Бепьтюков)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Николай (Бепьтюков), протоиерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. THE SURNAME IS STORED AS THE PAGE PRINTS IT AND THE PAGE’S SPELLING LOOKS DEFECTIVE: «Бепьтюков» has a п where «Бельтюков» would have a л, and the string occurs exactly once in the whole of the cached day page. Nothing was corrected, a correction being a reconstruction and not a reading, and this is named in the reader’s report as a question for the author. The display name transliterates what is printed. `fk.mjs` returns NONE for either spelling and a Cyrillic grep for both returns nothing."
+    }
+  ],
+  "related": [
+    "alexander-savelov",
+    "sergius-florinsky"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1918)», which is the whole of what the source gives; no year of birth, and no reading behind the line."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Сщмчч. Александра и Николая и Сергия пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      },
+      "note": "The second of the three presbyters of the day’s third line, and the line and the name pages are all there is: no life page stands behind it for any of the three. The line calls all three «пресвитеров» and his name page calls him «протоиерей», an archpriest, which is the fuller word and is what `office` carries. The three `related` rows between the three men follow the ruling this corpus took for a short joint line with no reading behind it. No folder held him. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 30 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 30 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

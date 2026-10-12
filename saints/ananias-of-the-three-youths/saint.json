@@ -16,6 +16,11 @@
       "form": "Ананије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s first heading for 17. децембар ст. ст., „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“ — the first of the three names the heading prints after the colon, bare as it prints them, the grades «Свети», «пророк» and «три отрока» belonging to the heading and not to this name. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `ананије` at NO other holder, so no READ_FOLDS key is written. THE ENGLISH NAME IS NOT SAFE THE SAME WAY and the life was written around it: `ananias-the-apostle`’s whole display name is the bare «Ananias», so every mention of this youth in a life is inside a hand-written link, which `related-floor.mjs`’s `prose()` strips before matching."
+    },
+    {
+      "form": "Анания Вавилонский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Анания Вавилонский, отрок, мч.»; the grade and the rank are stripped and the epithet kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. NO `dates` ARE WRITTEN FROM THIS LINE: it closes «(600 до Р.Х.)», a round figure for the prophet’s company, and this folder has no date from any source; nothing is minted from it. The calendar calls him «отрок, мч.», a youth and a martyr, which is the `type` this folder already carries. The readings this calendar links, `/Life/id583.htm`, an INDEX, and `/Life/life3136.htm`, which stands behind all three youths at once, were NOT opened; this folder’s life is already written out of its other sources. Two of the day page’s three hymn blocks are his company’s and are written here; the third is the prophet’s alone."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Прор. Даниила и трех отроков: Анании, Азарии и Мисаила (600 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -132,6 +147,38 @@
       },
       "english": {
         "text": "Not revering the hand-made image, but armoured with the Essence that is not drawn, O thrice-blessed ones, you were glorified in the arena of the fire; and standing in the midst of a flame that had no power over you, you called upon God: hasten, O compassionate one, and come quickly, as you are merciful, to our help, for you can do as you will.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Велия веры исправления:/ во источнице пламене, яко на воде упокоения,/ святии трие отроцы радовахуся,/ и пророк Даниил/ львом пастырь, яко овцам, являшеся./ Тех молитвами, Христе Боже,// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Тропарь пророка Даниила и трех отроков Анании Азарии и Мисаила», глас 2. The company’s own proper, naming the three youths and the prophet together, and written on all four folders of the line. It is the Church Slavonic of the Greek troparion «Μεγάλα τὰ τῆς πίστεως κατορθώματα» this folder already carries.",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great are the achievements of faith! In the fountain of flame, as at the water of rest, the three holy youths rejoiced; and the prophet Daniel was shown to be a shepherd of lions, as though of sheep. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Рукописаннаго образа не почетше,/ но неописанным существом защитившеся, треблаженнии,/ в подвизе огня прославистеся;/ среде же пламене нестерпимаго стояще, Бога призвасте:/ ускори, о Щедрый!/ и потщися, яко милостив, в помощь нашу,/ яко можеши хотяй.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Кондак отроков», глас 6. The three youths’ own proper, addressing them as the thrice-blessed and on their three folders only; it is the Church Slavonic of the Greek kontakion «Χειρόγραφον εἰκόνα μὴ σεβασθέντες» this folder already carries.",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Not honouring the image made by hands, but armoured with the Essence that cannot be described, O thrice-blessed ones, ye were glorified in the contest of the fire; and standing in the midst of the unbearable flame ye called upon God: hasten, O bountiful One, and come quickly, as Thou art merciful, to our help, for Thou canst do whatsoever Thou willest.",
         "rendered": "site"
       }
     }

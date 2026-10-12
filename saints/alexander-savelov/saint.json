@@ -1,0 +1,65 @@
+{
+  "slug": "alexander-savelov",
+  "display_name": "Alexander (Savelov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Александр (Савелов)",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him, which day-candidates.mjs prints as `name: Александр (Савелов), иерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE and a Cyrillic grep for «Савелов» over every `saint.json` returns nothing."
+    }
+  ],
+  "related": [
+    "nicholas-beptyukov",
+    "sergius-florinsky"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1918)», which is the whole of what the source gives; no year of birth, and no reading behind the line."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 декабря ст. ст. — «Сщмчч. Александра и Николая и Сергия пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261217.html",
+        "year": 2026
+      },
+      "note": "The first of the three presbyters of the day’s third line, and THE LINE AND THE NAME PAGES ARE ALL THERE IS: the line carries no life page at all, for him or for either of the others. The three `related` rows between the three men follow the ruling this corpus took for a short joint line with no reading behind it, as `alexander-yuzefovich` and `john-menkov` of the Julian 13 декабря do and `james-martyr-1937` of 16 августа did: the calendar joins them in one line, in one year, under one grade, and nothing read separates them. No folder held him. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» entries, AND THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. The day page carries three hymns and all three belong to the prophet of the day’s first line and his companions."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 30 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 30 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
