@@ -6,6 +6,11 @@
       "form": "Silvestru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 februarie."
+    },
+    {
+      "form": "Сильвестр (Ольшевский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 25 февраля ст. ст., «Святитель Сильвестр (Ольшевский), архиепископ Омский, сщмч.», with the rank words and the see left off. The line on the day page itself gives only the monastic name and the see, in the genitive; the family name in brackets comes from the name link and is kept."
     }
   ],
   "sex": "male",
@@ -16,19 +21,36 @@
   ],
   "office": "Archbishop of Omsk",
   "dates": {
+    "birth": {
+      "earliest": 1860,
+      "latest": 1860,
+      "display": "1860",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 31 мая 1860 года в селе Косовно Сквирского уезда Киевской губернии, в семье причётника»."
+    },
     "death": {
       "earliest": 1920,
       "latest": 1920,
       "display": "1920",
       "basis": "attested",
-      "note": "doxologia.ro's page for him: «primi mucenicescul sfârşit, în anul 1920, fiind cinstit cu sfinţii de Biserica Ortodoxă Rusă în anul 1998.»"
+      "note": "doxologia.ro's page for him: «primi mucenicescul sfârşit, în anul 1920, fiind cinstit cu sfinţii de Biserica Ortodoxă Rusă în anul 1998.»; and days.pravoslavie.ru's life, which gives the day as well: «Владыка принял мученическую кончину 13 февраля (26 февраля н. ст.) 1920-го года, находясь в заточении в Омске»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life page behind the calendar's line heads «Дни памяти: 26 января (Новомуч.), 25 февраля, 3 июля (обретение мощей)» — a memory with the new martyrs on 26 января and the finding of his relics on 3 июля, neither of which the day page for 25 февраля ст. ст. repeats. The same page gives his death as «13 февраля (26 февраля н. ст.) 1920-го года», which is neither this day nor thirteen days from it: the memory and the day of death are different days here, and the day recorded is the day page's. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 февраля ст. ст. — «Сщмч. Сильвестра, архиеп. Омского (1920).»",
+        "url": "https://days.pravoslavie.ru/Days/20260225.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

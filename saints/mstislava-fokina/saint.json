@@ -1,0 +1,49 @@
+{
+  "slug": "mstislava-fokina",
+  "display_name": "Mstislava (Fokina)",
+  "names": [
+    {
+      "form": "Мстислава (Фокина)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 25 февраля ст. ст., which gives the calendar's own nominative «Мстислава (Фокина), прмц.»; the rank word is left off. The line on the day page itself gives only the forename, in the genitive, and no surname; the surname in brackets comes from the name link and is kept."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 февраля ст. ст. — «Сщмч. Александра пресвитера, прмц. Мстиславы.»",
+        "url": "https://days.pravoslavie.ru/Days/20260225.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 March 2026 (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

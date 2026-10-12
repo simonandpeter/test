@@ -17,6 +17,11 @@
       "form": "Тарасије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 25. фебруар ст. ст., „Свети Тарасије, патријарх цариградски.“, with Свети, the rank word патријарх and the see left off; the see is the folder's `office` and not part of the name."
+    },
+    {
+      "form": "Тарасий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 25 февраля ст. ст., «Святитель Тарасий, патриарх Константинопольский», with the rank word and the see left off. The calendar gives the name alone, with no surname and no epithet."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 февраля ст. ст. — «Свт. Тарасия, Патриарха Константинопольского (806).»",
+        "url": "https://days.pravoslavie.ru/Days/20260225.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -97,7 +111,9 @@
     "macarius-of-pelecete",
     "peter-of-atroa",
     "photius-of-constantinople",
-    "theophylact-of-nicomedia"
+    "theophylact-of-nicomedia",
+    "irene-the-empress-nun-xenia",
+    "philaret-the-merciful"
   ],
   "hymns": [
     {
@@ -164,6 +180,38 @@
       },
       "english": {
         "text": "Having made the Church bright with Orthodox doctrines, blessed one, and having taught all to reverence and venerate the honoured image of Christ, you refuted the godless doctrine of the iconoclasts. Therefore we cry to you: rejoice, father, wise Tarasius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя,/ яви тя стаду твоему,/ яже вещей истина,/ сего ради стяжал еси смирением высокая,/ нищетою богатая./ Отче Тарасие,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 февраля ст. ст. — «Тропарь святителя Тарасия, архиепископа Константинопольского»",
+        "url": "https://days.pravoslavie.ru/Days/20260225.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things hath shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast gained the heights by humility and riches by poverty. O father Tarasius, pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Православными догматы Церковь уяснив,/ и Христову, блаженне, честную икону почитати/ и покланятися всех научив,/ обличил еси иконоборцев безбожное веление./ Сего ради вопием ти:// о отче, радуйся, мудре Тарасие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 февраля ст. ст. — «Кондак святителя Тарасия»",
+        "url": "https://days.pravoslavie.ru/Days/20260225.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having made the Church clear with the dogmas of the true faith, and having taught all men to honour and venerate the holy icon of Christ, O blessed one, thou didst confute the godless decree of the iconoclasts. Therefore we cry out to thee: rejoice, O father Tarasius the wise.",
         "rendered": "site"
       }
     }
