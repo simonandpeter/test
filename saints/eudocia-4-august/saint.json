@@ -1,0 +1,58 @@
+{
+  "slug": "eudocia-4-august",
+  "display_name": "Eudocia (4 August)",
+  "names": [
+    {
+      "form": "Евдокия",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 августа ст. ст., «Прмц. Евдокии (362-364).»; the line declines the name and the link's nominative is «Святая преподобномученица Евдокия», whose first three words are rank and style, so the calendar gives her the bare forename and nothing else. Two other folders already carry this exact string, eudocia-of-heliopolis on 1 March and eudocia-nun-martyr-1937 on 14 August, and the fold they make is read in the gate."
+    }
+  ],
+  "types": [
+    "venerable-martyr",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 362,
+      "latest": 364,
+      "display": "362–364",
+      "basis": "traditional",
+      "note": "The day line closes «(362-364)» and the reading closes «(† ок. 362-364)», the «ок.» being the source's own about."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 августа ст. ст. — «Прмц. Евдокии (362-364).»",
+        "url": "https://days.pravoslavie.ru/Days/20260804.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
