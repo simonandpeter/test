@@ -1,0 +1,69 @@
+{
+  "slug": "tikhon-nikanorov",
+  "display_name": "Tikhon (Nikanorov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "archbishop",
+    "hierarch"
+  ],
+  "office": "Archbishop of Voronezh",
+  "names": [
+    {
+      "form": "Тихон (Никаноров)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Святитель Тихон (Никаноров), архиепископ Воронежский, сщмч.»: «Святитель», «архиепископ», the see and «сщмч.» are rank words and are stripped, the surname kept. The day line itself gives only «Тихона , архиеп. Воронежского». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1855,
+      "latest": 1855,
+      "display": "1855",
+      "basis": "attested",
+      "note": "Life 4918: «Родился будущий Владыка 30 января 1855 года в Новгородской губернии в семье псаломщика.»"
+    },
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "The day line closes «(1919)». Life 4918 gives the source’s own pair of styles, «Принял мученическую кончину 27 декабря 1918 (9 января 1919) года»; the new-style year alone is recorded here because `lib/date-display.js` cannot read a pair, and the pair is kept in this note."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 декабря ст. ст. — «Сщмч. Тихона , архиеп. Воронежского (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20261227.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry. Reading life4918 was OPENED and is titled «Священномученик Тихон (в миру Василий Варсонофьевич Никаноров), архиепископ Воронежский, и 160 иереев, иже с ним убиенных». THE 160 PRIESTS ARE NOT ENUMERATED anywhere on the page, so they are one entry and no folder, per BRIEF.md §4. The reading’s «Дни памяти» line gives 26 января (Новомуч.) beside this day: that is the synaxis of the new martyrs and NOT a second feast, and the 26 января page was not opened. A Cyrillic grep for «Никаноров» over every `saint.json` returns only `eugene-yakovlev`, where it is the PATRONYMIC «Никанорович» and not this surname; `ls -d saints/tikhon*` returns eleven folders and none of them this man; `fk.mjs` on the stored form returns NONE. The day page carries four hymns — three for the protomartyr Stephen and one for the venerable Theodore — and none under this name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 9 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 9 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

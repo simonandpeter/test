@@ -1,0 +1,9 @@
+# Tikhon (Nikanorov)
+
+The Православный церковный календарь of the Сретенский monastery keeps the hieromartyr Tikhon, archbishop of Voronezh, on 27 December, and its line is «Сщмч. Тихона , архиеп. Воронежского (1919).» The reading behind it, life 4918, names him in the world Vasily Varsonofievich Nikanorov, born on 30 January 1855 in the Novgorod province to the family of a psalmist, and says it keeps with him the hundred and sixty priests killed alongside him.
+
+He finished the Novgorod seminary in 1877 and the Saint Petersburg academy in 1881, was made inspector of the Novgorod seminary in 1884, took the monastic name Tikhon and was ordained hieromonk, was raised archimandrite in 1890 and then rector of that seminary. From 1891 he was superior of the Antoniev monastery at Novgorod, and on 2 February 1892 he was consecrated bishop of Mozhaysk, a vicar of the Moscow diocese.
+
+The sees follow one another in the reading: Polotsk and Vitebsk in 1899, Penza and Saransk in 1902, the New Jerusalem monastery of the Resurrection outside Moscow in 1907, Kaluga and Borovsk in 1912, and on 13 May 1913 archbishop of Voronezh and Zadonsk. He sat in the council of the Russian Church of 1917 and 1918. The reading says he died a martyr’s death on «27 декабря 1918 (9 января 1919) года», hanged on the royal doors of a monastery church, and that a hundred and sixty priests were killed with him; it names none of them. He was numbered among the new martyrs and confessors of Russia by the jubilee council of August 2000. The day page carries four hymns — three for the protomartyr Stephen and one for the venerable Theodore — and none under this name.
+
+*After the Православный церковный календарь of the Сретенский monastery for 27 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261227.html); read 13 October 2026.*
