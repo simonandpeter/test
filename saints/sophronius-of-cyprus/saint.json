@@ -12,6 +12,11 @@
       "form": "Σωφρόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Όσιος Σωφρόνιος επίσκοπος Κύπρου», with the rank and the see left off."
+    },
+    {
+      "form": "Софроний Кипрский",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Святитель Софроний Кипрский, архиепископ», with the rank stripped from each end; the day line itself declines it as «Свт. Софрония, архиеп. Кипрского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 декабря ст. ст. — «Свт. Софрония, архиеп. Кипрского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261209.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar keeps him ONE DAY LATER IN THE MENOLOGION than the Romanian and Greek rows above, 9 декабря against their 8 December, and the difference is neither the thirteen days of the style conversion nor a second feast in one calendar: it is two churches numbering the same commemoration differently. The reading at /Life/life3091.htm is the Greek one in every particular it touches — the Christian family on Cyprus, the learning, the gift of wonders, the election to the see of a dead bishop by the will of the whole people — so this is the same man and not a second Sophronius. The line calls him «архиеп.», archbishop, where the Romanian and Greek lines say bishop; THE FOLDER’S OFFICE IS LEFT AT `Bishop of Cyprus` and the disagreement is not resolved here. The line closes «(VI)», the only century any of the three calendars gives, and the folder’s `dates` are written from it. The day page prints seven hymns and none is under his name."
     },
     {
       "church": "romanian",
@@ -62,5 +77,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "From the Roman numeral the Russian day line closes with, «(VI)»; neither the Romanian nor the Greek calendar gives a century, and the life page gives no year at all."
+    }
   }
 }
