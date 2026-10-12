@@ -17,6 +17,11 @@
       "form": "Протерије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 28. фебруар ст. ст., „Свештеномученик Протерије.“, with the rank word Свештеномученик left off; the see is the folder's `office` and the heading does not give it."
+    },
+    {
+      "form": "Протерий Александрийский",
+      "lang": "ru",
+      "note": "The name out of the heading of the calendar’s own name link behind the day’s line, «Святитель Протерий Александрийский, патриарх, сщмч.», with the rank word, the rank and the rank abbreviation left off. The day’s line gives «Протерия , патриарха Александрийского» in the genitive."
     }
   ],
   "sex": "male",
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Сщмч. Протерия , патриарха Александрийского (457).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "The space before the comma is the page’s own, which sets the name as a link. Its life page heads itself «День памяти: 28 февраля», the same day as the listing, and titles itself for him «и с ним пострадавшие» — and those who suffered with him. The six killed beside him are not named on it and are not the company this corpus keeps as the Six Martyrs of Egypt, who are martyrs by the sword in Egypt in another calendar’s line; no folder and no relation was made out of them."
     },
     {
       "church": "romanian",
