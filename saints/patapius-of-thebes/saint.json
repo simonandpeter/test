@@ -16,6 +16,11 @@
       "form": "Патапије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Преподобни Патапије.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps, which leaves the bare forename; the heading offers nothing else, the same as saint.gr’s «Όσιος Πατάπιος» and doxologia.ro’s «Sfântul Cuvios Patapie». `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Патапий Фивский, Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru’s line for 8 декабря ст. ст., «Патапий Фивский, Константинопольский, прп.», with the rank word left off and both epithets kept because the calendar prints both. The line on the day page itself gives the name in the genitive and no epithet at all."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Прп. Патапия (VII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the same man and the same menologion day the Romanian, the Greek and the Serbian rows already keep. The century the line closes with, «(VII)», is the seventh century this folder already holds for his death, read off the Ohrid Prologue; `dates` and `types` are untouched. The calendar's name link gives him both his places at once — «Патапий Фивский, Константинопольский» — Thebes, which the folder's display name carries, and Constantinople, where the Greek and the Prologue both have him end his life."
     },
     {
       "church": "romanian",
@@ -124,6 +139,38 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Θείας πίστεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В тебе, отче, известно спасеся, еже по образу,/ приим бо крест, последовал еси Христу/ и дея учил еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней.// Темже и со Ангелы срадуется, преподобне Патапие, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Тропарь преподобного Патапия»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, father, that which is according to the image was surely saved; for taking up the cross you followed Christ, and by your deeds you taught that the flesh is to be despised, since it passes away, but that care is to be taken for the soul, a thing immortal. Therefore your spirit rejoices with the angels, venerable Patapius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Храм твой, святе, духовное врачевство людие обретше,/ со тщанием к нему приходяще,/ цельбу недугов просят прияти,/ решение же в житии прегрешенных,/ ты бо всех сущих в нуждах предстатель явился еси,// Патапие преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Кондак преподобного Патапия»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Finding your temple to be a place of spiritual healing, holy one, the people come to it in haste, asking to receive the cure of their sicknesses and the loosing of the sins of their life; for you have shown yourself the protector of all who stand in need, venerable Patapius.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

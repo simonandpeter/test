@@ -1,0 +1,62 @@
+{
+  "slug": "sergius-orlov",
+  "display_name": "Sergius (Orlov)",
+  "names": [
+    {
+      "form": "Сергий (Орлов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14369, «Сергий (Орлов), иерей, сщмч.», with the grade and rank words left off. The day line declines the forename and prints no surname. Three folders in this corpus hold the surname Орлов — all three of them Alexanders, on three other days — and none holds it with this forename."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Сщмч. Сергия пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "note": "The last of the day's six entries and its only saint of the twentieth century, standing alone in a line of its own. No other man is named with him, so this folder takes no `related` row from the calendar."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 decembrie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Δεκεμβρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 December 2026 (13 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the day line closes with, and the only year this calendar gives him. Neither the line nor the name page gives a day or a month of death."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

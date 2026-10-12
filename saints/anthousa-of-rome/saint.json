@@ -1,0 +1,62 @@
+{
+  "slug": "anthousa-of-rome",
+  "display_name": "Anthousa of Rome",
+  "names": [
+    {
+      "form": "Анфиса Римская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 2404 and of both its life pages, «Мученица Анфиса Римская», with the rank word left off. The day line declines the name and gives the city as a phrase instead of an adjective, «Анфисы в Риме». The English form follows this corpus’s own rendering of Анфиса, which `anthousa-the-new` already stores against that same Russian spelling."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 декабря ст. ст. — «Мц. Анфисы в Риме (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261208.html",
+        "year": 2026
+      },
+      "note": "The fourth of the day's six entries. This corpus holds six other folders whose Greek or Russian name is Anthousa — on 12 April, 27 April, 22 August, 27 August, 13 November and 22 February — and not one of them is on this menologion day or in Rome or in the fifth century. She is also not the Anthousa the New of 27 August, whose Russian form «Анфиса Новая» is the nearest string in the corpus."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 decembrie, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Δεκεμβρίου, the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 December 2026 (13 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "The century the day line closes with, «(V)», and the century the shorter of the two life pages states: «Пострадала за Христа в Риме в V веке». **It sits badly with the same pages' other claim** — that she was baptised by Ambrose of Milan, who died in 397 — and neither page notices the difficulty. Both readings are set down in the life as the source has them and neither is corrected here; the century is what the calendar's own line gives, so the century is what is recorded. Read 13 October 2026."
+    }
+  },
+  "related": [
+    "ambrose-of-milan"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
