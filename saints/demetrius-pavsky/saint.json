@@ -1,0 +1,60 @@
+{
+  "slug": "demetrius-pavsky",
+  "display_name": "Demetrius (Pavsky)",
+  "names": [
+    {
+      "form": "Димитрий (Павский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 августа ст. ст., «Сщмч. Димитрия пресвитера (1937).», which gives the forename alone and in the genitive; the link's own nominative carries the surname and the rank «протоиерей»."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's reading closes «Протоиерея Димитрия расстреляли 14 августа (н. ст.) 1937 года», and the day line prints «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 августа ст. ст. — «Сщмч. Димитрия пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260801.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

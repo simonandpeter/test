@@ -10,13 +10,27 @@
       "form": "Κινδέας",
       "lang": "el",
       "note": "Read out of saint.gr's sub-heading for 1 Αυγούστου, «Αγιος Κινδέας Που Μαρτυρησε Στην Περγη Της Παμφυλιας», with the rank word and the place clause left off; the page's running list spells it Κινδέας."
+    },
+    {
+      "form": "Киндей Пергийский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 августа ст. ст.; the line itself declines the name and the link's nominative adds «, мч.», which is a rank and not stored."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 августа ст. ст. — «Мчч. в Пергии Памфилийской: Леонтия , Аттия , Александра , Киндея , Минсифея , Кириака , Минеона , Катуна и Евклея (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260801.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
