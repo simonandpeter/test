@@ -1,0 +1,61 @@
+{
+  "slug": "michael-smirnov",
+  "display_name": "Michael (Smirnov)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "office": "Deacon",
+  "names": [
+    {
+      "form": "Михаил (Смирнов)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Михаил (Смирнов), диакон, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only the forename. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "attested",
+      "note": "The day line closes «(1930)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Сщмчч. Николая , Николая , Михаила пресвитеров и Михаила диакона (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s eighth entry, a line of four men; THE LINE AND THE NAME PAGE ARE ALL THERE IS, no life page standing behind any of them. The line names four men of two forenames and the four name pages behind it give the surnames the line omits, which is what tells them apart. The line’s grade for this man is «диакон» on the name page. A Cyrillic grep for «Смирнов» over every `saint.json` returns twenty-nine folders of that surname — not one of them a Michael — and `fk.mjs` on the stored form returns NONE. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 8 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 8 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

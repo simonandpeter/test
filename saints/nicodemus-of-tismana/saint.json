@@ -11,6 +11,11 @@
       "form": "Νικόδημος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιουλίου, «Όσιος Νικόδημος της Τισμάνα», with the rank word and the monastery left off."
+    },
+    {
+      "form": "Никодим Тисманский, Румынский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Никодим Тисманский, Румынский, прп.»: «прп.» is a rank word and is stripped and both epithets kept. `fk.mjs` on the stored string returns NONE; the folder had no `ru` form."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Прп. Никодима Тисманского, Румынского (1406) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry and the same menologion day, 26 December, as the folder’s Romanian row; its Greek row keeps him on 13 July, which this reader did not touch. The line’s trailing «(Рум.)» is the calendar’s own mark that the memory is the Romanian church’s, and it is kept inside the quoted source text. The line’s «Прп.» is the `venerable` the folder’s `types` already carry. NO `dates` WERE WRITTEN: the line’s «(1406)» is a single year and the folder already carries its own reading. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
     },
     {
       "church": "romanian",

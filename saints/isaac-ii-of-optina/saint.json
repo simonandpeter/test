@@ -1,0 +1,69 @@
+{
+  "slug": "isaac-ii-of-optina",
+  "display_name": "Isaac II of Optina",
+  "types": [
+    "venerable-martyr",
+    "hieromartyr",
+    "new-martyr",
+    "monk"
+  ],
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Исаакий (Бобриков) Оптинский",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Исаакий (Бобриков) Оптинский, архимандрит, сщмч.»; the grade and the rank are stripped and the surname kept, the day line itself giving only «Исаакия II, Оптинского». `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1865,
+      "latest": 1865,
+      "display": "1865",
+      "basis": "attested",
+      "note": "Life 4637: «родился в 1865 году в селе Остров Малоархангельского уезда Орловской губернии»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "Life 4637 says the sentence was carried out «26 декабря/8 января 1938 года»; the day line closes «(1938)». The source’s own pair of numbers is kept here in the note and the new-style year alone is recorded, `lib/date-display.js` being unable to read a pair."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Прмч. Исаакия II, Оптинского (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry. THE LINE CALLS HIM «Прмч.», a venerable-martyr, AND THE NAME PAGE AND THE READING BOTH CALL HIM «священномученик», a hieromartyr, so both are in `types` and neither was chosen over the other. THE NUMERAL IS LOAD-BEARING: the corpus already keeps `isaac-i-of-optina`, Isaac I of Optina, died 1894, on 22 августа ст. ст. — a different man, and the line’s «II» is why this folder is a second one and not an upgrade. A Cyrillic grep for «Бобриков» over every `saint.json` returns nothing and `fk.mjs` on the stored form returns NONE. The reading names the elders of Optina around him and no `related` row was written for any of them, because none is named in this life. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 8 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 8 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

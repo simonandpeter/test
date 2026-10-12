@@ -11,6 +11,11 @@
       "form": "Константин Синадски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s fifth heading for 26. децембар ст. ст., „Преподобни Константин Синадски.“ — «Преподобни» is the rank `venerable` the folder carries, and «Синадски», of Synada, is a by-name and not a rank, so it is kept. MEASURED BEFORE IT WAS WRITTEN AND THAT IS WHY IT WAS KEPT: the bare «Константин» lands on five folders — `constantine-brancoveanu`, `constantine-of-georgia`, `constantine-presbyter-martyr-1918`, `constantine-the-great` and `constantine-the-hagarene` — where the full string has no other holder at all. Synada of Phrygia is the place the folder’s own life gives him in its first line, so the by-name is the page’s and the folder’s agreement and not an assembly of mine."
+    },
+    {
+      "form": "Константин Синадский (Фригийский)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Константин Синадский (Фригийский), прп.»: «прп.» is a rank word and is stripped, and the calendar’s own second epithet is kept because the source prints it. `fk.mjs` on the stored string returns NONE; the folder’s Serbian «Константин Синадски» folds elsewhere."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Прп. Константина Синадского (VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry. THE IDENTIFICATION IS THE FOLDER’S OWN SERBIAN NAME FORM: it already stores «Константин Синадски», Constantine of Synada, on the same menologion day, 26 December, as its Greek and Serbian rows — so the calendar’s «Константина Синадского» is this man and not a second folder. The line’s «Прп.» is the `venerable` the folder’s `types` already carry. NO `dates` WERE WRITTEN: the line’s «(VIII)» is a bare Roman numeral and this wave has declined to write a date off one. The reading life3182 was NOT OPENED. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
     },
     {
       "church": "romanian",

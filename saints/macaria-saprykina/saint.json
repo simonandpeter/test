@@ -1,0 +1,60 @@
+{
+  "slug": "macaria-saprykina",
+  "display_name": "Macaria (Saprykina)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Макария (Сапрыкина)",
+      "lang": "ru",
+      "note": "Name page of days.pravoslavie.ru for this memory is «Макария (Сапрыкина), прмц.»; the rank words — and, for the bishop, «Святитель» and the see — are stripped and the surname kept, the day line itself giving only the forename. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 декабря ст. ст. — «Сщмч. Леонида , еп. Марийского, Александра пресвитера, прмч. Василия , и прмцц. Анфисы и Макарии (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261226.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry. THE LINE AND THE NAME PAGE ARE ALL THERE IS, no life page standing behind any of this company. The line names five of the six people the calendar keeps in this company; the sixth, «Александр (Крылов), протоиерей, сщмч.», IS NOT IN THIS DRAFT — the corpus already keeps an `alexander-krylov` with a venerated russian row on 7 ноября ст. ст., same forename, same surname and the same year 1937, and whether the two lines are one man is an open question this reader did not settle. For this person the name page’s «прмц.», a venerable-martyr, is a monastic grade and `monastic` is written from it; the source gives no office and none is stored. A Cyrillic grep for «Сапрыкина» over every `saint.json` in the corpus returns nothing, `ls -d saints/macar*` nothing of this man, and `fk.mjs` on the stored form returns NONE. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 8 ianuarie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 8 Ιανουαρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 January 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,7 @@
+# Anfisa (Sysoeva)
+
+The Православный церковный календарь of the Сретенский monastery names Anfisa in this company on 26 December and gives no life. Its line is «Сщмч. Леонида , еп. Марийского, Александра пресвитера, прмч. Василия , и прмцц. Анфисы и Макарии (1937).» — the hieromartyr Leonid, bishop of Mari, Alexander the presbyter, the venerable-martyr Basil, and the venerable-martyrs Anfisa and Macaria, 1937 — and the calendar’s own name page for this memory carries the fuller form the line leaves out: «Анфиса (Сысоева), прмц.»
+
+That is the whole of the record. She was a monastic; the year of death the line gives is 1937; the calendar keeps the memory on this day, the second day of the Nativity. The line names five of the six people the calendar keeps in this company; the sixth, «Александр (Крылов), протоиерей, сщмч.», IS NOT IN THIS DRAFT — the corpus already keeps an `alexander-krylov` with a venerated russian row on 7 ноября ст. ст., same forename, same surname and the same year 1937, and whether the two lines are one man is an open question this reader did not settle. The day page carries no troparion and no kontakion under this name; the three it prints belong to the day’s own feasts and to one of its icons. Nothing else is written here, because nothing else was read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 26 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261226.html); read 13 October 2026.*
