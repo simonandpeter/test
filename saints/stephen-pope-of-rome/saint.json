@@ -16,13 +16,27 @@
       "form": "Стефан",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s second heading for the Julian 2 August, „Свешт. муч. Стефан папа Римски, и други с њим.“ — Свешт. муч. stripped, which §5 maps to `hieromartyr`, and папа Римски stripped as a see, which this folder carries in `office` as `Pope of Rome`. What is left is the bare forename, and it folds with twelve other folders: the widest fold this reader has written, keyed in `scripts/corpus-gate.mjs` in the same commit. The heading offers nothing else, и други с њим being a company that enumerates nobody."
+    },
+    {
+      "form": "Стефан I Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 августа ст. ст., whose nominative is «Святитель Стефан I Римский, папа, сщмч.»; the first word is the hierarch's rank, and «папа, сщмч.» the see and the martyr grade, so the stored form is the name with its regnal number and the city."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 августа ст. ст. — «Сщмч. Стефана , папы Римского (257), и иже с ним.»",
+        "url": "https://days.pravoslavie.ru/Days/20260802.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
