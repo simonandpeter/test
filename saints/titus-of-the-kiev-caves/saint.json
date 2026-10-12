@@ -17,6 +17,11 @@
       "form": "Тит Печерски",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 27. фебруар ст. ст., „Преподобни Тит Печерски.“, with the rank word Преподобни left off. Печерски, of the Caves, is kept because the heading carries it as part of the form; the body adds that he was a presbyter, which is a rank and stays out."
+    },
+    {
+      "form": "Тит, пресвитер Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 27 февраля ст. ст., «Преподобный Тит, пресвитер Печерский», with the rank word «Преподобный» left off. «пресвитер Печерский» is kept because it is how the calendar tells him from the other Titus of the same Lavra, the former soldier, whom it prints on the same day."
     }
   ],
   "related": [],
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life pages behind the calendar's line head «Дни памяти: 27 февраля, 28 сентября (Печер.(Б))» — a second memory with the synaxis of the venerable fathers of the Near Caves, which the day page for 27 февраля ст. ст. does not repeat. Recorded here as a note; no row is moved. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Прп. Тита, пресвитера Печерского (после 1196).»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -71,5 +86,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Братолюбне тя живуща видев любве ненавистник,/ победил тя во гнев,/ но, ведый твоя прежния труды любве источник - Господь,/ преложи тя паки на братолюбие,/ в немже ты прочее пожив Богоугодне,/ молися о нас, яко да поживем братолюбне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Тропарь преподобного Тита, пресвитера Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeing thee living in love for thy brother, the hater of love overcame thee and turned thee to anger; but the Lord, who is the fountain of love, knowing thy former labours, turned thee back again to the love of the brethren, in which thou didst live out the rest of thy days well-pleasing to God. Pray for us, that we too may live in love for one another.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "Смирению Господню подобней,/ смирился еси, священник сый пред лицем гордаго диакона Евагрия,/ беззлобие Тите,/ за что приял еси не токмо временныя жизни неотпадение,/ Ангелу тя воздвигшу,/ но и вечныя наслаждение,/ в нейже ликуя, избавляй нас лютаго гнева и памятозлобия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Кондак преподобного Тита, пресвитера Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the likeness of the Lord's own humility thou didst humble thyself, a priest, before the face of the proud deacon Evagrius, O guileless Titus; and for that thou didst receive not only the keeping of this passing life, when an angel raised thee up, but the enjoyment of the life eternal also. Rejoicing therein, deliver us from bitter anger and from the remembrance of wrongs.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

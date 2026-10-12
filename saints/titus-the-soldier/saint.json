@@ -17,6 +17,11 @@
       "form": "Тит Печерски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's own heading for 27. јануар ст. ст. (civil 2026-02-09), „Преподобни Тит Печерски“. The rank word „Преподобни“ is left off; „Печерски“ is kept, being what distinguishes him. The Prologue keeps him by the Caves where the folder's Greek source keeps him by his old trade: its entry is a soldier wounded in the head who withdrew to the Caves monastery, took the habit there and lies in Theodosius's caves, which is the same man and not the presbyter Titus of the same Lavra."
+    },
+    {
+      "form": "Тит Печерский, воин",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 27 февраля ст. ст., which gives exactly «Тит Печерский, воин». «воин» is kept because it is how the calendar tells him from the other Titus of the same Lavra, the presbyter, whom it prints on the same day."
     }
   ],
   "dates": {
@@ -61,8 +66,18 @@
     },
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life page behind the calendar's line heads «Дни памяти: 27 февраля, 28 августа (Печер.(Д))» — a second memory with the synaxis of the venerable fathers of the Far Caves, which the day page for 27 февраля ст. ст. does not repeat. Recorded here as a note; no row is moved. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Прп. Тита Печерского, бывшего воина (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -94,6 +109,40 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Воинство тленное оставль,/ в нетленном ввоенился еси Христови,/ и оружием его крестным победив подземных ефиопов,/ победы венец от Христа, Тите, славно приял еси,/ Емуже молися даровати нам мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Тропарь преподобного Тита Печерского, бывшего воина, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving behind the army that perishes, thou wast enlisted for Christ in the army that perishes not; and having overcome the Ethiopians of the pit with the weapon of His Cross, thou didst gloriously receive the crown of victory from Christ, O Titus. Pray to Him to grant us peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Воина Христова храбраго,/ щитом преподобия обложшагося/ и воев невидимых крепко победивша,/ приидите, вернии, восхвалим,/ Тита крепкодушнаго и возопиим:/ прииди, святе, к нам и никтоже озлобит ны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Кондак преподобного Тита Печерского, бывшего воина, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, O faithful, let us praise the brave soldier of Christ, who put on holiness as a shield and mightily overcame the unseen armies — Titus the strong of soul — and let us cry aloud to him: come to us, O holy one, and no one shall do us harm.",
+        "rendered": "site"
+      }
     }
   ]
 }

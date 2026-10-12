@@ -16,6 +16,11 @@
       "form": "Прокопије Декаполит",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 27. фебруар ст. ст., „Преподобни Прокопије Декаполит.“, with the rank word Преподобни left off. The by-name is kept because the body explains it: he was from the Decapolis about the sea of Galilee, and was called the Decapolite for it."
+    },
+    {
+      "form": "Прокопий Декаполит",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 27 февраля ст. ст., «Преподобный Прокопий Декаполит», with the rank word left off. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Прп. Прокопия Декаполита, исповедника (ок. 750).»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -91,6 +105,13 @@
       "display": "in the reign of Leo the Isaurian (717–741)",
       "basis": "attested",
       "note": "saint.gr gives no year and prints the reign: «Ο Όσιος Προκόπιος ο Δεκαπολίτης έζησε στα χρόνια του εικονομάχου αυτοκράτορα Λέοντος του Ισαύρου (717 - 741 μ.Χ.)»."
+    },
+    "death": {
+      "earliest": 750,
+      "latest": 750,
+      "display": "about 750",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(ок. 750)» beside his name for 27 февраля ст. ст., and its life says «Скончался он в глубокой старости, около 750 года»."
     }
   },
   "hymns": [
@@ -141,6 +162,38 @@
       },
       "english": {
         "text": "Having you today for a morning star, the Church scatters the whole mist of false doctrine as she honours you, glorious Procopius, initiate of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней,/ сияя чудесы, Прокопие отче наш./ Моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Тропарь преподобного Прокопия Декаполита, исповедника»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barrenness of the desert, and with sighings from the depths thou didst bear fruit a hundredfold in labours, and thou wast made a lamp to the whole world, shining with wonders, O Procopius our father. Pray thou to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Денницу днесь Церковь имущи,/ всякую злославия мглу разгоняет,/ почитающи Тя, Небеснотаинниче, Прокопие преславне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 февраля ст. ст. — «Кондак преподобного Прокопия Декаполита, исповедника»",
+        "url": "https://days.pravoslavie.ru/Days/20260227.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having thee today as its morning star, the Church drives off every mist of false belief, honouring thee, O initiate of the heavenly mysteries, all-glorious Procopius.",
         "rendered": "site"
       }
     }
