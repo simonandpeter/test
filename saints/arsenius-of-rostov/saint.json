@@ -11,6 +11,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Αρσένιος Μητροπολίτης Ροστώβ», with the rank word and the see left off."
+    },
+    {
+      "form": "Арсений (Мацеевич)",
+      "lang": "ru",
+      "note": "The name out of the heading of the calendar’s own name link behind the day’s line, «Святитель Арсений (Мацеевич), митрополит Ростовский и Ярославский, сщмч.», with the rank word, the see and the rank abbreviation left off; the parentheses round the surname are the page’s own. The day’s line gives only «Арсения , митр. Ростовского» in the genitive."
     }
   ],
   "related": [
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Сщмч. Арсения , митр. Ростовского (1772).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "The space before the comma is the page’s own, which sets the name as a link. The calendar reads him as a hieromartyr, «Сщмч.», where the Greek line this folder was made from calls him only Ὅσιος; the rank words are the two calendars’ own and neither is written into `types` on the other’s account. Its own name page gives him the fuller see, «митрополит Ростовский и Ярославский», where this folder’s `office` holds Rostov alone; the office is left as it stands, because the second half of the see is not in the locale packs."
     },
     {
       "church": "romanian",

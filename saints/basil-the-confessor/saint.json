@@ -16,6 +16,11 @@
       "form": "Василије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's second heading for 28. фебруар ст. ст., „Свети Василије исповедник.“, with Свети and the rank word исповедник left off; the rank is in the folder's `types`. The heading gives no epithet beyond it."
+    },
+    {
+      "form": "Василий Декаполит",
+      "lang": "ru",
+      "note": "The heading of the calendar’s own name link behind the day’s line, «Василий Декаполит, исповедник, прп.», with the rank words left off; its life page repeats the form as «Преподобный Василий Декаполит, исповедник». The day’s line itself carries no epithet at all — «Прп. Василия исповедника»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Прп. Василия исповедника (ок. 750).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "His life page on that calendar heads itself «День памяти: 28 февраля», the same day as the listing. The calendar’s own epithet for him is «Декаполит», of Decapolis, which neither the Greek nor the Romanian line on this folder gives; it is recorded in the name form and not read as a second man, because the calendar puts him in prison with the companion this folder already relates him to and gives the same year of death the folder holds. Of the day’s two hymns under his name, the troparion is a common and not a proper — the troparion of a venerable ascetic, with «отче наш Василие» set into it — and it is copied whole as the page has it, per BRIEF.md §4; the schema has nowhere to say so on a hymn, so it is said here."
     },
     {
       "church": "romanian",
@@ -142,6 +157,38 @@
       },
       "english": {
         "text": "Having received the divine revelation from on high, you went out, wise one, from the midst of confusions; and taking up the monastic life, venerable father, you received the working of wonders and the healing of diseases by grace, all-blessed and most holy Basil.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, Богоносе, отче наш Василие,/ постом, бдением, молитвою Небесная дарования приим,/ исцелявши недужныя и души верою притекающих ти./ Слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Тропарь преподобного Василия исповедника»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dweller of the wilderness and angel in the body, thou wast shown forth as a wonderworker, O our God-bearing father Basil. By fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that run to thee in faith. Glory to Him that gave thee strength; glory to Him that crowned thee; glory to Him that worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "С высоты приим Божественное откровение,/ изшел еси, мудре, от среды молв/ и, монашествовав преподобно,/ чудес приял еси действо/ и недуги исцеляти благодатию,// Василие всеблаженне священнейший.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Кондак преподобного Василия»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received divine revelation from on high, thou didst go out, O wise one, from the midst of the tumults; and having lived the monastic life in holiness, thou didst receive the working of wonders and the grace to heal diseases, O most blessed and most sacred Basil.",
         "rendered": "site"
       }
     }

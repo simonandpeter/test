@@ -11,6 +11,11 @@
       "form": "Θεοστήρικτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαρτίου, «Όσιος Θεοστήρικτος ο Ομολογητής», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Феоктирист (Феостирикт) Медикийский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s own name link behind the day’s line, «Феоктирист (Феостирикт) Медикийский, исповедник, прп.», with the rank words left off; the parentheses and the second form of the name are the page’s own. The day’s line and the calendar’s life page both call him «Феоктирист (Феостирикт), игумен Пеликитский» instead, and that disagreement is recorded in the attestation’s note."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Прмч. Феоктириста , игумена Пеликитского (VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "The identification is a reading and is stated as one. Neither the menologion scan nor `ru-namesweep.mjs` reached this folder from that line; it was found by a slug-stem grep and settled by reading this folder’s own life against the calendar’s. The three things the calendar’s life gives — abbot of Pelekete, tortured for the honouring of the icons under Constantine Copronymus, author of a canon to the Mother of God — are the three this folder already holds off saint.gr. The calendar’s own name page heads him «Феоктирист (Феостирикт) Медикийский», of Medikion, where its day line says «игумена Пеликитского», of Pelekete; the two disagree and the line is the one followed, because this folder’s Greek source names Pelekete and puts Medikion in another man’s hands. The other Феостирикт this corpus keeps, «иже в Символех», is a different man on a different Russian day with a venerated row of his own, and nothing here touches him. The space before the comma is the page’s own. Two days are recorded and not acted on: the Greek and Romanian rows on this folder keep him on 17 March, and the Russian calendar does not name him on 17 марта ст. ст. — that page was read and prints seven saints, none of them him; and his life page here heads itself «День памяти: 1 марта», one day after the listing, which is this calendar’s handling of the Julian 29 февраля in a common year and not a second feast."
     },
     {
       "church": "romanian",

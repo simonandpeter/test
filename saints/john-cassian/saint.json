@@ -11,6 +11,11 @@
       "form": "Κασσιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Όσιος Κασσιανός ο Ρωμαίος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Кассиан (Иоанн Кассиан) Римлянин",
+      "lang": "ru",
+      "note": "The heading of the calendar’s own name link behind the day’s line, «Кассиан (Иоанн Кассиан) Римлянин, иеромонах», with the rank word left off; the parentheses and the doubled name are the page’s own. The day’s line declines it — «Прп. Иоанна Кассиана Римлянина» — and a genitive on a day line is not turned into a nominative here."
     }
   ],
   "sex": "male",
@@ -72,13 +77,55 @@
         "text": "Having farmed the word of wisdom ascetically by your works, father, as a faithful steward, you initiate others into the achievements of the virtues; for having practised them piously you teach them exactly, God-bearing Cassian, and you intercede with the Saviour that our souls be shown mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Постом предочистився, премудрости постигл еси разумение, / от пустынных же Богоносных отец научился еси страстей обузданию./ Того ради подаждь нам твоими молитвами/ плоти нашея духу послушание:/ еси бо наставник, Кассиане преподобне,/ всем поющим о Христе твою память.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Тропарь преподобного Кассиана Римлянина»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having first been cleansed by fasting, thou didst attain the understanding of wisdom; and from the God-bearing fathers of the desert thou didst learn the bridling of the passions. Therefore grant us by thy prayers the obedience of our flesh to the spirit, for thou art a teacher, O venerable Cassian, to all who sing of thy memory in Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Преподобен быв, Богу возложился еси,/ и просвещая добрыми виды, Кассиане,/ яко солнце облистал еси/ сиянием Божественных твоих учений,/ сердца всех чтущих тя всегда просвещая./ Но прилежно моли Христа,/ о иже любовию тепле восхваляющих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Кондак преподобного Кассиана Римлянина»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become holy, thou didst give thyself over to God; and enlightening us by thy fair examples, O Cassian, thou didst blaze like the sun with the radiance of thy divine teachings, ever enlightening the hearts of all who honour thee. But pray thou earnestly to Christ for those who praise thee with warm love.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Прп. Иоанна Кассиана Римлянина (435).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "His own life page on that calendar heads itself «День памяти: 1 марта», one day later than the day listing that prints him. That is neither the thirteen-day style conversion nor a day the calendar repeats: the Julian 1 марта page was read for this corpus by another reader and names twenty-three saints, none of them him. The reading taken here is the leap-day one — this calendar keeps him on the Julian 29 февраля, which a common year does not have, so the listing prints him on 28 февраля and the life page labels him by the day after. The Romanian row on this folder, which keeps him on 29 February, is the other half of that reading. The day is the day page’s; the 1 марта is recorded and not acted on."
     },
     {
       "church": "romanian",

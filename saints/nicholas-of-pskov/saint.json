@@ -15,14 +15,29 @@
       "form": "Николај",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's fourth heading for 28. фебруар ст. ст., „Свети блажени Николај, јуродиви псковски.“, with Свети, the rank words блажени and јуродиви and the city left off; fool-for-Christ is the folder's `type` and Pskov is in its English name."
+    },
+    {
+      "form": "Николай Псковский",
+      "lang": "ru",
+      "note": "The heading of the calendar’s own name link behind the day’s line, «Блаженный Николай Псковский», with the rank word left off. The day’s line is fuller and in the genitive — «Блж. Николая Саллоса, Христа ради юродивого, Псковского» — and a genitive on a day line is not turned into a nominative here, so «Саллос» stays in the attestation’s note and out of the form."
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Блж. Николая Саллоса, Христа ради юродивого, Псковского (1576).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "The calendar’s line gives him an epithet neither the Greek nor the Serbian line on this folder has, «Саллос» — the Greek σαλός, the fool, carried over as a name — and its own name page drops it again, heading him «Блаженный Николай Псковский». The form is read off the name page and the epithet is recorded here. The day and the year are the ones this folder already holds."
     },
     {
       "church": "romanian",
@@ -69,5 +84,39 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Словенска языка, Псковския земли/ плотски в юродстве быв,/ юродства притворением Горняго Иерусалима гражданин явися,/ Ангелом, славне, свеселишися,/ мироточиваго святителя Николая звание восприим,/ с нимже всегда Христа Бога моли/ даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Тропарь блаженного Николая Саллоса, Христа ради юродивого, Псковского»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Of the Slavonic tongue and of the land of Pskov, a fool in the flesh, by the feigning of folly thou wast shown to be a citizen of the Jerusalem on high. With the angels, O glorious one, thou rejoicest, having taken the name of the myrrh-streaming hierarch Nicholas; with him pray thou ever to Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Чудотворец явися, Николае,/ царску державу и смысла свирепства на милость обратив,/ и сего ради своему отечеству тепл молебник показася,/ и ныне молим тя, святе,/ пребуди в нас еще, защити от коварств вражиих,/ ты бо еси граду Пскову и всем христолюбивым людем похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Кондак блаженного Николая»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth as a wonderworker, O Nicholas, turning a sovereign's power and the fierceness of its mind to mercy; and therefore thou wast made a warm intercessor for thine own country. And now we pray thee, O holy one: abide with us still, and defend us from the wiles of the enemy, for thou art the praise and the confirmation of the city of Pskov and of all Christ-loving people.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

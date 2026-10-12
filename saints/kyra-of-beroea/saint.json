@@ -11,6 +11,11 @@
       "form": "Κύρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Οσίες Μαράνα και Κύρα», with the rank word left off."
+    },
+    {
+      "form": "Кира Берийская (Македонская)",
+      "lang": "ru",
+      "note": "The heading of the calendar’s own name link behind the day’s line, «Кира Берийская (Македонская), дева, затворница, прп.», with the rank words left off; the parentheses are the page’s own, and the calendar’s life page heads her «Преподобная Кира Берийская». The day’s line names the two sisters together and in the genitive — «Прпп. жен Марины и Киры»."
     }
   ],
   "related": [
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Прпп. жен Марины и Киры (ок. 450).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "The line names the two sisters together, and the calendar's own life page is headed for her alone — «Преподобная Кира Берийская» — so each of the two is kept here as the earlier sources already keep them. Two readings disagree and neither is acted on: the calendar puts the sisters in Beria of Asia Minor in the fourth century, where this folder’s Greek source puts them at Beroea of Syria at the beginning of the fifth. `dates` is untouched."
     },
     {
       "church": "romanian",
