@@ -6,4 +6,6 @@ He protected and helped the church greatly as a senator, and was a great friend 
 
 He was cut down with the sword in 257, the entry ends, and buried by his friend. That year is the only date in the entry: there is no year for the birth, and the twenty-two years of his parents’ marriage fix none without a wedding to count them from.
 
-*After the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 5. август ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-18&prolog=1); read 6 October 2026.*
+The Russian calendar keeps him on the same Julian day as the Prologue, as «Мч. Понтия Римлянина (ок. 257)» — the «ок.» being the source's own about, and 257 the year this folder already holds — and its name link adds a second place to his name beside Rome, which no other calendar here gives him.
+
+*After the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 5. август ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-18&prolog=1); read 6 October 2026; and the Православный церковный календарь of the Сретенский monastery for 5 августа ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260805.html), read 13 October 2026.*

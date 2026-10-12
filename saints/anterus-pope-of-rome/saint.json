@@ -1,0 +1,59 @@
+{
+  "slug": "anterus-pope-of-rome",
+  "display_name": "Anterus of Rome",
+  "names": [
+    {
+      "form": "Анфир Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст., «Сщмчч. Анфира (236) и Фавия (250), пап Римских.»; the line declines the name and the link's nominative is «Святитель Анфир Римский, папа, сщмч.», whose first word is the hierarch's rank and whose last two are the see and the martyr grade, none of them stored in the form."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Rome",
+  "dates": {
+    "death": {
+      "earliest": 236,
+      "latest": 236,
+      "display": "236",
+      "basis": "traditional",
+      "note": "The day line gives his year beside his name, «Анфира (236)», and gives the pope named with him the year 250. There is no life page behind the line."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Сщмчч. Анфира (236) и Фавия (250), пап Римских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -4,4 +4,6 @@ saint.gr's calendar for 5 August names two brothers together, and gives them one
 
 What it adds is a couplet over the pair, which turns the stones of their death into their road: they set up high hills of stones, O Word, by which two of one kin came up to You. His brother is [Kattidianos](/saints/kattidianos). The page prints no hymn to either of them.
 
-*After saint.gr's calendar for 5 Αυγούστου — [the day](https://www.saint.gr/08/05/index.aspx) and [the life](https://www.saint.gr/2226/saint.aspx); read 1 October 2026.*
+The Russian calendar keeps the three of them together on the same day as the Greek, as «Мчч. Кантидия , Кантидиана и Сивела , в Египте (IV)», and that bare century is the only date any source read for this folder has given it. Its name link prints a second spelling of his name in parentheses beside the first.
+
+*After saint.gr's calendar for 5 Αυγούστου — [the day](https://www.saint.gr/08/05/index.aspx) and [the life](https://www.saint.gr/2226/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 5 августа ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260805.html), read 13 October 2026.*

@@ -10,6 +10,11 @@
       "form": "Понтије сенатор",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s third heading for the Julian 5 August, „Св. муч. Понтије сенатор.“ — Св. муч. left off, which §5 maps to `martyr`. **сенатор is kept**: it is in no rank table of §5, it is not a grade of the Church, and it is the only thing in the heading that distinguishes him, Rome and the Alps both being in the body. `.tmp/sr-foldnew.mjs` reports both keys of the form with 0 other holders, and `.tmp/foldchk.py` returns NO FOLDER HOLDS THIS FORM."
+    },
+    {
+      "form": "Понтий Римлянин, Кимельский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст.; the line declines the name and the link's nominative closes with a rank, which is not stored in the form. The nominative is «Понтий Римлянин, Кимельский, мч.», and the second place name is part of the name the calendar gives him."
     }
   ],
   "dates": {
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Мч. Понтия Римлянина (ок. 257).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

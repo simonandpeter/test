@@ -10,13 +10,27 @@
       "form": "Καττίδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιοι Καττίδιος και Καττιδιανός τα αδέλφια», with the rank word, the brother's name and the word for brothers left off."
+    },
+    {
+      "form": "Кантидий (Кандидий) Египетский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст.; the line declines the name and the link's nominative closes with a rank, which is not stored in the form. The nominative is «Кантидий (Кандидий) Египетский, мч.», and the parenthesis is the calendar's own second spelling of the name rather than a surname."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Мчч. Кантидия , Кантидиана и Сивела , в Египте (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -49,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind, saint.gr giving it a bare line. days.pravoslavie.ru closes the line of the three «(IV)», and that interval is the whole of what it gives them."
+    }
   }
 }

@@ -1,0 +1,63 @@
+{
+  "slug": "eudocia-sheykova",
+  "display_name": "Eudocia (Sheykova)",
+  "names": [
+    {
+      "form": "Евдокия (Шейкова)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 августа ст. ст., «Мцц. Евдокии , Дарии , Дарии и Марии (1919).», which gives the forename alone and in the genitive; the name link's nominative closes «, мц.», a rank which is not stored."
+    }
+  ],
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "related": [
+    "daria-ulybina",
+    "daria-timagina",
+    "mary-martyr-1919"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "The one year the day line gives the four of them together, «(1919)». There is no life page behind the line."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 августа ст. ст. — «Мцц. Евдокии , Дарии , Дарии и Марии (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20260805.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
