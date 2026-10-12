@@ -36,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(1693) (Рум.)», the year this folder already records and a mark saying the memory is the Romanian church’s, which the folder’s Romanian row already carries. The reading this calendar links behind the entry was NOT opened: this folder’s life is already written out of its other sources, and that is said here rather than claimed otherwise. **NO RUSSIAN NAME FORM WAS STORED AND THAT IS DELIBERATE.** The name page gives «Святитель Досифей, митрополит Молдавский», and stripping both rank words leaves «Досифей», a bare forename which `fk.mjs` shows already folds onto `dositheia-the-recluse-of-kyiv` and `dositheus-of-verkhny-ostrov`; the epithet «Молдавский» stands only inside the rank phrase «митрополит Молдавский», so a form pairing the two would be a reconstruction and not a reading. Withholding it is the answer the Russian block took for the two chief apostles on 29 июня. The day page prints no hymn under his name."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Свт. Досифея, митр. Молдавского (1693) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

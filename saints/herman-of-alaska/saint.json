@@ -11,6 +11,11 @@
       "form": "Γερμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Αυγούστου, «Όσιος Γερμανός ο εν Αλάσκα», with the rank word and the clause about Alaska left off. The page glosses the name from the Latin germanus, «ο αδελφός, ο αληθής, ο τέλειος»."
+    },
+    {
+      "form": "Герман Аляскинский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Преподобный Герман Аляскинский»; the rank is stripped and the epithet kept. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian",
+        "note": "A DAY OF THIS FOLDER’S OWN, AND NOT THE DAY ITS OTHER ROWS CARRY. The Romanian row keeps him on 15 noiembrie and the Greek on 9 Αυγούστου; the Russian calendar keeps his repose, «Преставление», on 13 декабря ст. ст., and that is the day this row records because it is the day the day page listed him. The two other days are not touched and nothing is moved. The reading this calendar links behind the entry was NOT opened: this folder’s life is already written out of its other sources, and that is said here rather than claimed otherwise. The day page prints EIGHT hymn blocks under his name and SIX ARE WRITTEN HERE: two of the eight are second redactions of blocks already taken — an «Ин тропарь» differing from the one before it in «имея»/«имеяй» and in the word order of one clause, and an «Ин кондак» printing the «Валаама» kontakion once as running text and once broken at the slashes. The slashed redaction is the one written, matching every other hymn in this corpus; neither pair is two hymns and recording both would say it was."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Преставление прп. Германа Аляскинского (1836).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -84,6 +99,102 @@
       },
       "english": {
         "text": "Ascetic of the northern wastes and intercessor for the whole world, teacher of Orthodoxy and pattern of piety, adornment of Alaska and gladness of America, holy father Herman, pray for us!",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "Звездо пресветлая Церкве Христовы,/ на севере просиявшая,/ вся к Царствию Небесному путеводящая,/ учителю и апостоле истинныя веры,/ предстателю и заступниче гонимых,/ украшение изящное Святыя Церкве во Америце,/ преподобне отче Германе Аляскинский,/ молися ко Господу, Спасу нашему,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Тропарь преподобного Германа Аляскинского», глас 7.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O most radiant star of the Church of Christ, which shone forth in the north and guideth all unto the heavenly kingdom; teacher and apostle of the true faith, intercessor and defender of the persecuted, excellent adornment of the holy Church in America, venerable father Herman of Alaska: pray to the Lord our Saviour that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Лозу Православия принесл еси в Америку из России благочестивый/ и, удобрив корень постническими трудами/ и напоив обильне молитвенными слезами,/ плоды принесл еси — виноград возлюбленный,/ Германе преблаженне отче наш./ Темже и Бог тя прослави, яко апостола преподобнаго,/ нетлением мощей и благодатию чудес,/ от них же почерпающе благодеяния, восхваляем тя:/ слава Давшему ти крепость,/ слава Венчавшему тя, слава Даровавшему тя Америце светило Православия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Тропарь преподобного Германа Аляскинского», глас 1. The second of the three troparia the page prints, under the same title as the first.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst bring the vine of Orthodoxy from Russia to America, O pious one, and having dressed its root with the labours of fasting and watered it abundantly with tears of prayer, thou didst bring forth fruit, a beloved vineyard, O most blessed Herman our father. Therefore God glorified thee as a venerable apostle by the incorruption of thy relics and the grace of wonders; and drawing good things from them we praise thee: glory to Him who gave thee strength, glory to Him who crowned thee, glory to Him who granted thee to America as a luminary of Orthodoxy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Преподобне отче наш Германе,/ первый светильниче, в земли нашей просиявый,/ приносим вси тебе похвалы сия,/ ты же, яко имея дерзновение ко Господу,/ буди нам заступник и утешитель/ и Церкве нашея покровитель дивный,/ да вси со умилением зовем ти:/ радуйся, отче наш Германе, Аляски и всея Америки преславный чудотворче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Ин тропарь преподобного Германа Аляскинского, поемый во Америце», глас 3. The title says it is the one sung in America, «поемый во Америце». The page prints a second redaction of it immediately after, differing in «имея»/«имеяй» and in the order of one clause; that is the same hymn and is not recorded twice.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O venerable father Herman, first lamp to shine forth in our land, we all bring thee these praises; and do thou, having boldness before the Lord, be our defender and consoler and the wondrous protector of our Church, that we all may cry to thee with compunction: rejoice, O our father Herman, most glorious wonderworker of Alaska and of all America.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Свет вечный Христа Спаса нашего/ тя на путь евангельский во Америку настави,/ возвестити весть о мире евангельскую./ Днесь Престолу Славы предстоя,/ молися о стране твоей и людех ея,/ о мире всего мира/ и спасении душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Кондак преподобного Германа Аляскинского», глас 3.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The eternal light of Christ our Saviour guided thee upon the path of the gospel to America, to proclaim the gospel tidings of peace. Standing today before the throne of glory, pray for thy land and for its people, for the peace of the whole world and for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Взбранному Воеводе своинствовався,/ в брань вступил еси на духа злобы в поле преподобия и апостольства./ И, пожав победы обоюдныя,/ воздвизаеши нас вопити тебе:/ радуйся, святе Германе, апостоле преподобный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Кондак преподобного Германа Аляскинского», глас 8. The second kontakion the page prints under the same title as the first.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gone to war under the Champion Leader, thou didst enter the battle against the spirit of malice in the field of monastic struggle and of apostleship; and having reaped the victory in both, thou dost move us to cry to thee: rejoice, O holy Herman, venerable apostle.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Валаама пострижник,/ честный возлюбленник Божией Матери бывый,/ ревнитель подвигов древних подвижников новый,/ молитву, яко копие и щит, приемый,/ страшен демоном и тьме язычестей ставый,/ Германе преподобне, моли Христа Бога спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Ин кондак преподобного Германа Аляскинского», глас 8. The page prints this kontakion twice, once as running prose and once broken at the slashes. The broken redaction is the one written, matching every other hymn in this corpus; the two are one hymn and the prose one is not recorded separately.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O tonsured monk of Valaam, who wast the honoured beloved of the Mother of God, new emulator of the struggles of the ancient ascetics, who tookest prayer as spear and shield and becamest terrible to the demons and to the darkness of paganism: O venerable Herman, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }

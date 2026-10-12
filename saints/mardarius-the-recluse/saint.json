@@ -6,6 +6,11 @@
       "form": "Μαρδάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Όσιος Μαρδάριος ο Έγκλειστος», with the rank word and the by-name left off."
+    },
+    {
+      "form": "Мардарий Печерский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Мардарий Печерский, затворник»; the rank «затворник», recluse, is stripped, which is the word this folder’s display name already carries in English, and the epithet «Печерский», of the Caves, is kept. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line closes «(XIII)», the thirteenth century, which is the `floruit` this folder already holds from saint.gr, so no date is touched. The reading this calendar links behind the entry was NOT opened: this folder’s life is already written out of its other sources, and that is said here rather than claimed otherwise. The day page’s two hymns under his name are propers — each names him and the Far Caves — and are written here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Прп. Мардария, затворника Печерского (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Бывый, блаженне Мардарие,/ нестяжатель Христа ради,/ и Того за многая твоя благодеяния/ в сердце твое вселивый,/ молися о нас, поющих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Тропарь преподобного Мардария, затворника Печерского, в Дальних пещерах», глас 4.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O blessed Mardarius, who wast without possessions for Christ’s sake and who, for thy many good deeds, didst make Him to dwell within thy heart: pray for us who sing thy praises.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышних ища, нижних не стяжал еси,/ и колесницу огненну к Небеси, нестяжание, себе поставль,/ со Ангелы жити сподобился еси./ Мардарие славне,/ с нимиже Христа Бога моли/ непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Кондак преподобного Мардария, затворника Печерского, в Дальних пещерах», глас 2.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeking the things that are above, thou didst possess nothing below, and setting poverty before thyself as a chariot of fire to heaven, thou wast counted worthy to dwell with the angels. O glorious Mardarius, together with them pray thou unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

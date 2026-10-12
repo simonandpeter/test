@@ -1,0 +1,61 @@
+{
+  "slug": "alexis-rozhdestvensky",
+  "display_name": "Alexis (Rozhdestvensky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Алексий (Рождественский)",
+      "lang": "ru",
+      "note": "The calendar's own name page for him, which day-candidates.mjs prints as `name: Алексий (Рождественский), протоиерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1937)», which is the whole of what the source gives for him; the reading behind the line is another man’s."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Сщмчч. Владимира , Александра , Иакова , Алексия , Григория пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry, a line of five presbyters of 1937. THE LINE AND THE NAME PAGE ARE ALL THERE IS for him: the one reading the entry links, `/Life/life4790.htm`, is the life of Vladimir (Lozina-Lozinsky) alone and says nothing of the other four. The line says «пресвитеров» and the name page «протоиерей», which is the office written here. NO RELATED ROWS JOIN HIM TO THE OTHER FOUR: the one reading behind the line has its own man shot alone at Novgorod, and sharing a line is not a relation. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» and «мч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: a Cyrillic grep for the surname over every `saint.json` returns only other men of that name with other forenames. The day page carries troparia and kontakia for five of the memories it heads, and none under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 26 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 26 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

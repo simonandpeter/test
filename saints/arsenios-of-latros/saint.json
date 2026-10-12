@@ -6,6 +6,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Όσιος Αρσένιος που ασκήτευσε στο Λάτριο όρος», with the rank word and the clause naming the mountain left off."
+    },
+    {
+      "form": "Арсений Латрийский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Арсений Латрийский, игумен»; the rank is stripped, the epithet kept, and the rank itself written into `office`. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. THE LINE’S CENTURY DISAGREES WITH THE FOLDER’S AND THE FOLDER’S IS KEPT. days.pravoslavie.ru closes the line «(VIII-X)», the eighth to the tenth century; the folder’s `floruit` is saint.gr’s «μεταξύ του 8ου και 9ου αιώνα», the eighth to the ninth, recorded there as an inference and cited as one. The Russian reading is wider and no narrower, so it replaces nothing and is recorded in the life instead. The office `Abbot` IS NEW ON THIS FOLDER and is the name page’s own word «игумен». The reading this calendar links behind the entry was NOT opened: this folder’s life is already written out of its other sources, and that is said here rather than claimed otherwise. The day page’s two hymns under his name are both commons of a venerable father, not propers, and are copied whole as `BRIEF.md` §4 directs."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Прп. Арсения Латрийского (VIII-X).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +71,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Abbot",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В тебе, отче, известно спасеся еже по образу,/ приим бо крест, последовал еси Христу,/ и дея, учил еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней./ Темже и со Ангелы срадуется, преподобне Арсение, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Тропарь преподобного Арсения, иже в Латре», глас 8. THIS IS A COMMON, the troparion of a venerable father with his name set into it, and it is copied whole as the page has it because the page serves it under his name.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, that which is according to the image was surely saved; for taking up the cross thou didst follow Christ, and by thy deeds thou didst teach us to despise the flesh, since it passeth away, and to care for the soul, a thing immortal. Therefore doth thy spirit rejoice together with the angels, O venerable Arsenius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Иже на земли вся оставль и Христовым стопам последовал еси тепле,/ Того, славне, на рамо свое честный крест взем,/ умертвил еси труды постническими телесная желания, всеблаженне./ Тем зовем ти:/ радуйся, отче Арсение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Кондак преподобного Арсения, иже в Латре», глас 8. A COMMON likewise, the kontakion of a venerable father with his name set into it, served under his name and copied whole.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having left all things upon earth, thou didst follow fervently in the footsteps of Christ, and taking His precious cross upon thy shoulder, O glorious one, thou didst put to death the desires of the body by the labours of fasting, O all-blessed one. Therefore we cry to thee: rejoice, O father Arsenius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

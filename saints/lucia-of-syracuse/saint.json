@@ -16,6 +16,11 @@
       "form": "Лукија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Света мученица Лукија (Луција), девица.“ — with «Света» (“saint”), «мученица» (the `martyr` grade) and «девица» (the `virgin`) left off, which leaves the heading’s own first spelling of her name. THE PARENTHESISED «Луција» IS THE SAME NAME SPELT A SECOND WAY AND WAS NOT DRAFTED AS A SECOND FORM: §6 asks for one form per folder and the two are one name, not a name and an epithet — unlike the «Јован Ћутљиви (Молчалник)» of 12-03, where the parenthesis held a different word. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured the string at one other holder, `lucia-of-rome-companion-of-rix`, whose own Serbian form came off this same book for the Julian 6 July, and no READ_FOLDS key existed, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit — and the reading says plainly that both are women, both martyrs and both of the same persecution."
+    },
+    {
+      "form": "Лукия Сиракузская",
+      "lang": "ru",
+      "note": "The calendar’s own name page for her is «Лукия Сиракузская, дева, мц.»; the rank and the word «дева», virgin, which this folder carries as a type, are stripped and the epithet kept. The day line itself gives «Мц. Лукии» and no epithet at all. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "female",
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line gives the year «(304)», which this folder already holds as its death year, so no date is touched. The reading this calendar links behind the entry was NOT opened: this folder’s life is already written out of its other sources, and that is said here rather than claimed otherwise. The day page prints no hymn under her name, so none is added: its hymn blocks are for the five martyrs, for Arcadius of Novotorzhsk, for Arsenius of Latros, for Herman of Alaska and for Mardarius the Recluse, and the reader counted them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Мц. Лукии (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -6,4 +6,8 @@ Once, in a terrible storm, the fleet went down and he alone was saved. He then g
 
 From Latros he was called to govern the monastery of Kellibara; but being troubled there and seeking quiet, he left and shut himself inside a hole, wearing out his body. The monks of the monastery found him and brought him back, and there he lived in a cell and saw the brethren only once in the week, on the Sunday, when he ate with them. He had a presentiment of the end of his life, called all the monks of the monastery together, gave them fitting spiritual counsel, and died in peace.
 
-*After saint.gr's calendar for 13 Δεκεμβρίου — [the day](https://www.saint.gr/12/13/index.aspx) and [the life](https://www.saint.gr/3255/saint.aspx); read 2 October 2026.*
+The Russian calendar keeps him on 13 декабря ст. ст., the same menologion day as the Greek calendar here, and its line is «Прп. Арсения Латрийского (VIII-X).» — the venerable Arsenius of Latros, the eighth to the tenth century. That interval is wider than the eighth-to-ninth saint.gr infers above, and it is recorded here rather than put in place of it. The calendar’s own name page calls him «игумен», abbot, which the Greek entry does not.
+
+The day page carries a troparion and a kontakion under his name, and both are commons — the service of a venerable father with his name set into it, which is what this calendar serves for a monk who has no proper of his own. They are copied whole, as they stand on the page. The readings the entry links were not opened; the life above is saint.gr’s.
+
+*After saint.gr's calendar for 13 Δεκεμβρίου — [the day](https://www.saint.gr/12/13/index.aspx) and [the life](https://www.saint.gr/3255/saint.aspx); read 2 October 2026; and the Православный церковный календарь of the Сретенский monastery for 13 декабря ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261213.html), read 13 October 2026.*
