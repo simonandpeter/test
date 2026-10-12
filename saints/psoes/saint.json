@@ -10,13 +10,28 @@
       "form": "Ψόης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Αυγούστου, «Όσιος Ψόης», with the rank word left off. The page offers no gloss on the name, as it does for most others."
+    },
+    {
+      "form": "Псой Египетский",
+      "lang": "ru",
+      "note": "Name page 1858 of days.pravoslavie.ru is «Псой Египетский, прп.»; the rank is stripped and the epithet the page prints is kept. The folder held only the Greek «Ψόης». The day line gives the genitive «Псоя Египетского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Прп. Псоя Египетского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "note": "The day's fourth entry and the same menologion day as the folder's Greek row, which is its only other venerated one. «Прп.» is the `venerable` the folder's `types` already carry. NO `dates` WERE WRITTEN: the line's «(IV)» is the fourth century and would be this folder's first date of any kind, and this wave has declined to write a first date off a bare Roman numeral on a line — the standing author question. The reading life4409 was not opened. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

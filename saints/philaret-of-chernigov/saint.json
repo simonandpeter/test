@@ -1,0 +1,60 @@
+{
+  "slug": "philaret-of-chernigov",
+  "display_name": "Philaret of Chernigov",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Chernigov",
+  "names": [
+    {
+      "form": "Филарет (Гумилевский)",
+      "lang": "ru",
+      "note": "Name page 13455 of days.pravoslavie.ru is «Святитель Филарет (Гумилевский), архиепископ Черниговский и Нежинский»; «Святитель» and the see are stripped and the surname the calendar keeps in parentheses stays. The day line gives the genitive «Филарета, архиеп. Черниговского». `fk.mjs` on the stored string returns NONE, and a Cyrillic grep for «Гумилевск» over every `saint.json` returned nothing — the seven existing Philaret folders are a fold this form stays clear of. THE DISPLAY NAME DELIBERATELY DROPS THE SURNAME: `Philaret (Gumilevsky)` as a display name already stands in the prose of `abraham-the-industrious-of-the-caves`, which cites him as the archbishop who explained that saint’s epithet, and `tests/related-floor.test.mjs` would then have demanded a `related` row in both directions for what is a citation and not a companionship. `Philaret of Chernigov` is the calendar’s own epithet, «архиеп. Черниговского», and `fk.mjs` on it returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1866,
+      "latest": 1866,
+      "display": "1866",
+      "basis": "attested",
+      "note": "The day line closes «(1866)», which is the whole of what the source gives; no year of birth anywhere, and no life page behind his name."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Свт. Филарета, архиеп. Черниговского (1866).»",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry. THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind his name. «Свт.» is `hierarch` and «архиеп.» `archbishop`, both the source's own words, and `Archbishop of Chernigov` is a key all four locale packs carry, so the see is in `office` and not only in the life. No folder held him: `ls -d saints/*gumilev*` and `ls -d saints/*humilev*` were both empty and `ls -d saints/philaret*` returned seven men, none of Chernigov. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 22 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 22 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

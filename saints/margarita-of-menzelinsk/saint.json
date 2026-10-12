@@ -6,6 +6,11 @@
       "form": "Μαργαρίτα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Αγία Μαργαρίτα η Νέα Οσιομάρτυς», with the rank words left off."
+    },
+    {
+      "form": "Маргарита (Гунаронуло)",
+      "lang": "ru",
+      "note": "Name page 9865 of days.pravoslavie.ru is «Маргарита (Гунаронуло), игумения, прмц.»; the office and the rank are stripped and the surname the calendar keeps in parentheses stays. The folder held only the Greek «Μαργαρίτα». The day line gives the bare genitive «Маргариты». `fk.mjs` on the stored string returns NONE; `margarita-zakachurina` carries a different surname."
     }
   ],
   "sex": "female",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Прмц. Маргариты (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "note": "The day's eighth and last entry. THIS IS AN IDENTIFICATION AND NOT A MATCH ON A DAY: the Russian line gives a bare forename, a rank and a year, and the folder's only venerated row is a Greek 25 January, so nothing in the two days connects them and the reading is the whole of the case. Four things agree and the fourth is the one that settles it. The rank: «Прмц.» is преподобномученица, the `venerable-martyr` the folder's `types` already carry. The office: name page 9865 says «игумения», abbess, which is the folder's other type. The year: «(1918)» is the 1918 the folder already holds, with saint.gr putting her death in the days after the Whites left Kazan in September 1918. And the surname the name page keeps in parentheses, «Гунаронуло», is a Greek one — saint.gr's life says outright that the abbess Margarita of the Menzelinsk monastery «ήταν ελληνικής καταγωγής», of Greek descent, and that she ordered her house after the pattern of the monasteries of Greece. An abbess named Margarita, of Greek family, a venerable-martyr of 1918 in the Kazan country, is one woman and not two. NO `dates` WERE TOUCHED. The day page prints no hymn under her name, and no life page stands behind the Russian line."
     },
     {
       "church": "romanian",

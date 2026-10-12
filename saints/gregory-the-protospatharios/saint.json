@@ -1,0 +1,71 @@
+{
+  "slug": "gregory-the-protospatharios",
+  "display_name": "Gregory the Protospatharios",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Григорий, протоспафарий",
+      "lang": "ru",
+      "note": "Name page 10148 of days.pravoslavie.ru is «Григорий, протоспафарий, мч.»; «мч.» is a rank word and is stripped, and «протоспафарий» is kept, as `asterios-7-august` keeps «Синклитик» and `marinus-the-senator` its own title — the protospatharios is a court and military office this corpus's `types` vocabulary does not hold, so it duplicates nothing and is not a rank being written twice. Stripping it too would leave the bare «Григорий», which `fk.mjs` shows folding onto `germanus-of-kazan` and `gregory-presbyter-martyr-1937-18-august`; `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 730,
+      "latest": 730,
+      "display": "730",
+      "basis": "traditional",
+      "note": "The line closes «(730)» and the shared reading life4410 opens with the same year: «пострадали за святые иконы в 730 году при императоре иконоборце Льве Исаврянине (717-741)». The reading dates the fall of the ladder at the gates to 19 January 730 and says he was put to death at once, before the eight months' imprisonment his companions endured, so his year is the same and is not narrowed further."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 августа ст. ст. — «Мчч. Иулиана, Маркиана, Иоанна, Иакова, Алексия, Димитрия, Фотия, Петра, Леонтия, Марии патрикии, протоспафария Григория и двух юношей, за икону Христа пострадавших (730).»",
+        "url": "https://days.pravoslavie.ru/Days/20260809.html",
+        "year": 2026
+      },
+      "note": "Eleventh of the eleven names the day's fifth entry enumerates, and the only one of the eleven the corpus did not already hold: the other ten are the nine `*-of-the-brazen-gate` folders and `maria-the-patrician`, all upgraded in `up-08-09.json`. `ls -d saints/*protospath*` and `ls -d saints/*gregory-the-protospath*` were both empty and a Cyrillic grep for «протоспафарий» over every `saint.json` returned nothing. THE TWO YOUTHS ARE NOT FOLDERED: the line closes its list with «и двух юношей», two youths, and names neither, and the reading names neither either. THE VIRGIN THEODOSIA IS NOT FOLDERED FROM HERE: the reading says she took part in the defence and refers her memory to 29 May, which this day page does not keep. `day-candidates.mjs` marked the line `[~]`, and it enumerates eleven people. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 22 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 22 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 August 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "julian-of-the-brazen-gate",
+    "marcian-of-the-brazen-gate",
+    "john-of-the-brazen-gate",
+    "james-of-the-brazen-gate",
+    "alexius-of-the-brazen-gate",
+    "demetrius-of-the-brazen-gate",
+    "phocas-of-the-brazen-gate",
+    "peter-of-the-brazen-gate",
+    "leontius-of-the-brazen-gate",
+    "maria-the-patrician"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
