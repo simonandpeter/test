@@ -11,6 +11,11 @@
       "form": "Миракс",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Свети мученик Миракс.“ — with «Свети» (“saint”) and «мученик» (the `martyr` grade, of which the folder holds the fuller `new-martyr`) left off, which leaves the bare forename; the heading offers nothing else. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Миракс Египтянин",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Миракс Египтянин, мч.», with the rank stripped and the epithet kept; the day line declines it as «Миракса». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Мч. Миракса (VII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "The day’s third entry, on the same menologion day the Greek calendar keeps him on. The line gives a century, «(VII)», where the folder already records about 640 from the Greek reading, and the Russian reading at /Life/life3102.htm closes «(+ не ранее 640 года)», not earlier than 640, which is the same figure read the same way; NO DATE IS TOUCHED. The reading adds the city, Tennesos in Egypt, and the whole of the fall and the repentance that the Greek entry gives more briefly. The day page prints four hymns and none is under his name."
     },
     {
       "church": "romanian",

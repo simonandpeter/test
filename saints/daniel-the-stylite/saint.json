@@ -16,6 +16,11 @@
       "form": "Данило Столпник",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Преподобни Данило Столпник.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Столпник» IS in §5’s table as `stylite` and would ordinarily come off with it, AND IT IS KEPT HERE for one reason: it is this folder’s own display epithet, the Romanian form already stored is «Daniil Stâlpnicul» with exactly the same word in it, and §6 asks for the fullest form the calendar gives. The Greek form stored here is the bare «Δανιήλ» with the by-name off, so the two readings stand side by side in this folder as they already did. `sr-foldpred.mjs` measured the folded string at 0 other holders; the bare «Данило» was not measured because it was not written."
+    },
+    {
+      "form": "Даниил Столпник",
+      "lang": "ru",
+      "note": "Read from the calendar’s own name page, «Преподобный Даниил Столпник», with the rank stripped; the day line declines it as «Прп. Даниила Столпника». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст. — «Прп. Даниила Столпника (489-490).»",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion day the other calendars keep him on, and its «(489-490)» is the interval the folder already records, so no date is touched. HIS LIFE PAGE WAS NOT OPENED: /Life/id585.htm is an index and the folder already carries full readings from two other calendars, so this upgrade is the row, the Russian form and the two Slavonic hymns and nothing else. The day page prints a troparion in the first tone and a kontakion in the eighth under his name, and THEY ARE THE SAME TWO HYMNS the folder already holds in Greek and Romanian — «Ὑπομονῆς στύλος γέγονας» and «Ὥσπερ ἀστὴρ πολύφωτος» — so the Slavonic is a third language for one text and the English rendering is the folder’s own, carried across rather than typed twice."
     },
     {
       "church": "romanian",
@@ -152,6 +167,38 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Терпения столп был еси,/ ревновавый праотцем, преподобне,/ Иову во страстех, Иосифу во искушениих,/ и Безплотных жительству/ сый в телеси, Данииле, отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст., «Тропарь преподобного Даниила Столпника», глас 1 — the Slavonic of the troparion this folder already holds in Greek and Romanian",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You became a pillar of patience, venerable father, emulating the forefathers: Job in his sufferings, Joseph in his temptations, and the manner of life of the bodiless powers while you were yet in a body. Daniel our venerable father, intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Якоже звезда многосветлая, ты, возшед, блаженне, на столп,/ мир просветил еси преподобными делы твоими/ и тьму прелести отгнал еси, отче./ Темже молим тя:/ и ныне облистай в сердцах раб твоих незаходящий свет разума.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 декабря ст. ст., «Кондак преподобного Даниила Столпника», глас 8 — the Slavonic of the kontakion this folder already holds in Greek",
+        "url": "https://days.pravoslavie.ru/Days/20261211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a star of many lights you went up on the pillar, blessed one, and lit the world with your holy works, and drove away the darkness of error, father. Therefore we beg you: shine out now also in the hearts of your servants the unsetting light of knowledge.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
