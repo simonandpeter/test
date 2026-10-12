@@ -16,6 +16,11 @@
       "form": "Мардарије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“ — with «Свети мученици» left off and the fourth of the five bare forenames taken. `sr-foldpred.mjs` measured the folded string at 0 other holders, which is worth saying because the corpus holds a `mardarius-the-recluse` whom the Greek calendar keeps on this very day: that folder’s only form is the Greek «Μαρδάριος» and no Serbian string folds against this one."
+    },
+    {
+      "form": "Мардарий Севастийский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Мардарий Севастийский, мч.»; the rank is stripped and the epithets kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line is the joint feast of the five and all five folders already stood in the corpus, so this day is five rows and no arrival. The reading this calendar links behind the entry was NOT opened: this folder’s life is already written out of its other sources, and that is said here rather than claimed otherwise. THE LINE’S «(284-305)» IS WRITTEN AS A DATE WHERE THE FOLDER HAD NONE, as a traditional interval and not a year of death. The day page’s troparion of the martyrs is written on all five; its two kontakia name Eustratius and are written on his folder only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Мчч. Евстратия, Авксентия, Евгения, Мардария и Ореста (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -112,9 +127,34 @@
         "text": "The fivefold-shining choir of the prize-winners lights the whole inhabited world with the spiritual torch of their contests: the wise Eustratius with the divine Auxentius, Orestes and Mardarius and Eugene together. Praising them, let us the faithful say: Rejoice, O five-numbered company of martyrs.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик всечестных светлость,/ пяточисленных страстотерпцев воспоем,/ славу земных презревших,/ солнца светлаго Евстратия,/ премудраго витию со страдальцы,/ на огнь и муки дерзнувших за всех Царя Христа/ и от Престола Того славы почестьми венцев обдаренных./ Тех молитвами, Христе Боже,// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Тропарь мучеников», глас 4. The title names no one and the text is addressed to the five together — «пяточисленных страстотерпцев», the five-in-number passion-bearers — so it is written on all five of their folders. The two kontakia the day page prints beside it both close on the name of Eustratius and are written on his folder alone.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us hymn the brightness of the all-honoured martyrs, the five passion-bearers who despised the glory of earthly things — Eustratius the shining sun, the all-wise orator, with his fellow sufferers — who dared the fire and the torments for Christ the King of all, and were endowed from His throne of glory with the honour of crowns. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind and none of its other three calendars gives one. days.pravoslavie.ru closes the line for 13 декабря ст. ст. with «(284-305)», which is the reign of Diocletian and Maximian and not a year of death, so it is recorded as a traditional interval and not as attested."
+    }
   }
 }

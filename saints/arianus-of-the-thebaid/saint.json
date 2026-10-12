@@ -16,6 +16,11 @@
       "form": "Аријан",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Филимон, Аполоније, Аријан и други.“ — with «Свети мученици» left off and the third of the three bare forenames taken; the Thebaid of this folder’s display name is not in this book, which says only Egypt. `sr-foldpred.mjs` measured the folded string at 0 other holders."
+    },
+    {
+      "form": "Ариан Антинойский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Ариан Антинойский, мч.»; the rank is stripped and the city kept. The day line declines the bare forename. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -31,13 +36,24 @@
   "related": [
     "philemon-the-flute-player",
     "apollonius-the-reader",
-    "hypatius-of-the-thebaid"
+    "hypatius-of-the-thebaid",
+    "theotichus-of-antinoe"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line names four and the corpus held three, so this day is three rows and one arrival; the fourth, `theotichus-of-antinoe`, is written in the same batch and related both ways. The reading this calendar links behind the entry WAS opened, and what it adds beyond the folder’s own sources is recorded in the life. A DATE IS WRITTEN WHERE THE FOLDER HAD NONE and it is the reading’s, not the line’s: THE LINE’S OWN YEARS ARE BACKWARDS AND ARE NOT USED AS A RANGE: it closes «(286-251)», a later year before an earlier one, which cannot be an interval. The reading behind it gives two dates instead and they are what is recorded — «Мученики Филимон и Аполлоний скончались 16 марта 286 г., а мученики Ариан и Феотих – 4 марта 287 года». The defect is the source’s own, as `docs/CORPUS.md` §3 says such readings are. The day page’s one kontakion names Thyrsus and Leucius and is not written here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 декабря ст. ст. — «Мчч. Филимона , Аполлония , Ариана и Феотиха (286-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20261214.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -123,12 +139,12 @@
     "life": "life.md"
   },
   "dates": {
-    "floruit": {
-      "earliest": 290,
-      "latest": 290,
-      "display": "290",
+    "death": {
+      "earliest": 287,
+      "latest": 287,
+      "display": "287",
       "basis": "attested",
-      "note": "saint.gr, the one year the page gives for the company: «Οι Άγιοι αυτοί, έζησαν στα χρόνια του βασιλιά Διοκλητιανού (290 μ.Χ.)». The page gives no year of birth and no year of death, and the martyrdom itself it does not date, so the year is recorded as a floruit."
+      "note": "The reading at /Life/life3117.htm: «мученики Ариан и Феотих – 4 марта 287 года». THE LINE’S OWN YEARS ARE BACKWARDS AND ARE NOT USED AS A RANGE: it closes «(286-251)», a later year before an earlier one, which cannot be an interval. The reading behind it gives two dates instead and they are what is recorded — «Мученики Филимон и Аполлоний скончались 16 марта 286 г., а мученики Ариан и Феотих – 4 марта 287 года». The defect is the source’s own, as `docs/CORPUS.md` §3 says such readings are."
     }
   }
 }

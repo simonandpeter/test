@@ -16,6 +16,11 @@
       "form": "Евстратије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“ — with «Свети мученици» left off, that being “holy” and the grade `types` keeps, and the first of the five bare forenames taken; the heading gives the five nothing but their names, and the Arabraca of this folder’s display name is in the body. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured the string at one other holder, `eustratius-of-mount-olympus`, and no READ_FOLDS key existed, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit."
+    },
+    {
+      "form": "Евстратий Севастийский",
+      "lang": "ru",
+      "note": "The calendar’s own name page for him is «Евстратий Севастийский, военачальник, мч.»; the rank is stripped and the epithets kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The same menologion day this folder’s other rows already carry, so there is no second day and none is noted. The line is the joint feast of the five and all five folders already stood in the corpus, so this day is five rows and no arrival. The reading this calendar links behind the entry was NOT opened: this folder’s life is already written out of its other sources, and that is said here rather than claimed otherwise. THE LINE’S «(284-305)» IS WRITTEN AS A DATE WHERE THE FOLDER HAD NONE, as a traditional interval and not a year of death. The day page’s troparion of the martyrs is written on all five; its two kontakia name Eustratius and are written on his folder only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Мчч. Евстратия, Авксентия, Евгения, Мардария и Ореста (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -131,9 +146,66 @@
         "text": "Thou didst appear a most radiant light, a herald of Christ, to those sitting in the darkness of ignorance; and girding faith about thee as a spear, thou wast not dismayed at the insolence of the enemy, O Eustratius, who wast more eloquent than the orators.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик всечестных светлость,/ пяточисленных страстотерпцев воспоем,/ славу земных презревших,/ солнца светлаго Евстратия,/ премудраго витию со страдальцы,/ на огнь и муки дерзнувших за всех Царя Христа/ и от Престола Того славы почестьми венцев обдаренных./ Тех молитвами, Христе Боже,// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Тропарь мучеников», глас 4. The title names no one and the text is addressed to the five together — «пяточисленных страстотерпцев», the five-in-number passion-bearers — so it is written on all five of their folders. The two kontakia the day page prints beside it both close on the name of Eustratius and are written on his folder alone.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us hymn the brightness of the all-honoured martyrs, the five passion-bearers who despised the glory of earthly things — Eustratius the shining sun, the all-wise orator, with his fellow sufferers — who dared the fire and the torments for Christ the King of all, and were endowed from His throne of glory with the honour of crowns. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Витийствуя пред беззаконнующими Божественная,/ биения претерпел еси мужественнейшим сердцем,/ облистал еси богознаменьми, пречудне,/ угасил еси возвышенный прелести пламень,/ сего ради тя чествуем, всеблаженне,// мучениче Христов Евстратие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Кондак мучеников», глас 3. The title says «мучеников», of the martyrs, but the text closes on his own name, so it is written on this folder and not on the other four.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Proclaiming divine things as an orator before the lawless, thou didst endure the beatings with a most manly heart; thou didst shine with signs from God, O most wondrous one, and didst quench the towering flame of delusion. Therefore do we honour thee, O all-blessed Eustratius, martyr of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Светильник явился еси светлейший/ во тьме неведения седящим, страстотерпче:/ верою бо, яко копием, обложився,/ врагов шатания не убоялся еси, Евстратие,// риторов сый благоязычнейший.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Кондак мучеников», глас 2. The second kontakion the page prints under the same title, and it too closes on his own name, so it is written on this folder and not on the other four.",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst appear as a most shining lamp to those who sat in the darkness of ignorance, O passion-bearer; for being armed with faith as with a spear, thou didst not fear the ragings of the enemy, O Eustratius, most eloquent of orators.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind and none of its other three calendars gives one. days.pravoslavie.ru closes the line for 13 декабря ст. ст. with «(284-305)», which is the reign of Diocletian and Maximian and not a year of death, so it is recorded as a traditional interval and not as attested."
+    }
   }
 }

@@ -1,0 +1,64 @@
+{
+  "slug": "basil-pokrovsky-13-december",
+  "display_name": "Basil (Pokrovsky, 13 December)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Покровский)",
+      "lang": "ru",
+      "note": "The calendar's own name page for him, which day-candidates.mjs prints as `name: Василий (Покровский), иерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns basil-pokrovsky, a different man — a presbyter of 1937 whom this calendar keeps on 3 ноября ст. ст. The two share the stored form exactly and the fold is deliberate; it is recorded in the gate."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "The year the day line closes with, «(1941)», which is the whole of what the source gives; no year of birth anywhere."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Сщмчч. Емилиана , Василия пресвитеров (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "note": "The day’s eleventh and last entry, and THE LINE AND THE NAME PAGE ARE ALL THERE IS: no life page stands behind it. The line says «пресвитеров» and the name page «иерей», priest, which agree. HE IS NOT `basil-pokrovsky`, WHICH ALREADY EXISTS: that folder is a presbyter of 1937 whom this same calendar keeps on 3 ноября ст. ст., and this one is a presbyter of 1941 kept on 13 декабря. The two death years and the two days are the source’s own and they differ; the stored `ru` form is the same string for both, because the calendar gives each the same forename and the same surname and no epithet to either, and that fold is recorded in `corpus-gate.mjs` rather than evaded by a form nobody printed. The slug and the display name carry the day for the same reason, as `nicholas-pokrovsky-27-november` already does. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» and «мч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. The day page carries troparia and kontakia for five of the memories it heads, and none under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 26 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 26 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 December 2026 (13 October 2026)."
+    }
+  ],
+  "related": [
+    "emilian-kireev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

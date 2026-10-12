@@ -1,0 +1,68 @@
+{
+  "slug": "vladimir-lozina-lozinsky",
+  "display_name": "Vladimir (Lozina-Lozinsky)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Владимир (Лозина-Лозинский)",
+      "lang": "ru",
+      "note": "The calendar's own name page for him, which day-candidates.mjs prints as `name: Владимир (Лозина-Лозинский), протоиерей, сщмч.`; the grade and the rank are stripped and the surname kept, the day line itself declining the bare forename only. `fk.mjs` on the stored string returns NONE."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1885,
+      "latest": 1885,
+      "display": "1885",
+      "basis": "attested",
+      "note": "The reading at /Life/life4790.htm: «родился 26 мая 1885 года в городе Духовщина Смоленской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day line closes «(1937)» and the reading at /Life/life4790.htm dates the shooting «13 (26) декабря того же года» — the Julian day with the civil one in parentheses, the year being 1937 either way. Only the year is recorded here; the source’s own pair is quoted in this note and not in the display."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 декабря ст. ст. — «Сщмчч. Владимира , Александра , Иакова , Алексия , Григория пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261213.html",
+        "year": 2026
+      },
+      "note": "The day’s ninth entry, a line of five presbyters of 1937, and the only one of the five with a reading behind it — `/Life/life4790.htm`, which is his alone. The line says «пресвитеров» and both the name page and the reading’s title say «протоиерей», archpriest, so the office is the source’s word and `presbyter` the line’s. The reading’s «Дни памяти» line gives three days — «26 января (Новомуч.)», the synaxis of the new martyrs, «8 июня (Петерб.)», the synaxis of the saints of St Petersburg, and «13 декабря» — of which only the last is a day of his own, and this folder renders on it. NO RELATED ROWS JOIN HIM TO THE OTHER FOUR OF THE LINE: the reading says he was shot at Novgorod by a troika of his own, and sharing a line is not a relation. `new-martyr` is written as this corpus writes it for this calendar’s twentieth-century «сщмч.» and «мч.» entries, and THE 26 ЯНВАРЯ SYNAXIS PAGE WAS NOT OPENED. No folder held him: a Cyrillic grep for «Лозина» over every `saint.json` returns nothing. The day page carries troparia and kontakia for five of the memories it heads, and none under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 26 decembrie (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 26 Δεκεμβρίου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 December 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
