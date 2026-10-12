@@ -18,13 +18,28 @@
       "form": "Ор Тиваидски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s second heading for the Julian 7 August, „Преп. Ор. Отшелник Тиваидски.“ — Преп. left off, which §5 maps to `venerable`, and Отшелник left off, which it maps to `hermit` and which is written into `types` by this reading. **Тиваидски is kept**: it is a toponym and not a rank, and it is the only thing left in the heading that distinguishes him. Without it the form would be a bare «Ор» of two letters, which is below the length at which the gate folds a form at all and which `usableName` would refuse; `.tmp/sr-foldpred.mjs` measured both and reports that the two-word form adds a key no other folder holds while the bare one adds no key at all. The heading’s Thebaid disagrees with the Nitria of this folder’s display name, which came from saint.gr; the disagreement is recorded in the row note and the display name is not touched."
+    },
+    {
+      "form": "Ор Фиваидский",
+      "lang": "ru",
+      "note": "Name page 1675 of days.pravoslavie.ru is «Ор Фиваидский, пустынник»; «пустынник», hermit, is a rank word and is stripped. The day line gives the genitive «Ора Фиваидского». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Прп. Ора Фиваидского (ок. 390).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's sixth entry and the same menologion day as the folder's Greek and Serbian rows; the «(ок. 390)» is the about-390 the folder already holds. THE EPITHET DISAGREES WITH THE SLUG AND IS NOT CHANGED: this calendar calls him Фиваидский, of the Thebaid, and the Serbian form the folder already stores agrees with it — «Ор Тиваидски» — while the slug and the display name say Nitria, which came off saint.gr. One man, two deserts named for him by different calendars; the display name is left alone and the disagreement recorded, a renaming being an author's and not a reader's. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",

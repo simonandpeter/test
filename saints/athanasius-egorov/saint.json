@@ -1,0 +1,61 @@
+{
+  "slug": "athanasius-egorov",
+  "display_name": "Athanasius (Egorov)",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Афанасий (Егоров)",
+      "lang": "ru",
+      "note": "Name page 9186 of days.pravoslavie.ru is «Афанасий (Егоров), игумен, сщмч.»; the grade and the rank are stripped and the surname kept, the day line giving only the bare genitive «Афанасия» after «прмч.». `fk.mjs` on the stored string returns NONE; `leo-egorov` and `tatiana-egorova` carry the same surname and different forenames."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The company's line closes «(1937)», which is the whole of what the source gives for him; no year of birth anywhere, and no life page behind his name."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Сщмчч. Александра, Петра, Михаила, Иоанна, Димитрия и Алексия пресвитеров, Елисея диакона и прмч. Афанасия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "Eighth and last of the names the day's fourteenth entry enumerates, and the only one the line gives its own rank: «прмч.», преподобномученик, venerable-martyr, where the other seven stand under the opening «Сщмчч.». TWO RANKS DISAGREE AND BOTH ARE RECORDED: the line says «прмч.» and name page 9186 says «сщмч.», and `venerable-martyr` is taken from the line, which is the entry that keeps him, with `abbot` from the page's «игумен». THE LINE AND THE NAME PAGE ARE ALL THERE IS: his name carries no life link. `ls -d saints/*egorov*` returned `leo-egorov` and `tatiana-egorova`, both different forenames. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 20 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 20 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

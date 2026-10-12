@@ -11,13 +11,28 @@
       "form": "Ποταμία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσια Ποταμία η Θαυματουργή», with the rank words and the epithets left off."
+    },
+    {
+      "form": "Потамия",
+      "lang": "ru",
+      "note": "Name page 2650 of days.pravoslavie.ru is «Потамия, прмц.»; the rank is stripped, and the calendar gives no surname and no epithet. The day line gives the genitive «Потамии». `fk.mjs` on the stored string returns NONE."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Прмц. Потамии чудотворицы (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The day's seventh entry and the same menologion day as the folder's Greek row, which is its only other venerated one. «Прмц.» is the `venerable-martyr` and «чудотворицы» the `wonderworker` the folder's `types` already carry. NO `dates` WERE WRITTEN: the line's «(IV)» is the fourth century and would be this folder's first date of any kind, and this wave has declined to write a first date off a bare Roman numeral on a line — the standing author question. The reading life4394 was not opened. The day page prints no hymn under her name."
     },
     {
       "church": "romanian",

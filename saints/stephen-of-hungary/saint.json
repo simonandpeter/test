@@ -10,13 +10,28 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Αυγούστου, «Άγιος Στέφανος Α' Βασιλεύς Ουγγαρίας», with the rank word, the regnal numeral and the title left off."
+    },
+    {
+      "form": "Стефан I Венгерский",
+      "lang": "ru",
+      "note": "Name page 14474 of days.pravoslavie.ru is «Стефан I Венгерский, король»; «король», king, is a rank word and is stripped, and the regnal number the page prints is part of the name and stays. The folder held no Cyrillic form at all. The day line gives the genitive «Стефана I, короля Венгрии». `fk.mjs` on the stored string returns NONE, and the bare «Стефан» — which sixty-odd folders could fold onto — was out of the question."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Свт. Иерофея Венгерского (X) и св. Стефана I, короля Венгрии (1038).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "The second of the two names in the day's ninth entry, and the folder that the day scan could not see: its Greek row reads 20 August revised-julian, which is this same Julian 7 August. He was found by `ls -d saints/stephen-of-hung*` among sixty-odd Stephens. «св.» and «короля» give the `king` the folder's `types` already carry. NO `dates` WERE WRITTEN: the line's «(1038)» would narrow the folder's early-eleventh-century floruit to a year of death, and that is a change to a dated reading made off a different source, which is an author's and not a reader's — the year is quoted in the source text and nowhere else. The day page prints no hymn under his name, and no life page stands behind it."
     },
     {
       "church": "romanian",

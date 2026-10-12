@@ -1,0 +1,61 @@
+{
+  "slug": "peter-tokarev",
+  "display_name": "Peter (Tokarev)",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Токарев)",
+      "lang": "ru",
+      "note": "Name page 9780 of days.pravoslavie.ru is «Петр (Токарев), иерей, сщмч.»; the grade and the rank are stripped and the surname kept, the day line giving only the bare genitive «Петра» inside a company of eight. `fk.mjs` on the stored string returns NONE — the eleven bare «Петр» folders are a fold this form stays clear of."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The company's line closes «(1937)», which is the whole of what the source gives for him; no year of birth anywhere, and no life page behind his name."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 августа ст. ст. — «Сщмчч. Александра, Петра, Михаила, Иоанна, Димитрия и Алексия пресвитеров, Елисея диакона и прмч. Афанасия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260807.html",
+        "year": 2026
+      },
+      "note": "Second of the eight names the day's fourteenth entry enumerates, and an enumerated company is one folder per member. THE LINE AND THE NAME PAGE ARE ALL THERE IS: his name carries no life link, where two of the eight do. The line's «пресвитеров» covers the first six and name page 9780 says «иерей», priest, so `presbyter` and the office `Priest` are the source's own words. `new-martyr` is written as this corpus writes it for this calendar's twentieth-century «сщмч.» entries. No folder held him: `ls -d saints/*tokarev*` was empty and a Cyrillic grep for «Токарев» over every `saint.json` returned only `porphyrius-gulevich`, whose prose carries the surname of another man. The day page prints no hymn under his name."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day, 20 august (13 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day, 20 Αυγούστου (13 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 August 2026 (13 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
