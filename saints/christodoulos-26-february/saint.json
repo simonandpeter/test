@@ -10,14 +10,31 @@
       "form": "Χριστόδουλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Άγιος Χριστόδουλος», with the rank word left off."
+    },
+    {
+      "form": "Христодул",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 26 февраля ст. ст., «Христодул, мч.», with the rank word left off. The calendar gives the name alone, with no surname and no epithet."
     }
   ],
-  "related": [],
+  "related": [
+    "sebastian-of-cartagena",
+    "photini-the-samaritan"
+  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Мч. Севастиана и Христодула (ок. 66) (Gr. Cal).»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 54,
+      "latest": 68,
+      "display": "in the reign of Nero (54–68)",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(ок. 66)» beside the two names for 26 февраля ст. ст., and its life gives the reign rather than a year: «Святые мученики Севастиан и Христодул скончались от меча при Нероне (54 - 68)». The reign is recorded, not the approximate year."
+    }
   }
 }

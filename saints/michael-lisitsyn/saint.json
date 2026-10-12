@@ -1,0 +1,60 @@
+{
+  "slug": "michael-lisitsyn",
+  "display_name": "Michael (Lisitsyn)",
+  "office": "Presbyter",
+  "names": [
+    {
+      "form": "Михаил (Лисицын)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 26 февраля ст. ст., which gives the calendar's own nominative «Михаил (Лисицын), пресвитер, сщмч.»; the rank word and the office are left off. The line on the day page itself gives only the forename, in the genitive, and no surname; the surname in brackets comes from the name link and is kept."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 26 февраля ст. ст.: «Сщмч. Михаила пресвитера (1918).». The calendar gives no other year and no life page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Сщмч. Михаила пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 March 2026 (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

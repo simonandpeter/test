@@ -17,6 +17,11 @@
       "form": "Порфирије",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 26. фебруар ст. ст., „Свети Порфирије, епископ гаски.“, with Свети, the rank word епископ and the see left off; the see is the folder's `office` and not part of the name."
+    },
+    {
+      "form": "Порфирий Газский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 26 февраля ст. ст., «Святитель Порфирий Газский, архиепископ», with the rank word and the office left off. The line on the day page itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Свт. Порфирия, архиеп. Газского (420).»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -100,7 +114,9 @@
   ],
   "related": [
     "john-chrysostom",
-    "augustine-of-hippo"
+    "augustine-of-hippo",
+    "macarius-the-egyptian",
+    "jerome-of-stridon"
   ],
   "hymns": [
     {
@@ -150,6 +166,38 @@
       },
       "english": {
         "text": "Adorned with your most holy ways, you were made splendid in the robe of the priesthood, all-blessed and godly-minded Porphyrius, and you are comely with powers of healing, interceding unceasingly for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Труды и болезни твоя, яже по благочестию,/ кто исповесть, отче?/ день бо и ночь не престал еси трудяся,/ дондеже от нечестия Газу очистив, благочестие насадил еси,/ тем яко всегда еси предстатель о стаде твоем,/ тако, святе Порфирие,/ моли Христа Бога да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Тропарь святителя Порфирия, архиепископа Газского»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Who shall tell out thy labours and thy pains for godliness, O father? For thou didst not cease from labour day or night until thou hadst cleansed Gaza of ungodliness and planted true religion in it. Therefore, as thou art always an intercessor for thy flock, so now, O holy Porphyrius, pray to Christ God to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Священнейшими твоими нравы украшаемь,/ священства одеждею озарился еси,/ всеблаженне Богомудре Порфирие,/ и исцелений удобряеши возвышеньми,/ моляся непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Кондак святителя Порфирия, архиепископа Газского»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned by thy most holy manner of life, thou wast made radiant in the vesture of the priesthood, O all-blessed and God-wise Porphyrius, and thou art made comely with the high gifts of healing, praying without ceasing for us all.",
         "rendered": "site"
       }
     }

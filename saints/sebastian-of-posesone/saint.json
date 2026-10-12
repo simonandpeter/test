@@ -10,14 +10,29 @@
       "form": "Σεβαστιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Όσιος Σεβαστιανός του Ποσεσόνε», with the rank word left off."
+    },
+    {
+      "form": "Севастиан Сохотский, Пошехонский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 26 февраля ст. ст., «Севастиан Сохотский, Пошехонский, прп.», with the rank word left off. Both epithets are the calendar's and are kept: the first from the river Sokhot, the second from Poshekhonye."
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life page behind the calendar's line heads «Дни памяти: 26 февраля, 23 мая (Ростов.), 18 декабря» — two further memories, one with the Rostov saints and one on 18 December, neither of which the day page for 26 февраля ст. ст. repeats. Recorded here as a note; no row is moved. The 18 December day is also where saint.gr's 26 February entry sends its reader. Read 3 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Прп. Севастиана Пошехонского (ок. 1500).»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,5 +62,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1500,
+      "latest": 1500,
+      "display": "about 1500",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(ок. 1500)» beside his name for 26 февраля ст. ст., and its life says «Преподобный Севастиан преставился около 1500 года»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Удалився мира и водворився в пустыни, добрым подвигом подвизася, злостраданием, и вниманием, и молитвами, отнюдуже и по смерти источаеши исцеления, Севастиане, отче наш, моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Тропарь преподобному Севастиану Пошехонскому»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Withdrawing from the world and making thy dwelling in the wilderness, thou didst contend with a good contending, in hard suffering, in watchfulness and in prayers; whence even after thy death thou pourest out healings, O Sebastian our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Сиянием Духа Пресвятаго, мудре Севастиане, просвещся, оставил еси яже в житии молвы, пустыню же достиг, преподобне отче, воз­веселил еси иже над всеми Бога и Зиждителя. Сего ради прославляет тя Христос, блаженне, Великий Дародатель.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 февраля ст. ст. — «Кондак преподобному Севастиану Пошехонскому»",
+        "url": "https://days.pravoslavie.ru/Days/20260226.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the shining of the Most Holy Spirit, O wise Sebastian, thou didst leave behind the clamour of this life, and reaching the wilderness, O venerable father, thou didst gladden God the Maker who is over all. Therefore Christ the great Giver of gifts glorifies thee, O blessed one.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
