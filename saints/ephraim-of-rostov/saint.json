@@ -37,12 +37,27 @@
         "url": "https://www.saint.gr/03/27/index.aspx",
         "year": 2026
       },
-      "note": "The page heads him «(; - 1454)». It says the Church honours his memory also on 23 May, «εορτή της Συνάξεως των Αγίων του Ροστώβ και Γιαροσλάβ», the Synaxis of the Saints of Rostov and Yaroslavl; one row per church is the schema, so that second day is recorded here and not as a second row. It places the Varnitsy monastery of the Trinity and St Sergius «στο Πσκωφ», at Pskov, which does not sit with the rest of its own sentence about the house of St Sergius's father; the reading is the page's and is left as it stands. No hymn is printed. saint.gr carries him a second time, on its 29 Μαρτίου day page and at https://www.saint.gr/1288/saint.aspx, with the same heading «(; - 1454)», the same consecration by Metropolitan Photius on 13 April 1427 and the same Varnitsy monastery, so it is one man on two of the calendar's days. That second page adds that he «κόσμησε τον αρχιερατικό θρόνο του Ροστώβ από το έτος 1427 μ.Χ. μέχρι το 1454 μ.Χ.» and that he was a friend and protector of monks and a co-helper of «του Αγίου Ασκητού Γρηγορίου της Πάλμα». One row per church is the schema, so this row records the 27 March page that was read first and the 29 March listing is noted here."
+      "note": "The page heads him «(; - 1454)». It says the Church honours his memory also on 23 May, «εορτή της Συνάξεως των Αγίων του Ροστώβ και Γιαροσλάβ», the Synaxis of the Saints of Rostov and Yaroslavl; that heading names nobody, and an unenumerated synaxis is a feast of the company and not a day the calendar keeps the man on, so it is recorded here and owed no row. It places the Varnitsy monastery of the Trinity and St Sergius «στο Πσκωφ», at Pskov, which does not sit with the rest of its own sentence about the house of St Sergius's father; the reading is the page's and is left as it stands. No hymn is printed. saint.gr carries him a second time, on its 29 Μαρτίου day page and at https://www.saint.gr/1288/saint.aspx, with the same heading «(; - 1454)», the same consecration by Metropolitan Photius on 13 April 1427 and the same Varnitsy monastery, so it is one man on two of the calendar's days. That second page adds that he «κόσμησε τον αρχιερατικό θρόνο του Ροστώβ από το έτος 1427 μ.Χ. μέχρι το 1454 μ.Χ.» and that he was a friend and protector of monks and a co-helper of «του Αγίου Ασκητού Γρηγορίου της Πάλμα». **The 29 Μαρτίου listing IS a day this calendar keeps him on and a second greek row now stands on it**: the day page prints «Άγιος Εφραίμ Αρχιεπίσκοπος Ροστώβ Ρωσίας», and its own entry https://www.saint.gr/1288/saint.aspx heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαρτίου εκάστου έτους» with the same «(; - 1454)» this row carries (read 14 October 2026). This row keeps the 27 March that was read first and was not moved."
     },
     {
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιος Εφραίμ Αρχιεπίσκοπος Ροστώβ Ρωσίας»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "A SECOND greek row, out of the withheld-second-day backlog of TODO item 19. The folder’s first greek row stands on 27 March and was not moved, altered or re-sourced. saint.gr keeps this man twice: id 1270 on 27 Μαρτίου as «Άγιος Εφραίμ Αρχιεπίσκοπος Ροστώβ της Ρωσίας» and id 1288 on 29 Μαρτίου as «Άγιος Εφραίμ Αρχιεπίσκοπος Ροστώβ Ρωσίας», both headed «(; - 1454)», both «Τύπος εορτής: Σταθερή», and the 1288 page carries the same consecration by Metropolitan Photius on 13 April 1427 and the same Varnitsy monastery. The earlier reader had already read 1288 and written the identification into the 27 March row’s note; what was missing was the row, withheld on the dead one-row-per-church rule. `dates` and `office` are untouched and no hymn is printed (read 14 October 2026)."
     }
   ],
   "dates": {

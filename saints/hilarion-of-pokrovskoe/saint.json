@@ -37,12 +37,27 @@
         "url": "https://www.saint.gr/03/28/index.aspx",
         "year": 2026
       },
-      "note": "The page gives one sentence: he practised ascesis in the monastery it calls «Ποκρόφσκοε Οζέρκσκοε» in Russia, was a disciple of the venerable Euphrosynus the Wonderworker, whose memory it puts on 15 May, and fell asleep in peace in 1476. It adds that his memory is repeated on 21 October; one row per church is the schema, so that second day is recorded here in the note and not as a second row. The monastery's name is known to this folder only in saint.gr's Greek spelling, and the English form of the epithet follows that spelling; no Russian source was read for it. The page prints no hymn, and the corpus holds no folder for his teacher, so the teacher is named without a link."
+      "note": "The page gives one sentence: he practised ascesis in the monastery it calls «Ποκρόφσκοε Οζέρκσκοε» in Russia, was a disciple of the venerable Euphrosynus the Wonderworker, whose memory it puts on 15 May, and fell asleep in peace in 1476. It adds that his memory is repeated on 21 October, **and that day IS one this calendar keeps him on, so a second greek row now stands on it**: the 21 Οκτωβρίου day page prints «Όσιος Ιλαρίων εκ Ρωσίας» as its own entry https://www.saint.gr/2640/saint.aspx, heading «Τύπος εορτής: Σταθερή» and carrying word for word the same one sentence as the 28 March entry — the monastery «Ποκρόφσκοε Οζέρκσκοε», the discipleship of Euphrosynus the Wonderworker and the repose in 1476 (read 14 October 2026). The monastery's name is known to this folder only in saint.gr's Greek spelling, and the English form of the epithet follows that spelling; no Russian source was read for it. The page prints no hymn, and the corpus holds no folder for his teacher, so the teacher is named without a link."
     },
     {
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Όσιος Ιλαρίων εκ Ρωσίας»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "A SECOND greek row, out of the withheld-second-day backlog of TODO item 19. The folder’s first greek row stands on 28 March and was not moved, altered or re-sourced. The two entries are adjacent ids, 2639 on 28 Μαρτίου and 2640 on 21 Οκτωβρίου, under the identical heading «Όσιος Ιλαρίων εκ Ρωσίας» and with the identical one-sentence notice, and the 28 March page says in so many words that his memory is repeated on 21 October, so the identity is the page’s own and not a reader’s (read 14 October 2026). The page prints no hymn and gives no further detail; `dates` are untouched."
     }
   ],
   "dates": {

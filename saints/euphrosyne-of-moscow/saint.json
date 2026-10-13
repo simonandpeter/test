@@ -37,7 +37,7 @@
         "url": "https://days.pravoslavie.ru/Days/20260517.html",
         "year": 2026
       },
-      "note": "**This day is her tonsure and not her death**, which the calendar itself says: «Постриг совершился 17 мая 1407 г. в деревянной церкви Вознесения», and she died on 7 июля of the same year. Her two life pages carry a «Дни памяти» line of three days, «17 мая , 19 мая , 7 июля»; one row per church is the schema and the day page that printed her is 17 мая, so the other two are recorded here and she does not render on them. The 7 июля is her repose; the calendar gives no reason for the 19 мая, and the corpus's own `demetrius-donskoi`, her husband, stands on the Greek 19 May for his own death on 19 May 1389, which is a resemblance and not a reading. **Two hymns were copied**, «Тропарь» (глас 8) and «Кондак» (глас 2), both headed «благоверной княгини Евдокии в инокинях Евфросинии» — by both her names. **The two readings disagree twice and neither was resolved**: the longer dates the marriage 18 January 1366 and the shorter says «с 1367 года»; the longer gives five sons and three daughters, the shorter five sons with a sixth dead in infancy. Both are in the life. `related` is empty: everyone the account names — her husband, the metropolitan, the two monastic elders who guided the household, her sons — is named in Cyrillic as the calendar names them, and no English form was written, so no row is owed and none was invented. azbyka.ru was not read."
+      "note": "**This day is her tonsure and not her death**, which the calendar itself says: «Постриг совершился 17 мая 1407 г. в деревянной церкви Вознесения», and she died on 7 июля of the same year. Her two life pages carry a «Дни памяти» line of three days, «17 мая , 19 мая , 7 июля», and **both of the other two are days of her own that the calendar keeps, so TWO FURTHER russian rows now stand on them**: the 19 мая day page prints «Блгвв. вел. кн. Димитрия Донского (1389) и вел. кн. Евдокии , в инокинях Евфросинии (1407)» and the 7 июля day page «Прп. Евфросинии, в миру Евдокии , кн. Московской (1407).», each with a link to her own name page (read 14 October 2026). This row, the 17 мая the day page printed her on first, was not moved. The 7 июля is her repose; the calendar gives no reason for the 19 мая, and the corpus's own `demetrius-donskoi`, her husband, stands on the Greek 19 May for his own death on 19 May 1389, which is a resemblance and not a reading. **Two hymns were copied**, «Тропарь» (глас 8) and «Кондак» (глас 2), both headed «благоверной княгини Евдокии в инокинях Евфросинии» — by both her names. **The two readings disagree twice and neither was resolved**: the longer dates the marriage 18 January 1366 and the shorter says «с 1367 года»; the longer gives five sons and three daughters, the shorter five sons with a sixth dead in infancy. Both are in the life. `related` is empty: everyone the account names — her husband, the metropolitan, the two monastic elders who guided the household, her sons — is named in Cyrillic as the calendar names them, and no English form was written, so no row is owed and none was invented. azbyka.ru was not read."
     },
     {
       "church": "romanian",
@@ -53,6 +53,36 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 May 2026 (8 October 2026)."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 мая ст. ст. — «Блгвв. вел. кн. Димитрия Донского (1389) и вел. кн. Евдокии , в инокинях Евфросинии (1407)»",
+        "url": "https://days.pravoslavie.ru/Days/20260519.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog of TODO item 19. The folder’s first russian row stands on 17 мая ст. ст., the day of her tonsure, and was not moved, altered or re-sourced. Her «Дни памяти» line names three days and this is the second of them; the day page prints her by both her names, in religion and in the world, beside her husband Димитрий Донской, and the calendar gives no reason for the day beyond printing it (read 14 October 2026). `dates` untouched. The day page prints no hymn under her name on this day."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 июля ст. ст. — «Прп. Евфросинии, в миру Евдокии , кн. Московской (1407).»",
+        "url": "https://days.pravoslavie.ru/Days/20260707.html",
+        "year": 2026
+      },
+      "note": "A THIRD russian row, out of the withheld-second-day backlog of TODO item 19. **This is her repose**, which the 17 мая row’s note already recorded off the calendar’s own words: she was tonsured on 17 мая 1407 and died on 7 июля of the same year. The first russian row was not moved, altered or re-sourced (read 14 October 2026). `dates` untouched."
     }
   ],
   "text": {
