@@ -622,3 +622,59 @@ distinguishing epithet and nothing more.
 
 Order to do it in: the nine merge sets first, because they change the corpus's
 shape, and the bare names after, because renaming is cheap and reversible.
+
+## 19. Seventy notes still give the dead rule as their reason
+
+**Found 14 October 2026** by the reader who closed the Synaxis of the Twelve,
+and it is the tail of the second-day ruling rather than a new question.
+
+Seventy attestation notes withhold a second day and give "one row per church is
+the schema" as the reason. That rule is dead (`BRIEF.md` §4, `row_add`,
+`attestationsIn` plural since 2026-10-03), so every one of those seventy
+sentences is a false claim sitting in the corpus — and CLAUDE.md's rule for a
+false claim is to **delete it, not annotate it**.
+
+Measure the three groups with:
+
+```
+python .tmp/ru-secondday.py
+```
+
+**Group one: 16 notes where no company is named.** These are a day of the
+saint's own, withheld for the dead reason alone, and each is owed a reading and
+probably a second row:
+
+```
+apollonia-of-alexandria greek      demetrius-of-moscow russian
+ephraim-of-rostov greek            eumenius-of-koudoumas greek
+euphrosyne-of-moscow russian       hilarion-of-pokrovskoe greek
+john-of-gothia russian             john-vladimir russian
+jonah-of-moscow greek              menander-the-soldier greek
+nicodemus-of-serbia russian        raphael-sheichenko russian
+rostislav-of-kyiv russian          simeon-of-dajbabe russian
+sophia-of-slutsk russian           theodota-with-her-three-sons greek
+```
+
+Not all of them will turn out to be owed one: `apollonia-of-alexandria`'s
+second day is the *Western* 9 February, which is no church of the four, and
+`menander-the-soldier`'s is a reading from the Lavriotic Codex rather than a day
+the calendar keeps. The point is that the reason on the row is wrong whatever
+the answer is.
+
+**Group two: 53 notes that also name a company or a moveable feast.** The
+withholding stands — «Собор новомучеников», «(Ростов.)», «(Печер.)» and the
+Paschal-cycle synaxes are commemorations of a company and not days of the man,
+which is the rule the Twelve and the Three Hierarchs were written on: *an
+enumerating synaxis is one row per member; a heading that names nobody is owed
+nothing.* What is wrong on these fifty-three is only the **stated reason**. Each
+needs its sentence replaced with the real one, which is cheap and scriptable
+because the wording is formulaic.
+
+**Group three: 42 notes that are fine.** They use the phrase to mean "that is
+another church's day, not a second of this one", which is still true. Leave
+them.
+
+The two that have been done can serve as the pattern: `john-chrysostom`'s
+13 ноября note had its withholding sentence **deleted and replaced** with the
+enumerating-synaxis rule in the same commit that gave him the 30 января row, and
+`michael-of-edessa` got his 29 июля row off the same reading.
