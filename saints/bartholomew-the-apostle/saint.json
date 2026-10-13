@@ -119,6 +119,36 @@
         "year": 2026
       },
       "note": "The Synaxis of the Twelve, and the heading enumerates all twelve by name, so it is one row for each of the twelve and not one entry for the company: his place in the line is «Варфоломея». This is a SECOND russian row and nothing was moved — the folder’s first russian row stands on the calendar’s own 25 августа ст. ст. and is untouched. The day is listed among HIS days by the calendar itself, which is the test this row rests on: his name page heads «Дни памяти: 22 апреля , 11 июня , 30 июня (12 ап.) , 25 августа (Перенесение мощей)» (https://days.pravoslavie.ru/Life/life1280.htm), and «30 июня (12 ап.)» is in it. The day page prints three hymns under the synaxis heading — a troparion глас 4 and two kontakia глас 2 — and they are the synaxis’s own, printed under no single apostle’s name; none was copied into any apostle’s folder."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Апп. Нафанаила, Луки и Климента (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 25 августа ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 22 апреля , 11 июня , 30 июня (12 ап.) , 25 августа (Перенесение мощей)» — and this day is in it; the day page for it prints a line for him, «Апп. Нафанаила, Луки и Климента (I).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/365.html, the same name page the folder’s existing row was read from. **The line does not print his name.** It names Нафанаил, and the identification is the calendar’s own and not the reader’s: the first name link behind the line is name page 365, titled «Апостол Варфоломей», so this source holds Nathanael and Bartholomew to be one man. The corpus also keeps a separate `nathanael` folder, which this row does not touch and which is a question for the author. The other two names on the line are `luke-the-evangelist` and `clement-apostle-of-sardis`, and the third of them gets its own row in this same batch."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 июня ст. ст. — «Апостолов Варфоломея и Варнавы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260611.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 25 августа ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 22 апреля , 11 июня , 30 июня (12 ап.) , 25 августа (Перенесение мощей)» — and this day is in it; the day page for it prints a line for him, «Апостолов Варфоломея и Варнавы (I).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/365.html, the same name page the folder’s existing row was read from. His PRINCIPAL feast, which the folder’s first russian row names in its own first sentence — “the translation of his relics; his principal feast is 11 June” — and which no russian row recorded until now. Two apostles named and enumerated, his place in the line being «Варфоломея» and the other `barnabas-the-apostle`. This is the third russian row on the folder and the first of the three that is a plain keeping of the man rather than a translation or a synaxis."
     }
   ],
   "text": {

@@ -58,6 +58,21 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Прмч. Адриана Пошехонского, Ярославского (1550).»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 19 ноября ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 5 марта , 23 мая (Ростов.) , 19 ноября» — and this day is in it; the day page for it prints a line for him, «Прмч. Адриана Пошехонского, Ярославского (1550).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/76.html, the same name page the folder’s existing row was read from. This is the day of his death, where the folder’s other russian row is the finding of his relics: the two lines part on the year as well, «(1550)» here against «(1625)» there, and `dates` was not touched. 23 мая stays a note and no row: «(Ростов.)» marks the synaxis of the saints of Rostov, a company he belongs to. The day page’s own link titles him «Священномученик» where its line abbreviates «Прмч.»; `types` was not changed on a disagreement inside one page."
     }
   ],
   "dates": {
