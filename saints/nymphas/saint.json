@@ -5,6 +5,15 @@
   "types": [
     "apostle"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page read for this folder gives a year. saint.gr’s line heads him and Euboulos «Ἄγιοι Νυμφᾶς καὶ Εὔβουλος οἱ Ἀπόστολοι» and the page makes them disciples of the Apostle Paul, who names Nymphas at Colossians 4:15. The corpus’s own form for a man of the apostolic generation is this century and nothing narrower — fifty-six folders typed `apostle` carry death 1st century, `aquila` among them off his day line’s bare «(I)». The century only."
+    }
+  },
   "names": [
     {
       "form": "Νυμφάς",

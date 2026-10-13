@@ -19,6 +19,15 @@
     "deacon",
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page read for this folder gives a year. His whole life is the Acts of the Apostles: the twelve chose him first of the seven over the daily service of the Church at Jerusalem, and he was stoned for his confession before the council. The corpus’s own form for a man of the apostolic generation is this century and nothing narrower — fifty-six folders typed `apostle` carry death 1st century, `aquila` among them off his day line’s bare «(I)». The century only."
+    }
+  },
   "related": [
     "jason-of-tarsus",
     "john-the-theologian",

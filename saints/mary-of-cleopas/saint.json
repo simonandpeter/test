@@ -14,6 +14,15 @@
     }
   ],
   "sex": "female",
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page read for this folder gives a year. The page makes her the mother of Joses and of the James «numbered among the twelve apostles and called the Less», to tell him from the brother of John. The corpus’s own form for a man of the apostolic generation is this century and nothing narrower — fifty-six folders typed `apostle` carry death 1st century, `aquila` among them off his day line’s bare «(I)». The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
