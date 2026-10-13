@@ -6,6 +6,15 @@
     "venerable",
     "monastic"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "inferred",
+      "note": "Inferred, not stated of her: the page says there is no synaxarion memoir for her and takes everything it has from the life of Febronia, where «at Nisibis of Mesopotamia, in the reign of Diocletian, there was a cenobitic convent of fifty nuns under the abbess Bryaine». She is the pagan noblewoman of that story, converted by Febronia and present at her passion, so she stands in that reign. The tenth-century Synaxarion of the Church of Constantinople named in the same life is the source and not her date."
+    }
+  },
   "names": [
     {
       "form": "Ιέρεια",

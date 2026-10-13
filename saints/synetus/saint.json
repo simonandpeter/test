@@ -22,6 +22,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded, and the century is taken rather than either reign, because this folder’s own note says the page’s two datings disagree: it puts his martyrdom «in the third century at Rome under Aurelian, whose reign was 270 to 275», and in the same breath makes him a reader appointed by Pope Xystus, who did not live that long. The third century holds both and chooses between neither."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

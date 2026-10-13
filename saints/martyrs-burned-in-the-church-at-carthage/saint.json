@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 474,
+      "latest": 491,
+      "display": "under Zeno",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and the refusal it reverses is this folder’s own: «the neighbouring entries of the same day put the Arian persecution at Carthage in the reign of Zeno, but this page does not say so and no year is recorded here». One persecution, one city, one day; the reign is taken and the year still is not."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

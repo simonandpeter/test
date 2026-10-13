@@ -5,6 +5,15 @@
   "types": [
     "confessor"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "Stated and never recorded, and the company already holds it. saint.gr gives the four of them one sentence, which this folder’s own life quotes: the confessors Agathon, Eutychia and Kasia «lived under the emperor Diocletian, whose reign it dates 284 to 305; they were arrested at Thessalonica in the year 304 and confessed Christ». `agathon-confessor-of-thessalonica` and `eutychia-confessor-of-thessalonica` carry floruit 304 off that same sentence; `floruit` and not `death` because the page makes them confessors and gives no death."
+    }
+  },
   "names": [
     {
       "form": "Φιλίππα",

@@ -13,6 +13,15 @@
     "stylite",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 717,
+      "latest": 741,
+      "display": "in the reign of Leo the Isaurian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life has him go with Theophilus to Nicaea «in the reign of Leo the Isaurian who made war on the holy icons» and be subjected there to many torments. The interval is the reign of the Leo the page names, 717–741; the page gives no year. A folder elsewhere in this corpus carries «under the emperor the page calls Leo the Isaurian» with 813–820, which is its own page’s naming of a later emperor and is not followed here."
+    }
+  },
   "related": [
     "theophilus-of-selention"
   ],

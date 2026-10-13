@@ -12,6 +12,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 311,
+      "display": "under Maximian",
+      "basis": "inferred",
+      "note": "Inferred, not stated of them: their own page is one sentence and gives no year, no city and no judge. This folder’s own life puts the occasion on the page of `philetairos`, through whom the seven believed — a man of Nicomedia whom Diocletian wanted in his retinue, imprisoned, «hunted under Maximian», and at last in the mountains about Sigriane. Philetairos carries death 311, so the interval runs from the start of Diocletian’s reign to his repose. The page calls them martyrs in its line and says they died in peace in its text; both are left as it has them and neither is read into a manner of death here."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
