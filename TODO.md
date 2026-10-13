@@ -686,16 +686,47 @@ membership changed and every Cyrillic row kept its reading.
   not write, are in `ro-run/FINDINGS.md` and in its hand-back. This is work for
   whoever has the gate open — and it belongs with item 17's pass.
 
-**The second half is untouched: 22 names over 52 folders**, the bare ancient
-ones — `Peter` ×5, `Philip` ×3, `John` ×3, `Alexander` ×3, `Basil` ×3,
-`Faustus` ×3. Nothing is duplicated there; the names are underdetermined, and
-the fix is the opposite one — give each the epithet that distinguishes it, as
-`BRIEF.md` §4 already requires of every new folder, with the see in `office`
-and the rank in `types`. Measure with:
+**The second half is done, 14 October 2026.** 46 folders took an epithet, six
+stayed bare, and **nothing in 6,799 folders shares a display name any more
+except the two Aglomazovo pairs**, which this item's own ruling leaves to the
+author.
 
-```
-node -e "const m=require('./data/manifest.json');const c={};for(const s of m)(c[s.display_name]??=[]).push(s.slug);for(const[k,v]of Object.entries(c))if(v.length>1)console.log(v.length,k,v.join(','))"
-```
+The epithet came from the folder's own record in the order `BRIEF.md` §4 sets:
+**29 from `office`, 7 from a place the life names, 10 from the recorded feast as
+`(D Month)`**. No companion was used, and the reason is worth keeping — in every
+candidate case the companion was himself one of the colliding bare names, so
+naming one after the other would have been circular.
+
+Six holders stay bare because the rule says so: Peter, Paul, Matthew and Philip
+the Apostles; Isaac the Forefather; and Andrew the Stratelates of 19 August,
+whom all four churches keep with a full life against a 31 August line whose own
+life declines the identification.
+
+The comma form mirrors the slug — `Paul, bishop of Nicaea` where the slug names
+the office, `Luke of Laodicea` where it names the place.
+`luke-apostle-of-laodicea` is deliberately NOT "Luke, apostle of Laodicea":
+`types: ["apostle"]` makes `rankLabel` print *Apostle* and the word may not
+appear twice, which is `tests/i18n.test.mjs`.
+
+**The seven place-epithets are the interpretive part** — `Matthew of Perm`,
+`Basil of Vertelim`, `Nicholas of Vlasyevo`, `Philip of Kirillov`, `Vladimir
+the Presbyter of Lepsinsk` and `of Moscow`, `Alexander of Sanaksar`. Each place
+is in its folder's own life, but **no calendar prints the man *as* "of that
+place"**; the association is the reader's, drawn from the record. The corpus
+also demonstrably uses a parenthesised surname for this family (`Nicholas
+(Rozov)`, `Luke (Voino-Yasenetsky)`) and every one of those lives gives the
+surname — a surname is not one of the four sources the brief enumerates, so it
+was not used, and if the author prefers it those are a one-line change each.
+
+**Sixteen fold keys moved** and every one is a bare-name key dissolving, because
+`nameKeys` folds the display name (`?` 358 → 346, `·` 960 → 952). Two changed
+membership instead and both were read: `isaac` is now the Genesis forefather and
+the Syrian of Nineveh, and `paul` the Apostle and the young man of the Nicomedia
+prison — verbatim what the dissolved key's own note already said.
+
+**The dead-key debt is now fourteen keys plus two readings owed**, all in
+`scripts/corpus-gate.mjs`, which neither half of this item could edit: the
+classifier refuses it as a shared resource. It belongs with item 17's pass.
 
 **One stray found in passing**: `nicholas-rozov-10-december` stores
 `"Nicholas (Rozov), 10 December"` — a comma where all 540 other day-epithets
