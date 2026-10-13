@@ -25,6 +25,15 @@
     "confessor",
     "abbot"
   ],
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(VIII)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -5,6 +5,15 @@
   "types": [
     "venerable-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 398,
+      "latest": 398,
+      "display": "c. 398",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 398)»."
+    }
+  },
   "names": [
     {
       "form": "Μύριοι",

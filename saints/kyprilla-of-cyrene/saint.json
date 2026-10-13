@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 310,
+      "latest": 310,
+      "display": "310",
+      "basis": "traditional",
+      "note": "Two martyrs on the line and a year each — «Мцц. Анны (ок. 304) и Кириллы (310).» The «(310)» is the one that follows her name, «Кириллы», which saint.gr prints as «Κυπρίλλα»; the «(ок. 304)» is Anna's."
+    }
+  },
   "names": [
     {
       "form": "Κυπρίλλα",

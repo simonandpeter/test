@@ -23,6 +23,15 @@
     "venerable",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 818,
+      "latest": 818,
+      "display": "818",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(818)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

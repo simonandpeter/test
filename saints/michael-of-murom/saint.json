@@ -6,6 +6,15 @@
     "prince",
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "The line gives the father a year and the two sons a century — «Блгв. кн. Константина (Ярослава) (1129) и чад его Михаила и Феодора , Муромских чудотворцев (XII).» The «(1129)» is Constantine's; the «(XII)» closes the clause that names Michael and Theodore."
+    }
+  },
   "names": [
     {
       "form": "Μιχαήλ",

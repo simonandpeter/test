@@ -12,6 +12,15 @@
   "types": [
     "venerable-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "This folder's russian row keeps the Julian 28 сентября, which is the finding of her relics, so the «(1918)» on that line is not a death year on its face. Its own life.md settles it off the calendar's other day: «Прмцц. вел. кн. Елисаветы и инокини Варвары (1918).» for 5 июля ст. ст., her repose."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
