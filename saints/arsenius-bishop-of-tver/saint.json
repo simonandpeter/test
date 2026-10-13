@@ -59,6 +59,21 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 июля ст. ст. — «Перенесение мощей свт. Арсения, еп. Тверского (1483).»",
+        "url": "https://days.pravoslavie.ru/Days/20260706.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 2 марта ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 2 марта , 6 июля» — and this day is in it; the day page for it prints a line for him, «Перенесение мощей свт. Арсения, еп. Тверского (1483).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/270.html, the same name page the folder’s existing row was read from. The translation of his relics in 1483, and it is written BECAUSE the source lists it among his own days: a «Перенесение мощей» the calendar does not so list stays a note, and this one it lists. The corpus writes such days already — `john-chrysostom`’s 27 января is the worked case and `bartholomew-the-apostle`’s first russian row is itself a translation. `dates` UNTOUCHED: 1483 is the year of the translation and 1409, the year the first row’s line gives, is the death the folder holds."
     }
   ],
   "dates": {

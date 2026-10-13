@@ -115,6 +115,21 @@
         "year": 2026
       },
       "note": "The day's second entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same man: an Egyptian of the city of Hermopolis and its chief man, hidden in a hut on a mountain, betrayed by a beggar he had fed, taken with six others and drowned in the Nile. The Prologue dates it 287, which falls inside the reign of Diocletian this folder already holds from doxologia; a sourced interval is not narrowed on a reading, so no date was touched. It prices the betrayal at two gold pieces, which neither other page does. The stored form is the bare forename: Свети мученик is the rank and the heading gives no city, so Hermopolis and the Egyptian by-name the Romanian and Greek forms carry are nowhere in it. The Prologue prints no troparion and no kontakion."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 марта ст. ст. — «Мч. Савина (287).»",
+        "url": "https://days.pravoslavie.ru/Days/20260313.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 16 марта ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 13 марта, 16 марта» — and this day is in it; the day page for it prints a line for him, «Мч. Савина (287).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/1910.html, the same name page the folder’s existing row was read from. The first row gave two reasons for standing on 16 марта — it is the Julian day this folder’s Serbian row uses, and it is the day whose page carries the kondak this folder holds — and both are still true of that row. Neither was ever a reason to leave this day unwritten. The 13 марта page prints NO hymn under his name, so no hymn was added; the year 287 is the one both lines close with."
     }
   ],
   "hymns": [

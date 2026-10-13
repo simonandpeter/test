@@ -82,6 +82,21 @@
         "year": 2026
       },
       "note": "The day's first entry, and the same menologion day the Romanian and the Greek already keep him on, so nothing moved. **THE ENTRY MAKES HIM THE BRIDEGROOM OF CANA, and no other book read for this folder does.** saint.gr says only that he came of Cana of Galilee; this book says the Lord Jesus came to his wedding with his Mother and the disciples, that when the wine ran out the Lord turned the water into wine, and that „Видећи ово чудо, Симон младожења остави кућу, и родитеље и невесту, па пође за Христом“ — seeing the wonder, Simon the bridegroom left house and parents and bride and went after Christ. **A DISAGREEMENT RECORDED AND NOT SETTLED**: this book sends him to preach „у Мавританију, у Африци“ and crucifies him there, where saint.gr has him in Persia, then in Africa from Egypt to Mauretania, and **last in Britain**, with the arrest and the cross there. Both readings stand in the life and neither was chosen. It also glosses the epithet — „Зилот значи ревнитељ“ — and gives the same reason for it the Greek gave, „због своје велике и огњене ревности према Спаситељу и Његовом Јеванђељу“, so that is corroboration and not news. **NO DATE**: the entry prints no year, so `dates` stays null. `types` untouched: Свети is no rank and апостол is the `apostle` the folder already carries. **No saint is named in the appended paragraph**: Christ and his Mother are outside this corpus, and the Prologue names nobody else. The Prologue prints no troparion and no kontakion."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июня ст. ст. — «Собор славных и всехвальных 12-ти апостолов: Петра, Андрея, брата его, Иакова Зеведеева, Иоанна, брата его, Филиппа, Варфоломея, Фомы, Матфея, Иакова Алфеева, Иуды Иаковля, или Фаддея, Симона Зилота и Матфия.»",
+        "url": "https://days.pravoslavie.ru/Days/20260630.html",
+        "year": 2026
+      },
+      "note": "The Synaxis of the Twelve, and the heading enumerates all twelve by name, so it is one row for each of the twelve and not one entry for the company: his place in the line is «Симона Зилота». This is a SECOND russian row and nothing was moved — the folder’s first russian row stands on the calendar’s own 10 мая ст. ст. and is untouched. The day is listed among HIS days by the calendar itself, which is the test this row rests on: his name page heads «Дни памяти: 10 мая , 30 июня (12 ап.)» (https://days.pravoslavie.ru/Life/life1029.htm), and «30 июня (12 ап.)» is in it. The day page prints three hymns under the synaxis heading — a troparion глас 4 and two kontakia глас 2 — and they are the synaxis’s own, printed under no single apostle’s name; none was copied into any apostle’s folder."
     }
   ],
   "hymns": [

@@ -79,6 +79,21 @@
         "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-23&prolog=1",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 апреля ст. ст. — «Апп. Нафанаила, Луки и Климента (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260422.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 10 сентября ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 4 января (70 ап.) , 22 апреля , 10 сентября» — and this day is in it; the day page for it prints a line for him, «Апп. Нафанаила, Луки и Климента (I).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/1254.html, the same name page the folder’s existing row was read from. His place in the line is «Климента», the third of three names, and the link behind it is name page 1254, «Климент, апостол от 70-ти, сщмч.», whose life is the same two-sentence notice this folder already stands on. The companions differ between his two days, which is why neither line is a repetition of the other. 4 января stays a note and no row: «(70 ап.)» is the synaxis of the Seventy, a company whose heading enumerates nobody."
     }
   ],
   "locations": [

@@ -52,6 +52,21 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 June 2026, the civil day of this Julian 23 May (8 October 2026)."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 июля ст. ст. — «Прмч. Михаила (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260729.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 23 мая ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 23 мая , 29 июля» — and this day is in it; the day page for it prints a line for him, «Прмч. Михаила (IX).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/1558.html, the same name page the folder’s existing row was read from. The name link settles the identity outright: the day page titles it «Преподобномученик Михаил Эдесский», read 14 October 2026, so the bare «Михаила (IX)» of this line is this folder’s man and not `michael-of-synada`. The shorter of his two readings says «Память его совершается также 23 мая», which makes THIS the day the calendar reckons his first and the existing row’s the second; neither was moved, because a row stands on the day page that was read for it. The century matches both lines."
     }
   ],
   "text": {

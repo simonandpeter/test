@@ -98,6 +98,21 @@
         "year": 2026
       },
       "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same bishop and confessor: the entry opens by saying that neither his birthplace nor the see he held is known, which is why both this folder's other rows print him with no see either. It adds the hunger, the prison and the mockery he bore from the iconoclasts. **One page disagreeing with itself, recorded and not resolved.** It names Copronymus as the emperor of the persecution and then closes „Живео и страдао у VII веку“ — lived and suffered in the seventh century, which the emperor it has just named rules out. This folder holds 740–775 from the other calendars, which is that emperor's reign; a sourced interval is neither narrowed nor widened on a reading, so nothing was touched, and the contradiction is recorded here. The stored form is the bare forename: Свети is not a rank, and епископ and исповедник are both ranks this folder's `types` carry. The Prologue prints no troparion and no kontakion; the two hymns here are the other calendars'."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 марта ст. ст. — «Прп. Иакова исп., еп (VIII-IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260324.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 21 марта ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 21 марта, 24 марта» — and this day is in it; the day page for it prints a line for him, «Прп. Иакова исп., еп (VIII-IX).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/874.html, the same name page the folder’s existing row was read from. The cleanest case in the backlog: the first row’s note already states that BOTH day pages print him behind the same name page 874, having corrected itself on 8 October 2026 after an earlier version claimed only one did. Nothing was left to check but the reading of that correction, and the row the note said the schema forbade is written here. The two lines differ only in the order of the two abbreviations."
     }
   ],
   "hymns": [

@@ -99,6 +99,36 @@
         "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-09&prolog=1",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июня ст. ст. — «Собор славных и всехвальных 12-ти апостолов: Петра, Андрея, брата его, Иакова Зеведеева, Иоанна, брата его, Филиппа, Варфоломея, Фомы, Матфея, Иакова Алфеева, Иуды Иаковля, или Фаддея, Симона Зилота и Матфия.»",
+        "url": "https://days.pravoslavie.ru/Days/20260630.html",
+        "year": 2026
+      },
+      "note": "The Synaxis of the Twelve, and the heading enumerates all twelve by name, so it is one row for each of the twelve and not one entry for the company: his place in the line is «Иоанна, брата его». This is a SECOND russian row and nothing was moved — the folder’s first russian row stands on the calendar’s own 26 сентября ст. ст. and is untouched. The day is listed among HIS days by the calendar itself, which is the test this row rests on: his name page heads «Дни памяти: 8 мая , 20 июня , 30 июня (12 ап.) , 26 сентября (Преставление)» (https://days.pravoslavie.ru/Life/life1608.htm), and «30 июня (12 ап.)» is in it. The day page prints three hymns under the synaxis heading — a troparion глас 4 and two kontakia глас 2 — and they are the synaxis’s own, printed under no single apostle’s name; none was copied into any apostle’s folder."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 мая ст. ст. — «Апостола и евангелиста Иоанна Богослова (98-117).»",
+        "url": "https://days.pravoslavie.ru/Days/20260508.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 26 сентября ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 8 мая , 20 июня , 30 июня (12 ап.) , 26 сентября (Преставление)» — and this day is in it; the day page for it prints a line for him, «Апостола и евангелиста Иоанна Богослова (98-117).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/962.html, the same name page the folder’s existing row was read from. The folder now carries three russian rows: 26 сентября, his falling-asleep; 30 июня, the Synaxis of the Twelve; and this 8 мая, the day the calendar heads a day page with him alone and dates «(98-117)», Trajan’s reign, which is not the folder’s own reading and left `dates` untouched. **THE FOURTH DAY IN HIS LIST IS NOT WRITTEN AND IS NOT A ROW**: the 20 июня day page prints Methodius of Patara, Gleb of Vladimir, the martyrs Inna, Pinna and Rimma and a translation of the relics of Gurias of Kazan — not one line under his name and not one name link to page 962. His list names the day and the day page does not keep him on it, which is the one case in this backlog where the two halves of the test disagree; it is reported and left as a note. `thomas-the-apostle` has the same unexplained 20 июня and `andrew-the-first-called` has it marked «(Перенесение мощей)», and the day page keeps neither of them either."
     }
   ],
   "locations": [
