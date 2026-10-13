@@ -1,4 +1,4 @@
-# Stephen
+# Stephen of Zilantov
 
 In 1917 nine monks and novices lived at the Zilantov monastery on the edge
 of Kazan under the care of the archimandrite Sergius (Zaitsev). When in

@@ -1,4 +1,4 @@
-# Stephen
+# Stephen (4 September)
 
 Stephen — Stepan Ivanovich Kuskov in the world — was born on 10 December
 1870 in the town of Vyshny Volochyok in Tver province, the son of the owner

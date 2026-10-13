@@ -1,4 +1,4 @@
-# Philip
+# Philip of Kirillov
 
 Philip Maryshev — Marychev in the Sretensky calendar’s spelling — is the one
 of the four laymen of whom the life records nothing but his name and his

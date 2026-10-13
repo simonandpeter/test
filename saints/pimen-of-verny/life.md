@@ -1,4 +1,4 @@
-# Pimen
+# Pimen of Verny
 
 Pimen — Peter Zakharyevich Belolikov in the world — bishop of Semirechye and
 Verny, was born on 5 November 1879 in the village of Vasilyevskoye in the
