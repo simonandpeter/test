@@ -123,6 +123,44 @@
         "year": 2025
       },
       "note": "The day’s first entry and the fullest on the page. `dates` UNTOUCHED AND THIS IS WORTH STATING: the entry gives «Рођен у Антиохији 354. год.» where this folder holds «c. 347» for the birth off its other sources, and the two are SEVEN YEARS APART. The birth is not widened to hold both, because this folder’s own interval is already an approximation and the brief’s instruction on two readings is to record the disagreement — IT IS RECORDED HERE AND IN THE LIFE, which prints the book’s 354, AND THE AUTHOR MAY WANT THE INTERVAL WIDENED. The death the entry gives, «на Крстов дан 14. септембра 407. год.», is exactly the day and year the folder already records. ONE NAME THE LIFE DOES NOT PRINT, and it is the day’s near miss: the entry names the patriarch who ordained him priest as Flavian, the successor of Meletius, and THE CORPUS’S `flavian-of-antioch` IS A DIFFERENT MAN — a patriarch of Antioch whose folder records his death in 518, which cannot be the man who ordained a priest before 400. The life therefore says “the patriarch who had succeeded Meletius” and names nobody, and no `related` row was written. The two saints the life does name, his mother and Meletius, were already related in both directions. THE APOSTLES who appeared to him twice, and the martyr in whose church he received his last communion, are left unnamed for the same reason: this corpus keeps more than one folder under each of those names and the entry gives nothing to choose between them."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "titles": [
+        "Hierarch",
+        "Archbishop of Constantinople"
+      ],
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 сентября ст. ст. — «Преставление свт. Иоанна Златоуста (407).»",
+        "url": "https://days.pravoslavie.ru/Days/20260914.html",
+        "year": 2026
+      },
+      "note": "His falling-asleep, the day and the year this folder's `dates` already record. He is the only person the day names: its first line is the Exaltation of the Cross and its third the Леснинская icon. A second row for one church is the shape `attestationsIn` in src/lib/church.js was made plural for on 3 October 2026 and the shape seventeen folders already carry, this one among them. The troparion and kondak the page prints under his name are texts this folder already holds — the troparion is the 27 января one, differing only in the punctuation of one clause, and the kondak глас 6 is word for word the 13 ноября one — so nothing was added."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "titles": [
+        "Hierarch",
+        "Archbishop of Constantinople"
+      ],
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 января ст. ст. — «Перенесение мощей свт. Иоанна Златоуста (438).»",
+        "url": "https://days.pravoslavie.ru/Days/20260127.html",
+        "year": 2026
+      },
+      "note": "The translation of his relics in 438, and the only line the day prints. A translation is a feast rather than a death, and the corpus already carries about twenty russian rows whose cited line is a translation or finding of relics, so the day is recorded as the calendar keeps it. The two hymns the page prints are already in this folder's `hymns` and cite it: «Уст твоих, якоже светлость огня возсиявши» and the kontakion of the translation, «возвращением честных твоих мощей»."
     }
   ],
   "locations": [
