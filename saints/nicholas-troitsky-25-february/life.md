@@ -1,4 +1,4 @@
-# Nicholas (Troitsky)
+# Nicholas (Troitsky) (25 February)
 
 The Russian church calendar of the Сретенский monastery names him for 25 февраля ст. ст. in five words — «Сщмч. Николая пресвитера (1945).» — a hieromartyr, a presbyter, who died in 1945. The name link behind the line carries the calendar's own nominative with the surname the line leaves out, and gives him a rank the line does not: «Николай (Троицкий), протоиерей, сщмч.», an archpriest of that name, one of the new martyrs of the Russian church in the Soviet years.
 
