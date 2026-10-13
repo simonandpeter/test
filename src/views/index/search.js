@@ -85,10 +85,83 @@ export async function loadSearch(cards, { onChange: update }) {
    * days (2026-10-03, TODO item 1) would otherwise weight this field twice
    * against every other, and the index is scored on what it holds.
    */
-  index.addAll(cards.map(searchDoc));
+  await addInSlices(index, cards);
   if (!state || state.cards !== cards) return;
   state.search = index;
   if (state.filters.query.trim()) update({ animate: true });
+}
+
+/**
+ * How many saints one idle slice indexes.
+ *
+ * **Measured, not chosen by analogy with `IDLE_CHUNK` in
+ * `views/index/grid.js`.** The wall clock below cannot interrupt a chunk, only
+ * decline to start another, so the chunk *is* the floor on how long one slice
+ * blocks: at 250 the slices came back as 50-86 ms tasks at 4x CPU, which is
+ * five frames each and still visible in a scroll. 80 puts a slice inside a
+ * frame's worth of work on that machine while leaving the clock something to
+ * aggregate where the machine is quicker than that.
+ */
+const INDEX_CHUNK = 80;
+
+/**
+ * The index, built in idle slices — the grid's `packGrid` and the carousel's
+ * `packRest`, applied to the one piece of the boot that was still done in a
+ * single pass.
+ *
+ * **It was one `addAll` of the whole corpus, and it landed on the frame after
+ * the first card** — so the advanced search page appeared and then ignored the
+ * reader, which is the half of "it takes a while to load" that was not the
+ * download. The size of that task is in `e2e/index-grid.spec.js`'s *the search
+ * index arrives in slices*, which is what holds it down;
+ * `scratchpad/adv-mobile.mjs` is the instrument that found it. The corpus is
+ * twice what this was written for and the task grows with it.
+ *
+ * The slice is held to **8 ms of wall clock**, not to the deadline's own
+ * `timeRemaining` — `packGrid`'s comment has the reason, and it is the same
+ * one: a slice that spends a 50 ms grant is a 50 ms task, and what is being
+ * protected here is the scroll of the grid the reader is now looking at.
+ *
+ * `timeout` on the idle request is the other half. A boot that never goes
+ * idle would otherwise never index, and a reader who types is owed an answer
+ * eventually rather than only on a quiet main thread.
+ *
+ * **Nothing is searchable until all of it is.** `state.search` is assigned by
+ * the caller, after this resolves, so a query can never meet a half-built
+ * index and answer with the prefix of the corpus that happened to have
+ * landed — the honest degradation while it builds is the one the page already
+ * had: the filters work, the query does not, and it applies the moment the
+ * index is whole.
+ *
+ * Resolves early and leaves the index unfinished if the page has gone or its
+ * corpus changed under us; the caller's own guard then drops it on the floor.
+ */
+function addInSlices(index, cards) {
+  const idle =
+    typeof window.requestIdleCallback === 'function'
+      ? window.requestIdleCallback
+      : /*
+         * **A frame, where `packGrid` waits 200 ms.** Safari has never shipped
+         * `requestIdleCallback` and the stand-in is what decides how long the
+         * whole build takes there: the grid can afford 200 ms a slice because
+         * it is placing cards nobody has scrolled to yet, and this cannot,
+         * because until the last slice is in there is no search at all.
+         */
+        (fn) => setTimeout(fn, 16);
+  return new Promise((resolve) => {
+    let from = 0;
+    const step = () => {
+      if (!state || state.cards !== cards) return resolve();
+      const spent = performance.now();
+      do {
+        index.addAll(cards.slice(from, from + INDEX_CHUNK).map(searchDoc));
+        from += INDEX_CHUNK;
+      } while (from < cards.length && performance.now() - spent < 8);
+      if (from >= cards.length) return resolve();
+      idle(step, { timeout: 500 });
+    };
+    idle(step, { timeout: 500 });
+  });
 }
 
 /**
