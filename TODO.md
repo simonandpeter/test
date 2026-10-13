@@ -477,3 +477,42 @@ the same evidence as any other, and the expectation is that it will be rare.
 Not to be confused with how the date is *shown*: the phone's register prints no
 date at all now (item 15's commit), which is a display decision and does not
 reduce what the corpus should record.
+
+## 17. The 1,294 superseded fold keys
+
+**Scheduled by the author, 13 October 2026** ("schedule a pass over dead fold
+keys"), after the count came out of a session that kept tripping over them.
+
+`READ_FOLDS` in `scripts/corpus-gate.mjs` keys a reading by form plus the
+sorted slug list, on one line, and `foldKey` joins them with a space:
+
+```js
+const foldKey = (key, slugs) => [key, ...[...slugs].sort()].join(' ');
+```
+
+Lookup is exact. So when a collision widens — a third saint arrives under a
+name two already shared — the old two-slug key stops matching anything and the
+row goes **unread**, printing `?`. That is the safe direction: a stale narrower
+key cannot pass a wider row. Nothing is broken, and that is why this is a
+tidying item and not a defect.
+
+**The size of it: 1,294 of 2,311 keys match no live collision.** They are not
+junk — each one is a reading somebody made and wrote down — so the pass is not
+`grep -v` over the file. Two things have to come out of it:
+
+- Which superseded keys are *subsets* of a live key. Those readings belong to
+  the live row and should be carried forward into it, by hand, the way a
+  widened key's narrower entry has been handled all along.
+- Which match nothing at all any more, because a folder was renamed or merged
+  away. Those can go, and the count of them is worth printing: a surprising
+  number would mean slugs are moving more than anyone thinks.
+
+**Measure before editing.** The gate prints `GATE GREEN` while still showing
+unread folds, so the only honest before/after number is the `?` count by
+codepoint — `grep -E "[·?]"` is a byte class and misses the multibyte `·`:
+
+```
+python -c "import io;s=io.open('g.txt',encoding='utf-8').read();print(s.count(u'?'),s.count(u'\u00b7'))"
+```
+
+It stood at **360 unread on 13 October 2026** with the corpus at 6,799 folders.
