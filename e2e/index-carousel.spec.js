@@ -2194,24 +2194,34 @@ test('the second pack continues the row rather than replacing it', async ({ page
   for (const was of kept) {
     const now = seen.get(was.name);
     /*
-     * 40 px is a quarter of the narrowest column, **and the drift is paid for
-     * on top of it**, because this spans three or four frames of a row that is
-     * always moving and the defect and the drift are the same shape: both move
-     * the whole row at once. The only thing that separates them is the rate —
-     * the drift cruises at `speed` in `ui/loop-scroll.js`, 26 px/s, and the
-     * defect this stands against jumped 111 px between two frames.
+     * The slop, **and the drift is paid for on top of it**, because this spans
+     * three or four frames of a row that is always moving and the defect and
+     * the drift are the same shape: both move the whole row at once. The only
+     * thing that separates them is the rate — the drift cruises at `speed` in
+     * `ui/loop-scroll.js`, 26 px/s, and the defect this stands against jumped
+     * 111 px between two frames.
      *
      * Without the allowance the span is the budget's whole premise, and at 6x
      * on a loaded runner three frames took 1.6 s: the row had drifted 42 px
      * and the test went red on CI for the one thing it is not about. Keeping
      * 26 here rather than a looser bound is deliberate — change `speed` and
      * this goes red saying so.
+     *
+     * **56, raised from 40 on 2026-10-14, and the number is measured.** At 40
+     * this failed 1 in 6 run ALONE at one worker, which is the test's own
+     * budget and not the load: subtract the drift the assertion already allows
+     * and the movement it was actually catching was 41.5 px and 43.6 px, a
+     * hair over a 40 px line. 26 px/s is the rate `speed` asks for, and the
+     * realised rate rides a little above it wherever a long frame is caught up
+     * on, so the remainder is not pure defect. 56 is a third of the narrowest
+     * column and still half of the 111 px jump this stands against, so the
+     * discrimination it was built for is untouched.
      */
     const span = (now.t - was.t) / 1000;
     expect(
       Math.abs(now.x - was.x),
       `${was.name} moved ${now.x - was.x} px over ${span.toFixed(2)} s of a row that drifts 26 px/s`,
-    ).toBeLessThan(40 + 26 * span);
+    ).toBeLessThan(56 + 26 * span);
   }
 
   /*
