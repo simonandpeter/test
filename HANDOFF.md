@@ -38,23 +38,51 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**Three agents are out, 13 October 2026, and this block is what a compacted
-turn needs.** They commit on their own branches and the writer merges, verifies
-and pushes; none of them pushes.
+**Two agents are out, 14 October 2026, and this block is what a compacted turn
+needs.** They commit on their own branches and the writer merges, verifies and
+pushes; none of them pushes.
 
-1. **Progressive loading for the advanced search page on mobile** (the author:
-   "it still takes a while to load ... It should progressively load more entries
-   as you scroll, not all at once"). Briefed to measure first — the manifest is
-   4.9 MB raw and 588 KB gzipped, and "slow" could be the download, the parse,
-   the index build over 6,799 records or the DOM insertion, and only the last is
-   fixed by loading on scroll — and to reuse the windowing the codebase already
-   has rather than write a second one.
-2. **The Russian second-day wave**: Julian 06-30 first, the synaxis of the
+1. **The Russian second-day wave**: Julian 06-30 first, the synaxis of the
    Twelve and the last readable empty day, then the withheld backlog, which it
-   was told to measure for itself before grinding rather than trust the figure
-   of ~25.
-3. **TODO item 3, the lonely date-tags**, off
-   `../ro-run/reports/ITEM-3-date-tags.md`, one fetch per candidate.
+   was told to measure for itself rather than trust a figure of ~25.
+2. **TODO 18's nine merge sets** — 21 folders in surname-plus-day pairs that are
+   probably one man each, recorded twice because the dead one-row rule left a
+   reader no way to write a second day. It was told to settle each by the
+   calendar's own «Дни памяти» page and warned that at least one set really is
+   two men.
+
+**Mobile search is merged, and the author's literal ask was already built.** The
+report was that the advanced search page takes a while to load on a phone. The
+reader measured it at 360 px on the Lighthouse floor's own line rather than
+guessing: of 6.2 s to a usable card, **3.5 s is the manifest download** and
+**1.6 s was a single `addAll` of 6,799 search docs that landed on the frame
+after the first card** — so the page appeared and then ignored the reader. The
+DOM was never it (twelve cards are mounted of 6,799) and the layout has been
+chunked since 2026-10-02, so progressive loading already existed; the index was
+the one piece of the boot still done in one pass. It is sliced now the way
+`packGrid` and `packRest` slice, 80 saints against 8 ms of wall clock. Longest
+task after the first card **1,598 ms → 0**, first usable card **8,309 →
+6,164 ms**, because a blocked main thread paints nothing. `state.search` is
+still assigned only when the index is whole, so a query cannot meet a prefix of
+the corpus.
+
+**The back-out was watched here, not taken on the reader's word**: with
+`src/views/index/search.js` reverted the new test fails at 1,106 ms against its
+500 ms cliff, and passes on both projects with the change in.
+
+**What is left of that page is bytes, and it is a session of its own.**
+`attestations.feast` is 158 KB gzipped of the manifest's 597, and
+`build-manifest.mjs` already prints "over budget: consider sharding by century".
+A `rel=preload` on the manifest was measured and dropped — the pipe is saturated
+and the gap is 68 ms, so it would trade FCP for nothing.
+
+**TODO 3 is done, and the list that measured it over-counted by thirty.**
+21 date-tags dropped, each read off the day page its own row cites; 30 were
+never lonely (14 of them plain prefix matches the measuring instrument should
+have returned, and why it missed them is unexplained); 7 collectives were never
+candidates. The item is rewritten with both findings it turned up — the
+latinisation splits («Ιουβενάλιος» as both Juvenal and Juvenalius, four more
+like it) and `asterios-7-august`, which may hold two men on one day.
 
 **Six open readings came back and are merged** — `barses-of-damascus` is one
 man with the Greek Barsos of the same see and rank and now holds a venerated
