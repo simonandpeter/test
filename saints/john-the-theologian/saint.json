@@ -99,6 +99,21 @@
         "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-09&prolog=1",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июня ст. ст. — «Собор славных и всехвальных 12-ти апостолов: Петра, Андрея, брата его, Иакова Зеведеева, Иоанна, брата его, Филиппа, Варфоломея, Фомы, Матфея, Иакова Алфеева, Иуды Иаковля, или Фаддея, Симона Зилота и Матфия.»",
+        "url": "https://days.pravoslavie.ru/Days/20260630.html",
+        "year": 2026
+      },
+      "note": "The Synaxis of the Twelve, and the heading enumerates all twelve by name, so it is one row for each of the twelve and not one entry for the company: his place in the line is «Иоанна, брата его». This is a SECOND russian row and nothing was moved — the folder’s first russian row stands on the calendar’s own 26 сентября ст. ст. and is untouched. The day is listed among HIS days by the calendar itself, which is the test this row rests on: his name page heads «Дни памяти: 8 мая , 20 июня , 30 июня (12 ап.) , 26 сентября (Преставление)» (https://days.pravoslavie.ru/Life/life1608.htm), and «30 июня (12 ап.)» is in it. The day page prints three hymns under the synaxis heading — a troparion глас 4 and two kontakia глас 2 — and they are the synaxis’s own, printed under no single apostle’s name; none was copied into any apostle’s folder."
     }
   ],
   "locations": [

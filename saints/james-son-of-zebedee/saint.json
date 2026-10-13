@@ -92,6 +92,21 @@
         "year": 2026
       },
       "note": "**The day is Julian 30 April, the same menologion day the Romanian and the Greek calendars keep him on**, so nothing moved and no second-day note is owed. This is the third account read for this folder, and it is the one that **supplies what the Romanian life elided**: that life has the contest with the hired sorcerer „fill the middle“ and does not say how it ended, where this book does — „Но и Хермоген, и Филип, ученик Хермогенов, бише побеђени силом истине, коју Јаков проповедаше, и обојица се крстише“, the magician and his disciple both overcome by the power of the truth James preached, and both baptized. **A year widened and neither reading chosen**: „Пострада Јаков свети 45. год. у Јерусалиму“ against saint.gr's «το έτος 44 μ.Χ.» and its heading «(; - 44)», so `death` is now 44–45 and reads „44 or 45“. This book is also the first of the three to name **Jerusalem** as the place of the martyrdom; no `locations` were taken for it, because the folder has none and a located saint brings `map-span.test.mjs` into play. **The refusal of the day is in this entry**: Јосија, the suborned slanderer who repented and was beheaded with him, took no folder — the reasons are in the batch's commit message. The Prologue prints no troparion and no kontakion, so this folder gains no hymn from it."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июня ст. ст. — «Собор славных и всехвальных 12-ти апостолов: Петра, Андрея, брата его, Иакова Зеведеева, Иоанна, брата его, Филиппа, Варфоломея, Фомы, Матфея, Иакова Алфеева, Иуды Иаковля, или Фаддея, Симона Зилота и Матфия.»",
+        "url": "https://days.pravoslavie.ru/Days/20260630.html",
+        "year": 2026
+      },
+      "note": "The Synaxis of the Twelve, and the heading enumerates all twelve by name, so it is one row for each of the twelve and not one entry for the company: his place in the line is «Иакова Зеведеева». This is a SECOND russian row and nothing was moved — the folder’s first russian row stands on the calendar’s own 30 апреля ст. ст. and is untouched. The day is listed among HIS days by the calendar itself, which is the test this row rests on: his name page heads «Дни памяти: 30 апреля , 30 июня (12 ап.)» (https://days.pravoslavie.ru/Life/life6593.htm), and «30 июня (12 ап.)» is in it. The day page prints three hymns under the synaxis heading — a troparion глас 4 and two kontakia глас 2 — and they are the synaxis’s own, printed under no single apostle’s name; none was copied into any apostle’s folder."
     }
   ],
   "text": {

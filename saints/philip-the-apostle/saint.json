@@ -117,6 +117,21 @@
         "year": 2025
       },
       "note": "The day’s first entry. `dates` UNTOUCHED: «Пострада овај дивни апостол 86. године у време цара Дометијана» falls inside the «about 81–96» this folder already holds, which is Domitian’s reign, so a year inside an interval narrows nothing. ONE `related` ROW ADDED, forward: the entry puts him at Hierapolis at the common work of the Gospel with John the Theologian, his sister and Bartholomew — a company this folder related to in part and not at all to the first of them — so the life links him and the row is owed. WHAT THE ENTRY ADDS: Bethsaida, the high priest struck blind and black, two earthquakes that swallow his persecutors, the serpent the heathen fed and worshipped, the upside-down crucifixion on a tree, Bartholomew taken down alive and himself already dead, the relics carried to Rome, AND A MAN THIS READER DID NOT IDENTIFY: the bishop Bartholomew set over the baptised, whom the two apostles had healed of forty years’ blindness, is named in the book, and the corpus keeps a `stachys-of-byzantium` of that name whose dossier is the first bishop of Byzantium. NOTHING WAS LINKED AND NO ROW WAS WRITTEN: the entry makes him bishop of the baptised at Hierapolis in Phrygia and nothing read joins the two accounts. The life tells him without his name, and it is a question for the author."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июня ст. ст. — «Собор славных и всехвальных 12-ти апостолов: Петра, Андрея, брата его, Иакова Зеведеева, Иоанна, брата его, Филиппа, Варфоломея, Фомы, Матфея, Иакова Алфеева, Иуды Иаковля, или Фаддея, Симона Зилота и Матфия.»",
+        "url": "https://days.pravoslavie.ru/Days/20260630.html",
+        "year": 2026
+      },
+      "note": "The Synaxis of the Twelve, and the heading enumerates all twelve by name, so it is one row for each of the twelve and not one entry for the company: his place in the line is «Филиппа». This is a SECOND russian row and nothing was moved — the folder’s first russian row stands on the calendar’s own 14 ноября ст. ст. and is untouched. The day is listed among HIS days by the calendar itself, which is the test this row rests on: his name page heads «Дни памяти: 30 июня (12 ап.) , 14 ноября» (https://days.pravoslavie.ru/Life/life2535.htm), and «30 июня (12 ап.)» is in it. The day page prints three hymns under the synaxis heading — a troparion глас 4 and two kontakia глас 2 — and they are the synaxis’s own, printed under no single apostle’s name; none was copied into any apostle’s folder."
     }
   ],
   "hymns": [
