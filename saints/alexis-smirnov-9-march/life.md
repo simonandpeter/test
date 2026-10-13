@@ -1,4 +1,4 @@
-# Alexis (Smirnov)
+# Alexis (Smirnov) (9 March)
 
 The Православный церковный календарь of the Сретенский monastery names him in a single line for 9 марта ст. ст., one line for nine persons: «Сщмчч. Михаила, Алексия, Димитрия, Сергия, Сергия пресвитеров и Николая диакона, прмч. Иоасафа и прмцц. Наталии и Александры (1938).» The line declines the forename to «Алексия» and gives no surname, no place, no year of birth and no word of narrative; the year it closes with, 1938, is the only year it gives, and the rank word «Сщмчч.» that governs his name is the only rank.
 
