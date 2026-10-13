@@ -6,6 +6,15 @@
     "martyr",
     "presbyter"
   ],
+  "dates": {
+    "death": {
+      "earliest": 100,
+      "latest": 100,
+      "display": "c. 100",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 100)»."
+    }
+  },
   "names": [
     {
       "form": "Πολύαινος",
