@@ -460,8 +460,12 @@ new one is better for every face it has to fill.
 2026-10-03: "there is always some marker at least a century that can be
 listed"). It is written down now.
 
-`dates` is `null` outright for **2,021 of 5,231 folders — 38.6%**. Not vague,
-not approximate: absent. Apostle Ananias, Mirian and Nana of Georgia and Joseph
+`dates` is `null` outright for **1,415 of 6,799 folders — 20.8%**
+(re-measured 13 October 2026; it was 2,021 of 5,231, 38.6%, when this item was
+written). The absolute count fell by 606 while the corpus grew by 1,568, so the
+reading waves are filling dates faster than they add undated folders — but a
+fifth of the corpus still says nothing. Of those that do: 4,971 carry a `death`,
+1,229 a `birth`, 438 a `floruit`. Not vague, not approximate: absent. Apostle Ananias, Mirian and Nana of Georgia and Joseph
 of Bisericani all sit on 1 October with nothing, and the first three are placed
 to a century by any source that mentions them. The register printed "Undated"
 over them, which is a statement about this corpus rather than about the saint.
