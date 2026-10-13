@@ -38,18 +38,37 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**Two agents are out, 14 October 2026, and this block is what a compacted turn
-needs.** They commit on their own branches and the writer merges, verifies and
-pushes; none of them pushes.
+**No agent is out, 14 October 2026.** Everything the four readers of this
+sitting carried is merged, verified against the corpus rather than its own
+report, and pushed green.
 
-1. **The Russian second-day wave**: Julian 06-30 first, the synaxis of the
-   Twelve and the last readable empty day, then the withheld backlog, which it
-   was told to measure for itself rather than trust a figure of ~25.
-2. **TODO 18's nine merge sets** — 21 folders in surname-plus-day pairs that are
-   probably one man each, recorded twice because the dead one-row rule left a
-   reader no way to write a second day. It was told to settle each by the
-   calendar's own «Дни памяти» page and warned that at least one set really is
-   two men.
+**One thing was refused and is NOT done.** A reader's attempt to delete eight
+dead `READ_FOLDS` keys from `scripts/corpus-gate.mjs` was refused by the
+permission classifier — the gate counts as a shared resource — and it did not
+work around it, which was right. The keys, and two Cyrillic rows whose reading
+it settled but could not write, are at the end of `../ro-run/FINDINGS.md` and in
+TODO 18. **Nobody should re-read those pages; the reading is on file.** It
+belongs with item 17's pass over the 1,294 superseded keys.
+
+**TODO 18's premise was wrong and the way it went wrong is the lesson.** It
+claimed nine surname-plus-day sets were one man each recorded twice. All nine
+are two, three or four distinct men — twenty-one folders, twenty-one
+`/name/` pages, each listing one proper day of its own and never the other
+folder's. Worse: **six of the nine had already been read and settled in the
+gate's own `READ_FOLDS` notes** before the item was written, on exactly that
+evidence, and the item was written off a manifest scan instead. A manifest scan
+is not a reading, and the corpus's own readings are the first place to look
+before proposing a merge. What landed is the other branch — eight folders took
+their day as an epithet, which dissolved seven Latin fold keys (`?` 360 → 358,
+`·` 965 → 960) without changing any fold's membership.
+
+**`related` now runs both ways everywhere.** The prose floor was already met
+(`scripts/related-floor.mjs` reports 0 folders gaining), but 1,381 of 13,053
+ends were one-way — edges written by hand off a calendar line or a dedication,
+which the floor cannot see. `.tmp/related-symmetrise.py` closed them across 494
+folders; 14,434 edges now, and the three coverage figures have converged on
+4,060 (59.7%) where the first two disagreed. The 2,739 isolated folders are
+unchanged, because a saint nobody names is not reached by symmetry.
 
 **Mobile search is merged, and the author's literal ask was already built.** The
 report was that the advanced search page takes a while to load on a phone. The
