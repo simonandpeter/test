@@ -118,6 +118,12 @@
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "irenaeus-the-martyr-22-august"
   ]

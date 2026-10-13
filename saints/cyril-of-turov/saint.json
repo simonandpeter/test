@@ -20,6 +20,12 @@
       "note": "The form days.pravoslavie.ru's own life page life6673 titles him with, «Святитель Кирилл Туровский, епископ», with the rank words taken off; the name page 1232 and life948 set the toponymic inside the office instead, «Святитель Кирилл, епископ Туровский». The day's line declines him «Кирилла , еп. Туровского». The bare «Кирилл» has many holders in this corpus, so the toponymic is kept: measured against the gate's own key function, 'кирилл туровскии' has no other holder."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [],
   "dates": {
     "birth": {
