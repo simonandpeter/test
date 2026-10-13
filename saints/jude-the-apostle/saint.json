@@ -18,9 +18,9 @@
       "note": "Read out of the Охридски пролог’s heading for 19. јун ст. ст., „Свети апостол Јуда“ — Свети is not a rank and апостол is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. **The by-names are in the body and are not built onto the form**: the entry says he is called „Јуда Јаковљев“ after his more notable brother, and also Левијем and Тадејем, and the «brother of the Lord» of the display name is not in this heading at all. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јуда», so there is no fold — which is worth having measured, the corpus keeping a `thaddeus-apostle-of-the-seventy` whom this very entry exists to tell him apart from."
     },
     {
-      "form": "Иуда Иаковлев (Леввей",
+      "form": "Иуда Иаковлев (Леввей, Фаддей)",
       "lang": "ru",
-      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 19 июня ст. ст., «Иуда Иаковлев (Леввей, Фаддей), апостол из 12-ти», with the words of number and rank left off. The parenthetical second and third names are the calendar's own."
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 19 июня ст. ст., «Иуда Иаковлев (Леввей, Фаддей), апостол из 12-ти», with the words of number and rank left off. The parenthetical second and third names are the calendar's own. The form stood truncated mid-parenthesis as «Иуда Иаковлев (Леввей» until 13 October 2026, when name page 1132 was read again and the closing «, Фаддей)» restored; the page prints «Иуда Иаковлев (Леввей, Фаддей), апостол из 12-ти» and the day page for 19 июня ст. ст. carries the same string as the title of its name link."
     }
   ],
   "sex": "male",
