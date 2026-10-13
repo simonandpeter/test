@@ -18,6 +18,15 @@
     "martyr",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 730,
+      "latest": 730,
+      "display": "730",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(730)»."
+    }
+  },
   "related": [
     "alexius-of-the-brazen-gate",
     "constantine-the-great",

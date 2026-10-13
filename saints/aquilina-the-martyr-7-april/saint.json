@@ -22,6 +22,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 310,
+      "latest": 310,
+      "display": "c. 310",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 310)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -18,6 +18,15 @@
     "confessor",
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 311,
+      "latest": 311,
+      "display": "311",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(311)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

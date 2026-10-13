@@ -23,6 +23,15 @@
     "hieromartyr",
     "presbyter"
   ],
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(302)»."
+    }
+  },
   "related": [
     "twenty-thousand-martyrs-of-nicomedia",
     "indes-of-nicomedia",

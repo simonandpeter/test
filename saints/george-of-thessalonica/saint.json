@@ -20,6 +20,15 @@
     "bishop",
     "metropolitan"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1020,
+      "latest": 1038,
+      "display": "1020–1038",
+      "basis": "inferred",
+      "note": "The place in a list, which is the only evidence there is, as his own life.md sets it out: «He is remembered in the Synodikon of the metropolis of Thessalonica, where he stands after Niketas, whom the page dates 1020, and before bishop Theophanes, whom it dates 1031 to 1038». That life.md says the page draws no year from it; the interval between the two neighbours is drawn here, as an inference and marked one."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

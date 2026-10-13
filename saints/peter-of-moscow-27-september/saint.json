@@ -11,6 +11,15 @@
   "types": [
     "hieromartyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(1937)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

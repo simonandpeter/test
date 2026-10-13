@@ -27,6 +27,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(II)»."
+    }
+  },
   "related": [
     "hilary-companion-of-proclus"
   ],

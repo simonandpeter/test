@@ -6,6 +6,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 323,
+      "display": "between 308 and 323",
+      "basis": "traditional",
+      "note": "The reign his own life.md names for the martyrdom: «Under the emperor Licinius, whose reign it gives as 308 to 323, Agapitus was taken into the army, and there he saw tormented for their faith … Αγρίππας». The interval is the reign, which is the whole of what the page places him by."
+    }
+  },
   "names": [
     {
       "form": "Αγρίππας",

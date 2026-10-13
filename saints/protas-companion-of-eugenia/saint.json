@@ -22,6 +22,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 262,
+      "latest": 262,
+      "display": "c. 262",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 262)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

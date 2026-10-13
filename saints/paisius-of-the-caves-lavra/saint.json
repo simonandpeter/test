@@ -5,6 +5,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(XIV)»."
+    }
+  },
   "names": [
     {
       "form": "Παΐσιος",

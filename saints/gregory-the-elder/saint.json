@@ -14,6 +14,15 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 325,
+      "latest": 373,
+      "display": "325–373",
+      "basis": "attested",
+      "note": "The two fixed years in his own life.md and the length that follows them: «He was baptised in 325, was raised to the bishopric of Nazianzus in 328, and was bishop there for forty-five years.» Forty-five years from 328 ends in 373; the floruit runs from the baptism to there rather than asserting a year of death the page does not print."
+    }
+  },
   "related": [
     "nonna-mother-of-gregory-the-theologian",
     "gregory-the-theologian",

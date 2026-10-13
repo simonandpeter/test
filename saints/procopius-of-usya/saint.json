@@ -5,6 +5,15 @@
   "types": [
     "fool-for-christ"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1601,
+      "latest": 1700,
+      "display": "17th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(XVII)»."
+    }
+  },
   "names": [
     {
       "form": "Προκόπιος",

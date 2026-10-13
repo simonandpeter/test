@@ -6,6 +6,15 @@
     "venerable",
     "hermit"
   ],
+  "dates": {
+    "death": {
+      "earliest": 580,
+      "latest": 681,
+      "display": "580 or 681",
+      "basis": "traditional",
+      "note": "Two years and no choice between them, as his own life.md has it: «For the end of it the page offers two dates and declines to choose: he fell asleep in 580, «ενώ κατ' άλλους το 681 μ.Χ.» — though according to others in 681.» The interval holds both because the source does."
+    }
+  },
   "names": [
     {
       "form": "Οσπίτιος",

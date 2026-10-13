@@ -4,6 +4,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 138,
+      "latest": 161,
+      "display": "c. 138–161",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 138-161)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

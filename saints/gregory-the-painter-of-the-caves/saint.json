@@ -6,6 +6,15 @@
     "venerable",
     "iconographer"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(XII)»."
+    }
+  },
   "names": [
     {
       "form": "Γρηγόριος",

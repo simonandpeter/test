@@ -28,6 +28,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 307,
+      "latest": 307,
+      "display": "c. 307",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 307)»."
+    }
+  },
   "related": [
     "cleopatra",
     "six-hermit-martyrs",

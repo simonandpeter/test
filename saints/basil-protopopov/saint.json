@@ -5,6 +5,15 @@
     "hieromartyr",
     "presbyter"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(1940)»."
+    }
+  },
   "office": "Priest",
   "names": [
     {

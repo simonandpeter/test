@@ -28,6 +28,15 @@
     "martyr",
     "physician"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(I)»."
+    }
+  },
   "related": [
     "paul-the-apostle",
     "philonilla-of-tarsus"

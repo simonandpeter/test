@@ -14,6 +14,15 @@
     }
   ],
   "sex": "male",
+  "dates": {
+    "death": {
+      "earliest": 1865,
+      "latest": 1865,
+      "display": "1865",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(1865)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

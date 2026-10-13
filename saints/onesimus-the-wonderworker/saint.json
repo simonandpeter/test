@@ -6,6 +6,15 @@
     "venerable",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "c. 284–305",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 284-305)»."
+    }
+  },
   "names": [
     {
       "form": "Ονήσιμος",

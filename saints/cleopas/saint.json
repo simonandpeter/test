@@ -22,6 +22,15 @@
   "types": [
     "apostle"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "His own life.md gives the relation the century follows from, on Eusebius quoting Hegesippus: «Cleopas was the brother of the Righteous Joseph, the betrothed of the Virgin Mary». The «about the year 180» in that sentence is when Hegesippus wrote, not when Cleopas lived."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

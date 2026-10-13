@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "c. 305–311",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 305-311)»."
+    }
+  },
   "related": [
     "marcian-of-egypt",
     "nicander-of-egypt",

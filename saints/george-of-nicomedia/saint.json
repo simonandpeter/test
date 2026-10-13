@@ -15,6 +15,15 @@
     "bishop",
     "hymnographer"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 857,
+      "latest": 891,
+      "display": "857–891",
+      "basis": "traditional",
+      "note": "The patriarchate his own life.md places him in: «the time of [Photius], patriarch of Constantinople, which it dates 857 to 891, and he kept up a correspondence with him»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -12,6 +12,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1048,
+      "latest": null,
+      "display": "after 1048",
+      "basis": "inferred",
+      "note": "His own life.md sets the three founders in order by their signatures and their burial: «[Athanasius], described as very active, signs the documents between 1020 and 1048; and Antony signs later than either, and is buried later than either in the same tomb». Later than 1048 is the whole of what that supports, so the upper bound is open."
+    }
+  },
   "related": [
     "nicholas-founder-of-vatopedi",
     "athanasius-founder-of-vatopedi",

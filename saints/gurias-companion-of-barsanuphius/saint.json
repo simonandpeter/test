@@ -18,6 +18,15 @@
   "types": [
     "preacher"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 1595,
+      "display": "before 1595",
+      "basis": "inferred",
+      "note": "The only year in the folder is a finding of relics, not a death: «Обретение мощей свтт. Гурия, архиеп. Казанского, и Варсонофия, еп. Тверского (1595).» A man whose relics were found in 1595 died before 1595, which is the whole of what the folder supports; the open lower bound says so."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

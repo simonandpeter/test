@@ -11,6 +11,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "The day line this folder already cites names two monks of the Caves and gives each his own numeral — «Прпп. Анатолия (XII) и другого Анатолия затворника (XIII), Печерских.» This folder is the first of the two, the one saint.gr keeps as «Όσιος Ανατόλιος ο εν τω σπηλαίω», so the century is the «(XII)»; the «(XIII)» belongs to the other Anatolius, the recluse."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

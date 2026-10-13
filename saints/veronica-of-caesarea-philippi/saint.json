@@ -27,6 +27,15 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "Two entries ran together on one day line, each with its own numeral — «Прав. Вероники Палестинской (I) Мц. Голиндухи , во св. Крещении Марии (591).» The «(I)» is hers, as the woman with the issue of blood whom saint.gr keeps as «Αγία Βερονίκη η αιμορροούσα»; the «(591)» belongs to Golinducha."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

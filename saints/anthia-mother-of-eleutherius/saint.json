@@ -22,6 +22,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "c. 117–138",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 117-138)»."
+    }
+  },
   "related": [
     "eleutherius-of-illyricum",
     "the-two-executioners"

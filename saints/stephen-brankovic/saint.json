@@ -4,6 +4,15 @@
   "types": [
     "prince"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1446,
+      "latest": 1446,
+      "display": "1446",
+      "basis": "traditional",
+      "note": "The year the day line prints against his own name, between his son's and his wife's — «Блж. Иоанна (1503) и родителей его блжж. Стефана (1446) и Ангелины, Бранковичей, правителей Сербских.» The «(1503)» is John's. It is the calendar's figure and is recorded as such; no other source in the folder gives a year."
+    }
+  },
   "names": [
     {
       "form": "Стефан Сербский",

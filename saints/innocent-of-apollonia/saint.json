@@ -22,6 +22,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 283,
+      "latest": 284,
+      "display": "283 or 284",
+      "basis": "traditional",
+      "note": "The reign his own life.md names: «they all contended for Christ at Apollonia when Numerian was emperor, whom it dates 283 to 284»."
+    }
+  },
   "related": [
     "isaurus-the-deacon",
     "felix-of-apollonia",

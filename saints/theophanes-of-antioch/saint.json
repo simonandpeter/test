@@ -24,6 +24,15 @@
     "ascetic",
     "hermit"
   ],
+  "dates": {
+    "death": {
+      "earliest": 369,
+      "latest": 369,
+      "display": "369",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(369)»."
+    }
+  },
   "related": [
     "pansemne-of-antioch"
   ],

@@ -6,6 +6,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "between 286 and 305",
+      "basis": "traditional",
+      "note": "The reign his own life.md opens with: «Alexander lived in the years of the emperor Galerius Maximian, who reigned from 286 to 305, and he was a soldier in the company of the count Tiberianus.»"
+    }
+  },
   "names": [
     {
       "form": "Αλέξανδρος",

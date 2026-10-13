@@ -28,6 +28,15 @@
     "venerable",
     "monk"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "inferred",
+      "note": "The council his own life.md dates his father by: Dalmatios «was chosen abbot after Isaac's repose and was honoured by the Third Ecumenical Council at Ephesus in 431». Faustos went with him as a boy and outlived him as his successor, so the century is the father's."
+    }
+  },
   "related": [
     "dalmatus-of-constantinople",
     "isaac-of-constantinople",

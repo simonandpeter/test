@@ -22,6 +22,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "c. 304",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 304)»."
+    }
+  },
   "related": [
     "anastasia-pupil-of-chrysogonus",
     "agape-of-aquileia",

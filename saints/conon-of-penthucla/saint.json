@@ -7,6 +7,15 @@
     "monk",
     "presbyter"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 527,
+      "latest": 565,
+      "display": "527–565",
+      "basis": "traditional",
+      "note": "The reign his own life.md opens with: «Conon lived in the years of the emperor Justinian the First, 527 to 565, and came from Cilicia in Asia Minor.» The same page puts his ministry at the Jordan under «Peter, patriarch of Jerusalem from 524 to 552», which falls inside it."
+    }
+  },
   "names": [
     {
       "form": "Κόνων",
