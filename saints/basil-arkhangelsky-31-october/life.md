@@ -1,4 +1,4 @@
-# Basil (Arkhangelsky)
+# Basil (Arkhangelsky) (31 October)
 
 The Russian church calendar of the Сретенский monastery names him seventh of ten people on one line for 31 октября ст. ст. and gives him no life. The line prints the forename «Василия» twice, once fifth and once seventh, for two different men; the link behind the seventh reads «Василий (Архангельский), протоиерей, сщмч.», an archpriest of that name, one of the new martyrs of the Russian church, and the link behind the fifth gives another surname altogether.
 
