@@ -1,4 +1,4 @@
-# Nicholas (Rozov)
+# Nicholas (Rozov) (20 February)
 
 The Russian church calendar of the Сретенский monastery names him for 20 февраля ст. ст. in four words — «Сщмч. Николая пресвитера.» — a hieromartyr, a presbyter. The name link behind the line carries the calendar's own nominative with the surname the line leaves out and a rank the line does not give: «Николай (Розов), протоиерей, сщмч.», an archpriest of that name, one of the new martyrs of the Russian church.
 

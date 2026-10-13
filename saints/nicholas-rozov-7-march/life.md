@@ -1,4 +1,4 @@
-# Nicholas (Rozov)
+# Nicholas (Rozov) (7 March)
 
 The Russian calendar prints four words for him and no life: «Сщмч. Николая пресвитера (1930)» — the hieromartyr Nicholas, presbyter, 1930 — and its index of names adds the surname, «Николай (Розов), иерей». He was born in 1870 at Ivankovo in the Rostov district of the Yaroslavl province, the son of a priest who bore the same name. Out of the Yaroslavl seminary he was ordained to the church at Spassk-Gorodets in the same district, served there until 1928, and was then moved to the church at Chashnitsy.
 
