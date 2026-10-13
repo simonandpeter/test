@@ -72,7 +72,7 @@
         "url": "https://days.pravoslavie.ru/Days/20261113.html",
         "year": 2026
       },
-      "note": "All-night vigil: «Совершается всенощное бдение». The same calendar keeps him again on 30 января ст. ст., in the Synaxis of the Ecumenical Teachers and Hierarchs — «Собор Вселенских учителей и святителей Василия Великого, Григория Богослова и Иоанна Златоустого» — which names the three of them and no one else. That is a joint commemoration and not a feast of his own, so this row stands on his own day and the second day is recorded here; the saint is not rendered on it. The same calendar keeps him a third time on 27 января ст. ст., «Перенесение мощей свт. Иоанна Златоуста (438).», which is the ONLY line that day prints: a translation of relics is a feast and not a feast of his person, so again no second row was made and the day is recorded here. The two hymns that page prints are already in this folder’s `hymns` and cite it — the troparion «Уст твоих, якоже светлость огня возсиявши» and the kontakion of the translation, «возвращением честных твоих мощей». And a fourth time on 14 сентября ст. ст., «Преставление свт. Иоанна Златоуста (407).» — his falling-asleep, the day and the year this folder’s `dates` already record. That page prints a troparion and a kondak under his name and both are texts this folder already holds: the troparion is the 27 января one, differing only in the punctuation of one clause («показа,/ но, твоими» against «показа./ Но твоими»), and the kondak глас 6 is word for word the 13 ноября one, so nothing was added. The day is the Julian start of the church year; its first line is the Exaltation of the Cross and its third the Леснинская icon of the Mother of God, so he is the only person the page names. Again no second row was made and the day is recorded here."
+      "note": "All-night vigil: «Совершается всенощное бдение». The same calendar keeps him again on 30 января ст. ст., in the Synaxis of the Ecumenical Teachers and Hierarchs — «Собор Вселенских учителей и святителей Василия Великого, Григория Богослова и Иоанна Златоустого» — which names the three of them and no one else. An enumerating synaxis is one row for each man it names, so that day is a second russian row on this folder and he renders on it; a heading that names nobody is still owed nothing. The same calendar keeps him a third time on 27 января ст. ст., «Перенесение мощей свт. Иоанна Златоуста (438).», which is the ONLY line that day prints: a translation of relics is a feast and not a feast of his person, so again no second row was made and the day is recorded here. The two hymns that page prints are already in this folder’s `hymns` and cite it — the troparion «Уст твоих, якоже светлость огня возсиявши» and the kontakion of the translation, «возвращением честных твоих мощей». And a fourth time on 14 сентября ст. ст., «Преставление свт. Иоанна Златоуста (407).» — his falling-asleep, the day and the year this folder’s `dates` already record. That page prints a troparion and a kondak under his name and both are texts this folder already holds: the troparion is the 27 января one, differing only in the punctuation of one clause («показа,/ но, твоими» against «показа./ Но твоими»), and the kondak глас 6 is word for word the 13 ноября one, so nothing was added. The day is the Julian start of the church year; its first line is the Exaltation of the Cross and its third the Леснинская icon of the Mother of God, so he is the only person the page names. Again no second row was made and the day is recorded here."
     },
     {
       "church": "romanian",
@@ -161,6 +161,21 @@
         "year": 2026
       },
       "note": "The translation of his relics in 438, and the only line the day prints. A translation is a feast rather than a death, and the corpus already carries about twenty russian rows whose cited line is a translation or finding of relics, so the day is recorded as the calendar keeps it. The two hymns the page prints are already in this folder's `hymns` and cite it: «Уст твоих, якоже светлость огня возсиявши» and the kontakion of the translation, «возвращением честных твоих мощей»."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Собор Вселенских учителей и святителей Василия Великого, Григория Богослова и Иоанна Златоустого.»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "note": "The Synaxis of the Ecumenical Teachers and Hierarchs, and the day’s own heading enumerates all three by name — «Собор Вселенских учителей и святителей Василия Великого, Григория Богослова и Иоанна Златоустого.» — so it is one row for each of the three and not one entry for the company: his place in the line is «Иоанна Златоустого». That is the same reading the Synaxis of the Twelve got on 30 июня, and this row closes an inconsistency rather than opening one: the folder’s own earlier note withheld this day as “a joint commemoration and not a feast of his own”, which was the dead one-row-per-church rule wearing another coat. An ENUMERATING synaxis is one row per member; a heading that names nobody — «Собор новомучеников» and its like — is still owed nothing. This is a SECOND russian row and nothing was moved: 13 ноября, 14 сентября and 27 января stands untouched. The test it rests on is the calendar’s own, his name page heading «Дни памяти: 27 января , 30 января (3 свт.) , 14 сентября , 13 ноября» (https://days.pravoslavie.ru/name/978.html), in which «30 января (3 свт.)» stands among HIS days. No hymn was copied: the day page prints the synaxis’s own hymns under the synaxis heading and under no single hierarch’s name."
     }
   ],
   "locations": [

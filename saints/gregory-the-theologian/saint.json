@@ -104,6 +104,21 @@
         "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-07&prolog=1",
         "year": 2026
       }
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Собор Вселенских учителей и святителей Василия Великого, Григория Богослова и Иоанна Златоустого.»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "note": "The Synaxis of the Ecumenical Teachers and Hierarchs, and the day’s own heading enumerates all three by name — «Собор Вселенских учителей и святителей Василия Великого, Григория Богослова и Иоанна Златоустого.» — so it is one row for each of the three and not one entry for the company: his place in the line is «Григория Богослова». That is the same reading the Synaxis of the Twelve got on 30 июня, and this row closes an inconsistency rather than opening one: the folder’s own earlier note withheld this day as “a joint commemoration and not a feast of his own”, which was the dead one-row-per-church rule wearing another coat. An ENUMERATING synaxis is one row per member; a heading that names nobody — «Собор новомучеников» and its like — is still owed nothing. This is a SECOND russian row and nothing was moved: the calendar’s own 25 января ст. ст. stands untouched. The test it rests on is the calendar’s own, his name page heading «Дни памяти: 25 января , 30 января (3 свт.)» (https://days.pravoslavie.ru/name/535.html), in which «30 января (3 свт.)» stands among HIS days. No hymn was copied: the day page prints the synaxis’s own hymns under the synaxis heading and under no single hierarch’s name."
     }
   ],
   "text": {
