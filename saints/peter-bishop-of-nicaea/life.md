@@ -1,4 +1,4 @@
-# Peter
+# Peter, bishop of Nicaea
 
 Peter, bishop of Nicaea, defended the veneration of icons against the
 iconoclasts under the emperor Leo — the Armenian, on the years the Orthodox

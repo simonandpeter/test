@@ -1,4 +1,4 @@
-# Basil
+# Basil of Vertelim
 
 Basil Afanasyevich Aleksandrin was born on 8 February 1872 in the village of Vertelim in the Insar district of Penza province, now in Mordovia — a man thorough in everything, the life says: before the revolution he farmed ten hectares of his own and rented seventy or eighty more, kept horses, cows and forty sheep, with two permanent hands and fifteen seasonal workers, and had a wife and three children.
 

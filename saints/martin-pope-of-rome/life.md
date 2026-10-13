@@ -1,4 +1,4 @@
-# Martin
+# Martin, pope of Rome
 
 Martin, bishop of Rome, was born at Todi in Umbria, in central Italy, and
 became Pope at the time when the heresy of the Monothelites was troubling

@@ -1,4 +1,4 @@
-# Marcellus
+# Marcellus of Apamea
 
 Marcellus was born of noble parents in Cyprus. Well educated, he held high civil offices, astonishing everyone by the purity of his life, his meekness, mercy and eloquence, and around 375, leaving his wife and children, he gave himself to the solitary monastic life in Syria. The people of Apamea, bringing him to the city on the pretext of some useful business, elected him their bishop. He was zealous against paganism: Theodoret of Cyrus tells that, having leave from the emperor Theodosius the Great to destroy the massively built temple of Jupiter at Apamea, he did not know how to go about it, until a workman undermined three of its huge columns, propped them for the time with olive wood and then set the wood alight — and it would not burn; Marcellus, told of this, performed the lesser blessing of water in church at the holy altar and had the wood sprinkled with it in faith, and it burned quickly, the columns fell and brought the whole temple down with them.
 

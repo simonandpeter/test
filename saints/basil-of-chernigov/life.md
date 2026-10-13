@@ -1,4 +1,4 @@
-# Basil
+# Basil of Chernigov
 
 Vasily Dmitrievich Bogoyavlensky was born in February 1867 in the village of Staroye Seslavino in Tambov province, a priest’s son. He finished the Tambov seminary in 1888, was ordained in 1890 and served at Ovsyanka in the Tambov diocese; in 1896 he entered the Kazan Academy, finished in 1900, and in 1907 took his master’s degree with a study of the Second Book of Maccabees.
 

@@ -1,4 +1,4 @@
-# Matthew
+# Matthew of Perm
 
 Mikhail Vladimirovich Pomerantsev was born about 1881 in the village of Tolmachevo in the Bryansk district of Orel province; he finished the second Orel church school in 1896 and the Orel seminary in 1902, both in the first rank, and in 1906 the Kyiv Academy as candidate of theology. He taught at the Orel seminary and the diocesan women’s school, was assistant superintendent of the Kamyshin school in Saratov province, taught at the Olonets seminary, and in 1911 was tonsured and ordained hieromonk in Kyiv with the name Matthew, taking charge that December of the parish schools at the Kyiv Caves Lavra; then Ostashkov in Tver province, assistant superintendent from 1914 and superintendent from 1916; and on 8 February 1917 he was made rector of the Perm seminary and archimandrite.
 

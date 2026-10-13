@@ -1,4 +1,4 @@
-# Hermogenes
+# Hermogenes of Tobolsk
 
 Hermogenes — George Efremovich Dolganov in the world — bishop of Tobolsk
 and Siberia, was born on 25 April 1858 in the family of an Edinoverie

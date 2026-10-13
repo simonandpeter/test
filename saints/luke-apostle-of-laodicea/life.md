@@ -1,4 +1,4 @@
-# Luke
+# Luke of Laodicea
 
 Luke of the Seventy lived in the apostolic years and was made bishop of
 Laodicea in Syria, where he ended his life spreading the gospel and caring

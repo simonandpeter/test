@@ -1,4 +1,4 @@
-# Peter
+# Peter of Dabar-Bosnia
 
 Peter — John Zimonić in the world — was born on 24 June 1866 at Grahovo in
 Herzegovina, then under the Ottomans, the son of the priest and vojvoda

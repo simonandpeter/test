@@ -1,4 +1,4 @@
-# Basil
+# Basil, bishop of Gortyna
 
 Basil, bishop of Gortyna, succeeded Eumenius, kept on 18 September. In
 680–681 he sat at the Sixth Ecumenical Council in the Trullan hall with the

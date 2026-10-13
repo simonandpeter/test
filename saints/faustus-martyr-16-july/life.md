@@ -1,4 +1,4 @@
-# Faustus
+# Faustus (16 July)
 
 doxologia.ro's calendar for 16 iulie gives Faustus two sentences and no more. It places him in the third century and says that he suffered in the time of the emperor Decius, whose reign the page dates 249 to 251, and that the holy martyr was tortured for five days before he received the crown of martyrdom.
 

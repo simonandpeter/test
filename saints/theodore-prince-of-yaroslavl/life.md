@@ -1,4 +1,4 @@
-# Theodore
+# Theodore of Yaroslavl
 
 Theodore Rostislavich of Smolensk, called the Black, was born in the years of
 the Mongol invasion of 1237–1239 and baptised for the great martyr Theodore

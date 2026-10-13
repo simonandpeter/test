@@ -1,4 +1,4 @@
-# Hermogenes
+# Hermogenes of Moscow
 
 Hermogenes was born at Kazan about the year 1530. By his own testimony he served as a priest in a church of Saint Nicholas near the market there. Later he took the monastic habit, and from 1582 was archimandrite of the monastery of the Transfiguration at Kazan; on 13 May 1589 he was consecrated bishop and became the first metropolitan of Kazan. It was while he was serving in the church of Saint Nicholas that the icon of the Mother of God of Kazan was found.
 

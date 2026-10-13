@@ -1,4 +1,4 @@
-# George of Sofia
+# George of Sofia (26 May)
 
 George was born at Sofia in Bulgaria, of pious and God-loving parents, who had been long without children until God heard their prayer and gave them a son; and they brought him up in the teaching and admonition of the Lord. In the years of his youth, saint.gr says, the Turks were trying by force to make the Christians change their faith.
 

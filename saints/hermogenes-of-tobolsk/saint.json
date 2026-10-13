@@ -1,6 +1,6 @@
 {
   "slug": "hermogenes-of-tobolsk",
-  "display_name": "Hermogenes",
+  "display_name": "Hermogenes of Tobolsk",
   "office": "Bishop of Tobolsk",
   "names": [
     {
@@ -65,6 +65,7 @@
     "life": "life.md"
   },
   "related": [
+    "hermogenes-the-martyr-24-july",
     "john-of-kronstadt"
   ]
 }

@@ -1,4 +1,4 @@
-# Faustus
+# Faustus (31 August)
 
 The Greek synaxarion keeps on 31 August the martyrs Andrew the Stratelates, Heraclius, Faustus and Menas and their company — martyrs, it says, of whom no biographical detail is known, whose memory is repeated on 12 July; its verse sees four running the hippodrome under God’s eye while Satan falls. The Romanian calendar keeps the four on the same day, each by name, with no life. 
 

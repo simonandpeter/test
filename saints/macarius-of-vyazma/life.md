@@ -1,4 +1,4 @@
-# Macarius
+# Macarius of Vyazma
 
 Macarius (Gnevushev), bishop of Orel and Sevsk, was born in 1858; he had a
 higher theological education and served as a priest, and became known as a

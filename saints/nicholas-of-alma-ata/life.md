@@ -1,4 +1,4 @@
-# Nicholas
+# Nicholas of Alma-Ata
 
 Nicholas — Theodosius, the son of the psalmist Nicephorus and his wife Maria
 — was born on 9 April 1877, Easter day, at Komissarovka in the
