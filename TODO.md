@@ -655,58 +655,46 @@ node -e "const m=require('./data/manifest.json');const c={};for(const s of m)(c[
 `"Nicholas (Rozov), 10 December"` — a comma where all 540 other day-epithets
 use parentheses. One line.
 
-## 19. Seventy notes still give the dead rule as their reason
+## 19. The dead rule is nobody's reason any more — done
 
-**Found 14 October 2026** by the reader who closed the Synaxis of the Twelve,
-and it is the tail of the second-day ruling rather than a new question.
+**Done, 14 October 2026.** Ten rows written on nine folders, eight withheld
+days given the calendar's own reason, and fifty-three notes rewritten to say
+what actually withholds the day.
 
-Seventy attestation notes withhold a second day and give "one row per church is
-the schema" as the reason. That rule is dead (`BRIEF.md` §4, `row_add`,
-`attestationsIn` plural since 2026-10-03), so every one of those seventy
-sentences is a false claim sitting in the corpus — and CLAUDE.md's rule for a
-false claim is to **delete it, not annotate it**.
+**The item's own count was the withholding subset, and the full figure is
+129.** 17 notes quote the dead rule in the PAST tense on a second row ("the
+prohibition the author lifted on 2026-10-03") and are true; 16 were group one;
+53 were group two; 42 use the phrase to mean "that is another church's day" and
+are true; 1 was both stale and false. 17 + 16 + 53 + 42 + 1 = 129. The scan now
+returns **59** — the 17 and the 42, both of which should stay. `.tmp/dead-rule-scan.py`
+and `.tmp/classify.py` are the instruments; note that `.tmp/ru-secondday.py`
+measures something else entirely (the Russian «Дни памяти» backlog).
 
-Measure the three groups with:
+**Two of this item's own classifications were wrong.**
+`carpus-the-apostle` was filed under "the withholding stands" — but 4 января's
+«Собор 70-ти апостолов» **enumerates** all seventy and names «Карпа» with the
+very name id his 26 мая row was read from, and the corpus already holds
+4 января rows for two others off that same line. He is owed a row and has one.
+`simon-the-zealot`'s first row still said he does not render on 30 июня while
+his row 4 has carried that day since the Twelve were written — stale, not
+merely misreasoned.
 
-```
-python .tmp/ru-secondday.py
-```
+The rows: Ephraim of Rostov greek 29/3, Hilarion of Pokrovskoe greek 21/10 and
+Jonah of Moscow greek 15/6, each a second saint.gr id with the same heading and
+the same years as the first; Euphrosyne of Moscow russian 19/5 and 7/7; John of
+Gothia russian 26/6, which the gate's own «јован» note had already read as a day
+of his; Nicodemus of Serbia russian 30/8; Raphael Sheichenko russian 9/6, a
+relics day the source does list among his days; Theodota greek 22/12.
 
-**Group one: 16 notes where no company is named.** These are a day of the
-saint's own, withheld for the dead reason alone, and each is owed a reading and
-probably a second row:
+**One case is open and it is a question about the rule, not about a saint.**
+`demetrius-of-moscow`'s 19 октября stands in his «Дни памяти» and is his
+*birth* day, and the 19 октября day page prints no line for him and no link to
+his name page. The brief's test («Дни памяти» is the test) and the day page
+disagree. Both readings are in the note and neither was chosen. **If the list is
+meant to win outright, he is owed a row.**
 
-```
-apollonia-of-alexandria greek      demetrius-of-moscow russian
-ephraim-of-rostov greek            eumenius-of-koudoumas greek
-euphrosyne-of-moscow russian       hilarion-of-pokrovskoe greek
-john-of-gothia russian             john-vladimir russian
-jonah-of-moscow greek              menander-the-soldier greek
-nicodemus-of-serbia russian        raphael-sheichenko russian
-rostislav-of-kyiv russian          simeon-of-dajbabe russian
-sophia-of-slutsk russian           theodota-with-her-three-sons greek
-```
-
-Not all of them will turn out to be owed one: `apollonia-of-alexandria`'s
-second day is the *Western* 9 February, which is no church of the four, and
-`menander-the-soldier`'s is a reading from the Lavriotic Codex rather than a day
-the calendar keeps. The point is that the reason on the row is wrong whatever
-the answer is.
-
-**Group two: 53 notes that also name a company or a moveable feast.** The
-withholding stands — «Собор новомучеников», «(Ростов.)», «(Печер.)» and the
-Paschal-cycle synaxes are commemorations of a company and not days of the man,
-which is the rule the Twelve and the Three Hierarchs were written on: *an
-enumerating synaxis is one row per member; a heading that names nobody is owed
-nothing.* What is wrong on these fifty-three is only the **stated reason**. Each
-needs its sentence replaced with the real one, which is cheap and scriptable
-because the wording is formulaic.
-
-**Group three: 42 notes that are fine.** They use the phrase to mean "that is
-another church's day, not a second of this one", which is still true. Leave
-them.
-
-The two that have been done can serve as the pattern: `john-chrysostom`'s
-13 ноября note had its withholding sentence **deleted and replaced** with the
-enumerating-synaxis rule in the same commit that gave him the 30 января row, and
-`michael-of-edessa` got his 29 июля row off the same reading.
+Two smaller things left behind: `sergius-srebryansky`'s 28 ноября finding of
+relics is one day page away from a verdict and is called an open question in his
+note; and `michael-of-edessa`'s row 4 carries a false sentence — that copying a
+venerated row back to edit its prose "is not what `replace_venerated` is
+sanctioned for", which `BRIEF.md` §4 says it is exactly — still in the corpus.
