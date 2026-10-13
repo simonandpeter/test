@@ -161,10 +161,34 @@ with no separator between them. Both fixed at the source and in the record
 
 **Left in flight, drafted and vetted but unfetched** — a worklist, not a claim:
 six folders in `scratchpad/draft-b2.json` and six in `draft-b3.json`, which
-`python scratchpad/drive.py <file> --write` would take. The queued method-1 names
-nobody has searched are in the session's `scratchpad/q1.txt` and `q2.txt`, and
-**`peter-the-apostle` leading an imageless day is the most surprising row on
-that list.**
+`python scratchpad/drive.py <file> --write` would take.
+
+**And the method-1 queue, written down here because a worklist in a gitignored
+scratch file is a worklist that is lost.** These are the names queued for the
+per-saint category listing and never searched — nobody has established whether
+they have a free image. `peter-the-apostle` leading an imageless day is the most
+surprising row on it. The query is the saint's own Commons category, not a
+free-text search.
+
+```
+acacius-the-obedient arsenius-bishop-of-tver arsenius-of-serbia 
+athanasius-iii-patelarios barlaam-of-the-kyiv-caves basil-of-mangazeya 
+boniface-of-tarsus boyan-enravota chryse-of-slatena conon-of-isauria 
+daniel-of-pereslavl danilo-of-serbia erasmus-of-the-kyiv-caves erastus 
+filofteia-of-pasarea george-the-new-martyr-of-sofia germanus-of-kazan 
+innocent-of-nurma jacob-of-putna john-of-suzdal john-the-russian 
+john-vladimir juvenal-of-jerusalem lazarus-of-mount-galesion 
+lazarus-the-four-days-dead macarius-of-zheltovodsk marciana-the-empress 
+mark-the-ascetic nilus-of-sora nilus-of-stolobnoe pelagia-of-tinos 
+peter-of-damascus peter-ordynsky-of-rostov peter-the-apostle 
+philaret-of-moscow photini-the-samaritan photus-son-of-terence 
+sava-brancovici-of-transylvania savvas-of-kalymnos seraphim-of-vyritsa 
+seven-virgins-of-gaza seventy-martyrs-of-scythopolis 
+silouan-of-the-kyiv-caves simon-of-yurievets sophia-of-suzdal 
+stephen-the-new thalassius theodore-of-rostov-and-suzdal 
+theophylact-of-nicomedia tikhon-of-moscow tryphon-of-vyatka 
+twenty-thousand-martyrs-of-nicomedia zacharias-son-of-carion
+```
 
 **Measured on main, 13 October 2026**, after `npm run build:manifest` at
 6,799 folders — these are the honest numbers, because each pass had measured in
