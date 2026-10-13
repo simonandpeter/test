@@ -6,6 +6,15 @@
     "righteous",
     "confessor"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "inferred",
+      "note": "Inferred, and this folder’s own note names the ground: «the page gives no year, so no `dates` object is proposed, though the reigns it names put him in the ninth century». The century is taken and the reigns are left where the note put them. No year."
+    }
+  },
   "names": [
     {
       "form": "Σέργιος",

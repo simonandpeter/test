@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: neither page gives the company a year, and this folder's own Greek note records the only chronology either carries, the clause on Silvanus's page reading under Diocletian, 284 to 304. `silvanus-of-gaza`, of this company and linked here, carries death 4th century, and this folder takes its company's reading. The century only."
+    }
+  },
   "names": [
     {
       "form": "Σαράντα Μάρτυρες",

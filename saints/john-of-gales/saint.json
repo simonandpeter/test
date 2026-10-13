@@ -14,6 +14,15 @@
     "confessor",
     "presbyter"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1701,
+      "latest": 1800,
+      "display": "18th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own life says the Romanian life opens «about the middle of the eighteenth century», when the defenders of the right faith rose among the Orthodox Romanians of Transylvania; 1701–1800 is that century, and the century is all that is taken."
+    }
+  },
   "related": [
     "moses-macinic-of-sibiel",
     "oprea-of-saliste"

@@ -22,6 +22,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 283,
+      "latest": 284,
+      "display": "283–284",
+      "basis": "traditional",
+      "note": "Stated and never recorded, and the page states the reign’s years itself. This folder’s own life: they all contended for Christ at Apollonia «when Numerian was emperor, whom it dates 283 to 284». The Russian reading on the same folder has the same company suffering at Apollonia under Numerian. The interval is those two years as the page gives them."
+    }
+  },
   "related": [
     "isaurus-the-deacon",
     "innocent-of-apollonia",

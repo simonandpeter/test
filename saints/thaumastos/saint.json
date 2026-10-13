@@ -5,6 +5,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own life says saint.gr’s one sentence, «Ὁ Ὄσιος Θαυμαστός ἔζησε κατά τον 6ο αἰῶνα μ.Χ. καὶ κοιμήθηκε με εἰρήνη», which is the whole of the page; 501–600 is that century, and the century is all that is taken."
+    }
+  },
   "names": [
     {
       "form": "Θαυμαστός",

@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr gives her no year, and this folder's own Greek note records her interrogation by Diocletian and George's own page dating him 275 to 303. The interval is Diocletian's reign as sixty-four other folders in this corpus hold that marker; `george-the-trophy-bearer` carries death 303."
+    }
+  },
   "names": [
     {
       "form": "Πολυχρονία",

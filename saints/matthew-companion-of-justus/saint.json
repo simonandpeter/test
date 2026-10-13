@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 304,
+      "display": "under Diocletian (284–304)",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded, and the company already holds it. This folder’s own life says he and Justus «together with Theophilus and Trophimus were martyred under Diocletian», and `theophilus-companion-of-trophimus` and `trophimus-companion-of-theophilus`, the other two of that one line, both carry death under Diocletian (284–304). This is their reading, held for the two that had none. The page gives no year."
+    }
+  },
   "related": [
     "justus-companion-of-matthew",
     "theophilus-companion-of-trophimus",

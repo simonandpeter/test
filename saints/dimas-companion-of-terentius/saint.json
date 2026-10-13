@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "under Decius",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life says the linked life names him nowhere but tells «of the martyrs of Africa under the emperor Decius and the governor Fortunatianus, of four who were set apart, and of thirty-six others», which is the company he is a companion in; `terentius-of-africa` carries death 250. The interval is Decius’s reign, 249–251, as this corpus already holds that marker. No year."
+    }
+  },
   "related": [
     "terentius-of-africa",
     "macarius-companion-of-terentius"

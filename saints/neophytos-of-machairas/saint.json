@@ -13,6 +13,15 @@
     "venerable",
     "ascetic"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own life says the Mother of God gave the knife — μαχαίρι — to him and to Ignatius «in the twelfth century»; 1101–1200 is that century, and the century is all that is taken."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

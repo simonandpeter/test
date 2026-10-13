@@ -6,6 +6,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: the page gives the two soldiers no year and no name. This folder’s own life has them withdraw with Longinus to his own country and be buried in the grave he prepared «when the detachment sent by Tiberius arrived»; `longinus-the-centurion` carries death 1st century, his own line dating him «(I)». The century only."
+    }
+  },
   "names": [
     {
       "form": "Δύο Στρατιώτες",

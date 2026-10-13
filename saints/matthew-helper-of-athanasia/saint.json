@@ -6,6 +6,15 @@
     "ascetic",
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr gives him no year. He is named by nothing but the help he gave `athanasia-of-aegina`, whom this folder links and whose death this corpus records as 860, so he is a man of the ninth century. The century only; the 1918 in this folder's note belongs to another Matthew."
+    }
+  },
   "names": [
     {
       "form": "Ματθαίος",

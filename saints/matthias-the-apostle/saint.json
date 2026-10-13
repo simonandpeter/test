@@ -28,6 +28,15 @@
     "apostle",
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page read for this folder gives a year. The life has him «first one of the seventy lesser apostles» before the lot fell on him for the place of Judas among the Twelve. The corpus’s own form for a man of the apostolic generation is this century and nothing narrower — fifty-six folders typed `apostle` carry death 1st century, `aquila` among them off his day line’s bare «(I)». The century only."
+    }
+  },
   "images": [
     {
       "file": "images/icon.jpg",

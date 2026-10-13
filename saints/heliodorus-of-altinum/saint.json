@@ -12,6 +12,15 @@
   "types": [
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated of him: his own page gives no year. His nephew’s page, which this folder’s life quotes, «says Nepotian lived in the fourth century and was ordained presbyter by his uncle Heliodorus, bishop of Altinum». An uncle who ordained a man of that century is of it. The century only."
+    }
+  },
   "related": [
     "nepotian-the-presbyter"
   ],

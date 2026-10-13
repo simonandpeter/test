@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and the refusal it reverses is in this folder’s own life: «the fourth century it states for Polychronius is his own and is not extended to his companions here». It is extended now, and only as a century: `polychronius-the-martyr` carries death 4th century off saint.gr’s «ἦταν ἕνας δυναμικὸς κληρικὸς τοῦ 4ου μ.Χ. αἰῶνα», and these are the men cut down with him upon the holy table in the days of the Arian emperor Constantius, whose reign is in that century too. No year, no place, no manner of death is supplied that the page does not give."
+    }
+  },
   "related": [
     "polychronius-the-martyr",
     "polyteleios-companion-of-polychronius",

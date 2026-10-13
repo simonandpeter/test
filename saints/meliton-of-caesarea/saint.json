@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 98,
+      "latest": 117,
+      "display": "under Trajan",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. The single notice, which this folder’s own life quotes, has him suffer «in the days of the emperor Trajan, at Caesarea in Cappadocia, together with the holy martyrs Theodotus and Theodota, Diomedes, Eulampius, Peter» and the rest. The interval is that reign; the page gives no year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

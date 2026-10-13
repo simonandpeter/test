@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life makes him a son of Claudius and Praepedigna and «a family of the emperor Diocletian’s kin, baptised after talking with the household of the virgin Susanna, exiled when the emperor» turned on them; `susanna-the-deaconess` carries floruit end of the 3rd century. The interval is Diocletian’s reign, 284–305, which is how sixty-five other folders in this corpus hold that marker. No year, because the page gives none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

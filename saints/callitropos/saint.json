@@ -5,6 +5,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr gives her no year, which this folder's own Greek note says outright. She is the sister of `epiphanius-of-cyprus` on both pages, and that folder carries death 403 while the note records his page dating him 310-403; a sister of his is a woman of the fourth century. The century only."
+    }
+  },
   "names": [
     {
       "form": "Καλλίτροπος",

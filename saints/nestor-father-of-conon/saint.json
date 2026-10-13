@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: this folder’s own life says the notice gives him no year of his own — «the village of Badine in Isauria and the end of the first century stand on Conon’s page and are not repeated on his». `conon-of-isauria` carries birth about the end of the 1st century. The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

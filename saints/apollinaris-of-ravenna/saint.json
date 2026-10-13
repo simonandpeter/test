@@ -29,6 +29,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. The Ohrid Prologue, which this folder’s life follows, makes him a disciple of the apostle Peter who came with him from Antioch to Rome «in the days of Caesar Claudius» and who suffered on the twenty-third of July «Vespasian ruling over the Romans». Both reigns fall inside the first century and the century is all that is taken. He is not `apollinaris-monk-martyr-1918`, the twentieth-century monk-martyr the same note is careful to exclude."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -23,6 +23,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life has him finish his contest on the eighteenth of June «under Vespasian’s rule at Rome», and its note says saint.gr «sets their martyrdom in the reign of the emperor Vespasian, names the African governor Hadrian who condemned them, and gives no year». The packs carry no phrase for that reign, so the century it falls in is what is recorded. The century only."
+    }
+  },
   "related": [
     "leontius-of-tripoli",
     "hypatius-the-tribune"

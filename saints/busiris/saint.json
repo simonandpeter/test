@@ -9,6 +9,15 @@
   ],
   "sex": "male",
   "types": [],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "under Julian the Apostate",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life says the notice tells nothing of him beyond the company — the three brothers of Gaza, with Nestor, «martyred under Julian the Apostate». The interval is that reign as this corpus already holds it. No year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -6,6 +6,15 @@
     "venerable",
     "ascetic"
   ],
+  "dates": {
+    "death": {
+      "earliest": 351,
+      "latest": 400,
+      "display": "late 4th century",
+      "basis": "inferred",
+      "note": "Inferred from the page’s own conditional, which this folder’s note records: he «should be placed at the end of the fourth century *if* we accept from the episcopal lists of the region that his brother Arcadius was bishop» then. The page says the exact date of his birth is unknown, and no year is taken; the interval is that century’s second half."
+    }
+  },
   "names": [
     {
       "form": "Θεοσέβιος",

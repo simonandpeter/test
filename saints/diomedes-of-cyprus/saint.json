@@ -13,6 +13,15 @@
     "venerable",
     "hermit"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: the page says how many years he lived is not known. It has him taken as a boy by `triphyllius-of-leucosia`, bishop of Nicosia, and brought up beside him and `spyridon-of-trimythous`; both are linked from this folder and Triphyllius carries death 370. A boy raised by those two is a man of the fourth century. The century only. The seventh-to-tenth-century Arab raids the same page argues from are its own argument about a later Diomedes and are not taken."
+    }
+  },
   "related": [
     "neophytos-the-recluse",
     "triphyllius-of-leucosia",

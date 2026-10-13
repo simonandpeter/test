@@ -17,6 +17,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 650,
+      "display": "early 7th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own life says saint.gr has him living as a monk «at the beginning of the seventh century» and falling asleep in peace, and says there is no particular biographical memoir of him; 601–650 is that century, and the century is all that is taken."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

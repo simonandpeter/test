@@ -6,6 +6,15 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": 81,
+      "latest": 96,
+      "display": "late 1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: the page gives no year on her own page. This folder's own Greek note reads her as beheaded in the first-century persecution under Domitian in which her companion died, and `horaiozele-of-byzantium`, linked here, carries floruit 1st century. The interval is Domitian's reign as five other folders in this corpus hold that marker. The 276-282 in the note belongs to `jerusalem-of-beroea`, whom the same note is at pains to say she is not."
+    }
+  },
   "names": [
     {
       "form": "Ιερουσαλήμ",

@@ -6,6 +6,15 @@
     "venerable",
     "ascetic"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1255,
+      "latest": 1346,
+      "display": "1255–1346",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr gives him no year, which this folder's own Greek note says. The whole substance of the page is the passage of the Life of Gregory of Sinai in which Gregory, in Crete, is taught the prayer of the mind by this Arsenios. `gregory-of-sinai`, whom this folder links, carries birth 1255 and death 1346, and the interval is that lifetime. The 239, 117 and 2004 in the note are a shelf-mark pair and an edition, not dates."
+    }
+  },
   "names": [
     {
       "form": "Αρσένιος",

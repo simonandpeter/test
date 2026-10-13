@@ -22,6 +22,15 @@
   "types": [
     "apostle"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page read for this folder gives a year. doxologia.ro prints his line «Sfântul Apostol Zaheu» and no notice of his life at all; what stands in place of one is the passage from Luke in which the Lord calls him down from the tree. The corpus’s own form for a man of the apostolic generation is this century and nothing narrower — fifty-six folders typed `apostle` carry death 1st century, `aquila` among them off his day line’s bare «(I)». The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
