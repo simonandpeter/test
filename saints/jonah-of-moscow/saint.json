@@ -91,7 +91,7 @@
         "url": "https://www.saint.gr/03/31/index.aspx",
         "year": 2026
       },
-      "note": "The page heads him «(; - 1461)» and is honest about its own ignorance: «Γνωστός στη ρωσική Εκκλησία, άγνωστος στους Συναξαριστές» — known to the Russian Church, unknown to the synaxaristae. It offers one comparison in place of a life: he is for the Russians what Mark Eugenicus, 1375 to 1461, is for us. It says his service was composed by the hierodeacon Theophilus Paschalides and published at St Petersburg in 1897, and that his memory is repeated on 15 June; one row per church is the schema, so that second day is noted here and not made into a second row. It prints no hymn."
+      "note": "The page heads him «(; - 1461)» and is honest about its own ignorance: «Γνωστός στη ρωσική Εκκλησία, άγνωστος στους Συναξαριστές» — known to the Russian Church, unknown to the synaxaristae. It offers one comparison in place of a life: he is for the Russians what Mark Eugenicus, 1375 to 1461, is for us. It says his service was composed by the hierodeacon Theophilus Paschalides and published at St Petersburg in 1897, and that his memory is repeated on 15 June, **which IS a day this calendar keeps him on, so a second greek row now stands on it**: the 15 Ιουνίου day page prints «Όσιος Ιωνάς Μητροπολίτης πασών των Ρωσιών» as its own entry https://www.saint.gr/2674/saint.aspx, under the same heading and the same «(; - 1461)» as this row, «Τύπος εορτής: Σταθερή», and with the same want of a life (read 14 October 2026). It prints no hymn."
     },
     {
       "church": "serbian",
@@ -107,6 +107,21 @@
         "year": 2026
       },
       "note": "The day's second entry, on the same menologion day the Romanian and the Greek already keep in this folder — and **the first life of him any source read for this folder has printed.** doxologia.ro names him and gives no life; saint.gr says in its own words that he is known to the Russian Church and unknown to the synaxaristae and offers a comparison in place of a narrative; the Russian calendar keeps him with the synaxis of the hierarchs of Moscow in a line of seventeen names that is not expanded. The Prologue gives the whole of a life: Kostroma, the tonsure in his twelfth year, the Simonov monastery at Moscow, the see of Ryazan under the metropolitan Photius, the election and the embassy to Constantinople that Isidore reached first, the return to Ryazan, Isidore's Florence and his expulsion, the metropolitan throne at last, the Agarenes driven from Moscow by his prayer, the wound he asked God for in old age, and the healing of a mute man at his relics. **A death was added where this folder had none**, 1461: the entry says „оде међу небеске грађане 31. марта 1461. године“, the day it heads him on and the year, and saint.gr's heading «(; - 1461)» — already quoted in this folder's life, and left untaken because it stood there beside another man's death year — says the same. Two sources, one year, no disagreement, and the folder was Undated before. The Prologue prints no troparion and no kontakion, and this folder still has none. The stored form Јона folds with `jonah-the-prophet` and `jonah-the-sabaite`, which hold the same bare form; the fold is recorded as deliberate."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουνίου — «Όσιος Ιωνάς Μητροπολίτης πασών των Ρωσιών»",
+        "url": "https://www.saint.gr/06/15/index.aspx",
+        "year": 2026
+      },
+      "note": "A SECOND greek row, out of the withheld-second-day backlog of TODO item 19. The folder’s first greek row stands on 31 March and was not moved, altered or re-sourced. saint.gr keeps him twice under one heading, id 147 on 31 Μαρτίου and id 2674 on 15 Ιουνίου, both «Όσιος Ιωνάς Μητροπολίτης πασών των Ρωσιών» and both headed «(; - 1461)», and the 31 March entry says in so many words that his memory is repeated on 15 June, so the identity is the page’s own. Entry 2674 prints no biography at all, which is of a piece with the 31 March entry’s own admission that he is «Γνωστός στη ρωσική Εκκλησία, άγνωστος στους Συναξαριστές». No hymn, and `dates` untouched (read 14 October 2026)."
     }
   ],
   "text": {
