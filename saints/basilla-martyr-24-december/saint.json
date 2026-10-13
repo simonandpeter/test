@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 180,
+      "latest": 192,
+      "display": "between 180 and 192",
+      "basis": "traditional",
+      "note": "The reign her own life.md names for the company she is kept with: they «all were martyred at Rome under Commodus, whose reign the page dates 180 to 192». That same life.md states that the «262» the entry prints belongs to Eugenia's beheading and not to her, and it is not used here."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

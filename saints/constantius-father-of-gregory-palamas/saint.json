@@ -12,6 +12,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1282,
+      "latest": 1328,
+      "display": "1282–1328",
+      "basis": "traditional",
+      "note": "The reign his own life.md places him in: «he was numbered among the courtiers of the emperor Andronicus II Palaeologus, whose reign the page gives as 1282 to 1328». The 2009 in the same life is the year of the family's enrolment among the saints."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

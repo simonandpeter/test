@@ -5,6 +5,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "inferred",
+      "note": "His own life.md says plainly that «The page offers Dometios no century of his own, no country and no year» — and in the same breath gives the one who shared his cell a year: «With him, the page says, lived in stillness the venerable martyr Damian the New, who died in 1568». A man who lived with Damian lived in Damian's century."
+    }
+  },
   "names": [
     {
       "form": "Δομέτιος",

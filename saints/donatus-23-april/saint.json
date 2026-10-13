@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "He stands in the passion of George, and his own life.md closes that passion on a year: «George was beheaded in 303» — the Prologue's own «Ђорђе би посечен 303.»"
+    }
+  },
   "names": [
     {
       "form": "Δονάτος",

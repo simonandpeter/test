@@ -6,6 +6,15 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 1331,
+      "display": "before about 1331",
+      "basis": "inferred",
+      "note": "The only year the folder fixes is a monastery already dedicated to them: «on Mount Ordymnos there was a monastery dedicated to them, which about the year 1331 was flourishing together with two others». They died before it, and nothing in the folder sets a lower bound."
+    }
+  },
   "names": [
     {
       "form": "Πέντε Κόρες από την Λέσβο",

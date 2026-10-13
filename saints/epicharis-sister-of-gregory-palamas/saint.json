@@ -12,6 +12,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1314,
+      "latest": 1316,
+      "display": "1314–1316",
+      "basis": "attested",
+      "note": "The year she entered the monastic life, as her own life.md has it: «Around 1316, or 1314, Gregory resolved to leave the vanities of this world and took with him into the monastic life his mother, two of his sisters, two of his brothers». The folder's 2009 is the year of the family's enrolment among the saints."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

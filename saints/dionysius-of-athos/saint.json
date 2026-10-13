@@ -23,6 +23,15 @@
     "venerable",
     "abbot"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1350,
+      "latest": 1390,
+      "display": "1350–1390",
+      "basis": "traditional",
+      "note": "The reign his own life.md places him under: «Under the emperor Alexius III Comnenus, whose years the page gives as 1350 to 1390 …». That life.md deliberately declines to date him by the monastery's foundation — «neither year is written into his dates, a foundation being no date of a person» — and the reign, which is a statement about the man, is used instead."
+    }
+  },
   "related": [
     "dometius-disciple-of-dionysius"
   ],

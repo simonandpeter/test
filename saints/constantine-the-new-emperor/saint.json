@@ -12,6 +12,15 @@
   "types": [
     "king"
   ],
+  "dates": {
+    "death": {
+      "earliest": 641,
+      "latest": 641,
+      "display": "641",
+      "basis": "traditional",
+      "note": "His own life.md: the fourth son of Heraclius, «who reigned in 641 … a very faithful emperor who reigned six months and was, according to Meletius, poisoned». A six-month reign inside 641 ends in 641."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

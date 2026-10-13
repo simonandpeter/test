@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "c. 298",
+      "basis": "traditional",
+      "note": "The year of the arrest and the torture his own life.md records: «in 298 the governor of that city, Urbanus, arrested him, and failing to tear him from his faith fell back on the raw and brutal violence of torture». The page gives no later year, and he died under that torture."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

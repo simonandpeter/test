@@ -19,6 +19,15 @@
     "bishop",
     "confessor"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 846,
+      "latest": 904,
+      "display": "846–904",
+      "basis": "inferred",
+      "note": "His own life.md carries four of the page's figures and says what the page will not: his ordination «must have fallen in the first patriarchate of Ignatius of Constantinople, 846 to 858»; the bull of «25 September 860»; «In 862 he set himself against the impious emperor Michael III»; and «The page prints a year, 904, in brackets at that point, without saying what it dates.» The floruit spans the first of those to the last, which is as far as the page goes."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

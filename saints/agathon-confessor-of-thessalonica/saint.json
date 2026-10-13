@@ -5,6 +5,15 @@
   "types": [
     "confessor"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "The year of the arrest his own life.md records off saint.gr: the four confessors «lived under the emperor Diocletian, whose reign it dates 284 to 305; they were arrested at Thessalonica in the year 304 and confessed Christ before the governor Dulcitius and the prefect Cassander». A confessor's arrest is not a death, so it is kept as a floruit."
+    }
+  },
   "names": [
     {
       "form": "Αγάθων",

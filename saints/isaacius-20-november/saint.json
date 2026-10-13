@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 343,
+      "latest": 343,
+      "display": "343",
+      "basis": "inferred",
+      "note": "The year of the company's martyrdom, which his own life.md states while noting that the heading leaves him out of it: «The first three of them, it says, were martyred by stoning in 343, together with the ascetic Onam, at the hands of the king of the Persians; and the next two by beheading. The page's own heading dates four of them … to 343, and leaves Papias and Isaacius without a year.» The two beheaded died in the same persecution as the four, so the year is inferred from the company rather than recorded for him."
+    }
+  },
   "names": [
     {
       "form": "Ισαάκιος",

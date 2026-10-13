@@ -5,6 +5,15 @@
   "types": [
     "ascetic"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 1200,
+      "display": "before 1200",
+      "basis": "inferred",
+      "note": "His own life.md says plainly that the calendar gives no year and that the Stoic's 50–120 printed above the notice belongs to the name and not to him. What it does fix is a church: «Above that cave, towards the end of the twelfth century, the village built its church in his name». He died before that, so the bound is the century's end and the lower bound is open."
+    }
+  },
   "names": [
     {
       "form": "Επίκτητος",

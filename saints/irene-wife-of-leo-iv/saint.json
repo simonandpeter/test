@@ -12,6 +12,15 @@
   "types": [
     "empress"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 787,
+      "latest": 787,
+      "display": "787",
+      "basis": "attested",
+      "note": "The council her own life.md credits her with: «Her great merit, the page says, was the convoking of the Seventh Ecumenical Council, which met at Nicaea in Asia Minor in 787». The page gives her no year of birth or death."
+    }
+  },
   "office": "Empress of the Romans, regent for her son Constantine VI",
   "attestations": [
     {

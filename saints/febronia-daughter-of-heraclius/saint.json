@@ -12,6 +12,15 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 610,
+      "latest": 641,
+      "display": "610–641",
+      "basis": "traditional",
+      "note": "The reign her own life.md places her in: «She was the daughter of Heraclius, the emperor of Byzantium, the page says, whose reign it dates 610 to 641; she lived with the spirit of God, and she died peacefully.»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

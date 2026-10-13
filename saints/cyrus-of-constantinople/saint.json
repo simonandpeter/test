@@ -16,6 +16,15 @@
     "confessor",
     "monk"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 705,
+      "latest": 711,
+      "display": "705–711",
+      "basis": "attested",
+      "note": "His patriarchate, as his own life.md records it: «in the year 705 called him to Constantinople to take the patriarchal throne; his patriarchate lasted until 711». The page gives no year of death."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

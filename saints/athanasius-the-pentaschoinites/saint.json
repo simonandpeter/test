@@ -5,6 +5,15 @@
   "types": [
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 1491,
+      "display": "before 1491",
+      "basis": "inferred",
+      "note": "The only fixed year in the folder is the end of a church already standing in his name: «The church of Saint Athanasius the Pentaschoinites was brought down by an earthquake on Sunday 24 April 1491». A man with a church of his own before 1491 died before 1491; the lower bound is open because nothing in the folder sets one."
+    }
+  },
   "names": [
     {
       "form": "Αθανάσιος",
