@@ -1,4 +1,4 @@
-# Alexander
+# Alexander, patriarch of Constantinople
 
 Alexander was chorepiscopus under Metrophanes, first patriarch of Constantinople, and because of the old man’s age stood in for him at the First Ecumenical Council at Nicaea against the Arians (325) — already, the Greek synaxarion says, a man shining with apostolic gifts, distinguished as a presbyter for piety, virtue and goodness. Metrophanes left word that his vicar be elected to the throne, and Alexander governed the Church of Constantinople from 325 to 340, contending with Arians and pagans alike.
 

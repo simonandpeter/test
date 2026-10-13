@@ -1,4 +1,4 @@
-# George of Sofia
+# George of Sofia (26 March)
 
 George came of Sofia in Bulgaria, and saint.gr's calendar for 26 Μαρτίου keeps him by that city's name. He was once at Adrianople in Thrace, and there he went in to a Turkish bowyer to have his bow mended. At some point in the business the Turk reviled Christ; George answered him and confessed his own faith, and the Turks standing by seized him, beat him without pity and took him before the governor. Before the governor too he confessed with courage that he believed in Christ.
 
