@@ -40,22 +40,61 @@ merge, and the author rules which. Item 13's closing section is the sourcing
 list that remains, and none of it can be linked because the other half of each
 pair is not a folder here.
 
-## 3. The 44 lonely date-tags
+## 3. The lonely date-tags — done, and the count was wrong
 
-358 display names carry a parenthesised day. For 115 of them a namesake in the
-corpus carries one too, which is what the convention is for. **44 carry a day
-with no namesake anywhere in the corpus by any spelling** — Abdas (8 July),
-Aristonicus (19 April), Basilla (24 December), Felicity (8 March) and 40 more.
-(The count already allows for namesakes distinguished another way, so "Adrian
-(17 April)" is not counted while "Adrian of Nicomedia" exists.)
+**Done, 13 October 2026.** The item asked for 44 candidates to be checked
+against their own source calendars. What came back: **21 tags dropped, 30 that
+were never lonely, 7 collectives that were never candidates, and 2 already
+settled.**
 
-They are not necessarily wrong: a sourcer reading a calendar that listed three
-Theodores may have tagged defensively, and the twin may be a saint not yet
-added.
+Each of the 21 was read off the day page its own `venerated` row cites — the
+Russian URLs being the Julian date, as the rows store them — and that day's
+listing printed **exactly one** saint of the name, so the parenthesis was
+telling the reader nothing. `display_name` and the life's `#` heading only; no
+slug moved, no attestation row was touched, and all 21 new names are unique in
+the manifest (checked after the rebuild).
 
-**Do:** check each of the 44 against its source calendar. Drop the day where the
-name is genuinely unique in that calendar; keep it, with a note saying why,
-where a namesake is real but unrecorded.
+**The measuring list over-counted by 30, and 14 of those are a defect in the
+instrument that built it.** Fourteen candidates have a namesake whose folded
+display name *begins with* the candidate's stripped name — "Anthia (12 October)"
+beside "Anthia, mother of Eleutherius", "Lot (22 October)" beside "Lot, nephew
+of Abraham", twelve more — so the folded-stem prefix test the report describes
+should have returned every one of them. The instrument was not kept and the
+report names no file, so **why** it missed them is unexplained.
+`.tmp/item3-collide.py` is the prefix test as it should be, and it is the one
+output worth re-running.
+
+The other 16 are one name under two latinisations, which is the half a prefix
+test cannot do: «Ιουβενάλιος» is "Juvenalius" in one folder and "Juvenal" in three,
+«Αστέριος» is "Asterios" and "Asterius", «Βλάσιος» is "Blasius" and
+"Blasios", «Θαλλελαίος» is "Thallelaeus" and "Thalelaeus". Those tags are
+load-bearing *because* of the split and were left alone.
+
+**Two things it turned up, neither acted on:**
+
+- **Normalising the latinisations is a corpus-wide decision**, not a reader's.
+  Until it is made, a day-tag is the only thing keeping two spellings of one
+  Greek name apart.
+- **`asterios-7-august` may hold two men.** saint.gr's 7 August prints
+  «Άγιος Αστέριος ο οσιομάρτυρας και θαυματουργός»; days.pravoslavie.ru's same
+  Julian day prints «Мчч. Марина и Астерия (260)», the senator of Caesarea in
+  Palestine, and the folder's own Russian name form is the senator's. Two
+  dossiers in one folder, on one day. Wants an author's eye.
+
+**What was not verified** (the reader's own account): no e2e run and no
+`npm run build`, so no page was watched rendering a new name — a grep of `e2e/`,
+`tests/`, `src/`, `scripts/` and `docs/` for all 21 tagged names found nothing
+but prose inside `corpus-gate.mjs`'s own notes. No back-out, because these
+batches add no attestation row to back out. And for each candidate only the one
+day its row cites was fetched, so "the name is unique in that calendar" was
+never tested — what was tested is "unique on that day, with no namesake in the
+corpus by prefix or near-spelling".
+
+Instruments in `.tmp`: `item3-rename.py` (the only writer; it asserts the new
+name is the old minus exactly one trailing parenthesis, so it cannot rename a
+saint), `item3-collide.py`, `item3-spelling.py`, `item3-probe.py`,
+`item3-day.py`, `item3-list.py`, `item3-urls.py`, and the two batch files as
+applied.
 
 ## 4. The ten icons Commons refused
 
