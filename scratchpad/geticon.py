@@ -97,11 +97,25 @@ def info(title):
     import re
     def plain(v):
         return re.sub(r'<[^>]+>', '', v).strip() if v else None
+
+    def undouble(v):
+        # Commons' Artist field is HTML, and for an unattributed file it holds
+        # two elements that each read "Unknown author" — stripping the tags
+        # concatenates them into one word-salad string with no separator.
+        if not v:
+            return v
+        h = len(v) // 2
+        return v[:h] if len(v) % 2 == 0 and v[:h] == v[h:] else v
     return {
         'thumb': ii.get('thumburl') or ii['url'],
         'descriptionurl': ii['descriptionurl'],
-        'width': ii.get('thumbwidth') or ii.get('width'),
-        'artist': plain(val('Artist')),
+        # `thumbwidth` is what we ASKED for, and Commons returns it even when it
+        # serves the unscaled original instead — which it does for anything
+        # under ~1250px wide. So a request for 1200 came back recorded as 1200
+        # beside a 563px file, on all eighteen icons of the 2026-10-14 wave. The
+        # narrower of the two is the one that is true either way.
+        'width': min(w for w in (ii.get('thumbwidth'), ii.get('width')) if w),
+        'artist': undouble(plain(val('Artist'))),
         'licence': val('LicenseShortName'),
         'description': plain(val('ImageDescription')),
     }
