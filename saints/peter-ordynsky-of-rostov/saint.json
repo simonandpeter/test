@@ -11,6 +11,11 @@
       "form": "Петар царевић",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue’s second heading for the Julian 30 June, „Блажени Петар царевић.“ — Блажени left off, which §5 reads as either `fool-for-christ` or `righteous` and which this folder now carries as `righteous`. **царевић is kept**: it is not in §5’s table of ranks, which has Кнез for a prince and Цар for a king and no word for a king’s son; it distinguishes him, which is what §6 keeps a by-name for; and without it the form would be the bare Петар, which would widen a fold this same reader keyed the day before on the Julian 29 June. This is the same call the Julian 28 June made on Заставоносац. **AUTHOR: царевић can be read as the rank `prince`, which this folder already carries in `types` off the Greek line, and on that reading §6 would strip it and leave the bare forename.** Ростов and the Horde are in the body and not in the heading."
+    },
+    {
+      "form": "Петр, царевич Ордынский",
+      "lang": "ru",
+      "note": "Read out of the name link behind the calendar’s line for 30 июня ст. ст., «Преподобный Петр, царевич Ордынский», with the rank word Преподобный left off and the rest kept whole: the bare «Петр» is a fold eleven folders already share and the by-name is what tells him from them. The day line itself declines him («Петра, царевича Ордынского») and gives no surname."
     }
   ],
   "types": [
@@ -29,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). He is a Russian saint and the Russian calendar is the source that will have his life; saint.gr has only the line."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июня ст. ст. — «Прп. Петра, царевича Ордынского (Ростовского) (1290).»",
+        "url": "https://days.pravoslavie.ru/Days/20260630.html",
+        "year": 2026
+      },
+      "note": "His FIRST russian row, replacing the `undocumented` one whose note said this calendar had not been read. The day page's line is his own and names nobody beside him. The day is listed among HIS days by the calendar itself: his name page heads «Дни памяти: 23 мая (Ростов.) , 30 июня» (https://days.pravoslavie.ru/Life/life1420.htm). **NO SECOND ROW FOR 23 мая**: the «(Ростов.)» beside it marks the synaxis of the saints of Rostov, a company he belongs to rather than a keeping of his own, so that day is recorded here and not written. The day page prints a troparion глас 8 and a kontakion глас 4 under his own name — «Отечества своего, блаженне Петре, удалився» and «Явися велие солнце Христовой Церкви» — and NEITHER was copied into this folder: each would need an English rendering typed beside it and this pass wrote attestation rows only. `dates` UNTOUCHED: the line's «(1290)» is the year the folder already holds off the Greek heading. `types` UNTOUCHED: the line's «Прп.» reads `venerable`, which this folder does not carry, where it carries `prince` and `righteous` off the Greek and Serbian lines; the Russian life has him tonsured only in old age, so the third rank is a reading left to the author."
     },
     {
       "church": "romanian",

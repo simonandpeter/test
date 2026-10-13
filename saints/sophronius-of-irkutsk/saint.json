@@ -59,6 +59,21 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 июня ст. ст. — «Прославление свт. Софрония, еп. Иркутского (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260630.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row. The first stands on 30 марта ст. ст., his repose, and is untouched. The line is «Прославление» — his glorification, which the Council of 1918 decreed and which the calendar's own account says was held on this very day, the Irkutsk clergy having asked for it to be put off to 8 October and the archbishop going ahead. The test this row rests on is the calendar's own list of his days: his name page heads «Дни памяти: 30 марта , 10 июня (Сибир.) , 30 июня (Прославление)» (https://days.pravoslavie.ru/Life/life6853.htm), so 30 июня is among HIS days and not among a company's. **NO ROW FOR 10 июня**: the «(Сибир.)» beside it marks the synaxis of the saints of Siberia, a company he belongs to, so that day is recorded here and not written. The troparion глас 4 «От юности Христа возлюбил еси, блаженне Софроние» the day page prints twice under his name, once titling him archbishop and once bishop and word for word the same text both times, was NOT copied: this pass wrote attestation rows only. `dates` UNTOUCHED — the line's «(1918)» is the year of the glorification and not of a death, and the folder's 1703–1771 stands."
     }
   ],
   "dates": {
