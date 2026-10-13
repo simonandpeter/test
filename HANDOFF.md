@@ -38,13 +38,22 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**Two agents are out, 14 October 2026.** Everything six readers have carried
-over this sitting is merged, verified against the corpus rather than its own
-report, and pushed green — `3099564e`, 1,122 passed, deployed, and the five
-flaky are all the known shelf-swipe cluster. The two out now are **TODO 16's
-tiers C and D** (the 64 folders whose figure is already in an attestation note,
-then the 270 that carry a marker and no number) and **TODO 18's second half**
-(22 bare ancient display names over 52 folders).
+**One agent is out, 14 October 2026** — TODO 5's icon programme, 210 distinct
+saints whose day leads with no picture. **Deliberately one and not two**: §5's
+own measurement is that two Commons clients at once provoke the 429s by
+themselves, so a second agent would cost yield rather than buy it.
+
+Everything eight readers have carried over this sitting is merged, verified
+against the corpus rather than its own report, and pushed green — `436e674f`,
+1,122 passed, deployed.
+
+**The flaky list has been the same two tests in every run of this sitting**, on
+both projects, and never a hard failure: `e2e/chrome.spec.js:273` (the touch
+shelf row) and `:328` (a swiped row under reduced motion), with one or two
+`index-carousel` cases joining them at random. Six runs, six appearances, six
+recoveries on retry. That is a budget and not a bug, which is what
+`STRUCTURE.md` §6 already says of the shelf swipe — the useful new fact is the
+rate.
 
 **A duplicate JSON key is invisible to everything but the bytes, and ten
 folders had one.** `JSON.parse` keeps the LAST of two keys of the same name and
