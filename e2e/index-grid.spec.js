@@ -18,6 +18,7 @@ import {
   nothingCropped,
   ready,
   searchMode,
+  soleMatch,
   tokenColours,
   viewChip,
 } from './helpers.js';
@@ -254,6 +255,96 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   // And the window still is one: what came into the document pushed something
   // else out of it.
   expect(await page.locator('.index-card').count()).toBeLessThan(20);
+  await ctx.close();
+});
+
+
+test('the search index arrives in slices, and the whole corpus is in it', async ({ browser }) => {
+  /*
+   * **The half of "it takes a while to load" that was not the download**
+   * (author, 2026-10-13: "on mobile it still takes a while to load the
+   * advanced search page with how many saints there are").
+   *
+   * The cards were already virtualised and the layout already chunked — the
+   * test above is that — and what was left doing the whole corpus in one pass
+   * was the MiniSearch build. It is off the first-paint path by design, which
+   * made it invisible to every measurement of time-to-first-card and meant it
+   * landed on the frame *after* the cards appeared: measured on the build at
+   * 360x800 and 4x CPU, a **1,598 ms** task starting ~100 ms after the first
+   * card reached the DOM, so the page arrived and then ignored the reader for
+   * a second and a half.
+   *
+   * Two claims, and the second is what makes the first safe to want: the
+   * slices are small enough that no one of them is a stall, and the index they
+   * build is still the whole corpus rather than however much of it had
+   * arrived.
+   *
+   * **Throttled from before the navigation, not after it** (trap 10 the other
+   * way round). The thing under test is the boot, and on an unthrottled desk
+   * with the manifest on loopback the build is over before a test could look;
+   * at 6x it is where a phone is. The premise is asserted below rather than
+   * assumed — an unthrottled run would show a first card in a few hundred
+   * milliseconds and no slices worth measuring.
+   */
+  const ctx = await browser.newContext({ viewport: { width: 360, height: 800 } });
+  const page = await ctx.newPage();
+  await searchMode(page);
+  await page.addInitScript(() => {
+    window.__tasks = [];
+    new PerformanceObserver((list) => {
+      for (const entry of list.getEntries())
+        window.__tasks.push({ d: Math.round(entry.duration), at: Math.round(entry.startTime) });
+    }).observe({ entryTypes: ['longtask'] });
+    /*
+     * When the first card reached the DOM, recorded **by the page**. A task
+     * this test is measuring blocks the test's own polling exactly as it
+     * blocks the reader, so asking afterwards cannot say when the card
+     * appeared — only when the main thread next came free.
+     */
+    const poll = () => {
+      if (document.querySelector('.index-card')) window.__cardAt = Math.round(performance.now());
+      else setTimeout(poll, 16);
+    };
+    setTimeout(poll, 16);
+  });
+  const cdp = await ctx.newCDPSession(page);
+  await cdp.send('Emulation.setCPUThrottlingRate', { rate: 6 });
+  await page.goto(INDEX);
+
+  /* The query is only answerable out of the last slice, so the field is filled
+     before the index can be whole: a reader who types while it builds is owed
+     the answer the moment it lands, and that is the contract this holds. */
+  const { query, slug } = await soleMatch({ last: true });
+  await expect(page.locator('.index-card').first()).toBeVisible({ timeout: 60000 });
+  await page.locator('[data-query]').fill(query);
+
+  await expect(page.locator('[data-count]')).toHaveText('1', { timeout: 60000 });
+  await expect(page.locator(`.index-name[data-prefetch="${slug}"]`)).toHaveCount(1);
+
+  const { cardAt, tasks } = await page.evaluate(() => ({
+    cardAt: window.__cardAt,
+    tasks: window.__tasks,
+  }));
+  /* The premise: the throttle bit, and there was a boot for the index to land
+     behind. An unthrottled run reaches the first card too soon for the claim
+     below to be about anything. */
+  expect(cardAt, 'the first card arrived before the throttle could matter').toBeGreaterThan(300);
+
+  const after = tasks.filter((t) => t.at >= cardAt);
+  const worst = Math.max(0, ...after.map((t) => t.d));
+  /*
+   * **A cliff, not a budget** — `PACK_TASK_CEILING_MS` in
+   * `scripts/throttle-probe.mjs` has the argument, and it holds here for the
+   * same reason: this desk's spread across identical builds is wider than any
+   * threshold tight enough to be a budget. 500 ms is three times the worst
+   * slice seen at 6x and a third of the single task it replaced, so what it
+   * claims is only that the build is sliced at all — which is exactly what
+   * backing the slicing out takes away.
+   */
+  expect(
+    worst,
+    `the longest task after the first card was ${worst} ms; after it: ${after.map((t) => `${t.d}@${t.at}`).join(', ')}`,
+  ).toBeLessThan(500);
   await ctx.close();
 });
 

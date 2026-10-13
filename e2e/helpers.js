@@ -161,14 +161,22 @@ export const carryingWord = (word) => {
  * Throws rather than hand back a query two saints answer: a die with two places
  * to land is not a deterministic test.
  *
+ * **`last` walks the manifest from its end**, which is the order
+ * `views/index/search.js` indexes in: the index is built in slices, so a query
+ * only the final slice can answer is the one that proves the whole corpus went
+ * in and not the prefix that had arrived. `build-manifest.mjs` writes the
+ * corpus in slug order, so walking the slug sort backwards *is* walking the
+ * manifest backwards, and the answer is as stable as the default's.
+ *
  * @returns `{ query, slug }`
  */
-export const soleMatch = async () => {
+export const soleMatch = async ({ last = false } = {}) => {
   const { default: MiniSearch } = await import('minisearch');
   await ensureAllPacks();
   const index = new MiniSearch({ idField: 'slug', fields: SEARCH_FIELDS, searchOptions: SEARCH_OPTIONS });
   index.addAll(CARDS.map(searchDoc));
-  for (const card of [...CARDS].sort((a, b) => a.slug.localeCompare(b.slug))) {
+  const order = [...CARDS].sort((a, b) => a.slug.localeCompare(b.slug));
+  for (const card of last ? order.reverse() : order) {
     const query = String(card.display_name ?? '');
     if (!query) continue;
     const hits = index.search(query);
