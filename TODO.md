@@ -255,8 +255,11 @@ centuries later and an emperor named only to date a life.
 Every link is two-way, or the reader meets a one-sided relation.
 
 **The 383-folder work list is finished, 3 October 2026** (`git log --grep="the
-early corpus, lines"`, five commits). `node scripts/link-coverage.mjs` now reads
-8,931 edges and 2,113 isolated, 40.4%, against 8,464 and 2,235 when the item was
+early corpus, lines"`, five commits). `node scripts/link-coverage.mjs` read
+8,931 edges and 2,113 isolated, 40.4% then; **13,053 edges and 2,739 isolated,
+40.3%, on 14 October 2026** at 6,799 folders, and `scripts/related-floor.mjs`
+reports **0 folders gaining**, so the prose floor is met and the isolated share
+has held steady while the corpus grew by a third, against 8,464 and 2,235 when the item was
 measured. **93 of the 383 gained a link and 290 name nobody this corpus holds**,
 which is the honest rate for the early corpus: the slice-by-slice yield was 33
 of 110, then 17, 16, 6, 16 and 5 of 60, 60, 60, 60 and 33. The 6 is the modern
@@ -265,11 +268,17 @@ martyrs, whose companions are mostly not glorified.
 **What is left of this item is not another slice of that list.** Two things came
 out of the pass and neither is in it:
 
-- **1,497 links point one way only, corpus-wide**, out of 8,931 ends. Every
-  reader on this pass made its own writes symmetric and left the rest, because a
-  one-way link already in the corpus is somebody else's claim. A sweep that
-  completes them is a day's work and wants a rule first: a reverse is only owed
-  where the *forward* link came out of a life's sentence.
+- ~~**1,497 links point one way only, corpus-wide**~~ — **answered, 14 October
+  2026, and there is no sweep to do.** A one-way *stored* edge is not a
+  one-sided relation to the reader: `mentionedIn` is `related` read backwards,
+  computed in `scripts/build-manifest.mjs` and not stored, and the saint page
+  draws the union of the two. The comment there has the reason and it is the
+  rule: "a fact held in two folders is a fact that can disagree with itself."
+  Writing the reverses in was tried (`08e2ea45`, 1,381 rows on 494 folders) and
+  reverted: the reader saw no difference, and `own ⊆ incoming` everywhere cost
+  `e2e/saint.spec.js:1849` and `e2e/prayer.spec.js:823` the premises their union
+  is tested on. **The place to widen the reverse index is `related` itself, in
+  one folder, which is what the prose floor already does.**
 - **A company's clique does not close itself.** The seven martyrs of Tomis were
   reached from three slices and ended with three members holding all six
   partners and one holding three; the Kazan ten and the Gagino eight were the
