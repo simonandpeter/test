@@ -1,4 +1,4 @@
-# Galina (10 February)
+# Galina
 
 The Russian church calendar of the Сретенский monastery keeps her in three words for 10 февраля ст. ст. — «Св. Галины (III).» — a saint of the third century, and that is all. The line calls her «Св.», holy, and gives her no rank beyond it: not a martyr, not a monastic, not a princess. The name link behind it carries the bare nominative «Галина», with no surname and no epithet to set her beside or apart from anyone.
 

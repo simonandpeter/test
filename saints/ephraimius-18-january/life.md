@@ -1,4 +1,4 @@
-# Ephraimius (18 January)
+# Ephraimius
 
 The Greek calendar names him on 18 Ιανουαρίου and gives no life. Its page for him is a single sentence, and the sentence is chiefly about where the name is preserved: «Ο Όσιος Εφραίμιος αναφέρεται στον Σιναϊτικό Κώδικα 150. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Οσίου» — Ephraimius is mentioned in Sinai Codex 150; we have no other details of the venerable one's life.
 

@@ -1,4 +1,4 @@
-# Aristonicus (19 April)
+# Aristonicus
 
 Aristonicus is one of five martyrs saint.gr prints together on 19 April, with [Hermogenes](/saints/hermogenes-19-april), [Expeditus](/saints/expeditus), [Rufus](/saints/rufus-19-april) and [Galatas](/saints/galatas), and of all five the page says the same thing and nothing else: «Δεν έχουμε λεπτομέρειες για τον βίο και το μαρτύριο των Αγίων» — we have no details of the life and the martyrdom of the saints. The calendar's line for the day names them «Άγιοι Ερμογένης, Εξπέδιτος, Αριστόνικος, Ρούφος και Γαλατάς οι Μάρτυρες».
 

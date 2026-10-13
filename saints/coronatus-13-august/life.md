@@ -1,4 +1,4 @@
-# Coronatus (13 August)
+# Coronatus
 
 saint.gr's calendar for 13 Αυγούστου names him and says one thing about him. Its whole notice is the sentence «Ο Άγιος Κορωνάτος μαρτύρησε δια ξίφους» — Saint Coronatus was martyred by the sword. There is no country, no city, no century, no emperor, no year, and no hymn. The couplet of the synaxarion printed above it says no more than the same thing twice over.
 

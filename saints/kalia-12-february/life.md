@@ -1,4 +1,4 @@
-# Kalia (12 February)
+# Kalia
 
 The Ohrid Prologue of Bishop Nikolai Velimirović gives her the day's shortest entry and almost nothing but her charity. She was open-handed towards the wretched out of pure Christian mercy, it says, both as a girl and later as a married woman. Her husband was rich but hard; returning once from a business journey he saw that his wife had spent his wealth away on the poor, and he killed her.
 

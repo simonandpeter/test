@@ -1,4 +1,4 @@
-# Basilla (24 December)
+# Basilla
 
 saint.gr's calendar for 24 December keeps Basilla, and takes care to say how little is certain of her. What the synaxaristes note, it says, is only this: that she suffered martyrdom together with the holy [Eugenia](/saints/eugenia), whom the same calendar keeps on this day, and that she was put to death by beheading. Everything else on the page is given as somebody's opinion, and the opinions do not agree with one another.
 
