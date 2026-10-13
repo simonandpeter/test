@@ -14,6 +14,15 @@
     "new-martyr",
     "presbyter"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1901,
+      "latest": 2000,
+      "display": "20th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and the refusal it narrows is this folder’s own: the synaxis of the new martyrs and confessors of Russia is «the only thing in the calendar that places him in the twentieth century at all». A year is still not recorded, because none was printed. The century is, because the synaxis of the new martyrs and confessors of Russia is itself a dating. The century only."
+    }
+  },
   "office": "Priest",
   "attestations": [
     {

@@ -7,6 +7,15 @@
     "monk",
     "wonderworker"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: this folder’s own note says the page gives no year «and therefore no `dates` object, although the page of Daniel of the Castle of Patras, whom his own life has him meet, puts that man in the eleventh century». A man his life has meeting an eleventh-century ascetic is of that century. The century only."
+    }
+  },
   "names": [
     {
       "form": "Νικήτας",

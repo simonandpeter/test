@@ -13,6 +13,15 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": 271,
+      "latest": 330,
+      "display": "3rd or early 4th century",
+      "basis": "traditional",
+      "note": "Stated and never recorded. The page confesses Christ of her «at the end of the third century and the beginning of the fourth», and the interval is those two ends. No year is taken."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

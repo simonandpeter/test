@@ -5,6 +5,15 @@
   "types": [
     "apostle"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page read for this folder gives him a year. The Russian calendar keeps him within the enumerated Synaxis of the Seventy and the name link behind him reads «Ахаик, апостол от 70-ти»; an apostle of the Seventy is a man of the first century. The century only."
+    }
+  },
   "names": [
     {
       "form": "Αχαϊκός",

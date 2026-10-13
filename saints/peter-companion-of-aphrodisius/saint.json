@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and this folder’s own life says so in those words: the page names the persecutors but «the Vandals put the Arian persecution in Africa in the fifth century, though the page itself does not say so and no year is taken from it here». The year is still not taken; the century is, because a company killed by Vandals in Arian Africa stands in it. The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

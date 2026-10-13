@@ -7,6 +7,15 @@
     "hierarch",
     "patriarch"
   ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own note calls him «the seventh-century Constantine the First», against `constantine-leichoudes`, the eleventh-century Constantine it is careful to distinguish him from; 601–700 is that century."
+    }
+  },
   "names": [
     {
       "form": "Κωνσταντίνος",

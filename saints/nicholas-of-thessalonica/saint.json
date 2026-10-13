@@ -13,6 +13,15 @@
     "venerable",
     "archbishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 151,
+      "latest": 200,
+      "display": "second half of the 2nd century",
+      "basis": "traditional",
+      "note": "Stated and never recorded. The life says modern episcopal lists of Thessalonica «place his hierarchy in the second half of the second century». The interval is that half-century; the year 160 the same sentence credits to Anthimos Alexoudis is a proposal and is not taken."
+    }
+  },
   "office": "Archbishop of Thessalonica",
   "attestations": [
     {

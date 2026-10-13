@@ -7,6 +7,15 @@
     "monk",
     "preacher"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own life says saint.gr’s one sentence has him and Felix of Korel living «in the fifteenth century» and practising asceticism at the monastery of Saint Nicholas; 1401–1500 is that century, and the century is all that is taken."
+    }
+  },
   "names": [
     {
       "form": "Αντώνιος",

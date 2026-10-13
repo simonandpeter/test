@@ -6,6 +6,15 @@
     "venerable",
     "wonderworker"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "Stated and never recorded, and this page is the one that states it. saint.gr makes him one of the three hundred who came to Cyprus «about the middle of the twelfth century, after the Second Crusade of 1147 to 1149». The twenty-two other folders of those three hundred in this corpus are left undated, because their own pages give the count and no date and `barnabas-of-peristerona`’s page says outright that this dating collides with the Theodosius II tradition."
+    }
+  },
   "names": [
     {
       "form": "Μίκαλλος",

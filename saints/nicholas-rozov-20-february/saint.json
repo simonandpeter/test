@@ -14,6 +14,15 @@
     "hieromartyr",
     "presbyter"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1901,
+      "latest": 2000,
+      "display": "20th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and the refusal it narrows is this folder’s own: he is one of the new martyrs of the Russian church and «the line gives no year at all, which is unusual among this calendar’s twentieth-century entries». A year is still not recorded, because none was printed. The century is, because the synaxis of the new martyrs and confessors of Russia is itself a dating. The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

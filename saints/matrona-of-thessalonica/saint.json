@@ -27,6 +27,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd or 4th century",
+      "basis": "traditional",
+      "note": "Stated and never recorded. The Russian reading, which this folder calls the fullest of the four, «puts her in the third or fourth century» and makes her the slave of a Jewish woman; the interval is those two centuries and no year is taken."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

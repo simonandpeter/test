@@ -13,6 +13,15 @@
     "venerable-martyr",
     "new-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1901,
+      "latest": 2000,
+      "display": "20th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and the refusal it narrows is this folder’s own: her second day is «the only thing in the whole entry that places her in the twentieth century, since neither the line nor the page gives a year». A year is still not recorded, because none was printed. The century is, because the synaxis of the new martyrs and confessors of Russia is itself a dating. The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

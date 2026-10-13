@@ -12,6 +12,15 @@
   "types": [
     "venerable-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1901,
+      "latest": 2000,
+      "display": "20th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and the refusal it narrows is this folder’s own: the line «gives no year, which is unusual on this calendar’s twentieth-century entries», and it gives no monastery and no manner of death either. A year is still not recorded, because none was printed. The century is, because the synaxis of the new martyrs and confessors of Russia is itself a dating. The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

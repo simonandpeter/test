@@ -7,6 +7,15 @@
     "monk",
     "preacher"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own life says saint.gr’s whole account has him and Damian living «in the second century» as monks at Rome, sent to Britain by Eleutherius; 101–200 is that century, and the century is all that is taken."
+    }
+  },
   "names": [
     {
       "form": "Φουγάτιος",

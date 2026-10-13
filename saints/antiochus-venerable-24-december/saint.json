@@ -12,6 +12,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder’s own life says the page makes him the author of the Pandektes, who «lived in the middle of the seventh century», came from Galatia and was a monk at Saint Sabbas in Jerusalem; 601–700 is that century, and the century is all that is taken."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

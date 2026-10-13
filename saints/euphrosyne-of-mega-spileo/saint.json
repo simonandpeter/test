@@ -18,6 +18,15 @@
     "venerable",
     "hermit"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: her own page gives no year. She is the shepherdess who waited for `simeon-of-mega-spileo` and `theodore-of-mega-spileo` and led them to the icon, and this folder’s own note records the synaxarists making those two brothers «born at the beginning of the fourth century and dying in peace». The century only."
+    }
+  },
   "related": [
     "simeon-of-mega-spileo",
     "theodore-of-mega-spileo",
