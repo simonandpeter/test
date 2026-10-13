@@ -1,4 +1,4 @@
-# Paul
+# Paul, bishop of Nicaea
 
 Nothing of Paul’s life has come down. The Greek synaxarion keeps him on
 10 September, bishop of Nicaea, and says it has no details; the Orthodox
