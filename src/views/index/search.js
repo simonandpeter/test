@@ -152,13 +152,33 @@ function addInSlices(index, cards) {
     let from = 0;
     const step = () => {
       if (!state || state.cards !== cards) return resolve();
+      /*
+       * **A reader who has typed is not background work, and is not owed a
+       * frozen page either.** The slices exist to keep the scroll of a grid
+       * somebody is reading; a pending query says nobody is reading it, they
+       * are waiting on an answer that cannot come until the last document is
+       * in. So the budget opens up and the next slice is taken at the first
+       * opportunity rather than the first idle one — but it is still a budget,
+       * and the work still yields between slices.
+       *
+       * Both halves are a test. Draining in one pass instead fails
+       * `e2e/index-grid.spec.js`'s *the search index arrives in slices* at
+       * about 1,000 ms against its 500 ms cliff; not draining at all leaves the
+       * carousel drifting on a query narrow enough to stop it
+       * (`e2e/index-carousel.spec.js`, *a search too short to fill the row*),
+       * because on a loaded runner the slices take longer than the five seconds
+       * that test waits.
+       */
+      const waiting = Boolean(state.filters.query.trim());
+      const budget = waiting ? 40 : 8;
       const spent = performance.now();
       do {
         index.addAll(cards.slice(from, from + INDEX_CHUNK).map(searchDoc));
         from += INDEX_CHUNK;
-      } while (from < cards.length && performance.now() - spent < 8);
+      } while (from < cards.length && performance.now() - spent < budget);
       if (from >= cards.length) return resolve();
-      idle(step, { timeout: 500 });
+      if (waiting) setTimeout(step, 0);
+      else idle(step, { timeout: 500 });
     };
     idle(step, { timeout: 500 });
   });
