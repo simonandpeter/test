@@ -78,18 +78,26 @@ where no icon exists** (author, same day), said so in the draft's `why`.
 **Both passes are in — 145 icons** (Greek `6a095e3f`, Romanian the merge after
 it) — and the four calendars now read:
 
+**Re-measured on main, 13 October 2026**, after `npm run build:manifest` at
+6,799 folders — these are the honest numbers, because each pass had measured in
+its own worktree without the other's icons:
+
 | calendar | imageless hero-days, before | now |
 | --- | --- | --- |
-| Romanian | 141 of 357 | **40** |
-| Greek | 168 of 364 | **69** |
-| Russian | — | 4 of 103 |
-| Serbian | — | 6 of 75 |
+| Romanian | 141 of 357 | **35 of 357** |
+| Greek | 168 of 364 | **65 of 364** |
+| Russian | 4 of 103 | **78 of 356** |
+| Serbian | 6 of 75 | **56 of 358** |
 
-Neither pass's own number is the one to quote: each measured in its own
-worktree without the other's icons, and a saint who leads a day in both
-calendars is fixed for both at once. **Re-measure on main after
-`npm run build:manifest`** — `heroless.mjs` reads the manifest, and on a stale
-one it reports the numbers the wave started from.
+**210 distinct saints**, not 254: a saint who leads a day in two calendars is
+fixed for both at once. The Russian and Serbian figures went UP because the
+reading wave filled their years — 103 days of Russian calendar became 356, and
+the new days brought their own imageless leads. That is the wave working, not a
+regression.
+
+Re-measure rather than quote this: `node scripts/heroless.mjs romanian greek
+russian serbian` after a fresh manifest, since `heroless.mjs` reads the manifest
+and on a stale one reports the numbers the last wave started from.
 
 **The method is the part to keep, and it is the Romanian pass's.** Free-text
 Commons search returns scanned 19th-century books for these saints; listing the
