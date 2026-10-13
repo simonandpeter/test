@@ -38,17 +38,40 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**Two agents are out, 14 October 2026.** Everything the four readers of the
-13-14 October sitting carried is merged, verified against the corpus rather
-than its own report, and pushed green (`78076d6d`, 1,122 passed, deployed).
-The two out now:
+**Two agents are out, 14 October 2026.** Everything six readers have carried
+over this sitting is merged, verified against the corpus rather than its own
+report, and pushed green — `3099564e`, 1,122 passed, deployed, and the five
+flaky are all the known shelf-swipe cluster. The two out now are **TODO 16's
+tiers C and D** (the 64 folders whose figure is already in an attestation note,
+then the 270 that carry a marker and no number) and **TODO 18's second half**
+(22 bare ancient display names over 52 folders).
 
-1. **TODO 19** — the seventy notes that still give the dead one-row rule as
-   their reason. Sixteen withhold a day of the saint's own and need a fetch
-   each; fifty-three name a company and need only the reason replaced.
-2. **TODO 16** — the 1,415 undated folders, in batches of about forty, told to
-   take the folders whose evidence is already in the folder first and to
-   **report the yield per batch**, which nobody has measured.
+**A duplicate JSON key is invisible to everything but the bytes, and ten
+folders had one.** `JSON.parse` keeps the LAST of two keys of the same name and
+says nothing, so a folder with two `dates` blocks built, validated, rendered and
+passed the suite while a whole reading was unread — three of the ten were
+dropping a field of a different kind, a death century behind a floruit.
+`tests/folder-json.test.mjs` is the guard and reads the raw text, because a
+`JSON.parse` there would be the bug testing itself. **It was written wrong
+first**: `new URL(...).pathname` under a repo path containing a space gives
+`Agios%20Website`, so every `existsSync` was false and the test passed over
+ZERO folders with all ten duplicates in the tree. That is CLAUDE.md's "ask what
+your instrument would look like if it were doing nothing", and it looked exactly
+like that.
+
+**Dates: 1,230 of 6,799 undated, 18.1%**, from 1,415 / 20.8%, with nothing
+fetched. The yield per tier is in TODO 16 and is the number to work from rather
+than re-measure. The trap worth carrying: **a year in a life is as often a
+manuscript as a date** — 97 of 211 tier-B folders have their only number as a
+shelf-mark, «the Paris Codex 1578», «at page 640, line 6».
+
+**Two questions are the author's and neither should be guessed at.**
+`demetrius-of-moscow`'s 19 октября stands in his «Дни памяти» and is his birth
+day, while the day page prints no line for him — so the brief's own test and the
+day page disagree, and if the list wins outright he is owed a row. And the
+Aglomazovo pairs (`john-of-aglomazovo-a`/`-b`, `paul-of-aglomazovo-a`/`-b`) are
+four distinct men whom the calendar separates only by position in a line, which
+is word order and not words; an epithet off it would be an invention.
 
 **One thing was refused and is NOT done.** A reader's attempt to delete eight
 dead `READ_FOLDS` keys from `scripts/corpus-gate.mjs` was refused by the
