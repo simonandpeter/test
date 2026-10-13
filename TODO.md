@@ -508,42 +508,67 @@ new one is better for every face it has to fill.
 2026-10-03: "there is always some marker at least a century that can be
 listed"). It is written down now.
 
-**185 done, 14 October 2026, and the yield rate is measured** — which was the
-thing nobody had. `dates` is now absent on **1,230 of 6,799 folders — 18.1%**,
-from 1,415 / 20.8%, and nothing was fetched: every one of the 185 came out of a
-calendar line the folder already quotes or a sentence in its own life.
+**282 done, 14 October 2026, and the yield rate is measured** — which was the
+thing nobody had. `dates` is now absent on **1,133 of 6,799 folders — 16.7%**,
+from 1,415 / 20.8%, and **nothing was fetched**: every number came out of a
+calendar line the folder already quotes, a sentence in its own life, or another
+folder in this corpus.
 
-`.tmp/item16-datescan.py` tiers the 1,415 by the evidence their own files hold:
+| pool | n | written | yield | evidence |
+| --- | --- | --- | --- | --- |
+| tier A | 150 | 150 | **100%** | a year or century in an attestation's `source.text` |
+| tier B | 211 (really 114) | 35 of 50 read | **70%** | a year or century in `life.md` prose |
+| **word centuries** | 83 | 42 | **51%** | a century the prose spells in words |
+| **named reigns** | 44 | 26 | **59%** | "under X" in the folder's own prose |
+| tier C | 64 | 18 | **28%** | a year in an attestation `note` |
+| apostolic | 72 | 11 | **15%** | `types: apostle`, or the Seventy in the prose |
+| tier D, the rest | ~200 | — | untried | a marker and no number |
+| tier E | 720 | — | — | nothing at all |
 
-| tier | evidence | n | yield |
-| --- | --- | --- | --- |
-| A | a year or century in an attestation's `source.text` | 150 | **100%** — exhausted |
-| B | a year or century in `life.md` prose | 211 (really 114) | **70%** |
-| C | a year or century only in an attestation `note` | 64 | untried |
-| D | a marker (reign, council, persecution, Soviet) and no number | 270 | untried |
-| E | nothing at all | 720 | — |
+**Two blind spots were in the instruments, not the corpus.**
+`item16-datescan.py`'s century pattern wants digits and an ordinal suffix, so
+"the fourth century" read as nothing and the folder fell to tier D or E — 83
+folders spell it in words and they were the highest-yield pool anybody found.
+And `scripts/date-citation-audit.mjs` read `source.text` alone, so not one of
+tier C's 64 slugs could appear in the report that exists for exactly that
+defect; it reads the note too now, scrubbed (`e48b6386`).
 
-**The in-folder scan reaches 695 of 1,415, 49%.** Tier A was a scripted
-conversion with a hand review and cost almost nothing per folder; tier B costs
-a real reading each and one in three ends in nothing.
-
-**Tier B is half the size it looks, and this is the trap to carry forward: a
-year in a life is as often a manuscript as a date.** 97 of its 211 folders —
-46% — have their only year as a shelf-mark or a page reference: «the Paris
-Codex 1578», «the Sinai codex 631», «at page 640, line 6». saint.gr's shortest
-notices say which manuscript keeps the saint and nothing else, so a numeric scan
-reports a date exactly where the page is confessing it has none.
-`.tmp/item16-lifefilter.py` filters them; tier B's real reach is 114.
+**THE TRAP, and it is the same one in every tier: a number in a folder's prose
+is more often than not in the clause saying *this is not that saint*.**
+Of tier B's 211, **97 have their only year as a shelf-mark or a page
+reference** — «the Paris Codex 1578», «at page 640, line 6» — because saint.gr's
+shortest notices name the manuscript that keeps the saint and nothing else. Of
+tier C's 64, **46 refusals** were a folio, an Evergetinos page, a life or name
+page id, the 110th year of a man's life, or the count of the three hundred
+Alamanoi of Cyprus. Of the emperor marker's 56 hits, **30 refusals**, four of
+them saint.gr's *etymology* block, which dates whoever else bore the name — a
+physician under Nero, a tragic poet of Alexandria, an eleventh-century painter.
+And "twelve" is a count 61 times in 72. `.tmp/item16-lifefilter.py`,
+`item16-wordcent.py`, `item16-rulers.py` and `item16-dmarkers.py` are the
+filters.
 
 **A Roman century lands on N01..N00 on purpose.** `lifeBounds` reads a
 death-only interval as born = earliest, died = latest, so 301..400 spans
 exactly the hundred years `map-span.test.mjs` allows and 300..400 would fail it.
 
+**`display` is not free prose.** `tests/date-display.test.mjs` holds every
+recorded `display` to what `lib/date-display.js` can read in all four packs, and
+ruler phrases live in a **pack-only `eras` table of 65 fixed strings** — "under
+the emperor Justin" is not one and "under Justin I" is. The generic century
+grammar ("late 4th century", "3rd or 4th century") parses; a new ruler is a
+four-pack code commit.
+
+**A reign resolved to years is taken from the corpus, not from memory.** 50
+`eras` displays already carry bounds on dated folders — Diocletian 284-305 on 64
+of them, Domitian 81-96, Decius 249-251, Justin I 518-527.
+
 **And "revert to null" is not "remove the key".** Writing `"dates": null` into a
 folder is REFUSED by the manifest build — the schema gives `dates` no null
 branch — and the refusal surfaces five folders away, as `related saint
-"<slug>" does not exist`. The corpus's undated folders have no `dates` key at
-all.
+"<slug>" does not exist`. The corpus's undated folders have no `dates` key.
+
+**One folder wants a ruling:** `joseph-of-bisericani`'s page gives a death of
+1711 against a fifteenth-century birth and does not reconcile them.
 
 What is left, in the order the yield suggests: tier C (64, a note already holds
 the figure), then tier D (270, a marker to resolve to a century), then the 720
