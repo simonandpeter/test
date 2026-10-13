@@ -38,9 +38,36 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**No agent is out, 14 October 2026.** Everything the four readers of this
-sitting carried is merged, verified against the corpus rather than its own
-report, and pushed green.
+**Two agents are out, 14 October 2026.** Everything the four readers of the
+13-14 October sitting carried is merged, verified against the corpus rather
+than its own report, and pushed green (`78076d6d`, 1,122 passed, deployed).
+The two out now:
+
+1. **TODO 19** — the seventy notes that still give the dead one-row rule as
+   their reason. Sixteen withhold a day of the saint's own and need a fetch
+   each; fifty-three name a company and need only the reason replaced.
+2. **TODO 16** — the 1,415 undated folders, in batches of about forty, told to
+   take the folders whose evidence is already in the folder first and to
+   **report the yield per batch**, which nobody has measured.
+
+**One thing was refused and is NOT done.** A reader's attempt to delete eight
+dead `READ_FOLDS` keys from `scripts/corpus-gate.mjs` was refused by the
+permission classifier — the gate counts as a shared resource — and it did not
+work around it, which was right. The keys, and two Cyrillic rows whose reading
+it settled but could not write, are at the end of `../ro-run/FINDINGS.md` and in
+TODO 18. **Nobody should re-read those pages; the reading is on file.** It
+belongs with item 17's pass over the 1,294 superseded keys.
+
+**TODO 18's premise was wrong and the way it went wrong is the lesson.** It
+claimed nine surname-plus-day sets were one man each recorded twice. All nine
+are two, three or four distinct men — twenty-one folders, twenty-one `/name/`
+pages, each listing one proper day of its own and never the other folder's.
+Worse: **six of the nine had already been read and settled in the gate's own
+`READ_FOLDS` notes** before the item was written, and the item was written off a
+manifest scan instead. A manifest scan is not a reading. What landed is the
+other branch — eight folders took their day as an epithet, which dissolved
+seven Latin fold keys (`?` 360 → 358, `·` 965 → 960) without changing any
+fold's membership.
 
 **One thing was refused and is NOT done.** A reader's attempt to delete eight
 dead `READ_FOLDS` keys from `scripts/corpus-gate.mjs` was refused by the
