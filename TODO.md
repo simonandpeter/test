@@ -14,11 +14,18 @@ uses now and the saint page's veneration table puts a church's second day on
 that church's one row. Matthew's Romanian 16 noiembrie is recorded and the day
 is no longer blank. `git log --grep="more than one day"` is the work.
 
-**What is left is the corpus pass, and it is `STRUCTURE.md` §6 item 13 now**:
-Andrew the First-Called (Romanian 30 November) and Philip (14 November) are
-still recorded only on the 30 June synaxis, and a reader who opens the Romanian
-30 November will not find Andrew. The note on each first row already names the
-day; the day's own page is the citation and is read before it is written.
+**The two apostles this item named are done** (checked 13 October 2026).
+`andrew-the-first-called` and `philip-the-apostle` each carry **two romanian
+rows** — the 30 June synaxis and their own day, 30 noiembrie and 14 noiembrie,
+both confirmed against doxologia's own lines («✝) Sfântul Apostol Andrei, cel
+Întâi Chemat, Ocrotitorul României» and «✝ Sfântul Apostol Filip, unul dintre
+cei 12 Apostoli»). A reader who opens the Romanian 30 November finds Andrew.
+
+**What is left is the same pass on the other calendars.** Both apostles hold a
+single `greek` row, on 30 June, and saint.gr keeps its own 30 November and
+14 November days. That is the Greek wave's work and not a reader's: a second row
+is appended by the writer with `.tmp/upgrade.py`'s `row_add`, off the day page
+it quotes. Whether saint.gr in fact lists them there was NOT checked here.
 
 ## 2. Lives that cross-reference in prose with no link
 
