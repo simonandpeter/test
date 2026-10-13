@@ -575,53 +575,76 @@ python -c "import io;s=io.open('g.txt',encoding='utf-8').read();print(s.count(u'
 
 It stood at **360 unread on 13 October 2026** with the corpus at 6,799 folders.
 
-## 18. Seventy-one folders share thirty-one display names
+## 18. Twenty-four display names on fifty-six folders
 
-**Found 14 October 2026**, while checking that item 3's renames left no
-collision behind. They did not — but the manifest already held 31 display names
-carried by more than one folder, 71 folders in all. `Peter` is five saints.
-`Paul` is the Apostle and a bishop of Nicaea. A reader on All Saints meets
-identical cards and nothing on them tells the two apart.
+**The first half is done, 14 October 2026, and its premise was wrong.** This
+item was written off a manifest scan and claimed nine surname-plus-day sets —
+21 folders — were "probably one man each, recorded twice because the dead
+one-row rule left a reader no way to write a second day". **All nine are two,
+three or four distinct men. Nothing merged and no folder was deleted.**
 
-Measure it with:
+The test was the calendar's own and it came back the same way twenty-one times
+out of twenty-one: every folder hangs on its own numbered `/name/` page, each
+page lists exactly one proper day of its own beside the 26 января new-martyrs
+synaxis, and never the other folder's day. Run in both directions — the name
+page each folder cites, and the name link behind the other day's line — so no
+verdict rests on one page. Where the calendar gives more than the day it is
+decisive: Michael (Markov) is an иерей on one page and a псаломщик on the
+other; Sergius (Tsvetkov) an иерей of 1938 and a диакон of 1937; Basil
+(Arkhangelsky) three men across two years and two grades; Nicholas (Rozov)
+four.
+
+**And this item should never have been written in that form, which is the part
+worth keeping.** Six of the nine sets had already been read and settled in
+`scripts/corpus-gate.mjs`'s own `READ_FOLDS` notes — on exactly this name-page
+evidence, all concluding "two men" — before the item was written, and the
+re-reading agrees with them page id for page id. The gate records the same
+method and verdict for two further surname pairs outside the list. **The
+corpus's own readings are the first thing to check before proposing a merge,
+and a manifest scan is not a reading.**
+
+What landed instead is the instruction's other branch: where two display names
+were identical the newer folder takes its day, which is this corpus's
+established form — 540 folders carry a `(D Month)` epithet and none carries a
+year — with the oldest holder left bare. Eight folders, `display_name` and the
+life's `#` heading only. Seven Latin fold keys dissolved with them (`?` 360 →
+358, `·` 965 → 960), because the fold is on the display name; no fold's
+membership changed and every Cyrillic row kept its reading.
+
+**Two things are left and each needs the author.**
+
+- **The Aglomazovo pairs cannot be told apart.** `john-of-aglomazovo-a` / `-b`
+  and `paul-of-aglomazovo-a` / `-b` are two men each — the day line enumerates
+  «… Филиппа, Иоанна, Павла, Андрея, Павла, Василия, Алексия, Иоанна …»,
+  the name twice, and the calendar keeps a separate page for each. But same
+  day, same year 1918, same company, bare forename, identical page titles, no
+  rank and no surname: **the only differentiator is position in the line**,
+  which is the calendar's word order and not its words. An epithet off that
+  would be an invention. Both folders' lives state the reading. They are the
+  last two colliding names of this half.
+- **Six dead `READ_FOLDS` keys are still in `scripts/corpus-gate.mjs`**, left by
+  the renames, plus two that were already dead. A dead key is never looked up,
+  so the gate cannot catch it — the failure `BRIEF-ADDENDUM` §3 describes. The
+  reader's attempt to write them was **refused by the permission classifier**
+  (the gate counts as a shared resource) and it did not work around it, which
+  was right. The keys, and two Cyrillic rows whose reading it settled but could
+  not write, are in `ro-run/FINDINGS.md` and in its hand-back. This is work for
+  whoever has the gate open — and it belongs with item 17's pass.
+
+**The second half is untouched: 22 names over 52 folders**, the bare ancient
+ones — `Peter` ×5, `Philip` ×3, `John` ×3, `Alexander` ×3, `Basil` ×3,
+`Faustus` ×3. Nothing is duplicated there; the names are underdetermined, and
+the fix is the opposite one — give each the epithet that distinguishes it, as
+`BRIEF.md` §4 already requires of every new folder, with the see in `office`
+and the rank in `types`. Measure with:
 
 ```
 node -e "const m=require('./data/manifest.json');const c={};for(const s of m)(c[s.display_name]??=[]).push(s.slug);for(const[k,v]of Object.entries(c))if(v.length>1)console.log(v.length,k,v.join(','))"
 ```
 
-**Two different problems are in that list and they want opposite treatments.**
-
-**The first is 21 folders in nine surname-plus-day sets, and they are probably
-one man each.** `alexis-smirnov` / `alexis-smirnov-9-march`;
-`basil-arkhangelsky` / `basil-arkhangelsky-31-october`; `michael-markov` /
-`michael-markov-27-february`; `nicholas-rozov` / `-20-february` / `-7-march`;
-`nicholas-troitsky` / `-25-february`; `sergius-tsvetkov` / `-21-december`;
-`peter-uspensky` / `peter-presbyter-martyr-1930`; `john-of-aglomazovo-a` / `-b`;
-`paul-of-aglomazovo-a` / `-b`. Every one is a 20th-century Russian martyr whose
-surname the calendar's name index supplies, and the second folder exists only
-because a reader met the same name on a second day and **could not write a
-second row** — which is exactly what the dead one-row-per-church rule forced.
-That rule is gone (BRIEF.md §4, `row_add`), and the author's standing rule for
-these is **"merge if they are the same"**: one folder, two rows.
-
-It is one fetch each to settle: the calendar's own name page lists «Дни памяти»
-for that man, and if both days are on it, it is one man. **Do not assume it.**
-Alexis Smirnov's two folders agree on the year (1938) and the rank (Priest) and
-look like one man; the three Nicholas Rozov folders do **not** — 1941 Archpriest,
-no year Archpriest, 1930 Priest — so that set is at least two men and possibly
-three, and Rozov was a common name among the clergy of those years.
-
-**The second is 50 folders whose names are genuinely bare**, mostly ancient:
-`Peter` ×5, `Philip` ×3, `John` ×3, `Alexander` ×3, `Basil` ×3, `Faustus` ×3.
-Nothing is duplicated here; the names are simply underdetermined, and the fix is
-the opposite one — give each the epithet that distinguishes it, the way
-`BRIEF.md` §4 already requires of every new folder ("Keep the epithet that
-distinguishes him from the other four of his name"). The see goes in `office`
-and the rank in `types`, so what the display name owes the reader is the
-distinguishing epithet and nothing more.
-
-Order to do it in: the nine merge sets first, because they change the corpus's
-shape, and the bare names after, because renaming is cheap and reversible.
+**One stray found in passing**: `nicholas-rozov-10-december` stores
+`"Nicholas (Rozov), 10 December"` — a comma where all 540 other day-epithets
+use parentheses. One line.
 
 ## 19. Seventy notes still give the dead rule as their reason
 
