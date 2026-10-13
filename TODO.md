@@ -508,7 +508,53 @@ new one is better for every face it has to fill.
 2026-10-03: "there is always some marker at least a century that can be
 listed"). It is written down now.
 
-`dates` is `null` outright for **1,415 of 6,799 folders — 20.8%**
+**185 done, 14 October 2026, and the yield rate is measured** — which was the
+thing nobody had. `dates` is now absent on **1,230 of 6,799 folders — 18.1%**,
+from 1,415 / 20.8%, and nothing was fetched: every one of the 185 came out of a
+calendar line the folder already quotes or a sentence in its own life.
+
+`.tmp/item16-datescan.py` tiers the 1,415 by the evidence their own files hold:
+
+| tier | evidence | n | yield |
+| --- | --- | --- | --- |
+| A | a year or century in an attestation's `source.text` | 150 | **100%** — exhausted |
+| B | a year or century in `life.md` prose | 211 (really 114) | **70%** |
+| C | a year or century only in an attestation `note` | 64 | untried |
+| D | a marker (reign, council, persecution, Soviet) and no number | 270 | untried |
+| E | nothing at all | 720 | — |
+
+**The in-folder scan reaches 695 of 1,415, 49%.** Tier A was a scripted
+conversion with a hand review and cost almost nothing per folder; tier B costs
+a real reading each and one in three ends in nothing.
+
+**Tier B is half the size it looks, and this is the trap to carry forward: a
+year in a life is as often a manuscript as a date.** 97 of its 211 folders —
+46% — have their only year as a shelf-mark or a page reference: «the Paris
+Codex 1578», «the Sinai codex 631», «at page 640, line 6». saint.gr's shortest
+notices say which manuscript keeps the saint and nothing else, so a numeric scan
+reports a date exactly where the page is confessing it has none.
+`.tmp/item16-lifefilter.py` filters them; tier B's real reach is 114.
+
+**A Roman century lands on N01..N00 on purpose.** `lifeBounds` reads a
+death-only interval as born = earliest, died = latest, so 301..400 spans
+exactly the hundred years `map-span.test.mjs` allows and 300..400 would fail it.
+
+**And "revert to null" is not "remove the key".** Writing `"dates": null` into a
+folder is REFUSED by the manifest build — the schema gives `dates` no null
+branch — and the refusal surfaces five folders away, as `related saint
+"<slug>" does not exist`. The corpus's undated folders have no `dates` key at
+all.
+
+What is left, in the order the yield suggests: tier C (64, a note already holds
+the figure), then tier D (270, a marker to resolve to a century), then the 720
+with nothing, where a source outside the folder is the only way and the claim
+that a saint cannot be placed needs its own evidence.
+
+---
+
+The original statement of the item follows.
+
+`dates` was `null` outright for **1,415 of 6,799 folders — 20.8%**
 (re-measured 13 October 2026; it was 2,021 of 5,231, 38.6%, when this item was
 written). The absolute count fell by 606 while the corpus grew by 1,568, so the
 reading waves are filling dates faster than they add undated folders — but a
