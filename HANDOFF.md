@@ -38,22 +38,46 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**One agent is out, 14 October 2026** — TODO 5's icon programme, 210 distinct
-saints whose day leads with no picture. **Deliberately one and not two**: §5's
-own measurement is that two Commons clients at once provoke the 429s by
-themselves, so a second agent would cost yield rather than buy it.
+**No agent is out, 14 October 2026.** Everything nine readers carried over this
+sitting is merged and verified against the corpus rather than its own report.
 
-Everything eight readers have carried over this sitting is merged, verified
-against the corpus rather than its own report, and pushed green — `436e674f`,
-1,122 passed, deployed.
+**MAIN IS RED and the cause is undiagnosed — read this before pushing.**
+`e2e/index-carousel.spec.js` at *the row comes back where it was after a trip
+to another page* failed twice on run 38454885088: **2,511 px of a 2,600 px
+offset lost**, so the row came back at the HEAD rather than at a clamped
+position. The offset was lost or never applied, not truncated by a half-packed
+track.
 
-**The flaky list has been the same two tests in every run of this sitting**, on
-both projects, and never a hard failure: `e2e/chrome.spec.js:273` (the touch
-shelf row) and `:328` (a swiped row under reduced motion), with one or two
-`index-carousel` cases joining them at random. Six runs, six appearances, six
-recoveries on retry. That is a budget and not a bug, which is what
-`STRUCTURE.md` §6 already says of the shelf swipe — the useful new fact is the
-rate.
+It passes 8 of 8 on this desk, and **CPU is not the variable** —
+`scratchpad/restore-probe.mjs` throttles to 1x, 6x and 20x and restores to
+within 13 px every time, with the defect in and with it out. So the race I
+assumed is not it; I wrote that fix (latch the opening write in
+`ui/loop-scroll.js` only when it lands) and **reverted it**, because the
+back-out restores too and there was nothing to believe it on.
+
+Two candidates sit in the code's own comments and **neither is demonstrated**:
+`views/index/modes.js:975` discards the remembered offset whenever
+`carouselKey` is already set, and `views/index/place.js`'s straight write is
+guarded on `track.clientWidth > 0` — trap 7, a hidden element reports 0 and
+ignores writes — with nothing retrying when the guard declines. That file
+already records a prior incident of the same shape, 3,760 px lost under reduced
+motion. **The probe would need the manifest arriving late rather than the CPU
+being slow**: on CI that is 3.5 s of the boot.
+
+The same run also hard-failed `index-carousel.spec.js:2090` the run before, and
+**that one is fixed and measured**: the drift slop went 40 → 56 px because the
+movement it was actually catching was 41.5 and 43.6 px against a 40 px line, and
+it failed 1 in 6 ALONE at one worker. 12 of 12 at 56, 3 of 3 fail at 10.
+
+**Two of this sitting's reds were mine, and the second one twice.** TODO.md
+named a worklist file that lives in the session scratchpad rather than in the
+repo, and `citations.test.mjs` fails on any path a document names and the
+checkout does not have. I then pushed that doc edit **without re-running the
+suite**, on the assumption that prose cannot break a build — here it can, since
+`citations.test.mjs` and `structure.test.mjs` both execute the documents. And
+writing this paragraph with the offending name quoted in it failed the same test
+again: the rule is about the characters in the file, not about why they are
+there. A path that is not in the repo cannot be named in a document at all.
 
 **A duplicate JSON key is invisible to everything but the bytes, and ten
 folders had one.** `JSON.parse` keeps the LAST of two keys of the same name and
