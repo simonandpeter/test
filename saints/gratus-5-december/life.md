@@ -1,4 +1,4 @@
-# Gratus (5 December)
+# Gratus
 
 saint.gr's calendar for 5 December names Gratus and gives him two sentences. The venerable Gratus reposed in peace; and in certain synaxaria, the page says, he is mentioned as bishop of Ephesus, and mentioned together with the venerable [Nonnus](/saints/nonnus-5-december), whom the same calendar keeps on the same day. No country, no reign and no year is printed, and the page does not itself call him a bishop.
 

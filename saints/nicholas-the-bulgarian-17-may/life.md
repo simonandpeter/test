@@ -1,4 +1,4 @@
-# Nicholas the Bulgarian (17 May)
+# Nicholas the Bulgarian
 
 saint.gr's calendar for 17 May names him and gives him two sentences, the second of which says there is nothing more. The holy great martyr Nicholas came from Bulgaria and was martyred in the year 1555. We have no further details, the page says, about the saint's life or his martyrdom; its head line dates him only «(; - 1555)».
 

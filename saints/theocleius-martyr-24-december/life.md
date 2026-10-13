@@ -1,4 +1,4 @@
-# Theocleius (24 December)
+# Theocleius
 
 saint.gr's calendar for 24 December keeps Sossius and Theocleius on one page, and begins by saying where they come from: they are unknown to the Synaxaristes of Saint Nikodemos, and are mentioned in the Parisian Codex 1621 with a few biographical details. What follows is what that codex gives. They were martyred, it says, under Maximian, whose reign the page dates 286 to 305, and under Magnentius.
 

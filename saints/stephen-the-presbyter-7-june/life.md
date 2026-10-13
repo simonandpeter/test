@@ -1,4 +1,4 @@
-# Stephen the Presbyter (7 June)
+# Stephen the Presbyter
 
 saint.gr's calendar names him and gives him one sentence: «Ο Όσιος Στέφανος ο Πρεσβύτερος απεβίωσε ειρηνικά» — the venerable Stephen the Presbyter died peacefully. That is the whole of the life. The page adds no century, no country, no church and no relics, and the only things it says of what he was are the two rank words in the day's line, «Όσιος» and «Πρεσβύτερος».
 

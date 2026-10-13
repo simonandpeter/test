@@ -1,4 +1,4 @@
-# Michael the Russian (1 April)
+# Michael the Russian
 
 saint.gr's whole notice for him is one sentence: the holy Michael was a Russian fool for Christ and a new martyr. That is the entire entry — no year, no city, no monastery, no manner of death, no persecutor, no relic, no hymn and not even the distich the site usually prints. Three things stand: that he was Russian, that he took on the folly for Christ's sake, and that he died a martyr's death in one of the modern persecutions, which is what the word new marks.
 

@@ -1,4 +1,4 @@
-# Evhie (14 December)
+# Evhie
 
 doxologia.ro's calendar names him and gives no life. Its line for 14 decembrie reads «Sfântul Mucenic Evhie», and the page the calendar links under that name carries the name only: no life, no troparion text, no year, no place and no companions. The long life which the other martyrs of the day share — the martyrs of Caesarea in Bithynia under Decius, and the martyrs of the Thebaid under Diocletian — does not mention him anywhere in it, so the Romanian calendar keeps him on this day without telling his story.
 

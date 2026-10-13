@@ -1,4 +1,4 @@
-# Neophyte (17 October)
+# Neophyte
 
 saint.gr's calendar for 17 October keeps two women on one line — «Αγίες Ισιδώρα και Νεοφύτη» — and Neophyte is one of them. The page behind the line gives each of them a heading of her own, hers being «Αγια Νεοφυτη», and then prints one sentence for both, which is the whole of what the calendar has.
 
