@@ -2578,29 +2578,45 @@ test('the masthead is outlines in the served HTML, not text waiting for a face',
   await expect(mark).toHaveAttribute('aria-label', 'AGIOS');
 });
 
-test('no font is preloaded, and the serif is spent for the paint', async ({ page }) => {
+test('the two Latin subsets are preloaded, and only those', async ({ page }) => {
   /*
-   * **The author's call, 14 October 2026**, taken over the two Latin preloads
-   * Addendum G6 asked for on 2026-08-28: the Lighthouse floor is FCP < 1500 ms
-   * on a 1.6 Mbit/s, 4x-CPU profile, and the workflow's own note names blocking
-   * these two files as the measured lever — roughly 700 ms to 510 ms under that
-   * throttle.
-   *
-   * What it costs, so nobody reads the absence as an oversight:
-   * `font-display: optional` stands, and optional gives a file about a hundred
-   * milliseconds and then keeps the fallback *for the life of the page*. The
-   * preload was what started the request with the HTML instead of after the
-   * stylesheet had been parsed and matched, so without it a cold load mostly
-   * renders in the fallback face and stays there. Zero layout shift either way,
-   * which is the one thing optional guarantees and the reason `swap` was never
-   * the alternative.
+   * Addendum G6. `font-display: optional` stands and is *why* this matters:
+   * optional gives the file about a hundred milliseconds and then keeps the
+   * fallback for the life of the page, so a preload is what puts the face
+   * inside that window without the layout shift `swap` would cost.
    *
    * Read out of the served HTML rather than off a live page: this is a claim
    * about what the document says before anything runs.
+   *
    */
   const html = await (await page.request.get('/')).text();
   const links = [...html.matchAll(/<link[^>]*rel="preload"[^>]*>/g)].map((m) => m[0]);
-  expect(links, html.slice(0, 400)).toHaveLength(0);
+  expect(links.length, html.slice(0, 400)).toBe(2);
+
+  const latin = links.find((tag) => /literata-normal-latin-[^"]*\.woff2/.test(tag) && !/latin-ext/.test(tag));
+  const ext = links.find((tag) => /literata-normal-latin-ext-[^"]*\.woff2/.test(tag));
+  /*
+   * **Two different files.** Vite's hash can itself begin with a hyphen, so a
+   * pattern loose enough to match a hash after `literata-normal-latin-` also
+   * matches `ext-`, and the first build shipped the same subset twice.
+   */
+  expect(latin, 'the plain Latin subset is not preloaded').toBeTruthy();
+  expect(ext, 'the Latin-ext subset is not preloaded').toBeTruthy();
+  expect(latin).not.toBe(ext);
+
+  for (const tag of [latin, ext]) {
+    // Without `crossorigin` the browser fetches the file a second time for the
+    // CSS and the preload is a cost rather than a saving.
+    expect(tag, 'a font preload without crossorigin is fetched twice').toContain('crossorigin');
+    expect(tag).toContain('as="font"');
+  }
+
+  // And not the italics, nor the Greek and Cyrillic subsets: italic appears
+  // inside lives rather than at first paint, and a reader in one script should
+  // not be made to fetch three others.
+  expect(links.join(' ')).not.toContain('italic');
+  expect(links.join(' ')).not.toContain('cyrillic');
+  expect(links.join(' ')).not.toContain('greek');
 });
 
 /*

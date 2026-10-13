@@ -215,5 +215,5 @@ export default defineConfig({
   // '/' locally; CI sets BASE_PATH to '/<repo>/' for project Pages. A custom
   // domain later means removing the variable from the workflow, nothing else.
   base: process.env.BASE_PATH || '/',
-  plugins: [stripMarkupComments(), contentDirs(), wordmark()],
+  plugins: [stripMarkupComments(), contentDirs(), wordmark(), preloadLatin()],
 });
