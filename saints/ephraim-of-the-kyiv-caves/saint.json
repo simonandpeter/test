@@ -6,6 +6,15 @@
     "venerable",
     "ascetic"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "Stated as a century and never recorded. This folder's own Greek note says the entry gives only a century and reads him as of the cave and of the thirteenth century; 1201-1300 is that century. The 1062 of the eunuch Ephraim and the 1412-1492 of Ephraim of Russia, named in the same note as other men, are not taken."
+    }
+  },
   "names": [
     {
       "form": "Εφραίμ",

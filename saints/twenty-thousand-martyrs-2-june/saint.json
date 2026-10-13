@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "under Maximian",
+      "basis": "inferred",
+      "note": "Inferred, not stated. This folder's own Serbian note records the company cut down under Maximian in Illyricum and refuses the only year the entry prints, about 303, because that is the preacher's own repose in a cave in Hermelia years afterwards. That refusal stands and the year is not taken; the interval is Maximian's reign, as nine other folders in this corpus hold that marker. The Greek page gives no year, no reign and no country."
+    }
+  },
   "names": [
     {
       "form": "Είκοσι Χιλιάδες Μάρτυρες",

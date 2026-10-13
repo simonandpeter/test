@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 193,
+      "latest": 211,
+      "display": "193–211",
+      "basis": "inferred",
+      "note": "Inferred, not stated: neither page gives him a year, and both name the emperor Severus. This folder's own Russian note quotes the line, suffered for Christ under the emperor Severus (193-211), and that reign is the only chronology either book carries; the interval is the reign as that line prints it. The hedged dagger-year in the same reading is not taken, and the Roman numeral pair II-III agrees with this interval."
+    }
+  },
   "names": [
     {
       "form": "Σεραπίων",

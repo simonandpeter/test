@@ -7,6 +7,15 @@
     "ascetic",
     "wonderworker"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 325,
+      "latest": 325,
+      "display": "325",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr gives him no year, and this folder's own Greek note says so and adds that the council is not a year the page states for him. The page's whole notice makes him one of the 318 Fathers of the First Ecumenical Council at Nicaea, and that council's year is a matter of record; `floruit` is the field for a man known by a council he sat at. No birth and no death are proposed. The 318 is a count of the Fathers, not a year."
+    }
+  },
   "office": "Bishop of Seleucia",
   "names": [
     {

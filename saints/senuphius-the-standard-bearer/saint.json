@@ -5,6 +5,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated, and this folder asked for it. Its own Serbian note records the Ohrid Prologue making him a contemporary of the patriarch Theophilus and of the emperor Theodosius the Great, refuses a date on the ground that a reign is not a year, and then names `abraham-of-carrhae`'s floruit 395-408 as the corpus already doing what that reading declined to do. `theodosius-the-great`, linked here, carries birth 346 and death 395, and the interval here is the fourth century, which is where both men stand. The patriarch is named in the life and in no field, as that note left him."
+    }
+  },
   "names": [
     {
       "form": "Сенуфије Заставоносац",

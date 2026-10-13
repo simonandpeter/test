@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 518,
+      "latest": 527,
+      "display": "under Justin I",
+      "basis": "inferred",
+      "note": "Inferred, not stated: the page gives no year and no city, and this folder's own Greek note records that the reign of Justin (518-527) stands on Arethas's page rather than on hers. `aretas-of-nagran`, whom this folder links, carries death 523. The interval is that reign."
+    }
+  },
   "names": [
     {
       "form": "Αγία Γυναίκα και το Άγιο Βρέφος της",

@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr gives her no year, and this folder's own Greek note records that her son's notice dates his passion to 361. `cyriacus-of-jerusalem` carries death 361-363, so his mother is a woman of the fourth century. The century only."
+    }
+  },
   "related": [
     "cyriacus-of-jerusalem"
   ],

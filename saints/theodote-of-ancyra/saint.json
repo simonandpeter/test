@@ -6,6 +6,15 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 304,
+      "display": "3rd or early 4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: the page gives no year for the women, as this folder's own Greek note says. She is the eighth of the company of which this corpus keeps seven, and `thecusa-of-ancyra` carries exactly this interval and this display; `theodotus-of-ancyra`, whose head line on her own page the note records as ending 304, carries death 303 or 304. Her company's reading, not a new one."
+    }
+  },
   "names": [
     {
       "form": "Θεοδότη",

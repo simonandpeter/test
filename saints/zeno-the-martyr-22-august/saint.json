@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr gives no year. This folder's own Greek note records that the entry is the company of Agathonicus and that the other folders of it keep the 305-311 they already have; `agathonicus-of-nicomedia` and `zoticus-of-nicomedia`, both linked here, carry exactly that. The company's reading, held at last for the member who had none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -28,6 +28,15 @@
     "apostle",
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page read for this folder gives him a year. He is one of the Twelve, which the Russian calendar says in his own commemoration line, and an apostle of the Twelve is a man of the first century. The century only; the 586 in this folder's note belongs to John the Hermit of Crete and is not taken."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -22,6 +22,15 @@
   "types": [
     "deaconess"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 270,
+      "latest": 338,
+      "display": "late 3rd to mid 4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: the page gives her no year. She is the mother of `nina-of-georgia`, whom this folder links, and that folder carries birth late 3rd century (270-300) and death 338; the interval is her daughter's lifetime as this corpus records it. The 216 in this folder's note is a page id."
+    }
+  },
   "related": [
     "nina-of-georgia",
     "zabulon-father-of-nina"

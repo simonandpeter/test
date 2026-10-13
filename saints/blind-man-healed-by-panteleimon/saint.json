@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: saint.gr's page for him gives no year, no place, no emperor and no judge, as this folder's own Greek note says. He is named by nothing but the healing, and `panteleimon-the-healer`, whom the page links to and from and whom this folder links, carries death 305; a man healed by him is his contemporary. The century only."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
