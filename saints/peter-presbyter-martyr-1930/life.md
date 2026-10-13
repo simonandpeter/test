@@ -1,4 +1,4 @@
-# Peter (Uspensky)
+# Peter (Uspensky) (10 January)
 
 The Православный церковный календарь of the Сретенский monastery names him on 10 января ст. ст. and gives no life. The whole of its account is one line, «Сщмч. Петра пресвитера (1930)» — the hieromartyr Peter, a presbyter, 1930 — and behind that line the calendar's own name link carries both the surname the line omits and a higher rank than the line gives him, «Петр (Успенский), протоиерей, сщмч.»: the archpriest Peter Uspensky.
 
