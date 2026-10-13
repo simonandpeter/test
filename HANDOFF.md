@@ -38,22 +38,38 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**Four agents are out, 14 October 2026, and this block is what a compacted
+**Three agents are out, 13 October 2026, and this block is what a compacted
 turn needs.** They commit on their own branches and the writer merges, verifies
 and pushes; none of them pushes.
 
-1. **The second-day wave, December and February** — about 34 rows, every saint
-   a previous reader withheld under BRIEF-RUSSIAN §4.
-2. **The second-day wave, July and August, plus 30 января** — about 21 rows,
-   and the Three Hierarchs each taking a second row for the Synaxis.
-3. **Progressive loading for the advanced search page on mobile** (the author,
-   14 October: "it still takes a while to load ... It should progressively load
-   more entries as you scroll, not all at once"). Briefed to measure first and
-   to reuse the windowing the codebase already has rather than write a second
-   one.
-4. **Six open readings** — `jude-the-apostle`'s truncated `ru` form,
-   `barses-of-damascus`, `margarita-of-menzelinsk`, `arsenius-of-elassona`,
-   `or-of-nitria`'s epithet, and the Caves trio of 29 декабря.
+1. **Progressive loading for the advanced search page on mobile** (the author:
+   "it still takes a while to load ... It should progressively load more entries
+   as you scroll, not all at once"). Briefed to measure first — the manifest is
+   4.9 MB raw and 588 KB gzipped, and "slow" could be the download, the parse,
+   the index build over 6,799 records or the DOM insertion, and only the last is
+   fixed by loading on scroll — and to reuse the windowing the codebase already
+   has rather than write a second one.
+2. **The Russian second-day wave**: Julian 06-30 first, the synaxis of the
+   Twelve and the last readable empty day, then the withheld backlog, which it
+   was told to measure for itself before grinding rather than trust the figure
+   of ~25.
+3. **TODO item 3, the lonely date-tags**, off
+   `../ro-run/reports/ITEM-3-date-tags.md`, one fetch per candidate.
+
+**Six open readings came back and are merged** — `barses-of-damascus` is one
+man with the Greek Barsos of the same see and rank and now holds a venerated
+russian row on 28 February julian; `jude-the-apostle`'s truncated `ru` form is
+closed off his name page; `margarita-of-menzelinsk` is kept on a fifth
+agreement; and `arsenius-of-elassona`, `or-of-nitria` and the two Caves monks of
+29 декабря are readings recorded with no row changed. The 29 декабря trio
+(Theophilus the Weeper, his brother John, Mark the Gravedigger) are three other
+men and have **no folders** — work for whoever reads that day.
+
+**The briefs no longer contradict the ruling.** `BRIEF.md` §4 and
+`BRIEF-GREEK.md` §6 both said one row per church and the second day as a note;
+both now say `row_add`, and both name Tryphon and Anna the Prophetess as the
+first place to look. A reader still does not write a second row — it reports the
+day and the writer appends it.
 
 **The second-day prohibition is dead and this is the single most important
 thing to carry forward.** BRIEF-RUSSIAN §4 forbade drafting a saint who already
@@ -67,8 +83,8 @@ defect for carrying two `romanian` rows were never a defect.
 
 **Russian stands at 362 of 366.** The four empty days are 01-07 and 02-02,
 which enumerate nobody; 02-29, which has no source page on any host; and 06-30,
-the synaxis of the Twelve, which the second-day ruling now unblocks and which
-nobody has been dispatched for yet.
+the synaxis of the Twelve, which the second-day ruling unblocks and which agent
+2 above is reading now.
 
 **`related` is the mentions field and nothing else**: a life that mentions a
 saint owes that saint a row, both ways, and `scripts/related-floor.mjs`
@@ -81,7 +97,7 @@ asserts no preload and says what it costs. **It has not been to CI yet**; if the
 runner shows no FCP gain it comes out in one commit. The desk measured it
 *worse*, but the desk had four agents on it.
 
-**TODO item 3 is measured and queued, not done**:
+**TODO item 3 is measured and an agent is on it**:
 `../ro-run/reports/ITEM-3-date-tags.md`. 561 tagged display names now, 64
 lonely by a folded-stem test, of which about fourteen are collectives that are
 not candidates at all. The remaining pass is one fetch per candidate.
