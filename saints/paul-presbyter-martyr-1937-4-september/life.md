@@ -1,4 +1,4 @@
-# Paul the Presbyter (4 September)
+# Paul the Presbyter
 
 Paul Vasilevsky was born on 22 June 1881 in the village of Karabuzino in the
 Kesova Gora district of Tver province, into the family of a church servant,

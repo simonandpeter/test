@@ -1,4 +1,4 @@
-# Rhodion (9 June)
+# Rhodion
 
 saint.gr's calendar names him with two companions, and what it prints about the three of them is not a life but a list of the books they are in. The line for 9 June reads «Άγιοι Ορέστης, Διομήδης και Ροδίων», and the page behind it says this: the saints Orestes, Diomedes and Rhodion, or Rhodon, are unknown to the synaxarist of Saint Nikodemos; they are mentioned in Delehaye's synaxarion without a biographical note; in two codices — 1575, folio 112, of the Paris library, and D 10, folio 15, of the Lavra — there is a common service for them by the hymnographer Joseph; and codex 53 of the Vlatades monastery records their memory as well.
 

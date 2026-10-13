@@ -1,4 +1,4 @@
-# Nicomedes (17 October)
+# Nicomedes
 
 saint.gr's calendar for 17 October keeps five saints on one line — «Άγιοι Αντίγονος, Λουκιανός, Τερέντιος, Νικομήδης και Θεοφάνης» — and Nicomedes is one of them. The page behind the line gives each of the five a heading of its own, his being «Αγιος Νικομηδης», and then prints one sentence for all five together, which is the whole of what the calendar has.
 

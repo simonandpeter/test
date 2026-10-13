@@ -1,4 +1,4 @@
-# Onesius (5 March)
+# Onesius
 
 The Сретенский monastery's calendar gives him one line for the Julian 5 March, «Мч. Онисия (I).», and the life behind it is two sentences: «Святой мученик Онисий жил в Палестине. За исповедание веры во Христа был усечен мечом.» He lived in Palestine, and for confessing the faith in Christ he was beheaded with the sword. That is the whole of it, and this folder says so rather than filling it.
 
