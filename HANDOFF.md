@@ -62,13 +62,25 @@ before proposing a merge. What landed is the other branch — eight folders took
 their day as an epithet, which dissolved seven Latin fold keys (`?` 360 → 358,
 `·` 965 → 960) without changing any fold's membership.
 
-**`related` now runs both ways everywhere.** The prose floor was already met
-(`scripts/related-floor.mjs` reports 0 folders gaining), but 1,381 of 13,053
-ends were one-way — edges written by hand off a calendar line or a dedication,
-which the floor cannot see. `.tmp/related-symmetrise.py` closed them across 494
-folders; 14,434 edges now, and the three coverage figures have converged on
-4,060 (59.7%) where the first two disagreed. The 2,739 isolated folders are
-unchanged, because a saint nobody names is not reached by symmetry.
+**I symmetrised `related` and had to revert it, and the reason is worth
+carrying.** 1,381 of 13,053 stored edges pointed one way, so I wrote the
+reverses into 494 folders. The write was wrong:
+`scripts/build-manifest.mjs:314` already derives the reverse — **`mentionedIn`
+is `related` read backwards**, computed and not stored, "because a fact held in
+two folders is a fact that can disagree with itself" — and the saint page draws
+the union. So the reader never saw a one-sided relation and sees no difference
+from the revert. What the write did was duplicate a derived fact into storage
+and collapse the distinction the union is built on: with `own ⊆ incoming`
+everywhere, `e2e/saint.spec.js:1849` lost its premise and
+`e2e/prayer.spec.js:823` lost the hidden mention it hunts for, and both failed
+twice on run 38408640524. **The place to widen the reverse index is `related`
+itself, in one folder, which is what the prose floor already does — and it
+reports 0 folders gaining, so that floor is met.** Reverted in `5d8b1b5a`'s
+parent; TODO 8 says so now instead of asking for a sweep.
+
+The failure mode is the same one TODO 18 just produced: **I measured the stored
+data without reading how the page consumes it.** Both times the corpus's own
+code or notes already held the answer.
 
 **Mobile search is merged, and the author's literal ask was already built.** The
 report was that the advanced search page takes a while to load on a phone. The
