@@ -100,13 +100,9 @@
     }
   ],
   "related": [
-    "demetrius-donskoi",
-    "nikon-disciple-of-sergius",
-    "peter-of-moscow",
     "sergius-of-radonezh",
-    "silvester-of-obnora",
-    "theodore-of-rostov",
-    "theognostus-of-kyiv"
+    "peter-of-moscow",
+    "nikon-disciple-of-sergius"
   ],
   "text": {
     "life": "life.md"

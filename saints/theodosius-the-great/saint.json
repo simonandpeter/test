@@ -37,7 +37,6 @@
   "related": [
     "abraham-of-carrhae",
     "ambrose-of-milan",
-    "amphilochius-of-iconium",
     "andronicus-of-antioch",
     "arsenius-of-rostov",
     "arsenius-the-great",
@@ -53,7 +52,6 @@
     "eupraxia-of-the-thebaid",
     "faustus-son-of-dalmatus",
     "gregory-the-theologian",
-    "isaac-of-constantinople",
     "john-the-prophet-of-gaza",
     "macarius-the-egyptian",
     "marcellus-of-apamea",
@@ -62,10 +60,11 @@
     "olympias-of-constantinople",
     "paul-the-confessor",
     "placilla-the-empress",
-    "senuphius-the-standard-bearer",
-    "theodosius-the-younger",
     "theodulus-of-edessa",
-    "zacharias-son-of-barachias"
+    "zacharias-son-of-barachias",
+    "senuphius-the-standard-bearer",
+    "amphilochius-of-iconium",
+    "isaac-of-constantinople"
   ],
   "attestations": [
     {

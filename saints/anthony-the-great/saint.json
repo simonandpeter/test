@@ -149,26 +149,13 @@
   ],
   "historicity": "attested",
   "related": [
-    "ammon-the-egyptian",
-    "ammonas-of-pispir",
-    "ammonius-10-january",
-    "anthony-the-new-of-veria",
     "athanasius-of-alexandria",
-    "cornelius-of-komel",
-    "didymus-the-blind",
     "hilarion-the-great",
-    "isidore-10-may",
-    "macarius-of-alexandria",
-    "macarius-the-egyptian",
     "martin-of-tours",
-    "pamvo-of-nitria",
     "paul-of-thebes",
-    "paul-the-simple",
-    "philosophos-of-alexandria",
-    "pitirun",
     "serapion-venerable-21-march",
-    "sisoes-the-great",
-    "thais-of-egypt"
+    "didymus-the-blind",
+    "pamvo-of-nitria"
   ],
   "text": {
     "life": "life.md",

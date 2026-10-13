@@ -82,17 +82,14 @@
     }
   ],
   "related": [
-    "alexander-vershinsky",
-    "alexis-benemansky",
-    "alexis-nikologorsky",
-    "alexis-sibirsky",
-    "athanasius-sakharov-of-kovrov",
-    "demetrius-benevolensky",
-    "elijah-gromoglasov",
-    "michael-belyustin",
     "nicholas-maslov",
+    "demetrius-benevolensky",
+    "victor-ilyinsky",
+    "alexis-nikologorsky",
+    "michael-belyustin",
     "sergius-konstantinov",
-    "victor-ilyinsky"
+    "elijah-gromoglasov",
+    "alexis-benemansky"
   ],
   "text": {
     "life": "life.md"

@@ -54,15 +54,14 @@
     }
   ],
   "related": [
-    "alexander-of-lyons",
-    "biblis-of-lyons",
-    "blandina-of-lyons",
-    "epagathus-of-lyons",
-    "maturus-of-lyons",
     "photinos-of-lyons",
-    "ponticus-of-lyons",
     "sanctius-of-lyons",
-    "vettius-of-lyons"
+    "vettius-of-lyons",
+    "epagathus-of-lyons",
+    "ponticus-of-lyons",
+    "biblis-of-lyons",
+    "alexander-of-lyons",
+    "maturus-of-lyons"
   ],
   "text": {
     "life": "life.md"

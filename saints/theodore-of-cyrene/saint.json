@@ -70,10 +70,9 @@
     }
   ],
   "related": [
-    "aroa-companion-of-kyprilla",
     "kyprilla-of-cyrene",
-    "loukia-companion-of-kyprilla",
-    "lucius-of-cyrene"
+    "aroa-companion-of-kyprilla",
+    "loukia-companion-of-kyprilla"
   ],
   "text": {
     "life": "life.md"

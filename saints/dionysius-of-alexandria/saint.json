@@ -85,14 +85,13 @@
     }
   ],
   "related": [
-    "apollonia-of-alexandria",
-    "chaeremon-disciple-of-dionysius-of-alexandria",
-    "eusebius-disciple-of-dionysius-of-alexandria",
     "faustus-disciple-of-dionysius-of-alexandria",
     "gaius-disciple-of-dionysius-of-alexandria",
+    "peter-disciple-of-dionysius-of-alexandria",
     "paul-disciple-of-dionysius-of-alexandria",
-    "paul-the-apostle",
-    "peter-disciple-of-dionysius-of-alexandria"
+    "eusebius-disciple-of-dionysius-of-alexandria",
+    "chaeremon-disciple-of-dionysius-of-alexandria",
+    "paul-the-apostle"
   ],
   "text": {
     "life": "life.md"

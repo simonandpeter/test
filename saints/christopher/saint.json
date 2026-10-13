@@ -134,13 +134,7 @@
       "meta": "images/icon.meta.json"
     }
   ],
-  "related": [
-    "aquilina-9-may",
-    "aquilina-the-martyr-7-april",
-    "callinike-9-may",
-    "rufinus-the-deacon",
-    "two-hundred-martyrs-of-sinope"
-  ],
+  "related": [],
   "text": {
     "life": "life.md"
   },

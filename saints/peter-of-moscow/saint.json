@@ -105,12 +105,11 @@
     }
   ],
   "related": [
-    "alexis-of-moscow",
     "basil-the-great",
     "gregory-the-theologian",
     "john-chrysostom",
-    "nikon-disciple-of-sergius",
-    "theognostus-of-kyiv"
+    "theognostus-of-kyiv",
+    "nikon-disciple-of-sergius"
   ],
   "text": {
     "life": "life.md"
