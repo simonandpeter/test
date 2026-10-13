@@ -117,7 +117,56 @@ where no icon exists** (author, same day), said so in the draft's `why`.
 **Both passes are in — 145 icons** (Greek `6a095e3f`, Romanian the merge after
 it) — and the four calendars now read:
 
-**Re-measured on main, 13 October 2026**, after `npm run build:manifest` at
+**18 icons landed 14 October 2026 and the imageless heroes are 180, from 207.**
+All eighteen came from the **Menaion Reader plate date-match** — the per-saint
+category listing was never reached, so method 1 is untouched and the tail is
+unmeasured.
+
+| calendar | before | after |
+| --- | --- | --- |
+| Romanian | 35 of 357 | **31** |
+| Greek | 65 of 364 | **58** |
+| Russian | 76 of 357 | **66** |
+| Serbian | 56 of 358 | **44** |
+| distinct saints | 207 | **180** |
+
+**18 icons cleared 27 day-slots, which is not a miscount.** `pickHero` breaks
+the tie inside the sung pool, so giving one saint a picture can promote him over
+a different imageless hero and close that day too — the 2026-08-28 rule working.
+
+**The identity rule is the whole of the method, and it needs both halves:** the
+plate's file name carries a church-year code (month counted from September, then
+the day) *and* the saint's Russian name, and a match requires the code to
+resolve to the folder's own Julian feast **and** the title to name the folder's
+own stored Russian form. A date alone is never enough. That is what the ten
+refusals were — «Маркеллин» is not «Маркелл»; 29 March's Mark is Mark of Arethusa
+and not the Pskov-Caves monk; 6 July's Сисой is Sisoes the Great; 24 June's
+plate is the Nativity of the Forerunner — plus one refused the other way, two
+folders sharing 15 March and the name Alexander with nothing to choose between
+them.
+
+**§5's sub-1250px warning is worse than it reads.** `patrick-of-prusa` exhausted
+the whole backoff ladder for about eight minutes, Commons serving the unscaled
+original and 429ing it through every retry, then came down first try on a single
+re-run — so `geticon.py`'s "ask again at native-1" retry does **not** always
+produce a thumb.
+
+**And `geticon.py` was recording a width it never got.** It wrote `thumbwidth`,
+which is what the request asked for and which Commons returns unchanged when it
+serves the original instead, so **481 icons — every one the programme has ever
+fetched — said "at 1200px" beside a file of 563 to 1200px**. 181 also credited
+"Unknown authorUnknown author", Commons' Artist field being two HTML elements
+with no separator between them. Both fixed at the source and in the record
+(`e9ba09a9`).
+
+**Left in flight, drafted and vetted but unfetched** — a worklist, not a claim:
+six folders in `scratchpad/draft-b2.json` and six in `draft-b3.json`, which
+`python scratchpad/drive.py <file> --write` would take. The queued method-1 names
+nobody has searched are in the session's `scratchpad/q1.txt` and `q2.txt`, and
+**`peter-the-apostle` leading an imageless day is the most surprising row on
+that list.**
+
+**Measured on main, 13 October 2026**, after `npm run build:manifest` at
 6,799 folders — these are the honest numbers, because each pass had measured in
 its own worktree without the other's icons:
 
