@@ -109,10 +109,46 @@ church**, and on 14 October the author ruled **"apply to all"**. The tool is
 `upgrade.py.before-second-row`. The three folders this file used to call a
 defect for carrying two `romanian` rows were never a defect.
 
-**Russian stands at 362 of 366.** The four empty days are 01-07 and 02-02,
-which enumerate nobody; 02-29, which has no source page on any host; and 06-30,
-the synaxis of the Twelve, which the second-day ruling unblocks and which agent
-2 above is reading now.
+**ALL FOUR CALENDARS ARE AT THEIR CEILING, 14 October 2026.** This is the gate
+the four-page app was waiting on and `node scripts/ship-gate-days.mjs` is the
+only instrument worth quoting for it:
+
+| calendar | days carrying somebody | empty, and why |
+| --- | --- | --- |
+| Romanian | **366 of 366** | — |
+| Greek | 365 of 366 | 29 February |
+| Serbian | 365 of 366 | 29 February |
+| Russian | 363 of 366 | 7 January and 2 February enumerate nobody; 29 February has no source page on any host |
+
+Russian went 313 → 363 across this sitting. 30 June, the Synaxis of the Twelve,
+was the last readable empty day and closed with twelve `row_add` rows, each
+resting on its own apostle's name page heading «Дни памяти: … 30 июня (12 ап.)».
+The three days left are each explained, not outstanding.
+
+**The withheld second-day backlog was measured, and the measurement is the
+lesson.** A loose grep for any Russian date in any russian note returns 999
+pairs on 723 folders — what a reader who trusted it would have ground through.
+The source's own enumeration gives 159 pairs no row records, of which 115 carry
+a parenthetical naming a company. Of the 44 left: 17 written, 14 withheld with
+the calendar's own reason, 13 unread. `.tmp/ru-secondday.py` is the instrument.
+Each written row was confirmed three ways — the day is in his «Дни памяти», the
+day page prints a line for him, and **the name link behind that line points at
+the name page his existing row was read from**. The third check is what
+separated the 17 from the 14.
+
+**The rule that settles every synaxis question, and it is now written down:
+an enumerating synaxis is one row for each man it names; a heading that names
+nobody is owed nothing.** The Twelve on 30 июня and the Three Hierarchs on
+30 января are both written on it; «Собор новомучеников» and the Paschal-cycle
+synaxes are owed nothing by it. Chrysostom's own note had withheld 30 января as
+"a joint commemoration and not a feast of his own", which was the dead one-row
+rule wearing another coat; he now stands on four russian days, and the false
+sentence was deleted rather than annotated.
+
+**Seventy notes still give the dead rule as their reason — TODO 19.** Sixteen of
+them name no company, so they are a day of the saint's own withheld for nothing;
+fifty-three name a company and the withholding stands but the stated reason does
+not; forty-two more use the phrase to mean "another church's day" and are fine.
 
 **`related` is the mentions field and nothing else**: a life that mentions a
 saint owes that saint a row, both ways, and `scripts/related-floor.mjs`
