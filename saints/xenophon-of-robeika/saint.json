@@ -52,6 +52,21 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 июня ст. ст. — «Прп. Ксенофонта Робейского (1262).»",
+        "url": "https://days.pravoslavie.ru/Days/20260628.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 26 января ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 26 января, 28 июня» — and this day is in it; the day page for it prints a line for him, «Прп. Ксенофонта Робейского (1262).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/1313.html, the same name page the folder’s existing row was read from. His life page gives 28 June as the day of his repose, which makes this the day of the death and 26 января the day whose page was read for the first row. `dates` UNTOUCHED: 1262 is the year both lines close with and the year the folder holds. The 26 января of the first row is also the day of the Synaxis of the New Martyrs, which has nothing to do with him and is the reason his folder turns up in a loose scan of that date."
     }
   ],
   "hymns": [

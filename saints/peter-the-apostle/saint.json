@@ -106,6 +106,21 @@
         "year": 2026
       },
       "note": "The Synaxis of the Twelve, and the heading enumerates all twelve by name, so it is one row for each of the twelve and not one entry for the company: his place in the line is «Петра». This is a SECOND russian row and nothing was moved — the folder’s first russian row stands on the calendar’s own 29 июня ст. ст. and is untouched. The day is listed among HIS days by the calendar itself, which is the test this row rests on: his name page heads «Дни памяти: 16 января , 29 июня , 30 июня (12 ап.)» (https://days.pravoslavie.ru/Life/life6793.htm), and «30 июня (12 ап.)» is in it. The day page prints three hymns under the synaxis heading — a troparion глас 4 and two kontakia глас 2 — and they are the synaxis’s own, printed under no single apostle’s name; none was copied into any apostle’s folder."
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Поклонение честным веригам ап. Петра.»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      },
+      "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 29 июня ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 16 января , 29 июня , 30 июня (12 ап.)» — and this day is in it; the day page for it prints a line for him, «Поклонение честным веригам ап. Петра.», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/1785.html, the same name page the folder’s existing row was read from. The veneration of his chains, and the THIRD russian row on this folder after 29 июня and the Synaxis of the Twelve. It is written on the same reading that gives `arsenius-bishop-of-tver` his 6 июля and `john-chrysostom` his 27 января: a feast of this saint’s own relics that the source lists among his days is one of his days. The calendar gives it a reading of its own under his index, life228, titled «Поклонение честным веригам святого и всехвального апостола Петра», and that reading heads the same three days. **AUTHOR: a reader could hold that a feast of the chains is a feast of an object, like an icon of the Theotokos, and therefore no row at all.** On that reading this row comes out and the day goes back to being a note; nothing else in the folder would change."
     }
   ],
   "hymns": [
