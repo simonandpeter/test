@@ -1,4 +1,4 @@
-# John the Presbyter
+# John the Presbyter (12 August)
 
 John Nikolsky was born on 4 January 1878 in the village of Lyatskovo in the Bezhetsk district of Tver province, the son of a psalmist; after the Tver seminary he was ordained to a village church in the Kimry district. In 1929 the authorities ordered him to deliver twenty-five poods of rye to the state collection point by 10 November; he was away, received the summons on the 12th, brought the rye the next day, and was arrested for being three days late — the court confiscated all he had and banished him from the district.
 

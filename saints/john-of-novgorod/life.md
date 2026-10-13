@@ -1,4 +1,4 @@
-# John
+# John of Novgorod
 
 John was born at Novgorod to Nicholas and Christina, and after their deaths he
 and his brother Gabriel spent their inheritance on a small monastery of the

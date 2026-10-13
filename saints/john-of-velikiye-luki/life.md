@@ -1,4 +1,4 @@
-# John
+# John of Velikiye Luki
 
 John — Ivan Efimovich Troyansky in the world — was born on 10 November 1862
 in the village of Novo-Klinskoye in Voronezh province, a priest’s son. He
