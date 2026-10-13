@@ -26,6 +26,13 @@
     "wonderworker"
   ],
   "dates": {
+    "floruit": {
+      "earliest": 324,
+      "latest": 337,
+      "display": "324 to 337",
+      "basis": "traditional",
+      "note": "Three sources, and the narrowest of them is taken while all three are recorded. saint.gr sets him in the years of Constantine the Great, 324 to 337; days.pravoslavie.ru for 7 февраля ст. ст. gives only the century — «Прп. Парфения, еп. Лампсакийского (IV).»; and the Ohrid Prologue at pravoslavno.rs for the Julian 7 February gives the century too — „Преселио се у вечни покој Христов у IV веку.“ The two centuries contain the reign, so the reign is the reading. Neither the Romanian nor the Greek life prints a year of birth or of repose."
+    },
     "death": {
       "earliest": 301,
       "latest": 400,
@@ -167,14 +174,5 @@
   ],
   "related": [
     "constantine-the-great"
-  ],
-  "dates": {
-    "floruit": {
-      "earliest": 324,
-      "latest": 337,
-      "display": "324 to 337",
-      "basis": "traditional",
-      "note": "Three sources, and the narrowest of them is taken while all three are recorded. saint.gr sets him in the years of Constantine the Great, 324 to 337; days.pravoslavie.ru for 7 февраля ст. ст. gives only the century — «Прп. Парфения, еп. Лампсакийского (IV).»; and the Ohrid Prologue at pravoslavno.rs for the Julian 7 February gives the century too — „Преселио се у вечни покој Христов у IV веку.“ The two centuries contain the reign, so the reign is the reading. Neither the Romanian nor the Greek life prints a year of birth or of repose."
-    }
-  }
+  ]
 }

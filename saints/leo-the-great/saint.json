@@ -55,7 +55,7 @@
       "latest": 461,
       "display": "461",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: «Свт. Льва, Папы Римского (461).»"
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 18 February: „Свети Лав упокојио се 461. године.“ The folder carried no dates at all before this reading, and the Prologue is the only source read for him that gives a year."
     }
   },
   "attestations": [
@@ -170,14 +170,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "dates": {
-    "death": {
-      "earliest": 461,
-      "latest": 461,
-      "display": "461",
-      "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 18 February: „Свети Лав упокојио се 461. године.“ The folder carried no dates at all before this reading, and the Prologue is the only source read for him that gives a year."
-    }
-  }
+  ]
 }

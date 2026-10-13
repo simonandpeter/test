@@ -25,11 +25,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1085,
-      "latest": 1095,
-      "display": "c. 1090",
+      "earliest": 1090,
+      "latest": 1090,
+      "display": "1090",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: «Прп. Исаакия, затворника Печерского (ок. 1090).»"
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 14 February: „Упокојио се 1090. године.“ It states the year flat; the Russian line this folder already quotes, days.pravoslavie.ru's «Прп. Исаакия, затворника Печерского (ок. 1090).», says about 1090. The folder carried no dates at all before this reading. Also recorded on this folder, under a second `dates` key no parser ever read: c. 1090 (traditional)."
     }
   },
   "attestations": [
@@ -121,14 +121,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "dates": {
-    "death": {
-      "earliest": 1090,
-      "latest": 1090,
-      "display": "1090",
-      "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 14 February: „Упокојио се 1090. године.“ It states the year flat; the Russian line this folder already quotes, days.pravoslavie.ru's «Прп. Исаакия, затворника Печерского (ок. 1090).», says about 1090. The folder carried no dates at all before this reading."
-    }
-  }
+  ]
 }

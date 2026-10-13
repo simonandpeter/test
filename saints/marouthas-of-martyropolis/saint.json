@@ -32,7 +32,7 @@
       "latest": 422,
       "display": "422",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: «Прп. Маруфа, еп. Месопотамского (422).»"
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 16 February: „У томе граду и он сконча свој земаљски пут 422. године и пресели се ка Господу.“ The city is Martyropolis, which the same sentence says he founded. The folder carried no dates at all before this reading."
     }
   },
   "attestations": [
@@ -86,14 +86,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 422,
-      "latest": 422,
-      "display": "422",
-      "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 16 February: „У томе граду и он сконча свој земаљски пут 422. године и пресели се ка Господу.“ The city is Martyropolis, which the same sentence says he founded. The folder carried no dates at all before this reading."
-    }
   }
 }

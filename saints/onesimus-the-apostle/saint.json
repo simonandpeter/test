@@ -126,11 +126,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 104,
-      "latest": 114,
-      "display": "c. 109",
+      "earliest": 109,
+      "latest": 109,
+      "display": "109",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: «Ап. от 70-ти Онисима (ок. 109).»"
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 15 February dates the burial, not the beheading: a rich woman took his body, laid it in a silver coffin and buried it honourably in 109. It places the arrest in Trajan's persecution and calls him an old man by then. The folder carried no dates at all before this reading, and no other calendar read for him gives a year. Also recorded on this folder, under a second `dates` key no parser ever read: c. 109 (traditional)."
     }
   },
   "attestations": [
@@ -195,14 +195,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 109,
-      "latest": 109,
-      "display": "109",
-      "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 15 February dates the burial, not the beheading: a rich woman took his body, laid it in a silver coffin and buried it honourably in 109. It places the arrest in Trajan's persecution and calls him an old man by then. The folder carried no dates at all before this reading, and no other calendar read for him gives a year."
-    }
   }
 }

@@ -23,6 +23,13 @@
     "prophet"
   ],
   "dates": {
+    "death": {
+      "earliest": -520,
+      "latest": -520,
+      "display": "about 520 BC",
+      "basis": "traditional",
+      "note": "Two sources, one figure, and it had never been recorded: this folder carried no dates although the year was quoted in its own Russian citation. days.pravoslavie.ru for 8 февраля ст. ст.: «Прор. Захарии Серповидца из 12-ти (ок. 520 до Р.Х.).»; the Ohrid Prologue at pravoslavno.rs for the Julian 8 February: „Упокојио се последње године царовања Дарија Хистаспа, око 520. године пре Христа.“ The Prologue also puts the repose in the last year of Darius Hystaspes's reign; no source read here gives that reign's years, so its words are quoted and no year is derived from them. saint.gr and doxologia.ro give no year."
+    },
     "floruit": {
       "earliest": -520,
       "latest": -520,
@@ -137,14 +144,5 @@
   "related": [
     "haggai-the-prophet",
     "theodosius-the-great"
-  ],
-  "dates": {
-    "death": {
-      "earliest": -520,
-      "latest": -520,
-      "display": "about 520 BC",
-      "basis": "traditional",
-      "note": "Two sources, one figure, and it had never been recorded: this folder carried no dates although the year was quoted in its own Russian citation. days.pravoslavie.ru for 8 февраля ст. ст.: «Прор. Захарии Серповидца из 12-ти (ок. 520 до Р.Х.).»; the Ohrid Prologue at pravoslavno.rs for the Julian 8 February: „Упокојио се последње године царовања Дарија Хистаспа, око 520. године пре Христа.“ The Prologue also puts the repose in the last year of Darius Hystaspes's reign; no source read here gives that reign's years, so its words are quoted and no year is derived from them. saint.gr and doxologia.ro give no year."
-    }
-  }
+  ]
 }

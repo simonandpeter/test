@@ -33,6 +33,13 @@
     "dorotheus-of-gaza"
   ],
   "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 19 February: „Живљаше овај млади светитељ у VI веку.“ It gives the century and no year, and calls him young. The folder carried no dates at all before this reading."
+    },
     "death": {
       "earliest": 601,
       "latest": 700,
@@ -104,14 +111,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "floruit": {
-      "earliest": 501,
-      "latest": 600,
-      "display": "6th century",
-      "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 19 February: „Живљаше овај млади светитељ у VI веку.“ It gives the century and no year, and calls him young. The folder carried no dates at all before this reading."
-    }
   }
 }
