@@ -91,11 +91,24 @@ saint owes that saint a row, both ways, and `scripts/related-floor.mjs`
 implements exactly that. It is not a policy question — the author has
 enumerated this many times.
 
-**The two font preloads were spent for the paint budget** (`5bdc178f`), the
-author's call over Addendum G6's own earlier request. `e2e/chrome.spec.js` now
-asserts no preload and says what it costs. **It has not been to CI yet**; if the
-runner shows no FCP gain it comes out in one commit. The desk measured it
-*worse*, but the desk had four agents on it.
+**The font-preload lever was taken and the runner refused it** (`5bdc178f`
+spent them, `156a2b17` put them back). The author asked for the preloads to be
+spent for the Lighthouse margin; run 38396672843 answered with **five hard e2e
+failures and the Lighthouse step never reached**, because the quality floor runs
+first and fails the job. So the margin was never measured and the cost is known.
+
+The mechanism is worth keeping, because it will catch the next person who tries
+it: `font-display: optional` gives a font file about 100 ms and then keeps the
+fallback **for the life of the page**, so with nothing preloaded a cold load
+renders in DejaVu Sans on the runner and stays there. Three test premises are
+text metrics and all three broke — a 360 px hero name that is meant to wrap
+stops wrapping (`daily-panel.spec.js:2716`), a card name that is meant to run
+past two lines stops at two (`index-grid.spec.js:1745`), and the warm grid
+column measures 280 px where three across wants under 240
+(`index-grid.spec.js:523`). Those tests are right: the site really was painting
+in the wrong face. **If the FCP margin is wanted, it has to come from somewhere
+else** — or from `font-display: swap` plus a preload, which is a different
+change with its own layout-shift bill.
 
 **TODO item 3 is measured and an agent is on it**:
 `../ro-run/reports/ITEM-3-date-tags.md`. 561 tagged display names now, 64
