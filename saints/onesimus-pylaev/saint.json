@@ -56,5 +56,8 @@
   "office": "Bishop of Tula",
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "cosmas-korotkikh"
+  ]
 }

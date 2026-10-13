@@ -189,5 +189,13 @@
       "basis": "traditional",
       "note": "The folder’s first date of any kind; `dates` was null before this reading. The Охридски пролог for 3. јул ст. ст.: „Чесно пострада млади Јакинт и вечном славом увенча се 108 год.“ — the young Hyacinth suffered honourably and was crowned with eternal glory in the year 108. doxologia’s life names the emperor Trajan and prints no year; saint.gr gives only that reign, dating it 98 to 117, and a reign is no source for a year. Nothing is widened, no second book giving a year to widen against, and 108 falling inside that reign is recorded as an agreement rather than used as a source. The three books give three lengths for the starvation — none, forty days and eight — and those are durations, not dates (5 October 2026)."
     }
-  }
+  },
+  "related": [
+    "asclepiades-the-martyr",
+    "diomedes-martyr-3-july",
+    "dolindouch",
+    "eulampius-martyr-3-july",
+    "theodote-companion-of-theodotus",
+    "theodotus-3-july"
+  ]
 }

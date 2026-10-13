@@ -85,5 +85,8 @@
       "basis": "traditional",
       "note": "The interval days.pravoslavie.ru prints at the end of its line for 6 ноября ст. ст., «Прп. Луки Тавроменийского (800-820).». The page does not say whether those are the years of his life, his abbacy or his death; its life page says only that he died at Corinth «в начале IX века», at the beginning of the ninth century, which the interval's upper end agrees with. Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
     }
-  }
+  },
+  "related": [
+    "luke-of-corleone"
+  ]
 }

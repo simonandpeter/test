@@ -79,14 +79,15 @@
     }
   ],
   "related": [
-    "damian-of-arabia",
-    "leontius-of-arabia",
     "anthimus-of-arabia",
-    "euprepius-of-arabia",
-    "cosmas-of-rome",
-    "damian-of-rome",
+    "cosmas-martyred-in-georgia",
     "cosmas-of-asia",
-    "damian-of-asia"
+    "cosmas-of-rome",
+    "damian-of-arabia",
+    "damian-of-asia",
+    "damian-of-rome",
+    "euprepius-of-arabia",
+    "leontius-of-arabia"
   ],
   "text": {
     "life": "life.md"

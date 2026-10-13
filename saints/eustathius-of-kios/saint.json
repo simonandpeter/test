@@ -71,5 +71,8 @@
       "basis": "traditional",
       "note": "days.pravoslavie.ru’s life: «Скончался святой исповедник в IX веке в ссылке, в течение трех лет перенося оскорбления, лишения, голод и нищету». The day line prints «(IX)». This folder held no `dates`: saint.gr gives no year. No year of birth is stated and none is inferred."
     }
-  }
+  },
+  "related": [
+    "ignatius-of-kios"
+  ]
 }

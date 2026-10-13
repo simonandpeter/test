@@ -85,5 +85,8 @@
       "basis": "traditional",
       "note": "The Охридски пролог for 16. мај ст. ст.: „За веру Христову мучен од Турака и посечен у Трикали 1617. године.“ The same year stands in saint.gr's head line for him, which this folder's life records as „dead, by saint.gr's head line, in 1617“; the folder held no `dates` object at all until now, and doxologia names no year."
     }
-  }
+  },
+  "related": [
+    "nicholas-the-bulgarian-17-may"
+  ]
 }

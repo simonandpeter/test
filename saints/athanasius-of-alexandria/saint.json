@@ -160,10 +160,24 @@
   "historicity": "attested",
   "related": [
     "anthony-the-great",
+    "cyril-of-alexandria",
+    "didymus-the-blind",
+    "eutychius-the-subdeacon",
+    "frumentius-of-ethiopia",
     "hosius-of-cordoba",
+    "isidore-10-may",
     "john-chrysostom",
     "liberius-of-rome",
-    "didymus-the-blind"
+    "maximinus-of-trier",
+    "maximus-of-jerusalem",
+    "mitrophan-of-constantinople",
+    "niphon-of-constantia",
+    "paul-the-confessor",
+    "potamon-of-heraclea",
+    "servatus-of-tongeren",
+    "symeon-the-god-receiver",
+    "syncletica",
+    "triphyllius-of-leucosia"
   ],
   "text": {
     "life": "life.md"

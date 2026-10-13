@@ -70,10 +70,11 @@
     }
   },
   "related": [
-    "proclus-companion-of-apollonius",
     "apollonius-companion-of-proclus",
+    "asterius-of-rome",
     "ephebius-companion-of-proclus",
-    "asterius-of-rome"
+    "proclus-companion-of-apollonius",
+    "valentine-of-interamna"
   ],
   "text": {
     "life": "life.md"
