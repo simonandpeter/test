@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 177,
+      "latest": 177,
+      "display": "c. 177",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 177)»."
+    }
+  },
   "names": [
     {
       "form": "Βλανδίνα",

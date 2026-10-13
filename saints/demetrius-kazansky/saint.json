@@ -14,6 +14,15 @@
     "presbyter",
     "new-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": null,
+      "display": "after 1937",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(после 1937)»."
+    }
+  },
   "office": "Priest",
   "attestations": [
     {

@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 321,
+      "latest": 321,
+      "display": "c. 321",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 321)»."
+    }
+  },
   "names": [
     {
       "form": "Ακάκιος",
