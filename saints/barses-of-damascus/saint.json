@@ -4,21 +4,38 @@
   "sex": "male",
   "types": [
     "venerable",
-    "bishop"
+    "bishop",
+    "hermit"
   ],
   "names": [
     {
       "form": "Βάρσος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Όσιος Βάρσος Επίσκοπος Δαμασκού», with the rank word and the see left off."
+    },
+    {
+      "form": "Иоанн (Варсанофий) Дамасский, Нитрийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind his place in days.pravoslavie.ru's line for 28 февраля ст. ст., name page 973, whose heading is «Святитель Иоанн (Варсанофий) Дамасский, Нитрийский, епископ, отшельник»; the leading rank word and the two trailing rank words come off and the rest is the name the calendar gives, parentheses and all. The line itself declines it to «Иоанна» and gives the second name in the words «нареченного Варсонофием», spelled with an о where the name page has an а, so the name page's spelling is the one stored. This is the Russian calendar's name for the man saint.gr prints as «Βάρσος»; the reasoning for keeping both forms on one folder is in the russian attestation note."
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The day page for 28 февраля ст. ст. is what lists him. Both his name page 973 and his life page life532 head «День памяти: 1 марта» instead, which is neither the day that listed him nor that day plus thirteen; the page for 1 марта ст. ст. was fetched and does not name him, and days.pravoslavie.ru answers 404 for 20280229, so whether the 1 марта is a transfer of a 29 февраля commemoration into a Julian year of 28 days could not be checked. He renders on 28 февраля ст. ст. only, which is the menologion number this folder's Greek row already carries."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 февраля ст. ст. — «Прп. Иоанна, нареченного Варсонофием, еп. Дамасского, отшельника Нитрийского (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260228.html",
+        "year": 2026
+      },
+      "note": "ONE MAN, AND THIS IS THE READING. The question this row answers was left open by an earlier reader who would make neither the row nor a second folder: «Прп. Иоанна, нареченного Варсонофием, еп. Дамасского, отшельника Нитрийского (V)» against saint.gr's «Όσιος Βάρσος Επίσκοπος Δαμασκού», two names that are not two spellings of one. Both sources were read again on 13 October 2026 and the row is made, on four agreements and one structural check. THE AGREEMENTS: the same menologion number, 28 February, in both calendars; the same see, Damascus; the same rank, Όσιος against Прп., venerable and not hierarch — which for a bishop is the unusual reading, and is exactly what the Russian dossier explains, a man who left his see to serve the elders of the Nitrian desert as a monk; and the same manner of death, saint.gr's «κοιμήθηκε με ειρήνη» against a Russian life that has him labour in Egypt to the end and names no martyrdom. saint.gr gives no year and the Russian gives the fifth century, so the two do not conflict. THE STRUCTURAL CHECK, which is what decided it: saint.gr's own alphabetical listing for Β was read whole, and it holds eight Βαρσ- entries — ΒΑΡΣΑΒΑΣ, two bare ΒΑΡΣΑΝΟΥΦΙΟΣ, ΒΑΡΣΑΝΟΥΦΙΟΣ ΕΚ ΡΩΣΙΑΣ, ΒΑΡΣΑΝΟΥΦΙΟΣ ΕΠΙΣΚΟΠΟΣ ΤΒΕΡ ΚΑΙ ΚΑΖΑΝ, ΒΑΡΣΑΝΟΥΦΙΟΣ Ο ΙΕΡΟΜΑΡΤΥΣ, ΒΑΡΣΑΝΟΥΦΙΟΣ ΤΗΣ ΟΠΤΙΝΑ, ΒΑΡΣΟΣ and ΒΑΡΣΟΣ ΕΠΙΣΚΟΠΟΣ ΔΑΜΑΣΚΟΥ — and not one of them is a John of Damascus or a bishop of Damascus besides this folder. The two bare ΒΑΡΣΑΝΟΥΦΙΟΣ were opened: 3607 is Barsanuphius with his disciple John the Prophet on 6 February, 2486 is the twenty-six of Zographou on 22 September. The bare ΒΑΡΣΟΣ, 2596, is the Edessa confessor of 15 October whom this corpus keeps as `barses-of-edessa`. So the Greek calendar keeps exactly one Damascene of this stem and the Russian keeps exactly one, on one day, and a second man would mean two venerable bishops of Damascus with no year, commemorated on the same day, each unknown to the other calendar. WHAT IS NOT VERIFIED, plainly: whether the synaxarist's Βάρσος is a shortening of Βαρσανούφιος or a third name. No Greek or Slavonic menaion and no synaxarion manuscript was consulted. The Russian line itself says the name was assumed — he called himself Barsanuphius in hiding, his own name being John — so the calendars disagree over which of a man's two names to print, which is a lighter thing than a disagreement over the man. The merge is a reading and this note is its whole evidence. A THIRD CANDIDATE, CHECKED AND REJECTED: `john-of-nitria` is a John and a Nitrian, and is not this man — saint.gr keeps him on 20 November, calls him an ascetic of the mountain of Nitria with no see at all, and disclaims the Lausiac History's account of him. Different day, no bishopric. `ls saints | grep -iE 'bars|varsan|nitria'` returns eighteen folders and no other candidate. The day page carries troparia for Basil the Confessor, Cassian the Roman and Nicholas of Pskov, and none under his name, so no hymn is brought. One wording note on the quotation: the day page writes the name inside a link followed by the small icon that goes to the life, and a text extraction that drops the icon leaves a space before the comma; the row quotes the line as the page reads it, «Прп. Иоанна, нареченного…»."
     },
     {
       "church": "romanian",
@@ -48,5 +65,14 @@
   "office": "Bishop of Damascus",
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, 28 февраля ст. ст.: the line closes «(V)» and the life page closes «где подвизался до конца своей жизни (V век)». saint.gr gives no year for him at all, so this century is the Russian calendar's alone and arrives with the merge recorded in the russian attestation note."
+    }
   }
 }
