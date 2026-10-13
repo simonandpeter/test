@@ -86,6 +86,35 @@ const rows = [];
 let folders = 0;
 let cited = 0;
 
+/*
+ * What a note says that is a number and not a date. Raw, a note channel
+ * reported 13,224 rows against 18,142 cited years, which is a report nobody
+ * can read — and almost all of it was this:
+ *
+ * - **the reading stamp.** Every note in this corpus ends by saying when the
+ *   page was read, and that is always this year.
+ * - **page and manuscript references.** `life1346`, `name/1623`, `id1571`,
+ *   «folio 217», «page 199», «Paris Codex 1621» — a saint known only from one
+ *   manuscript has its shelf-mark in the note and no date at all, which is the
+ *   trap that cost a reader 46 of 64 candidates.
+ * - **the source URL**, which carries the page's own id.
+ * - **an ordinal year of a life**, «in the 110th year of his life», which is a
+ *   span and not a date.
+ *
+ * Stripped rather than scored, because a number in one of these shapes is
+ * never a date and a reader who has to skip it will stop reading the report.
+ */
+const scrub = (note) =>
+  note
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/\b(?:read|citit|прочитано)[^.;]*/gi, '')
+    .replace(/\b(?:life|id)\s*\d+/gi, '')
+    .replace(/\bname\/\d+/gi, '')
+    .replace(/\b(?:folio|fol\.?|page|p\.|pp\.|col\.|line)\s*\d+/gi, '')
+    .replace(/\bCodex\s+\S*\s*\d+/gi, '')
+    .replace(/\b\d+(?:st|nd|rd|th)\s+year\b/gi, '')
+    .replace(/\b20\d\d\b/g, '');
+
 for (const entry of readdirSync(path.join(ROOT, 'saints'), { withFileTypes: true })) {
   if (!entry.isDirectory()) continue;
   const file = path.join(ROOT, 'saints', entry.name, 'saint.json');
@@ -97,7 +126,21 @@ for (const entry of readdirSync(path.join(ROOT, 'saints'), { withFileTypes: true
 
   for (const a of saint.attestations ?? []) {
     if (churches.length && !churches.includes(a.church)) continue;
-    const text = a.source?.text ?? '';
+    /*
+     * **The note as well as the source, since 2026-10-14.** This read
+     * `source.text` alone, which is where a batch quotes the calendar's own
+     * line — and a reader who read a year out of a *second* page writes it
+     * into the row's `note` instead. 64 folders held a year or a century in a
+     * note and nowhere else, and not one of them could appear in this report;
+     * 18 of them were datable from it. A citation is a citation wherever on
+     * the row it was written down.
+     *
+     * The two are kept apart in the output because they are not equally
+     * strong: `source.text` is a quotation and a note is a reader's prose, so
+     * a note's number is as likely to be a folio, a page or a count as a date
+     * — 46 of those 64 were exactly that.
+     */
+    for (const [where, text] of [['source', a.source?.text ?? ''], ['note', scrub(a.note ?? '')]]) {
     if (!text) continue;
     for (const o of offered(text)) {
       cited += 1;
@@ -115,17 +158,19 @@ for (const entry of readdirSync(path.join(ROOT, 'saints'), { withFileTypes: true
       rows.push({
         slug: entry.name,
         church: a.church,
+        where,
         said: o.said,
         range: o.lo === o.hi ? String(o.lo) : `${o.lo}-${o.hi}`,
         dates: has.length ? has.map((h) => `${h.which} ${h.lo === h.hi ? h.lo : `${h.lo}-${h.hi}`}`).join(', ') : 'none',
       });
+    }
     }
   }
 }
 
 rows.sort((a, b) => (a.dates === 'none') - (b.dates === 'none') || a.slug.localeCompare(b.slug));
 for (const r of rows) {
-  console.log(`${r.slug}  [${r.church}]  cited «${r.said}» = ${r.range}  against ${r.dates}`);
+  console.log(`${r.slug}  [${r.church}/${r.where}]  cited «${r.said}» = ${r.range}  against ${r.dates}`);
 }
 console.log(`\n${rows.length} of ${cited} cited years are outside the folder's own dates, over ${folders} folders.`);
 console.log('Every row is a question, not a correction: the cited year may be the worse reading, or a different event.');
