@@ -1,4 +1,4 @@
-# Sergius (Tsvetkov)
+# Sergius (Tsvetkov) (21 December)
 
 The Православный церковный календарь of the Сретенский monastery names him in one line for 21 декабря ст. ст.: «Сщмч. Сергия диакона (1937).» The line declines the forename to «Сергия» and gives no surname, no place, no year of birth and no word of narrative. The rank word «Сщмч.», the grade «диакона» and the year it closes with, 1937, are the whole of what it says of him.
 
