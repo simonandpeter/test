@@ -168,5 +168,11 @@
       "basis": "traditional",
       "note": "The Охридски пролог for 20. јун ст. ст.: „Незнабошци се дигоше на њега, мучише га и посекоше у Халкиди Сиријској 311. године“ — the pagans rose against him, tortured him and cut him down at Chalcis in Syria in the year 311. The folder held no `dates` at all before this. doxologia places the suffering in the reign of Aurelian and prints no year; saint.gr gives no year in its own narrative and only the opinion it sets against itself, that of S. Eustratiades, puts the death at Chalcis in Syria under Diocletian. A reign is not a source for a year, so nothing is widened towards Aurelian and nothing is derived from the disagreement, which is stated in the life instead (5 October 2026)."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

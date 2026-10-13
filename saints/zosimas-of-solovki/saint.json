@@ -33,6 +33,12 @@
       "note": "saint.gr: «Λίγο πριν την κοίμησή του ο Όσιος Ζωσιμάς προετοίμασε τον τάφο του κάτω από το ιερό του ναού της Μεταμορφώσεως και κοιμήθηκε με ειρήνη το έτος 1478», and its heading has «Οσιος Ζωσιμας (; - 1478)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "sabbatius-of-solovki",
     "jonah-of-novgorod",

@@ -43,6 +43,12 @@
       "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(I)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "priscilla"
   ],

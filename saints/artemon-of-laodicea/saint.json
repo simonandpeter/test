@@ -119,5 +119,11 @@
       "basis": "traditional",
       "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 13 April: „Но поново би ухваћен и посечен 303. год.“ — he was taken again and beheaded in the year 303. The year is printed flat and not as «about». It is the only year any source read for this folder gives: doxologia.ro's line prints none, and the reign of Diocletian the entry names him under is consistent with it. `node .tmp/dd.mjs 303` reads in Russian and Greek."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

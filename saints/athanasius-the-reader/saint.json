@@ -31,6 +31,12 @@
       "note": "Two books, two years, and the field is widened rather than chosen. saint.gr’s heading for each of the three: «(; - 302)», and its narrative «Το 302 μ.Χ.» for the year of the martyrdom. The Охридски пролог for 20. јун ст. ст.: „а Димитријана и Атанасија у огњу спале 306. године“ — Demetrian and Athanasius were burned in the fire in the year 306. Four years apart, nothing averaged and neither book preferred; the two books also disagree about the manner of the death, which is written in the life and in no field (5 October 2026)."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "aristocleus-of-tamassos",
     "demetrianus-the-deacon"

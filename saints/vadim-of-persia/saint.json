@@ -107,5 +107,11 @@
       "basis": "traditional",
       "note": "saint.gr heads him «Αγιος Βαδιμος Οσιομαρτυρας Και Οι Επτα Μαθητες Του (; - 376)». The page’s prose gives no year of its own, setting him only in the reign of «Σαπώρ ο Β' (325 - 379 μ.Χ.)», within which the heading’s year falls. **days.pravoslavie.ru is a second witness for 376 and prints it twice**: on its day line for 9 апреля ст. ст., «Прмч. Вадима архимандрита и 7 учеников его (376).», and at the end of its life page, where the executioner at last struck the head off «(+ 376)». That page dates Shapur’s reign «(310 - 381)» instead, and 376 falls inside that too, so the two reign readings do not disturb the year. The Ohrid Prologue also closes on 376."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }
