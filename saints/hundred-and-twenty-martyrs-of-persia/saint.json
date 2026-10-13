@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 342,
+      "latest": 342,
+      "display": "342",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(342)»."
+    }
+  },
   "names": [
     {
       "form": "Εκατόν είκοσι Μάρτυρες",

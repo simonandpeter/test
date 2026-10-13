@@ -29,6 +29,15 @@
     "hermit",
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(X)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

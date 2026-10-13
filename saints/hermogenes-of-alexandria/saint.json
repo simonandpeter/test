@@ -29,6 +29,15 @@
     "martyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 313,
+      "latest": 313,
+      "display": "c. 313",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(ок. 313)»."
+    }
+  },
   "related": [
     "menas-the-athenian",
     "eugraphus"

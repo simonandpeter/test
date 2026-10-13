@@ -22,6 +22,15 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": -2000,
+      "latest": -2000,
+      "display": "2000 BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru in the day line this folder already cites: «(2000 до Р.Х.)». The calendar prints a single year before Christ as the era it places him in rather than as a recorded year of death, so it is kept as a floruit."
+    }
+  },
   "related": [
     "abraham-the-patriarch"
   ],
