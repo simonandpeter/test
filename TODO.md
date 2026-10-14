@@ -117,80 +117,81 @@ where no icon exists** (author, same day), said so in the draft's `why`.
 **Both passes are in — 145 icons** (Greek `6a095e3f`, Romanian the merge after
 it) — and the four calendars now read:
 
-**18 icons landed 14 October 2026 and the imageless heroes are 180, from 207.**
-All eighteen came from the **Menaion Reader plate date-match** — the per-saint
-category listing was never reached, so method 1 is untouched and the tail is
-unmeasured.
+**47 icons landed 14 October 2026 and the imageless heroes are 138, from 207.**
 
-| calendar | before | after |
-| --- | --- | --- |
-| Romanian | 35 of 357 | **31** |
-| Greek | 65 of 364 | **58** |
-| Russian | 76 of 357 | **66** |
-| Serbian | 56 of 358 | **44** |
-| distinct saints | 207 | **180** |
+| calendar | 13 Oct | after the plates | after method 1 |
+| --- | --- | --- | --- |
+| Romanian | 35 of 357 | 31 | **27** |
+| Greek | 65 of 364 | 58 | **54** |
+| Russian | 76 of 357 | 66 | **38** |
+| Serbian | 56 of 358 | 44 | **32** |
+| distinct saints | 207 | 180 | **138** |
 
-**18 icons cleared 27 day-slots, which is not a miscount.** `pickHero` breaks
-the tie inside the sung pool, so giving one saint a picture can promote him over
-a different imageless hero and close that day too — the 2026-08-28 rule working.
+**An icon closes more than one day, and that is `pickHero` working.** 18 icons
+cleared 27 distinct saints and 29 more cleared 42: the tie is broken inside the
+sung pool, so giving one saint a picture can promote him over a different
+imageless hero and close that day too (the 2026-08-28 rule).
 
-**The identity rule is the whole of the method, and it needs both halves:** the
+**The plate route: the identity rule needs both halves.** The Menaion Reader
 plate's file name carries a church-year code (month counted from September, then
 the day) *and* the saint's Russian name, and a match requires the code to
 resolve to the folder's own Julian feast **and** the title to name the folder's
-own stored Russian form. A date alone is never enough. That is what the ten
-refusals were — «Маркеллин» is not «Маркелл»; 29 March's Mark is Mark of Arethusa
-and not the Pskov-Caves monk; 6 July's Сисой is Sisoes the Great; 24 June's
-plate is the Nativity of the Forerunner — plus one refused the other way, two
-folders sharing 15 March and the name Alexander with nothing to choose between
-them.
+own stored Russian form. A date alone is never enough.
 
-**§5's sub-1250px warning is worse than it reads.** `patrick-of-prusa` exhausted
-the whole backoff ladder for about eight minutes, Commons serving the unscaled
-original and 429ing it through every retry, then came down first try on a single
-re-run — so `geticon.py`'s "ask again at native-1" retry does **not** always
-produce a thumb.
+**Method 1 is the per-saint category listing, and guessing the title only finds
+saints Commons happens to have titled in English.** Three routes, cheapest
+first — `scratchpad/m1cat.py`, `m1wd.py`, `m1ru.py`:
 
-**And `geticon.py` was recording a width it never got.** It wrote `thumbwidth`,
-which is what the request asked for and which Commons returns unchanged when it
-serves the original instead, so **481 icons — every one the programme has ever
-fetched — said "at 1200px" beside a file of 563 to 1200px**. 181 also credited
-"Unknown authorUnknown author", Commons' Artist field being two HTML elements
-with no separator between them. Both fixed at the source and in the record
-(`e9ba09a9`).
+1. **Titles built from the folder's own names.**
+2. **P373 off Wikidata**, because Commons calls Nilus of Sora `Saint Nil
+   Sorsky`, Nilus of Stolobnoe `Nil Stolobensky` and Germanus of Kazan `German
+   of Kazan`, and no guess reaches any of them.
+3. **Full-text search on ru.wikipedia, then the article's `wikibase_item`, then
+   P373** — because `wbsearchentities` matches a label by **PREFIX**, so
+   «Иоанн Суздальский» misses an entity labelled «Иоанн (епископ
+   Суздальский)» and route 2 reports "no Wikidata hit" for saints who have
+   both an article and a category.
 
-**Left in flight, drafted and vetted but unfetched** — a worklist, not a claim:
-six folders in `scratchpad/draft-b2.json` and six in `draft-b3.json`, which
-`python scratchpad/drive.py <file> --write` would take.
+**A free-text namespace-14 search is worse than useless for a forename**:
+`Peter` returns ten modern namesakes, `Stephen the New` twenty-seven aerial
+photographs of St. Stephen, New Brunswick. Last resort only, and a hit is kept
+only if it is sainty and carries a distinguishing word.
 
-**And the method-1 queue, written down here because a worklist in a gitignored
-scratch file is a worklist that is lost.** These are the names queued for the
-per-saint category listing and never searched — nobody has established whether
-they have a free image. `peter-the-apostle` leading an imageless day is the most
-surprising row on it. The query is the saint's own Commons category, not a
-free-text search.
+**The refusals are the other half of the work.** 26 so far, each with its
+reason: namesakes («Маркеллин» is not «Маркелл»; 29 March's Mark is Mark of
+Arethusa, not the Pskov-Caves monk; 24 June's plate is the Nativity of the
+Forerunner); below the 560 px thumbnail floor; a category holding the **event**
+rather than the saint, which is why Lazarus of the Four Days and Photini the
+Samaritan are still open — the Raising paintings have Christ as their subject
+and the Samaritan woman is unnamed in hers; nothing on Commons naming the saint
+at all, Philaret of Moscow having four categories of which all four are his
+books; and one plate refused for **ambiguity**, two folders sharing 15 March and
+the name Alexander with nothing to choose between them.
 
-```
-acacius-the-obedient arsenius-bishop-of-tver arsenius-of-serbia 
-athanasius-iii-patelarios barlaam-of-the-kyiv-caves basil-of-mangazeya 
-boniface-of-tarsus boyan-enravota chryse-of-slatena conon-of-isauria 
-daniel-of-pereslavl danilo-of-serbia erasmus-of-the-kyiv-caves erastus 
-filofteia-of-pasarea george-the-new-martyr-of-sofia germanus-of-kazan 
-innocent-of-nurma jacob-of-putna john-of-suzdal john-the-russian 
-john-vladimir juvenal-of-jerusalem lazarus-of-mount-galesion 
-lazarus-the-four-days-dead macarius-of-zheltovodsk marciana-the-empress 
-mark-the-ascetic nilus-of-sora nilus-of-stolobnoe pelagia-of-tinos 
-peter-of-damascus peter-ordynsky-of-rostov peter-the-apostle 
-philaret-of-moscow photini-the-samaritan photus-son-of-terence 
-sava-brancovici-of-transylvania savvas-of-kalymnos seraphim-of-vyritsa 
-seven-virgins-of-gaza seventy-martyrs-of-scythopolis 
-silouan-of-the-kyiv-caves simon-of-yurievets sophia-of-suzdal 
-stephen-the-new thalassius theodore-of-rostov-and-suzdal 
-theophylact-of-nicomedia tikhon-of-moscow tryphon-of-vyatka 
-twenty-thousand-martyrs-of-nicomedia zacharias-son-of-carion
-```
+**§5's claim that ~94 of the tail have nothing free on Commons may be too
+pessimistic.** A sample of 23 method-1 names came out 11 found / 12 not, which
+is a better rate than that implies. Nobody has re-measured the tail.
 
-**Measured on main, 13 October 2026**, after `npm run build:manifest` at
+**28 of the 53 queued names are still unsearched**, and one carries a live lead
+nobody pursued: `theophylact-of-nicomedia`'s Wikidata entity has a bare «Saint
+Theophilactus» fresco at Rila which could as easily be Theophylact of Ohrid —
+it wants checking, not taking.
+
+**Nobody has looked at any of these 47 pictures.** They were chosen on file
+title, category membership and pixel size. `germanus-of-kazan` is a Lives
+*scene* (a consecration) rather than a portrait, `john-vladimir` a vita icon
+with marginal scenes, `basil-of-mangazeya` two figures shared with Basil of
+Caesarea, and `seraphim-of-vyritsa` a 1927 **photograph** — each said plainly in
+its note. `erasmus-of-the-kyiv-caves` at 450×624 is ON the floor, not over it,
+and is the first thing item 15 should replace.
+
+**Throttling, twice recorded now.** A single saint can exhaust the whole backoff
+ladder for eight minutes — Commons serving the unscaled original and 429ing it
+through every retry — and then come down first try on a single re-run. So
+`geticon.py`'s "ask again at native-1" retry does not always produce a thumb;
+set that saint aside and come back rather than waiting it out.
+
+**Measured on main, 13 October 2026****Measured on main, 13 October 2026**, after `npm run build:manifest` at
 6,799 folders — these are the honest numbers, because each pass had measured in
 its own worktree without the other's icons:
 
