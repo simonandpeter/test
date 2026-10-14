@@ -621,67 +621,96 @@ new one is better for every face it has to fill.
 2026-10-03: "there is always some marker at least a century that can be
 listed"). It is written down now.
 
-**282 done, 14 October 2026, and the yield rate is measured** — which was the
-thing nobody had. `dates` is now absent on **1,133 of 6,799 folders — 16.7%**,
-from 1,415 / 20.8%, and **nothing was fetched**: every number came out of a
-calendar line the folder already quotes, a sentence in its own life, or another
-folder in this corpus.
+**351 done, 14 October 2026, and every tier's rate is now measured.** `dates`
+is absent on **1,064 of 6,799 folders — 15.6%**, from 1,415 / 20.8%, and
+**nothing was fetched at any point**: every number came out of a calendar line
+the folder already quotes, a sentence in its own life, or another folder in this
+corpus.
 
-| pool | n | written | yield | evidence |
-| --- | --- | --- | --- | --- |
-| tier A | 150 | 150 | **100%** | a year or century in an attestation's `source.text` |
-| tier B | 211 (really 114) | 35 of 50 read | **70%** | a year or century in `life.md` prose |
-| **word centuries** | 83 | 42 | **51%** | a century the prose spells in words |
-| **named reigns** | 44 | 26 | **59%** | "under X" in the folder's own prose |
-| tier C | 64 | 18 | **28%** | a year in an attestation `note` |
-| apostolic | 72 | 11 | **15%** | `types: apostle`, or the Seventy in the prose |
-| tier D, the rest | ~200 | — | untried | a marker and no number |
-| tier E | 720 | — | — | nothing at all |
+| pool | n | yield | evidence |
+| --- | --- | --- | --- |
+| a year in an attestation's `source.text` | 150 | **100%** | exhausted |
+| a century spelled in **words** | 83 | **51%** | the prose |
+| a named reign, first pass | 44 | **59%** | "under X" in the prose |
+| **a temporal tie to a dated folder** | 46 | **70%** | a mother, an elder, a proconsul |
+| prose in the life | 158, 93 lost to shelf-marks | **42%** of survivors | the life |
+| a year in an attestation `note` | 64 | **28%** | the note |
+| apostolic | 72 | **15%** | `types: apostle` |
+| a reign marker, second pass | 231, only **14** name a pack ruler | **71%** of those 14 | |
 
-**Two blind spots were in the instruments, not the corpus.**
-`item16-datescan.py`'s century pattern wants digits and an ordinal suffix, so
-"the fourth century" read as nothing and the folder fell to tier D or E — 83
-folders spell it in words and they were the highest-yield pool anybody found.
-And `scripts/date-citation-audit.mjs` read `source.text` alone, so not one of
-tier C's 64 slugs could appear in the report that exists for exactly that
-defect; it reads the note too now, scrubbed (`e48b6386`).
+**TIER E IS NOT WORTH A WAVE, and this is the question the item can stop
+asking.** A systematic sample of 40 of the 698 folders with nothing in them —
+every 17th of the sorted list, so reproducible and unpickable — read one at a
+time rather than classified: **40 of 40 cannot be placed from the source the
+folder already cites**, and 38 of the 40 say so in the folder's own prose. "No
+place, no desert, no century and no year is printed, so none is recorded here."
+The reading was already done and came back empty.
 
-**THE TRAP, and it is the same one in every tier: a number in a folder's prose
-is more often than not in the clause saying *this is not that saint*.**
-Of tier B's 211, **97 have their only year as a shelf-mark or a page
-reference** — «the Paris Codex 1578», «at page 640, line 6» — because saint.gr's
-shortest notices name the manuscript that keeps the saint and nothing else. Of
-tier C's 64, **46 refusals** were a folio, an Evergetinos page, a life or name
-page id, the 110th year of a man's life, or the count of the three hundred
-Alamanoi of Cyprus. Of the emperor marker's 56 hits, **30 refusals**, four of
-them saint.gr's *etymology* block, which dates whoever else bore the name — a
-physician under Nero, a tragic poet of Alexandria, an eleventh-century painter.
-And "twelve" is a count 61 times in 72. `.tmp/item16-lifefilter.py`,
-`item16-wordcent.py`, `item16-rulers.py` and `item16-dmarkers.py` are the
-filters.
+**But 4 of those same 40 were placeable from something else already in the
+folder.** So the instruction for the remainder is: **do not re-read tier E's
+sources, read tier E's ties.** `.tmp/item16-timetie.py` finds them — 46 of the
+1,064 carry a tie to a saint this corpus dates, 32 written, and **14 left
+unwritten on purpose**, four of them Old Testament folders whose immediate kin
+carry BC displays. A BC wave is a decision the author has not made.
 
-**A Roman century lands on N01..N00 on purpose.** `lifeBounds` reads a
-death-only interval as born = earliest, died = latest, so 301..400 spans
-exactly the hundred years `map-span.test.mjs` allows and 300..400 would fail it.
+**THE TRAP, quantified in every tier: a number or a ruler in a folder's prose
+is more often than not in the clause saying *this is not that saint*.** 93 of
+158 tier-B folders lose their only year to a shelf-mark — «the Paris Codex
+1578», «at page 640, line 6». 21 of tier B's 38 refusals and 4 of tier D's are
+**saint.gr's etymology block**, which dates whoever *else* bore the name:
+Plotinus the Neoplatonist 204-269, Agathon the tragic poet of 416 BC, Lucian of
+Samosata, the emperor Heraclius. And of 162 folders carrying the `emperor`
+marker, the word sits in a **negative** clause — "the page gives no year, no
+emperor and no judge" — in all but a handful.
 
-**`display` is not free prose.** `tests/date-display.test.mjs` holds every
-recorded `display` to what `lib/date-display.js` can read in all four packs, and
-ruler phrases live in a **pack-only `eras` table of 65 fixed strings** — "under
-the emperor Justin" is not one and "under Justin I" is. The generic century
-grammar ("late 4th century", "3rd or 4th century") parses; a new ruler is a
-four-pack code commit.
+**Two blind spots were in the scanner, not the corpus**, and both have the same
+shape: `item16-datescan.py`'s century pattern wants digits and an ordinal
+suffix, so "the fourth century" read as nothing; and its `emperor` pattern wants
+a title word beside a capitalised name, so "martyred under Constantine
+Copronymus" read as nothing and sent three folders to tier E. `date-citation-audit.mjs`
+had a third: it read `source.text` and never `note`, so tier C's 64 slugs could
+not appear in the report built for them (fixed, `e48b6386`).
 
-**A reign resolved to years is taken from the corpus, not from memory.** 50
-`eras` displays already carry bounds on dated folders — Diocletian 284-305 on 64
-of them, Domitian 81-96, Decius 249-251, Justin I 518-527.
+**A WARNING ABOUT THIS ITEM'S OWN HISTORY.** An earlier version of this
+paragraph listed six instruments as copied into `.tmp`; **three of them had
+never been written there** — a word-century scan, a rulers table and a markers
+scan — and the next reader rebuilt two from scratch before finding out. The
+claim was taken from a report and published without `ls`. What is on disk now is
+what `ls .tmp/item16-*` prints and nothing else. The one worth keeping is
+`item16-timetie.py`; `item16-tierE-sample.py` is the measurement above.
 
-**And "revert to null" is not "remove the key".** Writing `"dates": null` into a
-folder is REFUSED by the manifest build — the schema gives `dates` no null
-branch — and the refusal surfaces five folders away, as `related saint
-"<slug>" does not exist`. The corpus's undated folders have no `dates` key.
+**A reign resolved to years is taken from the corpus, never from memory.** The
+table was rebuilt from dated folders: Diocletian 284-305 on 54 of them, Licinius
+308-324 on 47, Julian the Apostate 361-363 on 7, Hadrian 117-138 on 7. 63 of the
+pack's 65 `eras` strings are in use; the unused two are the reigns of Ahab and
+Asa.
 
-**One folder wants a ruling:** `joseph-of-bisericani`'s page gives a death of
-1711 against a fifteenth-century birth and does not reconcile them.
+**`display` is not free prose**, and it refused a placeable folder: `tests/date-display.test.mjs`
+holds every `display` to what `lib/date-display.js` composes in all four packs,
+and `leo-of-methone` has a clean upper bound — his relic taken up by a
+twelfth-century theologian — that cannot be said, because `before the 12th
+century` is a pack-only fixed string and not a shape the generic branch builds.
+**A `before <century>` composition would place that folder and probably
+several**, and it is a four-pack code change.
+
+**A Roman century lands on N01..N00 on purpose:** `lifeBounds` reads a
+death-only interval as born = earliest, died = latest, so 301..400 spans exactly
+the hundred years `map-span.test.mjs` allows and 300..400 would fail it.
+
+**And "revert to null" is not "remove the key".** Writing `"dates": null` is
+REFUSED by the manifest build — the schema gives `dates` no null branch — and
+the refusal surfaces five folders away as `related saint "<slug>" does not
+exist`. The corpus's undated folders have no `dates` key at all.
+
+**Rulings the author owes, each one blocking a folder or several:**
+`joseph-of-bisericani` (1711 against a fifteenth-century birth, unreconciled on
+its own page); whether a page's own «perhaps» may be recorded — `nearchus` is
+conditional on a surmised friendship with Polyeuctus, whom this corpus dates
+249-259, and `therinus` and `valerius` carry a bolded "no date was added here"
+that a yes would reverse; whether a BC wave may begin; and
+`ignatius-of-kios`, whose life has him confess before Leo III (717-741) while
+the bishop the same paragraph has him learn from is recorded here as 9th century
+— one of the two is wrong and he was left undated rather than picked.
 
 What is left, in the order the yield suggests: tier C (64, a note already holds
 the figure), then tier D (270, a marker to resolve to a century), then the 720
