@@ -36,24 +36,6 @@
   ]
  },
  {
-  "slug": "artemon-of-seleucia",
-  "days": [
-   [
-    "greek",
-    "2026-03-24"
-   ]
-  ]
- },
- {
-  "slug": "athanasia-of-antioch",
-  "days": [
-   [
-    "greek",
-    "2026-10-09"
-   ]
-  ]
- },
- {
   "slug": "athanasius-of-attaleia",
   "days": [
    [
@@ -90,15 +72,6 @@
   ]
  },
  {
-  "slug": "christina-martyr-18-may",
-  "days": [
-   [
-    "romanian",
-    "2026-05-18"
-   ]
-  ]
- },
- {
   "slug": "cyriacus-of-eurychou",
   "days": [
    [
@@ -122,24 +95,6 @@
    [
     "russian",
     "2026-03-01"
-   ]
-  ]
- },
- {
-  "slug": "eudocia-4-august",
-  "days": [
-   [
-    "russian",
-    "2026-08-17"
-   ]
-  ]
- },
- {
-  "slug": "eudoxius-of-melitene",
-  "days": [
-   [
-    "romanian",
-    "2026-09-06"
    ]
   ]
  },
@@ -243,15 +198,6 @@
   ]
  },
  {
-  "slug": "john-psychaites",
-  "days": [
-   [
-    "serbian",
-    "2026-06-08"
-   ]
-  ]
- },
- {
   "slug": "jordan-the-martyr-2-february",
   "days": [
    [
@@ -337,15 +283,6 @@
   ]
  },
  {
-  "slug": "nicholas-simo",
-  "days": [
-   [
-    "russian",
-    "2026-04-18"
-   ]
-  ]
- },
- {
   "slug": "panagiotis-of-caesarea",
   "days": [
    [
@@ -382,15 +319,6 @@
   ]
  },
  {
-  "slug": "paul-28-june",
-  "days": [
-   [
-    "serbian",
-    "2026-07-11"
-   ]
-  ]
- },
- {
   "slug": "paul-companion-of-andrew",
   "days": [
    [
@@ -414,15 +342,6 @@
    [
     "serbian",
     "2026-04-07"
-   ]
-  ]
- },
- {
-  "slug": "peter-of-lampsacus",
-  "days": [
-   [
-    "serbian",
-    "2026-05-31"
    ]
   ]
  },
@@ -499,15 +418,6 @@
   ]
  },
  {
-  "slug": "theodore-companion-of-terentius",
-  "days": [
-   [
-    "russian",
-    "2026-04-23"
-   ]
-  ]
- },
- {
   "slug": "theodore-of-mytilene",
   "days": [
    [
@@ -540,15 +450,6 @@
    [
     "greek",
     "2026-04-18"
-   ]
-  ]
- },
- {
-  "slug": "zoticus-20-april",
-  "days": [
-   [
-    "russian",
-    "2026-05-01"
    ]
   ]
  }
