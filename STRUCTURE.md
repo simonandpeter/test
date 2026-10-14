@@ -1254,6 +1254,17 @@ is discussed.
    fixed velocity instead of eight `mouse.move` steps. Until then CI retries
    hide it, which is how a flake here once masked a 16/16 regression.
 
+   **Its cousin is answered, and the answer generalises: `toBeVisible()` waits
+   on frames.** Playwright's visibility assertion retries inside the page's own
+   `requestAnimationFrame`, so on a desk where the renderer is handing out one
+   to three frames a second it samples two or three times in its whole budget
+   and reports hidden what `locator.isVisible()` finds in 13-29 ms. That was
+   the whole of `index-carousel.spec.js`'s `.facets` intermittent — the page
+   needed no change — and it is why `expect.poll(() => locator.isVisible())`,
+   which is round-trip driven, is the right wait for anything that arrives
+   after a press. CPU throttling does **not** reproduce it: at 20x the frames
+   keep coming (14-17 fps) and the assertion passes.
+
 6. **No hymn has a rendering in Russian, Romanian, Greek or Serbian.** English
    is complete in both halves of the build — the corpus's own hymns and the
    feast hymns of `src/data/liturgical-days.js` — and the other four packs get

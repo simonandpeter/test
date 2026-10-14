@@ -52,12 +52,14 @@ Android Studio or Xcode, and `docs/APP.md` says which steps.
 rest of what four agents found. They are all one question: whether a page that
 degrades honestly is allowed to state something untrue while it does.
 
-**Two carousel tests fail on this desk and not because of the diff.**
-`index-carousel.spec.js:1929` failed **3 of 3 on the unmodified tree** and `:30`
-went 2 of 12 to 4 of 12 — a difference this desk cannot resolve. Both show
-`.facets` hidden when the mode toggle should have revealed it. Nobody has
-accounted for it; it is worth one look with nothing else running, and the
-comparison to make is the stash-and-rebuild one, not a re-run.
+**The carousel's `.facets` intermittent is answered**: `toBeVisible()` retries
+inside the page's own `requestAnimationFrame`, so a desk handing out one to
+three frames a second fails an assertion that `isVisible()` satisfies in 13-29
+ms. The page needed no change; five waits moved to `expect.poll`. The general
+lesson is in `STRUCTURE.md` §6's flake entry, because it will come back on
+another spec. **`index-carousel.spec.js:2090` is a different fault and is still
+unexplained** at about 1 in 12, as is `:1535`/`daily-stage.spec.js:763`, the
+restore pair.
 
 **The icon tail is answered, not open.** `scratchpad/icon-refusals.json` holds
 107 records. Of the 50 that were queued, 25 are `nowhere` (no entity on six
