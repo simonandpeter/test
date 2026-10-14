@@ -54,6 +54,12 @@
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 March 2026 (3 October 2026)."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "simon-of-vladimir",
     "anthony-of-the-caves",

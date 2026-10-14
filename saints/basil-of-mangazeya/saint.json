@@ -20,6 +20,12 @@
       "note": "The heading of days.pravoslavie.ru’s name page 378, «Праведный Василий Мангазейский», with the rank word left off. The folder held only a Greek form before this. The calendar gives no surname; his father’s name, Theodore, it prints only inside the life."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [],
   "dates": {
     "birth": {
