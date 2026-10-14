@@ -28,6 +28,12 @@
     "venerable",
     "hieromonk"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "chariton-the-confessor"
   ],
