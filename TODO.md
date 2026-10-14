@@ -358,23 +358,30 @@ out of the pass and neither is in it:
   same. Closing a clique is one pass over the life that names the members, not a
   slug at a time, and the group entries (`martyrs-of-…`) are the handle.
 
-## 9. The Russians, for the full year, with their images
+## 9. The Russians, for the full year — done
 
-The Russian calendar covers **63 of 366 days** today, against 364 for the Greek
-and 357 for the Romanian. Read `days.pravoslavie.ru` (Julian date in the path)
-for the whole year, folder by folder, to the same standard as the Greek and
-Romanian waves: the name in the calendar's own words, a life, the attestation
-with its citation, hymns where the page prints them.
+**Done, 14 October 2026.** The reading wave is finished: `days.pravoslavie.ru`
+read for the whole year, **363 of 366 days carry somebody**, up from the 63 this
+item was written against. `node scripts/ship-gate-days.mjs` is the only
+instrument worth quoting for it.
 
-Then their icons, by `scratchpad/geticon.py`'s rules — the licence comes from
-Commons' own `imageinfo` and a file Commons does not state as public domain or
-a CC licence is refused, never warned about. One fetcher at a time: parallel
-sourcers draw 429s through the whole backoff ladder.
+The three days that carry nobody are each explained rather than outstanding:
+**7 January and 2 February enumerate nobody** — the calendar prints the
+Synaxis of the Theotokos and the Meeting with no names of their own — and
+**29 February has no source page on any host**, the Julian 29 February falling
+in no year the sites publish.
 
-## 10. Then the Serbians
+Their icons are item 5, which is live: 180 distinct saints still lead a day
+without one, down from 254.
 
-**44 of 366 days.** The Ohrid Prologue at pravoslavno.rs, Julian, same standard,
-then their icons. Only after item 9 is finished.
+## 10. The Serbians — done
+
+**Done, 14 October 2026.** **365 of 366 days**, up from the 44 this item was
+written against; only 29 February carries nobody, for the same reason as the
+Russian. The Ohrid Prologue at pravoslavno.rs, Julian, read to the same
+standard.
+
+Their icons are item 5.
 
 ## 11. Cadence: push and read CI about every 8 hours
 
@@ -689,44 +696,61 @@ Not to be confused with how the date is *shown*: the phone's register prints no
 date at all now (item 15's commit), which is a display decision and does not
 reduce what the corpus should record.
 
-## 17. The 1,294 superseded fold keys
+## 17. The superseded fold keys — measured, and the deletion is blocked
 
-**Scheduled by the author, 13 October 2026** ("schedule a pass over dead fold
-keys"), after the count came out of a session that kept tripping over them.
+**Measured 14 October 2026, and the split the item asked for is done.** The
+numbers are not the 1,294 this item was written with, because the corpus has
+grown since:
 
-`READ_FOLDS` in `scripts/corpus-gate.mjs` keys a reading by form plus the
-sorted slug list, on one line, and `foldKey` joins them with a space:
+| | keys |
+| --- | --- |
+| `READ_FOLDS` entries | **2,316** |
+| reached by a live collision row | 926 |
+| **dead, a strict subset of a live key of the same form** | **1,347** |
+| **dead, no live form at all** | **43** |
 
-```js
-const foldKey = (key, slugs) => [key, ...[...slugs].sort()].join(' ');
+`scratchpad/fold-audit.py` is the measurement, and it takes the live keys from
+**the gate's own printed rows** rather than re-implementing the folder — a
+second folder that agreed by coincidence would be worse than no check.
+
+**1,138 of those are safe to delete by construction and the deletion is
+written:** the 43 orphans, whose form no live row has at all, so the folders
+they named were renamed or merged away and nothing can ever look them up; and
+**1,095 whose wider key is already read**, where whoever widened the fold
+carried the reading forward at the time and the narrower entry has been dead
+weight since. `scratchpad/fold-prune.py` does it, dry by default. Its dry run
+finds all 1,138 and keeps 1,178, so the parsing is right.
+
+**252 are deliberately NOT deletable, and that is the item's real remainder.**
+Their wider row is UNREAD, so the narrower reading is the only reading those
+folders have — but writing it under the wider key would claim the member that
+widened the fold had been read, and it has not. **That is a reading somebody
+owes, not an edit a script may make**, and it is 252 collisions' worth of work.
+
+**The check that makes the deletion believable, and it must be run:** the
+gate's printed collision block must come out **byte-identical**. Every row's
+marker and every `read:` line must be exactly what it was, because a key
+nothing looks up cannot change what anything prints.
+
+```
+node scripts/corpus-gate.mjs > before.txt
+python scratchpad/fold-prune.py --write
+node scripts/corpus-gate.mjs > after.txt && diff before.txt after.txt
 ```
 
-Lookup is exact. So when a collision widens — a third saint arrives under a
-name two already shared — the old two-slug key stops matching anything and the
-row goes **unread**, printing `?`. That is the safe direction: a stale narrower
-key cannot pass a wider row. Nothing is broken, and that is why this is a
-tidying item and not a defect.
+**BLOCKED: the write needs the author.** `scripts/corpus-gate.mjs` is refused
+as a shared resource by the permission classifier — to three separate readers
+and then to this session directly, on the edit and even on writing the pruning
+script into `.tmp/`. Nobody worked around it. Everything except the write is
+done, so this is one command and one diff when the permission exists.
 
-**The size of it: 1,294 of 2,311 keys match no live collision.** They are not
-junk — each one is a reading somebody made and wrote down — so the pass is not
-`grep -v` over the file. Two things have to come out of it:
-
-- Which superseded keys are *subsets* of a live key. Those readings belong to
-  the live row and should be carried forward into it, by hand, the way a
-  widened key's narrower entry has been handled all along.
-- Which match nothing at all any more, because a folder was renamed or merged
-  away. Those can go, and the count of them is worth printing: a surprising
-  number would mean slugs are moving more than anyone thinks.
-
-**Measure before editing.** The gate prints `GATE GREEN` while still showing
-unread folds, so the only honest before/after number is the `?` count by
-codepoint — `grep -E "[·?]"` is a byte class and misses the multibyte `·`:
-
-```
-python -c "import io;s=io.open('g.txt',encoding='utf-8').read();print(s.count(u'?'),s.count(u'\u00b7'))"
-```
-
-It stood at **360 unread on 13 October 2026** with the corpus at 6,799 folders.
+**Fourteen of the 43 orphans are from this week** and their readings are on
+file at the end of `../ro-run/FINDINGS.md` rather than lost: the five
+surname-plus-day keys dissolved by TODO 18's first half, two that were already
+dead beside the wider keys that replaced them, and the eight Latin keys
+dissolved by its second half. Two Cyrillic rows settled in that pass could not
+be written for the same reason — «архангельскии василии» (three men) and
+«петр успенскии» (two), both with their full membership ready to paste.
 
 ## 18. Twenty-four display names on fifty-six folders
 
