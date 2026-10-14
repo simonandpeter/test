@@ -6,6 +6,15 @@
     "venerable",
     "ascetic"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "The saint.gr page this folder already cites does not say which of three desert hermits of the name is kept here, and names each: a disciple of `anthony-the-great` (died 356), a disciple of Abba `pambo-of-egypt` (died c. 305-311), and one who built cells for the young monks coming out to the desert. The uncertainty is over which man, not over when: all three stand in the same Egyptian generation, so the century is recorded and no year is."
+    }
+  },
   "names": [
     {
       "form": "Αμμώνιος",

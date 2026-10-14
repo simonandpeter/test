@@ -25,6 +25,15 @@
     "james-son-of-zebedee",
     "joseph-the-betrothed"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Mother of `james-son-of-zebedee`, recorded here as beheaded in 44 or 45, and of `john-the-theologian`; present at the Crucifixion and at the tomb on the morning of the Resurrection, and alive when Herod beheaded James. The three sources this folder cites give no year, no age and no place."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
