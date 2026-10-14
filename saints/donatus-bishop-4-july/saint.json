@@ -6,6 +6,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "under Julian the Apostate",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life has him beheaded after \"the persecution set in motion by Julian the Apostate\", in which \"the prefect Quadratianus ordered the two of them to sacrifice to the idols\". The interval is that reign, 361–363, as six other folders in this corpus hold that marker. saint.gr \"gives no year for any of it\", as the life says."
+    }
+  },
   "names": [
     {
       "form": "Δονάτος",

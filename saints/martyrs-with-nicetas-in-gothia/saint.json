@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 306,
+      "latest": 372,
+      "display": "306–372",
+      "basis": "inferred",
+      "note": "Placed by the martyrdom this folder is named for: \"These holy martyrs were martyred with Nicetas the Goth.\" `nicetas-the-goth` carries 306–372 and this is the same death."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

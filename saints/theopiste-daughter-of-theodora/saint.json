@@ -5,6 +5,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "inferred",
+      "note": "Placed by her mother, with whom her page keeps her \"under one heading\": what it prints of her is \"that she was Theodora’s daughter and that she was with her in the monastery\". `theodora-of-thessalonica` carries a death of 879 or 892. No year, because the page gives none."
+    }
+  },
   "names": [
     {
       "form": "Θεοπίστη",

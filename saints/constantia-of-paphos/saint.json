@@ -8,6 +8,15 @@
     }
   ],
   "sex": "female",
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Placed by the folder this one’s own life ties her to. \"Jerome, in his book on ecclesiastical writers, says she was a disciple of Hilarion the Great, who lived the ascetic life at the village of Episkopi near Paphos\"; `hilarion-the-great` carries a birth of 333. No year, because the page gives none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

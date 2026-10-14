@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "under Hadrian",
+      "basis": "traditional",
+      "note": "The reign this folder’s own life names, with the source’s own bounds: the two were \"made perfect by the sword in Thrace in the years of the emperor Hadrian, which it dates 117 to 138\". No year, because saint.gr gives none."
+    }
+  },
   "names": [
     {
       "form": "Παυσολύπιος",

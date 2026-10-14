@@ -16,6 +16,15 @@
     "venerable",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 717,
+      "latest": 741,
+      "display": "in the reign of Leo the Isaurian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life opens \"Theophilus lived when Leo the Isaurian, the iconoclast, was emperor\", and has him imprisoned, exiled and dying in exile for the icons. The interval is that reign, 717–741, as `longinus-the-stylite` and one other folder in this corpus already hold it. Both calendars say in as many words that neither gives a year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

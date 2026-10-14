@@ -3,6 +3,15 @@
   "display_name": "Kalia",
   "sex": "female",
   "types": [],
+  "dates": {
+    "floruit": {
+      "earliest": 889,
+      "latest": 912,
+      "display": "889–912",
+      "basis": "inferred",
+      "note": "The one date her own life.md allows her, in its own words: the patriarch who raised a monastery over her relics is put by the Ohrid Prologue \"in the reign of Leo the Wise, 889 to 912\", and that is \"the only date it allows her\". The Prologue \"gives her no year\", so this is a floruit."
+    }
+  },
   "names": [
     {
       "form": "Калија",

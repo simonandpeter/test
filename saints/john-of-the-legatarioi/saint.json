@@ -13,6 +13,15 @@
     "martyr",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "inferred",
+      "note": "Placed by the persecution his own page sets him in. saint.gr keeps him among those who suffered with Stephen the New for the icons, and says \"the rage of Copronymus and of those about him was not confined to one victim: after Stephen, other confessors of Orthodoxy underwent tortures and deaths as well\" — John \"was exiled to Daphnousia, where he died of continual beatings\". `stephen-the-new` carries a death of 767, so John died later in the same century. The page gives him \"no year\"."
+    }
+  },
   "related": [
     "stephen-the-new",
     "basil-companion-of-stephen-the-new"

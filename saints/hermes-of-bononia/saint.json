@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life has him beheaded under \"the harsh measures of persecution against the worshippers and servants of Christ, taken by the emperor Diocletian and carried out by his officials\", at Bononia on the Danube. The interval is Diocletian’s reign, 284–305, which is the interval sixty-odd folders in this corpus already hold for that marker. No year, because doxologia.ro’s line gives none, as the life says."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

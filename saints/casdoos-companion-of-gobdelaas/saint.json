@@ -16,6 +16,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Placed by the two folders of his own company. This folder’s life makes him \"a kinsman of the king\" Sapor who was \"flayed alive\" with Gobdelaas and Casdoa; `dadas-companion-of-gobdelaas` and `casdoa-sister-of-gobdelaas` both carry a death of the 4th century. No year, because the synaxarion names only the king."
+    }
+  },
   "related": [
     "gobdelaas-son-of-sapor",
     "dadas-companion-of-gobdelaas",

@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "under Maximian",
+      "basis": "traditional",
+      "note": "The reign this folder’s own life names: saint.gr \"says of all three that they lived in the years of the emperor Maximian, when the governor of Palestine was Urbanus\". The 298 the page sets beside that sentence belongs to the governor, not to the martyrs, and the life says in as many words that there is \"no year for the men themselves\"; the interval is Maximian’s reign, 286–305, as six other folders in this corpus hold it."
+    }
+  },
   "related": [
     "theophilus-5-november",
     "theotimus-5-november"

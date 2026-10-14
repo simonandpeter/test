@@ -18,6 +18,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 50,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Placed by the man he was killed with, whose folder this one’s own life is written around: Heraclides was made bishop of Tamasos by the Apostle Paul and worked \"with Myron for his fellow-worker\", and the unbelievers \"rushed on them armed, killed them and threw them into the fire\" — one death, two men. `heraclides-of-tamasos` carries a death of the 1st century and those are the bounds taken here. Dating him takes him off `tests/map-span.test.mjs`’s UNDATED list, which is removed in the same commit."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -16,6 +16,15 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 112,
+      "latest": 122,
+      "display": "c. 117",
+      "basis": "inferred",
+      "note": "Placed by the martyrdom this folder exists for. The two \"were the two servants sent to carry out the sentence on Hermione, the daughter of the apostle Philip\", and were converted at it; `hermione-daughter-of-philip` carries a death of c. 117, and that is the one event either folder records."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

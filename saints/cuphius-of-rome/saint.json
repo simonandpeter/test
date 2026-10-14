@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life makes him a son of Claudius and Praepedigna, \"a family of the emperor Diocletian’s kin\", exiled \"when the emperor learned of it\" and burned at Ostia. The interval is Diocletian’s reign, 284–305, which is the interval sixty-odd folders in this corpus already hold for that marker. No year, because the life says of him only that he was named."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

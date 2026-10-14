@@ -13,6 +13,15 @@
     "venerable",
     "nun"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1801,
+      "latest": 1900,
+      "display": "19th century",
+      "basis": "inferred",
+      "note": "Placed by her son. \"The day’s line names her as the mother of Calinic of Cernica\", and his life \"says of her that when her children were grown she withdrew to the monastery of Pasărea and received the great and angelic habit as the schemanun Filoteia\"; `calinic-of-cernica` carries a birth of 1787 and a death of 1868, so she died in the 19th century. No year, because doxologia gives none."
+    }
+  },
   "related": [
     "calinic-of-cernica"
   ],

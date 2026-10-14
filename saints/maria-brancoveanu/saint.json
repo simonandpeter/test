@@ -12,6 +12,22 @@
   "types": [
     "princess"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1659,
+      "latest": 1661,
+      "display": "1659–1661",
+      "basis": "inferred",
+      "note": "Arithmetic on her own life.md’s own words: she \"was married in 1674, at thirteen or fourteen\". doxologia.ro \"gives no year for her birth or her death\"."
+    },
+    "death": {
+      "earliest": 1720,
+      "latest": null,
+      "display": "after 1720",
+      "basis": "inferred",
+      "note": "The last year her own life.md carries: \"In 1720 she brought the relics of Saint Constantine secretly into the church of Sfântul Gheorghe Nou in Bucharest\", and \"to the end of her life she went on rebuilding... and she spent her last years withdrawn at Surpatele in prayer\". doxologia.ro \"gives no year for her birth or her death\", so the bound is open above."
+    }
+  },
   "related": [
     "constantin-son-of-brancoveanu",
     "stefan-brancoveanu",

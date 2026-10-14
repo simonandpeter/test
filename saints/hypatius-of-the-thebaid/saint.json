@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 287,
+      "display": "before 287",
+      "basis": "inferred",
+      "note": "Placed by the persecutor his own page names, as an upper bound and nothing more. saint.gr says \"he was one of the thirty-six martyrs from the Thebaid of Egypt under the governor Arrianus\"; `arianus-of-the-thebaid` carries a death of 287, after that governor had himself believed and been martyred, so Hypatius died while he was still a persecutor. The page \"gives him no year of birth and none of death\", so the bound is open below."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

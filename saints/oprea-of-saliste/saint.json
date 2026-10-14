@@ -13,6 +13,15 @@
     "martyr",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1752,
+      "latest": 1784,
+      "display": "1752–1784",
+      "basis": "inferred",
+      "note": "Arithmetic on his own life.md’s one date: \"In 1784 she was still petitioning the emperor Joseph II to release him after thirty-two years\", which puts his imprisonment at 1752, \"and the prison answered that nothing more was known of him\". He \"was crowned in that prison\", so his death falls between the two."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

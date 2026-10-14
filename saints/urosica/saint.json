@@ -4,6 +4,15 @@
   "types": [
     "prince"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "13th–14th century",
+      "basis": "inferred",
+      "note": "Placed by his father and no narrower, because the entry is three sentences. \"He was the son of King Dragutin... the king who ended his life as the monk Theoctistus\", and `theoctistus-brother-of-stephen-milutin` carries a death of 1316; a son of that man may have died before his father or well after him, so the interval spans both centuries. There is \"no year of birth, no year of death\"."
+    }
+  },
   "names": [
     {
       "form": "Урошица",

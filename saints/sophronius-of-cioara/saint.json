@@ -14,6 +14,15 @@
     "confessor",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1761,
+      "latest": null,
+      "display": "after 1761",
+      "basis": "inferred",
+      "note": "The last year his own life.md carries: on \"14 February 1761 he gathered a great assembly at Alba Iulia\", and \"that same year... he withdrew to the monastery of Curtea de Argeș, where he lived a little longer and then died in peace\". The 1955 the life also names is his canonisation. The bound is open above because doxologia gives no year of death."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

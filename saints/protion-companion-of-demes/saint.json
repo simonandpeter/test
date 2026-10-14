@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 285,
+      "latest": 305,
+      "display": "between 285 and 305",
+      "basis": "traditional",
+      "note": "The reign his own life.md names: the martyrs \"contended together with other Christians in the years of the reign of Maximian, which it dates 285 to 305\". Written to match `demes-companion-of-protion`, who shares the line, the page and this reading."
+    }
+  },
   "names": [
     {
       "form": "Πρωτίων",

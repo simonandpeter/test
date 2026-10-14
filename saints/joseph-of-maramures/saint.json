@@ -15,6 +15,15 @@
     "bishop",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1711,
+      "latest": null,
+      "display": "after 1711",
+      "basis": "inferred",
+      "note": "The last year his own life.md carries: \"He came back to the episcopal throne of Maramureș in 1711, and a short time afterwards, worn down by what he had endured, passed to eternity.\" The life says in as many words that \"the page gives no year for his birth and none for his death\", so the bound is open above."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

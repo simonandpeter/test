@@ -37,7 +37,6 @@ const SAINTS = path.join(ROOT, 'saints');
 const UNDATED = new Set([
   'basilissa-of-sirmium',
   'eulalius-the-hierarch',
-  'myron-of-tamasos',
   'seven-virgins-of-gaza',
   'six-martyrs-of-melitene',
   'three-hundred-sixty-six-martyrs-of-nicomedia',

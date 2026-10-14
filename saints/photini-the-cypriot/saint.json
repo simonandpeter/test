@@ -8,6 +8,15 @@
     "ascetic",
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 1718,
+      "display": "before 1718",
+      "basis": "inferred",
+      "note": "The upper bound her own life.md carries: \"Her holy relic, which was buried and then found in the cave around the years 1718 to 1732.\" saint.gr \"begins by saying what it does not know: when exactly the venerable Photini lived\", so the bound is open below."
+    }
+  },
   "names": [
     {
       "form": "Φωτεινή",

@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "inferred",
+      "note": "Placed by the saint through whom they believed, which is the whole of this folder’s narrative: they were \"the wife and the daughter of the eparch Aquilinus, who believed in Christ through Azes, the saint the same calendar keeps on the same day, and who were martyred by the sword\". `azes-19-november` carries floruit 284–305. No year, because the page gives none."
+    }
+  },
   "names": [
     {
       "form": "Γυναίκα και Θυγατέρα",

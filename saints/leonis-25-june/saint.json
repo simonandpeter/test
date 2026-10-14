@@ -5,6 +5,15 @@
   "types": [
     "venerable-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 310,
+      "display": "before 310",
+      "basis": "inferred",
+      "note": "Placed as an upper bound by the life that recalls her. The passage doxologia prints for this day, inside the life of Fevronia, has the abbess Bryene strengthen her disciple \"by recalling earlier martyrs\", among them «Livia și Leonida, cele două surori»; `fevronia-of-sivapol` carries a death of 310, and \"earlier\" is the passage’s own word, so the bound is open below and 310 closes it above. No year, because neither page gives one."
+    }
+  },
   "names": [
     {
       "form": "Λεωνίδα",

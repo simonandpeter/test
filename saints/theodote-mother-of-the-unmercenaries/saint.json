@@ -17,6 +17,15 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd–4th century",
+      "basis": "inferred",
+      "note": "Placed by her sons, which is the whole of her page: \"the holy Theodote was the mother of the Unmercenaries Cosmas and Damian... and she departed this life in peace\". `cosmas-of-asia` and `damian-of-asia` both carry a death of the 3rd–4th century, two readings their page gives without choosing between them, and this folder can be no narrower than theirs."
+    }
+  },
   "related": [
     "cosmas-of-asia",
     "damian-of-asia"

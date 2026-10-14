@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 343,
+      "latest": 343,
+      "display": "343",
+      "basis": "inferred",
+      "note": "The year of the company’s martyrdom, which his own life.md states while noting that the page does not set it against his name: the six share one notice, \"the first three of them... were martyred by stoning in 343, together with the ascetic Onam, at the hands of the king of the Persians; and the next two by beheading\", Papias being one of the next two. Written to match `isaacius-20-november`, the other man the page leaves without a year."
+    }
+  },
   "names": [
     {
       "form": "Παππίας",
