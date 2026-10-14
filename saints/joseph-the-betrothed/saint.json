@@ -12,6 +12,15 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "The life this folder cites has him at Bethlehem for the census of Octavian Augustus and in Egypt until the death of Herod the Great, and absent from the Crucifixion, where `john-the-theologian` is given charge of the Mother of God. No birth is recorded: it would fall before the era and no BC date is written here."
+    }
+  },
   "images": [
     {
       "file": "images/icon.jpg",

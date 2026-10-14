@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "361 or 363",
+      "basis": "inferred",
+      "note": "They believed at the deliverance of Antonius from the oven and were beheaded on the spot, in the same hour, as the saint.gr page this folder already cites tells it; `antonius-son-of-melasippus`, `melasippus` and `cassine` are all recorded here as 361 or 363, and the interval is copied from them. The page gives the forty no year of their own, and names not one of them."
+    }
+  },
   "related": [
     "melasippus",
     "cassine",

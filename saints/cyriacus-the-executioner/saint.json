@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "He beheaded Antiochus the Physician and was beheaded on the spot, in the same hour, as the saint.gr page this folder already cites tells it; `antiochus-the-physician` is recorded here as 4th century, so this is his century too."
+    }
+  },
   "names": [
     {
       "form": "Κυριακός",

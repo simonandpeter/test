@@ -6,6 +6,15 @@
     "venerable",
     "monk"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "inferred",
+      "note": "The whole saint.gr notice this folder cites makes him the nephew of Theodore of Edessa and a monk of the Lavra of Saint Sabbas; `theodore-the-sabbaite-of-edessa` is recorded here as dead in 848. No year and no century is printed for Michael, and a floruit is written rather than a death because the notice places him in his uncle's lifetime and says nothing of his end."
+    }
+  },
   "names": [
     {
       "form": "Μιχαήλ",

@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 310,
+      "latest": 310,
+      "display": "310",
+      "basis": "inferred",
+      "note": "She served `theodore-of-cyrene` in prison with `kyprilla-of-cyrene`, and the two of them received and buried Kyprilla's relic after her death, which this corpus records as 310. The saint.gr page this folder cites gives her no year and nothing of her own end, so the year she is attested active in is recorded and no death is."
+    }
+  },
   "names": [
     {
       "form": "Αρόα",

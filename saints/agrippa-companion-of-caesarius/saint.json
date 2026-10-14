@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "inferred",
+      "note": "One of the seven arrested at Damascus and beheaded together, as the saint.gr page this folder already cites tells it; `caesarius-of-damascus` and `dasius-companion-of-caesarius` of the same company are recorded here as 7th century, off the Russian line's «(VII)», and the interval is copied from them. The Greek page gives the company no year."
+    }
+  },
   "related": [
     "caesarius-of-damascus",
     "dasius-companion-of-caesarius",

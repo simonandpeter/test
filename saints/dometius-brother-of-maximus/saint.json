@@ -13,6 +13,15 @@
     "venerable",
     "ascetic"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "The two brothers came to Abba `macarius-the-egyptian`, built their cell at his word and lived out their asceticism as his disciples, as the saint.gr page this folder cites tells it; that folder records him born 301 and dead 391, so the century is theirs. The page gives them no year and does not name their father."
+    }
+  },
   "related": [
     "maximus-brother-of-dometius",
     "macarius-the-egyptian"

@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 41,
+      "latest": 54,
+      "display": "under the emperor Claudius",
+      "basis": "inferred",
+      "note": "They were taken while burying the relic of `valentine-of-rome` and martyred at Rome, which is the whole of what the saint.gr page this folder cites says of the three; that folder records his death as the reign its own page prints, 41 to 54, and theirs follows his within it."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
