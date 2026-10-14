@@ -19,6 +19,12 @@
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 марта ст. ст., «Преподобный Иннокентий Комельский, Вологодский», with the rank word left off. The day's own line declines it the same way. Neither of this calendar's two by-names is the Нурма of the Greek page this folder's display name came from, though the Russian life gives that river as well."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "cyril-of-the-white-lake",
     "nilus-of-sora"

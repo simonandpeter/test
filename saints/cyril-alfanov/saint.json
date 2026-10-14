@@ -17,6 +17,12 @@
       "note": "Read out of the calendar’s name link for 4 мая ст. ст., which gives «Кирилл Алфанов, Сокольницкий, Новгородский, прп.»; the rank word is not part of the stored form and the two epithets are."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "isaac-alfanov",
     "clement-alfanov",
