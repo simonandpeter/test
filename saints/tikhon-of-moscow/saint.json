@@ -96,6 +96,12 @@
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "alexius-presbyter-martyr-1918-30-august",
     "leontius-stasevich",

@@ -1,0 +1,6 @@
+{
+  "credit": "Anonymous Orthodox icon painter",
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Erasmus_of_Kyiv_Caves.jpg",
+  "note": "Wikimedia Commons, “Saint Erasmus of Kyiv Caves.jpg”; artist as recorded there: Anonymous Orthodox icon painter — fetched 14 October 2026 at 450px. The licence is as Commons records it. Identified as this saint because: Found as the P18 claim of Wikidata Q2072224, «Еразм Печерский» — this folder's own stored Russian form exactly, the monk of the Caves kept 24 February in the Russian calendar. The entity carries no Commons category at all, so the file is the only thing there is. 450x624, which is on the floor rather than over it: `make_thumbs.py` caps the long edge at 560 and never upscales, so a 624px long edge clears both card derivatives, but this is the smallest icon in the batch and a better one should replace it if §15's pass finds one. There is one Erasmus of the Kyiv Caves and the title names him. Commons describes it: Saint Erasmus (Erazm) of Kyiv Caves. Orthodox saint and hermit. Died in 1160 AD. Kyiv, Ukraine."
+}
