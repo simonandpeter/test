@@ -16,6 +16,7 @@ export const ru = {
   },
 
   nav: {
+    skip: 'Перейти к странице',
       /* The page's own name, distinct from the word the button offers on it
          (author, 2026-08-27: "In Russian, this 'Today' text is the same as
          'Daily'. Is there a different word thats still short enough for the
@@ -593,6 +594,7 @@ export const ru = {
     title: 'Тексты',
     lede: 'Первоисточники, которые этот сайт цитирует полностью: сочинения самих святых и сочинения тех, кто их знал.',
     empty: 'Здесь пока ничего нет.',
+    failed: 'Список текстов не удалось загрузить, поэтому эта страница не может сказать, какие источники цитирует.',
     on: 'о {name}',
   },
 

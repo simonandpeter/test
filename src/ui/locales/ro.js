@@ -13,6 +13,7 @@ export const ro = {
   },
 
   nav: {
+    skip: 'Sari la pagină',
       /* The page's own name, distinct from the word the button offers on it
          (author, 2026-08-27: "In Russian, this 'Today' text is the same as
          'Daily'. Is there a different word thats still short enough for the
@@ -579,6 +580,7 @@ export const ro = {
     title: 'Texte',
     lede: 'Izvoarele primare pe care acest sit le citează în întregime: scrierile sfinților înșiși, și scrierile celor care i-au cunoscut.',
     empty: 'Nimic aici încă.',
+    failed: 'Lista textelor nu a putut fi încărcată, așa că această pagină nu poate spune ce izvoare citează.',
     on: 'despre {name}',
   },
 

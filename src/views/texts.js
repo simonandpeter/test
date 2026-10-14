@@ -31,10 +31,17 @@ export async function render(el, { data, router }) {
   try {
     texts = await loadTexts();
   } catch {
-    list.innerHTML = `<p class="utility">${esc(STRINGS.texts.empty)}</p>`;
+    // Not `empty`: the index did not arrive, so whether this site cites any
+    // source is a question this page has not answered (Errors 1).
+    list.innerHTML = `<p class="error-note">${esc(STRINGS.texts.failed)}</p>`;
     return;
   }
   if (!list.isConnected) return;
+
+  if (!Array.isArray(texts)) {
+    list.innerHTML = `<p class="error-note">${esc(STRINGS.texts.failed)}</p>`;
+    return;
+  }
 
   if (!texts.length) {
     list.innerHTML = `<p class="utility">${esc(STRINGS.texts.empty)}</p>`;

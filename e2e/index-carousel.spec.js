@@ -24,6 +24,37 @@ test.beforeEach(async ({ page }) => {
   await searchMode(page);
 });
 
+/**
+ * Visible — polled on a timer rather than on a frame.
+ *
+ * **`expect(locator).toBeVisible()` retries inside the page's own
+ * `requestAnimationFrame`**, so a page that is not being handed frames gets two
+ * or three samples in the whole five-second budget and can miss a state that
+ * arrives 300 ms after a press. That is what `the search face is not laid out
+ * while the carousel is showing` was failing on: 11 of 12 runs alone on this
+ * desk, with `.facets` reported hidden, and `isVisible()` reading the same
+ * element as visible 13–29 ms after the assertion gave up.
+ *
+ * Measured rather than inferred. During the failing window the page fired
+ * **2–3** frame callbacks in 2,500 ms with `document.visibilityState` still
+ * `visible`; the same test on a quiet desk fires 60 a second and passes 12 of
+ * 12. **CPU throttling does not reproduce it** — at 20x the page still gets 14
+ * to 17 fps and the assertion passes — so the starvation is frame delivery
+ * under contention (three other suites on this desk, a loaded two-core runner),
+ * not arithmetic. Holding `requestAnimationFrame` to 0–1 fps by hand reproduces
+ * the failure exactly, including the half-swapped toggle word it leaves behind;
+ * `the arriving face is observable without frames` below is that harness kept.
+ *
+ * `expect.poll` is driven by round trips, so it sees the page as it is rather
+ * than as the compositor last drew it. Everything already true when it is
+ * reached — the carousel on first paint — passes on the first sample either
+ * way, which is why only the waits *after* a press needed this.
+ */
+const appears = (locator, what) =>
+  expect
+    .poll(() => locator.isVisible(), { timeout: 15000, message: `${what} never became visible` })
+    .toBe(true);
+
 /* ---- the 2026-08-24 evening round: rows, one bookmark, the narrow header -- */
 
 
@@ -47,13 +78,13 @@ test('the Index opens on the carousel however the reader left it', async ({ brow
   await expect(page.locator('[data-carousel]')).toBeVisible();
 
   await page.locator('[data-mode-toggle]').click();
-  await expect(page.locator('.facets')).toBeVisible();
+  await appears(page.locator('.facets'), 'the search face');
 
   // Within the visit the choice holds: leaving the page and coming back is not
   // a reload, and the reader has not asked to be sent back to the row.
   await page.locator('nav.site-nav a').first().click();
   await page.goBack();
-  await expect(page.locator('.facets')).toBeVisible();
+  await appears(page.locator('.facets'), 'the search face after coming back');
 
   // A reload is where it resets.
   await page.reload({ waitUntil: 'networkidle' });
@@ -443,7 +474,7 @@ test('under reduced motion the carousel does not drift, and the modes swap witho
   // that no longer existed anywhere would satisfy the first on its own.
   await page.locator('[data-mode-toggle]').click();
   expect(await page.locator('.is-leaving').count()).toBe(0);
-  await expect(page.locator('.facets')).toBeVisible();
+  await appears(page.locator('.facets'), 'the search face');
   await ctx.close();
 });
 
@@ -1233,7 +1264,7 @@ test('the shuffle stands on both faces, and deals the filtered set again without
 
   // Still on the carousel face too, which is where it came from.
   await page.locator('[data-mode-toggle]').click();
-  await expect(page.locator('[data-shuffle]')).toBeVisible();
+  await appears(page.locator('[data-shuffle]'), 'the shuffle button');
 });
 
 
@@ -1954,8 +1985,8 @@ test('the search face is not laid out while the carousel is showing', async ({ p
 
   // And it is a deferral, not a loss: the face is whole when it is asked for.
   await page.locator('[data-mode-toggle]').click();
-  await expect(page.locator('.facets')).toBeVisible();
-  await expect(page.locator('.index-card').first()).toBeVisible();
+  await appears(page.locator('.facets'), 'the search face');
+  await appears(page.locator('.index-card').first(), 'the first card of the search face');
   const shown = await page.evaluate(() => ({
     cards: document.querySelectorAll('.index-card').length,
     height: parseFloat(document.querySelector('[data-grid-inner]').style.height || '0'),
@@ -2323,4 +2354,47 @@ test('no one frame measures the whole corpus', async ({ page }) => {
     seen.worstFrame,
     `one frame made ${seen.worstFrame} measurements, so the corpus is being measured in a single task again`,
   ).toBeLessThan(6000);
+});
+
+/* ---- round: the frame-starved reader, 2026-10-15 ------------------------- */
+
+test('the arriving face is observable without frames', async ({ page }) => {
+  /*
+   * **The search face must arrive on a timer, not on a frame.**
+   *
+   * Two readers need this. A reader whose browser is not drawing — a loaded
+   * phone, a backgrounded tab coming forward — would otherwise press the toggle
+   * and get nothing until the compositor came back; and every assertion in this
+   * file about a face that arrives after a press, because
+   * `expect(locator).toBeVisible()` polls inside the page's own
+   * `requestAnimationFrame` (`appears`, at the top of this file, has the
+   * measurements).
+   *
+   * The harness holds every frame callback for three seconds, which is well
+   * past the fade. Backed out — `appears` swapped for `toBeVisible` — this
+   * fails 3 of 3; the reading that catches it is the second assertion, since
+   * the first would also pass if the mode had merely been *drawn* and the
+   * layout never paid for.
+   */
+  await carouselMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  await page.locator('.cx-card').first().waitFor();
+
+  await page.evaluate(() => {
+    const real = window.requestAnimationFrame.bind(window);
+    window.requestAnimationFrame = (cb) => setTimeout(() => real(cb), 3000);
+  });
+
+  await page.locator('[data-mode-toggle]').click();
+  await appears(page.locator('.facets'), 'the search face of a frame-starved page');
+
+  // And it really arrived, rather than merely being uncovered: the grid was
+  // laid out and mounted its cards while no frame was being handed out.
+  const laid = await page.evaluate(() => ({
+    cards: document.querySelectorAll('.index-card').length,
+    height: parseFloat(document.querySelector('[data-grid-inner]').style.height || '0'),
+  }));
+  expect(laid.cards, 'the frame-starved search face mounted nothing').toBeGreaterThan(0);
+  expect(laid.height, 'the frame-starved search face was never laid out').toBeGreaterThan(500);
 });

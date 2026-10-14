@@ -1390,6 +1390,29 @@ main.chrome {
   white-space: nowrap;
 }
 
+/* The skip link: off-screen until it has the keyboard, and then a plain
+   control in the header's own dress. It is not `.sr-only`, because a reader
+   who tabs to it has to be able to see where they are. */
+.skip {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 60;
+  translate: -50% -110%;
+  padding: var(--space-2) var(--space-3);
+  background: var(--gesso);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-top: 0;
+  border-radius: 0 0 var(--radius-panel) var(--radius-panel);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.skip:focus-visible {
+  translate: -50% 0;
+}
+
 /* Errors are prose in ink, never a red banner — red belongs to the liturgy. */
 .error-note {
   max-width: 65ch;
@@ -1667,6 +1690,25 @@ html[data-swipe-nav='right']::view-transition-new(root) {
   background: var(--field);
   border-color: var(--ink-soft);
   color: var(--ink);
+}
+
+/* Measured, 2026-10-15: under `forced-colors: active` the three declarations
+   above are all overwritten — background, border-colour and colour are every
+   one of them in the mode's forced list — so the recess goes and the four
+   churches read identically. `aria-pressed` still carries it for a reader
+   being told, which is why nothing in the suite or in Lighthouse noticed; a
+   reader *looking* at a high-contrast page has no answer at all to which
+   church the site is reading.
+
+   The underline is the same instrument the nav uses for the page you are on
+   ("the underline still carries the 'you are here' that colour must never
+   carry alone", above), it is not in the forced list, and on the name alone it
+   costs no layout: the choice is a column and the box does not move. */
+@media (forced-colors: active) {
+  .church-choice[aria-pressed='true'] .choice-name {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }
 
 .choice-calendar {

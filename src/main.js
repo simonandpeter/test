@@ -27,6 +27,7 @@ import { loadManifest } from './lib/manifest.js';
 import { loadDays, readyDays } from './data/days.js';
 import { cancelPrefetches } from './lib/detail.js';
 import { mountChurchControl } from './ui/church-chooser.js';
+import { closePanels } from './ui/panel-control.js';
 import { mountLanguageControl } from './ui/language-chooser.js';
 import { mountCoachmarks } from './ui/coachmark.js';
 import { currentLanguage, ensurePack, languageTag, subscribeLanguage } from './lib/i18n.js';
@@ -608,6 +609,18 @@ function show({ route, params, path }, nav = {}) {
    * `swipe`, so this resets to `''` on its own.
    */
   document.documentElement.dataset.swipeNav = nav.swipe ?? '';
+  /*
+   * A chooser belongs to the page it was opened over. Both panels used to
+   * survive a route change and stand above the new page still reporting
+   * `aria-expanded="true"`; a reader who opened the language chooser and then
+   * pressed a nav link arrived somewhere else with it hanging there.
+   *
+   * **On a change of path only, because `router.refresh()` comes through here
+   * too.** A language change refreshes the open route, and the calendar panel
+   * is required to follow that change *while standing open* (author,
+   * 2026-08-27) — closing it here cost exactly that test, on both projects.
+   */
+  if (!firstRender && path !== cameFrom?.path) closePanels();
   // Where this reader is *leaving* from, before anything moves.
   if (!firstRender && cameFrom?.nav) sectionScroll.set(cameFrom.nav, window.scrollY);
   // `face` and not `nav`: a saint's page answers to the same section as All
@@ -948,6 +961,39 @@ function watchChromeHeight() {
   new ResizeObserver(publish).observe(bar);
 }
 
+/**
+ * The skip link, which has to do two things the markup cannot.
+ *
+ * Its press must not reach the router: that handler takes any same-origin
+ * anchor and navigates to its `pathname`, which for `#view` is the current
+ * page — so the reader would be sent round the houses and land back at the
+ * top. Stopping the event at the anchor keeps it out of the document listener
+ * the router installed.
+ *
+ * And the jump has to *land*: a `div` is not focusable, so without
+ * `tabindex="-1"` on it the href scrolls the page and leaves the keyboard
+ * exactly where it was. The attribute is set on activation and taken off on
+ * blur, so the view never becomes a tab stop of its own.
+ */
+function wireSkipLink() {
+  const link = document.querySelector('[data-skip]');
+  const view = document.getElementById('view');
+  if (!link || !view) return;
+  const paint = () => {
+    link.textContent = STRINGS.nav.skip;
+  };
+  paint();
+  subscribeLanguage(paint);
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    view.setAttribute('tabindex', '-1');
+    view.focus({ preventScroll: true });
+    view.addEventListener('blur', () => view.removeAttribute('tabindex'), { once: true });
+    view.scrollIntoView({ block: 'start', behavior: 'auto' });
+  });
+}
+
 async function boot() {
   watchChromeHeight();
   initTheme(document.getElementById('theme-toggle'));
@@ -960,6 +1006,7 @@ async function boot() {
   // every view through lib/church.js. It names itself.
   mountChurchControl(document.getElementById('church-open'), document.getElementById('church-panel'));
   mountLanguageControl(document.getElementById('lang-open'), document.getElementById('lang-panel'));
+  wireSkipLink();
   router = createRouter(routes, show);
 
   // A language change re-renders everything that carries words: the open view

@@ -13,6 +13,7 @@ export const el = {
   },
 
   nav: {
+    skip: 'Μετάβαση στη σελίδα',
       /* The page's own name, distinct from the word the button offers on it
          (author, 2026-08-27: "In Russian, this 'Today' text is the same as
          'Daily'. Is there a different word thats still short enough for the
@@ -579,6 +580,7 @@ export const el = {
     title: 'Κείμενα',
     lede: 'Οι πρωτογενείς πηγές που αυτός ο ιστότοπος παραθέτει ολόκληρες: τα γραπτά των ίδιων των αγίων, και τα γραπτά όσων τους γνώρισαν.',
     empty: 'Δεν υπάρχει ακόμη τίποτα εδώ.',
+    failed: 'Ο κατάλογος των κειμένων δεν μπόρεσε να φορτωθεί, οπότε αυτή η σελίδα δεν μπορεί να πει ποιες πηγές παραθέτει.',
     on: 'σχετικά με τον/την {name}',
   },
 

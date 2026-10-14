@@ -13,6 +13,7 @@ export const sr = {
   },
 
   nav: {
+    skip: 'Пређи на страницу',
       /* The page's own name, distinct from the word the button offers on it
          (author, 2026-08-27: "In Russian, this 'Today' text is the same as
          'Daily'. Is there a different word thats still short enough for the
@@ -581,6 +582,7 @@ export const sr = {
     title: 'Текстови',
     lede: 'Изворни текстови које овај сајт наводи у целини: списи самих светитеља, и списи оних који су их познавали.',
     empty: 'Овде још ништа нема.',
+    failed: 'Списак текстова није могао да се учита, па ова страница не може рећи које изворе наводи.',
     on: 'о {name}',
   },
 

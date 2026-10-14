@@ -22,6 +22,27 @@
 import { flyInto, flyOutOf } from './fly.js';
 
 /**
+ * Every control this module has wired, so a navigation can answer all of them.
+ *
+ * The two choosers are mounted once for the life of the page and never torn
+ * down, so nothing is removed from here; a control that could be unmounted
+ * would have to.
+ */
+const MOUNTED = new Set();
+
+/**
+ * Closes every open chooser, for a caller that has changed the page under
+ * them. Focus is left where it is: `main.js` has just placed it on the new
+ * page's heading, and a panel closing is not a reason to take it back.
+ *
+ * A chooser used to survive a route change — open the language panel, press a
+ * nav link, and it stood over the new page still saying `aria-expanded="true"`.
+ */
+export function closePanels() {
+  for (const control of MOUNTED) if (control.isOpen()) control.close(false);
+}
+
+/**
  * Wires `button` to open `panel`. Returns `{ close, isOpen, refresh }`:
  * `refresh` repaints the panel's inside while it stands open, for the
  * calendar control whose heading and choices are all translated.
@@ -56,7 +77,14 @@ export function mountPanelControl(button, panel, { render, wire = () => {} }) {
     unwire?.();
     unwire = null;
   };
-  const close = () => {
+  /**
+   * `moveFocus` is false for the one path that closes a panel the keyboard is
+   * not standing in — the document-level Escape below. Everywhere else the
+   * reader was inside the panel or on the button, and handing the focus back to
+   * the control is the whole of a disclosure's contract; from the page it would
+   * be a hijack, carrying a reader who dismissed the chrome up into the header.
+   */
+  const close = (moveFocus = true) => {
     open = false;
     landFlight();
     const mine = (flight += 1);
@@ -75,7 +103,7 @@ export function mountPanelControl(button, panel, { render, wire = () => {} }) {
       // the panel instead of snapping up when it goes (author, 2026-08-26).
       { collapse: panel },
     );
-    button.focus();
+    if (moveFocus) button.focus();
   };
   /*
    * A close that is still in the air when the panel is opened again must not
@@ -133,6 +161,25 @@ export function mountPanelControl(button, panel, { render, wire = () => {} }) {
     if (e.key === 'Escape' && open) close();
   });
   /*
+   * **And from outside it, because the keyboard leaves the panel without
+   * closing it.** The listener above is the panel's own, so Escape only
+   * reached a panel the focus was standing in — and the ordinary way out of
+   * one of these is to walk off it: open the chooser, Shift+Tab back to the
+   * control, and Escape did nothing. With both panels open it is worse, since
+   * closing the second hands the focus to *its* button, from where the first
+   * panel is still open and unanswerable by the key that should answer it.
+   *
+   * Document-level, capture-less, and it only acts on a press that no panel
+   * holds — a press inside a panel is already the listener above's, and a
+   * panel that fired it must not be closed twice. The focus stays where the
+   * reader put it: see `close`.
+   */
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape' || !open) return;
+    if (e.target?.closest?.('.church-panel')) return;
+    close(false);
+  });
+  /*
    * **And a press anywhere else closes it** (author, 2026-09-02: "when you
    * click off the pop-ups for language or calendar that they close. E.g. if
    * they are open and I click outside their bubble they should close").
@@ -166,5 +213,7 @@ export function mountPanelControl(button, panel, { render, wire = () => {} }) {
   };
   document.addEventListener('pointerdown', onAway);
 
-  return { close, isOpen: () => open, refresh };
+  const control = { close, isOpen: () => open, refresh };
+  MOUNTED.add(control);
+  return control;
 }

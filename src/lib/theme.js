@@ -18,6 +18,7 @@
 
 import { readSettings, writeSetting, THEMES } from './settings.js';
 import { STRINGS, fill } from '../ui/strings.js';
+import { subscribeLanguage } from './i18n.js';
 
 /*
  * **The cross-fade's own stylesheet, off the first paint's path** (2026-09-10).
@@ -112,4 +113,12 @@ export function initTheme(toggleButton) {
 
   apply(effective(choice));
   label();
+  /*
+   * The accessible name is the only words this control has, and it was frozen
+   * in English: `label()` ran at boot before the stored pack had landed, and
+   * then only on a theme change, so a Russian reader's screen reader said
+   * "Switch to the dark theme" on every route for the whole session. The
+   * church chooser beside it has carried this subscription since 2026-08-27.
+   */
+  subscribeLanguage(label);
 }

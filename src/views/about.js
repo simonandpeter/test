@@ -198,11 +198,31 @@ async function fillCounted(el) {
   const coverage = el.querySelector('[data-coverage]');
   const sources = el.querySelector('[data-sources]');
   const licences = el.querySelector('[data-licences]');
+  const unavailable = () => {
+    if (coverage) coverage.innerHTML = `<p class="utility">${esc(A.coverage.unavailable)}</p>`;
+  };
   let meta;
   try {
     meta = await loadManifestMeta();
   } catch {
-    if (coverage) coverage.innerHTML = `<p class="utility">${esc(A.coverage.unavailable)}</p>`;
+    unavailable();
+    return;
+  }
+  /*
+   * **A body that parsed is not a body that answered** (Errors 1). A 200
+   * carrying the wrong JSON used to reach the `?? 0` defaults below, where
+   * `meta.total ?? 0` is a figure for the corpus size stated by a page that
+   * never received one; and `new Date(undefined)` then threw out of
+   * `formatDate` *before* the assignment, so the section was left silently
+   * blank - which the header above calls out as the thing not to do. The
+   * three fields the table cannot be built without are checked instead.
+   */
+  if (
+    typeof meta?.total !== 'number' ||
+    typeof meta.by_century !== 'object' ||
+    Number.isNaN(new Date(meta.built_at).getTime())
+  ) {
+    unavailable();
     return;
   }
   // The reader may have left the page while the file was in flight.

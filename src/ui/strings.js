@@ -26,6 +26,13 @@ export const STRINGS = {
   },
 
   nav: {
+    /*
+     * The first thing in the document, and visible only while it has the
+     * keyboard: at 360 px the nav bar is fixed at the foot of the window but
+     * stands before `main` in the markup, so a reader arriving by Tab met
+     * seven stops below the fold before any of the page.
+     */
+    skip: 'Skip to the page',
     calendar: 'Daily',
     /*
      * What the Daily button reads while the reader is on the Daily page
@@ -1288,6 +1295,11 @@ export const STRINGS = {
     title: 'Texts',
     lede: 'The primary sources this site cites in full: the saints’ own writings, and the writings of those who knew them.',
     empty: 'Nothing here yet.',
+    // Distinct from `empty` on purpose: "nothing here yet" is an answer about
+    // the corpus, and a page that could not read `data/texts.json` has not
+    // got one (Errors 1). The two were the same string until 2026-10-15,
+    // which told every offline reader the site cites no sources at all.
+    failed: 'The list of texts could not be loaded, so this page cannot say which sources it cites.',
     // The saint the text is about, not necessarily its author — a source is
     // as often a life written of a saint (Athanasius on Antony, Jerome on
     // Paul) as a saint's own writing, and "by {name}" would misattribute the

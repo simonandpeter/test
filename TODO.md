@@ -1164,3 +1164,133 @@ for.
 the insets land on a notched device, the splash's hide timing, and the back
 button's real behaviour — all of which want the SDKs. The dismissal order is
 unit-tested; the dispatch into a live bridge is not.
+
+### The second round, the same night
+
+Four more agents: offline and failure-honesty, accessibility and keyboard
+reach, the five language packs, and one sent at nothing but the carousel's
+intermittent.
+
+**The `.facets` flake is the test, and the page needed no change.**
+`expect(locator).toBeVisible()` retries inside the page's own
+`requestAnimationFrame`, and under desk contention the renderer hands out
+**1–3 frames a second**, so the assertion took two or three samples in its
+whole budget while `locator.isVisible()` answered true in 13–29 ms. Five waits
+moved to an `appears()` helper built on `expect.poll`, which is round-trip
+driven; **11 of 12 failing became 36 of 36 passing**, and a deliberate
+rAF-starvation harness fails 3 of 3 with the change backed out. What was ruled
+out, so nobody re-spends it: both CSS rules that can hide `.facets` (neither in
+play — the blocker chain was null and the bar was never `is-stuck`), CPU
+throttling (20× gives 14–17 fps and the assertion **passes**), parallel load
+alone (12 of 12 pass at 60 fps on six workers), and the mode state itself.
+
+**Two violations of the Errors rule, both fixed.** `/texts` told the reader
+*Nothing here yet.* when `data/texts.json` had not arrived — which is every
+offline reader, since that file is in neither the install list nor a warm
+cache — and `/about`'s coverage section reached `meta.total ?? 0` with a
+wrong-shaped body, stating a corpus figure it had never received, then threw
+out of `formatDate` and left the section silently blank.
+
+**And a trap worth more than either**: `vite preview` answers a miss with
+`index.html` **at status 200** for any request whose `Accept` includes `*/*`,
+which is every `fetch()` this app makes. That is the whole of the
+`SyntaxError: Unexpected token '<', "<!doctype "` intermittent — a missing
+`data/` file reads back as the app's own HTML with an ok status, and the error
+names the parser instead of the URL. `manifest.js`'s `ok()` now refuses
+`text/html` and says which URL sent it. The trigger is **a concurrent build
+emptying `dist/` while a preview serves it**, which two agents hit twice each
+tonight: one shared `dist/` across parallel sessions is a class of intermittent
+on its own.
+
+**Accessibility, measured rather than audited** — Lighthouse already gates CI,
+so these are what an automated audit cannot see. Escape did not answer a
+chooser the keyboard had walked off, and with both panels open it was
+unanswerable; under `forced-colors: active` the chooser could not say which
+church was current, because all three of its state properties are ones the mode
+overwrites; a chooser survived a route change and stood over the next page
+still reporting `aria-expanded="true"` (keyboard navigation only — a mouse
+press is already an outside press, which the panel dismisses on, and a test
+written with `click()` passes with the fix removed); and at 360 px a reader
+arriving by Tab met **seven stops below the fold** before any of the page.
+That last one is now a skip link, the first element in the document, visible
+only while it holds the keyboard.
+
+Two reports were refuted by reading rather than by arguing: `church-open` does
+not appear twice in the tab order (`#lang-open` wears the class
+`church-open`, so a probe selecting the class sees two), and 200% zoom at
+360 px is not a defect — overflow starts below ~213 px, and both `base.css`
+and WCAG 1.4.10 name 320 px as the floor.
+
+**Two language seams, found by the agent that could not touch them.** The theme
+toggle's accessible name was frozen in English for the whole session in all
+four languages — `initTheme`'s `label()` ran at boot before the stored pack had
+landed, and thereafter only on a theme change — and the language button was
+half-translated at boot in the same way. The church chooser beside them has
+carried the subscription since 2026-08-27, which is what made the seam visible:
+two buttons, one translated.
+
+## 22. What the hunt put to the author, and nothing else
+
+Eight questions, none of which an agent should answer. They are grouped by what
+kind of answer they want.
+
+**Three are the same question: may a page state something untrue while it
+degrades honestly?** CLAUDE.md's Errors rule says a failure may degrade the
+page but never fake it.
+
+1. **The count asserts a number for a query it has not answered.** At 6× and
+   20× throttle, typing `Ștefan` reads *6799 saints match* for about six
+   seconds before settling to 13: `filter.js` passes `matchesQuery: null`
+   while the index is still building, and `search.js` documents that as honest
+   degradation.
+2. **An unparseable date silently shows today**, with the bad URL left in the
+   bar — `/calendar/2026-13-45`, `/calendar/not-a-date`, `/calendar/2026-02-30`.
+3. **A manifest that is `[]`** — valid JSON, wrong content — gives *0 saints*
+   and *No saint in the corpus matches all of these filters*. An empty array is
+   arguably honest data, which is why it was left.
+
+**Two are rulings on the corpus's own words:**
+
+4. **`/saints/Aaron` answers "No such saint"** where the `aaron` folder exists;
+   the slug lookup is case-exact. It degrades honestly, so it is a ruling
+   rather than a defect.
+5. **Twelve strings are read by nothing** — `calendar.{byJulian, byCivil,
+   noGreatFeast, closeMonth, commemorationsFor, fromTheLife, heroIn,
+   openSaint}` and `map.{kindGroup, zoomReset, timelineGroup, timelineReset}`,
+   60 lines across five files. **They were deliberately not deleted**, because
+   this same night proved the codebase's failure mode is "the string is fine,
+   the view stopped reading it": three of them —`commemorationsFor`,
+   `kindGroup`, `timelineGroup` — are accessible names whose sibling keys are
+   still live, so deleting them could cement an accessibility regression rather
+   than remove dead weight. The question is per key: dead, or a lost
+   accessible name?
+
+**Two are wording, which is the author's and not a reader's:**
+
+6. **Romanian says the same noun two ways for the same `{n}`**:
+   `ro.texts.count` is `'{n} de sfinți'` while `ro.calendar.fullCount` is
+   `'{n} sfinți'`. Romanian takes *de* from 20 up, so the texts count reads
+   *3 de sfinți* for any result between 2 and 19. Russian and Serbian sidestep
+   it with the colon form.
+7. **The Saints nav label is elided at 360 px in Greek and Serbian** —
+   `Όλοι οι άγιοι` wants 64 px and `Сви светитељи` 75 against a 59 px cell.
+   `base.css` already states this and says the shorter words are the author's
+   to rule on.
+
+**And one is a sitting of its own:**
+
+8. **The whole type scale is px**, `--text-3xs: 9px` through `--text-2xl: 26px`.
+   A reader who sets their browser's default font size to 32 px gets no change
+   anywhere — measured: the header stays 41 px, the nav 52, nothing moves.
+   Zoom still works, so WCAG 1.4.4 is satisfiable and this is a decision rather
+   than a defect. Is ignoring the reader's own font size intended? If not it is
+   a scale-wide rem conversion plus a rewrite of `STRUCTURE.md` §3's tables,
+   which `tests/structure.test.mjs` executes.
+
+**Three rough edges left unfixed on purpose**, each wanting a number nobody
+has: a 30-second hang on the manifest shows the page's name and nothing else,
+with no pending state and no timeout; the service worker's `assets-vN` cache is
+uncapped, so a reader accumulates every deploy's bundle until `VERSION` moves
+for an unrelated reason (`IMAGE_CAP` is the precedent); and the coachmark's ×
+is the last focusable element in the document while sitting visually under the
+control it points at.

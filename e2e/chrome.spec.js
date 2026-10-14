@@ -3119,3 +3119,166 @@ test('a doubled slash in the path still finds the route', async ({ page }) => {
   await expect(page.locator('.cal').first()).toBeVisible();
   expect(await page.locator('.cal-date').textContent()).toBe(heading);
 });
+
+test('Escape answers a chooser the keyboard has walked off, and leaves the focus where it is', async ({ page }) => {
+  /*
+   * The keyboard's ordinary way out of one of these is to walk off it, and
+   * until 2026-10-15 Escape was the panel's own listener alone: Shift+Tab back
+   * to the control, press Escape, and the panel stood open with nothing but a
+   * second press of the control to shut it. With both panels open it is the
+   * only path there is — closing the second hands the focus to *its* button,
+   * from where the first is open and out of Escape's reach.
+   *
+   * Both halves are asserted, because the fix has two: that the key closes it,
+   * and that closing it from outside does not carry the focus into the header.
+   */
+  await ready(page);
+  // `load`, not `networkidle`: nothing here reads the corpus, and that wait is
+  // most of what this test would otherwise spend its budget on under load.
+  await page.goto('/about', { waitUntil: 'load' });
+  await expect(page.locator('#church-open')).toBeVisible();
+
+  await page.locator('#church-open').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#church-panel')).toBeVisible();
+  await panelSettled(page);
+  // Back out of the panel onto the control that owns it, and answer from there.
+  await page.locator('#church-open').focus();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#church-panel')).toBeHidden();
+  await expect(page.locator('#church-open')).toHaveAttribute('aria-expanded', 'false');
+  expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
+
+  // Two panels, which this control deliberately allows: one Escape apiece, and
+  // the second press reaches the one the focus is not in.
+  await page.locator('#church-open').focus();
+  await page.keyboard.press('Enter');
+  await panelSettled(page);
+  await page.locator('#lang-open').focus();
+  await page.keyboard.press('Enter');
+  await panelSettled(page, '#lang-panel');
+  await expect(page.locator('#church-panel')).toBeVisible();
+  await expect(page.locator('#lang-panel')).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#lang-panel')).toBeHidden();
+  await expect(page.locator('#church-panel')).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#church-panel')).toBeHidden();
+
+  // And from the page itself: the panel goes, the reader's place does not. A
+  // close that focused the button unconditionally would answer the first
+  // assertion and fail this one.
+  await page.locator('#church-open').focus();
+  await page.keyboard.press('Enter');
+  await panelSettled(page);
+  const inPage = page.locator('#view a, #view button').first();
+  await inPage.focus();
+  const was = await page.evaluate(() => document.activeElement?.outerHTML?.slice(0, 60));
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#church-panel')).toBeHidden();
+  expect(await page.evaluate(() => document.activeElement?.outerHTML?.slice(0, 60))).toBe(was);
+});
+
+test('under forced colours the chooser still says which church the site reads', async ({ browser }) => {
+  /*
+   * The pressed choice is a field colour, a border colour and an ink colour,
+   * and `forced-colors: active` overwrites all three — so the four churches
+   * read identically and a reader looking at a high-contrast page has no
+   * answer to which one is current. `aria-pressed` carries it for a reader
+   * being told, which is why neither the suite nor Lighthouse saw it.
+   *
+   * Asserted as the difference between the pressed choice and the others,
+   * never as a value: the point is that *something* visual separates them.
+   */
+  const ctx = await browser.newContext({ forcedColors: 'active' });
+  const page = await ctx.newPage();
+  await ready(page, { church: 'greek', language: 'en' });
+  await page.goto('/about', { waitUntil: 'load' });
+  await openChooser(page);
+  await panelSettled(page);
+  const marks = await page.locator('#church-panel .church-choice').evaluateAll((els) =>
+    els.map((el) => {
+      const name = el.querySelector('.choice-name');
+      const cs = getComputedStyle(name ?? el);
+      return {
+        church: el.dataset.church,
+        pressed: el.getAttribute('aria-pressed'),
+        decoration: cs.textDecorationLine,
+      };
+    }),
+  );
+  const pressed = marks.filter((m) => m.pressed === 'true');
+  expect(pressed.map((m) => m.church)).toEqual(['greek']);
+  expect(pressed[0].decoration).toBe('underline');
+  for (const other of marks.filter((m) => m.pressed !== 'true')) {
+    expect(other.decoration, `${other.church} is not marked current`).toBe('none');
+  }
+  await ctx.close();
+});
+
+test('the two controls name themselves in the reader’s language from the first paint', async ({ page }) => {
+  /*
+   * The accessible name is the only words the theme toggle has, and it was
+   * frozen in English for the whole session: `initTheme`'s `label()` ran at
+   * boot, before the stored pack had landed, and thereafter only on a theme
+   * change. The language button was half-translated the same way — the
+   * language's own name from the settings, the accessible sentence from the
+   * base. The church button beside them has subscribed since 2026-08-27,
+   * which is what made the seam visible: two buttons, one translated.
+   */
+  await ready(page, { language: 'ru' });
+  await page.goto('/', { waitUntil: 'networkidle' });
+
+  const theme = page.locator('#theme-toggle');
+  await expect.poll(() => theme.getAttribute('aria-label')).not.toContain('Switch to');
+  await expect.poll(() => page.locator('#lang-open').getAttribute('aria-label')).not.toContain(
+    "change the site's language",
+  );
+  // The premise: these are the controls whose names come from the pack at all.
+  await expect(theme).toHaveAttribute('aria-label', /[А-Яа-я]/);
+  await expect(page.locator('#lang-open')).toHaveAttribute('aria-label', /[А-Яа-я]/);
+});
+
+test('a chooser belongs to the page it was opened over', async ({ page }) => {
+  // Both panels used to survive a route change and stand over the new page
+  // still reporting aria-expanded="true".
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  await openChooser(page);
+  await expect(page.locator('#church-open')).toHaveAttribute('aria-expanded', 'true');
+
+  /*
+   * **Keyboard, not a press.** A mouse press on the nav is already outside the
+   * panel, and the chooser has dismissed on an outside `pointerdown` since
+   * 2026-09-02 — so a clicked link closes the panel whether or not navigation
+   * does, and a test written that way passes with this fix backed out. Enter on
+   * a focused link sends no pointer event at all, which is the path that left a
+   * panel standing over the next page.
+   */
+  await page.locator('nav.site-nav a[href$="/texts"]').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#church-panel')).toBeHidden();
+  await expect(page.locator('#church-open')).toHaveAttribute('aria-expanded', 'false');
+});
+
+test('the first stop is a way past the nav, and it lands', async ({ page }) => {
+  /*
+   * At 360 the nav bar is fixed at the foot of the window while standing
+   * before `main` in the markup, so a reader arriving by Tab met seven stops
+   * below the fold before any of the page. The link has to *land*, not merely
+   * scroll: `#view` is a div, so without a tabindex at the moment of the jump
+   * the keyboard stays in the header.
+   */
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+  await page.keyboard.press('Tab');
+  const skip = page.locator('[data-skip]');
+  await expect(skip).toBeFocused();
+  await expect(skip).toBeVisible();
+
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#view')).toBeFocused();
+  // And it is not a tab stop of its own once the reader moves on.
+  await page.keyboard.press('Tab');
+  await expect.poll(() => page.locator('#view').getAttribute('tabindex')).toBeNull();
+});

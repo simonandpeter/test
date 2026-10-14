@@ -93,7 +93,26 @@ export async function loadManifestMeta() {
   return cachedMeta;
 }
 
+/*
+ * **An ok status is not a JSON body.** A static host that answers a missing
+ * path with its SPA shell rather than a 404 hands this function `200
+ * text/html`, and `res.json()` then fails with `SyntaxError: Unexpected token
+ * '<', "<!doctype "` - which names the parser and not the request, and cost
+ * one agent an unpinned 3% intermittent on `/calendar/:date`. `vite preview`,
+ * which the browser suite runs against, is exactly such a host: its html
+ * fallback answers any request whose `Accept` carries the wildcard every
+ * `fetch` sends, so a `data/` file absent for any reason - a concurrent
+ * rebuild emptying `dist/` is the one that happens here - reads back as the
+ * app's own HTML with an ok status.
+ *
+ * The page degrades identically either way (`loading.manifestFailed`); what
+ * this buys is a console line that says which URL lied and what it sent.
+ */
 function ok(res) {
   if (!res.ok) throw new Error(`${res.url}: HTTP ${res.status}`);
+  const type = res.headers.get('content-type') ?? '';
+  if (/^\s*text\/html/i.test(type)) {
+    throw new Error(`${res.url}: HTTP ${res.status} but ${type} - the host answered with a page, not the file`);
+  }
   return res.json();
 }

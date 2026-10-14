@@ -11,7 +11,15 @@
  * read the language the site is currently in.
  */
 
-import { LANGUAGES, chooseLanguage, currentLanguage, ensureAllPacks, ensurePack, LANGUAGES_BY_ID } from '../lib/i18n.js';
+import {
+  LANGUAGES,
+  chooseLanguage,
+  currentLanguage,
+  ensureAllPacks,
+  ensurePack,
+  subscribeLanguage,
+  LANGUAGES_BY_ID,
+} from '../lib/i18n.js';
 import { STRINGS, fill } from './strings.js';
 import { mountPanelControl } from './panel-control.js';
 
@@ -82,5 +90,12 @@ export function mountLanguageControl(button, panel) {
   });
 
   paintButton();
+  /*
+   * The stored pack lands after first paint, so a button painted once at mount
+   * read `Русский - change the site's language`: the language's own name from
+   * the settings, the accessible sentence still from the English base. The
+   * church chooser beside it has subscribed since 2026-08-27.
+   */
+  subscribeLanguage(paintButton);
   return paintButton;
 }
