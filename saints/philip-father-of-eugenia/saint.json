@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 300,
+      "display": "second half of the 3rd century",
+      "basis": "inferred",
+      "note": "Placed by his daughter, which is the one thing his page says of him: \"he was the father of the holy Eugenia, whom the same calendar keeps on this same day, and he was martyred, put to death with a knife\". `eugenia` carries a death of the second half of the 3rd century and this folder takes her bounds and her display."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

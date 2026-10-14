@@ -13,6 +13,15 @@
     "gregory-the-wonderworker-of-neocaesarea",
     "athenodorus"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "inferred",
+      "note": "Placed by the one fact his page has. saint.gr: \"the only thing we know about Saint Gregory is that he was the brother of Gregory the Wonderworker\"; `gregory-the-wonderworker-of-neocaesarea` carries a birth of c. 210 and a death of about 266–270, which puts a brother in the 3rd century. No year, because the page gives none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

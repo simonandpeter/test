@@ -7,6 +7,15 @@
     "bishop",
     "wonderworker"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Placed by the folder this one’s own life ties him to. His life has him \"a disciple of the Apostle Peter... when he went with him to the West he was ordained by him bishop of Catania\"; `peter-the-apostle` carries a death of 67. No year, because the page gives none."
+    }
+  },
   "office": "Bishop of Catania in Sicily",
   "names": [
     {

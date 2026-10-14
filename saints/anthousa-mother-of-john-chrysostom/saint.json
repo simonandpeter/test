@@ -9,6 +9,15 @@
     }
   ],
   "sex": "female",
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Placed by her son, which doxologia.ro states is \"the whole of what this source has for her\" — \"a name, a kinship and a day\". `john-chrysostom` carries a birth of c. 347 and a death of 407, so his mother lived in the 4th century. The calendar \"gives her no century\", so nothing narrower is recorded."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

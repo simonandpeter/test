@@ -17,6 +17,15 @@
   "types": [
     "venerable-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 767,
+      "latest": 767,
+      "display": "767",
+      "basis": "inferred",
+      "note": "Placed by the martyrdom her own page records and nothing else. saint.gr gives her one sentence, \"that she suffered together with Stephen the New, whose page it keeps on the same day, for the holy icons, after they had beaten her until she died\"; `stephen-the-new` carries a death of 767. One death, two folders. The entry gives her \"no year, no reign of her own and no century\", so the year is his."
+    }
+  },
   "related": [
     "stephen-the-new"
   ],

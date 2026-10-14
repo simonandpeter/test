@@ -19,6 +19,15 @@
     "ascetic",
     "monk"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Placed by the folder this one’s own life ties him to: \"He became a disciple of Anthony the Great, it says, and took something of that man’s virtues and gifts.\" `anthony-the-great` carries a birth of c. 251 and a death of 356, so a disciple of his lived in the 4th century. No year, because the page gives none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

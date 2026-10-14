@@ -14,6 +14,15 @@
     "hieromonk",
     "hermit"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1601,
+      "latest": 1800,
+      "display": "17th–18th century",
+      "basis": "inferred",
+      "note": "Placed by the two reigns his own life names and no narrower: \"doxologia’s life places him in the days of the pious voievod Matei Basarab and of the martyr voievod Saint Constantine Brâncoveanu\". `constantine-brancoveanu` carries 1654–1714; Matei Basarab’s reign is the earlier of the two and this corpus records no bounds for it, so the interval is taken to the two centuries the pair spans rather than to a figure from outside the corpus."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

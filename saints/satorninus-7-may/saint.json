@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 259,
+      "display": "249–259",
+      "basis": "inferred",
+      "note": "Placed by the passing his own page dates him against. saint.gr’s whole account of the pair is that they \"were martyred by the sword at Caesarea, of Cappadocia, at the time when the proconsul of Nicomedia Perinios was bringing the martyr Codratus there\"; `codratus-of-nicomedia` carries 249–259, the two reigns his page names. The page \"does not say whether they were of Codratus’s company or men whom his passing merely dated\", and the interval is the same either way."
+    }
+  },
   "names": [
     {
       "form": "Σατορνίνος",

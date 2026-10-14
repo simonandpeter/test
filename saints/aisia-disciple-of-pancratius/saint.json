@@ -5,6 +5,15 @@
   "types": [
     "virgin"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "inferred",
+      "note": "Placed by the folder this one’s own life ties her to and nothing else. saint.gr gives the two women one sentence, that they \"were disciples of Pancratius, bishop of Tauromenium\"; `pancratius-of-tauromenium` carries floruit 1st century. No year, because the page gives none."
+    }
+  },
   "names": [
     {
       "form": "Αισία",

@@ -6,6 +6,15 @@
     "martyr",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "inferred",
+      "note": "Placed by the reign her own page names and by her company. saint.gr says the four of this line \"were martyred under Constantine Copronymus\", and of the four `andrew-the-monk-martyr-of-crete` carries a death of 767; `george-of-pisidian-antioch` carries a floruit ending 775 against the same emperor. The page gives \"no year inside the reign\", so the century is as narrow as this folder goes."
+    }
+  },
   "names": [
     {
       "form": "Παύλος",

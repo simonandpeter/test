@@ -13,6 +13,15 @@
     "venerable",
     "prince"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "inferred",
+      "note": "Placed by the house his own three-sentence entry names: he \"was the son of Vukan, the brother of Stefan\", and `stefan-the-first-crowned` carries a death of 1224, which puts a nephew in the 13th century. The Ohrid Prologue \"gives no year\", as the life says."
+    }
+  },
   "related": [
     "stefan-the-first-crowned"
   ],

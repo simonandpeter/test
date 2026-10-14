@@ -15,6 +15,15 @@
   "types": [
     "righteous"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 200,
+      "display": "1st–2nd century",
+      "basis": "inferred",
+      "note": "Placed by the folder this one’s own life ties him to. He was a disciple of John the Theologian, whom Hermione met at Ephesus and who \"confirmed her in the work of the Gospel\"; `john-the-theologian` carries a death of the early 2nd century and `hermione-daughter-of-philip` one of c. 117. The page’s \"most likely\" is on which disciple of John he was, and the interval is wide enough to hold either reading. No year, because the page gives none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

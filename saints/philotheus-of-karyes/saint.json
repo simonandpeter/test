@@ -13,6 +13,15 @@
     "venerable",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "inferred",
+      "note": "Placed by his disciple. His page has him \"the elder of the venerable Nectarios, whose memory the same calendar keeps on the same day\", and `nectarios-of-bitola` — Nectarios of Karyes — carries a birth of 1406 and a death of 1500. An elder who \"died in deep old age\" before that man died in the 15th century. The page gives no year, as the Greek note on this folder already recorded."
+    }
+  },
   "related": [
     "nectarios-of-bitola"
   ],
