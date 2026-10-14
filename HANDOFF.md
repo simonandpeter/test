@@ -66,7 +66,8 @@ the wrong man named — `paul-of-jamnia` and `paul-companion-of-andrew` both rea
 the Apostle Paul. **16 are a reading a script cannot do**, each with a count of
 the files its sweep found: `scratchpad/icon-sweep.py` searches six routes over
 four hosts, `icon-nowhere.py` and `icon-namesake.py` record the verdicts, and
-`scratchpad/icon-sweep.log` is the evidence for every row. Openverse and
+and the sweep's own log, which is gitignored output and is re-made by running
+it again, is the evidence for every row. Openverse and
 Europeana are finished too: they answer with churches named after these saints.
 
 **The remaining slices, both measured and safe to hand to a reader:**
