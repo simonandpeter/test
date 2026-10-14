@@ -1,0 +1,37 @@
+[
+ {
+  "slug": "simon-of-simonopetra",
+  "kind": "namesake",
+  "why": "every file reachable is the Apostle Simon the Zealot: Category:Icons of Saint Simon is nine of him (the Hajdudorog apostle panel, «икона 09101 Симон Зилот», a Cretan apostle icon) and Category:Saint Simon is a Salisbury Cathedral statue, a reliquary sabre and a Vitae sanctorum leaf. The 13th-c. Athonite myrrh-streamer who founded Simonopetra has no Wikidata entity answering to Σίμων and Category:Simon of Simonopetra and Category:Simon the Myrrh-streamer do not exist."
+ },
+ {
+  "slug": "acacius-the-kausokalyvite",
+  "kind": "nothing",
+  "why": "route 1's namespace-14 search on acacius/kausokalyvite returns nothing, route 2 reports no Wikidata hit, and the hand aliases Category:Akakios Kausokalyvitis and Category:Acacius of Kafsokalyvia are both empty. The folder stores only Greek and Serbian forms, so route 3 cannot be run at all."
+ },
+ {
+  "slug": "panagis-basias",
+  "kind": "nothing",
+  "why": "no category under panagis/basias, no Wikidata hit, and both hand aliases Category:Panagis Bassias and Category:Panagis Basias are empty. The Kephalonian priest-fool died in 1888 so a photograph would be out of copyright, but nothing is on Commons. No Russian form stored, so route 3 is unavailable."
+ },
+ {
+  "slug": "argyra-of-prusa",
+  "kind": "nothing",
+  "why": "nothing under argyra/prusa, no Wikidata hit, and Category:Argyre of Prussa, Category:Saint Argyri and Category:Agia Argyri are all empty. The folder stores Romanian, Greek and Serbian forms only, so route 3 is unavailable."
+ },
+ {
+  "slug": "demetrianus-of-tamassos",
+  "kind": "nothing",
+  "why": "a Cypriot local saint: nothing under demetrianus/tamassos, no Wikidata hit, Category:Demetrianos of Tamasos empty. Greek form only, so route 3 is unavailable."
+ },
+ {
+  "slug": "dionysius-the-rhetor",
+  "kind": "nothing",
+  "why": "the Athonite of 9 July, kept with his disciple Metrophanes: nothing under dionysius/rhetor, no Wikidata hit, Category:Dionysios the Rhetor empty. Romanian and Greek forms only, so route 3 is unavailable."
+ },
+ {
+  "slug": "anthony-the-new-of-veria",
+  "kind": "nothing",
+  "why": "nothing under anthony/veria, no Wikidata hit, Category:Anthony the New of Veria empty. Romanian and Greek forms only, so route 3 is unavailable. A bare 'Anthony' search is the forename trap and was not run."
+ }
+]

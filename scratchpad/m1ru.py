@@ -35,8 +35,22 @@ def api(base, params):
 
 def sizes(titles):
     out = {}
-    for i in range(0, min(len(titles), 50), 25):
-        d = api(COMMONS, {'action': 'query', 'titles': '|'.join(titles[i:i + 25]),
+    # 25 titles at a time answered 414 URI Too Long on
+    # theodore-companion-of-terentius, whose hits are Russian titles that
+    # percent-encode to ~200 bytes each, and the crash took the rest of that
+    # invocation's saints with it. Chunk by encoded length, not by count.
+    chunks, cur, n = [], [], 0
+    for t in titles[:50]:
+        cost = len(urllib.parse.quote(t)) + 3
+        if cur and (n + cost > 1800 or len(cur) >= 25):
+            chunks.append(cur)
+            cur, n = [], 0
+        cur.append(t)
+        n += cost
+    if cur:
+        chunks.append(cur)
+    for chunk in chunks:
+        d = api(COMMONS, {'action': 'query', 'titles': '|'.join(chunk),
                           'prop': 'imageinfo', 'iiprop': 'size'})
         for p in d.get('query', {}).get('pages', {}).values():
             ii = (p.get('imageinfo') or [{}])[0]

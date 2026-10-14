@@ -56,6 +56,12 @@
       "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "aidan-of-lindisfarne"
   ],

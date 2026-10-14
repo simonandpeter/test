@@ -119,5 +119,11 @@
       "basis": "traditional",
       "note": "The Охридски пролог for 29. април ст. ст.: „Упокоји се мирно у Господу у II столећу, и пресели се у небеске дворе Господње.“ — the first century any calendar read for this folder has given. doxologia's life says expressly that it gives no year, no country and no monastery by name, and saint.gr's notice gives no year either."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }
