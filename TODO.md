@@ -172,10 +172,17 @@ the name Alexander with nothing to choose between them.
 pessimistic.** A sample of 23 method-1 names came out 11 found / 12 not, which
 is a better rate than that implies. Nobody has re-measured the tail.
 
-**28 of the 53 queued names are still unsearched**, and one carries a live lead
-nobody pursued: `theophylact-of-nicomedia`'s Wikidata entity has a bare «Saint
-Theophilactus» fresco at Rila which could as easily be Theophylact of Ohrid —
-it wants checking, not taking.
+**THE QUEUE IS DERIVED, NOT WRITTEN DOWN**, and that is deliberate: a static
+list of names was put in this item and then deleted by a later rewrite of it,
+and the next wave had to rebuild the queue from scratch. It is
+`node scripts/heroless.mjs romanian greek russian serbian`, the distinct
+hero-saints, **minus the slugs in `scratchpad/icon-refusals.json`** — which is
+the durable half nobody had been keeping. Today that is **119 imageless
+hero-saints, 34 already refused, 85 unsearched**.
+
+A refusal is not permanent and the file says so: Commons gains files, so `floor`
+and `nothing` are worth retrying after a long gap, while `namesake` and
+`ambiguous` want a reading rather than another search
 
 **Nobody has looked at any of these 47 pictures.** They were chosen on file
 title, category membership and pixel size. `germanus-of-kazan` is a Lives
@@ -1018,9 +1025,17 @@ sanctioned for", which `BRIEF.md` §4 says it is exactly — still in the corpus
 
 **Found 14 October 2026 and NOT fixed.** `e2e/quality-floor.spec.js`'s *nothing
 shifts as the data arrives: prayer* measures **CLS 0.1799 against a 0.02
-budget**, blaming `aside.hy-side`, on **two consecutive CI attempts of one
-tree** — so it is not the runner's one-casualty-per-run. Deploy is gated on the
-build, so this is what is keeping the site from updating.
+budget**, blaming `aside.hy-side`.
+
+**It is load-dependent, and two consecutive failures were not enough to say
+otherwise.** It failed on both attempts of one tree, which was read here as
+proof that the runner was not the variable — and then the next tree, differing
+only by this file and three probe scripts, went green. So CI catches it or not
+depending on where the runner's speed falls, and the cost is a red run at
+random rather than a blocked deploy.
+
+**The defect itself is not in doubt**: it reproduces deterministically under
+throttle, below.
 
 **It is not from the corpus work that surfaced it.** Rolling `saints/` back to
 the last green commit reproduces it exactly, so it is latent and older; what
