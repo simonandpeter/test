@@ -622,6 +622,59 @@ new one is better for every face it has to fill.
 2026-10-03: "there is always some marker at least a century that can be
 listed"). It is written down now.
 
+**372 done, 14 October 2026, undated 1,043 of 6,799 — 15.3%**, from 1,415 /
+20.8%, and **nothing has ever been fetched**.
+
+**THE BEST SEAM LEFT IS THE DISPLAY NAME, at 71%** — better than anything in the
+table below except tier A. An undated folder whose *display name* states a
+kinship ("companion of", "brother of", "disciple of") and whose `related`
+already holds a dated folder: 21 found, 15 written, and **9 more are live
+today**. `scratchpad/kin-seam.py` is the instrument.
+
+`.tmp/item16-timetie.py` cannot see any of them and the reason is the lesson:
+its pattern reads a tie out of a prose SENTENCE, and these folders put the tie
+in the name and then spend their prose saying the page gave them nothing — "the
+kinship is the whole of what it says about him, and it is why the display name
+carries it". A prose scan finds folders whose prose has something; this finds
+the ones whose prose has nothing and whose name has everything.
+
+**And `related` is NOT on the manifest card.** The card carries slug,
+display_name, names, sex, types, historicity, dates, hymned, attestations,
+locations, primary_location and image; the reverse links came off the boot path
+on 2026-10-03 to save 51 kB gzipped of first paint. A scan that reads
+`card.related` finds nothing and looks like an exhausted seam, which is exactly
+what happened the first time this one was run.
+
+**Two rows of that seam turned out to be a corpus defect rather than a date, and
+both are the author's:**
+- **`matrona-of-cyzicus`'s `related` asserts an identity the sources do not.**
+  This corpus's `tryphaena-of-cyzicus` is the 1st-century martyr gored by a
+  bull; the page's Tryphaena is the ascetic of Laura Codex 170 who died in peace
+  beside Matrona, foreseeing her end. One folder is wrong, or they are two
+  women. No date was written and the link was not touched.
+- `domninus-companion-of-philemon`'s dated `related` is a **different**
+  Domninus, matched on the name alone.
+
+**Tier C is a worked seam now, not an untried one: 2 of 23, 9%**, against 28% on
+the earlier tier C. The difference is not a change of method — these folders'
+notes were *written* by readers who had already looked at the figure and said
+why it was not a date: a reign refused on an existing precedent, the page's own
+«Ίσως», two datings the page itself calls conflicting, eight σελ. page numbers
+and six saint.gr page ids.
+
+**`date-citation-audit.mjs` was compared against a whole-note scan in both
+directions and won.** The audit gives 24 rows on 23 undated slugs, all
+`[greek/note]`; the looser scan gives 143 rows on 142 folders, and after
+filtering and reading, **nothing the audit had not already found**. But it has
+one miss of its own: `zabulon-father-of-nina`'s Russian `source.text` prints
+«(III-IV)» and no row appeared — a two-Roman-numeral range its parse does not
+surface, **which matters if tier A is to be called exhausted**.
+
+**The back-out has now been watched and it confirms the distinction below:**
+removing the `dates` KEY builds fine and the register reads Undated, because the
+build fills the absent key with three unknown intervals. It is `"dates": null`
+that is refused.
+
 **351 done, 14 October 2026, and every tier's rate is now measured.** `dates`
 is absent on **1,064 of 6,799 folders — 15.6%**, from 1,415 / 20.8%, and
 **nothing was fetched at any point**: every number came out of a calendar line
