@@ -6,6 +6,15 @@
     "venerable-martyr",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 893,
+      "display": "before 893",
+      "basis": "inferred",
+      "note": "The upper bound his own life.md carries: \"The relic of the venerable martyr was found incorrupt, with the marks of his martyrdom plain on it... in the days of Antony II Kauleas, patriarch of Constantinople from 893 to 901.\" Of the man himself saint.gr \"says nothing at all: no country, no century\", so the bound is open below."
+    }
+  },
   "names": [
     {
       "form": "Παύλος",

@@ -18,6 +18,15 @@
     "venerable",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 829,
+      "latest": 842,
+      "display": "reign of Theophilus",
+      "basis": "traditional",
+      "note": "The reign this folder’s own life names, with the source’s own bounds: \"The iconoclast emperor Theophilos, who reigned from 829 to 842, did not scruple to take him into the persecutions he made against monks and heads of households alike\", and \"Death found Sergius far from his wife and children\" in that exile. Neither calendar gives a year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

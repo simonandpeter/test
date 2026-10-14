@@ -5,6 +5,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. The Ohrid Prologue, this folder’s only source, has him tortured \"in the time of Diocletian\" and suffering at Cibalae in Pannonia. The reign is the only time the book names, and the interval is Diocletian’s reign, 284–305, which is the interval sixty-odd folders in this corpus already hold for that marker. No year, because the book gives none."
+    }
+  },
   "names": [
     {
       "form": "Тибал",

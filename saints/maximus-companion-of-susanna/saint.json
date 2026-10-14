@@ -11,6 +11,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life makes him the brother of Claudius and \"a kinsman of the emperor Diocletian\", exiled and burned at Ostia when \"Diocletian learned that a whole family of his relatives had turned Christian\". The interval is Diocletian’s reign, 284–305, which is the interval sixty-odd folders in this corpus already hold for that marker. No year, because the life gives none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

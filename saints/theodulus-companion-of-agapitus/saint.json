@@ -6,6 +6,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 323,
+      "display": "under Licinius",
+      "basis": "traditional",
+      "note": "The reign this folder’s own life names, with the source’s own bounds: \"Under the emperor Licinius, whose reign it gives as 308 to 323, Agapitus was taken into the army, and there he saw tormented for their faith in Christ the gloriously victorious martyrs it names\" — of whom this folder is one. No year, because saint.gr gives none."
+    }
+  },
   "names": [
     {
       "form": "Θεόδουλος",

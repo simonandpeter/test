@@ -12,6 +12,15 @@
     "martyr",
     "presbyter"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "Stated as a reign and never recorded. This folder’s own life has the family \"related to the emperor Diocletian\" and the emperor sending his kinsmen to Gabinius’s house, where Susanna was beheaded and where \"soon after her death... he too died a martyr\". The interval is Diocletian’s reign, 284–305, which is the interval sixty-odd folders in this corpus already hold for that marker. His brother `gaius-pope-of-rome` is recorded at 296, inside it. No year, because the life gives none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

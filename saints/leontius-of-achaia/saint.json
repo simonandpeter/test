@@ -14,6 +14,15 @@
     "monk",
     "preacher"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1283,
+      "latest": 1328,
+      "display": "1283–1328",
+      "basis": "inferred",
+      "note": "The one reign his own life.md carries, as his birth’s anchor and nothing more: he was born at Monemvasia \"of Andreas and Theodora; his father was a rich and considerable man, to whom the emperor Andronikos II Palaiologos, whose reign it dates 1283 to 1328, gave an important place in the central administration of the Morea\". saint.gr gives no year for his birth, his profession or his repose, so no death is recorded."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

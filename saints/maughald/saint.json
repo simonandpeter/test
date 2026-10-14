@@ -6,6 +6,15 @@
     "bishop",
     "hierarch"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 498,
+      "latest": 498,
+      "display": "498",
+      "basis": "attested",
+      "note": "The one year his own life.md carries: \"In the year 498 he was elected by the Christians bishop of the local church there.\" The page \"gives him no year of birth or of death\", so this is a floruit and not a death."
+    }
+  },
   "office": "Bishop on the Isle of Man",
   "names": [
     {

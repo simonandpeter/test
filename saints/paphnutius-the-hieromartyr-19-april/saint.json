@@ -18,6 +18,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 842,
+      "display": "before 842",
+      "basis": "inferred",
+      "note": "The one figure on either of this folder’s pages that is not inside a supposition: \"A canon was written to him in the time of iconoclasm, before 842.\" The Egyptian-and-Diocletian reading on the same page is marked «Предполагают», it is supposed, and nothing is taken from it; the bound is open below because neither page gives a year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

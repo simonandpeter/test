@@ -6,6 +6,15 @@
     "patriarch",
     "hierarch"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1584,
+      "latest": 1591,
+      "display": "1584–1591",
+      "basis": "attested",
+      "note": "The years his own life.md quotes from saint.gr: he \"held the high priesthood in the years 1584 to 1591 as Patriarch of the Orthodox Church of Georgia\", and the page says \"we have no further details of the saint’s life\", so neither a birth nor a death is recorded."
+    }
+  },
   "names": [
     {
       "form": "Νικόλαος",

@@ -12,6 +12,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1314,
+      "latest": 1316,
+      "display": "1314–1316",
+      "basis": "traditional",
+      "note": "The years this folder’s own life.md carries: \"Around 1316, or 1314, Gregory resolved to leave the vanities of this world and took with him into the monastic life\" the members of his household, this folder among them. Her brother `gregory-palamas` is recorded born 1296. saint.gr’s entry \"names no member individually\", so no birth and no death is recorded — only the year the family entered the monastic life."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

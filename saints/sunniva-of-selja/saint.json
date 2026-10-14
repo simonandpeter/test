@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 996,
+      "display": "before 996",
+      "basis": "inferred",
+      "note": "The upper bound her own life.md carries: \"Her relics were discovered when the Christian king Olaf dug in the cave in the year 996, and in that same year he declared the island of Selja the first holy place in Norway.\" \"The page gives no year for her death\", so the bound is open below."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

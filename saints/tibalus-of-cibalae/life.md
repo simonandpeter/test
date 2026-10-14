@@ -2,7 +2,7 @@
 
 The Ohrid Prologue of Bishop Nikolai Velimirović gives this martyr two sentences, and they are the whole of what this folder knows of him. He was a Slav of Pannonia. In the time of Diocletian he was fearfully tortured for the faith of Christ, and he suffered in the place called Cibalae. The book says no more than that, and this life says exactly as much.
 
-So it gives him no parents and no trade, no rank beyond the martyr's, no judge, no manner of death and no year. The reign of Diocletian is the only time it names, and because the page does not print that reign's bounds no date is recorded here rather than one being supplied for him. Cibalae, where he suffered, lies in the Pannonia he came from; no coordinate was taken for either place.
+So it gives him no parents and no trade, no rank beyond the martyr's, no judge, no manner of death and no year. The reign of Diocletian is the only time it names, and the death recorded here is that reign and nothing narrower, with its bounds taken from the sixty-odd folders in this corpus that already hold that marker rather than from the page, which does not print them. Cibalae, where he suffered, lies in the Pannonia he came from; no coordinate was taken for either place.
 
 No other calendar read for this corpus names him, and the three men it keeps who suffered at Cibalae — a presbyter and two deacons, held on 21 August by the Romanian calendar — are different men with different names. The Serbian „Тибал“ is the only form of his name on any page read here; the English name above restores the Latin ending that form drops, in the way this same entry's Фаустијан and Квинтилијан drop the endings of Faustianus and Quintilianus.
 

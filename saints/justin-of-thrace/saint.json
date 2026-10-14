@@ -5,6 +5,15 @@
   "types": [
     "king"
   ],
+  "dates": {
+    "death": {
+      "earliest": 527,
+      "latest": 527,
+      "display": "527",
+      "basis": "inferred",
+      "note": "Arithmetic on the two figures his own life.md carries, and on nothing else: \"at the last a king, in 518\", and \"He reigned nine years and thirty-three days.\" 518 plus nine years is 527. This folder is the emperor Justin I, whose reign fifty-odd folders in this corpus already hold as 518–527."
+    }
+  },
   "office": "Emperor",
   "names": [
     {
