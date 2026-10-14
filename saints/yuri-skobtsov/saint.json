@@ -5,6 +5,15 @@
   "types": [
     "new-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1901,
+      "latest": 2000,
+      "display": "20th century",
+      "basis": "inferred",
+      "note": "The saint.gr notice this folder cites is one sentence: he died in a concentration camp, as his mother did. His mother is `maria-skobtsova`, recorded here born 1891 and dead 1945. No year, and no camp, is printed for him, so the century is what is recorded."
+    }
+  },
   "related": [
     "maria-skobtsova"
   ],

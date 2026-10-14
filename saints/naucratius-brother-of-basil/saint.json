@@ -13,6 +13,15 @@
     "venerable",
     "hermit"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "inferred",
+      "note": "Second son of `basil-the-elder`, who died in 350, and of `emilia-mother-of-basil-the-great`, who died in 375, and brother of `basil-the-great`, born 330 and dead 379, all as this corpus records them; the life this folder cites has him die before his mother. No year is printed for him."
+    }
+  },
   "related": [
     "basil-the-elder",
     "basil-the-great",
