@@ -38,34 +38,60 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**Nothing is in flight. `ddc428ea` is green and deployed.** What follows is
-where each open item stands, so a cold start needs TODO.md and not this file.
+**Nothing is in flight.** `85548a176` carries the overnight hunt's fixes; read
+its CI with `scratchpad/ci-flaky.py 85548a176` rather than trusting a line here.
+A backup of this tree sits at `Agios Website Ex\2026-10-14\main` (no
+`node_modules`, `.git`, `dist`, `shots` or `main/.claude` — that last is 21 GB
+of session cache and is why a mirror of this folder balloons).
 
-**The list is down to four author decisions and two mechanical slices.**
+**The app shells carry the final build of the night** (`npm run app:sync`, the
+build after the last source edit). No binary has ever been built: that wants
+Android Studio or Xcode, and `docs/APP.md` says which steps.
 
-The slices, both measured and both safe to hand to a reader:
-- **Item 5**: 28 of the 53 queued names are unsearched, and `theophylact-of-nicomedia`
-  carries a live lead nobody pursued. Imageless hero-days are **138 distinct
-  saints**, from 254. Method 1's three routes are written into the item.
-- **Item 16**: 14 of the 46 temporal ties are unwritten on purpose (four are Old
-  Testament folders wanting a BC ruling), and tier C's 46 were never retried
-  after its 28% first pass. Undated is **1,064 of 6,799, 15.6%**, from 38.6%.
+**Three author decisions came out of the hunt** and are TODO item 21, with the
+rest of what four agents found. They are all one question: whether a page that
+degrades honestly is allowed to state something untrue while it does.
 
-The decisions, none of which should be guessed:
+**Two carousel tests fail on this desk and not because of the diff.**
+`index-carousel.spec.js:1929` failed **3 of 3 on the unmodified tree** and `:30`
+went 2 of 12 to 4 of 12 — a difference this desk cannot resolve. Both show
+`.facets` hidden when the mode toggle should have revealed it. Nobody has
+accounted for it; it is worth one look with nothing else running, and the
+comparison to make is the stash-and-rebuild one, not a re-run.
+
+**The icon tail is answered, not open.** `scratchpad/icon-refusals.json` holds
+107 records. Of the 50 that were queued, 25 are `nowhere` (no entity on six
+wikipedias, or an entity carrying no picture at all) and 9 are `namesake` with
+the wrong man named — `paul-of-jamnia` and `paul-companion-of-andrew` both reach
+the Apostle Paul. **16 are a reading a script cannot do**, each with a count of
+the files its sweep found: `scratchpad/icon-sweep.py` searches six routes over
+four hosts, `icon-nowhere.py` and `icon-namesake.py` record the verdicts, and
+`scratchpad/icon-sweep.log` is the evidence for every row. Openverse and
+Europeana are finished too: they answer with churches named after these saints.
+
+**The remaining slices, both measured and safe to hand to a reader:**
+- **Item 16**: tier D's remainder; undated is `node scripts/ship-gate-days.mjs`
+  and a fresh manifest, not a number from here.
+- **Item 15**: the icon quality worklist, `scratchpad/icon-quality.py`, whose
+  finding was that width is the live axis and tone is not.
+
+**The older decisions still standing**, none to be guessed:
 1. **`joseph-of-bisericani`** — 1711 against a fifteenth-century birth,
    unreconciled on its own page.
 2. **May a page's own «perhaps» be recorded?** `nearchus` hangs on a surmised
-   friendship with a saint this corpus dates 249-259, and `therinus` and
-   `valerius` carry a bolded "no date was added here" that a yes would reverse.
+   friendship; `therinus` and `valerius` carry a bolded "no date was added
+   here" that a yes would reverse.
 3. **May a BC wave begin?** Four folders' immediate kin already carry BC
    displays.
 4. **The Aglomazovo four** — two Johns and two Pauls, distinct men whom the
    calendar separates only by position in a line.
-
-And item 15 asks two of its own: whether a greyscale plate is worth replacing
-with a colour miniature where one exists (18 more plates were accepted the same
-day, so it may be no), and whether a 560 px icon in a 1000 px slot is worth
-replacing when nothing upscales.
+5. **The Erasmus merge** — `erasmus-of-the-caves` and
+   `erasmus-of-the-kyiv-caves` are the same Caves monk on the same Julian 24
+   February, and the merge-if-same rule applies. A pass of its own: it unions
+   attestations, carries name forms, repoints `related` and deletes a slug.
+6. **Item 15's two** — whether a greyscale plate is worth replacing with a
+   colour miniature, and whether a 560 px icon in a 1000 px slot is worth
+   replacing when nothing upscales.
 
 **ITEM 17 IS WRITTEN AND BLOCKED ON A PERMISSION.** 1,138 of the 2,316
 `READ_FOLDS` keys are safe to delete — 43 whose form no live row has, and 1,095

@@ -6,82 +6,545 @@
     "named-after": "something named after the saint rather than the saint",
     "event-or-group": "an event, or a group image that does not name him",
     "ambiguous": "an identification a reader cannot check off the picture",
-    "nothing": "nothing on Commons names the saint by any of the four routes"
+    "nothing": "nothing on Commons names the saint by any of the four routes",
+    "nowhere": "nothing on Commons, Wikidata structured data, el/ro/ru/sr/bg wikipedia, Openverse or Europeana — scratchpad/icon-sweep.py, 14 October 2026"
   },
   "_note": "A refusal is not permanent: Commons gains files. `floor` and `nothing` are worth retrying after a long gap; `namesake` and `ambiguous` want a reading rather than another search.",
   "refused": [
-    { "slug": "alexander-companion-of-agapius", "kind": "ambiguous", "why": "one plate, two corpus folders sharing 15 March and the name, nothing to choose between them" },
-    { "slug": "marcellinus-of-rome", "kind": "namesake", "why": "the folder is Маркеллин; the plate is Маркелл. Wikidata also sends «Маркеллин Римский» to the exorcist's companion of 2 June, not this pope of 7 June" },
-    { "slug": "mark-of-the-lavra-of-pskov", "kind": "namesake", "why": "29 March's Mark in the Russian Lives is Mark of Arethusa; the near hits are the Pskov-Caves Umilenie icon and the monastery" },
-    { "slug": "sisoes-the-russian", "kind": "namesake", "why": "6 July's Сисой is Sisoes the Great, the Egyptian; this folder is an 18th-c. Caves schemamonk" },
-    { "slug": "sabbas-of-the-kyiv-caves", "kind": "namesake", "why": "24 April's Савва is Sabbas Stratelates, a soldier martyr; and nothing on Commons names this monk" },
-    { "slug": "john-of-menyusha", "kind": "event-or-group", "why": "the day's plate is the Nativity of the Forerunner; the near hit is a Novgorod synaxis icon" },
-    { "slug": "john-disciple-of-gregory-the-decapolite", "kind": "resolved", "why": "REFUSED then TAKEN: 18 April's «Иоанн Новый» is John the New of Ioannina, but the day's bare «Иоанн» is this folder, whose life page heads «Дни памяти: 11 апреля, 18 апреля»" },
-    { "slug": "theodosia-of-constantinople", "kind": "resolved", "why": "REFUSED then TAKEN: 29 May's «Феодосия Тирская» is Theodosia of Tyre; the by-named «Феодосия Константинопольская» plate is this folder" },
-    { "slug": "theophylact-of-nicomedia", "kind": "floor", "why": "the Rila «Saint Theophilactus» fresco is 254x414, so the standing question of whether it is Theophylact of Ohrid never had to be decided" },
-    { "slug": "daniel-of-pereslavl", "kind": "floor", "why": "his whole Commons category is one file at 150x400; the Wikidata entity carries no P373" },
-    { "slug": "innocent-of-nurma", "kind": "resolved", "why": "REFUSED at 388x600 then TAKEN at that size; its shorter edge is under erasmus-of-the-kyiv-caves's and it heads item 15's replacement list" },
-    { "slug": "mark-the-ascetic", "kind": "floor", "why": "the only image on his entity is 360x453" },
-    { "slug": "nicander-of-myra", "kind": "floor", "why": "one file at 334x422, and it holds two saints" },
-    { "slug": "danilo-of-serbia", "kind": "floor", "why": "his 1330s Peć fresco is 250x357; the category's large files are a modern monument and a church interior" },
-    { "slug": "barlaam-of-the-kyiv-caves", "kind": "named-after", "why": "the only portrait-sized file (426x612) is a 1988 forensic facial reconstruction from his skull; the 4300x3000 is a magazine page" },
-    { "slug": "lazarus-the-four-days-dead", "kind": "event-or-group", "why": "Category:Lazarus and Resurrection of Lazarus hold Western Raising paintings in which Christ is the subject; Lazarus as Bishop of Marseille is a different tradition" },
-    { "slug": "photini-the-samaritan", "kind": "event-or-group", "why": "no saint category exists: Saint Photina is churches only, Samaritan woman at the well is Christ-and-the-woman paintings in which she is unnamed. Her Russian 20 March maps to plate prefix 0720, which the series draws as other saints, so the plate route is closed too" },
-    { "slug": "peter-ordynsky-of-rostov", "kind": "nothing", "why": "only his Horde relations, Berke and Boris Vasilkovich" },
-    { "slug": "boyan-enravota", "kind": "event-or-group", "why": "the Wikidata P18 is a Madrid Skylitzes miniature of Kourtagan beheading Christians, an event, 1090x540" },
-    { "slug": "philaret-of-moscow", "kind": "nothing", "why": "four categories and all four are his books and his institute" },
-    { "slug": "sophia-of-suzdal", "kind": "resolved", "why": "REFUSED by routes 1-2 then TAKEN by route 3 (ru article -> Q543564 -> P373)" },
-    { "slug": "athanasius-iii-patelarios", "kind": "resolved", "why": "REFUSED by routes 1-2 then TAKEN by route 3 (Q749532)" },
-    { "slug": "silouan-of-the-kyiv-caves", "kind": "nothing", "why": "the 112-file Saints of Kyiv Caves Monastery category names neither him nor Sabbas" },
-    { "slug": "george-the-new-martyr-of-sofia", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "pelagia-of-tinos", "kind": "nothing", "why": "no category or entity; and routes 1 and 3 fail outright because the folder stores no Russian name" },
-    { "slug": "savvas-of-kalymnos", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "nicander-of-egypt-15-march", "kind": "resolved", "why": "REFUSED then TAKEN off plate 07151" },
-    { "slug": "antoninus-of-rome", "kind": "namesake", "why": "only Antoninus Pius" },
-    { "slug": "john-tarasov", "kind": "namesake", "why": "only John Chrysostom" },
-    { "slug": "matrona-of-thessalonica", "kind": "ambiguous", "why": "Wikidata's P373 is Category:Santa Madrona, Barcelona's local cult — a three-saint window and an 18th-c. woodcut. The identity rests on the Barcelona-Thessalonica conflation, which a reader cannot check off the picture" },
-    { "slug": "theodora-of-constantinople", "kind": "nothing", "why": "nothing names this venerable monastic of 30 December; the near hits are the 6th-c. Empress Theodora and Theodore Tiron" },
-    { "slug": "marciana-the-empress", "kind": "nothing", "why": "no category or entity; routes 1 and 3 fail for want of a stored Russian name" },
-    { "slug": "serapion-of-pentapolis", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "callinicus-of-caesarea", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "eutychius-of-melitene", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "synesius-of-carpasia", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "hesychius-the-senator", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "isaiah-the-egyptian", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "lazarus-of-pskov", "kind": "nothing", "why": "no category or entity; routes 1 and 3 fail for want of a stored Russian name" },
-    { "slug": "john-the-bulgarian", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "gedeon-the-new", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "jacob-of-putna", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "sebastian-of-karaganda", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "symeon-the-barefoot", "kind": "nothing", "why": "no category or entity under any title tried" },
-    { "slug": "lazarus-of-mount-galesion", "kind": "event-or-group", "why": "his one Commons file is a whole 17th-c. November menaion tablet, where he is not separately identifiable" },
-    { "slug": "simon-of-simonopetra", "kind": "namesake", "why": "every file reachable is the Apostle Simon the Zealot: Category:Icons of Saint Simon is nine of him (the Hajdudorog apostle panel, «икона 09101 Симон Зилот», a Cretan apostle icon) and Category:Saint Simon is a Salisbury Cathedral statue, a reliquary sabre and a Vitae sanctorum leaf. The 13th-c. Athonite myrrh-streamer who founded Simonopetra has no Wikidata entity answering to Σίμων and Category:Simon of Simonopetra and Category:Simon the Myrrh-streamer do not exist." },
-    { "slug": "acacius-the-kausokalyvite", "kind": "nothing", "why": "route 1's namespace-14 search on acacius/kausokalyvite returns nothing, route 2 reports no Wikidata hit, and the hand aliases Category:Akakios Kausokalyvitis and Category:Acacius of Kafsokalyvia are both empty. The folder stores only Greek and Serbian forms, so route 3 cannot be run at all." },
-    { "slug": "panagis-basias", "kind": "nothing", "why": "no category under panagis/basias, no Wikidata hit, and both hand aliases Category:Panagis Bassias and Category:Panagis Basias are empty. The Kephalonian priest-fool died in 1888 so a photograph would be out of copyright, but nothing is on Commons. No Russian form stored, so route 3 is unavailable." },
-    { "slug": "argyra-of-prusa", "kind": "nothing", "why": "nothing under argyra/prusa, no Wikidata hit, and Category:Argyre of Prussa, Category:Saint Argyri and Category:Agia Argyri are all empty. The folder stores Romanian, Greek and Serbian forms only, so route 3 is unavailable." },
-    { "slug": "demetrianus-of-tamassos", "kind": "nothing", "why": "a Cypriot local saint: nothing under demetrianus/tamassos, no Wikidata hit, Category:Demetrianos of Tamasos empty. Greek form only, so route 3 is unavailable." },
-    { "slug": "dionysius-the-rhetor", "kind": "nothing", "why": "the Athonite of 9 July, kept with his disciple Metrophanes: nothing under dionysius/rhetor, no Wikidata hit, Category:Dionysios the Rhetor empty. Romanian and Greek forms only, so route 3 is unavailable." },
-    { "slug": "anthony-the-new-of-veria", "kind": "nothing", "why": "nothing under anthony/veria, no Wikidata hit, Category:Anthony the New of Veria empty. Romanian and Greek forms only, so route 3 is unavailable. A bare 'Anthony' search is the forename trap and was not run." },
-    { "slug": "artemas-of-cyzicus", "kind": "event-or-group", "why": "he is one of the Nine Martyrs of Cyzicus and route 3 reaches their category: Category:Nine martyrs of Kizikos holds «Жития Святых (1903-1911) - икона 08291 9 мучеников» at 1408x1783, whose plate code 08291 resolves to the Julian 29 April, this folder's own feast. The plate identity rule needs both halves and only the date half holds — the title names «9 мучеников» and not «Артема», so nothing in the picture is him rather than any of the other eight. The category's one named single figure is «Далматий Кизический», a different one of the nine, at 300x407." },
-    { "slug": "christina-of-persia", "kind": "nothing", "why": "route 1 found no category, route 2 no entity, and route 3's full-text search on «Христина Персидская» returns Christina of Sweden and nothing else. The Persian martyr of 13 March has nothing on Commons under any of the three." },
-    { "slug": "zacharias-son-of-carion", "kind": "nothing", "why": "no category, no Wikidata entity, and route 3 on «Захария Отверстый» returns the 6 April date page, the wolf and the murder of Rasputin — the full-text search is matching on «отверстый» rather than on the saint. Nothing on Commons names the Scetis monk." },
-    { "slug": "euthalia-the-martyr", "kind": "namesake", "why": "«Euthalia» on Wikidata is a genus of nymphalid butterfly and every hit is a species of it, six entities deep; route 3 on «Евфалия Леентинская (Сицилийская)» returns only the 15 March date page. The Sicilian martyr of Lentini has nothing, and the butterflies are what a free-text search would hand a careless sourcer." },
-    { "slug": "thalassius", "kind": "namesake", "why": "«Thalassius» on Wikidata is a genus of fishing spider, whose Commons category holds no image files anyway, and route 3 on «Фалассий Сирийский» returns nothing at all. The Syrian hermit of 22 February has nothing on Commons." },
-    { "slug": "melasippus", "kind": "nothing", "why": "no category, no Wikidata entity, and route 3 on «Меласипп Анкирский» returns only the «20 ноября» date page. He is kept with his wife Casinia and son Antoninus and nothing on Commons names any of the three." },
-    { "slug": "theophilus-the-new", "kind": "nothing", "why": "route 3 on «Феофил Новый, Константинопольский» returns John Chrysostom, Meletius Smotrytsky, the Luís I bridge and the emperor Theophilos with his empress Theodora — the search is matching the name Феофил, not the soldier-martyr. No category and no entity for the admiral martyred under the Arabs, kept 30 January." },
-    { "slug": "taurion", "kind": "namesake", "why": "«Taurion» on Wikidata is a river in France and a bolete; route 3 reports no ru.wikipedia article for «Таврион Амфипольский (Македонский)» at all. He is kept 7 November with Melasippus's company and the Thirty-Three of Melitene and nothing on Commons names him." },
-    { "slug": "john-maisuradze", "kind": "nothing", "why": "the Georgian confessor who died at Betania in 1957: no Wikidata entity under «Иоанн (Майсурадзе)», and route 3's full-text search returns his Betania companions Gabriel Urgebadze and Lazar Abashidze, who have categories, and a figure-skating championship. His own likeness would be a 20th-century photograph and none is on Commons." },
-    { "slug": "artemon-of-seleucia", "kind": "nothing", "why": "all three routes dry: no category built from the folder's names, no Wikidata entity for «Артемон Селевкийский», and route 3's ru.wikipedia full-text returns the «6 апреля» date page and an 18th-c. Hamilton genealogy. The deacon of Seleucia kept 24 March has nothing on Commons." },
-    { "slug": "athanasia-of-antioch", "kind": "nothing", "why": "the folder stores the bare «Афанасия», so route 3's full-text search can only return Athanasius the Great and Afanasy Nikitin the merchant traveller, which is what it did; no Wikidata entity and no category. The bare forename is the reason this one cannot be reached rather than evidence that nothing exists, and it is worth retrying if the folder ever gains a by-named form." },
-    { "slug": "christina-martyr-18-may", "kind": "nothing", "why": "no category, no Wikidata entity, and route 3 on «Христина Лампсакийская» returns nothing at all. She is kept 18 May with Peter and Paul of Lampsacus, whose folders are refused here on the same day for the same reason." },
-    { "slug": "eudocia-4-august", "kind": "nothing", "why": "the folder stores the bare «Евдокия», so route 3 returns the given name, the children of Ivan IV and Eudoxia Lopukhina, Peter I's first wife; no Wikidata entity and no category. Unreachable for want of a by-name rather than demonstrably absent." },
-    { "slug": "eudoxius-of-melitene", "kind": "nothing", "why": "no Wikidata entity under «Евдоксий», and route 3 finds no ru.wikipedia article under the folder's forms. One of the Melitene martyrs of 6 September; nothing on Commons names him apart from the group." },
-    { "slug": "john-psychaites", "kind": "nothing", "why": "no Wikidata entity, and route 3 on «Иоанн Психаит» returns the Byzantine Iconoclasm article and the given-name category, neither with an image of him. The iconodule confessor of the Psycha monastery, kept 7 June, has nothing on Commons." },
-    { "slug": "nicholas-simo", "kind": "nothing", "why": "no Wikidata entity under «Николай (Симо)», and route 3 returns the painter Nikolay Ge, the emperor Nicholas I and the town of Sim in Chelyabinsk Oblast — the search is matching Николай and Сим separately. A 20th-century figure whose likeness would be a photograph, and none is on Commons." },
-    { "slug": "paul-28-june", "kind": "nothing", "why": "the folder stores «Павел Коринфянин» and route 3 therefore returns the Apostle Paul, 1 and 2 Corinthians and their papyri — not this martyr. No Wikidata entity and no category. The Apostle's whole apparatus standing in front of a homonymous martyr is the forename trap in its Russian form." },
-    { "slug": "peter-of-lampsacus", "kind": "nothing", "why": "no Wikidata entity under «Петр Лампсакский», and route 3 returns Aristotle, the Lyceum, the Platonic Academy and the First Council of Nicaea — Lampsacus is matching Anaximenes' and Strato's city, not the martyr. Nothing on Commons." },
-    { "slug": "theodore-companion-of-terentius", "kind": "nothing", "why": "no Wikidata entity under «Феодор Африканский», and route 3 returns the Patriarchal Exarchate of Africa and Theodore II of Alexandria, both modern. One of the forty companions of Terentius kept 10 April; nothing on Commons names him singly. NOTE: this slug is also where m1ru.py crashed with HTTP 414 — see the `_note` on that instrument." },
-    { "slug": "theostichus-of-cyzicus", "kind": "event-or-group", "why": "refused for exactly the reason artemas-of-cyzicus is: he is one of the Nine Martyrs of Cyzicus, route 3 reaches Q4156552 and Category:Nine martyrs of Kizikos, and the plate «икона 08291 9 мучеников» at 1408x1783 matches the Julian 29 April but names the nine as a company. The category's one named single figure is «Далматий Кизический» at 300x407, who is a different one of the nine." },
-    { "slug": "zoticus-20-april", "kind": "namesake", "why": "every Zoticus route 3 reaches is kept on another day: Q3564977 is «Мученики Агафоник, Зотик, Феопрепий, Акиндин», the Nicomedian company of 22 August, and Category:Saints of Nicomedia's «Dasias, Caius and Zoticus (Menologion of Basil II)» at 1949x1294 is the 21 October three. This folder's Zoticus of Nicomedia is the 20 April one, and nothing found is him." }
+    {
+      "slug": "alexander-companion-of-agapius",
+      "kind": "ambiguous",
+      "why": "one plate, two corpus folders sharing 15 March and the name, nothing to choose between them"
+    },
+    {
+      "slug": "marcellinus-of-rome",
+      "kind": "namesake",
+      "why": "the folder is Маркеллин; the plate is Маркелл. Wikidata also sends «Маркеллин Римский» to the exorcist's companion of 2 June, not this pope of 7 June"
+    },
+    {
+      "slug": "mark-of-the-lavra-of-pskov",
+      "kind": "namesake",
+      "why": "29 March's Mark in the Russian Lives is Mark of Arethusa; the near hits are the Pskov-Caves Umilenie icon and the monastery"
+    },
+    {
+      "slug": "sisoes-the-russian",
+      "kind": "namesake",
+      "why": "6 July's Сисой is Sisoes the Great, the Egyptian; this folder is an 18th-c. Caves schemamonk"
+    },
+    {
+      "slug": "sabbas-of-the-kyiv-caves",
+      "kind": "namesake",
+      "why": "24 April's Савва is Sabbas Stratelates, a soldier martyr; and nothing on Commons names this monk"
+    },
+    {
+      "slug": "john-of-menyusha",
+      "kind": "event-or-group",
+      "why": "the day's plate is the Nativity of the Forerunner; the near hit is a Novgorod synaxis icon"
+    },
+    {
+      "slug": "john-disciple-of-gregory-the-decapolite",
+      "kind": "resolved",
+      "why": "REFUSED then TAKEN: 18 April's «Иоанн Новый» is John the New of Ioannina, but the day's bare «Иоанн» is this folder, whose life page heads «Дни памяти: 11 апреля, 18 апреля»"
+    },
+    {
+      "slug": "theodosia-of-constantinople",
+      "kind": "resolved",
+      "why": "REFUSED then TAKEN: 29 May's «Феодосия Тирская» is Theodosia of Tyre; the by-named «Феодосия Константинопольская» plate is this folder"
+    },
+    {
+      "slug": "theophylact-of-nicomedia",
+      "kind": "floor",
+      "why": "the Rila «Saint Theophilactus» fresco is 254x414, so the standing question of whether it is Theophylact of Ohrid never had to be decided"
+    },
+    {
+      "slug": "daniel-of-pereslavl",
+      "kind": "floor",
+      "why": "his whole Commons category is one file at 150x400; the Wikidata entity carries no P373"
+    },
+    {
+      "slug": "innocent-of-nurma",
+      "kind": "resolved",
+      "why": "REFUSED at 388x600 then TAKEN at that size; its shorter edge is under erasmus-of-the-kyiv-caves's and it heads item 15's replacement list"
+    },
+    {
+      "slug": "mark-the-ascetic",
+      "kind": "floor",
+      "why": "the only image on his entity is 360x453"
+    },
+    {
+      "slug": "nicander-of-myra",
+      "kind": "floor",
+      "why": "one file at 334x422, and it holds two saints"
+    },
+    {
+      "slug": "danilo-of-serbia",
+      "kind": "floor",
+      "why": "his 1330s Peć fresco is 250x357; the category's large files are a modern monument and a church interior"
+    },
+    {
+      "slug": "barlaam-of-the-kyiv-caves",
+      "kind": "named-after",
+      "why": "the only portrait-sized file (426x612) is a 1988 forensic facial reconstruction from his skull; the 4300x3000 is a magazine page"
+    },
+    {
+      "slug": "lazarus-the-four-days-dead",
+      "kind": "event-or-group",
+      "why": "Category:Lazarus and Resurrection of Lazarus hold Western Raising paintings in which Christ is the subject; Lazarus as Bishop of Marseille is a different tradition"
+    },
+    {
+      "slug": "photini-the-samaritan",
+      "kind": "event-or-group",
+      "why": "no saint category exists: Saint Photina is churches only, Samaritan woman at the well is Christ-and-the-woman paintings in which she is unnamed. Her Russian 20 March maps to plate prefix 0720, which the series draws as other saints, so the plate route is closed too"
+    },
+    {
+      "slug": "peter-ordynsky-of-rostov",
+      "kind": "nothing",
+      "why": "only his Horde relations, Berke and Boris Vasilkovich"
+    },
+    {
+      "slug": "boyan-enravota",
+      "kind": "event-or-group",
+      "why": "the Wikidata P18 is a Madrid Skylitzes miniature of Kourtagan beheading Christians, an event, 1090x540"
+    },
+    {
+      "slug": "philaret-of-moscow",
+      "kind": "nothing",
+      "why": "four categories and all four are his books and his institute"
+    },
+    {
+      "slug": "sophia-of-suzdal",
+      "kind": "resolved",
+      "why": "REFUSED by routes 1-2 then TAKEN by route 3 (ru article -> Q543564 -> P373)"
+    },
+    {
+      "slug": "athanasius-iii-patelarios",
+      "kind": "resolved",
+      "why": "REFUSED by routes 1-2 then TAKEN by route 3 (Q749532)"
+    },
+    {
+      "slug": "silouan-of-the-kyiv-caves",
+      "kind": "nothing",
+      "why": "the 112-file Saints of Kyiv Caves Monastery category names neither him nor Sabbas"
+    },
+    {
+      "slug": "george-the-new-martyr-of-sofia",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "pelagia-of-tinos",
+      "kind": "nothing",
+      "why": "no category or entity; and routes 1 and 3 fail outright because the folder stores no Russian name"
+    },
+    {
+      "slug": "savvas-of-kalymnos",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "nicander-of-egypt-15-march",
+      "kind": "resolved",
+      "why": "REFUSED then TAKEN off plate 07151"
+    },
+    {
+      "slug": "antoninus-of-rome",
+      "kind": "namesake",
+      "why": "only Antoninus Pius"
+    },
+    {
+      "slug": "john-tarasov",
+      "kind": "namesake",
+      "why": "only John Chrysostom"
+    },
+    {
+      "slug": "matrona-of-thessalonica",
+      "kind": "ambiguous",
+      "why": "Wikidata's P373 is Category:Santa Madrona, Barcelona's local cult — a three-saint window and an 18th-c. woodcut. The identity rests on the Barcelona-Thessalonica conflation, which a reader cannot check off the picture"
+    },
+    {
+      "slug": "theodora-of-constantinople",
+      "kind": "nothing",
+      "why": "nothing names this venerable monastic of 30 December; the near hits are the 6th-c. Empress Theodora and Theodore Tiron"
+    },
+    {
+      "slug": "marciana-the-empress",
+      "kind": "nothing",
+      "why": "no category or entity; routes 1 and 3 fail for want of a stored Russian name"
+    },
+    {
+      "slug": "serapion-of-pentapolis",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "callinicus-of-caesarea",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "eutychius-of-melitene",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "synesius-of-carpasia",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "hesychius-the-senator",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "isaiah-the-egyptian",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "lazarus-of-pskov",
+      "kind": "nothing",
+      "why": "no category or entity; routes 1 and 3 fail for want of a stored Russian name"
+    },
+    {
+      "slug": "john-the-bulgarian",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "gedeon-the-new",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "jacob-of-putna",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "sebastian-of-karaganda",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "symeon-the-barefoot",
+      "kind": "nothing",
+      "why": "no category or entity under any title tried"
+    },
+    {
+      "slug": "lazarus-of-mount-galesion",
+      "kind": "event-or-group",
+      "why": "his one Commons file is a whole 17th-c. November menaion tablet, where he is not separately identifiable"
+    },
+    {
+      "slug": "simon-of-simonopetra",
+      "kind": "namesake",
+      "why": "every file reachable is the Apostle Simon the Zealot: Category:Icons of Saint Simon is nine of him (the Hajdudorog apostle panel, «икона 09101 Симон Зилот», a Cretan apostle icon) and Category:Saint Simon is a Salisbury Cathedral statue, a reliquary sabre and a Vitae sanctorum leaf. The 13th-c. Athonite myrrh-streamer who founded Simonopetra has no Wikidata entity answering to Σίμων and Category:Simon of Simonopetra and Category:Simon the Myrrh-streamer do not exist."
+    },
+    {
+      "slug": "acacius-the-kausokalyvite",
+      "kind": "nothing",
+      "why": "route 1's namespace-14 search on acacius/kausokalyvite returns nothing, route 2 reports no Wikidata hit, and the hand aliases Category:Akakios Kausokalyvitis and Category:Acacius of Kafsokalyvia are both empty. The folder stores only Greek and Serbian forms, so route 3 cannot be run at all."
+    },
+    {
+      "slug": "panagis-basias",
+      "kind": "nothing",
+      "why": "no category under panagis/basias, no Wikidata hit, and both hand aliases Category:Panagis Bassias and Category:Panagis Basias are empty. The Kephalonian priest-fool died in 1888 so a photograph would be out of copyright, but nothing is on Commons. No Russian form stored, so route 3 is unavailable."
+    },
+    {
+      "slug": "argyra-of-prusa",
+      "kind": "nothing",
+      "why": "nothing under argyra/prusa, no Wikidata hit, and Category:Argyre of Prussa, Category:Saint Argyri and Category:Agia Argyri are all empty. The folder stores Romanian, Greek and Serbian forms only, so route 3 is unavailable."
+    },
+    {
+      "slug": "demetrianus-of-tamassos",
+      "kind": "nothing",
+      "why": "a Cypriot local saint: nothing under demetrianus/tamassos, no Wikidata hit, Category:Demetrianos of Tamasos empty. Greek form only, so route 3 is unavailable."
+    },
+    {
+      "slug": "dionysius-the-rhetor",
+      "kind": "nothing",
+      "why": "the Athonite of 9 July, kept with his disciple Metrophanes: nothing under dionysius/rhetor, no Wikidata hit, Category:Dionysios the Rhetor empty. Romanian and Greek forms only, so route 3 is unavailable."
+    },
+    {
+      "slug": "anthony-the-new-of-veria",
+      "kind": "nothing",
+      "why": "nothing under anthony/veria, no Wikidata hit, Category:Anthony the New of Veria empty. Romanian and Greek forms only, so route 3 is unavailable. A bare 'Anthony' search is the forename trap and was not run."
+    },
+    {
+      "slug": "artemas-of-cyzicus",
+      "kind": "event-or-group",
+      "why": "he is one of the Nine Martyrs of Cyzicus and route 3 reaches their category: Category:Nine martyrs of Kizikos holds «Жития Святых (1903-1911) - икона 08291 9 мучеников» at 1408x1783, whose plate code 08291 resolves to the Julian 29 April, this folder's own feast. The plate identity rule needs both halves and only the date half holds — the title names «9 мучеников» and not «Артема», so nothing in the picture is him rather than any of the other eight. The category's one named single figure is «Далматий Кизический», a different one of the nine, at 300x407."
+    },
+    {
+      "slug": "christina-of-persia",
+      "kind": "nothing",
+      "why": "route 1 found no category, route 2 no entity, and route 3's full-text search on «Христина Персидская» returns Christina of Sweden and nothing else. The Persian martyr of 13 March has nothing on Commons under any of the three."
+    },
+    {
+      "slug": "zacharias-son-of-carion",
+      "kind": "nothing",
+      "why": "no category, no Wikidata entity, and route 3 on «Захария Отверстый» returns the 6 April date page, the wolf and the murder of Rasputin — the full-text search is matching on «отверстый» rather than on the saint. Nothing on Commons names the Scetis monk."
+    },
+    {
+      "slug": "euthalia-the-martyr",
+      "kind": "namesake",
+      "why": "«Euthalia» on Wikidata is a genus of nymphalid butterfly and every hit is a species of it, six entities deep; route 3 on «Евфалия Леентинская (Сицилийская)» returns only the 15 March date page. The Sicilian martyr of Lentini has nothing, and the butterflies are what a free-text search would hand a careless sourcer."
+    },
+    {
+      "slug": "thalassius",
+      "kind": "namesake",
+      "why": "«Thalassius» on Wikidata is a genus of fishing spider, whose Commons category holds no image files anyway, and route 3 on «Фалассий Сирийский» returns nothing at all. The Syrian hermit of 22 February has nothing on Commons."
+    },
+    {
+      "slug": "melasippus",
+      "kind": "nothing",
+      "why": "no category, no Wikidata entity, and route 3 on «Меласипп Анкирский» returns only the «20 ноября» date page. He is kept with his wife Casinia and son Antoninus and nothing on Commons names any of the three."
+    },
+    {
+      "slug": "theophilus-the-new",
+      "kind": "nothing",
+      "why": "route 3 on «Феофил Новый, Константинопольский» returns John Chrysostom, Meletius Smotrytsky, the Luís I bridge and the emperor Theophilos with his empress Theodora — the search is matching the name Феофил, not the soldier-martyr. No category and no entity for the admiral martyred under the Arabs, kept 30 January."
+    },
+    {
+      "slug": "taurion",
+      "kind": "namesake",
+      "why": "«Taurion» on Wikidata is a river in France and a bolete; route 3 reports no ru.wikipedia article for «Таврион Амфипольский (Македонский)» at all. He is kept 7 November with Melasippus's company and the Thirty-Three of Melitene and nothing on Commons names him."
+    },
+    {
+      "slug": "john-maisuradze",
+      "kind": "nothing",
+      "why": "the Georgian confessor who died at Betania in 1957: no Wikidata entity under «Иоанн (Майсурадзе)», and route 3's full-text search returns his Betania companions Gabriel Urgebadze and Lazar Abashidze, who have categories, and a figure-skating championship. His own likeness would be a 20th-century photograph and none is on Commons."
+    },
+    {
+      "slug": "artemon-of-seleucia",
+      "kind": "nothing",
+      "why": "all three routes dry: no category built from the folder's names, no Wikidata entity for «Артемон Селевкийский», and route 3's ru.wikipedia full-text returns the «6 апреля» date page and an 18th-c. Hamilton genealogy. The deacon of Seleucia kept 24 March has nothing on Commons."
+    },
+    {
+      "slug": "athanasia-of-antioch",
+      "kind": "nothing",
+      "why": "the folder stores the bare «Афанасия», so route 3's full-text search can only return Athanasius the Great and Afanasy Nikitin the merchant traveller, which is what it did; no Wikidata entity and no category. The bare forename is the reason this one cannot be reached rather than evidence that nothing exists, and it is worth retrying if the folder ever gains a by-named form."
+    },
+    {
+      "slug": "christina-martyr-18-may",
+      "kind": "nothing",
+      "why": "no category, no Wikidata entity, and route 3 on «Христина Лампсакийская» returns nothing at all. She is kept 18 May with Peter and Paul of Lampsacus, whose folders are refused here on the same day for the same reason."
+    },
+    {
+      "slug": "eudocia-4-august",
+      "kind": "nothing",
+      "why": "the folder stores the bare «Евдокия», so route 3 returns the given name, the children of Ivan IV and Eudoxia Lopukhina, Peter I's first wife; no Wikidata entity and no category. Unreachable for want of a by-name rather than demonstrably absent."
+    },
+    {
+      "slug": "eudoxius-of-melitene",
+      "kind": "nothing",
+      "why": "no Wikidata entity under «Евдоксий», and route 3 finds no ru.wikipedia article under the folder's forms. One of the Melitene martyrs of 6 September; nothing on Commons names him apart from the group."
+    },
+    {
+      "slug": "john-psychaites",
+      "kind": "nothing",
+      "why": "no Wikidata entity, and route 3 on «Иоанн Психаит» returns the Byzantine Iconoclasm article and the given-name category, neither with an image of him. The iconodule confessor of the Psycha monastery, kept 7 June, has nothing on Commons."
+    },
+    {
+      "slug": "nicholas-simo",
+      "kind": "nothing",
+      "why": "no Wikidata entity under «Николай (Симо)», and route 3 returns the painter Nikolay Ge, the emperor Nicholas I and the town of Sim in Chelyabinsk Oblast — the search is matching Николай and Сим separately. A 20th-century figure whose likeness would be a photograph, and none is on Commons."
+    },
+    {
+      "slug": "paul-28-june",
+      "kind": "nothing",
+      "why": "the folder stores «Павел Коринфянин» and route 3 therefore returns the Apostle Paul, 1 and 2 Corinthians and their papyri — not this martyr. No Wikidata entity and no category. The Apostle's whole apparatus standing in front of a homonymous martyr is the forename trap in its Russian form."
+    },
+    {
+      "slug": "peter-of-lampsacus",
+      "kind": "nothing",
+      "why": "no Wikidata entity under «Петр Лампсакский», and route 3 returns Aristotle, the Lyceum, the Platonic Academy and the First Council of Nicaea — Lampsacus is matching Anaximenes' and Strato's city, not the martyr. Nothing on Commons."
+    },
+    {
+      "slug": "theodore-companion-of-terentius",
+      "kind": "nothing",
+      "why": "no Wikidata entity under «Феодор Африканский», and route 3 returns the Patriarchal Exarchate of Africa and Theodore II of Alexandria, both modern. One of the forty companions of Terentius kept 10 April; nothing on Commons names him singly. NOTE: this slug is also where m1ru.py crashed with HTTP 414 — see the `_note` on that instrument."
+    },
+    {
+      "slug": "theostichus-of-cyzicus",
+      "kind": "event-or-group",
+      "why": "refused for exactly the reason artemas-of-cyzicus is: he is one of the Nine Martyrs of Cyzicus, route 3 reaches Q4156552 and Category:Nine martyrs of Kizikos, and the plate «икона 08291 9 мучеников» at 1408x1783 matches the Julian 29 April but names the nine as a company. The category's one named single figure is «Далматий Кизический» at 300x407, who is a different one of the nine."
+    },
+    {
+      "slug": "zoticus-20-april",
+      "kind": "namesake",
+      "why": "every Zoticus route 3 reaches is kept on another day: Q3564977 is «Мученики Агафоник, Зотик, Феопрепий, Акиндин», the Nicomedian company of 22 August, and Category:Saints of Nicomedia's «Dasias, Caius and Zoticus (Menologion of Basil II)» at 1949x1294 is the 21 October three. This folder's Zoticus of Nicomedia is the 20 April one, and nothing found is him."
+    },
+    {
+      "slug": "agathodorus-the-martyr-2-february",
+      "kind": "nowhere",
+      "why": "a saint entity was reached and carries no picture at all: Q347811 via wp/el \"Έρμων Ιεροσολύμων\"; Q107803210 via wp/en \"Agathodorus\""
+    },
+    {
+      "slug": "alexander-of-methymna",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "angelis-of-melambes",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "bryaine-the-venerable",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "christea-the-gardener",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "cyriacus-of-eurychou",
+      "kind": "nowhere",
+      "why": "a saint entity was reached and carries no picture at all: Q1148497 via wp/el \"Επίσκοπος Βυζαντίου Κυριακός Α΄\""
+    },
+    {
+      "slug": "eulogia-of-samurcasesti",
+      "kind": "nowhere",
+      "why": "a saint entity was reached and carries no picture at all: Q138042591 via wp/ro \"Evloghia Țârlea\""
+    },
+    {
+      "slug": "gerasimus-of-sourvia",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "hermogenes-of-samos",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "jordan-the-martyr-2-february",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "kale",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "kyros-the-venerable",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "liviu-galaction-munteanu",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "lygeri-of-chios",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "macarius-disciple-of-niphon",
+      "kind": "nowhere",
+      "why": "a saint entity was reached and carries no picture at all: Q96597971 via wp/el \"Νικόλαος ο εν Βουνένοις\""
+    },
+    {
+      "slug": "maxima-wife-of-montanus",
+      "kind": "nowhere",
+      "why": "a saint entity was reached and carries no picture at all: Q1290567 via wp/el \"Μάξιμος Α΄ ο Κυνικός\""
+    },
+    {
+      "slug": "nicander-of-durostorum",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "panagiotis-of-caesarea",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "panegyrius-of-malounta",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "petroniu-of-prodromu",
+      "kind": "nowhere",
+      "why": "a saint entity was reached and carries no picture at all: Q138042612 via wp/ro \"Olimpia Tănase\"; Q4361479 via wp/ro \"Petroniu Tănase\""
+    },
+    {
+      "slug": "rufianus-the-martyr",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "sebastiana-venerable-7-june",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "sosion-of-leucas",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "theodore-of-mytilene",
+      "kind": "nowhere",
+      "why": "a saint entity was reached and carries no picture at all: Q12877966 via wp/el \"Θεόδωρος νεομάρτυρας εκ Μυτιλήνης\""
+    },
+    {
+      "slug": "theosebios-the-arsinoite",
+      "kind": "nowhere",
+      "why": "no wikipedia article on el/ro/ru/sr/bg/en for any stored name form, so no entity and no category"
+    },
+    {
+      "slug": "cyril-of-thessalonica",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q44079 is Cyril of Alexandria; Q440558 is Cyril Lucaris; Q298654 is Cyril of Jerusalem"
+    },
+    {
+      "slug": "euthymius-of-rhodes",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q644403 is Euthymius I of Constantinople; Q51884 is John of Damascus"
+    },
+    {
+      "slug": "hermaeus-companion-of-nicander",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q1376386 is Hermes of Philippopolis"
+    },
+    {
+      "slug": "jeremiah-the-egyptian",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q3190712 is Patriarch Jeremias III of Constantinople; Q2361811 is Jeremias I of Constantinople"
+    },
+    {
+      "slug": "paphnutius-the-egyptian",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q1394174 is Paphnutius of Thebes; Q12757084 is Paphnutius the Ascetic"
+    },
+    {
+      "slug": "paul-companion-of-andrew",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q9200 is Paul the Apostle"
+    },
+    {
+      "slug": "paul-of-jamnia",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q9200 is Paul the Apostle"
+    },
+    {
+      "slug": "seven-virgins-of-gaza",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q2655142 is Nicodemus the Hagiorite"
+    },
+    {
+      "slug": "tounom-the-emir",
+      "kind": "namesake",
+      "why": "the sweep reached pictures of a different man of the name: Q1545017 is Gregentius of Taphar"
+    }
   ]
 }
