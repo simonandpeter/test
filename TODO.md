@@ -1013,3 +1013,55 @@ relics is one day page away from a verdict and is called an open question in his
 note; and `michael-of-edessa`'s row 4 carries a false sentence — that copying a
 venerated row back to edit its prose "is not what `replace_venerated` is
 sanctioned for", which `BRIEF.md` §4 says it is exactly — still in the corpus.
+
+## 20. The Prayer page's asides collapse on a slow phone, and main is red for it
+
+**Found 14 October 2026 and NOT fixed.** `e2e/quality-floor.spec.js`'s *nothing
+shifts as the data arrives: prayer* measures **CLS 0.1799 against a 0.02
+budget**, blaming `aside.hy-side`, on **two consecutive CI attempts of one
+tree** — so it is not the runner's one-casualty-per-run. Deploy is gated on the
+build, so this is what is keeping the site from updating.
+
+**It is not from the corpus work that surfaced it.** Rolling `saints/` back to
+the last green commit reproduces it exactly, so it is latent and older; what
+changed is that a bigger manifest makes CI land in the band where it shows.
+
+**The reproduction, which a desk cannot give you without it:**
+
+```
+npm run build && npm run preview
+node scratchpad/cls-prayer-probe.mjs 1 4 6 10 20
+```
+
+0.0021 at 1x, **0.1811 at 4x, 6x and 10x**, 0.0000 at 20x. The band is the
+whole difficulty: quick enough and the asides fill before anything is painted,
+slow enough and they never fill while anyone is measuring. `npm run test:e2e`
+passes 6 of 6 on this desk.
+
+**What the shift actually is**, from `scratchpad/cls-entries.mjs`, which prints
+each entry with its rectangles: at ~1860 ms both asides go **from a real
+rectangle to `0+0`** — `#hy-sameday` from `699+81` and `#hy-related` from
+`625+76`. They are being **removed**, not grown. That is the fact every fix has
+to answer.
+
+**Three hypotheses ruled out, each by trying it:**
+1. *The headings mount late and push the day aside down.* Writing both `<h2>`s
+   into `views/prayer.js`'s initial markup changed the number by nothing.
+2. *The asides are emptied before being filled.* `card.js` calls
+   `clearAsides(root)` immediately before `fillAsides`, and its own comment
+   rests on an assumption that is false on a slow machine — "`loadDetail`
+   answers from the cache in a microtask and the columns are filled before the
+   frame is painted". Removing that clear changed the number by nothing, so the
+   clear is not the one firing on first load. **Reverted rather than left in.**
+3. *They grow as the payload arrives.* They are empty from the start and drawn
+   once; measured early and settled, both are identical.
+
+**The lead nobody has followed, and it fits `0+0`:** `syncFace` in
+`views/prayer/find.js` coerces `state.layout` to the rows face below 1024 px and
+returns true so the caller redraws — and `drawAsides` reads
+`state?.layout === 'rows'` and draws a different thing for it. If the face is
+decided *after* the first draw, a phone paints the desk face and then loses it.
+On a quick machine both happen before any paint. **The fix would be to settle
+the face before the first draw**, which is a boot-ordering change on a page
+whose rules are binding in `STRUCTURE.md` §4 — and is why it was not attempted
+at the end of a long sitting rather than being guessed at a fourth time.
