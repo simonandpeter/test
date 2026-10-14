@@ -22,6 +22,12 @@
   "types": [
     "apostle"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "paul-the-apostle",
     "john-the-baptist",
