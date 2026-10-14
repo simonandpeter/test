@@ -1,0 +1,47 @@
+[
+ {
+  "slug": "artemas-of-cyzicus",
+  "kind": "event-or-group",
+  "why": "he is one of the Nine Martyrs of Cyzicus and route 3 reaches their category: Category:Nine martyrs of Kizikos holds «Жития Святых (1903-1911) - икона 08291 9 мучеников» at 1408x1783, whose plate code 08291 resolves to the Julian 29 April, this folder's own feast. The plate identity rule needs both halves and only the date half holds — the title names «9 мучеников» and not «Артема», so nothing in the picture is him rather than any of the other eight. The category's one named single figure is «Далматий Кизический», a different one of the nine, at 300x407."
+ },
+ {
+  "slug": "christina-of-persia",
+  "kind": "nothing",
+  "why": "route 1 found no category, route 2 no entity, and route 3's full-text search on «Христина Персидская» returns Christina of Sweden and nothing else. The Persian martyr of 13 March has nothing on Commons under any of the three."
+ },
+ {
+  "slug": "zacharias-son-of-carion",
+  "kind": "nothing",
+  "why": "no category, no Wikidata entity, and route 3 on «Захария Отверстый» returns the 6 April date page, the wolf and the murder of Rasputin — the full-text search is matching on «отверстый» rather than on the saint. Nothing on Commons names the Scetis monk."
+ },
+ {
+  "slug": "euthalia-the-martyr",
+  "kind": "namesake",
+  "why": "«Euthalia» on Wikidata is a genus of nymphalid butterfly and every hit is a species of it, six entities deep; route 3 on «Евфалия Леентинская (Сицилийская)» returns only the 15 March date page. The Sicilian martyr of Lentini has nothing, and the butterflies are what a free-text search would hand a careless sourcer."
+ },
+ {
+  "slug": "thalassius",
+  "kind": "namesake",
+  "why": "«Thalassius» on Wikidata is a genus of fishing spider, whose Commons category holds no image files anyway, and route 3 on «Фалассий Сирийский» returns nothing at all. The Syrian hermit of 22 February has nothing on Commons."
+ },
+ {
+  "slug": "melasippus",
+  "kind": "nothing",
+  "why": "no category, no Wikidata entity, and route 3 on «Меласипп Анкирский» returns only the «20 ноября» date page. He is kept with his wife Casinia and son Antoninus and nothing on Commons names any of the three."
+ },
+ {
+  "slug": "theophilus-the-new",
+  "kind": "nothing",
+  "why": "route 3 on «Феофил Новый, Константинопольский» returns John Chrysostom, Meletius Smotrytsky, the Luís I bridge and the emperor Theophilos with his empress Theodora — the search is matching the name Феофил, not the soldier-martyr. No category and no entity for the admiral martyred under the Arabs, kept 30 January."
+ },
+ {
+  "slug": "taurion",
+  "kind": "namesake",
+  "why": "«Taurion» on Wikidata is a river in France and a bolete; route 3 reports no ru.wikipedia article for «Таврион Амфипольский (Македонский)» at all. He is kept 7 November with Melasippus's company and the Thirty-Three of Melitene and nothing on Commons names him."
+ },
+ {
+  "slug": "john-maisuradze",
+  "kind": "nothing",
+  "why": "the Georgian confessor who died at Betania in 1957: no Wikidata entity under «Иоанн (Майсурадзе)», and route 3's full-text search returns his Betania companions Gabriel Urgebadze and Lazar Abashidze, who have categories, and a figure-skating championship. His own likeness would be a 20th-century photograph and none is on Commons."
+ }
+]

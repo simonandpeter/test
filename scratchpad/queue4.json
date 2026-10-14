@@ -1,14 +1,5 @@
 [
  {
-  "slug": "acacius-the-kausokalyvite",
-  "days": [
-   [
-    "greek",
-    "2026-04-12"
-   ]
-  ]
- },
- {
   "slug": "agathodorus-the-martyr-2-february",
   "days": [
    [
@@ -41,46 +32,6 @@
    [
     "greek",
     "2026-10-28"
-   ]
-  ]
- },
- {
-  "slug": "anthony-the-new-of-veria",
-  "days": [
-   [
-    "greek",
-    "2026-01-17"
-   ]
-  ]
- },
- {
-  "slug": "argyra-of-prusa",
-  "days": [
-   [
-    "greek",
-    "2026-04-05"
-   ]
-  ]
- },
- {
-  "slug": "arsenius-of-elassona",
-  "days": [
-   [
-    "greek",
-    "2026-04-13"
-   ]
-  ]
- },
- {
-  "slug": "artemas-of-cyzicus",
-  "days": [
-   [
-    "greek",
-    "2026-04-28"
-   ],
-   [
-    "russian",
-    "2026-05-12"
    ]
   ]
  },
@@ -130,15 +81,6 @@
   ]
  },
  {
-  "slug": "cedd-the-bishop",
-  "days": [
-   [
-    "greek",
-    "2026-01-07"
-   ]
-  ]
- },
- {
   "slug": "christea-the-gardener",
   "days": [
    [
@@ -153,19 +95,6 @@
    [
     "romanian",
     "2026-05-18"
-   ]
-  ]
- },
- {
-  "slug": "christina-of-persia",
-  "days": [
-   [
-    "romanian",
-    "2026-03-13"
-   ],
-   [
-    "serbian",
-    "2026-03-26"
    ]
   ]
  },
@@ -188,47 +117,11 @@
   ]
  },
  {
-  "slug": "demetrianus-of-tamassos",
-  "days": [
-   [
-    "greek",
-    "2026-01-27"
-   ]
-  ]
- },
- {
-  "slug": "dionysius-the-rhetor",
-  "days": [
-   [
-    "greek",
-    "2026-07-09"
-   ]
-  ]
- },
- {
   "slug": "elias-the-egyptian",
   "days": [
    [
     "russian",
     "2026-03-01"
-   ]
-  ]
- },
- {
-  "slug": "erasmus-of-the-caves",
-  "days": [
-   [
-    "serbian",
-    "2026-03-09"
-   ]
-  ]
- },
- {
-  "slug": "erastus",
-  "days": [
-   [
-    "serbian",
-    "2026-11-23"
    ]
   ]
  },
@@ -256,15 +149,6 @@
    [
     "romanian",
     "2026-12-19"
-   ]
-  ]
- },
- {
-  "slug": "euthalia-the-martyr",
-  "days": [
-   [
-    "serbian",
-    "2026-03-15"
    ]
   ]
  },
@@ -346,15 +230,6 @@
    [
     "romanian",
     "2026-01-07"
-   ]
-  ]
- },
- {
-  "slug": "john-maisuradze",
-  "days": [
-   [
-    "russian",
-    "2026-09-21"
    ]
   ]
  },
@@ -453,38 +328,11 @@
   ]
  },
  {
-  "slug": "melasippus",
-  "days": [
-   [
-    "russian",
-    "2026-11-20"
-   ]
-  ]
- },
- {
-  "slug": "memnon-the-wonderworker",
-  "days": [
-   [
-    "romanian",
-    "2026-04-29"
-   ]
-  ]
- },
- {
   "slug": "nicander-of-durostorum",
   "days": [
    [
     "serbian",
     "2026-06-07"
-   ]
-  ]
- },
- {
-  "slug": "nicephorus-of-antioch",
-  "days": [
-   [
-    "greek",
-    "2026-02-09"
    ]
   ]
  },
@@ -503,15 +351,6 @@
    [
     "greek",
     "2026-06-24"
-   ]
-  ]
- },
- {
-  "slug": "panagis-basias",
-  "days": [
-   [
-    "greek",
-    "2026-06-07"
    ]
   ]
  },
@@ -651,38 +490,11 @@
   ]
  },
  {
-  "slug": "simon-of-simonopetra",
-  "days": [
-   [
-    "greek",
-    "2026-12-28"
-   ]
-  ]
- },
- {
   "slug": "sosion-of-leucas",
   "days": [
    [
     "greek",
     "2026-07-14"
-   ]
-  ]
- },
- {
-  "slug": "taurion",
-  "days": [
-   [
-    "serbian",
-    "2026-11-20"
-   ]
-  ]
- },
- {
-  "slug": "thalassius",
-  "days": [
-   [
-    "serbian",
-    "2026-03-07"
    ]
   ]
  },
@@ -705,29 +517,11 @@
   ]
  },
  {
-  "slug": "theophilus-the-new",
-  "days": [
-   [
-    "greek",
-    "2026-01-30"
-   ]
-  ]
- },
- {
   "slug": "theosebios-the-arsinoite",
   "days": [
    [
     "greek",
     "2026-10-12"
-   ]
-  ]
- },
- {
-  "slug": "theostichus-of-cyzicus",
-  "days": [
-   [
-    "serbian",
-    "2026-05-12"
    ]
   ]
  },
@@ -746,24 +540,6 @@
    [
     "greek",
     "2026-04-18"
-   ]
-  ]
- },
- {
-  "slug": "twenty-thousand-martyrs-of-nicomedia",
-  "days": [
-   [
-    "russian",
-    "2026-01-10"
-   ]
-  ]
- },
- {
-  "slug": "zacharias-son-of-carion",
-  "days": [
-   [
-    "serbian",
-    "2026-04-06"
    ]
   ]
  },
