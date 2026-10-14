@@ -117,7 +117,62 @@ where no icon exists** (author, same day), said so in the draft's `why`.
 **Both passes are in — 145 icons** (Greek `6a095e3f`, Romanian the merge after
 it) — and the four calendars now read:
 
-**47 icons landed 14 October 2026 and the imageless heroes are 138, from 207.**
+**THE COMMONS SEAM IS FINISHED. 54 icons, imageless hero-saints 254 → 110, and
+the 50 that are left want a different source — not a fifth wave.**
+
+Four waves, and the rate per wave tells the story on its own: **11 of 23 (48%),
+16 of 49 (33%), 7 of 36 (19%)** — and within the last wave, per batch, **4/12,
+3/12, 0/12.** It fell to zero.
+
+**The structural reason, which is why this ends rather than pauses.** Of the 85
+unsearched at wave four's start, **only 31 stored a Russian name.** Routes 1 and
+3 need one; for the other 54 route 2 is the only road and it answered for
+exactly one of them, an Englishman. Those 54 are the Cypriot, Athonite, Cretan
+and Romanian local saints and the modern ones. All but five of the reachable 31
+are searched now, and that was the richer half.
+
+Batch three is the clean signal rather than bad luck: **ten of its twelve have
+no Wikidata entity at all**, so route 2 cannot answer and route 3 returns the
+name's famous holder — Aristotle and the Lyceum for Peter of Lampsacus, the
+Apostle Paul and both Corinthian epistles for «Павел Коринфянин», Nicholas I
+and the town of Sim for «Николай (Симо)». The namesake trap at its loudest:
+`euthalia-the-martyr` is a genus of nymphalid butterfly, `thalassius` a genus of
+fishing spider, `taurion` a river in the Creuse and a bolete.
+
+**So the next move on the remaining 50 is a source, not a method**: a diocesan
+or monastic photo archive, a printed menaion's plates, or the author's own
+judgement that a day may lead without a picture. Another Commons pass will not
+move them.
+
+| calendar | 13 Oct | now |
+| --- | --- | --- |
+| Romanian | 35 of 357 | **25** |
+| Greek | 65 of 364 | **47** |
+| Russian | 76 of 357 | **25** |
+| Serbian | 56 of 358 | **24** |
+| distinct hero-saints | 254 | **110** |
+
+**An icon closes more than one day, and that is `pickHero` working** — 18 icons
+cleared 27 saints, 29 cleared 42, 16 cleared 19, 7 cleared 9: the tie is broken
+inside the sung pool, so giving one saint a picture can promote him over a
+different imageless hero and close that day too (the 2026-08-28 rule).
+
+**A FIFTH ROUTE, cheap and written down late: a junk category can carry the
+right subcategory.** `wbsearchentities` on "Erastus" returns a given name and
+four American politicians, but `Category:Erastus (given name)` lists
+`Category:Erastus of Corinth` among its subcats, which is the apostle's own.
+
+**A duplicate folder, found by the sourcing and not by any audit.**
+`erasmus-of-the-caves` and `erasmus-of-the-kyiv-caves` are the same Caves monk
+on the same Julian 24 February — one carries the serbian row and the Prologue's
+«Еразмо», the other the russian row and «Еразм Печерский». Both now carry the
+corpus's smallest icon, the same 450×624 file. By the author's standing rule —
+merge if they are the same — this is a merge, and it is item 13's shape: one
+folder, two rows. **Not done**, because a folder merge unions attestations,
+carries name forms, repoints `related` and deletes a slug, and that is a pass of
+its own rather than a line in an icon wave.
+
+**47 icons had landed by the middle of 14 October 2026 and the imageless heroes were 138, from 207.**
 
 | calendar | 13 Oct | after the plates | after method 1 |
 | --- | --- | --- | --- |
