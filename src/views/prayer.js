@@ -141,14 +141,30 @@ export function render(el, { data, router } = {}) {
     },
   });
 
-  /* And again once the reverse links land, which is what orders the Recorded
-     with column (`lib/prayer-order.js`). The columns are drawn above without
-     them rather than held back for them: the names a hymn's own `related`
-     gives are most of the list and are there from the first paint. */
+  /*
+   * And again once the reverse links land, which is what orders the Recorded
+   * with column (`lib/prayer-order.js`).
+   *
+   * **But never before the saint's own folder has answered**, which is the
+   * whole of TODO 20. `card.js` draws the two columns once, when that folder
+   * answers, because the hymn box beside them fills from the same payload and
+   * grows the card by a screenful — measured at 360 px under a 6x throttle,
+   * `.hy-hymns` goes 0 -> 1,126 px — and on a phone the columns stand *under*
+   * that card. Drawn ahead of it they are carried 1,126 px down the page the
+   * moment the hymns arrive: CLS 0.1811 against a 0.02 budget, blamed on
+   * `aside.hy-side`, which is `quality-floor.spec.js`'s failure.
+   *
+   * Reverse links usually land first, so this redraw is only needed when they
+   * land *after* the folder — and the columns having been drawn is what says
+   * so. Every draw writes an `<h2>` and `clearAsides` empties the box, so a
+   * childless aside means the folder has not answered yet and `fillAsides`
+   * will read these links itself when it does.
+   */
   loadMentions().then((got) => {
     if (!got || state?.el !== el) return;
     const card = state.order[state.at];
-    if (card) drawAsides(el, card);
+    if (!card || !el.querySelector('#hy-related')?.childElementCount) return;
+    drawAsides(el, card);
   });
 
   /*

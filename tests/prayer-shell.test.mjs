@@ -55,10 +55,13 @@ test('Prayer mounts the shell rather than drawing one', () => {
   const code = src('views/prayer/find.js');
   /* `LAYOUTS` joined the three on 2026-10-03 (TODO item 7): the page forces
      the rows face below 1024 px and takes the word for it from the shell
-     rather than writing 'rows' out again. */
+     rather than writing 'rows' out again. `setChoice` joined them on
+     2026-10-14 for the other half of that forcing: the chip's radio and its
+     summary are the shell's to write, and `syncFace` writing `state.layout`
+     without them left the control saying Rows over two columns drawing cards. */
   assert.match(
     code,
-    /import \{ controls, LAYOUTS, syncCalendarFacet, wireControls \} from '\.\.\/index\/controls\.js'/,
+    /import \{ controls, LAYOUTS, setChoice, syncCalendarFacet, wireControls \} from '\.\.\/index\/controls\.js'/,
   );
   // No Sort chip and no Detailed box, said twice because `controls` and
   // `wireControls` are told separately.

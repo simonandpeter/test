@@ -1934,3 +1934,117 @@ test('the icon, the name and the preview all open the saint’s own page', async
   await expect(page).toHaveURL(door);
   await expect(page.locator('h1.saint-name')).not.toHaveText('');
 });
+
+/**
+ * **The two columns do not move when the hymns arrive** (TODO 20).
+ *
+ * The card's hymn box and both asides fill from one fetch of the saint's own
+ * folder, and on a phone the columns stand *under* that card. Measured at
+ * 360 px under a 6x CPU throttle, `.hy-hymns` goes from 0 to over a thousand
+ * pixels — so a column drawn before the hymns is carried a screenful down the
+ * page the moment they land. That was `quality-floor.spec.js`'s *nothing
+ * shifts as the data arrives: prayer* at CLS 0.1811 against a 0.02 budget,
+ * blamed on `aside.hy-side`, red on CI at random: the shift exists only in the
+ * band where the machine is slow enough to paint before the folder answers and
+ * quick enough to answer while anyone is watching, which no unthrottled desk
+ * ever reaches. `views/prayer.js` holds the ordering.
+ *
+ * **The throttle is set before the `goto` and not after it** — the exception to
+ * trap 10, because what is being measured *is* the boot: set it afterwards and
+ * the page has already been painted and filled at full speed. The rate biting
+ * is asserted by the thing it is there to produce, which is the hymn box
+ * arriving after the first paint; 1x on this desk fills it before anything is
+ * painted and the test would then be measuring nothing.
+ */
+test('the asides do not shift when the hymns land: 360 px, throttled', async ({ page, browserName }) => {
+  test.skip(browserName !== 'chromium', 'CDP, and the CPU throttle is Chromium’s');
+  await phone(page);
+  await ready(page);
+  const cdp = await page.context().newCDPSession(page);
+  await page.addInitScript(() => {
+    window.__shift = { total: 0, blame: [] };
+    new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.hadRecentInput) continue;
+        window.__shift.total += entry.value;
+        for (const source of entry.sources ?? []) {
+          const node = source.node;
+          if (!node?.tagName) continue;
+          window.__shift.blame.push(node.id || node.tagName.toLowerCase());
+        }
+      }
+    }).observe({ type: 'layout-shift', buffered: true });
+  });
+  await cdp.send('Emulation.setCPUThrottlingRate', { rate: 6 });
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  /* The hymns are what the columns must not be moved by, so the measurement
+     waits for them rather than for a clock. */
+  await expect(page.locator('.hy-saint .hy-hymns')).not.toBeEmpty({ timeout: 15_000 });
+  await expect(page.locator('#hy-related .index-card, #hy-related .hy-line').first()).toBeVisible();
+
+  const { total, blame } = await page.evaluate(() => window.__shift);
+  expect(blame.filter((who) => who.startsWith('hy-')), 'no aside is moved at all').toEqual([]);
+  expect(total, 'layout shift on the Prayer page as the folder lands').toBeLessThanOrEqual(0.02);
+});
+
+/**
+ * **The two columns come back to the desk's face when the window does.**
+ *
+ * `find.js`'s `syncFace` coerces the face to `rows` below 1024 px, because the
+ * phone draws the row card whatever the chip says. That coercion had no
+ * counterpart: a reader who opened the page on a phone and widened the window,
+ * or who narrowed a desk window and widened it back, stood at a desk with the
+ * phone's rows in two columns `views/prayer/state.js` says are `cards` past
+ * that line — and with the View chip back beside them, offering a choice the
+ * page had already made for them.
+ *
+ * The face a reader chose *themselves* at a desk is a different thing and is
+ * kept, which is the third leg below: the restoration is owed once and spent.
+ */
+test('the asides take the desk face back when the window is widened', async ({ page }) => {
+  const face = () =>
+    page.evaluate(() => {
+      const row = document.querySelector('#hy-sameday .index-card');
+      return row ? (row.classList.contains('is-row') ? 'rows' : 'cards') : 'none';
+    });
+
+  /* A saint the corpus keeps company for, so the column has a row to read the
+     face off — `WITH_SAME_DAY`, and pinned with the field rather than the
+     arrows because the arrows are not drawn below 1024 px. */
+  const pinned = HYMNED[WITH_SAME_DAY];
+  await phone(page);
+  await ready(page);
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await page.waitForSelector('.hy-saint');
+  await type(page, pinned.display_name);
+  await expect(page.locator(`.hy-saint[data-slug="${pinned.slug}"]`)).toBeVisible();
+  await expect(page.locator('#hy-sameday .index-card').first()).toBeVisible();
+
+  await expect.poll(face, { message: 'the phone draws the row card' }).toBe('rows');
+  await desk(page);
+  await expect.poll(face, { message: 'widened: the desk draws its own face' }).toBe('cards');
+  await phone(page);
+  await expect.poll(face, { message: 'narrowed again' }).toBe('rows');
+  await desk(page);
+  await expect.poll(face, { message: 'and back' }).toBe('cards');
+
+  /*
+   * The reader's own choice, through the chip All Saints gives View. The
+   * facets are folded until Advanced is asked for and the chip is a
+   * disclosure over a dressed radio, so the way to it is three presses — the
+   * way a reader takes.
+   */
+  await page.locator('[data-mode-toggle]').click();
+  await page.locator('.index-foot [data-facet="layout"] summary').click();
+  await page
+    .locator('.index-foot label.facet-option')
+    .filter({ has: page.locator('input[value="rows"]') })
+    .click();
+  await expect(page.locator('.index-foot input[name="layout"]:checked')).toHaveValue('rows');
+  await expect.poll(face, { message: 'the chip is obeyed at a desk' }).toBe('rows');
+  await phone(page);
+  await expect.poll(face, { message: 'still rows on the phone' }).toBe('rows');
+  await desk(page);
+  await expect.poll(face, { message: 'and a trip through 360 px does not undo it' }).toBe('rows');
+});
+

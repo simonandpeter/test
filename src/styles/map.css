@@ -214,6 +214,13 @@ input.map-search-input:hover {
   background: var(--field);
 }
 
+.map-search-row.is-empty,
+.map-search-row.is-empty:hover {
+  cursor: default;
+  background: none;
+  color: var(--ink-soft);
+}
+
 .map-search-kind {
   flex: none;
   color: var(--ink-soft);

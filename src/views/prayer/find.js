@@ -1,7 +1,7 @@
 import { formatSubtext } from '../../lib/calendar-page.js';
 import { applyFilters } from '../../lib/index-filters.js';
 import { readerHasFiltered } from '../index/filter.js';
-import { controls, LAYOUTS, syncCalendarFacet, wireControls } from '../index/controls.js';
+import { controls, LAYOUTS, setChoice, syncCalendarFacet, wireControls } from '../index/controls.js';
 import { loadMentions } from '../../lib/manifest.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { goToSlug, refreshEnds, showCard } from './card.js';
@@ -232,11 +232,48 @@ function syncFace(el) {
   const desk = window.matchMedia?.(DESK).matches ?? true;
   const chip = el.querySelector('.index-foot [data-facet="layout"]');
   if (chip) chip.hidden = !desk;
-  if (!desk && state.layout !== LAYOUTS[1]) {
-    state.layout = LAYOUTS[1];
+  if (!desk) {
+    if (state.layout === LAYOUTS[1]) return false;
+    /* What the desk had, so widening the window again puts it back. */
+    state.faceAtDesk = state.layout;
+    setFace(el, LAYOUTS[1]);
     return true;
   }
+  /*
+   * **And the crossing is not one-way** — `state.faceAtDesk`.
+   *
+   * The coercion above had no counterpart, so the chip came back at a desk
+   * offering a choice while the columns were still drawing the phone's rows:
+   * measured at 1024 px either way round, a page opened at 360 px and widened,
+   * and a desk window narrowed and widened back, both stood at 1440 px with
+   * `.index-card.is-row` in two columns that `state.js` says are `cards` past
+   * that line. **The face a reader chose at a desk is kept**, because the owed
+   * face is spent the moment it is in place: nothing is owed after the first
+   * desk draw, so a trip through 360 px and back does not undo the chip.
+   */
+  if (state.faceAtDesk && state.layout !== state.faceAtDesk) {
+    setFace(el, state.faceAtDesk);
+    state.faceAtDesk = null;
+    return true;
+  }
+  state.faceAtDesk = null;
   return false;
+}
+
+/**
+ * The face, written where both readers of it can see it: `state`, which
+ * `asides.js` draws from, and the chip, whose radio and summary
+ * `views/index/controls.js` says may never be set without each other — "the
+ * list was right and the label was lying" is that module's own record of the
+ * failure. The markup is written once, with whatever face the opening width
+ * asked for, so a page opened at 360 px has `rows` ticked and printed; coercing
+ * `state` alone left the chip at a desk saying Rows over two columns drawing
+ * cards, and the reader's press on Rows was then refused as a no-op because
+ * the radio already held it.
+ */
+function setFace(el, face) {
+  state.layout = face;
+  setChoice(el, 'layout', face);
 }
 
 const DESK = '(min-width: 1024px)';

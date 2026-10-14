@@ -21,13 +21,17 @@ import { App } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style } from '@capacitor/status-bar';
 
+import { dismissTarget } from './dismiss-order.js';
+
 /**
  * The status bar's glyphs follow the theme: dark glyphs over gesso, light
  * over bole clay. Read off the same class index.html sets before first paint
  * and theme.js toggles after, so there is one source of truth for "which
  * theme is this" and the bar cannot disagree with the page under it. The
- * bar overlays the page (`overlaysWebView` in capacitor.config.json) and the
- * page keeps its own ground clear of it with `env(safe-area-inset-top)`
+ * bar overlays the page because Android enforces edge-to-edge from API 35 and
+ * this app targets 36, so the plugin's own `overlaysWebView` option would have
+ * no effect and is deliberately absent from capacitor.config.json; the page
+ * keeps its own ground clear of the bar with `env(safe-area-inset-top)`
  * (base.css, `.chrome-bar`), so no background is set here — a painted bar
  * would be a second gesso that drifts the day tokens.css moves.
  */
@@ -53,13 +57,15 @@ export function initNative() {
    * a listener registered the shell hands the press here instead: inside the
    * app's own history it is the browser's back (the router listens for
    * popstate); at the root it leaves the app, the way every other Android app
-   * does. An open chooser panel is closed first, the same as Escape, because
-   * back means "dismiss what is in front of me" before it means "leave".
+   * does. Whatever is in front of the reader is dismissed first, the same as
+   * Escape, because back means "dismiss what is in front of me" before it
+   * means "leave" — `lib/dismiss-order.js` holds the order and the elements
+   * the handlers are actually bound to.
    */
   App.addListener('backButton', ({ canGoBack }) => {
-    const openPanel = document.querySelector('.church-panel:not([hidden])');
-    if (openPanel) {
-      openPanel.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    const open = dismissTarget(document);
+    if (open) {
+      open.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
       return;
     }
     if (canGoBack) history.back();

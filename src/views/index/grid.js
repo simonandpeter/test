@@ -294,7 +294,19 @@ export function paintGrid(matched, { animate }) {
   // nothing places nothing, and the window has to be read from the new empty
   // set rather than from the last one that had cards in it.
   state.positions = state.grid.result.positions;
-  extendGrid(scrollTop());
+  /*
+   * **And the spacer is written even when there is nothing to extend.**
+   * `layout` with `take: 0` over an empty set comes back `complete`, so
+   * `extendGrid` finds nothing to lay out, returns false and never reaches
+   * `commitGrid` — leaving `.grid-inner` at the height of whatever the last
+   * non-empty set needed. A query matching nobody then left the page 569,000 px
+   * tall with no cards in it, and `[data-empty]`, which sits *after* the grid,
+   * that far down: the reader was told nothing at all, because the one line
+   * saying so was below half a million pixels of blank. Found 2026-10-14; the
+   * test is `e2e/index-grid.spec.js`'s *a query matching nobody collapses the
+   * grid's spacer*.
+   */
+  if (!extendGrid(scrollTop())) commitGrid(state.grid.result);
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   /*

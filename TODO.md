@@ -1076,62 +1076,91 @@ note; and `michael-of-edessa`'s row 4 carries a false sentence — that copying 
 venerated row back to edit its prose "is not what `replace_venerated` is
 sanctioned for", which `BRIEF.md` §4 says it is exactly — still in the corpus.
 
-## 20. The Prayer page's asides collapse on a slow phone, and main is red for it
+## 20. The Prayer page's asides shift as the hymns land — done
 
-**Found 14 October 2026 and NOT fixed.** `e2e/quality-floor.spec.js`'s *nothing
-shifts as the data arrives: prayer* measures **CLS 0.1799 against a 0.02
-budget**, blaming `aside.hy-side`.
+**Fixed 14 October 2026**, and the fix is proven both ways: `node
+scratchpad/cls-prayer-probe.mjs 1 4 6 10 20` reads **0.0000 at 1x, 4x, 6x and
+10x** where it read 0.1811 at three of those rates, and goes red again when the
+change is backed out. 0.0021 remains at 20x, from `a.site-name`,
+`.chrome-corner` and `.chrome-calendar` — shared chrome, inside the 0.02 budget,
+and not this item.
 
-**It is load-dependent, and two consecutive failures were not enough to say
-otherwise.** It failed on both attempts of one tree, which was read here as
-proof that the runner was not the variable — and then the next tree, differing
-only by this file and three probe scripts, went green. So CI catches it or not
-depending on where the runner's speed falls, and the cost is a red run at
-random rather than a blocked deploy.
+**The cause.** `views/prayer.js` drew both asides from
+`loadMentions().then(drawAsides)`, which answers *before* the saint's folder
+does — measured at 1,590 and 1,607 ms against the hymn box's 1,883 ms at 6x. The
+hymn box then grows from 0 to 1,126 px underneath them and carries `#hy-related`
+**1,127 px down**. `card.js` already intended the columns to be drawn once, when
+the folder answers, for exactly this reason; the mentions redraw was breaking
+that intent. The redraw now returns unless the columns are already drawn.
 
-**The defect itself is not in doubt**: it reproduces deterministically under
-throttle, below.
+**Two things this item asserted were wrong, and both cost a reading.**
 
-**It is not from the corpus work that surfaced it.** Rolling `saints/` back to
-the last green commit reproduces it exactly, so it is latent and older; what
-changed is that a bigger manifest makes CI land in the band where it shows.
+- **The `0+0` was never a removal.** `scratchpad/cls-entries.mjs` prints
+  `currentRect`, which the API **clips to the viewport**: a box carried below
+  the fold reports `0+0` while sitting there at full height. Per-frame geometry
+  is what showed the 1,127 px of travel. "They are being removed, not grown"
+  was read off an instrument that cannot tell the difference.
+- **`syncFace` cannot have been the lead.** `state.js`'s `openingLayout()`
+  already returns the rows face below 1024 px, so the coercion is a no-op at
+  360 px and fires no redraw at all. The lead was written from reading the
+  function and not from reading what called it.
 
-**The reproduction, which a desk cannot give you without it:**
+**Two defects found beside it, both fixed and tested.** `syncFace`'s coercion
+was one-way, so a reader who opened the page at 360 px and widened the window —
+or narrowed a desk window and widened it back — was left with the phone's row
+cards in the desk's two columns, against `state.js`'s own rule. And the View
+chip then both lied and went dead: its summary read *Rows* over columns drawing
+cards, and pressing Rows was refused as a no-op because the radio already held
+it. `state.faceAtDesk` answers the first; `setFace`, writing the radio and the
+summary through the shell's `setChoice`, answers the second — which is the rule
+`controls.js`'s own comment states ("the list was right and the label was
+lying").
 
-```
-npm run build && npm run preview
-node scratchpad/cls-prayer-probe.mjs 1 4 6 10 20
-```
+**Left open, and small**: `find.js`'s older prose says the chip is "removed
+rather than hidden" where the code sets `hidden`. Same effect, wrong word.
 
-0.0021 at 1x, **0.1811 at 4x, 6x and 10x**, 0.0000 at 20x. The band is the
-whole difficulty: quick enough and the asides fill before anything is painted,
-slow enough and they never fill while anyone is measuring. `npm run test:e2e`
-passes 6 of 6 on this desk.
+## 21. The overnight hunt of 14 October — what it left
 
-**What the shift actually is**, from `scratchpad/cls-entries.mjs`, which prints
-each entry with its rectangles: at ~1860 ms both asides go **from a real
-rectangle to `0+0`** — `#hy-sameday` from `699+81` and `#hy-related` from
-`625+76`. They are being **removed**, not grown. That is the fact every fix has
-to answer.
+Four agents were sent at Daily, All Saints, Saint+Prayer and Map+chrome+shell
+with one instruction: break it. **Every page came back clean on consoles,
+404s and horizontal overflow** in every language, width, theme and church they
+could reach — the defects below are all structural, and none of them is
+something a reader would have reported as an error.
 
-**Three hypotheses ruled out, each by trying it:**
-1. *The headings mount late and push the day aside down.* Writing both `<h2>`s
-   into `views/prayer.js`'s initial markup changed the number by nothing.
-2. *The asides are emptied before being filled.* `card.js` calls
-   `clearAsides(root)` immediately before `fillAsides`, and its own comment
-   rests on an assumption that is false on a slow machine — "`loadDetail`
-   answers from the cache in a microtask and the columns are filled before the
-   frame is painted". Removing that clear changed the number by nothing, so the
-   clear is not the one firing on first load. **Reverted rather than left in.**
-3. *They grow as the payload arrives.* They are empty from the start and drawn
-   once; measured early and settled, both are identical.
+Fixed and tested: the first-century years (`views/daily/format.js` —
+`Date.UTC(99, …)` is 1999, so `/calendar/0099-01-01` printed a heading 1,900
+years from the register beside it); the empty grid's spacer (**569,395 px tall
+with no cards in it**, and `[data-empty]` 568,856 px below the fold, which the
+two existing tests missed because `toBeVisible()` passes on a note half a
+million pixels down); the sticky bar's `rootMargin`, built once and carried
+across a resize; the doubled slash in a path; the map's search answering a
+no-match query; and the Android back button, which dismissed only the chooser
+and now dismisses whatever is actually in front of the reader
+(`lib/dismiss-order.js`, pure so it can be tested without a Capacitor bridge).
 
-**The lead nobody has followed, and it fits `0+0`:** `syncFace` in
-`views/prayer/find.js` coerces `state.layout` to the rows face below 1024 px and
-returns true so the caller redraws — and `drawAsides` reads
-`state?.layout === 'rows'` and draws a different thing for it. If the face is
-decided *after* the first draw, a phone paints the desk face and then loses it.
-On a quick machine both happen before any paint. **The fix would be to settle
-the face before the first draw**, which is a boot-ordering change on a page
-whose rules are binding in `STRUCTURE.md` §4 — and is why it was not attempted
-at the end of a long sitting rather than being guessed at a fourth time.
+**Three author decisions, none to be guessed:**
+
+1. **The count asserts a number for a query it has not answered.** At 6x and
+   20x throttle, typing `Ștefan` reads *6799 saints match* for ~6 s before
+   settling to 13 — `filter.js` passes `matchesQuery: null` while the index is
+   still building, and `search.js` documents that as honest degradation. It is
+   closer to the Errors rule's "a failure may degrade the page, never fake it"
+   than that comment allows.
+2. **An unparseable date silently shows today**, with the bad URL left in the
+   bar: `/calendar/2026-13-45`, `/calendar/not-a-date`, `/calendar/2026-02-30`
+   all render today. Deliberate-looking, and against the same rule.
+3. **`/saints/Aaron` answers "No such saint"** where the `aaron` folder exists;
+   the slug lookup is case-exact. It degrades honestly, so it is a ruling
+   rather than a defect.
+
+**Reported and not acted on, because they are the author's settled ground:** at
+360 px the tab order runs wordmark → six foot-nav links → header buttons →
+content, so the page's own content is reached after the whole foot bar; and four
+chrome controls are under 44 px (`#church-open` 80x29, `#lang-open` 53x29,
+`#theme-toggle` 32x32, `a.site-name` 138x14), which `base.css` already argues
+for.
+
+**What nobody could check**: the shells' first Gradle and Xcode builds, whether
+the insets land on a notched device, the splash's hide timing, and the back
+button's real behaviour — all of which want the SDKs. The dismissal order is
+unit-tested; the dispatch into a live bridge is not.

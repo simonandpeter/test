@@ -3105,3 +3105,17 @@ test('the theme crosses in one movement: nothing snaps and nothing lags, on ever
     expect(seen.late, `${route} leaves a colour behind`).toEqual([]);
   }
 });
+
+test('a doubled slash in the path still finds the route', async ({ page }) => {
+  // `/calendar//2026-01-30` matched no pattern and the reader got the
+  // not-found page for a day that exists. A doubled slash is a typo, not a
+  // route, so resolve() collapses runs of them (lib/router.js).
+  await page.goto('/', { waitUntil: 'networkidle' });
+  const day = await aDayThatIsNotToday(page);
+  await page.goto(day, { waitUntil: 'networkidle' });
+  const heading = await page.locator('.cal-date').textContent();
+
+  await page.goto(day.replace('/calendar/', '/calendar//'), { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal').first()).toBeVisible();
+  expect(await page.locator('.cal-date').textContent()).toBe(heading);
+});

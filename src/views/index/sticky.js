@@ -28,19 +28,55 @@ export function wireSticky() {
   const query = el.querySelector('[data-query]');
   if (!bar || !sentinel || !query) return;
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      const stuck = !entry.isIntersecting;
-      bar.classList.toggle('is-stuck', stuck);
-      // Coming unstuck ends the question: the filters are simply on the page
-      // again, and leaving the flag on would fold them away at the top.
-      if (!stuck) bar.classList.remove('is-filters-open');
-    },
+  const judge = ([entry]) => {
+    const stuck = !entry.isIntersecting;
+    bar.classList.toggle('is-stuck', stuck);
+    // Coming unstuck ends the question: the filters are simply on the page
+    // again, and leaving the flag on would fold them away at the top.
+    if (!stuck) bar.classList.remove('is-filters-open');
+  };
+
+  /*
+   * **And rebuilt whenever that height changes** (2026-10-14).
+   *
+   * `rootMargin` is a string handed to the observer once; it is not a live
+   * reading of `--chrome-h`, and that property is exactly the one main.js has
+   * a ResizeObserver on precisely *because* it moves — the narrow header is
+   * two rows where the wide one is one. An observer built at 1440 px and
+   * carried to 360 px judged the sentinel against 53 px while the header was
+   * 41, so the bar took its stuck dress 11.6 px before it was under anything;
+   * the other direction is the worse one, where the block slides a header's
+   * height under the chrome still dressed as part of the page. Measured by
+   * resizing a live page, not inferred.
+   *
+   * A plain `resize` listener would miss the two other things that move the
+   * header — the language pack's own widths and an opened chooser — so this
+   * watches the bar main.js measures. Its observer is registered during boot
+   * and therefore delivers first, so `--chrome-h` is already the new value
+   * when this runs.
+   */
+  let observer = null;
+  let margin = null;
+  const aim = () => {
+    const next = chromeHeight();
+    if (next === margin && observer) return;
+    margin = next;
+    observer?.disconnect();
     // The sentinel is judged against the line the bar sticks to, not the top
     // of the window, or the bar would be called stuck a header's height early.
-    { rootMargin: `-${chromeHeight()}px 0px 0px 0px`, threshold: 0 },
-  );
-  observer.observe(sentinel);
+    observer = new IntersectionObserver(judge, {
+      rootMargin: `-${next}px 0px 0px 0px`,
+      threshold: 0,
+    });
+    observer.observe(sentinel);
+  };
+  aim();
+  const chrome = document.querySelector('.chrome-bar');
+  const watcher = chrome && typeof ResizeObserver === 'function' ? new ResizeObserver(aim) : null;
+  watcher?.observe(chrome);
+  // The fallback for a browser without ResizeObserver, and for a height that
+  // moves without the bar's own box moving with it.
+  window.addEventListener('resize', aim);
 
   let openedY = 0;
   const open = () => {
@@ -82,7 +118,9 @@ export function wireSticky() {
   window.addEventListener('scroll', onScroll, { passive: true });
 
   state.cleanups.push(() => {
-    observer.disconnect();
+    observer?.disconnect();
+    watcher?.disconnect();
+    window.removeEventListener('resize', aim);
     query.removeEventListener('focus', open);
     query.removeEventListener('click', open);
     window.removeEventListener('wheel', close);

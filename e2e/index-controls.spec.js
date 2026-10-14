@@ -1806,3 +1806,71 @@ test('the Index opens on every calendar, and says its total in a quieter ink', a
   expect(inks.text).toBe(`/${CORPUS}`);
   expect(inks.dim, 'the denominator is set in the line own ink').not.toBe(inks.line);
 });
+
+/**
+ * The sticky bar still knows the chrome's height after a resize.
+ *
+ * Found 2026-10-14. `wireSticky` built its IntersectionObserver with
+ * `rootMargin: -<--chrome-h>px` once and never again, and `--chrome-h` is the
+ * one number on the page that main.js keeps a ResizeObserver on *because* it
+ * moves: the narrow header is two rows where the wide one is one, 41 px against
+ * 53. A page wired at 1440 and carried to 360 therefore judged its sentinel
+ * against a line 12 px too low and took the stuck dress 11.6 px early; carried
+ * the other way it keeps the page dress while the block slides under the
+ * header.
+ *
+ * **Measured as slack, not as a flag.** The question is not whether `is-stuck`
+ * ever turns on — it does either way, which is why nothing caught this — but
+ * *where*: the sentinel's own top at the moment it flips, against the chrome's
+ * published height. An honest observer flips with the two within a pixel or
+ * two, and the stale one is out by the difference between the headers. Both
+ * directions are walked, because each stale margin errs the opposite way.
+ */
+test('the sticky bar re-aims at the chrome when the window changes shape', async ({ page }) => {
+  await searchMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  // Where `is-stuck` turns on, and what the sentinel's top was then. Stepped
+  // rather than jumped: the flip is an observer's callback, and the reading has
+  // to be the one taken on the step that changed.
+  const flip = async () => {
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(80);
+    let was = null;
+    for (let y = 0; y <= 300; y += 2) {
+      await page.evaluate((to) => window.scrollTo(0, to), y);
+      await page.waitForTimeout(30);
+      const now = await page.evaluate(() => {
+        const bar = document.querySelector('[data-index-sticky]');
+        const sentinel = document.querySelector('[data-sticky-sentinel]');
+        const chrome = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--chrome-h')) || 0;
+        return {
+          stuck: bar.classList.contains('is-stuck'),
+          slack: sentinel.getBoundingClientRect().top - chrome,
+          chrome,
+        };
+      });
+      if (was !== null && now.stuck !== was) return now;
+      was = now.stuck;
+    }
+    return null;
+  };
+
+  for (const [width, height] of [
+    [360, 780],
+    [1280, 900],
+    [360, 780],
+  ]) {
+    await page.setViewportSize({ width, height });
+    // The header has to have finished changing shape before the sentinel is
+    // walked past it, or this measures the resize and not the aim.
+    await page.waitForTimeout(500);
+    const at = await flip();
+    expect(at, `the bar never took its stuck dress at ${width} px`).not.toBeNull();
+    expect(
+      Math.abs(at.slack),
+      `at ${width} px the bar flipped with the sentinel ${at.slack.toFixed(1)}px from a ${at.chrome}px chrome`,
+    ).toBeLessThan(5);
+  }
+});

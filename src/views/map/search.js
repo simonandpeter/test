@@ -104,11 +104,24 @@ export function wireSearch(el, canvas, withPlace, setView) {
 
   const open = () => {
     rows = searchMatches(input.value, withPlace, PLACES);
+    const M = STRINGS.map;
     if (!rows.length) {
-      close();
+      // A query that matched nothing says so, rather than closing the list and
+      // leaving the reader to wonder whether the search ran at all — the
+      // Errors rule in CLAUDE.md, and the map is the one page where a silent
+      // control is invisible because the canvas tells a screen reader nothing.
+      if (!input.value.trim()) {
+        close();
+        return;
+      }
+      list.innerHTML = `<li class="map-search-row is-empty utility" aria-disabled="true">${esc(M.searchNone)}</li>`;
+      list.hidden = false;
+      input.setAttribute('aria-expanded', 'true');
+      input.removeAttribute('aria-activedescendant');
+      active = -1;
+      announce(el, M.searchNone);
       return;
     }
-    const M = STRINGS.map;
     list.innerHTML = rows
       .map(
         (row, i) =>
@@ -162,6 +175,9 @@ export function wireSearch(el, canvas, withPlace, setView) {
         return;
       }
       e.preventDefault();
+      // The no-match row is not a row: arrowing onto it would highlight it and
+      // point `aria-activedescendant` at an id it does not carry.
+      if (!rows.length) return;
       active += e.key === 'ArrowDown' ? 1 : -1;
       // Wraps both ways, and from the "nothing chosen yet" -1 an ArrowUp
       // lands on the last row rather than on nothing.

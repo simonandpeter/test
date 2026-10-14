@@ -37,7 +37,9 @@ export function createRouter(routes, onNavigate) {
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
   const resolve = (pathname) => {
-    let path = decodeURIComponent(pathname);
+    // A doubled slash is a typo, not a route: `/calendar//2026-01-30` matched
+    // no pattern and the reader got the not-found page for a day that exists.
+    let path = decodeURIComponent(pathname).replace(/\/{2,}/g, '/');
     if (BASE && path.startsWith(BASE)) path = path.slice(BASE.length);
     if (!path.startsWith('/')) path = '/' + path;
     for (const route of table) {

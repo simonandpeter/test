@@ -83,9 +83,10 @@ self.addEventListener('install', (e) => {
    *
    * The asset names are hashed, so they are parsed out of the shell itself
    * rather than kept as a list a build step must regenerate: everything the
-   * page names under assets/ - the entry script, the stylesheet, the
-   * modulepreloaded chunks, the font preloads - is exactly the set the shell
-   * cannot boot without.
+   * page names under assets/ - today the entry script, the stylesheet and the
+   * two font preloads - is exactly the set the shell cannot boot without. A
+   * lazily imported view is not among them, which is what `loading.viewFailed`
+   * is for: Map's chunk is fetched the first time a reader goes there.
    */
   e.waitUntil(
     (async () => {

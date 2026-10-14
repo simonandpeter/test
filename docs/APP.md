@@ -61,7 +61,8 @@ no browser has, so the web bundle's first paint carries none of it:
 And one thing in CSS: the page runs under the status bar and the home
 indicator (`viewport-fit=cover`, which both shells honour), so `.chrome-bar`
 wears `env(safe-area-inset-top)` as padding, `main.chrome` and the map's
-timeline wear the bottom inset, and the map's stage subtracts the top one
+timeline wear the bottom inset, and the map's route subtracts the top one from
+`main.chrome` (`html[data-route='map']`, not `.map-stage`)
 (base.css, map.css). In a browser every one of those is `0px`.
 
 ## Commands

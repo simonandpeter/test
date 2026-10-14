@@ -3652,3 +3652,24 @@ test('clicking a blob centres the picture on it smoothly, the way a rail does', 
   // No saint was selected — a blob is a grouping of several, not one of them.
   expect(await canvas.getAttribute('data-selected')).toBe('');
 });
+
+test('a query that matches nothing says so instead of closing the list', async ({ page }) => {
+  // CLAUDE.md's Errors rule: a failure degrades the page, never fakes it. The
+  // list used to close, which is what it does when nothing has been typed, so
+  // a reader could not tell a search with no answer from a search that had not
+  // run — and on this page the canvas tells a screen reader nothing at all.
+  await openMap(page);
+  await searchBox(page).fill('zzzzqqq');
+  const empty = page.locator('.map-search-row.is-empty');
+  await expect(empty).toBeVisible();
+  await expect(searchBox(page)).toHaveAttribute('aria-expanded', 'true');
+
+  // It is not a row: arrowing must not highlight it or point
+  // aria-activedescendant at an id it does not carry.
+  await searchBox(page).press('ArrowDown');
+  await expect(empty).not.toHaveClass(/is-active/);
+  await expect(searchBox(page)).not.toHaveAttribute('aria-activedescendant', /./);
+
+  await searchBox(page).fill('');
+  await expect(page.locator('[data-search-list]')).toBeHidden();
+});

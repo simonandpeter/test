@@ -56,6 +56,16 @@ import { LAYOUTS } from '../index/controls.js';
  *              answering no longer exists there. Below 1024 px the mat is still
  *              drawn and the reading still holds, so the phone still opens on
  *              the names.
+ *   faceAtDesk the face to put back when the window is wide again, or null when
+ *              there is nothing owed. `find.js`'s `syncFace` is its only
+ *              reader and writer: it coerces `layout` to `rows` below 1024 px,
+ *              and without this the coercion was one-way — a reader who opened
+ *              the page on a phone and then widened the window, or who
+ *              narrowed a desk window and widened it back, was left with the
+ *              phone's rows in the desk's two columns, against this file's own
+ *              rule two paragraphs up. It opens holding the desk default and
+ *              is spent the moment that face is in place, so a face the reader
+ *              chose themselves at a desk survives a trip through 360 px.
  *   search     the MiniSearch index, or null until it has been built
  *   generation bumped on every step, so an answer that arrives after the
  *              reader has moved on knows it is stale and says nothing
@@ -89,6 +99,7 @@ export function open(next) {
     detail: null,
     filters: { ...EMPTY_FILTERS },
     layout: openingLayout(),
+    faceAtDesk: LAYOUTS[0],
     advanced: false,
     search: null,
     generation: 0,

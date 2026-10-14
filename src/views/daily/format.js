@@ -58,7 +58,7 @@ export const weekdayFmt = (d) => formatDate({ weekday: 'short', timeZone: 'UTC' 
  */
 export const reckonedDate = (iso, calendar, options) => {
   const named = dateIn(calendar, iso);
-  const asIf = new Date(Date.UTC(named.year, named.month - 1, named.day));
+  const asIf = utcYmd(named.year, named.month, named.day);
   const weekday = formatDateParts(options, utc(iso)).find((p) => p.type === 'weekday')?.value;
   return formatDateParts(options, asIf)
     .map((part) => (part.type === 'weekday' && weekday ? weekday : part.value))
@@ -133,9 +133,32 @@ export const monthTagFmt = (d) => formatDate({ month: 'short', timeZone: 'UTC' }
 export const monthLongFmt = (d) =>
   formatDate({ month: 'long', year: 'numeric', timeZone: 'UTC' }, d);
 
+/**
+ * A `Date` at UTC midnight on (year, month, day) — **for any year, including
+ * the first century.**
+ *
+ * `Date.UTC` maps a year of 0–99 onto 1900–1999, so `Date.UTC(99, 0, 1)` is 1
+ * January **1999**. Every date on this page goes through here, so a reader who
+ * asked for `/calendar/0099-01-01` was shown "3 Jan 1999" in the heading while
+ * the register, the fast and the paschal cycle beside it were all computed for
+ * the year 99: one page naming two dates 1,900 years apart, with nothing
+ * failing. The year is therefore written with `setUTCFullYear`, which has no
+ * such remapping.
+ *
+ * The seed year is 2000 rather than the real one because it is a leap year, so
+ * a 29 February survives the construction and is still 29 February after the
+ * year is written. (A 29 February in a year that has none cannot arrive —
+ * `parseIso` validates the date first.)
+ */
+export const utcYmd = (year, month, day) => {
+  const d = new Date(Date.UTC(2000, month - 1, day));
+  d.setUTCFullYear(year);
+  return d;
+};
+
 export const utc = (iso) => {
   const d = parseIso(iso);
-  return new Date(Date.UTC(d.year, d.month - 1, d.day));
+  return utcYmd(d.year, d.month, d.day);
 };
 
 /**

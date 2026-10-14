@@ -2063,3 +2063,57 @@ test('a row draws its thumbnail from a card derivative, never from the original'
   }
   await ctx.close();
 });
+
+/**
+ * A query matching nobody collapses the grid's spacer.
+ *
+ * Found 2026-10-14. `paintGrid` rebuilds `state.grid` with `take: 0` and then
+ * lets `extendGrid` write the spacer's height; over an empty set that first
+ * layout already reports itself `complete`, so the extension had nothing to do,
+ * returned false and never committed — and `.grid-inner` kept the height of the
+ * last set that *did* have cards. On a fresh page that is the whole corpus:
+ * 569,000 px of blank scroll with no cards in it, and the one line that says
+ * nothing matched sits *after* the grid in the document, so it was that far
+ * down too.
+ *
+ * **Asserted on two independent things** (trap 14): the spacer's own height,
+ * which is the mechanism, and where `[data-empty]` lands, which is what the
+ * reader meets. `toBeVisible` alone is no good here — the note has a box and is
+ * not hidden, it is simply half a million pixels below the fold, and that is
+ * exactly what the two tests already standing on `[data-empty]` were passing
+ * against.
+ */
+test('a query matching nobody collapses the grid\u2019s spacer', async ({ page }) => {
+  await searchMode(page);
+  await ready(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  // The premise: the page is showing the corpus, so the spacer is tall. Without
+  // this the test passes on a page that never laid anything out.
+  await expect
+    .poll(async () => page.locator('[data-grid-inner]').evaluate((el) => el.getBoundingClientRect().height), {
+      timeout: 15000,
+      message: 'the grid never grew a spacer to collapse',
+    })
+    .toBeGreaterThan(5000);
+
+  await page.locator('[data-query]').fill('zzzznotasaint');
+  await expect(page.locator('[data-count]')).toHaveText('0');
+  await expect(page.locator('.index-card:not(.leaving)')).toHaveCount(0);
+
+  await expect
+    .poll(async () => page.locator('[data-grid-inner]').evaluate((el) => el.getBoundingClientRect().height), {
+      timeout: 5000,
+      message: 'the spacer still reserves room for cards that are not there',
+    })
+    .toBeLessThan(40);
+
+  const note = await page.locator('[data-empty]').evaluate((el) => {
+    const r = el.getBoundingClientRect();
+    return { top: r.top, bottom: r.bottom, viewport: window.innerHeight, scrollY: window.scrollY };
+  });
+  expect(note.scrollY, 'the page scrolled away from the top on its own').toBe(0);
+  expect(
+    note.bottom,
+    `"none match" sits ${Math.round(note.top)}px down, past a ${note.viewport}px window`,
+  ).toBeLessThan(note.viewport);
+});
