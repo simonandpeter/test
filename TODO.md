@@ -557,6 +557,39 @@ domain, the Vatican manuscript — is gold-ground colour at 1084x747. Both were
 available the whole time. The sourcing script took the first identifiable file
 and stopped, because that is all it was asked for.
 
+**The worklist now exists, and the item's premise has changed under it**
+(measured 14 October 2026, `scratchpad/icon-quality.py`, 503 icons). The item
+was written about engravings "thresholded to pure black and white". **There are
+none left: zero icons have three tones or fewer.** Dionysius the Areopagite was
+the case and Dionysius is done.
+
+What the corpus actually holds now:
+
+| | icons |
+| --- | --- |
+| bichrome, 3 tones or fewer | **0** |
+| near-greyscale (mean saturation < 0.06) | **151** |
+| narrower than 700 px against a 1000 px hero slot | **229** |
+| a strip, under 1:2 | 141 |
+
+**Width is the live axis and tone is not.** `make_thumbs.py` never upscales, so
+229 icons paint at their native width inside the hero's own slot. The 18 worst
+by every measure are the Menaion Reader plate series — roughly 550×1700,
+honestly greyscale, presence rather than quality.
+
+**And the aspect figure is not the defect it looks like.** `lib/hero-crop.js`
+exists for exactly this: `MIN_HERO_RATIO` is 1:1.6 and a taller image is cropped
+favouring the TOP edge, by the author's own instruction of 2026-09-01. On a
+full-length standing figure that is the face, so a 1:3 plate is what the crop
+rule was written for rather than a defect it reveals. **Reasoned from the rule,
+not measured on a page** — somebody should look at one.
+
+**Two questions for the author before a re-sourcing wave, because the answers
+change what the wave is:** is a greyscale plate worth replacing with a colour
+miniature where one exists (18 more plates were accepted on 14 October, so the
+answer may be no), and is a 560 px icon in a 1000 px slot worth replacing at all
+given that nothing upscales and the alternative may not exist?
+
 So this pass is a re-sourcing, not a filling:
 
 - **Rank what is already held.** Colour against bichrome, pixel dimensions
