@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "arsenius-bishop-of-tver",
+    "file": "File:St. Arseni of the Tver.jpg",
+    "why": "Found by reading the Commons category off Wikidata — Q4069993, «Arsenius of Tver» — which gives `Category:Arsenius of Tver`. The file's title carries the see, «St. Arseni of the Tver», which is this folder's own stored Russian form «Арсений Тверской» and its cited line «Свт. Арсения, еп. Тверского (1409)», kept 2 March with the translation of his relics on 6 July. The same category holds the Menaion Reader plate «икона 07022 Арсений» — church-month 07 = March, day 2 — which corroborates the day independently; the named file is taken over it because it is 2988x3543 against the plate's 624, and because the plate's title is a bare «Арсений». NOT Arsenius of Serbia, Arsenius the Great or Arsenius of Elassona, none of which carries Tver."
+  },
+  {
+    "slug": "erasmus-of-the-kyiv-caves",
+    "file": "File:Saint Erasmus of Kyiv Caves.jpg",
+    "why": "Found as the P18 claim of Wikidata Q2072224, «Еразм Печерский» — this folder's own stored Russian form exactly, the monk of the Caves kept 24 February in the Russian calendar. The entity carries no Commons category at all, so the file is the only thing there is. 450x624, which is on the floor rather than over it: `make_thumbs.py` caps the long edge at 560 and never upscales, so a 624px long edge clears both card derivatives, but this is the smallest icon in the batch and a better one should replace it if §15's pass finds one. There is one Erasmus of the Kyiv Caves and the title names him."
+  },
+  {
+    "slug": "macarius-of-zheltovodsk",
+    "file": "File:Venerable Macarius of Unzhensky and Zheltovodsky.jpg",
+    "why": "Found by listing `Category:Macarius of Unzha in icons`, a subcategory of the saint's own Commons category — a title no guess from this folder's names reaches, since Commons files him under the Unzha foundation and the corpus under the Zheltovodsk one. The file's title carries BOTH by-names, «Macarius of Unzhensky and Zheltovodsky», which is this folder's own stored Russian form «Макарий Желтоводский, Унженский» exactly, and its cited line «Прп. Макария Желтоводского, Унженского (1444)», kept 25 July in the Russian and Greek calendars. 1813x2606, single figure. NOT Macarius the Great of Egypt nor Macarius of Kalyazin."
+  },
+  {
+    "slug": "john-of-suzdal",
+    "file": "File:St. John, Bishop of Suzdal.jpg",
+    "why": "Reached through the Russian Wikipedia rather than Wikidata's own label search, which misses him: the article «Иоанн (епископ Суздальский)» carries Q4202450, whose P373 is `Category:Ioann of Suzdal`. The file names the folder's own man and office together — «St. John, Bishop of Suzdal» — matching its stored Russian form «Иоанн Суздальский и Нижегородский», its `hierarch` and `bishop` types and its cited line «Свт. Иоанна, еп. Суздальского (1373)», kept 15 October. The category holds only two files and the other, a Chirikov icon, is 586px wide. 1194x2641."
+  },
+  {
+    "slug": "theodore-of-rostov-and-suzdal",
+    "file": "File:St. Fedor, Bishop of Suzdal.jpg",
+    "why": "Reached through the Russian Wikipedia: «Феодор I (епископ Ростовский)» carries Q4482715, whose P18 this is. **The name is shared and the folder's own types straddle both claimants, so the day is what settles it.** There are two Theodores of Rostov — the first bishop, c.1023, kept 8 June, and the venerable Theodore who founded Borisoglebsky with Paul, kept 22 October. This folder's attestations are 8 June in both the Russian and Greek calendars, its Russian line reads «Свт. Феодора, еп. Суздальского (ок. 1023)» and its Greek «Όσιος Θεόδωρος Επίσκοπος Ροστώφ και Σούζνταλ», so it is the bishop; the `venerable` type is the Greek Όσιος and not a second man. The file names the bishop of Suzdal, and the 300x300 icon of «Фёдор и Павел Ростовские» — the other Theodore, with Paul — is explicitly NOT taken. 1282x2667."
+  },
+  {
+    "slug": "basil-of-mangazeya",
+    "file": "File:Basil of Caesarea and Basil of Mangazeya.jpg",
+    "why": "Found as the P18 claim of Wikidata Q4104439, «Василий Мангазейский», which carries no Commons category; nothing else on Commons names him. The file's title names this folder's saint by his own by-name — «Basil of Mangazeya», the martyred young trader of the Siberian town, this folder's display name — alongside Basil of Caesarea. **A two-figure icon, and it is the greater Basil who shares it**, so the hero will show both and the reader meets Basil of Caesarea beside him; that is said here rather than left to be discovered. It is taken because the title names the folder's own saint, which is the line the group-image refusals have drawn. 600x707, so the long edge clears the card cap at 560."
+  }
+]

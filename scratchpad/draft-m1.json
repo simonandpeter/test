@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "timothy-husband-of-maura",
+    "file": "File:Жития Святых (1903-1911) - икона 09031 Тимофей и Мавра.png",
+    "why": "Russian Menaion Reader plate «09031»: church-month 09 = May, day 3, this folder's feast in all four calendars as its own attestations record them. The plate's title is «Тимофей и Мавра», Timothy and Maura, and this folder is that Timothy: slug and display name «Timothy, husband of Maura», Russian form «Тимофей Фиваидский», the reader of the Thebaid martyred with his wife. A two-figure plate naming both, so the hero shows the pair the folder is half of. The day's other plate is «Феодосий». Drafted in `draft-b3.json` and re-checked here; its first fetch exhausted the backoff ladder with nothing written."
+  },
+  {
+    "slug": "peter-the-apostle",
+    "file": "File:Икона Апостол Пётр XVII Псков.jpg",
+    "why": "Found by listing `Category:Icons of Saint Peter`, the apostle's own Commons icon category, reached from `Category:Saint Peter`. The file's title names the subject outright — «Икона Апостол Пётр», icon of the Apostle Peter — and dates it to the seventeenth century at Pskov, so there is no namesake to confuse it with: this folder IS the apostle, display name «Peter», type `apostle`, kept on 29 June in all four calendars. A single-figure icon, 1969x3000, so nothing has to be read out of a group."
+  },
+  {
+    "slug": "john-the-russian",
+    "file": "File:Icon John the Russian 01.JPG",
+    "why": "Found by listing `Category:John the Russian`, this saint's own Commons category, which Commons holds under exactly the English name this folder stores as its display name. The file's own title names him — «Icon John the Russian» — and the category's other files are his shrine at Prokopi on Euboea, where his relics are, which is this folder's saint and no other: the confessor of Urfa taken captive to Prokopi, kept on 27 May in the Russian and Romanian calendars. 3632x5456."
+  },
+  {
+    "slug": "tikhon-of-moscow",
+    "file": "File:Icon of Saint Tikhon in Dormition Cathedral, Yaroslavl (Russia).jpg",
+    "why": "Found by listing `Category:Icons of Patriarch Tikhon of Moscow`, a subcategory of `Category:Tikhon of Moscow` — this folder's own saint, display name «Tikhon of Moscow», Russian form «Тихон (Белавин)», patriarch and confessor. The file names him and the cathedral it hangs in, and the category it sits in names the patriarchate, which is what distinguishes him from Tikhon of Zadonsk and Tikhon of Amathus. 1243x2678, a single-figure icon."
+  },
+  {
+    "slug": "stephen-the-new",
+    "file": "File:Жития Святых (1903-1911) - икона 03281 Стефан.png",
+    "why": "Two independent pieces of evidence, which is why this one rather than the colour frescoes beside it. First, Commons itself files this plate in `Category:Stephen the Younger` — the English name for Stephen the New of Mount Saint Auxentius, which is this folder: display name «Stephen the New», Russian form «Стефан Новый, Константинопольский», the venerable-martyr confessor of the iconoclast persecution. Second, the Menaion Reader plate code «03281» is church-month 03 = November, day 28, and 28 November is this folder's feast in all four calendars. 619x1654. The day and the category agree, so the bare title «Стефан» is not doing the work alone."
+  },
+  {
+    "slug": "nilus-of-sora",
+    "file": "File:Nil Sorsky (20th c., Atheism museum).jpg",
+    "why": "Found by reading the Commons category off Wikidata — Q982860, «Nilus of Sora», described there as a Russian theologian and saint — which gives `Category:Saint Nil Sorsky`, a title this corpus does not store and a guess would not have reached. The file names him, «Nil Sorsky», and dates the icon to the twentieth century in the former Museum of the History of Religion and Atheism, which held icons. This folder is that man: display name «Nilus of Sora», Russian form «Нил Сорский», the hermit of the Sora, kept 7 May. 2278x3000, single figure."
+  },
+  {
+    "slug": "nilus-of-stolobnoe",
+    "file": "File:Храмовая икона прп. Нила Столобенского с частицей мощей.JPG",
+    "why": "Found by reading the Commons category off Wikidata — Q4321322, «Нил Столбенски», a Russian monk canonised by the Orthodox church — which gives `Category:Nil Stolobensky`. The file's title names him in full with his by-name, «прп. Нила Столобенского», which is this folder's own stored Russian form «Нил Столобенский» exactly, and describes the object as the temple icon with a particle of his relics, at the Nilo-Stolobensky hermitage he founded. Distinct from `nilus-of-sora`, whose by-name is Сорский, and from Nilus of Sinai. 2848x4272."
+  },
+  {
+    "slug": "tryphon-of-vyatka",
+    "file": "File:Икона Трифон Вятский.jpg",
+    "why": "Found by reading the Commons category off Wikidata — Q2465485, «Tryphon of Vyatka», a Russian abbot and saint — which gives `Category:Tryphon of Vyatka`. The file's title carries the by-name, «Трифон Вятский», which is this folder's own saint: display name «Tryphon of Vyatka», the abbot and wonderworker kept 8 October in the Russian and Greek calendars. The category's bare-titled «Икона Трифон.jpg» was NOT taken: Tryphon of Campsada is a different and far commoner Tryphon, and only the file carrying «Вятский» rules him out. 4145x3869."
+  },
+  {
+    "slug": "germanus-of-kazan",
+    "file": "File:Митрополит Афанасий посвящает Германа в архиепископы Казанские.png",
+    "why": "Found by reading the Commons category off Wikidata — Q2272032, «Herman of Kazan and Svyazhsk», a Russian bishop and saint — which gives `Category:German of Kazan`. The file's title names the folder's own man and his own office together: «Митрополит Афанасий посвящает Германа в архиепископы Казанские», Metropolitan Athanasius consecrating Herman archbishop of Kazan, which is this folder's `hierarch` and `archbishop` and its Russian form «Герман Казанский». A plate of the Lives, so it is a scene rather than a portrait icon, and the hero will show the consecration; it is taken over the day-matched plate in the same category because the title names him in full rather than as a bare «Герман». 849x1545."
+  },
+  {
+    "slug": "arsenius-of-serbia",
+    "file": "File:Saint Arsenije I Sremac.jpeg",
+    "why": "Found by listing `Category:Arsenije Sremac`, the Commons title for the second Serbian archbishop — a title neither this folder's names nor a search for «Arsenius of Serbia» reaches, and the reason this slug came back as 'no category found' on the first pass. The file names him with the ordinal, «Saint Arsenije I Sremac», which is this folder's own stored Russian form «Арсений I Сербский» — the I is what separates him from every other Arsenije — and he is the archbishop kept 28 October in the Greek, Russian and Serbian calendars. NOT Arsenius the Great of the Desert, whose own file sits in the same category as «Arsenius der Grosse1.jpg» and is not taken. 800x1284, single figure."
+  },
+  {
+    "slug": "john-vladimir",
+    "file": "File:Shën Gjon Vladimiri me skena nga jeta e tij.jpg",
+    "why": "Found by listing `Category:Jovan Vladimir in icons`, a subcategory of `Category:Jovan Vladimir` — Commons' Serbian-form title, which is why `Category:Saint John Vladimir`, the title this folder's display name suggests, exists but is empty. The file's Albanian title is «Shën Gjon Vladimiri me skena nga jeta e tij», Saint John Vladimir with scenes from his life, a vita icon of the martyred king of Doclea; this folder is that man, display name «John Vladimir», Serbian form «Јован Владимир», types `king`, `martyr`, `wonderworker`, kept 22 May in the Greek, Russian and Serbian calendars. He is the central figure of a vita icon rather than one name in a group. 1392x2048."
+  },
+  {
+    "slug": "seraphim-of-vyritsa",
+    "file": "File:Иеросхимонах Серафим (Муравьёв). 1927 год.jpg",
+    "why": "Found by listing `Category:Seraphim of Vyritsa`, this saint's own Commons category, which holds two files and nothing else. The file names him by his monastic rank and his family name together — «Иеросхимонах Серафим (Муравьёв)», Hieroschemamonk Seraphim (Muravyov) — and dates the photograph to 1927; this folder is that man, display name «Seraphim of Vyritsa», Russian form «Серафим Вырицкий», the elder Vasily Muravyov who took the name Seraphim, kept 21 March. A historical photograph rather than an icon, which the author has ruled may fill a hero slot where no icon exists, and it is said here plainly: the only other file in his category is 550px and unidentified beyond the bare name. 672x1024."
+  }
+]
