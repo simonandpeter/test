@@ -1027,19 +1027,57 @@ test('there is one bookmark drawing, and one place left that draws it', async ({
 });
 
 
+/**
+ * A civil day whose Russian register still holds an undated card, found off the
+ * manifest rather than written down — and throwing if there is none left.
+ *
+ * **The day was hardcoded twice and the corpus dated it out from under the test
+ * twice.** It was 25 August until 2026-09-06, when the two Perm priests of
+ * 12 August old style got years from their own lives; it was then 24 August
+ * until 2026-10-14, when Susanna's companions got theirs. A third pinned day
+ * would buy one more pass, and item 16 is still running.
+ *
+ * Julian plus thirteen is the civil date for every year this site serves
+ * (1900-2099), which is the arithmetic `lib/feasts.js` does properly; a test
+ * that needs only *a* day it can reach does not need the general rule.
+ */
+const UNDATED_RUSSIAN_DAY = (() => {
+  const manifest = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+  const cards = manifest.saints ?? manifest;
+  /*
+   * **`dates` is NORMALISED on the card**, so every one of the 6,799 has
+   * `birth`, `death` and `floruit` present and `!c.dates` is never true. What
+   * "undated" means here is what `formatLifespan` means by it: no bound set on
+   * any of the three.
+   */
+  const undated = (d) =>
+    ['birth', 'death', 'floruit'].every((k) => d?.[k]?.earliest == null && d?.[k]?.latest == null);
+  for (const c of cards) {
+    if (!undated(c.dates)) continue;
+    const feast = (c.attestations ?? []).find(
+      (a) => a.church === 'russian' && a.status === 'venerated' && a.feast?.month && a.feast?.day,
+    )?.feast;
+    if (!feast) continue;
+    const civil = new Date(Date.UTC(2026, feast.month - 1, feast.day + 13));
+    if (civil.getUTCFullYear() !== 2026) continue;
+    const iso = civil.toISOString().slice(0, 10);
+    return { iso, slug: c.slug };
+  }
+  throw new Error('no undated saint with a fixed Russian feast — this test has lost its premise');
+})();
+
 test('a lifespan with nothing at either end says Undated, capitalised', async ({ page }) => {
   // Author, 2026-08-25 evening: "instead of lowercase 'undated', replace it
   // with uppercase, 'Undated'". Standing alone under a name it is a label
   // rather than a word in a sentence — the same departure the dates' capitals
   // are, and made in all five packs so none of them disagrees with itself.
-  // 24 August, not the 25th it used until 2026-09-06: the two Perm priests of
-  // 12 August (old style) who were the 25th's undated cards have both years
-  // from their own lives now. The 24th's are Susanna's companions — six saints
-  // the Russian calendar keeps and no source dates.
   await ready(page, { church: 'russian' });
-  await page.goto('/calendar/2026-08-24', { waitUntil: 'networkidle' });
+  await page.goto(`/calendar/${UNDATED_RUSSIAN_DAY.iso}`, { waitUntil: 'networkidle' });
   const dates = page.locator('.reg-card .reg-sub');
-  await expect(dates.filter({ hasText: 'Undated' }).first()).toBeVisible();
+  await expect(
+    dates.filter({ hasText: 'Undated' }).first(),
+    `${UNDATED_RUSSIAN_DAY.iso} was chosen for ${UNDATED_RUSSIAN_DAY.slug}, who has no dates`,
+  ).toBeVisible();
   await expect(dates.filter({ hasText: /^undated$/ })).toHaveCount(0);
 });
 
