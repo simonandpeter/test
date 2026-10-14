@@ -81,6 +81,12 @@
       "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "nicholas-maslov",
     "demetrius-benevolensky",
