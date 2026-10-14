@@ -23,6 +23,15 @@
     "soldier",
     "hermit"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 270,
+      "latest": 338,
+      "display": "late 3rd to mid 4th century",
+      "basis": "inferred",
+      "note": "Inferred, not stated: no page gives him a year. He is the father of `nina-of-georgia`, whom this folder links, and that folder carries birth late 3rd century (270-300) and death 338; the interval is his daughter's lifetime as this corpus records it, and is the one `susanna-mother-of-nina`, his wife, already carries for the same reason. The Russian line this folder quotes puts the pair at «(III-IV)», and the life it points at dates Maximian's reign, in whose service he stood, 284 to 305. The 216 in this folder's note is a page id."
+    }
+  },
   "related": [
     "mary-magdalene",
     "nina-of-georgia",
