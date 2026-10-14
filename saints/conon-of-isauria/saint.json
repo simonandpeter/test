@@ -191,6 +191,12 @@
       "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 5 March: „Овај дивни светитељ поживе и пострада у II веку.“ It gives the century and no year, and the folder carried no death at all before this reading. The saint.gr sentence quoted on the birth above sets him in the apostolic times, which reads as the first century rather than the second; the interval here is the Prologue's own and the disagreement is not resolved."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "nestor-father-of-conon"
   ]

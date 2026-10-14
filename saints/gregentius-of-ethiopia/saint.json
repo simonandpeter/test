@@ -101,5 +101,11 @@
       "basis": "attested",
       "note": "saint.gr: «Ο Γρηγέντιος πέθανε ειρηνικά στις 19 Δεκεμβρίου 552 μ.Χ. και τη στέρησή του, θρήνησε πολύς κόσμος», with «(; - 552)» in the page head and «έζησε τον 6ο αιώνα μ.Χ.» in its first sentence. No year of birth is given. The folder held no dates before this reading."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

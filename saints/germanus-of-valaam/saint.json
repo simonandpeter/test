@@ -27,6 +27,12 @@
       "note": "saint.gr: «Οι Όσιοι Σέργιος και Γερμανός κοιμήθηκαν περί το 1353 μ.Χ.» The page's own heading for Germanus reads «(; - 1553)», which the narrative contradicts; the narrative's year is recorded for both, and the page also puts their settling on Valaam in 1329."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "sergius-of-valaam"
   ],
