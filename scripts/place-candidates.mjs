@@ -35,6 +35,24 @@ import { PLACES } from '../src/data/places.js';
 
 const SAINTS = path.join(process.cwd(), 'saints');
 
+/**
+ * A located saint's `modern_name` carries an administrative tail, and taking
+ * that tail for a place name is how "near Olonets, Russia" taught this script
+ * that **Russia** is at Lake Ladoga — after which every life saying "in
+ * Russia" was proposed a hermitage on a lake. The gazetteer already draws the
+ * line: it sizes an entry's `zoom` to what the place actually is, so its own
+ * sub-20 entries are the countries and regions, and nothing in a tail is a
+ * candidate for the same reason they are skipped above.
+ */
+const COUNTRIES = new Set(
+  [
+    ...PLACES.filter((p) => p.zoom < 20).flatMap((p) => [p.name, ...(p.also ?? [])]),
+    // Tails the gazetteer has no entry for, so sub-20 does not catch them.
+    'Türkiye', 'Estonia', 'Algeria', 'Tunisia', 'Cyprus',
+  ].map((n) => n.toLowerCase())
+);
+const ADMINISTRATIVE = /(?:Oblast|Krai|Province|County|Prefecture|Governorate)/i;
+
 /** Every place name the repository already knows a coordinate for. */
 function knownPlaces() {
   const known = new Map();
@@ -65,11 +83,17 @@ function knownPlaces() {
       const where = { lon: loc.lon, lat: loc.lat, from: `corpus (${saint.slug})`, uncertainty_km: loc.uncertainty_km };
       // The bare town, not "Kyiv Pechersk Lavra, Ukraine" — a life says
       // "Kyiv", and matching the whole administrative string would match
-      // nothing at all.
+      // nothing at all. The parts after the first are towns as often as they
+      // are tails ("Kadıköy, Istanbul, Turkey"), so they are kept and the
+      // tails are refused by name instead.
       for (const name of [loc.modern_name, loc.historical_name]) {
         if (!name) continue;
         add(name, where);
-        for (const part of name.split(',')) add(part, where);
+        for (const part of name.split(',')) {
+          const town = part.replace(/^\s*(?:near|outside|by|on a peninsula of|the)\s+/i, '');
+          if (ADMINISTRATIVE.test(town) || COUNTRIES.has(town.trim().toLowerCase())) continue;
+          add(town, where);
+        }
       }
     }
   }
