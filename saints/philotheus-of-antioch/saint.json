@@ -52,6 +52,16 @@
       "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Antioch",
+      "modern_name": "Antakya, Turkey",
+      "lat": 36.2021,
+      "lon": 36.1613,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

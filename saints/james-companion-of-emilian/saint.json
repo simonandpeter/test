@@ -57,6 +57,16 @@
     "emilian-the-roman",
     "marianus-companion-of-emilian"
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Rome",
+      "modern_name": "Rome, Italy",
+      "lat": 41.8931,
+      "lon": 12.4828,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

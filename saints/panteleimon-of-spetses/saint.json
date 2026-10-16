@@ -53,6 +53,16 @@
       "note": "saint.gr: «μαρτύρησε στην Κρήτη το 1848 μ.Χ.», and the head line «Αγιος Παντελεημων ο Νεομαρτυρας, Εν Κρητη (; - 1848)»."
     }
   },
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Crete",
+      "modern_name": "Crete, Greece",
+      "lat": 35.24,
+      "lon": 24.81,
+      "uncertainty_km": 150
+    }
+  ],
   "text": {
     "life": "life.md"
   }

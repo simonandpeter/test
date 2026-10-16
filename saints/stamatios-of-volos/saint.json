@@ -57,6 +57,16 @@
       "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The Serbian row already keeps him on the Julian 16 August as «Св. муч. Стамат», and the Greek calendar keeps him on the revised-julian 16 August, the same menologion number. The Greek page is where the story is: a new martyr from the village of Agios Georgios of Volos in the province of Demetrias; an agha who collected the head-tax oppressively; a deputation to the Sublime Porte of which Stamatios was one; the vizier, a friend of the tax-collector, who had them thrown out; the false witness that Stamatios had turned Turk and was now passing for a Christian; the judge's «Κι αν δεν έγινες, γίνε τώρα» and his answer; the prison and the torture; and the beheading «στις 16 Αυγούστου 1680 μ.Χ. ημέρα Δευτέρα, μπροστά στο βασιλικό παλάτι, στην Αγία Σοφία», which confirms the folder's 1680 exactly and adds the day of the week and the place. It names the account's author and where it is kept: the monk Iakovos the Athonite, 1680, in codex 805 of the monastery of Vatopedi, folios 12a–14. Relics: «Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στη Μονή Ταξιαρχών Πηλίου Μαγνησίας». No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints one hymn, an apolytikion in the third tone with no model given, which names him; it is added."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Constantinople",
+      "modern_name": "Istanbul, Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 20
+    }
+  ],
   "text": {
     "life": "life.md"
   },
