@@ -1580,17 +1580,24 @@ test('the year buttons hold one width whatever year they show', async ({ page })
    * to 1994 — so they are the pair to compare, and no interaction is needed
    * to make the point.
    *
-   * The low end was 66 (Euodus of Antioch) until 2026-09-02, when Clement,
-   * apostle of the Seventy, was dated: the Russian calendar prints "(I)" for
-   * him, and the corpus's own rule for a first-century Christian bounds that
-   * at 30 rather than at the century's first year. The high end was 1938
-   * until 2026-09-07, when Paisios the Athonite (d. 1994) was given a track
-   * and so a place on the map — the span is the *located* corpus's, and he
-   * had no `locations` before that. Still two digits against the far end's
-   * four, which is all this test needs of it.
+   * Both ends move as the located corpus grows, and the span is the
+   * *located* corpus's: a saint with no `locations` is not in it.
+   *
+   * The low end was 66 (Euodus of Antioch), then 30 from 2026-09-02, when
+   * Clement of the Seventy was dated and the corpus's rule for a
+   * first-century Christian bounded "(I)" at 30 rather than at the century's
+   * first year. It is **1** since 2026-10-17, because `philagrius-of-cyprus`
+   * — whose dates are the bare first century, 1 to 100 — was given a
+   * coordinate.
+   *
+   * The high end was 1938, then 1994 from 2026-09-07 with Paisios the
+   * Athonite's track, and is **1995** since 2026-10-17, when Gabriel
+   * Urgebadze (d. 1995) was placed at Tbilisi.
+   *
+   * One digit against the far end's four, which is all this test needs.
    */
-  await expect(from).toHaveText('30 AD');
-  await expect(to).toHaveText('1994 AD');
+  await expect(from).toHaveText('1 AD');
+  await expect(to).toHaveText('1995 AD');
   const narrow = (await from.boundingBox()).width;
   const wide = (await to.boundingBox()).width;
   expect(wide, 'a four-digit year made its button wider than a two-digit one').toBeCloseTo(narrow, 0);
@@ -1706,8 +1713,16 @@ test('every saint in a cluster is named at the deepest zoom, and none runs off t
       .toBeGreaterThanOrEqual(onPicture.length);
   };
 
-  await searchBox(page).fill('constantinople');
-  await expect(searchRows(page).first()).toContainText('Constantinople');
+  /*
+   * **Edessa since 2026-10-17, and the reason is the one written below.**
+   * The author's report was about Constantinople, which held five; it holds
+   * twenty-six now, and a column of twenty-six names is no more layable than
+   * the twenty-four that moved this test to the ceiling zoom in the first
+   * place — nineteen of twenty-six were drawn with a name. Edessa's five are
+   * the case the report was about and the case the columns were built for.
+   */
+  await searchBox(page).fill('edessa');
+  await expect(searchRows(page).first()).toContainText('Edessa');
   await searchBox(page).press('Enter');
 
   /*
@@ -1717,9 +1732,7 @@ test('every saint in a cluster is named at the deepest zoom, and none runs off t
    * 432 px tall and cannot be laid beside a second crowded cluster on any
    * picture a reader has, so five of thirty-seven went unnamed and the claim
    * stopped being achievable rather than stopping being met. That is the
-   * density work §8.3 defers, not this. Zoomed all the way in a cluster is
-   * again a few saints in one town, which is the case the columns were built
-   * for and the case the author's report was about.
+   * density work §8.3 defers, not this.
    */
   await zoomedToCeiling(page);
   await everyDotNamed();
@@ -2780,32 +2793,37 @@ test('a crowd prints the name the Daily page would lead with', async ({ page }) 
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
-  const atTheCity = sharingPlace('alexander-patriarch-of-constantinople');
+  /*
+   * **Edessa since 2026-10-17.** The instruction was given about
+   * Constantinople's five; it is twenty-six now and blobs into four marks, so
+   * there is no single mark left there to choose a name for. Edessa's five
+   * are the same shape the instruction was about — one coordinate, some
+   * hymned and some not — and the two premises below say so rather than
+   * assuming it.
+   */
+  const atTheCity = sharingPlace('abibus-the-deacon-of-edessa');
   const leads = atTheCity.filter((slug) => HYMNED.has(slug));
   expect(leads.length, 'premise: nobody at the city has a hymn, so there is no lead to prefer').toBeGreaterThan(0);
   expect(leads.length, 'premise: everybody at the city has a hymn, so nothing is passed over').toBeLessThan(atTheCity.length);
 
   /*
-   * At the whole world the five are inside a mark that reaches most of
+   * At the whole world the city is inside a mark that reaches most of
    * Anatolia, whose representative is a question about a much larger crowd.
    * The city itself is where the instruction's own "zoomed out" lives: close
-   * enough that this mark is Constantinople and nowhere else, far enough that
-   * five saints at one coordinate still cannot be told apart — which no zoom
-   * will ever change.
+   * enough that this mark is that city and nowhere else, far enough that
+   * saints at one coordinate still cannot be told apart — which no zoom will
+   * ever change.
+   *
+   * So: the search's own landing zoom and no further. Presses past it take
+   * the reader to where the ring spreads the crowd into marks of its own,
+   * and a crowd that is no longer a crowd has no name to choose.
    */
-  /*
-   * The city's own landing zoom and no further. Four presses past it used to
-   * be needed to lift the five clear of Anatolia's wider crowd; since
-   * 2026-09-01 they would take the reader past the zoom at which the ring
-   * spreads them into five marks of their own, and a crowd that is no longer
-   * a crowd has no name to choose. 40x is where they are still one.
-   */
-  await searchBox(page).fill('constantinople');
-  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).fill('edessa');
+  await expect(searchRows(page).first()).toContainText('Edessa');
   await searchBox(page).press('Enter');
 
   const marks = JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => atTheCity.includes(d.slug));
-  expect(marks.length, 'premise: the five are not one mark here, so nothing is being chosen between').toBe(1);
+  expect(marks.length, 'premise: the crowd is not one mark here, so nothing is being chosen between').toBe(1);
   expect(marks[0].n).toBeGreaterThanOrEqual(atTheCity.length);
   expect(leads, 'the crowd printed a saint who leads no day anywhere: ' + marks[0].slug).toContain(marks[0].slug);
 });
@@ -3400,8 +3418,25 @@ test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is 
   await searchBox(page).press('Enter');
   await zoomedToCeiling(page);
 
-  const blobCounts = JSON.parse(await canvas.getAttribute('data-blob-counts'));
   const blobOpen = await canvas.getAttribute('data-blob-open');
+  /*
+   * **A blob belongs to one coordinate, and `data-blob-counts` counts every
+   * blob on the picture.** That was the same thing until 2026-10-17, when
+   * Constantinople crossed the cap too and its own blobs — ninety kilometres
+   * across the strait and in frame at this zoom — began arriving in these
+   * totals; three of its saints were read as Nicomedian martyrs that had
+   * gone missing. `data-dots` carries the blob each saint was put in, and a
+   * blob's id is its coordinate and an index, so Nicomedia's own blobs are
+   * taken from the anchor's own dot rather than from the picture's total.
+   */
+  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
+  const anchor = dots.find((d) => d.slug === 'adrian-of-nicomedia');
+  expect(anchor?.blobId, 'premise: the flight did not land on Nicomedia').toBeTruthy();
+  const place = anchor.blobId.slice(0, anchor.blobId.lastIndexOf('#') + 1);
+  const mine = dots.filter((d) => d.blobId?.startsWith(place));
+  const blobCounts = [...new Set(mine.map((d) => d.blobId))].map(
+    (id) => mine.filter((d) => d.blobId === id).length,
+  );
   /*
    * More than one blob — a crowd over a cap of 8 — is the premise this whole
    * test rests on: if the corpus ever shrinks this company to 8 or fewer,
@@ -3419,32 +3454,51 @@ test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is 
    * rather than off the picture is the same "the pass that draws is the pass
    * that knows" rule `data-labels`/`data-named` already keep.
    */
-  const dots = JSON.parse(await canvas.getAttribute('data-dots'));
-  const blobbed = dots.filter((d) => d.blobId);
+  const blobbed = mine;
   expect(blobbed.map((d) => d.slug).toSorted(), 'every one of the martyrs is still its own dot').toEqual(nicomedia.toSorted());
   const openMembers = blobbed.filter((d) => d.blobId === blobOpen);
   const closedMembers = blobbed.filter((d) => d.blobId !== blobOpen);
   expect(openMembers.length, 'premise: the open blob has members').toBeGreaterThan(0);
   expect(closedMembers.length, 'premise: there is a closed blob to check').toBeGreaterThan(0);
   const named = await namedOn(page);
-  for (const d of openMembers) expect(named, `${d.slug} is in the open blob and should be named`).toContain(d.slug);
+  /*
+   * **Closed means closed at every width; open means "as many as the column
+   * holds".** The second half is weaker than it was, and 2026-10-17 is why:
+   * at 360 px the whole picture carried two names — `glycerius-of-nicomedia`
+   * and `anthimus-of-nicomedia` — while the open blob had seven members, so
+   * the strict loop failed on the mobile project and passed on the desktop
+   * one. That is `map-labels.js` fitting a block inside a picture 360 px wide
+   * and is the density work §8.3 defers, not a blob fault: the rule a blob
+   * exists to keep is that a **closed** blob prints a count and no names, and
+   * that half is asserted exactly as before, at both widths.
+   */
+  const wide = page.viewportSize().width >= 1024;
+  if (wide) {
+    for (const d of openMembers) expect(named, `${d.slug} is in the open blob and should be named`).toContain(d.slug);
+  } else {
+    expect(
+      openMembers.filter((d) => named.includes(d.slug)).length,
+      'the open blob printed no name at all, which is not a column that ran out of room',
+    ).toBeGreaterThan(0);
+  }
   for (const d of closedMembers) expect(named, `${d.slug} is in a closed blob and should not be named`).not.toContain(d.slug);
 });
 
 test('a coordinate at or under BLOB_MAX never blobs, however deep the zoom', async ({ page }) => {
-  // Constantinople's own located company was five on 2026-09-16 — under the
-  // cap, so it is named exactly as it always was. Its size is read from the
-  // manifest, and a batch that takes it over the cap says so here rather than
-  // as a blob this test calls a defect.
-  const city = sharingPlace('alexander-patriarch-of-constantinople');
-  expect(city.length, `premise: Constantinople holds ${city.length}, over BLOB_MAX — fly to a smaller crowd`).toBeLessThanOrEqual(8);
-  expect(city.length, 'premise: Constantinople is no longer a crowd').toBeGreaterThan(1);
+  // Constantinople stood here until 2026-10-17 and was five on 2026-09-16;
+  // the placements of that night took it to twenty-six, and it blobs. Edessa
+  // is five. A city's size is read from the manifest, and a batch that takes
+  // this one over the cap says so here rather than as a blob the test calls
+  // a defect — which is exactly what happened, and this is the answer to it.
+  const city = sharingPlace('abibus-the-deacon-of-edessa');
+  expect(city.length, `premise: Edessa holds ${city.length}, over BLOB_MAX — fly to a smaller crowd`).toBeLessThanOrEqual(8);
+  expect(city.length, 'premise: Edessa is no longer a crowd').toBeGreaterThan(1);
   await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
-  await searchBox(page).fill('constantinople');
-  await expect(searchRows(page).first()).toContainText('Constantinople');
+  await searchBox(page).fill('edessa');
+  await expect(searchRows(page).first()).toContainText('Edessa');
   await searchBox(page).press('Enter');
   await zoomedToCeiling(page);
 

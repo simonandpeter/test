@@ -1341,6 +1341,19 @@ text false, so the coordinate and the sentence have to move together, and
 whether that sentence was a rule or a record of one day's caution is not
 readable from the folder.
 
+**5. Five coordinates are over `BLOB_MAX` where one was.** Nicomedia 35,
+Constantinople 26, Alexandria 23, Moscow 17, Rome 17 — the blob machinery was
+built in September for Nicomedia alone, and five of this corpus's cities now
+cross the cap of 8. Two rules meet there, and they met in one city before:
+*every dot the reader can see is named*, and *a crowd over eight shows only
+the open blob's names*. The second wins, so `map.spec.js`'s cluster tests fly
+to Edessa's five now and say why. **At 360 px the open blob itself does not
+fit**: the whole picture carried two names where the open blob had seven
+members, which is `map-labels.js` placing a block inside a 360 px picture and
+is the density work §8.3 defers. Whether a city's crowd should read as four
+blobs or as one mark with a count is the question underneath, and it is the
+author's.
+
 **4. An island is neither of the two things `zoom` sorts.**
 `place-candidates.mjs` tells the gazetteer's towns from its countries by
 `zoom < 20`, which is sound for `Russia` at 3.5 and `Rome` at 40 — but
