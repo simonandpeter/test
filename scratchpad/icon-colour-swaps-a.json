@@ -1,0 +1,135 @@
+{
+ "wave": "colour sweep A, rows 0-85 of scratchpad/grey-queue.json, 16 October 2026",
+ "gates": "same saint by feast day and epithet; mean HSV saturation >= 0.12 measured on a 64x64 sample as scratchpad/grey-queue.py measures; width >= the held icon; licence read off Commons imageinfo by scratchpad/geticon.py, which refuses anything not stated PD or CC",
+ "old_files_parked": "scratchpad/old-icons/<slug>/icon.jpg — kept, not deleted (TODO 15: the old file survives until the new one is written and checked)",
+ "swaps": [
+  {
+   "slug": "nektarios-of-aegina",
+   "old": {"w": 376, "h": 557, "sat": 0.0},
+   "new": {
+    "commons_title": "File:Mural depicting Saint Nektarios of Aegina on June 17, 2022.jpg",
+    "w": 1280, "h": 1707, "sat": 0.4571, "licence": "CC BY-SA 4.0"
+   },
+   "why": "Commons titles and describes the file \"Mural depicting Saint Nektarios of Aegina\", and it is held in the files of Wikidata Q741240 — Nectarius of Aegina, Metropolitan of Pentapolis, 1846-1920 — which is the entity this folder's own stored form «Άγιος Νεκτάριος Αιγίνης» reaches through el.wikipedia. The epithet is the folder's (of Aegina) and so is the day: Q741240 died 8 November 1920 and is commemorated 9 November, this folder's russian and greek 9 November row. A modern wall painting rather than a panel icon."
+  },
+  {
+   "slug": "demetrius-the-myrrhstreamer",
+   "old": {"w": 601, "h": 1669, "sat": 0.0},
+   "new": {
+    "commons_title": "File:Dimitirios icon.jpg",
+    "w": 1280, "h": 1850, "sat": 0.5233, "licence": "Public domain"
+   },
+   "why": "Commons describes it \"St. Demetrius of Thessalonica\" and holds it in the files of Wikidata Q310633, which this folder's Russian form «Димитрий Солунский» reaches: the martyr who died in 306, whose article names him «Димитрий Мироточец / Δημήτριος ο Μυροβλύτης» — the Myrrh-streamer of this folder's display name — and whose 26 October is this folder's russian, romanian, greek and serbian row. Not Demetrius of Rostov or of Basarbovo: epithet and day are both the Thessalonian's."
+  },
+  {
+   "slug": "artemius-the-great-martyr",
+   "old": {"w": 547, "h": 1675, "sat": 0.0},
+   "new": {
+    "commons_title": "File:Sant Artèmi.jpg",
+    "w": 1280, "h": 1701, "sat": 0.2523, "licence": "Public domain"
+   },
+   "why": "a Protaton fresco, which Commons describes «Св. Артемий. Фреска в Прорате» and holds in Category:Artemius of Antioch, the P373 category of Wikidata Q956592 — Artemius, prefect of Roman Egypt, martyred 362, commemorated 20 October, which is this folder's russian, romanian, greek and serbian 20 October row. The bare forename reaches a disambiguation page (Q1060704) and the modern Russian given name instead; the feast day is what picks the entity out."
+  },
+  {
+   "slug": "christina-of-tyre",
+   "old": {"w": 605, "h": 1753, "sat": 0.0},
+   "new": {
+    "commons_title": "File:Saint Christina.jpg",
+    "w": 800, "h": 1187, "sat": 0.381, "licence": "CC BY-SA 4.0"
+   },
+   "why": "Commons describes it \"Saint Christina of Bolsena, or Christina of Tyre, or Christina the Great Martyr\" and holds it in the files of Wikidata Q237882, reached from this folder's Russian form «Христина Тирская»; the article gives her commemoration as 24 July, this folder's row in all four churches. Not Christina of Vladimir (19 July) or Christina of Caesarea, the other two the bare forename's disambiguation page offers. 800px is over the held width and over the ~450px thumbnail floor but under the 1400px Commons serves comfortably."
+  },
+  {
+   "slug": "maximus-the-confessor",
+   "old": {"w": 448, "h": 1320, "sat": 0.0},
+   "new": {
+    "commons_title": "File:44-manasses-chronicle.jpg",
+    "w": 1280, "h": 1765, "sat": 0.3962, "licence": "Public domain"
+   },
+   "why": "miniature 44 of the Constantine Manasses Chronicle, which Commons describes as the martyrdom of Maximus the Confessor under Constans II, held in the files of Wikidata Q206842 — Maximus the Confessor, died 13 August 662, this folder's russian 13 August row, the other three churches keeping him on 21 January. A SCENE and not a portrait: the hand struck off is the chronicle's subject. The alternative in the same category, File:Maksim ispovednik.jpg (1280x1613, measured saturation 0.320, public domain), is a portrait but carries no Commons description, so identity there would rest on the file name alone."
+  }
+ ],
+ "refusals": [
+  {
+   "slug": "martin-pope-of-rome",
+   "kind": "no-colour",
+   "reason": "wrong-saint candidates only",
+   "searched": "stored forms «Άγιος Μαρτίνος Πάπας Ρώμης», Martin, «Мартин», «Мартин I Римский» into el/ro/sr/ru and en.wikipedia, then wikibase_item, P18, P373 and Commons P180. el.wikipedia for the Greek form reaches Q1171750, which is not a person, and Q199498 — Pope EUGENE I, Martin's successor. Its two files (File:Eugenius I. Eugenio I, papa.jpg 1280x1744 sat 0.184 CC0; File:Eugenius. Eugenio I.jpg 1280x1658 sat 0.159 CC0) are coloured and free but are a different pope, and the folder's 14 April / greek 20 September feast is not Eugene's. Nothing coloured for Martin I himself was reached."
+  },
+  {
+   "slug": "luke-the-evangelist",
+   "kind": "no-colour",
+   "reason": "the route reached the group, not the saint",
+   "searched": "stored forms into ru/el/ro/sr and en.wikipedia; ru reaches Q472773, «Евангелисты» — the four evangelists as a group, 16 files of which 13 pass size and licence. The widest coloured one, File:HOVE KIRKE - an10071203193185.jpg (1280x842, sat 0.287, public domain), is a Norwegian church frieze of all four and names no one of them. A group image that does not name the saint is the refusal TODO 5 already records for this shape. Luke's own entity was not reached in this pass and is worth one more try."
+  },
+  {
+   "slug": "george-the-trophy-bearer",
+   "kind": "no-colour",
+   "reason": "the route reached a church building named after him",
+   "searched": "stored forms into ro and en.wikipedia; the Romanian form reaches Q2318440, the Church of Saint George at Lod in Israel — a building, not the martyr. Its 11 free files are interior and exterior photographs (best: File:ISRAEL - Lidda (Lod) - GREEK ORTHODOX MONASTERY OF ST. GEORGE..., 1280x960, sat 0.161, CC BY-SA 4.0) and none is a picture of George. A second imageinfo page was lost to a 429. George the Trophy-bearer certainly has coloured free icons on Commons; this pass did not reach his own entity, so retry rather than treat as exhausted."
+  },
+  {
+   "slug": "elijah-the-tishbite",
+   "kind": "no-colour",
+   "reason": "the route reached a church building named after him",
+   "searched": "stored forms into ro/el/sr and en.wikipedia; ro reaches Q21820043, the Saint Elijah church at Baru in Hunedoara — a heritage building. Its 31 free files are photographs of the church (best: File:RO HD Biserica monument din Baru Mare (10).JPG, 1280x850, sat 0.294, CC BY-SA 4.0). No picture of the prophet was reached; his own entity was not reached in this pass."
+  },
+  {
+   "slug": "nestor-of-thessalonica",
+   "kind": "no-colour",
+   "reason": "namesake/companion — the files are Demetrius's",
+   "searched": "stored forms into ru/el/ro/sr and en.wikipedia; the search reaches Q310633, DEMETRIUS of Thessaloniki, because Nestor is named inside Demetrius's life. Both passing candidates (File:Dimitirios icon.jpg sat 0.523; File:Saint Demetrius of Protat.JPG sat 0.226) are Demetrius, and the first of them is the file taken for demetrius-the-myrrhstreamer in this same wave. Nestor's own 27 October entity was not reached."
+  },
+  {
+   "slug": "longinus-the-centurion",
+   "kind": "no-colour",
+   "reason": "the route reached a date page",
+   "searched": "stored forms into ro and en.wikipedia; the Romanian form reaches Q2963, «16 octombrie» — the day of the year — whose 13 free files are a Casio watch, a British Rail carriage and a steam locomotive. The namesake trap at its loudest, as TODO 5 records for Peter of Lampsacus and the Lyceum. Longinus's own entity was not reached."
+  },
+  {
+   "slug": "pelagia-of-antioch",
+   "kind": "no-colour",
+   "reason": "namesake — Pelagia of Tarsus, a different feast",
+   "searched": "stored forms into sr/ru/el and en.wikipedia (the ro search was set aside on a 429). The search reaches Q2562473, Pelagia of TARSUS, whose commemoration is 4 May, not this folder's 8 October in all four churches. Its coloured free files are accordingly the wrong woman — File:Pelagia of Tarsus (Menologion of Basil II).jpg (1280x878, sat 0.472), the May leaf of a Menaion icon (1280x1665, sat 0.576) and a Paraskeva panel (932x1000, sat 0.637). Pelagia of Antioch's own entity was not reached; the bare forename reaches a disambiguation page with no P18 and no category."
+  },
+  {
+   "slug": "justin-popovich",
+   "kind": "no-colour",
+   "reason": "wrong-saint candidate; row also lost to an encoding crash",
+   "searched": "stored forms into el/ro/ru and en.wikipedia. The one coloured free candidate reached was File:Sv.SimeonDajbabski.jpg (1068x1237, sat 0.277, public domain) — Simeon of Dajbabe, not Justin Popović — and the row then died inside the search script's own logging (cp1252 stdout against a Cyrillic file title), so the later routes never ran. Worth a clean re-run before this refusal is trusted."
+  },
+  {
+   "slug": "maurice-poletaev",
+   "kind": "no-colour",
+   "reason": "nothing on Commons but the greyscale photograph already held",
+   "searched": "the folder stores one form, «Маврикий (Полетаев)», and no wikipedia on el/ro/ru/sr/bg/en holds an article for it, so routes 2 and 3 have no entity to go through (the row's first attempt also died in the script's logging). The only Commons file reached, File:Mavriky Poletaev.jpg, measures 307x464 at saturation 0.000 — it is the file this folder already holds. A 20th-century new martyr whose only likeness is a photograph: TODO 5's 'different source, not a fifth wave' case."
+  }
+ ],
+ "set_aside": [
+  {
+   "slug": "apollinaria",
+   "kind": "throttled",
+   "why": "the bulk search script entered this row at 23:09 and was still inside its backoff ladders 31 minutes later, with another agent searching Commons in parallel. TODO 5's eight-minute ladder, worse. Not searched."
+  }
+ ],
+ "unsearched": {
+  "rows": "6-85 of grey-queue.json except the twelve named below, which cs-quick.py searched",
+  "quick_searched": [
+   "maximus-the-confessor", "artemius-the-great-martyr", "nestor-of-thessalonica",
+   "longinus-the-centurion", "christina-of-tyre", "pelagia-of-antioch",
+   "luke-the-evangelist", "demetrius-the-myrrhstreamer", "george-the-trophy-bearer",
+   "elijah-the-tishbite"
+  ],
+  "note": "hippolytus-of-rome, stephen-the-new, andrew-of-crete, james-son-of-zebedee, gregory-the-illuminator and cyricus-son-of-julitta were handed to cs-quick.py in one batch whose stdout was lost; no rows for them reached scratchpad/cs-candidates-q.json, so they count as unsearched."
+ },
+ "instruments": {
+  "scratchpad/cs-search.py": "the bulk search: the queue's rows, icon-sweep.py's routes, every candidate downloaded and measured. Resumable, and --redo re-runs rows whose notes carry a crash.",
+  "scratchpad/cs-quick.py": "the same four gates with a short backoff ladder and at most four downloads a saint, written after the bulk run wedged. ~15-30s a saint against several minutes.",
+  "scratchpad/cs-swap.py": "parks icon.jpg and icon.meta.json under scratchpad/old-icons/<slug>/, runs geticon.py --write for the one row so Commons' own imageinfo still rules the licence, measures what landed, and restores the parked files if saturation or width fails.",
+  "scratchpad/cs-dump.py": "prints the candidates file for the identity reading."
+ },
+ "verification": {
+  "corpus_gate": "node scripts/corpus-gate.mjs — GREEN, after npm run thumbs and npm run build:manifest",
+  "npm_test": "1 failure, not from this wave: tests/map-span.test.mjs, 'paul-of-obnora reads as alive for 113 years (1317-1429)'. saints/paul-of-obnora/saint.json was written at 23:55 by another session; this wave touched five icon.jpg files and nothing under saints/*/saint.json."
+ }
+}

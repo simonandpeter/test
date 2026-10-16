@@ -1,0 +1,30 @@
+{
+  "_what": "Colour swaps of 16-17 October that were taken back out after being looked at in the hero slot, which is the one check the sweep itself cannot do. Both are free, both are coloured, both are genuinely of this saint, and neither reads as a picture of him at 352 px. Put either back by refetching its source_url and running `npm run thumbs`.",
+  "_how_found": "scratchpad/hero-shots.mjs against a preview, then the twelve crops tiled into one sheet. Nine of the thirteen swaps read well; these two did not, and pelagia-of-tarsus is kept with a caveat.",
+  "reverted": [
+    {
+      "slug": "haggai-the-prophet",
+      "source_url": "https://commons.wikimedia.org/wiki/File:3._Aggeo._(7977).jpg",
+      "licence": "CC BY-SA 4.0",
+      "size": "1280x1186",
+      "saturation": 0.234,
+      "why": "a photograph of a church interior, not of the prophet: the painting of Haggai sits in the top-left corner and is already cut off in the file, and the hero crop lands on the cornice and the gilded dome below it. The reader is shown masonry."
+    },
+    {
+      "slug": "maximus-the-confessor",
+      "source_url": "https://commons.wikimedia.org/wiki/File:44-manasses-chronicle.jpg",
+      "licence": "Public domain",
+      "size": "1280x1765",
+      "saturation": 0.396,
+      "why": "a whole page of the Manasses Chronicle — two blocks of Church Slavonic with the martyrdom scene between them. Correct, coloured, and in the hero slot it reads as a manuscript page. The greyscale plate it would have replaced shows the saint."
+    }
+  ],
+  "kept_with_a_caveat": [
+    {
+      "slug": "pelagia-of-tarsus",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pelagia_of_Tarsus_(Menologion_of_Basil_II).jpg",
+      "why": "the brazen bull she was roasted in fills the frame and she is small inside it. It is the Menologion of Basil II's own picture of her and it is her martyrdom, so it is kept — but at 352 px a reader meets an ox first."
+    }
+  ],
+  "note_on_the_watermark": "patapius-of-thebes, pelagia-of-tarsus and sabbas-the-sanctified come from the Menologion of Basil II, whose Vatican scans carry a faint diagonal watermark in the gold ground. 86 icons already in the corpus come from the same manuscript, so this sweep did not introduce it."
+}
