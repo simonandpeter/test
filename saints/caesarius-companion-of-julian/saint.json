@@ -79,6 +79,16 @@
       "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "relics",
+      "historical_name": "Rome",
+      "modern_name": "Rome, Italy",
+      "lat": 41.8931,
+      "lon": 12.4828,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },

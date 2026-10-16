@@ -45,6 +45,8 @@ const GOVERNED = {
   death: /(?:died|beheaded|martyred|suffered|burned|crucified|drowned|executed|stoned|shot|reposed)\s+(?:at|in)\s+/,
   birth: /(?:born|brought up)\s+(?:at|in)\s+/,
   see: /(?:bishop|archbishop|metropolitan|patriarch|presbyter|deacon|abbot|hegumen)\s+(?:of|at|in)\s+/,
+  relics: /relics (?:were |are |rest |lie )?(?:\w+ ){0,3}?(?:at|in|to)\s+/,
+  ministry: /founded (?:a |the )?(?:\w+ ){0,3}?(?:at|in|near)\s+/,
 };
 
 const kind = process.argv.find((a) => a in GOVERNED) ?? 'death';
