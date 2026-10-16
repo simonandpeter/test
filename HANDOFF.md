@@ -63,13 +63,21 @@ its own script, and `TODO 23` holds the four questions they could not settle.
 hand-typed pairs could silently make — a coordinate written the wrong way
 round, which the schema accepts and which puts a pope in Albania.
 
-**THE COLOUR SWEEP IS ALL BUT CLOSED.** The queue measured 172 greyscale
-icons on 16 October and `scratchpad/grey-queue.py` now measures **134**:
-thirty-eight are answered in colour, and of the 134 that remain **122 have
-been searched and refused with their reason recorded** in
-`scratchpad/icon-colour-swaps-a.json`, `-b.json` and `scratchpad/icon-refusals.json`.
-What a next wave has left is the twelve `scratchpad/grey-left.json` names and
-nothing else.
+**THE COLOUR SWEEP IS CLOSED.** The queue measured 172 greyscale icons on
+16 October and `scratchpad/grey-queue.py` now measures **134**: thirty-eight
+are answered in colour, and **every one of the 134 that remain has been
+searched and refused with its reason recorded** — in
+`scratchpad/icon-colour-swaps-a.json`, `-b.json`, `-d.json` and
+`scratchpad/icon-refusals.json`. The last twelve were the ones no collector
+had ever reached, and all twelve refused: Protasius of Milan has sixty-five
+free files and not one names him rather than Ambrose or a church; Job the
+Long-Suffering reaches Patriarch Job of Moscow eighteen times over; and
+Anastasia Nikolaevna and Ignatius Brianchaninov are both answerable, both
+free, and both **measure saturation 0.0000** — a colour picture of either
+does not exist to be had.
+
+Re-running any of it will cost the API and find the same. What is open is not
+a search but the two readings in Item 15 below.
 
 **Four swaps were made, looked at, and taken back out**, which is the one bar
 a script cannot clear: whether the picture reads as that saint in a 352 px

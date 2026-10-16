@@ -1,0 +1,2030 @@
+[
+ {
+  "slug": "sabel-of-persia",
+  "display_name": "Sabel of Persia",
+  "cur": {
+   "w": 1147,
+   "h": 1739,
+   "sat": 0.0
+  },
+  "feasts": [
+   "6-17"
+  ],
+  "forms": [
+   "ro:Savel",
+   "el:Σαβέλ",
+   "sr:Савел",
+   "ru:Савел Персиянин, Халкидонский"
+  ],
+  "ents": [
+   {
+    "qid": "Q4280681",
+    "label": "Manuil, Savel and Ismail",
+    "desc": "группа христианских мучеников",
+    "feast": [],
+    "p18": [
+     "Menaion icon (17 c., TsAK) - June - 28 Manuel, Savel and Ishmael.jpg"
+    ],
+    "p373": [],
+    "alias": [
+     "Савел",
+     "Исмаил Персиянин",
+     "Исмаил Халкидонский",
+     "Мученики Мануил, Савел и Исмаил",
+     "Савел и Исмаил Мануил"
+    ],
+    "human": false,
+    "canon": true,
+    "types": [
+     "Q109288828",
+     "Q109288756"
+    ],
+    "how": "wp/ru \"Мануил, Савел и Исмаил\"",
+    "skip": null
+   },
+   {
+    "qid": "Q1154613",
+    "label": "Mayres-Savel",
+    "desc": "commune in Isère, France",
+    "feast": [],
+    "p18": [
+     "Église Mayres Savel (Isère).jpg"
+    ],
+    "p373": [
+     "Mayres-Savel"
+    ],
+    "alias": [],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q484170"
+    ],
+    "how": "wp/ro \"Mayres-Savel\"",
+    "skip": "not a person (Q484170)"
+   },
+   {
+    "qid": "Q527451",
+    "label": "Rimon-et-Savel",
+    "desc": "commune in Drôme, France",
+    "feast": [],
+    "p18": [
+     "Rimon.jpg"
+    ],
+    "p373": [
+     "Rimon-et-Savel"
+    ],
+    "alias": [
+     "Rimont e Savèl"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q484170"
+    ],
+    "how": "wp/ro \"Rimon-et-Savel\"",
+    "skip": "not a person (Q484170)"
+   },
+   {
+    "qid": "Q12740457",
+    "label": "Savel Stiopul",
+    "desc": "Romanian actor",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [
+     "Savel Leontin Știopul"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/ro \"Savel Știopul\"",
+    "skip": "person, nothing says saint"
+   }
+  ],
+  "cands": [
+   {
+    "title": "File:Menaion icon (17 c., TsAK) - June - 28 Manuel, Savel and Ishmael.jpg",
+    "w": 244,
+    "h": 400,
+    "lic": "Public domain",
+    "qid": "Q4280681"
+   }
+  ],
+  "err": null
+ },
+ {
+  "slug": "leucius-of-caesarea",
+  "display_name": "Leucius of Caesarea",
+  "cur": {
+   "w": 1180,
+   "h": 1729,
+   "sat": 0.0
+  },
+  "feasts": [
+   "12-14",
+   "8-17"
+  ],
+  "forms": [
+   "ru:Левкий",
+   "ro:Levchie",
+   "el:Λεύκιος",
+   "sr:Левкије"
+  ],
+  "ents": [
+   {
+    "qid": "Q298168",
+    "label": "Lucius Aemilius Paullus Macedonicus",
+    "desc": "Roman general and statesman (c. 229 – 160 BC)",
+    "feast": [],
+    "p18": [
+     "The Triumph of Aemilius Paulus (detail).jpg"
+    ],
+    "p373": [
+     "Lucius Aemilius Paullus Macedonicus"
+    ],
+    "alias": [
+     "Lucius Æmilius Paullus Macedonicus",
+     "Aemilius Paulus",
+     "Æmilius Paulus",
+     "Macedonicus",
+     "Λεύκιος Αιμίλιος Παύλος"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Λεύκιος Αιμίλιος Παύλος Μακεδονικός\"",
+    "skip": "person, nothing says saint"
+   },
+   {
+    "qid": "Q1433",
+    "label": "Lucius Verus",
+    "desc": "joint Roman Emperor with Marcus Aurelius (161–169)",
+    "feast": [],
+    "p18": [
+     "Lucius Verus - MET - L.2007.26.jpg"
+    ],
+    "p373": [
+     "Lucius Verus"
+    ],
+    "alias": [
+     "Lucius Ceionius Commodus Verus Armeniacus",
+     "Lucius Aurelius Verus",
+     "Луций Цейоний Коммод Вер",
+     "Вер, Луций-Элий-Цезоний Коммод",
+     "Λεύκιος Βήρος",
+     "Λεύκιος Αυρήλιος Ουήρος",
+     "Λεύκιος Κηιόνιος Κόμμοδος"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Λεύκιος Βέρος\"",
+    "skip": "person, nothing says saint"
+   },
+   {
+    "qid": "Q1405",
+    "label": "Augustus",
+    "desc": "first emperor of the Roman Empire and founder of the Julio-Claudian dynasty",
+    "feast": [],
+    "p18": [
+     "Statue of the Emperor Octavian Augustus as Jupiter (6).png",
+     "Augustus of Prima Porta (inv. 2290).jpg"
+    ],
+    "p373": [
+     "Augustus"
+    ],
+    "alias": [
+     "Gaius Julius Caesar",
+     "Gaius Caesar",
+     "Caesar Octavianus",
+     "Gaius Octavius Thurinus",
+     "Gaius Octavius Caepias",
+     "Caius Octavius Thurinus",
+     "Gaius Julius Caesar Octavianus",
+     "Octavius Caesar"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Οκταβιανός Αύγουστος\"",
+    "skip": "person, nothing says saint"
+   }
+  ],
+  "cands": [],
+  "err": null
+ },
+ {
+  "slug": "narcissus-of-athens",
+  "display_name": "Narcissus of Athens",
+  "cur": {
+   "w": 1182,
+   "h": 1717,
+   "sat": 0.0
+  },
+  "feasts": [
+   "10-31"
+  ],
+  "forms": [
+   "ro:Narcis",
+   "el:Νάρκισσος",
+   "ru:Наркисс",
+   "sr:Наркис"
+  ],
+  "ents": [
+   {
+    "qid": "Q223967",
+    "label": "Narcissus",
+    "desc": "Wikimedia disambiguation page",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q4167410"
+    ],
+    "how": "wp/el \"Νάρκισσος\"",
+    "skip": "not a person (Q4167410)"
+   },
+   {
+    "qid": "Q3301296",
+    "label": "Narkissos",
+    "desc": "village in Preveza, Greece",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [
+     "Νάρκισσος Πρεβέζης"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q532"
+    ],
+    "how": "wp/el \"Νάρκισσος Πρέβεζας\"",
+    "skip": "not a person (Q532)"
+   },
+   {
+    "qid": "Q724689",
+    "label": "Tiberius Claudius Narcissus",
+    "desc": "Roman freedman and influential member of Claudius' imperial court",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [
+     "Narcissus",
+     "Νάρκισσος"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Τιβέριος Κλαύδιος Νάρκισσος\"",
+    "skip": "person, nothing says saint"
+   }
+  ],
+  "cands": [],
+  "err": null
+ },
+ {
+  "slug": "eugene-of-cherson",
+  "display_name": "Eugene of Cherson",
+  "cur": {
+   "w": 1194,
+   "h": 1723,
+   "sat": 0.0
+  },
+  "feasts": [
+   "3-7"
+  ],
+  "forms": [
+   "ro:Evghenie",
+   "el:Ευγένιος",
+   "sr:Евгеније",
+   "ru:Евгений Херсонесский"
+  ],
+  "ents": [
+   {
+    "qid": "Q107205598",
+    "label": "Saint Basil of Chersonesus",
+    "desc": "Hieromartyr of Cherson",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [
+     "Святой Василий"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/ru \"Василий Херсонесский\"",
+    "skip": null
+   },
+   {
+    "qid": "Q61428027",
+    "label": "Yevgeny",
+    "desc": "Wikimedia disambiguation page",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [
+     "Evgeny"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q4167410"
+    ],
+    "how": "wp/ru \"Евгений (значения)\"",
+    "skip": "not a person (Q4167410)"
+   },
+   {
+    "qid": "Q12151190",
+    "label": "Hieromartyrs of Cherson",
+    "desc": "",
+    "feast": [
+     "March 20",
+     "March 7"
+    ],
+    "p18": [],
+    "p373": [],
+    "alias": [],
+    "human": false,
+    "canon": true,
+    "types": [
+     "Q16334295"
+    ],
+    "how": "wp/ru \"Священномученики Херсонесские\"",
+    "skip": null
+   }
+  ],
+  "cands": [],
+  "err": null
+ },
+ {
+  "slug": "acepsimas-of-naeson",
+  "display_name": "Acepsimas of Naeson",
+  "cur": {
+   "w": 1216,
+   "h": 1780,
+   "sat": 0.0
+  },
+  "feasts": [
+   "11-3"
+  ],
+  "forms": [
+   "ro:Achepsima",
+   "el:Ακεψιμάς",
+   "ru:Акепсим Наессонский (Анисский), Арбельский, Персидский",
+   "sr:Акепсим"
+  ],
+  "ents": [
+   {
+    "qid": "Q2995",
+    "label": "November 3",
+    "desc": "day of the year",
+    "feast": [],
+    "p18": [],
+    "p373": [
+     "3 November"
+    ],
+    "alias": [
+     "November 3rd",
+     "3rd of November",
+     "3 November",
+     "Nov 3",
+     "3 Νοέμβρη"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q14795564"
+    ],
+    "how": "wp/ro \"3 noiembrie\"",
+    "skip": "not a person (Q14795564)"
+   },
+   {
+    "qid": "Q688564",
+    "label": "calendar of saints",
+    "desc": "traditional Christian method of organizing a liturgical year by associating each day with one or more saints",
+    "feast": [],
+    "p18": [],
+    "p373": [
+     "Saints days"
+    ],
+    "alias": [
+     "calendarul sărbătorilor religioase",
+     "sărbători religioase"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [],
+    "how": "wp/ro \"Calendarul sfinților\"",
+    "skip": "not a person ()"
+   }
+  ],
+  "cands": [],
+  "err": null
+ },
+ {
+  "slug": "protasius-of-milan",
+  "display_name": "Protasius of Milan",
+  "cur": {
+   "w": 1259,
+   "h": 1766,
+   "sat": 0.0
+  },
+  "feasts": [
+   "10-14"
+  ],
+  "forms": [
+   "ro:Protasie",
+   "el:Προτάσιος",
+   "ru:Протасий Медиоланский",
+   "sr:Протасије"
+  ],
+  "ents": [
+   {
+    "qid": "Q43689",
+    "label": "Ambrose",
+    "desc": "Roman theologian and Bishop of Milan (c. 340–397)",
+    "feast": [
+     "December 7",
+     "December 20"
+    ],
+    "p18": [
+     "AmbroseOfMilan.jpg"
+    ],
+    "p373": [
+     "Saint Ambrose"
+    ],
+    "alias": [
+     "Ambrosius Mediolanensis",
+     "St. Ambrosius",
+     "Saint, Bishop of Milan Ambroise",
+     "St. Ambrose",
+     "Saint, Bishop of Milan Aurelio Ambrogio",
+     "Saint, Bishop of Milan Ambrogio",
+     "Saint, Bishop of Milan Ambrose",
+     "Saint Ambrose"
+    ],
+    "human": true,
+    "canon": true,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/ru \"Амвросий Медиоланский\"",
+    "skip": null
+   },
+   {
+    "qid": "Q1515920",
+    "label": "Gervasius and Protasius",
+    "desc": "Christian saints and martyrs",
+    "feast": [
+     "June 19"
+    ],
+    "p18": [
+     "Philippe de Champaigne SS Gervase and Protase.jpg",
+     "Rapallo-IMG 1629.JPG"
+    ],
+    "p373": [
+     "Saint Gervasius"
+    ],
+    "alias": [
+     "Saint Gervase and Saint Protase"
+    ],
+    "human": false,
+    "canon": true,
+    "types": [
+     "Q16334295",
+     "Q109288825"
+    ],
+    "how": "wp/ru \"Гервасий и Протасий\"",
+    "skip": null
+   },
+   {
+    "qid": "Q1071570",
+    "label": "Basilica of Sant'Ambrogio",
+    "desc": "Romanesque church in Milan",
+    "feast": [],
+    "p18": [
+     "Milan Sant'Ambrogio 016 4923.jpg"
+    ],
+    "p373": [
+     "Sant'Ambrogio (Milan)"
+    ],
+    "alias": [
+     "Basilica di Sant'Ambrogio",
+     "Basilica Martyrum",
+     "Сант-Амброджо",
+     "Амвросианская базилика",
+     "Амброзианская базилика"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q120560",
+     "Q1497375"
+    ],
+    "how": "wp/ru \"Сант-Амброджо (Милан)\"",
+    "skip": "not a person (Q120560,Q1497375)"
+   }
+  ],
+  "cands": [
+   {
+    "title": "File:Philippe de Champaigne (49636270136).jpg",
+    "w": 6016,
+    "h": 4000,
+    "lic": "CC BY 2.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Cossé-le-Vivien - église Saint-Gervais-et-Saint-Protais 13.jpg",
+    "w": 5472,
+    "h": 3648,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Dettaglio Sant'Ambrogio rientra a Milano.jpg",
+    "w": 5184,
+    "h": 3456,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Dettaglio del dipinto Sant’Ambrogio rientra a Milano dopo il restauro del 2019.jpg",
+    "w": 5184,
+    "h": 3456,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Dettaglio del dipinto Sant’Ambrogio rientra a Milano prima del restauro del 2019.jpg",
+    "w": 5184,
+    "h": 3456,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Giovanni Barbagelata, Polittico di S.Ambrogio nella parrocchiale di Varazze,1499 01.jpg",
+    "w": 4608,
+    "h": 3072,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Barcelona Mare de Déu de la Bonanova church. Mosaics on the façade Saints Gervasius and Protasius.jpg",
+    "w": 4288,
+    "h": 2848,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Barcelona Mare de Déu de la Bonanova church.jpg",
+    "w": 4288,
+    "h": 2848,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Michael Pacher 001.jpg",
+    "w": 4096,
+    "h": 2191,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:San Ambrosio y San Marcos, tribuna de la Iglesia del Sagrario (Sevilla).jpg",
+    "w": 3951,
+    "h": 3088,
+    "lic": "CC BY 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Divi Ambrosii Episcopi Mediolanensis Omnia Opera.tif",
+    "w": 3764,
+    "h": 5948,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Château-Gontier (53) Église Sainte-Trinité - Intérieur - 13.jpg",
+    "w": 3762,
+    "h": 3262,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Château-Gontier - couvent des Ursulines, église de la Sainte-Trinité 11.jpg",
+    "w": 3648,
+    "h": 5472,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:20250303 St Ambrose - Marco Antonio Prestinari - Museo del Duomo Milano.jpg",
+    "w": 3555,
+    "h": 6240,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Andrea commodi, martirio di san gervasio, 1595-1599 ca. 01.jpg",
+    "w": 3451,
+    "h": 4757,
+    "lic": "CC BY 3.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Andrea commodi, martirio di san gervasio, 1595-1599 ca. 02.jpg",
+    "w": 3448,
+    "h": 4616,
+    "lic": "CC BY 3.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:1775 - San Gervasio - Chiesa di Sant'Ambrogio - Trezzano sul Naviglio - Foto Giovanni Dall'Orto - 26 Novembre 2025.jpg",
+    "w": 3256,
+    "h": 4488,
+    "lic": "CC BY-SA 2.5 it",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Friesach - Dominikanerkirche - Kanzel - Ambrosius.jpg",
+    "w": 3205,
+    "h": 4935,
+    "lic": "CC0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Menaion icon (17 c., TsAK) - October.jpg",
+    "w": 3047,
+    "h": 4000,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Interieur, tegeltableau- \"Anbrosius\" - Reeuwijk - 20374434 - RCE.jpg",
+    "w": 3002,
+    "h": 3020,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Peinture Saint-Gervais Rouen Gervais.JPG",
+    "w": 3000,
+    "h": 4000,
+    "lic": "CC BY-SA 3.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Il redentore tra i ss. gervasio e protasio, IV-VIII secolo, con restauri del XVIII secolo, 04.jpg",
+    "w": 2880,
+    "h": 2304,
+    "lic": "CC BY 3.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Manuscript Leaf Cutting Showing an Illumiated Initial R with St. Protasius and St. Gervasius MET DP163290.jpg",
+    "w": 2834,
+    "h": 2708,
+    "lic": "CC0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Philippe de Champaigne - Transfert des corps de Saint-Gervais et Saint-Protais (Louvre, INV 1131).jpg",
+    "w": 2816,
+    "h": 2112,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Hans Johan Frederik Berg, copy after Moretto da Brescia - Virgin and Child Enthroned with the Four Fathers of the Latin Church - NG.K&H.A.K.1175 - National Museum of Art, Architecture and Design.jpg",
+    "w": 2777,
+    "h": 4000,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Cittá della Pieve Dom - Perugino Hochaltar 1.jpg",
+    "w": 2706,
+    "h": 3223,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Busca Antonio. Sant'Agostino e Sant'Ambrogio.jpg",
+    "w": 2521,
+    "h": 1920,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Champaigne reliques-de-saint-gervais 1200px.jpg",
+    "w": 2228,
+    "h": 1200,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Jarnages église chapelle nord-est plaque hommage.jpg",
+    "w": 2123,
+    "h": 2831,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Jarnages église bannière.jpg",
+    "w": 2059,
+    "h": 2746,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Clevelandart 1969.23.jpg",
+    "w": 2006,
+    "h": 3400,
+    "lic": "CC0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Triunfo del Sacramento - Francisco de Herrera el Mozo.jpg",
+    "w": 2000,
+    "h": 1823,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:3923 - Sant'Ambrogio. Sant'Apollinare nuovo, Baggio - Foto Giovanni Dall'Orto, 22 Agosto 2026.jpg",
+    "w": 1986,
+    "h": 2360,
+    "lic": "CC BY-SA 2.5 it",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Nazarius, Gervase, Protase, and Celsius of Mediolanum (Menologion of Basil II).jpg",
+    "w": 1949,
+    "h": 1330,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:0438 - Milano - San Nazaro - Epigrafe per S. Nazaro - Foto Giovanni Dall'Orto 5-May-2007.jpg",
+    "w": 1881,
+    "h": 1022,
+    "lic": "Attribution",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:0437 - Milano - San Nazaro - Prima epigrafe di S. Ambrogio - Foto Giovanni Dall'Orto 5-May-2007.jpg",
+    "w": 1757,
+    "h": 907,
+    "lic": "Attribution",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Pentecost Window Cologne Cathedral.png",
+    "w": 1726,
+    "h": 2844,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Philippe de Champaigne - Sts Gervase abd Protase Appearing to St Ambrose - WGA4727.jpg",
+    "w": 1540,
+    "h": 800,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Sant'Ambrogio, confalone di Milano a Palazzo Marino.jpg",
+    "w": 1536,
+    "h": 2048,
+    "lic": "CC BY-SA 3.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:IMG 6427 - MI - Sant'Eustorgio - Cimitero paleocristiano - Vittorino esorcista + 3 nov 377 - Foto Giovanni Dall'Orto - 1-Mar-2007.jpg",
+    "w": 1505,
+    "h": 1324,
+    "lic": "Attribution",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Guenroc (22) Église 31.jpg",
+    "w": 1488,
+    "h": 1984,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:St ambrose and gregory gio batt ricci.png",
+    "w": 1438,
+    "h": 932,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Lodovico Pogliaghi - Symmachus reads the apologia of paganism in presence of St Ambrosius.png",
+    "w": 1327,
+    "h": 921,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Lodovico Pogliaghi - Symmachus reads the apologia of paganism in presence of St Ambrosius.png",
+    "w": 1327,
+    "h": 921,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:S. Ambrosii Episcopi Effigies Ex Antiquis.jpg",
+    "w": 1301,
+    "h": 2075,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Rapallo-IMG 1629.JPG",
+    "w": 1264,
+    "h": 2340,
+    "lic": "CC BY 2.5",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Peinture Saint-Gervais Rouen Gervais (cropped).JPG",
+    "w": 1263,
+    "h": 1684,
+    "lic": "CC BY-SA 3.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:De officiis ministrorum.jpg",
+    "w": 1222,
+    "h": 1696,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Holy martyr Gervasius PRIZREN 1 668A9143-2 - Bogorodica Ljeviška.jpg",
+    "w": 1067,
+    "h": 1600,
+    "lic": "CC BY 4.0",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:3260 - Milano, Duomo - Copia del Crismon Sancti Ambrosii - Foto Giovanni Dall'Orto - 11-Febr-2007.jpg",
+    "w": 1060,
+    "h": 1647,
+    "lic": "Attribution",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Philippe de Champaigne - St. Gervais and St. Protais Reveal Themselves to Ambrose of Milan - NMH 2773-1863 - Nationalmuseum.jpg",
+    "w": 1000,
+    "h": 547,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Legendari di sancti istoriado uulgar, 1497 – (Gervasio e Protasio) - BEIC IE4411197.jpg",
+    "w": 868,
+    "h": 651,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Lodovico Pogliaghi - Theodosius' public repentance before Archbishop Ambrose of Milan, 390.png",
+    "w": 867,
+    "h": 1287,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Chrismon Sancti Ambrosii.jpg",
+    "w": 682,
+    "h": 686,
+    "lic": "CC BY 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:9915 - Milano - S. Ambrogio - Scuola luinesca - S. Gervasio - Foto Giovanni Dall'Orto 25-Apr-2007.jpg",
+    "w": 653,
+    "h": 920,
+    "lic": "Attribution",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Saint Ambrose. Steel engraving. Wellcome V0031257.jpg",
+    "w": 648,
+    "h": 486,
+    "lic": "CC BY 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Philippe de Champaigne SS Gervase and Protase.jpg",
+    "w": 638,
+    "h": 420,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Der Heiligen Gervasius und Prothasius.jpg",
+    "w": 600,
+    "h": 800,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:0091 - Milano - Sant'Ambrogio - Canonica - Frammento di lapide - Foto Giovanni Dall'Orto 25-Apr-2007.jpg",
+    "w": 543,
+    "h": 387,
+    "lic": "Attribution",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Der Heiligen Gervasius und Prothasius 2.jpg",
+    "w": 522,
+    "h": 746,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Gervaseandprotase.jpg",
+    "w": 500,
+    "h": 359,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Der Heiligen Leben Sommerteil GWM11352, H 9970, Schramm III, 387.jpg",
+    "w": 480,
+    "h": 640,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   },
+   {
+    "title": "File:Saint Ambrose of Milan - Orthodox Icon 2.jpg",
+    "w": 451,
+    "h": 649,
+    "lic": "CC BY 4.0",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:AmbroseOfMilan.jpg",
+    "w": 312,
+    "h": 600,
+    "lic": "Public domain",
+    "qid": "Q43689"
+   },
+   {
+    "title": "File:Ingres - MI.867.4165, Saint Gervais.jpg",
+    "w": 187,
+    "h": 500,
+    "lic": "Public domain",
+    "qid": "Q1515920"
+   }
+  ],
+  "err": null
+ },
+ {
+  "slug": "anastasia-daughter-of-nicholas-ii",
+  "display_name": "Anastasia, daughter of Nicholas II",
+  "cur": {
+   "w": 1280,
+   "h": 1760,
+   "sat": 0.0
+  },
+  "feasts": [
+   "7-17",
+   "7-4"
+  ],
+  "forms": [
+   "ro:Anastasia",
+   "ru:Анастасия (Романова)"
+  ],
+  "ents": [
+   {
+    "qid": "Q39316079",
+    "label": "Anastasia",
+    "desc": "female given name (Анастасия)",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [
+     "Настя",
+     "Настасья",
+     "Анастасия",
+     "Анастасия"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q11879590"
+    ],
+    "how": "wp/ru \"Анастасия\"",
+    "skip": "not a person (Q11879590)"
+   },
+   {
+    "qid": "Q486609",
+    "label": "Anastasia",
+    "desc": "1997 animated film directed by Don Bluth and Gary Goldman",
+    "feast": [],
+    "p18": [],
+    "p373": [
+     "Anastasia (1997 film)"
+    ],
+    "alias": [],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q202866"
+    ],
+    "how": "wp/ru \"Анастасия (мультфильм)\"",
+    "skip": "not a person (Q202866)"
+   },
+   {
+    "qid": "Q151130",
+    "label": "Grand Duchess Anastasia Nikolaevna of Russia",
+    "desc": "Grand Duchess of Russia (1901–1918); fourth child and youngest daughter of Nicholas II and Alexandra Feodorovna (Alix of Hesse)",
+    "feast": [
+     "July 17"
+    ],
+    "p18": [
+     "Grand Duchess Anastasia Nikolaevna.jpg"
+    ],
+    "p373": [
+     "Anastasia Nikolaevna of Russia"
+    ],
+    "alias": [
+     "Anastasia Nikolaevna Romanova",
+     "Anastasia Nikolaevna Romanov",
+     "Anastasia Romanova",
+     "Anastasia Nicolaevna",
+     "Anastasíya Nikoláyevna Románova",
+     "Anastasia Nicolaievna",
+     "Великая княжна Анастасия",
+     "Романова, Анастасия Николаевна"
+    ],
+    "human": true,
+    "canon": true,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/ru \"Анастасия Николаевна\"",
+    "skip": null
+   }
+  ],
+  "cands": [
+   {
+    "title": "File:Olga, Tatiana and Anastasia Nikolaevna with peasant people near Mogilev.jpg",
+    "w": 4065,
+    "h": 3976,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Memorial plaques of Princesses Maria (remains unrecovered) and Anastasia, daughters of Tsar Nicholas II, Peter and Paul Cathedral (36371808973).jpg",
+    "w": 3726,
+    "h": 4000,
+    "lic": "CC BY 2.0",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Russian Imperial Family 1913.jpg",
+    "w": 3711,
+    "h": 3281,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Grand Duchess Anastasia Nikolaevna Crisco edit letters removed.jpg",
+    "w": 3655,
+    "h": 5264,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Grand Duchess Anastasia Nikolaevna.jpg",
+    "w": 3633,
+    "h": 5018,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:OTMAA 1910 in court dress1.jpg",
+    "w": 3475,
+    "h": 3744,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Otmaincaptivity1917.jpg",
+    "w": 2592,
+    "h": 1944,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Anastasia Nikolaevna of Russia on the balcony of the Alexander Palace.jpg",
+    "w": 2161,
+    "h": 2677,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Nicholas II and Anastasia Nikolaevna of Russia (1).jpg",
+    "w": 1920,
+    "h": 1888,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Romanov - Saint George Monastery - Balaklava, Sevastopol, 1916 (1 of 7).jpg",
+    "w": 1794,
+    "h": 1750,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:OTMA at window, 1913 (2 of 6).jpg",
+    "w": 1279,
+    "h": 1268,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Anastasia Romanova - Standart, 1914.jpg",
+    "w": 1178,
+    "h": 1960,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Anastasiaca1911.jpg",
+    "w": 1120,
+    "h": 1456,
+    "lic": "Attribution",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Anastasia-Tatiana-Maria Romanova - Feodorovsky hospital, 1915.jpg",
+    "w": 1080,
+    "h": 714,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Olga, Alexei, Anastasia, Tatiana in captivity at Tsarskoe Selo.jpg",
+    "w": 800,
+    "h": 470,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:OTMAA in 1910 (2).jpg",
+    "w": 669,
+    "h": 1024,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Olga, Alexis & Anastasia Romanova of Russia - swing - Tobolsk, 1917-1918.jpg",
+    "w": 511,
+    "h": 426,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Forensic rec. Romanov 05.jpg",
+    "w": 466,
+    "h": 641,
+    "lic": "CC BY-SA 3.0",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:OTMA monograms.jpg",
+    "w": 450,
+    "h": 275,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   },
+   {
+    "title": "File:Anna Anderson Anastasia Side Profile.jpg",
+    "w": 273,
+    "h": 184,
+    "lic": "Public domain",
+    "qid": "Q151130"
+   }
+  ],
+  "err": null
+ },
+ {
+  "slug": "eleazar-the-scribe",
+  "display_name": "Eleazar the Scribe",
+  "cur": {
+   "w": 1280,
+   "h": 1599,
+   "sat": 0.0
+  },
+  "feasts": [
+   "8-1"
+  ],
+  "forms": [
+   "ro:Eleazar",
+   "el:Ελεάζαρος",
+   "sr:Елеазар",
+   "ru:Елеазар Иерусалимский"
+  ],
+  "ents": [
+   {
+    "qid": "Q2679054",
+    "label": "Eleazar",
+    "desc": "male given name",
+    "feast": [],
+    "p18": [],
+    "p373": [
+     "Eleazar (given name)"
+    ],
+    "alias": [],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q12308941"
+    ],
+    "how": "wp/ru \"Елеазар\"",
+    "skip": "not a person (Q12308941)"
+   },
+   {
+    "qid": "Q51677",
+    "label": "High Priest of Israel",
+    "desc": "chief religious official of ancient Judaism",
+    "feast": [],
+    "p18": [],
+    "p373": [
+     "High priests of Israel"
+    ],
+    "alias": [
+     "High Priests of Israel",
+     "Cohen gadol",
+     "Kohen gadol"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q63187384",
+     "Q124467322"
+    ],
+    "how": "wp/ru \"Первосвященник\"",
+    "skip": "not a person (Q63187384,Q124467322)"
+   },
+   {
+    "qid": "Q2359988",
+    "label": "Woman with seven sons",
+    "desc": "Jewish martyr described in 2 Maccabees 7",
+    "feast": [
+     "August 1"
+    ],
+    "p18": [
+     "Saints Maccabees.jpg"
+    ],
+    "p373": [
+     "Woman with seven sons"
+    ],
+    "alias": [
+     "Holy Maccabean martyrs",
+     "Maccabean martyrs",
+     "Holy Machabees",
+     "Holy Maccabees",
+     "Маккавей Евсевон",
+     "Маккавей Авим",
+     "Маккавей, Адим",
+     "Маккавей Антонин"
+    ],
+    "human": false,
+    "canon": true,
+    "types": [
+     "Q22813674"
+    ],
+    "how": "wp/ru \"Семь мучеников Маккавеев\"",
+    "skip": null
+   }
+  ],
+  "cands": [
+   {
+    "title": "File:Pilastro con icone, 600-650 ca. 03 solomone e i maccabei.jpg",
+    "w": 3456,
+    "h": 2304,
+    "lic": "CC BY 3.0",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Menaion icon (17 c., TsAK) - August.jpg",
+    "w": 3317,
+    "h": 4000,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:The Dormition of St. Sava and the Holy Maccabee Martyrs (Patriarchate of Peć, 17th c.).png",
+    "w": 3240,
+    "h": 4320,
+    "lic": "CC BY-SA 3.0 rs",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:150.The Courage of a Mother.jpg",
+    "w": 2334,
+    "h": 2915,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Pilastro con icone, 600-650 ca. 02 solomone e i maccabei.jpg",
+    "w": 2080,
+    "h": 3408,
+    "lic": "CC BY 3.0",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Menalogical icon for August (c. 1800, Russia. Priv. coll.).jpg",
+    "w": 2000,
+    "h": 2350,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Sent Salomoen martyr-08.png",
+    "w": 1070,
+    "h": 1520,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Stattler-Machabeusze.jpg",
+    "w": 1024,
+    "h": 712,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Audierne Saint-Germain Sept Maccabées.jpg",
+    "w": 944,
+    "h": 665,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Sent Salomoen martyr-04.png",
+    "w": 942,
+    "h": 1298,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Legendari di sancti istoriado uulgar, 1497 – (Maccabei) - BEIC IE4411198.jpg",
+    "w": 912,
+    "h": 633,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Hannah and seven sons 01.jpg",
+    "w": 700,
+    "h": 813,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Saints Maccabees.jpg",
+    "w": 700,
+    "h": 590,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Fresco of the 7 Maccabean Martyrs.jpg",
+    "w": 480,
+    "h": 450,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Maccabees Greek fragment.jpg",
+    "w": 450,
+    "h": 520,
+    "lic": "CC0",
+    "qid": "Q2359988"
+   },
+   {
+    "title": "File:Ciseri, Antonio - Das Martyrium der sieben Makkabäer - 1863.jpg",
+    "w": 275,
+    "h": 479,
+    "lic": "Public domain",
+    "qid": "Q2359988"
+   }
+  ],
+  "err": null
+ },
+ {
+  "slug": "ignatius-brianchaninov",
+  "display_name": "Ignatius Brianchaninov",
+  "cur": {
+   "w": 1280,
+   "h": 1512,
+   "sat": 0.0
+  },
+  "feasts": [
+   "4-30"
+  ],
+  "forms": [
+   "ro:Ignatie Briancianinov",
+   "ro:Dimitrie",
+   "el:Ιγνάτιος",
+   "el:Μπριαντσιανίνωφ",
+   "ru:Игнатий Брянчанинов"
+  ],
+  "ents": [
+   {
+    "qid": "Q12720653",
+    "label": "Andrei Andreicuț",
+    "desc": "Romanian bishop",
+    "feast": [],
+    "p18": [
+     "AndreiAndreicut2012.jpg"
+    ],
+    "p373": [
+     "Andrew (Andreicuț)"
+    ],
+    "alias": [
+     "Metropolitan of Cluj Andrei",
+     "Ioan Andreicuț",
+     "Ioan Andreicuț"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/ro \"Andrei Andreicuț\"",
+    "skip": null
+   },
+   {
+    "qid": "Q929140",
+    "label": "Philokalia",
+    "desc": "Collection of texts by spiritual masters of the Eastern Orthodox Church.",
+    "feast": [],
+    "p18": [
+     "Philokalia in russian 1905.jpg"
+    ],
+    "p373": [
+     "Philokalia"
+    ],
+    "alias": [
+     "Filocalie"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q7725634"
+    ],
+    "how": "wp/ro \"Filocalia\"",
+    "skip": "not a person (Q7725634)"
+   },
+   {
+    "qid": "Q984143",
+    "label": "Ignatius Bryanchaninov",
+    "desc": "Russian Orthodox saint (1807-1867)",
+    "feast": [
+     "April 30"
+    ],
+    "p18": [
+     "Ignatiy2.jpg"
+    ],
+    "p373": [
+     "Ignatius Brianchaninov"
+    ],
+    "alias": [
+     "Dmitry Alexandrovich Brianchaninov",
+     "Ignace Briantchaninov",
+     "Saint Ignatius",
+     "Dmitry Bryanchaninov",
+     "Dmitry Aleksandrovich Bryanchaninov",
+     "Игнатий Брянчанинов",
+     "Дмитрий Брянчанинов",
+     "Брянчанинов, Дмитрий Александрович"
+    ],
+    "human": true,
+    "canon": true,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/ro \"Ignatie Breanceaninov\"",
+    "skip": null
+   }
+  ],
+  "cands": [
+   {
+    "title": "File:Hirotonie 1.jpg",
+    "w": 6000,
+    "h": 4000,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q12720653"
+   },
+   {
+    "title": "File:Ignatius Brianchaninov.png",
+    "w": 2979,
+    "h": 3519,
+    "lic": "Public domain",
+    "qid": "Q984143"
+   },
+   {
+    "title": "File:Muncelu Bartolomeu IMG 6879.jpg",
+    "w": 2592,
+    "h": 1944,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q12720653"
+   },
+   {
+    "title": "File:Signature of Ignatius Brianchaninov.png",
+    "w": 2261,
+    "h": 1169,
+    "lic": "Public domain",
+    "qid": "Q984143"
+   },
+   {
+    "title": "File:Ignatiy2.jpg",
+    "w": 1512,
+    "h": 1810,
+    "lic": "Public domain",
+    "qid": "Q984143"
+   },
+   {
+    "title": "File:AndreiAndreicut2012.jpg",
+    "w": 1260,
+    "h": 1246,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q12720653"
+   },
+   {
+    "title": "File:Ignatius Brianchaninov.jpg",
+    "w": 700,
+    "h": 891,
+    "lic": "Public domain",
+    "qid": "Q984143"
+   },
+   {
+    "title": "File:Брянчанинов ДА.jpg",
+    "w": 299,
+    "h": 350,
+    "lic": "Public domain",
+    "qid": "Q984143"
+   }
+  ],
+  "err": null
+ },
+ {
+  "slug": "innocent-of-moscow",
+  "display_name": "Innocent of Moscow",
+  "cur": {
+   "w": 1280,
+   "h": 1636,
+   "sat": 0.0
+  },
+  "feasts": [
+   "10-6",
+   "3-31",
+   "9-23"
+  ],
+  "forms": [
+   "ru:Иннокентий",
+   "el:Ιννοκέντιος",
+   "ro:Inochentie"
+  ],
+  "ents": [
+   {
+    "qid": "Q170386",
+    "label": "Innocent II",
+    "desc": "Pope of the Catholic Church (1130–1143)",
+    "feast": [],
+    "p18": [
+     "Pope Innocent II – Santa Maria in Trastevere.jpg",
+     "B Innozenz II.jpg"
+    ],
+    "p373": [
+     "Innocentius II"
+    ],
+    "alias": [
+     "Pope Innocent II",
+     "Грегорио Папарески",
+     "Πάπας Ιννοκέντιος Β'",
+     "Πάπας Ιννοκέντιος Β´",
+     "Inocențiu al II-lea"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Πάπας Ιννοκέντιος Β΄\"",
+    "skip": "person, nothing says saint"
+   },
+   {
+    "qid": "Q128076",
+    "label": "Innocent III",
+    "desc": "Head of the Catholic Church from 1198 to 1216",
+    "feast": [],
+    "p18": [
+     "Pope Innocent III (Monastery of Subiaco).jpg"
+    ],
+    "p373": [
+     "Innocentius III"
+    ],
+    "alias": [
+     "Pope Innozenz III",
+     "‏ papa Innocenzo III",
+     "Lothar of Segni",
+     "Innocentius PP. III",
+     "Lotario dei Conti di Segni",
+     "Innozenz III. Papst",
+     "Pope Innocentius III",
+     "Lotario di Segni"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Πάπας Ιννοκέντιος Γ΄\"",
+    "skip": "person, nothing says saint"
+   },
+   {
+    "qid": "Q101266",
+    "label": "Innocent X",
+    "desc": "pope from 1644 to 1655",
+    "feast": [],
+    "p18": [
+     "Diego Velázquez, Portrait du pape Innocent X, 1650, huile sur toile, 140 × 120 cm, Rome, Galleria Doria Pamphilj (inv. 237).jpg"
+    ],
+    "p373": [
+     "Innocentius X"
+    ],
+    "alias": [
+     "Pope Innocent X",
+     "pape Innocent X",
+     "‏ papa Innocenzo‏ X",
+     "Innozenz X. Papst",
+     "Giambattista Pamphili",
+     "Innocentius PP. X",
+     "Innocentius X",
+     "Papa Inocencio X"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Πάπας Ιννοκέντιος Ι΄\"",
+    "skip": "person, nothing says saint"
+   }
+  ],
+  "cands": [],
+  "err": null
+ },
+ {
+  "slug": "parmenas-the-deacon",
+  "display_name": "Parmenas the Deacon",
+  "cur": {
+   "w": 1280,
+   "h": 1564,
+   "sat": 0.0
+  },
+  "feasts": [
+   "7-28"
+  ],
+  "forms": [
+   "ro:Parmena",
+   "el:Παρμενάς",
+   "sr:Пармен",
+   "ru:Пармен"
+  ],
+  "ents": [
+   {
+    "qid": "Q1398612",
+    "label": "Parmenas",
+    "desc": "1st century deacon",
+    "feast": [
+     "January 23"
+    ],
+    "p18": [],
+    "p373": [],
+    "alias": [],
+    "human": false,
+    "canon": true,
+    "types": [
+     "Q20643955"
+    ],
+    "how": "wp/el \"Παρμενάς\"",
+    "skip": null
+   },
+   {
+    "qid": "Q296233",
+    "label": "Parmenion",
+    "desc": "Ancient Macedonian general",
+    "feast": [],
+    "p18": [
+     "Allar-Alexandre.jpg"
+    ],
+    "p373": [],
+    "alias": [
+     "Parmenio"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Παρμενίων\"",
+    "skip": "person, nothing says saint"
+   },
+   {
+    "qid": "Q22694970",
+    "label": "Parmenion of Mytilene",
+    "desc": "ancient Olympic victor",
+    "feast": [],
+    "p18": [],
+    "p373": [],
+    "alias": [
+     "Parmenides",
+     "Παρμενίδης"
+    ],
+    "human": true,
+    "canon": false,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/el \"Παρμενίων ο Λέσβιος\"",
+    "skip": "person, nothing says saint"
+   }
+  ],
+  "cands": [
+   {
+    "title": "File:FlorenceBaptistery PartDeaconParmenas.png",
+    "w": 504,
+    "h": 736,
+    "lic": "CC BY 4.0",
+    "qid": "Q1398612"
+   }
+  ],
+  "err": null
+ },
+ {
+  "slug": "job-the-long-suffering",
+  "display_name": "Job the Long-Suffering",
+  "cur": {
+   "w": 738,
+   "h": 888,
+   "sat": 0.0299
+  },
+  "feasts": [
+   "5-6"
+  ],
+  "forms": [
+   "ro:Iov",
+   "el:Ιώβ",
+   "sr:Јов",
+   "ru:Иов Многострадальный"
+  ],
+  "ents": [
+   {
+    "qid": "Q179962",
+    "label": "Job",
+    "desc": "biblical figure",
+    "feast": [
+     "May 10"
+    ],
+    "p18": [
+     "Georges de La Tour 044.jpg"
+    ],
+    "p373": [
+     "Job"
+    ],
+    "alias": [
+     "Пророк Иов",
+     "Иов, библейский персонаж",
+     "Иов"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q20643955"
+    ],
+    "how": "wp/ru \"Иов\"",
+    "skip": "person, nothing says saint"
+   },
+   {
+    "qid": "Q1652629",
+    "label": "Patriarch Job of Moscow",
+    "desc": "first Patriarch of Moscow, from 1589 to 1605",
+    "feast": [
+     "April 18",
+     "July 2"
+    ],
+    "p18": [
+     "Патриарх Иов.png",
+     "Patriarch Job - parsuna.jpg"
+    ],
+    "p373": [
+     "Patriarch Job of Moscow"
+    ],
+    "alias": [
+     "Патриарх Московский Иов",
+     "Патриарх Иов",
+     "Иов, патриарх всероссийский",
+     "Святитель Иов",
+     "Иов Московский",
+     "Иов Патриарх Московский",
+     "Иов, Патриарх Московский"
+    ],
+    "human": true,
+    "canon": true,
+    "types": [
+     "Q5"
+    ],
+    "how": "wp/ru \"Иов (патриарх Московский)\"",
+    "skip": null
+   },
+   {
+    "qid": "Q4577",
+    "label": "Book of Job",
+    "desc": "book of the Bible",
+    "feast": [],
+    "p18": [
+     "Job Scroll (cropped).jpg",
+     "Arabic job (ch. 28, v. 1-21), 10th century (The S.S. Teacher's Edition-The Holy Bible - Plate XVIII).jpg"
+    ],
+    "p373": [
+     "Book of Job"
+    ],
+    "alias": [
+     "Job",
+     "Job (Book of the Bible)",
+     "Иов.",
+     "Iov",
+     "Iov (Cartea Bibliei)"
+    ],
+    "human": false,
+    "canon": false,
+    "types": [
+     "Q7725634",
+     "Q29154430"
+    ],
+    "how": "wp/ru \"Книга Иова\"",
+    "skip": "not a person (Q7725634,Q29154430)"
+   }
+  ],
+  "cands": [
+   {
+    "title": "File:Godunov Psalter (1594, RGB) - The mass.jpg",
+    "w": 3388,
+    "h": 5019,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Б. Никитская 18. Малое Вознесение15.JPG",
+    "w": 2304,
+    "h": 3072,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:011 Галерея Юга Житие первого патриарха святителя Иова 35х20 офорт акварель 2013.jpg",
+    "w": 1900,
+    "h": 1001,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:20160726 121917 July 2016 in Moscow.jpg",
+    "w": 1872,
+    "h": 3328,
+    "lic": "CC0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Славься в веках, Святитель Иов - panoramio.jpg",
+    "w": 1735,
+    "h": 1870,
+    "lic": "CC BY-SA 3.0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Order of Patriarch Job selection 16-17c GIM.jpg",
+    "w": 1291,
+    "h": 866,
+    "lic": "CC0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:РакаИов.jpg",
+    "w": 1280,
+    "h": 960,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Святитель Иов и царь ФеодорИ.jpg",
+    "w": 1280,
+    "h": 960,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Geller jove.jpg",
+    "w": 1060,
+    "h": 819,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:ИовП.jpg",
+    "w": 960,
+    "h": 1280,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Godunov Psalter (1594, RGB) - The mass (detail - Job).jpg",
+    "w": 828,
+    "h": 1206,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:5patriarchs.jpg",
+    "w": 756,
+    "h": 522,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:48 History of the Russian state in the image of its sovereign rulers - fragment.jpg",
+    "w": 630,
+    "h": 480,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Patriarch Job - parsuna.jpg",
+    "w": 617,
+    "h": 985,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Patriarch Job.jpg",
+    "w": 565,
+    "h": 847,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Патриарх Иов, Царский титулярник.png",
+    "w": 540,
+    "h": 710,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Patriarch Job of Moscow.jpg",
+    "w": 450,
+    "h": 568,
+    "lic": "Public domain",
+    "qid": "Q1652629"
+   },
+   {
+    "title": "File:Патриарх Иов.png",
+    "w": 419,
+    "h": 545,
+    "lic": "CC BY-SA 4.0",
+    "qid": "Q1652629"
+   }
+  ],
+  "err": null
+ }
+]

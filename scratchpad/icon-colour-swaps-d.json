@@ -1,0 +1,66 @@
+[
+ {
+  "_what": "The last twelve greyscale icons no collector had reached, searched by name on 17 October 2026 (`cb-search.py --slugs scratchpad/grey-left.json`). All twelve are refusals, which closes the colour sweep: every one of the 134 masters still measuring under saturation 0.06 now has a recorded reason.",
+  "_routes": "el/ro/ru/sr/bg/en wikipedia full-text -> wikibase_item -> P18 and P373, Commons structured data P180, and the P373 category's own members, with P841 (feast day) off Wikidata as the discriminator."
+ },
+ {
+  "slug": "sabel-of-persia",
+  "kind": "nothing",
+  "why": "The only entity reached is Q4280681, the group «Мануил, Савел и Исмаил», and the one file it holds is narrower than the 1147 px master this folder already carries."
+ },
+ {
+  "slug": "leucius-of-caesarea",
+  "kind": "nowhere",
+  "why": "No entity any of the four stored forms reaches carries a picture at all."
+ },
+ {
+  "slug": "narcissus-of-athens",
+  "kind": "nowhere",
+  "why": "No entity any of the four stored forms reaches carries a picture at all."
+ },
+ {
+  "slug": "eugene-of-cherson",
+  "kind": "nothing",
+  "why": "The routes reach Q12151190, the Hieromartyrs of Cherson as a company, and Q107205598, Basil of Chersonesus, who is another of them. Neither holds a file wide enough to be an upgrade on 1194 px."
+ },
+ {
+  "slug": "acepsimas-of-naeson",
+  "kind": "nowhere",
+  "why": "Two entities reached, neither carrying a picture."
+ },
+ {
+  "slug": "protasius-of-milan",
+  "kind": "nothing",
+  "why": "Sixty-five files and not one of them is him: Q1515920 is Gervasius and Protasius together, whose Commons category is churches named after the pair across France, Spain and Italy, and the rest is Ambrose of Milan, who found their relics. Nothing names Protasius alone."
+ },
+ {
+  "slug": "anastasia-daughter-of-nicholas-ii",
+  "kind": "no-colour",
+  "why": "Q151130 carries P841 17 July, this folder's own feast, and the photographs of her are plentiful and free — and every one of them is a monochrome photograph. File:Grand Duchess Anastasia Nikolaevna.jpg measures saturation 0.0000 on the pixels that would land. A colour picture of this saint does not exist to be had."
+ },
+ {
+  "slug": "eleazar-the-scribe",
+  "kind": "nothing",
+  "why": "Q2359988 is «the woman with seven sons», the Maccabean company as one entity, and every file under it is the group. Eleazar is in those pictures and is not named in any of them."
+ },
+ {
+  "slug": "ignatius-brianchaninov",
+  "kind": "no-colour",
+  "why": "Q984143 carries P841 30 April, this folder's own feast, and File:Ignatius Brianchaninov.png is him at 2979 px — measured at saturation 0.0000. It is the same monochrome portrait this folder already holds, larger."
+ },
+ {
+  "slug": "innocent-of-moscow",
+  "kind": "nowhere",
+  "why": "Three entities reached, none carrying a picture."
+ },
+ {
+  "slug": "parmenas-the-deacon",
+  "kind": "nothing",
+  "why": "One file, narrower than the master this folder carries."
+ },
+ {
+  "slug": "job-the-long-suffering",
+  "kind": "namesake",
+  "why": "Every route reaches Q1652629, Patriarch Job of Moscow, whose P841 is 18 April and 2 July against this folder's 6 May. Eighteen free files of him — his psalter, his reliquary, his portrait with Tsar Feodor — and this folder is the Job of the Old Testament."
+ }
+]
