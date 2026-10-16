@@ -51,13 +51,32 @@ WIKIS = ('el', 'ro', 'ru', 'sr', 'bg', 'en')
 FLOOR = 450
 
 
+# A caller working through a queue sets this to `time.monotonic() + seconds`
+# before each row and clears it after. Without it one saint can hold a whole
+# slice: on 16 October a single row sat in these ladders for 31 minutes while
+# 80 others waited behind it, because nothing in a ladder knows how long the
+# row has already spent.
+DEADLINE = None
+
+
+class OutOfTime(RuntimeError):
+    """The row's own budget ran out mid-ladder; the sweep itself is fine."""
+
+
+def _left():
+    return None if DEADLINE is None else DEADLINE - time.monotonic()
+
+
 def get(url, timeout=40, tries=(0, 5, 15, 45)):
     req = urllib.request.Request(url, headers={'User-Agent': UA})
     for wait in tries:
+        left = _left()
+        if left is not None and left <= wait:
+            raise OutOfTime('row budget spent before a %ds wait: %s' % (wait, url))
         if wait:
             time.sleep(wait)
         try:
-            return urllib.request.urlopen(req, timeout=timeout).read()
+            return urllib.request.urlopen(req, timeout=min(timeout, left) if left else timeout).read()
         except urllib.error.HTTPError as e:
             if e.code not in (429, 503):
                 raise
