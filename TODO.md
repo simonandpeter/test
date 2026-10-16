@@ -1294,3 +1294,53 @@ uncapped, so a reader accumulates every deploy's bundle until `VERSION` moves
 for an unrelated reason (`IMAGE_CAP` is the precedent); and the coachmark's ×
 is the last focusable element in the document while sitting visually under the
 control it points at.
+
+## 23. The map sweep's four questions
+
+Forty-nine lives were placed on the nights of 15 and 16 October, every
+coordinate copied out of `src/data/places.js` or out of a row a colleague had
+already checked. `scripts/place-candidates.mjs` fell from 4,527 to 3,729 across
+the two batches and a script bug of its own, and `scratchpad/place-dated.mjs`
+is the narrowing the second batch was read off. Four things are left, and not
+one of them is a batch's to settle.
+
+**1. Twenty-five correct placements are blocked by an allowlist.**
+`tests/map-span.test.mjs` asserts that the located-but-undated saints are
+exactly its own `UNDATED` set, five names long, each with a source behind it:
+saint.gr keeps them and prints no year, and *a martyrdom the sources place only
+by naming a persecution is not a date*. Twenty-five further lives are in that
+same position — `place-dated.mjs` with its date test inverted is the count —
+and each would need a line there the moment it got a coordinate. The file's own comment says a saint joining the list is **a
+decision somebody has to write down here**, which is why no batch has written
+one. The question is whether the list may grow by twenty-five with the same
+one-sentence warrant, or whether each wants its own reading first.
+
+**2. Which Caesarea is `Caesarea`?** The gazetteer's bare entry is the
+**Cappadocian** one, 35.5 E, 38.72 N, so a martyr of Caesarea in Palestine
+sent there lands 700 km inland — and the corpus holds martyrs of both. Three
+placements were declined for it across the two batches, among them
+`theodulus-of-caesarea-17-february`, whose own life names Palestine twice;
+`polyeuctus-of-caesarea` went to the Cappadocian point because the Russian
+calendar's name page says «Полиевкт Кесарийский (Каппадокийский)» outright,
+which is the only thing that made it answerable. The same shape waits behind
+Gangra and Dakizis. It wants either a second gazetteer entry or an `also:`
+ruling, and the gazetteer is hand-written on purpose.
+
+**3. Two dozen lives state in their own prose that no coordinate was taken.**
+`grep -rlE "recorded in words only|no coordinate|carries no place|no place is
+recorded" saints/*/life.md` finds 24 of them, in sentences of the shape *"the
+place of death — Nicomedia — is new with this entry and is recorded in words
+only, this folder claiming no coordinate"*. Placing them would make the life
+text false, so the coordinate and the sentence have to move together, and
+whether that sentence was a rule or a record of one day's caution is not
+readable from the folder.
+
+**4. An island is neither of the two things `zoom` sorts.**
+`place-candidates.mjs` tells the gazetteer's towns from its countries by
+`zoom < 20`, which is sound for `Russia` at 3.5 and `Rome` at 40 — but
+`Cyprus` is 22 and `Crete` 22, so both are offered as towns and proposed for
+any life that says the word. Cyprus reached `aristocles-of-moscow` on a
+sentence about Athos. `panteleimon-of-spetses` is now on Crete at
+`uncertainty_km: 150`, which is the honest reading of «εν Κρήτη» and also the
+reason the threshold does not fit: the island is a real answer at a region's
+width and a false one at a city's.
