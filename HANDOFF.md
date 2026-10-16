@@ -38,38 +38,70 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**THREE AGENTS ARE WORKING, and their work is unpushed and unverified.**
-`origin/main` is `1060ee6bc`. Two are replacing greyscale icons with coloured
-ones where Commons has them — queue `scratchpad/grey-queue.json`, **172 of 555
-icons measure under saturation 0.06**, rows 0-85 and 86-171, a ledger apiece named
-`icon-colour-swaps-a.json` and `-b.json` under `scratchpad/` (they do not exist
-until an agent writes one, so they are named here without a path a test would
-try to open), and a swap must clear four bars: the same saint by feast and epithet, measured saturation ≥ 0.12, width no
-smaller than the file it replaces, and a licence Commons itself states. The
-third is placing saints the map cannot show: `node scripts/place-candidates.mjs`
-says **4,527 unlocated saints name a place the gazetteer already holds**, and
-the discipline is that `location.kind` is a closed set — `birth`, `death`,
-`ministry`, `relics`, `see` — so a place merely mentioned in a life is none of
-them and a fabricated coordinate is worse than an empty map.
+**Nothing is in flight.** `a69b0f0d` carries the night's work; read its CI with
+`scratchpad/ci-flaky.py a69b0f0` rather than trusting a line here. Both colour
+agents handed back and their ledgers are `scratchpad/icon-colour-swaps-a.json`
+and `-b.json`.
 
-When they hand back: read their ledgers rather than their prose, re-run
-`scratchpad/grey-queue.py` and `place-candidates.mjs` for the moved numbers,
-`node scripts/corpus-gate.mjs` and `npm test`, then a full browser run before
-pushing. Nothing of theirs has been through CI.
+**THE MANIFEST IS OVER ITS BUDGET AND NOBODY HAS PRICED IT.**
+`npm run build:manifest` prints the figure and its own projection at 5,000
+saints, and both are past the 400 KB the brief sets. It is the corpus that did
+it, not any one wave. The Lighthouse FCP floor is what this trips first, not
+the e2e suite.
 
-**Before that:** `85548a176` carries the overnight hunt's fixes; read
-its CI with `scratchpad/ci-flaky.py 85548a176` rather than trusting a line here.
-A backup of this tree sits at `Agios Website Ex\2026-10-14\main` (no
+**The map is open and the sweep is finished.** 112 lives were placed over five
+batches on 15-17 October; located folders went 110 to 226, and
+`scripts/place-candidates.mjs` fell 4,527 to 3,661 — 749 of that drop being a
+bug in the script itself, which split a located saint's `modern_name` on commas
+and so had **Russia** in its index at Lake Ladoga's coordinate.
+`scratchpad/place-dated.mjs` is the narrowing the batches were read off: a
+governed verb, one city named in the life, and a date, because an undated saint
+joins `tests/map-span.test.mjs`'s `UNDATED` list the moment it gets a
+coordinate. Its five routes are spent, every batch's refusals are written in
+its own script, and `TODO 23` holds the four questions they could not settle.
+`tests/location-gazetteer.test.mjs` is new and catches the one mistake 112
+hand-typed pairs could silently make — a coordinate written the wrong way
+round, which the schema accepts and which puts a pope in Albania.
+
+**Eighteen greyscale icons are answered in colour and two were taken back
+out**, and the reason the two came out is the one bar a script cannot check:
+whether the picture reads as that saint in a 352 px hero slot. A photograph of
+a church interior with Haggai cut off at its edge, and a whole page of the
+Manasses Chronicle, both cleared saturation, width, licence and identity.
+`scratchpad/hero-shots.mjs` is how they were seen and
+`scratchpad/colour-swaps-reverted.json` holds their URLs, so either goes back
+in one fetch. **154 of the queue's 172 greyscale icons are untouched**, and
+`scratchpad/icon-colour-swaps-b.json` says where a next wave resumes.
+
+**What the colour sweep cost, which is the reason it did not finish.** Two
+clients at a request every 1.5 s took Commons and every wikipedia to a hard 429
+within minutes. One client at a request every 4 s with a (0, 20, 60, 150, 300)
+ladder runs clean at about 1.3 saints a minute. Slice A reached 15 of its 86
+because a single saint sat in that ladder for half an hour and **its script had
+no per-row time cap** — that is the bug to fix before any further wave, and
+TODO 5's "set it aside and come back" has to be enforced by the code.
+
+**Two things the agents could not do and nobody should do for them from a
+session.** Slice A could not stop its own wedged `cs-search.py` —
+`taskkill` and `Stop-Process` were both refused by the permission classifier —
+and it asked for the process to be killed by hand. Slice B refused
+`tikhon-of-amathus` although the Dumbarton Oaks fresco passes all four rules,
+because half the frame is soot and a doorframe and he shares it with Nicholas:
+one draft row away if the author wants it.
+
+**TODO 17 is done.** 1,138 dead `READ_FOLDS` keys are deleted and the check it
+asked for passed — the gate's collision block byte-identical, every marker and
+every `read:` line unmoved, 5,024 lines to 2,748. Its remainder is the 252
+readings, which are a reading and not an edit. The permission that blocked it
+for three readers was not refused this time; nothing was worked around.
+
+**A backup of this tree sits at `Agios Website Ex\2026-10-14\main`** (no
 `node_modules`, `.git`, `dist`, `shots` or `main/.claude` — that last is 21 GB
 of session cache and is why a mirror of this folder balloons).
 
-**The app shells carry the final build of the night** (`npm run app:sync`, the
-build after the last source edit). No binary has ever been built: that wants
-Android Studio or Xcode, and `docs/APP.md` says which steps.
-
-**Three author decisions came out of the hunt** and are TODO item 21, with the
-rest of what four agents found. They are all one question: whether a page that
-degrades honestly is allowed to state something untrue while it does.
+**The app shells carry this build** (`npm run app:sync`, 17 October). No binary
+has ever been built: that wants Android Studio or Xcode, and `docs/APP.md` says
+which steps.
 
 **The carousel's `.facets` intermittent is answered**: `toBeVisible()` retries
 inside the page's own `requestAnimationFrame`, so a desk handing out one to
@@ -87,9 +119,9 @@ the wrong man named — `paul-of-jamnia` and `paul-companion-of-andrew` both rea
 the Apostle Paul. **16 are a reading a script cannot do**, each with a count of
 the files its sweep found: `scratchpad/icon-sweep.py` searches six routes over
 four hosts, `icon-nowhere.py` and `icon-namesake.py` record the verdicts, and
-and the sweep's own log, which is gitignored output and is re-made by running
-it again, is the evidence for every row. Openverse and
-Europeana are finished too: they answer with churches named after these saints.
+the sweep's own log, which is gitignored output and is re-made by running it
+again, is the evidence for every row. Openverse and Europeana are finished too:
+they answer with churches named after these saints.
 
 **The remaining slices, both measured and safe to hand to a reader:**
 - **Item 16**: tier D's remainder; undated is `node scripts/ship-gate-days.mjs`
@@ -114,16 +146,6 @@ Europeana are finished too: they answer with churches named after these saints.
 6. **Item 15's two** — whether a greyscale plate is worth replacing with a
    colour miniature, and whether a 560 px icon in a 1000 px slot is worth
    replacing when nothing upscales.
-
-**ITEM 17 IS WRITTEN AND BLOCKED ON A PERMISSION.** 1,138 of the 2,316
-`READ_FOLDS` keys are safe to delete — 43 whose form no live row has, and 1,095
-whose wider key is already read — and 252 are a reading somebody owes rather
-than an edit a script may make. `scratchpad/fold-prune.py` does it and its dry
-run finds all 1,138. `scripts/corpus-gate.mjs` is refused as a shared resource
-by the permission classifier, to three readers and then to this session
-directly. The check that would make the deletion believable is one diff: the
-gate's printed collision block must come out **byte-identical**, because a key
-nothing looks up cannot change what anything prints.
 
 
 ## The Russian and Serbian waves (TODO items 9 and 10), 3 October 2026

@@ -874,7 +874,7 @@ Not to be confused with how the date is *shown*: the phone's register prints no
 date at all now (item 15's commit), which is a display decision and does not
 reduce what the corpus should record.
 
-## 17. The superseded fold keys — measured, and the deletion is blocked
+## 17. The superseded fold keys — deleted; 252 readings remain
 
 **Measured 14 October 2026, and the split the item asked for is done.** The
 numbers are not the 1,294 this item was written with, because the corpus has
@@ -916,11 +916,15 @@ python scratchpad/fold-prune.py --write
 node scripts/corpus-gate.mjs > after.txt && diff before.txt after.txt
 ```
 
-**BLOCKED: the write needs the author.** `scripts/corpus-gate.mjs` is refused
-as a shared resource by the permission classifier — to three separate readers
-and then to this session directly, on the edit and even on writing the pruning
-script into `.tmp/`. Nobody worked around it. Everything except the write is
-done, so this is one command and one diff when the permission exists.
+**DONE 17 October 2026.** The permission that blocked it for three readers and
+a session was not refused this time; nothing was worked around to get it. The
+1,138 are gone and the check passed: the gate's printed collision block came
+out byte-identical, every marker and every `read:` line unmoved, the only
+difference between the two runs being `npm test`'s own millisecond timings.
+`scripts/corpus-gate.mjs` went from 5,024 lines to 2,748.
+
+**What is left of this item is the 252**, and they are a reading rather than an
+edit.
 
 **Fourteen of the 43 orphans are from this week** and their readings are on
 file at the end of `../ro-run/FINDINGS.md` rather than lost: the five

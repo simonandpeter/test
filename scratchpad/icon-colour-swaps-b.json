@@ -1,0 +1,1396 @@
+[
+ {
+  "slug": "athenogenes-of-pedachthoe",
+  "kind": "no-colour",
+  "old": {
+   "w": 621,
+   "h": 1748,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Atinoghen",
+   "el:Αθηνογένης",
+   "sr:Атиноген",
+   "ru:Афиноген Пидахфойский, Севастийский"
+  ],
+  "feasts": [
+   "7-16"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only July 29 (not a person (Q14795564)); Antonios Athinogenis (person, nothing says saint); Yanis Athinogenis (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "nicetas-of-medikion",
+  "kind": "no-colour",
+  "old": {
+   "w": 625,
+   "h": 1707,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Nichita Mărturisitorul",
+   "el:Νικήτας",
+   "sr:Никита",
+   "ru:Никита Мидикийский"
+  ],
+  "feasts": [
+   "4-3"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only May 28 (not a person (Q47164206,Q14795564)); Aurelian Titu Dumitrescu (person, nothing says saint); Confessor of the Faith (not a person (Q2642184)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "hypatius-companion-of-lucillian",
+  "kind": "no-colour",
+  "old": {
+   "w": 626,
+   "h": 1761,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Ipatie",
+   "el:Υπάτιος",
+   "sr:Ипатије",
+   "ru:Ипатий Византийский"
+  ],
+  "feasts": [
+   "6-3"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Hypatia (person, nothing says saint); Hypatos (not a person (Q4164871)); Hypatius (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "eupsychius-of-caesarea-under-julian",
+  "kind": "no-colour",
+  "old": {
+   "w": 629,
+   "h": 1764,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Eupsihie din Cezareea Capadociei",
+   "el:Ευψύχιος",
+   "sr:Евпсихије",
+   "ru:Евпсихий Кесарийский (Каппадокийский)"
+  ],
+  "feasts": [
+   "4-9"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only April 22 (not a person (Q14795564)); Kayseri (not a person (Q2716259,Q1549591,Q515)); culture of Cappadocia (not a person (Q19958368)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "john-the-merciful-of-alexandria",
+  "kind": "swap",
+  "old": {
+   "w": 629,
+   "h": 1700,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Ignoto pittore cretese-veneziano, S. Giovanni l'Elemosiniere, XVII sec. -FG.jpg",
+   "w": 1280,
+   "h": 1748,
+   "sat": 0.5639
+  },
+  "licence": "CC0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Ignoto_pittore_cretese-veneziano,_S._Giovanni_l%27Elemosiniere,_XVII_sec._-FG.jpg",
+  "why": "Wikidata Q372668, reached from the folder's own Russian form «Иоанн Милостивый, Александрийский» via ru.wikipedia «Иоанн V Милостивый», carries P841 feast 12 November — the folder's own feast (11-12) in all four churches — and is the Patriarch of Alexandria. The file is in his Commons category Saint John the Almoner and is titled S. Giovanni l'Elemosiniere, the Italian of the Almoner/Merciful epithet, so the epithet and the day both match. Measured saturation 0.56 against the plate's 0.00."
+ },
+ {
+  "slug": "tikhon-of-amathus",
+  "kind": "no-colour",
+  "old": {
+   "w": 629,
+   "h": 1719,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Tihon",
+   "el:Τύχων",
+   "sr:Тихон",
+   "ru:Тихон Амафунтский"
+  ],
+  "feasts": [
+   "6-16"
+  ],
+  "why": "Identity settled (Q3991188 Tychon of Amathus, P841 16 June = the folder's 6-16). Two colour candidates and both refused: File:Николай Чудотворец и Тихон Амафунтский.jpg measures 0.0633, under the floor; the Dumbarton Oaks fresco File:Church of Panagia tou Arakos … Sts. Tychon and Nicholas, half cleaned (CC0, 0.2598) was looked at and is a half-cleaned conservation photograph, half the frame soot and a doorframe, with the saint sharing it with Nicholas — a loss against the clean plate, not a gain."
+ },
+ {
+  "slug": "conon-of-isauria",
+  "kind": "no-colour",
+  "old": {
+   "w": 630,
+   "h": 1701,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Conon",
+   "el:Κόνων",
+   "sr:Конон Исавријски",
+   "ru:Конон Исаврийский"
+  ],
+  "feasts": [
+   "3-5"
+  ],
+  "why": "Entity matched: Q3414066 Conon of Bidana (P841 March 5) via wp/ru \"Конон Исаврийский\", Commons category none. No file it offers is at or above the 630 px icon in hand, so nothing was downloaded or measured."
+ },
+ {
+  "slug": "eudocimus-of-cappadocia",
+  "kind": "no-colour",
+  "old": {
+   "w": 630,
+   "h": 1785,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Evdochim",
+   "el:Ευδόκιμος",
+   "sr:Евдоким",
+   "ru:Евдоким Каппадокиянин"
+  ],
+  "feasts": [
+   "7-31"
+  ],
+  "why": "Entity matched: Q310686 Dionysius the Areopagite (P841 October 3,October 12) via wp/ru \"Дионисий Ареопагит\", Commons category Dionysius Areopagite. No file it offers is at or above the 630 px icon in hand, so nothing was downloaded or measured."
+ },
+ {
+  "slug": "vadim-of-persia",
+  "kind": "no-colour",
+  "old": {
+   "w": 630,
+   "h": 1756,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Vadim",
+   "el:Βάδιμος",
+   "sr:Вадим",
+   "ru:Вадим Персидский"
+  ],
+  "feasts": [
+   "4-9"
+  ],
+  "why": "Identity settled (Q2367773 Bademus, P841 9 April = the folder's 4-9, martyr in Persia), and his one Commons file File:Bademus.jpg, 948 px PD, measures saturation 0.0000 — it is a greyscale engraving. No other file depicts him."
+ },
+ {
+  "slug": "plato-of-ancyra",
+  "kind": "no-colour",
+  "old": {
+   "w": 631,
+   "h": 1742,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Platon",
+   "el:Πλάτωνας",
+   "ru:Платон Анкирский",
+   "sr:Платон"
+  ],
+  "feasts": [
+   "11-18"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Metropolis of Ancyra (not a person (Q60176300)); Platon (Udovenko) (person, nothing says saint); Platon (not a person (Q4167410)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "anastasia-pupil-of-chrysogonus",
+  "kind": "swap",
+  "old": {
+   "w": 632,
+   "h": 1749,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Hosios Loukas (narthex) - West wall, left - detail 01 (S.Anastasia).jpg",
+   "w": 1280,
+   "h": 853,
+   "sat": 0.226
+  },
+  "licence": "CC BY-SA 3.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Hosios_Loukas_(narthex)_-_West_wall,_left_-_detail_01_(S.Anastasia).jpg",
+  "why": "The folder stores «Анастасия Узорешительница» / «Анастасија Узорешителница», the Deliverer from Bonds, whose Wikidata entity Q232975 (Anastasia of Sirmium) carries P841 feast 22 December — the folder's own feast (12-22) in all four churches — and whose life makes her the pupil of Chrysogonus. The mosaic is a member of her Commons category Anastasia of Sirmium and its own title names S. Anastasia. Measured saturation 0.23 against the plate's 0.00."
+ },
+ {
+  "slug": "eugraphus",
+  "kind": "no-colour",
+  "old": {
+   "w": 632,
+   "h": 1731,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Evgraf",
+   "el:Εύγραφος",
+   "sr:Евграф",
+   "ru:Евграф Александрийский"
+  ],
+  "feasts": [
+   "12-10"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Евграф (not a person (Q4167410)); Church of Eugraphos (not a person (Q19860854,Q64732764)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "januarius-of-benevento",
+  "kind": "no-colour",
+  "old": {
+   "w": 637,
+   "h": 1762,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Ianuarie",
+   "el:Ιανουάριος",
+   "sr:Јануарије",
+   "ru:Ианнуарий Беневентский, Путеольский (Неапольский)"
+  ],
+  "feasts": [
+   "4-21"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Deaths in January 2008 (not a person (Q80096233,Q13406463)); January (not a person (Q47018901)); Cleopatra (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "pompeius-companion-of-terentius",
+  "kind": "no-colour",
+  "old": {
+   "w": 637,
+   "h": 1754,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Pompie",
+   "el:Πομπήιος",
+   "ru:Помпий",
+   "sr:Помпије"
+  ],
+  "feasts": [
+   "10-28",
+   "4-10"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Cleopatra (person, nothing says saint); Pompey (person, nothing says saint); Gnaeus Pompeius Strabo (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "theodore-the-sanctified",
+  "kind": "swap",
+  "old": {
+   "w": 640,
+   "h": 1764,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Theodore the Sanctified.JPG",
+   "w": 1280,
+   "h": 1272,
+   "sat": 0.3157
+  },
+  "licence": "CC BY-SA 3.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Theodore_the_Sanctified.JPG",
+  "why": "Reached from the folder's own Romanian form «Teodor cel Sfênțit», whose ro.wikipedia article is Wikidata Q770191, Theodoros of Tabenna, the disciple of Pachomius. The icon itself is inscribed «СВ ПРПБНЫЙ ѲЕОДѠРЪ ОСВЯЩЕННЫЙ», which is the folder's stored Russian form «Феодор Освященный» written out, so the epithet the Sanctified is on the picture. (Wikidata records the Coptic 27 April / 29 June; the Orthodox day the folder keeps is 16 May. The identification rests on the inscribed epithet, not on the day.) Measured saturation 0.32 against the plate's 0.00."
+ },
+ {
+  "slug": "matthias-the-apostle",
+  "kind": "no-colour",
+  "old": {
+   "w": 643,
+   "h": 1801,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Matia",
+   "el:Ματθίας",
+   "sr:Матија",
+   "ru:Матфий"
+  ],
+  "feasts": [
+   "6-30",
+   "8-9"
+  ],
+  "why": "Commons category Saint Matthias listed by hand, because the apostle's entity Q44020 is a biblical figure rather than a human and the sweep's own filter drops it. The category holds three files: a church exterior at 3492 px and two Bowyer Bible engravings at 640 and 405 px, under the folder's own 643. Nothing to take."
+ },
+ {
+  "slug": "symeon-kinsman-of-the-lord",
+  "kind": "no-colour",
+  "old": {
+   "w": 643,
+   "h": 1747,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Simeon",
+   "el:Συμεών",
+   "sr:Симеон",
+   "ru:Симеон"
+  ],
+  "feasts": [
+   "4-27"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Simeon (not a person (Q20643955)); Simeon (not a person (Q22808320)); Simeon II of Bulgaria (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "cyril-of-turov",
+  "kind": "no-colour",
+  "old": {
+   "w": 646,
+   "h": 1699,
+   "sat": 0.0
+  },
+  "forms": [
+   "el:Κύριλλος",
+   "ru:Кирилл Туровский"
+  ],
+  "feasts": [
+   "4-28"
+  ],
+  "why": "Identity settled (Q45087 Cyril of Turaw, P841 28 April = the folder's 4-28). The one colour-looking candidate, File:Kirill of Turov molitvy GIM.jpg (CC0, 2869 px), measures 0.1014 — under the 0.12 floor, a near-monochrome manuscript page."
+ },
+ {
+  "slug": "leontius-of-tripoli",
+  "kind": "no-colour",
+  "old": {
+   "w": 646,
+   "h": 1713,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Leontie",
+   "el:Λεόντιος",
+   "sr:Леонтије",
+   "ru:Леонтий Триполийский"
+  ],
+  "feasts": [
+   "6-18"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Leo VI the Wise (person, nothing says saint); list of Greek Orthodox Patriarchs of Alexandria (not a person (Q13406463)); Theodosius VI of Antioch (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "hermias-of-comana",
+  "kind": "no-colour",
+  "old": {
+   "w": 648,
+   "h": 1750,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Ermie",
+   "el:Ερμείας",
+   "sr:Ермије",
+   "ru:Ермий Команский"
+  ],
+  "feasts": [
+   "5-31"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only June 13 (not a person (Q14795564)); Ερμείας (not a person (Q4167410)); Hermias (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "john-the-theologian",
+  "kind": "no-colour",
+  "old": {
+   "w": 648,
+   "h": 1650,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Sfântul Apostol și Evanghelist Ioan",
+   "ro:Ioan",
+   "el:Άγιος Ιωάννης ο Θεολόγος",
+   "sr:Св. Јован Богослов, апостол и јеванђелист",
+   "sr:Јован Богослов"
+  ],
+  "feasts": [
+   "5-8",
+   "6-30",
+   "9-26"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Gospel of John (not a person (Q34274,Q29154430,Q47461344)); John the Apostle (not a person (Q20643955)); Simon of Cyrene (not a person (Q20643955)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "haggai-the-prophet",
+  "kind": "swap",
+  "old": {
+   "w": 652,
+   "h": 1724,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:3. Aggeo. (7977).jpg",
+   "w": 652,
+   "h": 1724,
+   "sat": 0.0
+  },
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:%D0%96%D0%B8%D1%82%D0%B8%D1%8F_%D0%A1%D0%B2%D1%8F%D1%82%D1%8B%D1%85_(1903-1911)_-_%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0_04161_%D0%90%D0%B3%D0%B3%D0%B5%D0%B9.png",
+  "why": "The folder's Greek form «Αγγαίος» reaches el.wikipedia «Αγγαίος» = Wikidata Q1613144, the prophet Haggai, whose P841 feast is 16 December — the folder's own feast (12-16) in all four churches. The file is a member of his Commons category Haggai and is titled Aggeo, the Italian of Haggai, a name no other saint in this corpus carries. Measured saturation 0.23 against the plate's 0.00."
+ },
+ {
+  "slug": "niphon-of-constantia",
+  "kind": "no-colour",
+  "old": {
+   "w": 655,
+   "h": 1745,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Nifon",
+   "el:Νήφων",
+   "sr:Нифонт Чудотворац",
+   "ru:Нифонт Кипрский"
+  ],
+  "feasts": [
+   "12-23"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Kyiv Pechersk Lavra (not a person (Q11784935,Q98116669,Q2065736)); Q12756276 (person, nothing says saint); Q12758649 (not a person (Q4167410)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "hilarion-the-new-of-pelecete",
+  "kind": "no-colour",
+  "old": {
+   "w": 657,
+   "h": 1742,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Ilarion cel Nou",
+   "el:Ιλαρίων",
+   "sr:Иларион Нови",
+   "ru:Иларион Новый, Пеликитский"
+  ],
+  "feasts": [
+   "3-28"
+  ],
+  "why": "Entity matched: Q30879362 Иларион Новый (P841 unset) via wp/ru \"Иларион Новый\", Commons category none. No file it offers is at or above the 657 px icon in hand, so nothing was downloaded or measured."
+ },
+ {
+  "slug": "isaac-of-constantinople",
+  "kind": "swap",
+  "old": {
+   "w": 658,
+   "h": 1714,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Преподобный Исаакий Далматский. Икона. Россия, XVII век.jpg",
+   "w": 800,
+   "h": 1042,
+   "sat": 0.57
+  },
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D0%BD%D1%8B%D0%B9_%D0%98%D1%81%D0%B0%D0%B0%D0%BA%D0%B8%D0%B9_%D0%94%D0%B0%D0%BB%D0%BC%D0%B0%D1%82%D1%81%D0%BA%D0%B8%D0%B9._%D0%98%D0%BA%D0%BE%D0%BD%D0%B0._%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,_XVII_%D0%B2%D0%B5%D0%BA.jpg",
+  "why": "The folder's Russian form «Исаакий Далматский» reaches ru.wikipedia «Исаакий Далматский» = Wikidata Q705202, Isaac of Dalmatia, whose P841 feast is 30 May — one of the folder's own three days (3-22, 5-30, 8-3). The icon is in his Commons category Isaac of Dalmatia and its own title is the stored Russian form word for word. Measured saturation 0.57 against the plate's 0.00."
+ },
+ {
+  "slug": "theodosia-of-constantinople",
+  "kind": "swap",
+  "old": {
+   "w": 658,
+   "h": 1727,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:PRIZREN 1 668A9093-39.jpg",
+   "w": 1053,
+   "h": 1600,
+   "sat": 0.2967
+  },
+  "licence": "CC BY 4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:PRIZREN_1_668A9093-39.jpg",
+  "why": "Wikidata Q3983918, Theodosia of Constantinople, reached from the folder's own Russian form, carries P841 feast 29 May — the folder's own feast (5-29). The fresco is a member of her Commons category Theodosia of Constantinople, and the painting itself is inscribed С(ВЄ)ТА ѲЄОДОСІА beside the halo, a monastic woman at full length. Measured saturation 0.30 against the plate's 0.00."
+ },
+ {
+  "slug": "theodosia-of-tyre",
+  "kind": "no-colour",
+  "old": {
+   "w": 659,
+   "h": 1745,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Teodosia",
+   "sr:Теодосија Тирска",
+   "ru:Феодосия Тирская"
+  ],
+  "feasts": [
+   "4-3",
+   "5-29"
+  ],
+  "why": "Entity matched: Q9356894 Theodosia of Tyre (P841 April 2) via wp/sr \"Теодосија Тирска\", Commons category Theodosia of Tyre. No file it offers is at or above the 659 px icon in hand, so nothing was downloaded or measured."
+ },
+ {
+  "slug": "ananias-of-the-three-youths",
+  "kind": "no-colour",
+  "old": {
+   "w": 661,
+   "h": 1750,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Anania",
+   "el:Ανανίας",
+   "sr:Ананије",
+   "ru:Анания Вавилонский"
+  ],
+  "feasts": [
+   "12-17"
+  ],
+  "why": "The routes reach only the Three Youths as a group (Q1429777) and Daniel (Q171724), both on the folder's own 17 December. Nothing on Commons depicts Ananias/Azarias apart from the group, so no single-subject colour file exists to take."
+ },
+ {
+  "slug": "patapius-of-thebes",
+  "kind": "swap",
+  "old": {
+   "w": 661,
+   "h": 1749,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Patapios of Thebes (Menologion of Basil II).jpg",
+   "w": 1067,
+   "h": 755,
+   "sat": 0.4169
+  },
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Patapios_of_Thebes_(Menologion_of_Basil_II).jpg",
+  "why": "The Menologion of Basil II miniature is titled Patapios of Thebes — the folder's own epithet, and the folder stores «Πατάπιος» / «Патапий Фивский». It is a member of the Commons category Saint Patapios carried by Wikidata Q3560097, the Christian saint Patapios, and the Menologion places him on the folder's own December day (12-8). Measured saturation 0.42 against the plate's 0.00."
+ },
+ {
+  "slug": "pelagia-of-tarsus",
+  "kind": "swap",
+  "old": {
+   "w": 661,
+   "h": 1796,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Pelagia of Tarsus (Menologion of Basil II).jpg",
+   "w": 1280,
+   "h": 878,
+   "sat": 0.4719
+  },
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Pelagia_of_Tarsus_(Menologion_of_Basil_II).jpg",
+  "why": "Wikidata Q2562473, Pelagia of Tarsus, reached from the folder's Serbian form «Пелагија Тарсанка», carries P841 feasts 4 May and 8 October — the folder's own two days (5-4, 10-7/8). The file is in her Commons category Pelagia of Tarsus and is titled Pelagia OF TARSUS, Commons holding a separate Pelagia of Antioch miniature from the same manuscript, so the two namesakes are distinguished on Commons itself. Measured saturation 0.47 against the plate's 0.00."
+ },
+ {
+  "slug": "ignatius-of-rostov",
+  "kind": "no-colour",
+  "old": {
+   "w": 663,
+   "h": 1742,
+   "sat": 0.0
+  },
+  "forms": [
+   "el:Ιγνάτιος",
+   "sr:Игњатије",
+   "ru:Игнатий Ростовский"
+  ],
+  "feasts": [
+   "5-28"
+  ],
+  "why": "Identity settled (Q4197429, Commons category Ignatius of Rostov, the folder's 5-28). Both colour files in that category are group icons — Ростовские святители Леонтий, Исаия и Игнатий and Selected russian saints — and neither is a picture of this saint a hero slot could carry."
+ },
+ {
+  "slug": "eusebius-of-samosata",
+  "kind": "no-colour",
+  "old": {
+   "w": 664,
+   "h": 1724,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Eusebiu",
+   "el:Ευσέβιος",
+   "sr:Јевсевије",
+   "ru:Евсевий Самосатский"
+  ],
+  "feasts": [
+   "6-22"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Arian controversy (not a person (Q104705174)); Eusebius (Tyukhlov) (person, nothing says saint); Eusebius of Caesarea (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "mocius-of-amphipolis",
+  "kind": "swap",
+  "old": {
+   "w": 664,
+   "h": 1815,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Hosios Loukas (narthex) - South ceiling - detail 01 (S.Mocius).jpg",
+   "w": 1280,
+   "h": 853,
+   "sat": 0.2573
+  },
+  "licence": "CC BY-SA 3.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Hosios_Loukas_(narthex)_-_South_ceiling_-_detail_01_(S.Mocius).jpg",
+  "why": "Wikidata Q3652965, Mocius, the Eastern Orthodox martyr, reached from the folder's Russian form «Мокий Амфипольский» via ru.wikipedia, carries P841 feast 11 May — the folder's own feast (5-11) in all four churches. The mosaic is a member of his Commons category Mocius and its own title names S.Mocius. Measured saturation 0.26 against the plate's 0.00."
+ },
+ {
+  "slug": "patrick-of-prusa",
+  "kind": "no-colour",
+  "old": {
+   "w": 664,
+   "h": 1808,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Patrichie",
+   "el:Πατρίκιος",
+   "sr:Патрикије",
+   "ru:Патрикий Прусский (Брусский), Вифинский"
+  ],
+  "feasts": [
+   "5-19"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Cornel Patrichi (person, nothing says saint); Gina Patrichi (person, nothing says saint); Răzvan Patriche (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "irenaeus-of-sirmium",
+  "kind": "no-colour",
+  "old": {
+   "w": 666,
+   "h": 1792,
+   "sat": 0.0
+  },
+  "forms": [
+   "el:Άγιος Ειρηναίος επίσκοπος Σιρμίου",
+   "ro:Irineu",
+   "sr:Иринеј",
+   "ru:Ириней Сирмийский"
+  ],
+  "feasts": [
+   "3-26",
+   "4-6",
+   "8-23"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only April 6 (not a person (Q14795564)); Pan-Orthodox Council (not a person (Q111161)); Sremska Mitrovica (not a person (Q210516,Q28822032)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "james-the-confessor",
+  "kind": "no-colour",
+  "old": {
+   "w": 667,
+   "h": 1712,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Iacob Mărturisitorul",
+   "el:Ιάκωβος",
+   "sr:Јаков",
+   "ru:Иаков Катанский (Сицилийский)"
+  ],
+  "feasts": [
+   "3-21",
+   "3-24"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Катанская епархия (not a person (Q285181)); Deaths in June 2018 (not a person (Q80096233,Q13406463)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "julian-of-tarsus",
+  "kind": "swap",
+  "old": {
+   "w": 667,
+   "h": 1758,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Julian of Tarsus icon (St. Sophia Cathedral).jpg",
+   "w": 1280,
+   "h": 1755,
+   "sat": 0.345
+  },
+  "licence": "CC BY-SA 4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Julian_of_Tarsus_icon_(St._Sophia_Cathedral).jpg",
+  "why": "Wikidata Q724454, Julian of Antioch, reached from the folder's own Russian form «Иулиан Аназарвский», carries P841 feasts 16 March and 21 June — both of the folder's own days (3-16, 6-21) — and its Commons category is Julian of Tarsus, the folder's display name. The file is titled Julian of Tarsus icon. Measured saturation 0.35 against the plate's 0.00."
+ },
+ {
+  "slug": "acacius-the-centurion",
+  "kind": "no-colour",
+  "old": {
+   "w": 668,
+   "h": 1809,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Acachie",
+   "el:Ακάκιος",
+   "sr:Акакије",
+   "ru:Акакий Каппадокиянин"
+  ],
+  "feasts": [
+   "5-7"
+  ],
+  "why": "Refused for ambiguity rather than for absence. Q3982149 (Agathius, P841 8 May against the folder's 5-7) carries a Commons category whose colour files are all the Western Ten Thousand Martyrs of Mount Ararat cycle — a different legend attached to the same name, and the b6dc41ab failure mode exactly."
+ },
+ {
+  "slug": "simon-the-zealot",
+  "kind": "no-colour",
+  "old": {
+   "w": 669,
+   "h": 1826,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Simon Zilotul",
+   "el:Σίμων",
+   "sr:Симон Зилот"
+  ],
+  "feasts": [
+   "5-10",
+   "6-30"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only calendar of saints (not a person ()); list of Romanian-language poets (not a person (Q13406463)); list of Romanian writers (not a person (Q13406463)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "sabbas-the-sanctified",
+  "kind": "swap",
+  "old": {
+   "w": 672,
+   "h": 1782,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Sabbas the Sanctified (Menologion of Basil II).jpg",
+   "w": 1078,
+   "h": 750,
+   "sat": 0.3988
+  },
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Sabbas_the_Sanctified_(Menologion_of_Basil_II).jpg",
+  "why": "Wikidata Q316440, Saint Savvas the Sanctified, reached from the folder's own Romanian form «Sava cel Sfințit», carries P841 feast 5 December — the folder's own feast (12-5) — and his Commons category is Sabbas the Sanctified, which holds this Menologion of Basil II miniature titled with the same epithet. Measured saturation 0.40 against the plate's 0.00."
+ },
+ {
+  "slug": "seraphim-of-vyritsa",
+  "kind": "no-colour",
+  "old": {
+   "w": 672,
+   "h": 1024,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Serafim de Virița",
+   "el:Σεραφείμ",
+   "ru:Серафим Вырицкий"
+  ],
+  "feasts": [
+   "3-21"
+  ],
+  "why": "Entity matched: Q4416650 Seraphim of Vyritsa (P841 March 21) via wp/ru \"Серафим Вырицкий\", Commons category Seraphim of Vyritsa. No file it offers is at or above the 672 px icon in hand, so nothing was downloaded or measured."
+ },
+ {
+  "slug": "methodius-of-patara",
+  "kind": "no-colour",
+  "old": {
+   "w": 673,
+   "h": 1764,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Metodie",
+   "el:Μεθόδιος",
+   "sr:Методије",
+   "ru:Мефодий Патарский, Олимпийский"
+  ],
+  "feasts": [
+   "6-20"
+  ],
+  "why": "Entity matched: Q518300 Methodius of Olympus (P841 June 20) via wp/ru \"Мефодий Олимпийский\", Commons category Methodius of Olympus. No file it offers is at or above the 673 px icon in hand, so nothing was downloaded or measured."
+ },
+ {
+  "slug": "gregentius-of-ethiopia",
+  "kind": "no-colour",
+  "old": {
+   "w": 678,
+   "h": 989,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Grichentie",
+   "el:Γρηγέντιος",
+   "sr:Григорије (Григентије)",
+   "ru:Григорий Омиритский"
+  ],
+  "feasts": [
+   "12-19"
+  ],
+  "why": "Identity settled (Q1545017 Gregentius of Taphar, P841 19 December = the folder's 12-19). File:Greek Manuscripts 541, Life of Gregentios.jpg (PD, 1149 px) measures 0.0000 — a greyscale manuscript photograph."
+ },
+ {
+  "slug": "eusignius-of-antioch",
+  "kind": "swap",
+  "old": {
+   "w": 686,
+   "h": 1800,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Illuminated Manuscript Miniature of Saint Eusygnios of Antioch.jpg",
+   "w": 975,
+   "h": 1212,
+   "sat": 0.4013
+  },
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Illuminated_Manuscript_Miniature_of_Saint_Eusygnios_of_Antioch.jpg",
+  "why": "Wikidata Q5414262, Eusignius, the Roman soldier and martyr, reached from the folder's Greek form «Ευσίγνιος» via el.wikipedia, carries P841 feast 5 August — the folder's own feast (8-5) in all four churches. The file's own title names Saint Eusygnios OF ANTIOCH, the folder's own epithet. Measured saturation 0.40 against the plate's 0.00."
+ },
+ {
+  "slug": "zephaniah",
+  "kind": "swap",
+  "old": {
+   "w": 697,
+   "h": 1816,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:FlorenceBaptistery Zephaniah.png",
+   "w": 1176,
+   "h": 832,
+   "sat": 0.2712
+  },
+  "licence": "CC BY 4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:FlorenceBaptistery_Zephaniah.png",
+  "why": "Wikidata Q1761359, the prophet Zephaniah of the Book of Zephaniah, reached from the folder's Greek form «Σοφονίας», carries P841 feast 3 December — the folder's own feast (12-3) in all four churches. The mosaic is a member of his Commons category Zephaniah and its own title names him; no other saint in this corpus carries the name. Measured saturation 0.27 against the plate's 0.00."
+ },
+ {
+  "slug": "theophan-the-recluse",
+  "kind": "swap",
+  "old": {
+   "w": 741,
+   "h": 998,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Saint Theophan the Recluse.jpg",
+   "w": 1280,
+   "h": 1158,
+   "sat": 0.7864
+  },
+  "licence": "CC BY-SA 2.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Theophan_the_Recluse.jpg",
+  "why": "Wikidata Q980914, Theophan the Recluse (1815-1894), reached from the folder's own Russian form «Феофан Затворник», carries P841 feast 10 January — the folder's own feast (1-10). The file is in his Commons category Theophan the Recluse and its title is the folder's display name. Measured saturation 0.79 against the old file's 0.00."
+ },
+ {
+  "slug": "sophia-of-suzdal",
+  "kind": "swap",
+  "old": {
+   "w": 777,
+   "h": 2277,
+   "sat": 0.0
+  },
+  "new": {
+   "file": "File:Facial Chronicle - b.18, p. 486 - Solomonia Saburova becoming nun.jpg",
+   "w": 1280,
+   "h": 2183,
+   "sat": 0.2429
+  },
+  "licence": "Public domain",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Facial_Chronicle_-_b.18,_p._486_-_Solomonia_Saburova_becoming_nun.jpg",
+  "why": "The folder's only stored form is «София Суздальская», and ru.wikipedia's article for it is Solomonia Saburova = Wikidata Q543564, whose Commons category is SAINT SOPHIA OF SUZDAL — the folder's display name — and whose P841 feast, 29 December, is the folder's own Julian 16 December thirteen days on. This miniature from the Facial Chronicle is her tonsure, the event that made her the nun Sophia. Measured saturation 0.24 against the old file's 0.00."
+ },
+ {
+  "slug": "titus-the-soldier",
+  "kind": "no-colour",
+  "old": {
+   "w": 793,
+   "h": 851,
+   "sat": 0.0
+  },
+  "forms": [
+   "el:Τίτος",
+   "sr:Тит Печерски",
+   "ru:Тит Печерский, воин"
+  ],
+  "feasts": [
+   "1-27",
+   "2-27"
+  ],
+  "why": "Entity matched: Q23659093 Tit (P841 February 27) via wp/ru \"Тит-Воин\", Commons category none. No file it offers is at or above the 793 px icon in hand, so nothing was downloaded or measured."
+ },
+ {
+  "slug": "theophilus-companion-of-trophimus",
+  "kind": "no-colour",
+  "old": {
+   "w": 807,
+   "h": 1663,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Teofil",
+   "el:Θεόφιλος",
+   "sr:Теофил",
+   "ru:Феофил Ликийский"
+  ],
+  "feasts": [
+   "7-21",
+   "7-23"
+  ],
+  "why": "Wrong-saint refusal. The only sainty entity any route reached for the stored forms is Q44187, Patriarch Kirill of Moscow, whose category is modern photographs. Nothing reached Theophilus of Lycia, the folder's own 7-21/7-23 martyr."
+ },
+ {
+  "slug": "hilary-companion-of-proclus",
+  "kind": "no-colour",
+  "old": {
+   "w": 809,
+   "h": 1691,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Ilarie",
+   "el:Ιλάριος",
+   "sr:Иларије",
+   "ru:Иларий Калиптский"
+  ],
+  "feasts": [
+   "7-12"
+  ],
+  "why": "Wrong-saint refusal. The routes reach Hilary of Poitiers (Q44344, 14 January) and Pope Hilarius (Q172377, 17 November); the folder keeps 12 July and the epithet Calyptus. Different men of the name, so every file their categories hold is refused."
+ },
+ {
+  "slug": "julius-of-aegina",
+  "kind": "no-colour",
+  "old": {
+   "w": 810,
+   "h": 1685,
+   "sat": 0.0
+  },
+  "forms": [
+   "el:Ιούλιος",
+   "sr:Јулије",
+   "ru:Иулий Мирмидонянин"
+  ],
+  "feasts": [
+   "1-31",
+   "6-21"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Yuly (not a person (Q12308941)); July (not a person (Q47018901)); Augustus (person, nothing says saint). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "martyrius-companion-of-marcian",
+  "kind": "no-colour",
+  "old": {
+   "w": 814,
+   "h": 1660,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Martirie",
+   "el:Μαρτύριος",
+   "ru:Мартирий Константинопольский",
+   "sr:Мартирије"
+  ],
+  "feasts": [
+   "10-25"
+  ],
+  "why": "Wrong-saint refusal. The pair's own entity Q24009983 (Marcianus and Martyrius) carries no category, no P18 and no depictions; the files listed belong to Q43706, John Chrysostom, whose days are 27 January and 13 September against the folder's 10-25."
+ },
+ {
+  "slug": "simeon-the-fool-for-christ",
+  "kind": "no-colour",
+  "old": {
+   "w": 825,
+   "h": 1685,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Simeon",
+   "el:Συμεών",
+   "sr:Симеон",
+   "ru:Симеон Палестинский, Емесский"
+  ],
+  "feasts": [
+   "7-21"
+  ],
+  "why": "Identity settled (Q1099483 Simeon the Holy Fool, P841 21 July = the folder's 7-21), but the entity carries no P373 category and no P18, and the structured-data search for files depicting him returns unrelated photographs. Commons appears to hold no picture of him."
+ },
+ {
+  "slug": "anicetas-of-nicomedia",
+  "kind": "no-colour",
+  "old": {
+   "w": 835,
+   "h": 1716,
+   "sat": 0.0
+  },
+  "forms": [
+   "ru:Аникита",
+   "sr:Аникита",
+   "ro:Anichit",
+   "el:Ανίκητος"
+  ],
+  "feasts": [
+   "8-12"
+  ],
+  "why": "No entity for this saint on el/ro/ru/sr/bg/en wikipedia for any stored name form: the searches returned only Ανίκητος (not a person (Q4167410)); Demetrius III (person, nothing says saint); Aparajito (not a person (Q11424)). Routes tried: titles from the folder's own forms, wikipedia full-text then wikibase_item then P373, structured data P180, category members."
+ },
+ {
+  "slug": "cosmas-of-asia",
+  "kind": "no-colour",
+  "old": {
+   "w": 838,
+   "h": 1717,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Cosma din Asia",
+   "el:Κοσμάς",
+   "ru:Косма Азийский",
+   "sr:Козма"
+  ],
+  "feasts": [
+   "11-1"
+  ],
+  "why": "Refused on the discriminator. The only entity reached is Q76486, Cosmas and Damian of Arabia, whose P841 days are 26/27 September and 1 July; this folder keeps 1 November, which is the Asia Minor pair. Commons' category does not separate the three pairs of the name, so no file there can be shown to be this saint."
+ },
+ {
+  "slug": "alexander-companion-of-antonina",
+  "kind": "no-colour",
+  "old": {
+   "w": 847,
+   "h": 1747,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Alexandru",
+   "el:Αλέξανδρος",
+   "sr:Александар",
+   "ru:Александр Воин"
+  ],
+  "feasts": [
+   "6-10"
+  ],
+  "why": "Wrong-saint refusal. The Russian form «Александр Воин» reaches Q2623788, Alexander Peresvet, the Kulikovo monk-warrior commemorated 20 September; the folder keeps 10 June with Antonina. Different man."
+ },
+ {
+  "slug": "erastus",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 854,
+   "h": 1711,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Erast",
+   "el:Έραστος",
+   "ru:Ераст",
+   "sr:Ераст"
+  ],
+  "feasts": [
+   "11-10"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "dalmatus-of-constantinople",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 856,
+   "h": 1743,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Dalmat",
+   "el:Δαλμάτιος",
+   "sr:Далмат",
+   "ru:Далмат Далматский (Константинопольский)"
+  ],
+  "feasts": [
+   "8-3"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "eulampius-of-nicomedia",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 858,
+   "h": 1761,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Evlampie",
+   "el:Ευλάμπιος",
+   "ru:Евлампий",
+   "sr:Евлампије"
+  ],
+  "feasts": [
+   "10-10"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "timothy-husband-of-maura",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 868,
+   "h": 1706,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Timotei",
+   "el:Τιμόθεος",
+   "sr:Тимотије",
+   "ru:Тимофей Фиваидский"
+  ],
+  "feasts": [
+   "5-3"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "sergius-companion-of-bacchus",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 872,
+   "h": 1724,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Serghie",
+   "el:Σέργιος",
+   "ru:Сергий",
+   "sr:Сергије"
+  ],
+  "feasts": [
+   "10-7"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "zenobius-of-aegae",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 881,
+   "h": 1688,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Zenovie",
+   "el:Ζηνόβιος",
+   "ru:Зиновий Егейский (Киликийский)",
+   "sr:Зиновије"
+  ],
+  "feasts": [
+   "10-30"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "theodore-boyar-of-chernigov",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 894,
+   "h": 1677,
+   "sat": 0.0
+  },
+  "forms": [
+   "ru:Феодор",
+   "sr:Теодор"
+  ],
+  "feasts": [
+   "9-20"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "episteme-of-emesa",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 899,
+   "h": 1684,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Epistimia",
+   "el:Επιστήμη",
+   "ru:Епистимия Емесская (Финикийская)",
+   "sr:Епистима"
+  ],
+  "feasts": [
+   "11-5"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "damian-of-rome",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 901,
+   "h": 1730,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Damian",
+   "el:Δαμιανός",
+   "sr:Дамјан",
+   "ru:Дамиан Римский"
+  ],
+  "feasts": [
+   "7-1"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "glyceria-of-traianopolis",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 908,
+   "h": 1710,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Glicheria",
+   "el:Γλυκερία",
+   "sr:Гликерија",
+   "ru:Гликерия Гераклейская"
+  ],
+  "feasts": [
+   "5-13"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "theodosius-of-chernigov",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 919,
+   "h": 1691,
+   "sat": 0.0
+  },
+  "forms": [
+   "ru:Феодосий Черниговский",
+   "el:Θεοδόσιος",
+   "ru:Феодосий"
+  ],
+  "feasts": [
+   "2-5",
+   "9-9"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "andronicus-the-apostle",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 942,
+   "h": 1806,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Andronic",
+   "el:Ανδρόνικος",
+   "sr:Андроник",
+   "ru:Андроник"
+  ],
+  "feasts": [
+   "5-17"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "nicodemus-the-hagiorite",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 1008,
+   "h": 1387,
+   "sat": 0.0
+  },
+  "forms": [
+   "el:Όσιος Νικόδημος ο Αγιορείτης ο σοφός διδάσκαλος της εκκλησίας",
+   "ro:Nicodim Aghioritul",
+   "ru:Никодим Святогорец"
+  ],
+  "feasts": [
+   "7-14"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "helen-the-empress",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 1018,
+   "h": 1738,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Elena",
+   "el:Ελένη",
+   "sr:Јелена",
+   "ru:Елена"
+  ],
+  "feasts": [
+   "5-21"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "carpus-of-thyatira",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 1070,
+   "h": 1731,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Carp",
+   "el:Κάρπος",
+   "ru:Карп Фиатирский, Пергамский",
+   "sr:Карп"
+  ],
+  "feasts": [
+   "10-13"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "archippus-the-apostle",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 1080,
+   "h": 1761,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Arhip",
+   "el:Άρχιππος",
+   "ru:Архипп",
+   "sr:Архип"
+  ],
+  "feasts": [
+   "11-22",
+   "2-19"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "athanasius-the-reader",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 1103,
+   "h": 1770,
+   "sat": 0.0
+  },
+  "forms": [
+   "el:Αθανάσιος",
+   "sr:Атанасије",
+   "ru:Афанасий Саламинский (Кипрский), мч."
+  ],
+  "feasts": [
+   "6-20",
+   "6-23"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ },
+ {
+  "slug": "dionysius-of-ephesus",
+  "kind": "searched-unreviewed",
+  "old": {
+   "w": 1134,
+   "h": 1655,
+   "sat": 0.0
+  },
+  "forms": [
+   "ro:Dionisie",
+   "el:Διονύσιος",
+   "ru:Дионисий Ефесский"
+  ],
+  "feasts": [
+   "10-22",
+   "8-4"
+  ],
+  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+ }
+]
