@@ -142,6 +142,14 @@ another spec. **`index-carousel.spec.js:2090` is a different fault and is still
 unexplained** at about 1 in 12, as is `:1535`/`daily-stage.spec.js:763`, the
 restore pair.
 
+**What CI's own `flaky` line said on 17 October, across three runs of the full
+suite.** `chrome.spec.js:273` and `:328` were flaky on **both** projects in
+every run, which makes them the loudest pair on the board and no longer a
+desktop-only report. `index-carousel.spec.js:1600` joined them once. The
+restore pair cost a red that a re-run on the same tree cleared — which is what
+`scratchpad/ci-rerun.py` is for and is cheaper than reading a diff that cannot
+reach the failure.
+
 **The icon tail is answered, not open.** `scratchpad/icon-refusals.json` holds
 107 records. Of the 50 that were queued, 25 are `nowhere` (no entity on six
 wikipedias, or an entity carrying no picture at all) and 9 are `namesake` with
