@@ -38,7 +38,26 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**Nothing is in flight.** `85548a176` carries the overnight hunt's fixes; read
+**THREE AGENTS ARE WORKING, and their work is unpushed and unverified.**
+`origin/main` is `1060ee6bc`. Two are replacing greyscale icons with coloured
+ones where Commons has them — queue `scratchpad/grey-queue.json`, **172 of 555
+icons measure under saturation 0.06**, rows 0-85 and 86-171, a ledger apiece named
+`icon-colour-swaps-a.json` and `-b.json` under `scratchpad/` (they do not exist
+until an agent writes one, so they are named here without a path a test would
+try to open), and a swap must clear four bars: the same saint by feast and epithet, measured saturation ≥ 0.12, width no
+smaller than the file it replaces, and a licence Commons itself states. The
+third is placing saints the map cannot show: `node scripts/place-candidates.mjs`
+says **4,527 unlocated saints name a place the gazetteer already holds**, and
+the discipline is that `location.kind` is a closed set — `birth`, `death`,
+`ministry`, `relics`, `see` — so a place merely mentioned in a life is none of
+them and a fabricated coordinate is worse than an empty map.
+
+When they hand back: read their ledgers rather than their prose, re-run
+`scratchpad/grey-queue.py` and `place-candidates.mjs` for the moved numbers,
+`node scripts/corpus-gate.mjs` and `npm test`, then a full browser run before
+pushing. Nothing of theirs has been through CI.
+
+**Before that:** `85548a176` carries the overnight hunt's fixes; read
 its CI with `scratchpad/ci-flaky.py 85548a176` rather than trusting a line here.
 A backup of this tree sits at `Agios Website Ex\2026-10-14\main` (no
 `node_modules`, `.git`, `dist`, `shots` or `main/.claude` — that last is 21 GB
