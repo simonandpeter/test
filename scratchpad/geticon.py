@@ -21,6 +21,12 @@ that was Arsenios of Cappadocia).
 """
 import io, json, os, sys, time, urllib.error, urllib.parse, urllib.request
 
+# Run under `-I` (which implies `-E`) PYTHONIOENCODING is ignored, so a Cyrillic
+# file title in a progress line raised UnicodeEncodeError and the caller's own
+# park-and-restore then put every folder back with nothing fetched.
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 API = 'https://commons.wikimedia.org/w/api.php'
 UA = 'AgiosCorpus/1.0 (icon sourcing; contact via repository)'
 OK_LICENCE = ('public domain', 'pd', 'cc0', 'cc by', 'cc-by', 'cc by-sa', 'cc-by-sa')

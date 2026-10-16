@@ -8,6 +8,11 @@ one cannot be an upgrade (make_thumbs.py never upscales).
 """
 import io, json, sys
 
+# `-I` implies `-E`, so PYTHONIOENCODING is ignored and a Cyrillic file title in a
+# log line raises UnicodeEncodeError mid-row. The stream is set here instead.
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
+
 rows = json.load(io.open((sys.argv[3] if len(sys.argv) > 3 else 'scratchpad/cb-cands.json'), encoding='utf-8'))
 lo = int(sys.argv[1]) if len(sys.argv) > 1 else 0
 hi = int(sys.argv[2]) if len(sys.argv) > 2 else len(rows)
