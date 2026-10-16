@@ -113,6 +113,17 @@
       "note": "A SECOND russian row, out of the withheld-second-day backlog. The folder’s first russian row stands on 1 марта ст. ст. and was NOT moved, altered or re-sourced. Its own note already recorded this day and refused it in the words “one row per church is the schema” — the prohibition the author lifted on 2026-10-03, after which `attestationsIn` in src/lib/church.js has been plural by design and schema/saint.schema.json sets no uniqueness on `attestations`. **That sentence in the first row’s note is now wrong and this row supersedes it**; the note itself was left as it stands rather than rewritten, because copying a venerated row back to edit its prose is not what `replace_venerated` is sanctioned for. Three things were checked before this row was written, and the day rests on all three: the calendar’s own list of HIS days heads his name page — «Дни памяти: 1 марта , 13 июня» — and this day is in it; the day page for it prints a line for him, «Мц. Антонины (ок. 284-305).», which is what the `source` quotes; and the name link behind that line is https://days.pravoslavie.ru/name/2401.html, the same name page the folder’s existing row was read from. The two lines date her differently — «(III-IV)» on 1 марта and «(ок. 284-305)» here, the same span narrowed to Diocletian’s persecution — and `dates` was NOT touched: a narrower reading of the same span on the same source is not a new fact, and which of the two the folder should hold is the author’s. The 13 июня is the day no other church in this folder keeps her on; the day page prints no hymn under her name."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Nicaea",
+      "modern_name": "İznik, Turkey",
+      "lat": 40.43,
+      "lon": 29.72,
+      "uncertainty_km": 15,
+      "note": "doxologia has her sewn into a sack and drowned in a lake after the torments at Nicaea; the lake is not named and is not placed here."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

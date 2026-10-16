@@ -73,6 +73,16 @@
       "note": "The Prologue's fifth heading names only Julian; this man is named inside the entry as his disciple, burned with him. The row is read onto this folder because the folder's Greek row keeps a Cronion in the same company, at Alexandria under Decius. The Prologue makes him Julian's disciple where saint.gr pairs him with Alexander, and that difference is not reconciled here."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

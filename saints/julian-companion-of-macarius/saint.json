@@ -73,6 +73,16 @@
       "note": "Read onto this folder because the Prologue's two sentences agree with its Greek row on the city, the reign, the year by implication and the companion's name: a Julian and a Cronion put to death under Decius at Alexandria. Two things differ and are not reconciled here — the Prologue burns him alive where saint.gr's company has Julian beheaded and burns some of the unnamed thirteen, and it makes Cronion his disciple where saint.gr pairs Cronion with Alexander. The pairing is what the folder's English name was built from, and it is not changed."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

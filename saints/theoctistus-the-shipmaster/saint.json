@@ -57,6 +57,16 @@
       "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

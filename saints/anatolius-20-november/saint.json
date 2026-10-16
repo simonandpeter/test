@@ -89,6 +89,17 @@
       "note": "The third name in the day's third entry. `dates` UNTOUCHED for the same reason as on his brothers. No `related` row added. The Serbian form widens a fold to two — the other holder is `anatolius-patriarch-of-constantinople`, whose own Serbian form came out of this same book for the Julian 3 July — and the key is written in the same commit."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Nicaea",
+      "modern_name": "İznik, Turkey",
+      "lat": 40.43,
+      "lon": 29.72,
+      "uncertainty_km": 15,
+      "note": "The place of death is the Russian calendar's: it has the three brothers of Gangra die as martyrs at Nicaea. The Greek page gives the tortures and the beheading and no city. Gangra, their birthplace, this repository cannot place, so no birth row is taken."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

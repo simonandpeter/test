@@ -83,6 +83,17 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "off Nicomedia",
+      "modern_name": "the Gulf of İzmit, Turkey",
+      "lat": 40.7654,
+      "lon": 29.9408,
+      "uncertainty_km": 40,
+      "note": "The embassy suffered at Nicomedia in the sense the synaxarion gives it: Modestus put the eighty on a ship and had it fired in the open sea, and it burned to the ground at a place the Prologue calls Dakizis, which this repository cannot place. So this is Nicomedia's own coordinate with the gulf's width for its doubt, as `clergy-martyrs-of-nicomedia-370` already carries for the same company."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

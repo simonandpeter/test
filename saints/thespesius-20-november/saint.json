@@ -89,6 +89,17 @@
       "note": "The second name in the day's third entry. `dates` UNTOUCHED for the same reason as on his brothers: «око 313. године» falls outside the «300 or 312» this folder holds from two calendars. No `related` row added. Measured: no other folder in the corpus holds the form «Теспесије», so it folds with nothing. The entry is told as one story for the three brothers and the paragraph here is that story, with the bishop of Nicomedia left unnamed for the reason recorded on `eustathius-20-november`."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Nicaea",
+      "modern_name": "İznik, Turkey",
+      "lat": 40.43,
+      "lon": 29.72,
+      "uncertainty_km": 15,
+      "note": "The place of death is the Russian calendar's: it has the three brothers of Gangra die as martyrs at Nicaea. The Greek page gives the tortures and the beheading and no city. Gangra, their birthplace, this repository cannot place, so no birth row is taken."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

@@ -90,6 +90,17 @@
       "note": "The day's third entry, an enumerated company of three, and all three folders exist. `dates` UNTOUCHED: the book says «Пострадаше за Христа Господа око 313. године», about 313, where this folder holds «300 or 312», an interval already widened to hold two calendars' readings. ABOUT 313 IS OUTSIDE IT, by a year at the near end, and writing it in would make the folder claim 300–313 on three books' disagreement; the interval stands and the year is in the life. No `related` row added: the three brothers already relate one another, and the bishop of Nicomedia the entry names is already a `related` row on this folder — his name is deliberately left out of the new paragraph, because that folder carries `related: null` and a name in prose costs a row in BOTH directions. WHAT THE ENTRY ADDS: that the three were brothers by birth, of Nicomedia, of the heathen parents Philotheus and Eusebia who afterwards received the true faith from the bishop of Nicomedia together with their sons; that Philotheus was ordained presbyter; that the persecution under Maximian broke out after the parents reposed; the angels who appeared to them in prison more than once, gave them manna for food and filled their young hearts with strength and courage in endurance; the two friends who came up and talked with them at the place of execution, during which conversation the martyrs gave up their souls; and the soldiers cutting off their dead heads to show the judge."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Nicaea",
+      "modern_name": "İznik, Turkey",
+      "lat": 40.43,
+      "lon": 29.72,
+      "uncertainty_km": 15,
+      "note": "The place of death is the Russian calendar's: it has the three brothers of Gangra die as martyrs at Nicaea. The Greek page gives the tortures and the beheading and no city. Gangra, their birthplace, this repository cannot place, so no birth row is taken."
+    }
+  ],
   "text": {
     "life": "life.md"
   }

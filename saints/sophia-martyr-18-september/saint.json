@@ -70,6 +70,17 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 15,
+      "note": "The place comes from the Orthodox Church in America's line alone, which says the three suffered at Alexandria; the Greek synaxarion gives the martyrdom and no city, and azbyka.ru names Claudius governor of Egypt without naming the town."
+    }
+  ],
   "text": {
     "life": "life.md"
   },
