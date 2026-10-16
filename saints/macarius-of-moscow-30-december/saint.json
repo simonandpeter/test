@@ -47,6 +47,16 @@
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 January 2026 (13 October 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Moscow",
+      "modern_name": "Moscow, Russia",
+      "lat": 55.752,
+      "lon": 37.6175,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

@@ -75,6 +75,16 @@
   "related": [
     "dionysius-of-alexandria"
   ],
+  "locations": [
+    {
+      "kind": "ministry",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

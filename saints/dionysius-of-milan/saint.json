@@ -54,6 +54,16 @@
       "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Milan",
+      "modern_name": "Milan, Italy",
+      "lat": 45.46,
+      "lon": 9.19,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

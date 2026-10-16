@@ -61,6 +61,16 @@
       "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Constantinople",
+      "modern_name": "Istanbul, Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 20
+    }
+  ],
   "text": {
     "life": "life.md"
   }

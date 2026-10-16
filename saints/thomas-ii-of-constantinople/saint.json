@@ -55,6 +55,16 @@
       "note": "saint.gr: «Παρέμεινε στο θρόνο μέχρι το 669 μ.Χ., τον όποιο θεάρεστα κυβέρνησε και απεβίωσε ειρηνικά (Παρισινός Κώδικας 259)», and the head line «(; - 669)». His election the page puts in 667, «κατ' άλλους το 665 μ.Χ.»; that is the year of an election and not of his life, and it is left here."
     }
   },
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Constantinople",
+      "modern_name": "Istanbul, Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 20
+    }
+  ],
   "text": {
     "life": "life.md"
   }

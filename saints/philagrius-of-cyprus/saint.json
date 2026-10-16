@@ -73,6 +73,16 @@
     "marcellus-of-sicily",
     "pancratius-of-tauromenium"
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Cyprus",
+      "modern_name": "Cyprus",
+      "lat": 35.1,
+      "lon": 33.4,
+      "uncertainty_km": 150
+    }
+  ],
   "text": {
     "life": "life.md"
   }

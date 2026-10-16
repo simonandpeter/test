@@ -55,6 +55,16 @@
       "note": "saint.gr: «Ο Άγιος Τελεσφόρος μαρτύρησε το έτος 136 μ.Χ.», and the page heads him «(; - 136)». It also gives 125 for his election, «Εξελέγη Επίσκοπος Ρώμης το 125 μ.Χ.»"
     }
   },
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Rome",
+      "modern_name": "Rome, Italy",
+      "lat": 41.8931,
+      "lon": 12.4828,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

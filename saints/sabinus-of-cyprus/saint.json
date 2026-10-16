@@ -85,6 +85,16 @@
       "note": "Not in the Ohrid Prologue for 15 October old style as the Православни подсетник prints it (pravoslavno.rs for 28.10.2026, read 28 October 2026); its two entries that day are Lucian the presbyter of Antioch and Euthymius the New. No other day checked."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Cyprus",
+      "modern_name": "Cyprus",
+      "lat": 35.1,
+      "lon": 33.4,
+      "uncertainty_km": 150
+    }
+  ],
   "text": {
     "life": "life.md"
   }

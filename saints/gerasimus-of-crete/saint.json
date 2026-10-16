@@ -101,6 +101,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Crete",
+      "modern_name": "Crete, Greece",
+      "lat": 35.24,
+      "lon": 24.81,
+      "uncertainty_km": 150
+    }
+  ],
   "text": {
     "life": "life.md"
   }

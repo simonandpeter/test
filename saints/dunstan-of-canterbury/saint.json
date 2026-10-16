@@ -64,6 +64,16 @@
       "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Canterbury",
+      "modern_name": "Canterbury, England",
+      "lat": 51.28,
+      "lon": 1.08,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

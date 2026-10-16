@@ -73,6 +73,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Athens",
+      "modern_name": "Athens, Greece",
+      "lat": 37.98,
+      "lon": 23.73,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },

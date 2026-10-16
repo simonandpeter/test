@@ -54,6 +54,16 @@
       "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Alexandria",
+      "modern_name": "Alexandria, Egypt",
+      "lat": 31.2,
+      "lon": 29.92,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

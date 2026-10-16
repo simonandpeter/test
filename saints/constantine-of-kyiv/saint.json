@@ -80,6 +80,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Kyiv",
+      "modern_name": "Kyiv, Ukraine",
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

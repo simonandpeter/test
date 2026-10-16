@@ -52,6 +52,16 @@
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Novgorod",
+      "modern_name": "Velikiy Novgorod, Russia",
+      "lat": 58.52,
+      "lon": 31.27,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

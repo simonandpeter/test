@@ -81,6 +81,17 @@ for (const dir of readdirSync(SAINTS, { withFileTypes: true }).filter((e) => e.i
     };
   }
   if (named.size !== 1 || !governed) continue;
+  /*
+   * `--epithet` is what makes the `see` route readable at all. "bishop of X"
+   * matches a city the saint merely visited as readily as the one he held, so
+   * the discriminator is the folder's own name: Dionysius **of Milan** named
+   * bishop of Milan is his see, where Euthymius of Tarnovo named beside Kyiv
+   * and John the Hairy of Rostov named beside Alexandria are not.
+   */
+  if (process.argv.includes('--epithet')) {
+    const name = `${saint.slug} ${saint.display_name}`.toLowerCase();
+    if (!name.includes(governed.town.name.toLowerCase()) && !name.includes(governed.form.toLowerCase())) continue;
+  }
   rows.push({ slug: saint.slug, name: saint.display_name, years: `${born}-${died}`, ...governed });
 }
 

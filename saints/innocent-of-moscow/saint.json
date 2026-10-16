@@ -96,6 +96,16 @@
     "nicholas-of-japan",
     "philaret-of-moscow"
   ],
+  "locations": [
+    {
+      "kind": "see",
+      "historical_name": "Moscow",
+      "modern_name": "Moscow, Russia",
+      "lat": 55.752,
+      "lon": 37.6175,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },
