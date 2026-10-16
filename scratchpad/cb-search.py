@@ -182,7 +182,18 @@ def entities_for(row):
 
 
 rows = json.load(io.open('scratchpad/grey-queue.json', encoding='utf-8'))
-lo, hi, outp = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3]
+"""
+A slug list instead of a slice, because the queue is regenerated as icons are
+answered and every index moves when it is: on 17 October rows 160-171 stopped
+existing between one wave and the next. `--slugs <file.json>` takes the names
+instead, which survive that.
+"""
+if '--slugs' in sys.argv:
+    wanted = json.load(io.open(sys.argv[sys.argv.index('--slugs') + 1], encoding='utf-8'))
+    rows = [r for r in rows if r['slug'] in set(wanted)]
+    lo, hi, outp = 0, len(rows), sys.argv[1]
+else:
+    lo, hi, outp = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3]
 out = []
 if os.path.exists(outp):
     out = json.load(io.open(outp, encoding='utf-8'))

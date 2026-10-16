@@ -1,52 +1,5 @@
 [
  {
-  "slug": "martin-pope-of-rome",
-  "display_name": "Martin, pope of Rome",
-  "names": [
-   {
-    "form": "Άγιος Μαρτίνος Πάπας Ρώμης",
-    "lang": "el"
-   },
-   {
-    "form": "Martin",
-    "lang": "ro"
-   },
-   {
-    "form": "Мартин",
-    "lang": "sr"
-   },
-   {
-    "form": "Мартин I Римский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 4,
-    "day": 14
-   },
-   {
-    "church": "romanian",
-    "month": 4,
-    "day": 14
-   },
-   {
-    "church": "greek",
-    "month": 9,
-    "day": 20
-   },
-   {
-    "church": "serbian",
-    "month": 4,
-    "day": 14
-   }
-  ],
-  "w": 213,
-  "h": 300,
-  "sat": 0.0
- },
- {
   "slug": "maurice-poletaev",
   "display_name": "Maurice (Poletaev)",
   "names": [
@@ -64,108 +17,6 @@
   ],
   "w": 307,
   "h": 464,
-  "sat": 0.0
- },
- {
-  "slug": "nektarios-of-aegina",
-  "display_name": "Nektarios of Aegina",
-  "names": [
-   {
-    "form": "Άγιος Νεκτάριος Αιγίνης",
-    "lang": "el"
-   },
-   {
-    "form": "Sfântul Ierarh Nectarie",
-    "lang": "ro"
-   },
-   {
-    "form": "Нектарий Эгинский",
-    "lang": "ru"
-   },
-   {
-    "form": "Νεκτάριος Αἰγίνης",
-    "lang": "el"
-   },
-   {
-    "form": "Νεκτάριος",
-    "lang": "el"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 11,
-    "day": 9
-   },
-   {
-    "church": "romanian",
-    "month": 9,
-    "day": 3
-   },
-   {
-    "church": "greek",
-    "month": 9,
-    "day": 3
-   },
-   {
-    "church": "greek",
-    "month": 11,
-    "day": 9
-   }
-  ],
-  "w": 376,
-  "h": 557,
-  "sat": 0.0
- },
- {
-  "slug": "maximus-the-confessor",
-  "display_name": "Maximus",
-  "names": [
-   {
-    "form": "Максим Исповедник",
-    "lang": "ru"
-   },
-   {
-    "form": "Maxim Mărturisitorul",
-    "lang": "ro"
-   },
-   {
-    "form": "Μάξιμος ο Ομολογητής",
-    "lang": "el"
-   },
-   {
-    "form": "Максим Исповедник",
-    "lang": "ru"
-   },
-   {
-    "form": "Максим",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 8,
-    "day": 13
-   },
-   {
-    "church": "romanian",
-    "month": 1,
-    "day": 21
-   },
-   {
-    "church": "greek",
-    "month": 1,
-    "day": 21
-   },
-   {
-    "church": "serbian",
-    "month": 1,
-    "day": 21
-   }
-  ],
-  "w": 448,
-  "h": 1320,
   "sat": 0.0
  },
  {
@@ -292,53 +143,6 @@
   "sat": 0.0
  },
  {
-  "slug": "aretas-of-nagran",
-  "display_name": "Aretas of Nagran",
-  "names": [
-   {
-    "form": "Areta",
-    "lang": "ro"
-   },
-   {
-    "form": "Αρέθας",
-    "lang": "el"
-   },
-   {
-    "form": "Арефа Негранский",
-    "lang": "ru"
-   },
-   {
-    "form": "Арета",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 24
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 24
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 24
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 24
-   }
-  ],
-  "w": 543,
-  "h": 1676,
-  "sat": 0.0
- },
- {
   "slug": "michael-of-synada",
   "display_name": "Michael of Synada",
   "names": [
@@ -383,53 +187,6 @@
   ],
   "w": 545,
   "h": 1652,
-  "sat": 0.0
- },
- {
-  "slug": "artemius-the-great-martyr",
-  "display_name": "Artemius",
-  "names": [
-   {
-    "form": "Artemie",
-    "lang": "ro"
-   },
-   {
-    "form": "Αρτέμιος",
-    "lang": "el"
-   },
-   {
-    "form": "Артемий Антиохийский",
-    "lang": "ru"
-   },
-   {
-    "form": "Артемије",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 20
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 20
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 20
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 20
-   }
-  ],
-  "w": 547,
-  "h": 1675,
   "sat": 0.0
  },
  {
@@ -668,53 +425,6 @@
   "sat": 0.0
  },
  {
-  "slug": "nestor-of-thessalonica",
-  "display_name": "Nestor of Thessalonica",
-  "names": [
-   {
-    "form": "Nestor",
-    "lang": "ro"
-   },
-   {
-    "form": "Νέστωρ",
-    "lang": "el"
-   },
-   {
-    "form": "Нестор Солунский (Фессалоникийский)",
-    "lang": "ru"
-   },
-   {
-    "form": "Нестор",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 27
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 27
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 27
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 27
-   }
-  ],
-  "w": 556,
-  "h": 1656,
-  "sat": 0.0
- },
- {
   "slug": "pulcheria-the-empress",
   "display_name": "Pulcheria the Empress",
   "names": [
@@ -881,100 +591,6 @@
   "sat": 0.0
  },
  {
-  "slug": "obadiah",
-  "display_name": "Obadiah",
-  "names": [
-   {
-    "form": "Avdie",
-    "lang": "ro"
-   },
-   {
-    "form": "Αβδιού",
-    "lang": "el"
-   },
-   {
-    "form": "Авдий",
-    "lang": "ru"
-   },
-   {
-    "form": "Авдија",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 11,
-    "day": 19
-   },
-   {
-    "church": "romanian",
-    "month": 11,
-    "day": 19
-   },
-   {
-    "church": "greek",
-    "month": 11,
-    "day": 19
-   },
-   {
-    "church": "serbian",
-    "month": 11,
-    "day": 19
-   }
-  ],
-  "w": 561,
-  "h": 1717,
-  "sat": 0.0
- },
- {
-  "slug": "abercius-of-hierapolis",
-  "display_name": "Abercius of Hierapolis",
-  "names": [
-   {
-    "form": "Averchie",
-    "lang": "ro"
-   },
-   {
-    "form": "Αβέρκιος",
-    "lang": "el"
-   },
-   {
-    "form": "Аверкий Иерапольский",
-    "lang": "ru"
-   },
-   {
-    "form": "Аверкије",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 22
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 22
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 22
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 22
-   }
-  ],
-  "w": 562,
-  "h": 1737,
-  "sat": 0.0
- },
- {
   "slug": "aquila",
   "display_name": "Aquila",
   "names": [
@@ -1070,53 +686,6 @@
   ],
   "w": 563,
   "h": 1707,
-  "sat": 0.0
- },
- {
-  "slug": "anastasia-the-roman",
-  "display_name": "Anastasia the Roman",
-  "names": [
-   {
-    "form": "Anastasia Romana",
-    "lang": "ro"
-   },
-   {
-    "form": "Αναστασία",
-    "lang": "el"
-   },
-   {
-    "form": "Анастасия Римляныня",
-    "lang": "ru"
-   },
-   {
-    "form": "Анастасија Римљанка",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 29
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 29
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 29
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 29
-   }
-  ],
-  "w": 565,
-  "h": 1655,
   "sat": 0.0
  },
  {
@@ -1393,100 +962,6 @@
   "sat": 0.0
  },
  {
-  "slug": "pelagia-of-antioch",
-  "display_name": "Pelagia of Antioch",
-  "names": [
-   {
-    "form": "Pelaghia",
-    "lang": "ro"
-   },
-   {
-    "form": "Πελαγία",
-    "lang": "el"
-   },
-   {
-    "form": "Пелагия",
-    "lang": "ru"
-   },
-   {
-    "form": "Пелагија",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 8
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 8
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 8
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 8
-   }
-  ],
-  "w": 570,
-  "h": 1738,
-  "sat": 0.0
- },
- {
-  "slug": "amphilochius-of-iconium",
-  "display_name": "Amphilochius of Iconium",
-  "names": [
-   {
-    "form": "Amfilohie",
-    "lang": "ro"
-   },
-   {
-    "form": "Αμφιλόχιος",
-    "lang": "el"
-   },
-   {
-    "form": "Амфилохий Иконийский",
-    "lang": "ru"
-   },
-   {
-    "form": "Амфилохије",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 11,
-    "day": 23
-   },
-   {
-    "church": "romanian",
-    "month": 11,
-    "day": 23
-   },
-   {
-    "church": "greek",
-    "month": 11,
-    "day": 23
-   },
-   {
-    "church": "serbian",
-    "month": 11,
-    "day": 23
-   }
-  ],
-  "w": 571,
-  "h": 1684,
-  "sat": 0.0
- },
- {
   "slug": "glaphyra",
   "display_name": "Glaphyra",
   "names": [
@@ -1760,53 +1235,6 @@
   "sat": 0.0
  },
  {
-  "slug": "joel-the-prophet",
-  "display_name": "Joel",
-  "names": [
-   {
-    "form": "Ioil",
-    "lang": "ro"
-   },
-   {
-    "form": "Ιωήλ",
-    "lang": "el"
-   },
-   {
-    "form": "Иоиль",
-    "lang": "ru"
-   },
-   {
-    "form": "Јоил",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 19
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 19
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 19
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 19
-   }
-  ],
-  "w": 578,
-  "h": 1674,
-  "sat": 0.0
- },
- {
   "slug": "juvenal-of-jerusalem",
   "display_name": "Juvenal of Jerusalem",
   "names": [
@@ -1851,53 +1279,6 @@
   ],
   "w": 578,
   "h": 1712,
-  "sat": 0.0
- },
- {
-  "slug": "lucian-of-antioch",
-  "display_name": "Lucian of Antioch",
-  "names": [
-   {
-    "form": "Luchian",
-    "lang": "ro"
-   },
-   {
-    "form": "Λουκιανός",
-    "lang": "el"
-   },
-   {
-    "form": "Лукиан Антиохийский",
-    "lang": "ru"
-   },
-   {
-    "form": "Лукијан Антиохијски",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 15
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 15
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 15
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 15
-   }
-  ],
-  "w": 578,
-  "h": 1680,
   "sat": 0.0
  },
  {
@@ -2033,100 +1414,6 @@
   "sat": 0.0
  },
  {
-  "slug": "luke-the-evangelist",
-  "display_name": "Luke the Evangelist",
-  "names": [
-   {
-    "form": "Luca",
-    "lang": "ro"
-   },
-   {
-    "form": "Λουκάς",
-    "lang": "el"
-   },
-   {
-    "form": "Лука",
-    "lang": "sr"
-   },
-   {
-    "form": "Лука Евангелист",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 4,
-    "day": 22
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 18
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 18
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 18
-   }
-  ],
-  "w": 584,
-  "h": 1691,
-  "sat": 0.0
- },
- {
-  "slug": "artemon-of-laodicea",
-  "display_name": "Artemon of Laodicea",
-  "names": [
-   {
-    "form": "Artemon",
-    "lang": "ro"
-   },
-   {
-    "form": "Αρτέμων",
-    "lang": "el"
-   },
-   {
-    "form": "Артемон",
-    "lang": "sr"
-   },
-   {
-    "form": "Артемон Лаодикийский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 4,
-    "day": 13
-   },
-   {
-    "church": "romanian",
-    "month": 4,
-    "day": 13
-   },
-   {
-    "church": "greek",
-    "month": 3,
-    "day": 24
-   },
-   {
-    "church": "serbian",
-    "month": 4,
-    "day": 13
-   }
-  ],
-  "w": 587,
-  "h": 1695,
-  "sat": 0.0
- },
- {
   "slug": "fevronia-of-sivapol",
   "display_name": "Fevronia of Sivapol",
   "names": [
@@ -2218,91 +1505,6 @@
   ],
   "w": 591,
   "h": 1705,
-  "sat": 0.0
- },
- {
-  "slug": "peter-of-alexandria",
-  "display_name": "Peter of Alexandria",
-  "names": [
-   {
-    "form": "Petru",
-    "lang": "ro"
-   },
-   {
-    "form": "Πέτρος",
-    "lang": "el"
-   },
-   {
-    "form": "Петар Александријски",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "romanian",
-    "month": 11,
-    "day": 24
-   },
-   {
-    "church": "greek",
-    "month": 11,
-    "day": 24
-   },
-   {
-    "church": "serbian",
-    "month": 11,
-    "day": 25
-   }
-  ],
-  "w": 592,
-  "h": 1651,
-  "sat": 0.0
- },
- {
-  "slug": "samson-the-hospitable",
-  "display_name": "Samson the Hospitable",
-  "names": [
-   {
-    "form": "Samson",
-    "lang": "ro"
-   },
-   {
-    "form": "Σαμψών",
-    "lang": "el"
-   },
-   {
-    "form": "Сампсон",
-    "lang": "sr"
-   },
-   {
-    "form": "Сампсон Странноприимец",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 6,
-    "day": 27
-   },
-   {
-    "church": "romanian",
-    "month": 6,
-    "day": 27
-   },
-   {
-    "church": "greek",
-    "month": 6,
-    "day": 27
-   },
-   {
-    "church": "serbian",
-    "month": 6,
-    "day": 27
-   }
-  ],
-  "w": 594,
-  "h": 1709,
   "sat": 0.0
  },
  {
@@ -2725,53 +1927,6 @@
   "sat": 0.0
  },
  {
-  "slug": "demetrius-the-myrrhstreamer",
-  "display_name": "Demetrius the Myrrh-streamer",
-  "names": [
-   {
-    "form": "Dimitrie",
-    "lang": "ro"
-   },
-   {
-    "form": "Δημήτριος",
-    "lang": "el"
-   },
-   {
-    "form": "Димитрий Солунский",
-    "lang": "ru"
-   },
-   {
-    "form": "Димитрије",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 26
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 26
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 26
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 26
-   }
-  ],
-  "w": 601,
-  "h": 1669,
-  "sat": 0.0
- },
- {
   "slug": "elijah-the-tishbite",
   "display_name": "Elijah the Tishbite",
   "names": [
@@ -2812,53 +1967,6 @@
   ],
   "w": 603,
   "h": 1781,
-  "sat": 0.0
- },
- {
-  "slug": "christina-of-tyre",
-  "display_name": "Christina of Tyre",
-  "names": [
-   {
-    "form": "Hristina",
-    "lang": "ro"
-   },
-   {
-    "form": "Χριστίνα",
-    "lang": "el"
-   },
-   {
-    "form": "Христина",
-    "lang": "sr"
-   },
-   {
-    "form": "Христина Тирская",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 7,
-    "day": 24
-   },
-   {
-    "church": "romanian",
-    "month": 7,
-    "day": 24
-   },
-   {
-    "church": "greek",
-    "month": 7,
-    "day": 24
-   },
-   {
-    "church": "serbian",
-    "month": 7,
-    "day": 24
-   }
-  ],
-  "w": 605,
-  "h": 1753,
   "sat": 0.0
  },
  {
@@ -2935,53 +2043,6 @@
   ],
   "w": 605,
   "h": 1691,
-  "sat": 0.0
- },
- {
-  "slug": "symeon-of-the-wonderful-mountain",
-  "display_name": "Symeon of the Wonderful Mountain",
-  "names": [
-   {
-    "form": "Simeon cel din Muntele Minunat",
-    "lang": "ro"
-   },
-   {
-    "form": "Συμεών",
-    "lang": "el"
-   },
-   {
-    "form": "Симеон Столпник Дивногорац",
-    "lang": "sr"
-   },
-   {
-    "form": "Симеон Дивногорец",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 5,
-    "day": 24
-   },
-   {
-    "church": "romanian",
-    "month": 5,
-    "day": 24
-   },
-   {
-    "church": "greek",
-    "month": 5,
-    "day": 24
-   },
-   {
-    "church": "serbian",
-    "month": 5,
-    "day": 24
-   }
-  ],
-  "w": 605,
-  "h": 1726,
   "sat": 0.0
  },
  {
@@ -3573,53 +2634,6 @@
   "sat": 0.0
  },
  {
-  "slug": "theodore-brother-of-theophanes",
-  "display_name": "Theodore, brother of Theophanes",
-  "names": [
-   {
-    "form": "Teodor",
-    "lang": "ro"
-   },
-   {
-    "form": "Θεόδωρος",
-    "lang": "el"
-   },
-   {
-    "form": "Теодор Начертани",
-    "lang": "sr"
-   },
-   {
-    "form": "Феодор Начертанный, Константинопольский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 12,
-    "day": 27
-   },
-   {
-    "church": "romanian",
-    "month": 12,
-    "day": 27
-   },
-   {
-    "church": "greek",
-    "month": 12,
-    "day": 27
-   },
-   {
-    "church": "serbian",
-    "month": 12,
-    "day": 27
-   }
-  ],
-  "w": 614,
-  "h": 1735,
-  "sat": 0.0
- },
- {
   "slug": "therapon-of-sardis",
   "display_name": "Therapon of Sardis",
   "names": [
@@ -3702,53 +2716,6 @@
   ],
   "w": 615,
   "h": 1839,
-  "sat": 0.0
- },
- {
-  "slug": "cyricus-son-of-julitta",
-  "display_name": "Cyricus, son of Julitta",
-  "names": [
-   {
-    "form": "Chiric",
-    "lang": "ro"
-   },
-   {
-    "form": "Κήρυκος",
-    "lang": "el"
-   },
-   {
-    "form": "Кирик",
-    "lang": "sr"
-   },
-   {
-    "form": "Кирик Тарсийский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 7,
-    "day": 15
-   },
-   {
-    "church": "romanian",
-    "month": 7,
-    "day": 15
-   },
-   {
-    "church": "greek",
-    "month": 7,
-    "day": 15
-   },
-   {
-    "church": "serbian",
-    "month": 7,
-    "day": 15
-   }
-  ],
-  "w": 616,
-  "h": 1707,
   "sat": 0.0
  },
  {
@@ -4086,53 +3053,6 @@
   "sat": 0.0
  },
  {
-  "slug": "john-the-merciful-of-alexandria",
-  "display_name": "John the Merciful of Alexandria",
-  "names": [
-   {
-    "form": "Ioan cel Milostiv",
-    "lang": "ro"
-   },
-   {
-    "form": "Ιωάννης",
-    "lang": "el"
-   },
-   {
-    "form": "Иоанн Милостивый, Александрийский",
-    "lang": "ru"
-   },
-   {
-    "form": "Јован Милостиви",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 11,
-    "day": 12
-   },
-   {
-    "church": "romanian",
-    "month": 11,
-    "day": 12
-   },
-   {
-    "church": "greek",
-    "month": 11,
-    "day": 12
-   },
-   {
-    "church": "serbian",
-    "month": 11,
-    "day": 12
-   }
-  ],
-  "w": 629,
-  "h": 1700,
-  "sat": 0.0
- },
- {
   "slug": "tikhon-of-amathus",
   "display_name": "Tikhon of Amathus",
   "names": [
@@ -4368,53 +3288,6 @@
   "sat": 0.0
  },
  {
-  "slug": "anastasia-pupil-of-chrysogonus",
-  "display_name": "Anastasia, pupil of Chrysogonus",
-  "names": [
-   {
-    "form": "Anastasia",
-    "lang": "ro"
-   },
-   {
-    "form": "Αναστασία",
-    "lang": "el"
-   },
-   {
-    "form": "Анастасија Узорешителница",
-    "lang": "sr"
-   },
-   {
-    "form": "Анастасия Узорешительница",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 12,
-    "day": 22
-   },
-   {
-    "church": "romanian",
-    "month": 12,
-    "day": 22
-   },
-   {
-    "church": "greek",
-    "month": 12,
-    "day": 22
-   },
-   {
-    "church": "serbian",
-    "month": 12,
-    "day": 22
-   }
-  ],
-  "w": 632,
-  "h": 1749,
-  "sat": 0.0
- },
- {
   "slug": "eugraphus",
   "display_name": "Eugraphus",
   "names": [
@@ -4553,44 +3426,6 @@
   ],
   "w": 637,
   "h": 1754,
-  "sat": 0.0
- },
- {
-  "slug": "theodore-the-sanctified",
-  "display_name": "Theodore the Sanctified",
-  "names": [
-   {
-    "form": "Teodor cel Sfințit",
-    "lang": "ro"
-   },
-   {
-    "form": "Теодор Освештани",
-    "lang": "sr"
-   },
-   {
-    "form": "Феодор Освященный",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 5,
-    "day": 16
-   },
-   {
-    "church": "romanian",
-    "month": 5,
-    "day": 16
-   },
-   {
-    "church": "serbian",
-    "month": 5,
-    "day": 16
-   }
-  ],
-  "w": 640,
-  "h": 1764,
   "sat": 0.0
  },
  {
@@ -5018,101 +3853,6 @@
   "sat": 0.0
  },
  {
-  "slug": "isaac-of-constantinople",
-  "display_name": "Isaac of Constantinople",
-  "names": [
-   {
-    "form": "Isaachie",
-    "lang": "ro"
-   },
-   {
-    "form": "Ισαάκιος",
-    "lang": "el"
-   },
-   {
-    "form": "Исакије",
-    "lang": "sr"
-   },
-   {
-    "form": "Исаакий Далматский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 3,
-    "day": 22
-   },
-   {
-    "church": "romanian",
-    "month": 5,
-    "day": 30
-   },
-   {
-    "church": "greek",
-    "month": 5,
-    "day": 30
-   },
-   {
-    "church": "serbian",
-    "month": 5,
-    "day": 30
-   },
-   {
-    "church": "russian",
-    "month": 5,
-    "day": 30
-   },
-   {
-    "church": "russian",
-    "month": 8,
-    "day": 3
-   }
-  ],
-  "w": 658,
-  "h": 1714,
-  "sat": 0.0
- },
- {
-  "slug": "theodosia-of-constantinople",
-  "display_name": "Theodosia of Constantinople",
-  "names": [
-   {
-    "form": "Θεοδοσία",
-    "lang": "el"
-   },
-   {
-    "form": "Теодосија",
-    "lang": "sr"
-   },
-   {
-    "form": "Феодосия Константинопольская",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 5,
-    "day": 29
-   },
-   {
-    "church": "greek",
-    "month": 5,
-    "day": 29
-   },
-   {
-    "church": "serbian",
-    "month": 5,
-    "day": 29
-   }
-  ],
-  "w": 658,
-  "h": 1727,
-  "sat": 0.0
- },
- {
   "slug": "theodosia-of-tyre",
   "display_name": "Theodosia of Tyre",
   "names": [
@@ -5198,100 +3938,6 @@
   "sat": 0.0
  },
  {
-  "slug": "patapius-of-thebes",
-  "display_name": "Patapius of Thebes",
-  "names": [
-   {
-    "form": "Patapie",
-    "lang": "ro"
-   },
-   {
-    "form": "Πατάπιος",
-    "lang": "el"
-   },
-   {
-    "form": "Патапије",
-    "lang": "sr"
-   },
-   {
-    "form": "Патапий Фивский, Константинопольский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 12,
-    "day": 8
-   },
-   {
-    "church": "romanian",
-    "month": 12,
-    "day": 8
-   },
-   {
-    "church": "greek",
-    "month": 12,
-    "day": 8
-   },
-   {
-    "church": "serbian",
-    "month": 12,
-    "day": 8
-   }
-  ],
-  "w": 661,
-  "h": 1749,
-  "sat": 0.0
- },
- {
-  "slug": "pelagia-of-tarsus",
-  "display_name": "Pelagia of Tarsus",
-  "names": [
-   {
-    "form": "Pelaghia",
-    "lang": "ro"
-   },
-   {
-    "form": "Πελαγία",
-    "lang": "el"
-   },
-   {
-    "form": "Пелагия",
-    "lang": "ru"
-   },
-   {
-    "form": "Пелагија Тарсанка",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 7
-   },
-   {
-    "church": "romanian",
-    "month": 5,
-    "day": 4
-   },
-   {
-    "church": "greek",
-    "month": 5,
-    "day": 4
-   },
-   {
-    "church": "serbian",
-    "month": 5,
-    "day": 4
-   }
-  ],
-  "w": 661,
-  "h": 1796,
-  "sat": 0.0
- },
- {
   "slug": "ignatius-of-rostov",
   "display_name": "Ignatius of Rostov",
   "names": [
@@ -5374,53 +4020,6 @@
   ],
   "w": 664,
   "h": 1724,
-  "sat": 0.0
- },
- {
-  "slug": "mocius-of-amphipolis",
-  "display_name": "Mocius of Amphipolis",
-  "names": [
-   {
-    "form": "Mochie",
-    "lang": "ro"
-   },
-   {
-    "form": "Μώκιος",
-    "lang": "el"
-   },
-   {
-    "form": "Мокије",
-    "lang": "sr"
-   },
-   {
-    "form": "Мокий Амфипольский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 5,
-    "day": 11
-   },
-   {
-    "church": "romanian",
-    "month": 5,
-    "day": 11
-   },
-   {
-    "church": "greek",
-    "month": 5,
-    "day": 11
-   },
-   {
-    "church": "serbian",
-    "month": 5,
-    "day": 11
-   }
-  ],
-  "w": 664,
-  "h": 1815,
   "sat": 0.0
  },
  {
@@ -5570,53 +4169,6 @@
   "sat": 0.0
  },
  {
-  "slug": "julian-of-tarsus",
-  "display_name": "Julian of Tarsus",
-  "names": [
-   {
-    "form": "Iulian din Tars",
-    "lang": "ro"
-   },
-   {
-    "form": "Ιουλιανός",
-    "lang": "el"
-   },
-   {
-    "form": "Јулијан Тарсанин",
-    "lang": "sr"
-   },
-   {
-    "form": "Иулиан Аназарвский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 3,
-    "day": 16
-   },
-   {
-    "church": "romanian",
-    "month": 6,
-    "day": 21
-   },
-   {
-    "church": "greek",
-    "month": 6,
-    "day": 21
-   },
-   {
-    "church": "serbian",
-    "month": 6,
-    "day": 21
-   }
-  ],
-  "w": 667,
-  "h": 1758,
-  "sat": 0.0
- },
- {
   "slug": "acacius-the-centurion",
   "display_name": "Acacius the Centurion",
   "names": [
@@ -5709,53 +4261,6 @@
   ],
   "w": 669,
   "h": 1826,
-  "sat": 0.0
- },
- {
-  "slug": "sabbas-the-sanctified",
-  "display_name": "Sabbas the Sanctified",
-  "names": [
-   {
-    "form": "Sava cel Sfințit",
-    "lang": "ro"
-   },
-   {
-    "form": "Σάββας",
-    "lang": "el"
-   },
-   {
-    "form": "Сава Освећени",
-    "lang": "sr"
-   },
-   {
-    "form": "Савва Освященный",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 12,
-    "day": 5
-   },
-   {
-    "church": "romanian",
-    "month": 12,
-    "day": 5
-   },
-   {
-    "church": "greek",
-    "month": 12,
-    "day": 5
-   },
-   {
-    "church": "serbian",
-    "month": 12,
-    "day": 5
-   }
-  ],
-  "w": 672,
-  "h": 1782,
   "sat": 0.0
  },
  {
@@ -5888,158 +4393,6 @@
   ],
   "w": 678,
   "h": 989,
-  "sat": 0.0
- },
- {
-  "slug": "eusignius-of-antioch",
-  "display_name": "Eusignius of Antioch",
-  "names": [
-   {
-    "form": "Evsignie",
-    "lang": "ro"
-   },
-   {
-    "form": "Ευσίγνιος",
-    "lang": "el"
-   },
-   {
-    "form": "Евсигније",
-    "lang": "sr"
-   },
-   {
-    "form": "Евсигний Антиохийский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 8,
-    "day": 5
-   },
-   {
-    "church": "romanian",
-    "month": 8,
-    "day": 5
-   },
-   {
-    "church": "greek",
-    "month": 8,
-    "day": 5
-   },
-   {
-    "church": "serbian",
-    "month": 8,
-    "day": 5
-   }
-  ],
-  "w": 686,
-  "h": 1800,
-  "sat": 0.0
- },
- {
-  "slug": "zephaniah",
-  "display_name": "Zephaniah",
-  "names": [
-   {
-    "form": "Sofonie",
-    "lang": "ro"
-   },
-   {
-    "form": "Σοφονίας",
-    "lang": "el"
-   },
-   {
-    "form": "Софоније",
-    "lang": "sr"
-   },
-   {
-    "form": "Софония",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 12,
-    "day": 3
-   },
-   {
-    "church": "romanian",
-    "month": 12,
-    "day": 3
-   },
-   {
-    "church": "greek",
-    "month": 12,
-    "day": 3
-   },
-   {
-    "church": "serbian",
-    "month": 12,
-    "day": 3
-   }
-  ],
-  "w": 697,
-  "h": 1816,
-  "sat": 0.0
- },
- {
-  "slug": "theophan-the-recluse",
-  "display_name": "Theophan the Recluse",
-  "names": [
-   {
-    "form": "Teofan Zăvorâtul",
-    "lang": "ro"
-   },
-   {
-    "form": "Θεοφάνης",
-    "lang": "el"
-   },
-   {
-    "form": "Феофан Затворник, Вышенский",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 1,
-    "day": 10
-   },
-   {
-    "church": "romanian",
-    "month": 1,
-    "day": 10
-   },
-   {
-    "church": "greek",
-    "month": 1,
-    "day": 6
-   }
-  ],
-  "w": 741,
-  "h": 998,
-  "sat": 0.0
- },
- {
-  "slug": "sophia-of-suzdal",
-  "display_name": "Sophia of Suzdal",
-  "names": [
-   {
-    "form": "София Суздальская",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 12,
-    "day": 16
-   }
-  ],
-  "w": 777,
-  "h": 2277,
   "sat": 0.0
  },
  {
@@ -6641,53 +4994,6 @@
   "sat": 0.0
  },
  {
-  "slug": "sergius-companion-of-bacchus",
-  "display_name": "Sergius, companion of Bacchus",
-  "names": [
-   {
-    "form": "Serghie",
-    "lang": "ro"
-   },
-   {
-    "form": "Σέργιος",
-    "lang": "el"
-   },
-   {
-    "form": "Сергий",
-    "lang": "ru"
-   },
-   {
-    "form": "Сергије",
-    "lang": "sr"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 10,
-    "day": 7
-   },
-   {
-    "church": "romanian",
-    "month": 10,
-    "day": 7
-   },
-   {
-    "church": "greek",
-    "month": 10,
-    "day": 7
-   },
-   {
-    "church": "serbian",
-    "month": 10,
-    "day": 7
-   }
-  ],
-  "w": 872,
-  "h": 1724,
-  "sat": 0.0
- },
- {
   "slug": "zenobius-of-aegae",
   "display_name": "Zenobius of Aegae",
   "names": [
@@ -6902,39 +5208,6 @@
   ],
   "w": 908,
   "h": 1710,
-  "sat": 0.0
- },
- {
-  "slug": "theodosius-of-chernigov",
-  "display_name": "Theodosius of Chernigov",
-  "names": [
-   {
-    "form": "Феодосий Черниговский",
-    "lang": "ru"
-   },
-   {
-    "form": "Θεοδόσιος",
-    "lang": "el"
-   },
-   {
-    "form": "Феодосий",
-    "lang": "ru"
-   }
-  ],
-  "feasts": [
-   {
-    "church": "russian",
-    "month": 9,
-    "day": 9
-   },
-   {
-    "church": "greek",
-    "month": 2,
-    "day": 5
-   }
-  ],
-  "w": 919,
-  "h": 1691,
   "sat": 0.0
  },
  {

@@ -63,15 +63,37 @@ its own script, and `TODO 23` holds the four questions they could not settle.
 hand-typed pairs could silently make — a coordinate written the wrong way
 round, which the schema accepts and which puts a pope in Albania.
 
-**Eighteen greyscale icons are answered in colour and two were taken back
-out**, and the reason the two came out is the one bar a script cannot check:
-whether the picture reads as that saint in a 352 px hero slot. A photograph of
-a church interior with Haggai cut off at its edge, and a whole page of the
-Manasses Chronicle, both cleared saturation, width, licence and identity.
-`scratchpad/hero-shots.mjs` is how they were seen and
-`scratchpad/colour-swaps-reverted.json` holds their URLs, so either goes back
-in one fetch. **154 of the queue's 172 greyscale icons are untouched**, and
-`scratchpad/icon-colour-swaps-b.json` says where a next wave resumes.
+**THE COLOUR SWEEP IS ALL BUT CLOSED.** The queue measured 172 greyscale
+icons on 16 October and `scratchpad/grey-queue.py` now measures **134**:
+thirty-eight are answered in colour, and of the 134 that remain **122 have
+been searched and refused with their reason recorded** in
+`scratchpad/icon-colour-swaps-a.json`, `-b.json` and `scratchpad/icon-refusals.json`.
+What a next wave has left is the twelve `scratchpad/grey-left.json` names and
+nothing else.
+
+**Four swaps were made, looked at, and taken back out**, which is the one bar
+a script cannot clear: whether the picture reads as that saint in a 352 px
+hero slot. A photograph of a church interior with Haggai cut off at its edge;
+a whole page of the Manasses Chronicle for Maximus; a photograph of Thaddeus
+of Tver's reliquary shrine where the file he already held is a portrait of
+the bishop. All three cleared saturation, width, licence and identity by
+script. Pulcheria's Met print never reached a folder, measuring 0.068.
+`scratchpad/hero-shots.mjs` and `scratchpad/blob-look.mjs` are how a picture
+gets looked at, and `scratchpad/colour-swaps-reverted.json` holds every
+reverted URL, so any of them goes back in one fetch.
+
+**`icon.jpg` is not always a JPEG.** `geticon.py` writes Commons' thumb bytes
+verbatim and Commons serves a PNG thumb for a PNG source, so **136 of 555
+masters are PNGs under a `.jpg` name**. Mostly that is right — the Menaion
+plates are line art and smaller as PNG — but **sixteen are colour mosaics and
+photographs carrying 19.5 MB they do not need**. `scratchpad/png-icons.py`
+measures it and re-encodes only where a JPEG is actually smaller. The four
+this night's own swaps wrote are converted; the sixteen are older and are a
+decision.
+
+**A row number does not survive a requeue.** `grey-queue.py` is regenerated as
+icons are answered and every index moves, so `cb-search.py` takes
+`--slugs <file.json>` now.
 
 **What the colour sweep cost, which is the reason it did not finish.** Two
 clients at a request every 1.5 s took Commons and every wikipedia to a hard 429
