@@ -1350,9 +1350,22 @@ the open blob's names*. The second wins, so `map.spec.js`'s cluster tests fly
 to Edessa's five now and say why. **At 360 px the open blob itself does not
 fit**: the whole picture carried two names where the open blob had seven
 members, which is `map-labels.js` placing a block inside a 360 px picture and
-is the density work §8.3 defers. Whether a city's crowd should read as four
-blobs or as one mark with a count is the question underneath, and it is the
-author's.
+is the density work §8.3 defers.
+
+`scratchpad/blob-look.mjs` is the instrument — it flies to a city, zooms to
+the ceiling and prints how many dots, how many of them blobbed and how many
+named, at both widths, with a screenshot of each. **The pictures read well**:
+at 360 px Nicomedia is five blobs, three of them printing `+8`, `+7`, `+8`
+and the open one naming two; at 1280 px Constantinople prints a column of
+names down the picture. Two things in those numbers are for the author.
+Nineteen names are drawn at Constantinople where the open blob can hold at
+most `BLOB_MAX` of them, so something besides the open blob is being named
+and it is not written down anywhere which. And the open blob alone prints no
+count, so a reader at 360 px sees two names where there are seven saints and
+nothing says the other five are there — the closed blobs beside it say `+8`.
+
+Whether a city's crowd should read as four blobs or as one mark with a count
+is the question underneath, and it is the author's.
 
 **4. An island is neither of the two things `zoom` sorts.**
 `place-candidates.mjs` tells the gazetteer's towns from its countries by
