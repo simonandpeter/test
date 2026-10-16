@@ -109,6 +109,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Tbilisi",
+      "modern_name": "Tbilisi, Georgia",
+      "lat": 41.72,
+      "lon": 44.79,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

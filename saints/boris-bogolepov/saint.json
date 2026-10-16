@@ -61,6 +61,16 @@
       "note": "Not in the Ohrid Prologue on pravoslavno.rs for 01.10.2026 (18. септембар ст. ст.) (checked 2026-09-17); no other day checked."
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Moscow",
+      "modern_name": "Moscow, Russia",
+      "lat": 55.752,
+      "lon": 37.6175,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

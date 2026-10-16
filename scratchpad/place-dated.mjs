@@ -16,9 +16,9 @@
  * Saint Petersburg is where the Romanovs were reburied eighty years after
  * Yekaterinburg, and a confessor's interrogation names the district his father
  * died in. So the city has to be governed by the verb — "martyred at X",
- * "beheaded in X" — with nothing between them.
+ * "born in X", "bishop of X" — with nothing between them.
  *
- *   node scratchpad/place-dated.mjs [--limit 40]
+ *   node scratchpad/place-dated.mjs [death|birth|see] [--limit 40]
  */
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
@@ -35,7 +35,20 @@ for (const place of PLACES) {
   }
 }
 
-const DIED = '(?:died|beheaded|martyred|suffered|burned|crucified|drowned|executed|stoned|shot)';
+/*
+ * `see` takes no preposition of place, because the construction is "bishop of
+ * X" and "of" is the only one it ever takes — which is also why it is the
+ * weakest of the three: "bishop of the Church" and "metropolitan of all
+ * Russia" wear the same clothes.
+ */
+const GOVERNED = {
+  death: /(?:died|beheaded|martyred|suffered|burned|crucified|drowned|executed|stoned|shot|reposed)\s+(?:at|in)\s+/,
+  birth: /(?:born|brought up)\s+(?:at|in)\s+/,
+  see: /(?:bishop|archbishop|metropolitan|patriarch|presbyter|deacon|abbot|hegumen)\s+(?:of|at|in)\s+/,
+};
+
+const kind = process.argv.find((a) => a in GOVERNED) ?? 'death';
+const verb = GOVERNED[kind];
 const prose = (text) => text.split('\n*After')[0];
 
 const rows = [];
@@ -57,8 +70,7 @@ for (const dir of readdirSync(SAINTS, { withFileTypes: true }).filter((e) => e.i
     const safe = form.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     if (!new RegExp(`\\b${safe}\\b`).test(text)) continue;
     named.add(town.name);
-    const verb = new RegExp(`${DIED}\\s+(?:at|in)\\s+${safe}\\b`, 'i');
-    const at = text.search(verb);
+    const at = text.search(new RegExp(`${verb.source}${safe}\\b`, 'i'));
     if (at === -1 || governed) continue;
     const start = Math.max(0, text.lastIndexOf('.', at) + 1);
     const stop = text.indexOf('.', at);
@@ -73,7 +85,7 @@ for (const dir of readdirSync(SAINTS, { withFileTypes: true }).filter((e) => e.i
 }
 
 const limit = process.argv.includes('--limit') ? Number(process.argv[process.argv.indexOf('--limit') + 1]) : Infinity;
-console.log(`${rows.length} dated, unlocated saints whose life names one city and says they died in it\n`);
+console.log(`${rows.length} dated, unlocated saints whose life names one city and governs it as "${kind}"\n`);
 for (const row of rows.slice(0, limit)) {
   console.log(`${row.slug}  (${row.name}, ${row.years})`);
   console.log(`   ${row.town.name} ${row.town.lon},${row.town.lat}  zoom ${row.town.zoom}  [matched "${row.form}"]`);

@@ -103,6 +103,16 @@
       "note": "Not checked: the Охридски пролог for the corresponding Julian day (8 October 2026)."
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Moscow",
+      "modern_name": "Moscow, Russia",
+      "lat": 55.752,
+      "lon": 37.6175,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   }

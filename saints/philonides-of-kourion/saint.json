@@ -60,6 +60,16 @@
       "note": "Not on the Православни подсетник’s calendar line for 12.09.2026 (30. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Cyprus",
+      "modern_name": "Cyprus",
+      "lat": 35.1,
+      "lon": 33.4,
+      "uncertainty_km": 150
+    }
+  ],
   "text": {
     "life": "life.md"
   }

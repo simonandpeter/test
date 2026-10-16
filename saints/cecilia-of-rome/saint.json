@@ -140,6 +140,16 @@
       "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Rome",
+      "modern_name": "Rome, Italy",
+      "lat": 41.8931,
+      "lon": 12.4828,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },

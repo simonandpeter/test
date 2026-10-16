@@ -97,6 +97,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Constantinople",
+      "modern_name": "Istanbul, Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 20
+    }
+  ],
   "text": {
     "life": "life.md"
   },

@@ -83,6 +83,16 @@
       "note": "Not on the Православни подсетник’s calendar line for 31.08.2026 (18. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Constantinople",
+      "modern_name": "Istanbul, Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "uncertainty_km": 20
+    }
+  ],
   "text": {
     "life": "life.md"
   },

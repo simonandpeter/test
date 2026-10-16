@@ -94,6 +94,16 @@
       }
     }
   ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Nicaea",
+      "modern_name": "İznik, Turkey",
+      "lat": 40.43,
+      "lon": 29.72,
+      "uncertainty_km": 15
+    }
+  ],
   "text": {
     "life": "life.md"
   },
