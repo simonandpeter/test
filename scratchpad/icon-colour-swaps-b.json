@@ -1055,7 +1055,7 @@
  },
  {
   "slug": "erastus",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 854,
    "h": 1711,
@@ -1070,11 +1070,11 @@
   "feasts": [
    "11-10"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: a fourth-century BC philosopher, a Swiss Calvinist and a Woody Allen film. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "dalmatus-of-constantinople",
-  "kind": "searched-unreviewed",
+  "kind": "namesake",
   "old": {
    "w": 856,
    "h": 1743,
@@ -1089,11 +1089,11 @@
   "feasts": [
    "8-3"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "The routes reach Q705202, Isaac of Dalmatia, whose P841 is 30 May against this folder's 3 August. Isaac founded the Dalmatou monastery and Dalmatus succeeded him; they are two men, and `isaac-of-constantinople` already holds that icon."
  },
  {
   "slug": "eulampius-of-nicomedia",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 858,
    "h": 1761,
@@ -1108,11 +1108,11 @@
   "feasts": [
    "10-10"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: a group entity carrying no picture, a Greek banker and a 1970 film. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "timothy-husband-of-maura",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 868,
    "h": 1706,
@@ -1127,11 +1127,11 @@
   "feasts": [
    "5-3"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: a Russian priest, a list of bishops and a disambiguation page. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "sergius-companion-of-bacchus",
-  "kind": "searched-unreviewed",
+  "kind": "swap",
   "old": {
    "w": 872,
    "h": 1724,
@@ -1146,11 +1146,11 @@
   "feasts": [
    "10-7"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "Wikidata Q140013, Sergius and Bacchus, carries P841 7 October, which is this folder's own feast, and there is one pair of the name. File:Sergius and Bacchus icon.jpg, public domain, 1280 px of a 3663 px original at saturation 0.398 against an 872 px plate at 0.000."
  },
  {
   "slug": "zenobius-of-aegae",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 881,
    "h": 1688,
@@ -1165,11 +1165,11 @@
   "feasts": [
    "10-30"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: a given name, a disambiguation page, a Greek sophist and a prime minister. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "theodore-boyar-of-chernigov",
-  "kind": "searched-unreviewed",
+  "kind": "namesake",
   "old": {
    "w": 894,
    "h": 1677,
@@ -1182,11 +1182,11 @@
   "feasts": [
    "9-20"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "Everything reached is Q2363350, Theodore Stratelates, P841 8 February against this folder's 20 September. The boyar martyred with Michael of Chernigov is a different man five centuries later."
  },
  {
   "slug": "episteme-of-emesa",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 899,
    "h": 1684,
@@ -1201,11 +1201,11 @@
   "feasts": [
    "11-5"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: the calendar of saints itself, a Romanian bishop and a monastery. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "damian-of-rome",
-  "kind": "searched-unreviewed",
+  "kind": "ambiguous",
   "old": {
    "w": 901,
    "h": 1730,
@@ -1220,11 +1220,11 @@
   "feasts": [
    "7-1"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "Q76486 conflates the three pairs of Cosmas and Damian — the Arabian on 17 October, the Roman on 1 July, the Asian on 1 November — and prints all three days at once, so a generic icon of the brothers cannot be shown to be the Roman pair this folder keeps. Refused on the same ground as `cosmas-of-asia`: Commons does not separate them. Measured anyway and it would have passed at 1280 px and saturation 0.611."
  },
  {
   "slug": "glyceria-of-traianopolis",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 908,
    "h": 1710,
@@ -1239,11 +1239,11 @@
   "feasts": [
    "5-13"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: the date 26 May and a given name. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "theodosius-of-chernigov",
-  "kind": "searched-unreviewed",
+  "kind": "swap",
   "old": {
    "w": 919,
    "h": 1691,
@@ -1258,11 +1258,11 @@
    "2-5",
    "9-9"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "Wikidata Q741224 is reached by this folder's own stored Russian form «Феодосий Черниговский» and is the archbishop of Chernihiv it keeps. File:Sv feodosiy ugl-1.jpg, public domain, 1280 px of 1870 at saturation 0.365 against a 919 px plate at 0.000."
  },
  {
   "slug": "andronicus-the-apostle",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 942,
    "h": 1806,
@@ -1277,11 +1277,11 @@
   "feasts": [
    "5-17"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: a disambiguation page and two Palaiologan emperors. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "nicodemus-the-hagiorite",
-  "kind": "searched-unreviewed",
+  "kind": "namesake",
   "old": {
    "w": 1008,
    "h": 1387,
@@ -1295,11 +1295,11 @@
   "feasts": [
    "7-14"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "The el route reaches Gregory Palamas and Saint Sava — two other Athonite teachers — and neither carries this folder's 14 July."
  },
  {
   "slug": "helen-the-empress",
-  "kind": "searched-unreviewed",
+  "kind": "namesake",
   "old": {
    "w": 1018,
    "h": 1738,
@@ -1314,11 +1314,11 @@
   "feasts": [
    "5-21"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "The sr route reaches Helen of Anjou, the Serbian queen, and Helena of Bulgaria. The mother of Constantine, kept on 21 May, is not among the entities any stored form reaches."
  },
  {
   "slug": "carpus-of-thyatira",
-  "kind": "searched-unreviewed",
+  "kind": "nowhere",
   "old": {
    "w": 1070,
    "h": 1731,
@@ -1333,11 +1333,11 @@
   "feasts": [
    "10-13"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "No entity any stored form reaches is this saint, and none carries a picture: the Decian persecution, the emperor Decius, and the acts of his own martyrdom as a text. Six wikipedias, P373, P18 and Commons structured data."
  },
  {
   "slug": "archippus-the-apostle",
-  "kind": "searched-unreviewed",
+  "kind": "no-colour",
   "old": {
    "w": 1080,
    "h": 1761,
@@ -1353,11 +1353,11 @@
    "11-22",
    "2-19"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "Q468856 is the right apostle, but his category holds one file and it is the same «Жития Святых» plate family this folder already carries, at the same 1080 px and the same absence of colour."
  },
  {
   "slug": "athanasius-the-reader",
-  "kind": "searched-unreviewed",
+  "kind": "namesake",
   "old": {
    "w": 1103,
    "h": 1770,
@@ -1372,11 +1372,11 @@
    "6-20",
    "6-23"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "Athanasius of Alexandria (P841 2 May, 15 May, 31 January) and Athanasios III of Constantinople (21 August) against this folder's 20 and 23 June. The reader of Salamis is neither."
  },
  {
   "slug": "dionysius-of-ephesus",
-  "kind": "searched-unreviewed",
+  "kind": "namesake",
   "old": {
    "w": 1134,
    "h": 1655,
@@ -1391,6 +1391,6 @@
    "10-22",
    "8-4"
   ],
-  "why": "Candidates collected by scratchpad/cb-search.py and left in scratchpad/cb-cands.json for the next wave; no identity reading was made here, so this row is neither a swap nor a refusal."
+  "why": "The ru route reaches Patriarch Kirill of Moscow, and every file under him is a photograph of a living man."
  }
 ]
