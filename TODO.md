@@ -1297,12 +1297,14 @@ control it points at.
 
 ## 23. The map sweep's four questions
 
-Forty-nine lives were placed on the nights of 15 and 16 October, every
-coordinate copied out of `src/data/places.js` or out of a row a colleague had
-already checked. `scripts/place-candidates.mjs` fell from 4,527 to 3,729 across
-the two batches and a script bug of its own, and `scratchpad/place-dated.mjs`
-is the narrowing the second batch was read off. Four things are left, and not
-one of them is a batch's to settle.
+A hundred and twelve lives were placed on the nights of 15 and 16 October
+over four batches, every coordinate copied out of `src/data/places.js` or out
+of a row a colleague had already checked; located folders went 110 to 222 and
+`scripts/place-candidates.mjs` fell from 4,527 to 3,665, 749 of that being a
+bug of its own. `scratchpad/place-dated.mjs` is the narrowing the last three
+were read off, and its three routes — death, birth, see — each ended at a
+different kind of refusal, which is written in the batch scripts beside them.
+Four things are left, and not one of them is a batch's to settle.
 
 **1. Twenty-five correct placements are blocked by an allowlist.**
 `tests/map-span.test.mjs` asserts that the located-but-undated saints are
